@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-10-12T14:52:32.174749+00:00",
+  "candidate": "Pre-symbolic paired SPJU bag-difference compilation",
+  "decision": "REJECT_AVAILABLE_WORKLOAD",
+  "formal_topic": "UNCOMMITTED",
+  "candidate_count": 1,
+  "records": 25528,
+  "prior_artifact_or_sql_overlap_exclusions": 10568,
+  "ast_scanned_records": 14960,
+  "admitted_spju_records": 315,
+  "nontrivial_records": 183,
+  "nontrivial_records_with_inner_join": 138,
+  "strict_union_all_cancellation_pairs": 0,
+  "join_zero_term_elimination_pairs": 0,
+  "eligible_pairs": 0,
+  "eligible_source_families": 0,
+  "minimum_gate": {
+    "distinct_nontrivial_pairs": 20,
+    "source_families": 3,
+    "net_nodes_saved_each": 2,
+    "reduction_vs_shared_dag_each": 0.2
+  },
+  "build_narrow_prototype": false,
+  "recommended_new_solver_cpu_seconds": 0,
+  "measured_runtime_superiority": false,
+  "scope_limits": [
+    "Conservative declared fragment and exclusion policy only",
+    "SQL-overlap exclusions do not mean every excluded pair was previously developed",
+    "All sources have prior corpus-level exposure; no new independent final test",
+    "Scoped code absence is not novelty",
+    "No general SQL compiler semantic certification",
+    "Static DAG counts do not measure symbolic/UA/SMT/runtime cost"
+  ],
+  "new_sql_executions": 0,
+  "new_solver_calls": 0,
+  "manuscript_edits": 0,
+  "pushes": 0,
+  "uploads": 0,
+  "required_unbuilt_strong_control": "Polygon plus common DAG sharing and single-output multiplicity-difference discriminator",
+  "code_and_protocol_unchanged_after_scan": true,
+  "raw_error_reclassification": "All 11 SCANNER_ERROR records are TokenError; derived counts relabel without changing raw receipt or rescanning.",
+  "priority_note": "nice setpriority denied; scanner completed at inherited priority",
+  "scan_usage": {
+    "eligible_distinct_pairs": 0,
+    "eligible_source_families": 0,
+    "passed": false,
+    "decision": "REJECT_AVAILABLE_WORKLOAD",
+    "new_solver_calls": 0,
+    "new_sql_executions": 0,
+    "wall_s": 16.62656679097563,
+    "cpu_s": 16.605057,
+    "peak_rss_bytes": 107577344
+  },
+  "evidence": [
+    {
+      "path": "PROTOCOL.md",
+      "sha256": "c8f014bfddca31eb835037928ad8a44eecbbd6df754f9c664ff49af2ef8b000e"
+    },
+    {
+      "path": "INPUT_FREEZE.json",
+      "sha256": "ce5de1b75e0e8d9ab44970fd314e3230e68b4de123968bd8ea5db162ee08de39"
+    },
+    {
+      "path": "EXCLUSION_FREEZE.json",
+      "sha256": "d0b094969e8afbea30218f57a205d627dd4efe36238dd00bc717406a2b7742ef"
+    },
+    {
+      "path": "CODE_FREEZE.json",
+      "sha256": "33456e5466ed8c72656d6f324debf262d3e914726b2e3d7fa44e36f309d93a20"
+    },
+    {
+      "path": "scan.py",
+      "sha256": "c8f9372696e2022c28c67bbb84cf8388400743916684efd04e96003258d107bd"
+    },
+    {
+      "path": "ALL_RECORDS.jsonl",
+      "sha256": "8b9e027d782c04cac5ea567f90748cf41ccf5f422443733e960cbc35ff953799"
+    },
+    {
+      "path": "SUMMARY.json",
+      "sha256": "bdd0ccea78a5de3bca6885392336d5ca37f825c949035f30ea7eaa37c22a6cea"
+    },
+    {
+      "path": "DERIVED_DETAIL.json",
+      "sha256": "229fed04a4623b5343c7ba9c4c056ef5aa05a3717f59d05c8ea624d5aa5d0a9a"
+    },
+    {
+      "path": "ADMITTED_ID_FREEZE.json",
+      "sha256": "f5835fd830c1fae3faa9d9b10551b3a5fefa2ffe06f1cc2352d56ae6b9426871"
+    },
+    {
+      "path": "ELIGIBLE_ID_FREEZE.json",
+      "sha256": "f822f35a5b35bc520e1602769281cffb0d0fb338d9f45ff07d6c212428052b99"
+    },
+    {
+      "path": "POLYGON_CODE_RECEIPT.json",
+      "sha256": "466a55a65c439670b5cacbffae9975f257b140770b8fd193433d3a46065cc839"
+    },
+    {
+      "path": "STATIC_RECHECK.json",
+      "sha256": "5b72632de3c48d6015906f2143f542c41ebe8719cc492852301a56dc57ef53b8"
+    },
+    {
+      "path": "RESULT.zh.md",
+      "sha256": "0be25ebb0303a4d9ae1353c002ef6d4da231f136cba1efa2a41d20e1a8a36e5a"
+    }
+  ]
+}

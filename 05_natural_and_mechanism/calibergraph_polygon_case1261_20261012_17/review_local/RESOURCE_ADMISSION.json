@@ -1,0 +1,100 @@
+{
+  "status": "PASS",
+  "gate": "FINAL_RESOURCE_AND_FREEZE_ADMISSION",
+  "utc": "2026-10-12T11:03:14.700319+00:00",
+  "scientific_execution_may_proceed": true,
+  "case": "thrombosis_prediction__1261",
+  "solver_calls_by_reviewer": 0,
+  "must_fix": [],
+  "hash_checks": {
+    "freeze": {
+      "items": 356,
+      "mismatches": []
+    },
+    "old_preservation": {
+      "items": 360,
+      "mismatches": []
+    },
+    "pre_review": {
+      "items": 13,
+      "mismatches": []
+    }
+  },
+  "copied_from_13_same_bytes": {
+    "run_batch.py": true,
+    "owned_processes.py": true,
+    "native_local/z3": true
+  },
+  "reviewed_file_sha256": {
+    "FREEZE.json": "a99aeb6a405bae8554a56d0d4aec835da34fb8c59e02f67383bb71fb2243dbcb",
+    "OLD_PRESERVATION.json": "0e2462bd6886b68b30f9252d637795151ac7a808cd7ba8ce771a45681a70211e",
+    "PREFLIGHT.json": "9358e1f6a8adab7c732eb71a48c7040f89c0e615e5526024233170a85be642fe",
+    "PROOF.zh.md": "703724db07b8fd6efb0605db40d2a2ceacdb2d70945b5436307eed0990d66b73",
+    "RUN_CONTRACT.zh.md": "fe82ee92ee21624961609577df61c1a6ae253aabb64fff65678da83ce6c2154d",
+    "PRE_REVIEW_HASHES.json": "808bcc81a5033cc85526a69ab3c3aa90ebf5dc9247846fa23373256fa9ddd3dc",
+    "case1261_adapter.py": "c2db90b71096f2ddb9447a62daec156e3677376b93c722bc14861881bd2334f6",
+    "slot_worker.py": "6609f41cf577a93ff81cdc0b8d5bd8c4d694b72f244683a604fd50a44492efc7",
+    "run_batch.py": "126a834d2b63623ab098f8d20d3e592f20c1c0a1d9c5bece1fec4d47607d3533",
+    "owned_processes.py": "217bbbbac7e0ae39cd19ee905c2a0c13a247888463e3b42132f8a2b246dbcb8b",
+    "native_local/z3": "edae32f9e37ea4b5bb35310d72f0e352d0dc07626cac4e9e30bc1ea9a5bc8efb",
+    "review_local/INDEPENDENT_REVIEW.json": "07d50e3cf16ceb27286a8da5964df77d6b9175c6dedfbb8306b337091cee1b93"
+  },
+  "contract": {
+    "slots": [
+      [
+        "thrombosis_prediction__1261",
+        "UA"
+      ],
+      [
+        "thrombosis_prediction__1261",
+        "precise"
+      ]
+    ],
+    "bound": 1,
+    "whole_batch_scientific_deadline_seconds": 60,
+    "worker_deadline_seconds": "min(12, remaining batch deadline)",
+    "per_solver_timeout_seconds": 3,
+    "per_z3_internal_memory_MiB": 512,
+    "aggregate_RSS_guarantee": false,
+    "serial_slots": true,
+    "common_owned_lock": "calibergraph_launch_protocol_v2_20261012_05/runtime/owned.lock",
+    "lock_available_at_review": true,
+    "exclusive_attempt_marker_absent": true,
+    "science_output_absent": true,
+    "retries": false,
+    "only_owned_Popen_cleanup": true,
+    "cleanup_time_not_solver_search_budget": true
+  },
+  "proof_review": "PASS: final new #1261 proof matches independently reviewed RF/Thrombosis observation quotient and frozen scope; no transfer of SEX/T-BIL proof",
+  "preflight_snapshot": {
+    "utc": "2026-10-12T11:02:07.513011+00:00",
+    "loadavg": [
+      2.58447265625,
+      2.4052734375,
+      2.66552734375
+    ],
+    "logical_cpu_count": 10,
+    "self_RSS_peak_bytes": 41943040,
+    "common_owned_lock_acquired": true,
+    "new_attempt_marker_exists": false,
+    "foreign_process_queries": 0,
+    "scope": "single short serial batch; no unrelated_project process access; per-Z3 internal512MiB not aggregateRSS"
+  },
+  "reviewer_live_snapshot": {
+    "loadavg": [
+      2.3251953125,
+      2.35693359375,
+      2.62646484375
+    ],
+    "logical_cpu_count": 10,
+    "self_RSS_peak_bytes": 40435712,
+    "foreign_process_queries": 0
+  },
+  "limitations": [
+    "512MiB is Z3 allocator accounting per process, not aggregate RSS",
+    "scientific work is bounded by 60s; owned process cleanup may add shutdown overhead",
+    "UNSAT remains finite N<=1 local-adapter result",
+    "no solver/version/fixture invocation in this review"
+  ],
+  "instruction": "Parent may now execute the already-authorized batch once; no new user approval, retry, replacement case, or expanded scope."
+}

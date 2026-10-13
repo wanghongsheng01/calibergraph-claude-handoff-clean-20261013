@@ -1,0 +1,66 @@
+{
+  "reviewer_role": "independent non-author engineering reviewer",
+  "status": "ENGINEERING_CONDITIONAL_PASS",
+  "final_result_text_reviewed": true,
+  "reviewed_source_sha256": {
+    "owned_processes.py": "217bbbbac7e0ae39cd19ee905c2a0c13a247888463e3b42132f8a2b246dbcb8b",
+    "fixtures.py": "fea09c9cbc5f13c45cb67bb421ff43bba9c60ddf9e87cac72eedf614a5906104",
+    "validate.py": "d676a0ff38815db10f2a067e88328ede0bdcc9193991326f1b44ddc330c523bc"
+  },
+  "initial_mustfix_count": 4,
+  "fixed_and_independently_retested_count": 4,
+  "outstanding_mustfix_within_tested_contract": 0,
+  "independent_positive_test_count": 3,
+  "independent_fixture_children_total": 11,
+  "independent_scientific_calls": 0,
+  "process_enumeration_or_foreign_rss_queries": 0,
+  "allocated_test_buffer_bytes": 0,
+  "evidence": [
+    "review_run_01/INDEPENDENT_CHECKS.json",
+    "review_run_01/INDEPENDENT_RECHECK.json",
+    "review_run_01/INDEPENDENT_LIFECYCLE.json"
+  ],
+  "constraints": [
+    "macOS RUSAGE_SELF units; own Python process high-water RSS only",
+    "main-thread host with only its SIGALRM-blocked watchdog; no new uncontrolled threads during the case",
+    "bounded fixtures with no descendants; no guarantee for arbitrary native calls or Popen preexec setup",
+    "deadline initiates stop; cleanup grace is additional",
+    "injected kill failure is detected as cleanup unconfirmed; reviewer emergency reaps retained owned handles"
+  ],
+  "science_admission": false,
+  "remaining_engineering_gate": "external Z3 RSS telemetry coverage unavailable",
+  "scientific_conclusion": "no scientific experiment performed; engineering gate does not imply scientific failure or research termination",
+  "final_reviewed_artifact_sha256": {
+    "RESULT.zh.md": "efd12e9abc729c7b7f245d45890ccab5fec8135660fe6b26c1f34d33132e4b13",
+    "RECOVERY.zh.md": "e36db0775e99133ae7d7240a6056442b8097b4515c48fa939b8647946412cefc",
+    "probe_z3_metadata.py": "bdad2ec526e403ce80b1890b208316cda9f663fc0cc7462535f68d99f4a5baec",
+    "probe_z3_idle.py": "8858fb6e8f33a7d4d01148d53a2465deb4c3aae52c7d22bff60c2c86876b274b",
+    "STAGE_RESULTS.json": "a6185ea5c90aba2652631d62f048c20026e8164e2a973ec633fcc82f5c27e77a",
+    "native_metadata_run_02/NATIVE_PROBE.json": "a4b79d204b768da5c4184a4eace9f78cad6e62087982f0311e5d636e5e067a5c",
+    "native_idle_run_01/RECEIPT.json": "7fde61aebff608024f00d421a2513d0b4bb962f5a99f6d30dcc0c2e0fc5f9b4b",
+    "BINARY_COPY.json": "8c34f025959033f2480faedfe6bd39fd20cfc8a084c59d7a06795851594888d5"
+  },
+  "native_review": {
+    "review_mode": "read-only code and recorded receipts; reviewer did not execute native probes",
+    "author_native_children": 5,
+    "author_check_sat_commands": 0,
+    "source_mode_independently_checked": "0644",
+    "copy_mode_independently_checked": "0755",
+    "both_binary_sha256_independently_checked": "edae32f9e37ea4b5bb35310d72f0e352d0dc07626cac4e9e30bc1ea9a5bc8efb",
+    "all_receipts_reaped": true,
+    "idle_elapsed_s": 0.30636966694146395,
+    "external_z3_rss_measured": false
+  },
+  "official_sources_read": [
+    "https://raw.githubusercontent.com/Z3Prover/z3/z3-4.16.0/src/shell/main.cpp",
+    "https://raw.githubusercontent.com/Z3Prover/z3/z3-4.16.0/src/util/env_params.cpp",
+    "https://raw.githubusercontent.com/Z3Prover/z3/z3-4.16.0/src/util/memory_manager.cpp"
+  ],
+  "review_exclusions": [
+    "private remote repository publication/backup completeness",
+    "DELIVERY_MANIFEST completeness",
+    "historical semantic-admission and frozen input audit beyond current receipts",
+    "matching native binary build flags against published source"
+  ],
+  "final_report_statement_assessment": "engineering and science boundary claims agree with inspected evidence; no remaining mustfix in reviewed lifecycle contract"
+}

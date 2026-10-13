@@ -1,0 +1,324 @@
+{
+  "status": "NOT_RUN",
+  "case_denominator": 12,
+  "query_denominator": 21,
+  "runner_sha256": "8c03887df0f80e284695ea9485970deeac5d1a834bf9ec289c3ba4690fe30adb",
+  "cases_sha256": "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+  "runtime_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+  "cases": [
+    {
+      "id": "E01_add_sub_nonnull_identity",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E02_add_sub_nullable_negative",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E03_variable_product_commutativity",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E04_root_between_inclusive",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E05_leaf_between_boundary_negative",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E06_null_times_zero_negative",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E07_count_zero_expression",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E08_empty_sum_not_vacuous_contract",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "E09_fixed_sum_overflow_domain",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        },
+        {
+          "query_index": 1,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "O10_safe_root_product_single_match",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "O11_root_intermediate_overflow",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        }
+      ]
+    },
+    {
+      "id": "O12_zero_does_not_hide_intermediate_overflow",
+      "status": "NOT_RUN",
+      "queries": [
+        {
+          "query_index": 0,
+          "status": "NOT_RUN"
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "case_start": 8,
+      "case_limit": 2,
+      "status": "NOT_RUN",
+      "argv": [
+        "python3",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/fixed_oracle_check.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+        "--expected-lock-sha256",
+        "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+        "--cases",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json",
+        "--expected-cases-sha256",
+        "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_008_01",
+        "--case-start",
+        "8",
+        "--case-limit",
+        "2"
+      ]
+    },
+    {
+      "case_start": 10,
+      "case_limit": 2,
+      "status": "NOT_RUN",
+      "argv": [
+        "python3",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/fixed_oracle_check.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+        "--expected-lock-sha256",
+        "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+        "--cases",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json",
+        "--expected-cases-sha256",
+        "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_010_01",
+        "--case-start",
+        "10",
+        "--case-limit",
+        "2"
+      ]
+    },
+    {
+      "case_start": 0,
+      "case_limit": 2,
+      "status": "NOT_RUN",
+      "argv": [
+        "python3",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/fixed_oracle_check.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+        "--expected-lock-sha256",
+        "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+        "--cases",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json",
+        "--expected-cases-sha256",
+        "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_000_01",
+        "--case-start",
+        "0",
+        "--case-limit",
+        "2"
+      ]
+    },
+    {
+      "case_start": 2,
+      "case_limit": 2,
+      "status": "NOT_RUN",
+      "argv": [
+        "python3",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/fixed_oracle_check.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+        "--expected-lock-sha256",
+        "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+        "--cases",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json",
+        "--expected-cases-sha256",
+        "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_002_01",
+        "--case-start",
+        "2",
+        "--case-limit",
+        "2"
+      ]
+    },
+    {
+      "case_start": 4,
+      "case_limit": 2,
+      "status": "NOT_RUN",
+      "argv": [
+        "python3",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/fixed_oracle_check.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+        "--expected-lock-sha256",
+        "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+        "--cases",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json",
+        "--expected-cases-sha256",
+        "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_004_01",
+        "--case-start",
+        "4",
+        "--case-limit",
+        "2"
+      ]
+    },
+    {
+      "case_start": 6,
+      "case_limit": 2,
+      "status": "NOT_RUN",
+      "argv": [
+        "python3",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/fixed_oracle_check.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+        "--expected-lock-sha256",
+        "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+        "--cases",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json",
+        "--expected-cases-sha256",
+        "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_006_01",
+        "--case-start",
+        "6",
+        "--case-limit",
+        "2"
+      ]
+    }
+  ]
+}

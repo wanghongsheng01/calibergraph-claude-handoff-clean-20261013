@@ -1,0 +1,422 @@
+{
+  "review_utc": "2026-10-11T04:05:50.120190+00:00",
+  "status": "CURRENT_TWO_CASE_RECEIPTS_CONSISTENT",
+  "reviewer_role": "Implementation agent read-only receipt and arithmetic audit; not a different human reviewer and not an independent target rerun",
+  "method": "Read JSON/hash and independently evaluate concrete integer inequalities/sums only; no target/import/native/solver/SQLite execution",
+  "frozen_manifest": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/MANIFEST.json",
+    "sha256": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd"
+  },
+  "frozen_files_checked": 12,
+  "frozen_files_matched": 12,
+  "case_denominator": 34,
+  "completed_in_reviewed_receipts": 2,
+  "remaining_without_completion_evidence_in_this_review": 32,
+  "remaining_case_ids": [
+    "lt_column_left_N1",
+    "lte_literal_left_N1",
+    "lte_column_left_N1",
+    "gt_literal_left_N1",
+    "gt_column_left_N1",
+    "gte_literal_left_N1",
+    "gte_column_left_N1",
+    "eq_literal_left_N1",
+    "eq_column_left_N1",
+    "neq_literal_left_N1",
+    "neq_column_left_N1",
+    "none_N1",
+    "not_null_N1",
+    "and_N1",
+    "unverified_or_N1",
+    "unverified_primary_N1",
+    "lt_column_left_N2",
+    "lte_literal_left_N2",
+    "lte_column_left_N2",
+    "gt_literal_left_N2",
+    "gt_column_left_N2",
+    "gte_literal_left_N2",
+    "gte_column_left_N2",
+    "eq_literal_left_N2",
+    "eq_column_left_N2",
+    "neq_literal_left_N2",
+    "neq_column_left_N2",
+    "none_N2",
+    "not_null_N2",
+    "and_N2",
+    "unverified_or_N2",
+    "unverified_primary_N2"
+  ],
+  "fixed_database_checks": 10,
+  "explicit_solver_check_slots": 20,
+  "additional_official_analyze_calls": 2,
+  "distinct_admission_controls": 3,
+  "admission_control_executions": 6,
+  "runs": [
+    {
+      "run": "lt_literal_left_N1_01",
+      "inputs": [
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N1_01/report.json",
+          "sha256": "c1ea1409977aeeae8332180000b83779f860b479155b8b9675be9f9e8512d877"
+        },
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N1_01/supervision.json",
+          "sha256": "88af62978142f13dc4d14604f5e767a00db814ba743dd904c1f57f6d69b5532b"
+        },
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N1_01/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N1_01/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "conditions": {
+        "exit_zero": true,
+        "no_supervisor_stop": true,
+        "worker_complete": true,
+        "cleanup_complete": true,
+        "current_manifest_bound": true,
+        "runtime_lock_bound": true,
+        "base_sat": true,
+        "exact_rows_no_deletion": true,
+        "original_xor_sat": true,
+        "normalized_xor_unsat": true,
+        "reference_contract_sat": true,
+        "source_parser_exact_original_order": true,
+        "reference_ast_preserved": true,
+        "normalized_gt": true,
+        "no_error_fields": true,
+        "pair_sat_replayed": true,
+        "complete34_register": true,
+        "only_selected_case_completed": true,
+        "admission3_match": true,
+        "all_fixed_truths_match_independent_math": true,
+        "pair_original_contract_and_outputs_match_read_only_math": true
+      },
+      "checks": [
+        {
+          "label": "base_only_sat",
+          "status": "sat"
+        },
+        {
+          "label": "base_exact_rows",
+          "status": "unsat"
+        },
+        {
+          "label": "original_vs_reference",
+          "status": "sat"
+        },
+        {
+          "label": "normalized_vs_reference",
+          "status": "unsat"
+        },
+        {
+          "label": "fixed_4",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_5",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_6",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_NULL",
+          "status": "sat"
+        },
+        {
+          "label": "reference_contract_sat",
+          "status": "sat"
+        }
+      ],
+      "fixed_databases": [
+        {
+          "id": "4",
+          "values": [
+            4
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": true,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "5",
+          "values": [
+            5
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "6",
+          "values": [
+            6
+          ],
+          "independent_read_only_math_reference": true,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "NULL",
+          "values": [
+            null
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        }
+      ],
+      "pair": {
+        "witness": {
+          "T": [
+            [
+              6
+            ]
+          ]
+        },
+        "relations": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              6
+            ]
+          ]
+        ],
+        "reference_holds": true,
+        "solver_decision": "sat",
+        "replay_status": "REPLAYED_WITHIN_INT64_DOMAIN"
+      },
+      "resources": {
+        "worker_last_checkpoint": {
+          "wall_seconds": 1.56710104085505,
+          "cpu_seconds": 1.48213,
+          "peak_rss_bytes_darwin": 108986368,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "supervisor_child_wall_seconds": 1.6186198750510812,
+        "supervisor_child_cpu_seconds": 1.483474,
+        "sampled_peak_rss_bytes": 107806720,
+        "sampled_max_threads": 2
+      }
+    },
+    {
+      "run": "lt_literal_left_N2_01",
+      "inputs": [
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N2_01/report.json",
+          "sha256": "ddea7122f23c18bc00e75300ed4dce7345d1344b03ef72eefd4fd56c1b48b6fa"
+        },
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N2_01/supervision.json",
+          "sha256": "9baceb861d845f3524dde7925b6eb49136a613320b4d1fda9f5e154b3473f21b"
+        },
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N2_01/stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N2_01/stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "conditions": {
+        "exit_zero": true,
+        "no_supervisor_stop": true,
+        "worker_complete": true,
+        "cleanup_complete": true,
+        "current_manifest_bound": true,
+        "runtime_lock_bound": true,
+        "base_sat": true,
+        "exact_rows_no_deletion": true,
+        "original_xor_sat": true,
+        "normalized_xor_unsat": true,
+        "reference_contract_sat": true,
+        "source_parser_exact_original_order": true,
+        "reference_ast_preserved": true,
+        "normalized_gt": true,
+        "no_error_fields": true,
+        "pair_sat_replayed": true,
+        "complete34_register": true,
+        "only_selected_case_completed": true,
+        "admission3_match": true,
+        "all_fixed_truths_match_independent_math": true,
+        "pair_original_contract_and_outputs_match_read_only_math": true
+      },
+      "checks": [
+        {
+          "label": "base_only_sat",
+          "status": "sat"
+        },
+        {
+          "label": "base_exact_rows",
+          "status": "unsat"
+        },
+        {
+          "label": "original_vs_reference",
+          "status": "sat"
+        },
+        {
+          "label": "normalized_vs_reference",
+          "status": "unsat"
+        },
+        {
+          "label": "fixed_4",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_5",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_6",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_NULL",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_mixed_4_6",
+          "status": "sat"
+        },
+        {
+          "label": "fixed_mixed_6_NULL",
+          "status": "sat"
+        },
+        {
+          "label": "reference_contract_sat",
+          "status": "sat"
+        }
+      ],
+      "fixed_databases": [
+        {
+          "id": "4",
+          "values": [
+            4,
+            4
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": true,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "5",
+          "values": [
+            5,
+            5
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "6",
+          "values": [
+            6,
+            6
+          ],
+          "independent_read_only_math_reference": true,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "NULL",
+          "values": [
+            null,
+            null
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "mixed_4_6",
+          "values": [
+            4,
+            6
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        },
+        {
+          "id": "mixed_6_NULL",
+          "values": [
+            6,
+            null
+          ],
+          "independent_read_only_math_reference": false,
+          "independent_read_only_math_original_emission": false,
+          "all_recorded_truths_match": true
+        }
+      ],
+      "pair": {
+        "witness": {
+          "T": [
+            [
+              6
+            ],
+            [
+              6
+            ]
+          ]
+        },
+        "relations": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              12
+            ]
+          ]
+        ],
+        "reference_holds": true,
+        "solver_decision": "sat",
+        "replay_status": "REPLAYED_WITHIN_INT64_DOMAIN"
+      },
+      "resources": {
+        "worker_last_checkpoint": {
+          "wall_seconds": 1.474860291928053,
+          "cpu_seconds": 1.384501,
+          "peak_rss_bytes_darwin": 112214016,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "supervisor_child_wall_seconds": 1.5325909587554634,
+        "supervisor_child_cpu_seconds": 1.385889,
+        "sampled_peak_rss_bytes": 111525888,
+        "sampled_max_threads": 2
+      }
+    }
+  ],
+  "limitations": [
+    "Only lt_literal_left at N1 and N2 complete in these two receipts; no promotion of remaining 32 cases.",
+    "Pair path injects original-order reference contract; normalized emitter is checked by XOR, but six-arm main integration is separate.",
+    "Reference SMT and its concrete evaluator share code; independent read-only arithmetic here confirms these fixed numbers, not a general correctness proof.",
+    "External 240-cell result used an earlier reference version and independent runner; it is not current-version execution coverage.",
+    "OS thread sampling saw two threads per child although checkpoint Python enumeration saw one; no all-native-single-thread claim.",
+    "RSS is sampled/ru_maxrss evidence, not hard RSS enforcement; internal wall excludes initial interpreter startup and final checkpoint excludes later final write/exit.",
+    "No natural defect prevalence, performance advantage, general certificate or novelty claim."
+  ]
+}

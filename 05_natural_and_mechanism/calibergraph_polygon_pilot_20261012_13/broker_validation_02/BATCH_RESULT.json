@@ -1,0 +1,91 @@
+{
+  "validation_only": true,
+  "wall_budget_s": 5,
+  "elapsed_s": 0.0505623328499496,
+  "records": [
+    {
+      "case": "fixture",
+      "mode": "fixture",
+      "status": "FIXTURE_OK",
+      "wall_elapsed_s": 0.050035917200148106,
+      "native_launches": [
+        {
+          "pid_for_logging_only": 48980,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "-version",
+            "-memory:512"
+          ],
+          "handle_index": 1
+        }
+      ],
+      "worker_returncode": 0,
+      "all_slot_handles_reaped": true,
+      "result_path": "broker_validation_02/fixture_fixture/RESULT.json"
+    }
+  ],
+  "guard": {
+    "reason": null,
+    "elapsed_s": 0.0505471252836287,
+    "wall_seconds": 5,
+    "handle_count": 2,
+    "all_reaped": true,
+    "returncodes": [
+      0,
+      0
+    ],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336549.204157625,
+        "bytes": 43696128
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336549.205366666,
+        "index": 0,
+        "pid_for_logging_only": 48979
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336549.230535541,
+        "bytes": 43696128
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336549.241276333,
+        "index": 1,
+        "pid_for_logging_only": 48980
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336549.253992708,
+        "pid_for_logging_only": 48980,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336549.253995041,
+        "pid_for_logging_only": 48979,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336549.254583625,
+        "pid_for_logging_only": 48980,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336549.25458575,
+        "pid_for_logging_only": 48979,
+        "returncode": 0
+      }
+    ]
+  },
+  "science_attempts": 0,
+  "memory_contract": "512 MiB native allocator per Z3, own Python sampling; no aggregate RSS guarantee"
+}

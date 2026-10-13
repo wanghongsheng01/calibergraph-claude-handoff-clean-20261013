@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/support_closure",
+  "utc": "2026-10-11T04:15:08.048353+00:00",
+  "status": "FINAL_READY_FREEZE_STATIC_IDENTITY_VERIFIED_TARGET_NOT_RUN_BY_REVIEWER",
+  "main_review": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/RUNTIME_FAIR_V5_SUPPORT_CLOSURE_REVIEW.json",
+    "sha256": "7f6c0b2e1b6bb01317f7af365053ef7e9e6efb935c722f2fa928acdd03b1f616"
+  },
+  "final_locks": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "STATIC_REVIEWED_READY_FOR_LOCAL_RUN",
+      "file_map_identical_to_reviewed_inherited_map_plus_five_programs": true,
+      "files": 853
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+      "sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+      "status": "STATIC_REVIEWED_READY_FOR_LOCAL_RUN",
+      "file_map_identical_to_reviewed_inherited_map_plus_five_programs": true,
+      "files": 861
+    }
+  ],
+  "programs_unchanged_from_review": {
+    "common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+    "worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+  },
+  "suite": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "unchanged": true
+  },
+  "final_source_and_diff_manifest": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/SOURCE_AND_DIFF_MANIFEST.json",
+    "sha256": "33fd4b0564026df68e7f81b0542518b65b9cff6b0ef073f9c979ce390e2e2d8a",
+    "all_old_new_diff_hashes_verified": true,
+    "diffs": [
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/diffs/common.py.diff",
+        "sha256": "f709e1904eb3bd1d69d3a550b6d209daa34815ede4918c0eb0cb519541215292",
+        "regenerated_body_exact_match": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/diffs/contract_reference.py.diff",
+        "sha256": "a47972c4eb61c905e4c9f00d01a364435d51c1efe334c964196a95936f50212a",
+        "regenerated_body_exact_match": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/diffs/query_differential.py.diff",
+        "sha256": "64aa9d3fb252a23bb6d0d47e1f8e94c4b411507f2c9d05d2e06aa5db97c557b7",
+        "regenerated_body_exact_match": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/diffs/supervisor.py.diff",
+        "sha256": "c7cc79914d57798156c9186eb3ef2af704742e416b663ea9c7d32f25de7fffa6",
+        "regenerated_body_exact_match": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/diffs/worker.py.diff",
+        "sha256": "266642d777e5d653b5021288b246fe3f360dd859e0baf24613a9ab8c48945a7b",
+        "regenerated_body_exact_match": true
+      }
+    ]
+  },
+  "author_freeze_receipt": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/FREEZE_RECEIPT.json",
+    "sha256": "8a3d06bdf7cf96d402272e57a2331c31a77a4f1299715130829c92af283d9e4f"
+  },
+  "execution_boundary": "No target/reference module imported or executed; no native or solver run. Root execution is a separate evidence requirement. No source or lock modified by reviewer.",
+  "backup_status": "BACKUP_BLOCKED_BY_USER_NO_UPLOAD_NO_PUSH"
+}

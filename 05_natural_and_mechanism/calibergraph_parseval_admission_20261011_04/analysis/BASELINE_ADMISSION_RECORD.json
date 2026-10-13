@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "status": "ADMITTED_ADAPTED_BASELINE_FOR_THIS_ORIGINAL_AFTER_QUERY_DEVELOPMENT_CASE",
+  "case": "gitlab#47",
+  "method_name": "ParSEval with ordinary PostgreSQL contextual BOOLEAN t/f literal compatibility",
+  "upstream_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "stock_original_after_status": "UNSUPPORTED_BOOLEAN_STRING_F_VALUEERROR_OBSERVED_AND_PRESERVED",
+  "adapted_original_after_status": "LOWERED_42_COLUMNS_AND_NONEMPTY_CONFIRMED",
+  "original_before_ParSEval_frontend": "NOT_CLAIMED_NOT_TESTED",
+  "original_queries_byte_hashes": {
+    "before": "36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7",
+    "after": "1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2"
+  },
+  "SQL_rewritten": false,
+  "source_C": {
+    "tables": 4,
+    "columns": 117,
+    "active_constraints": 43,
+    "not_null": 32,
+    "primary_key": 3,
+    "unique": 6,
+    "nullable_unique_keys": 4,
+    "foreign_key": 2,
+    "null_policy": "NULLS_DISTINCT",
+    "type_constraints_preserved": true,
+    "C_added_or_dropped": false
+  },
+  "backend": {
+    "engine": "PostgreSQL16.14 Homebrew",
+    "locale": "C",
+    "encoding": "UTF8",
+    "timezone": "UTC",
+    "historical_production_server_reproduction": false
+  },
+  "ordinary_adapter_validation": {
+    "literal_aliases": 8,
+    "nullable_boolean_truth_values": 3,
+    "original_f_comparison_vs_FALSE": "EQUAL_IN_ALL_THREE_VALUES",
+    "PG_semantic_calibrations_passed": 16,
+    "actual_column_census": 117,
+    "actual_primary_unique_indexes_checked": 9,
+    "default_or_serial_entries_checked": 42
+  },
+  "successful_supplement": {
+    "generated_candidates": 1,
+    "rows": 45,
+    "table_rows": {
+      "projects": 13,
+      "users": 1,
+      "users_star_projects": 14,
+      "project_authorizations": 17
+    },
+    "D_sha256": "f780633e689cdf9500dc711dbc7419c6c14dae49a5d5aee02a39648e4e487794",
+    "candidate_fullC_Python": "PASS",
+    "candidate_fullC_PG_insert": "PASS",
+    "before_rows": 11,
+    "after_rows": 11,
+    "projection_columns": 42,
+    "ordered_results_equal": true,
+    "separate_database_confirmation": "EXACT_SAME_BOTH_OBSERVATIONS",
+    "actual_original_query_replays": 2,
+    "confirmation_replays": 2,
+    "generation_calls": 1,
+    "solver_checks": 0,
+    "seed": 0,
+    "speculate": true,
+    "bag_semantics": true,
+    "candidate_selection": "FIRST_ONLY_NO_SECOND_CANDIDATE",
+    "launcher_wall_s": 5.970048,
+    "worker_cpu_s": 4.892869999999999,
+    "own_worker_peak_RSS_bytes": 85671936,
+    "PG_group_memory": "NOT_MEASURED"
+  },
+  "full_attempt_denominator": {
+    "old03_author_setup_abort": 1,
+    "old03_author_metadata_abort": 1,
+    "new04_first_candidate_row45_over_cap32": 1,
+    "authorized_separate_first_candidate_cap64_success": 1,
+    "launches_total": 4,
+    "generation_calls_total": 2,
+    "solver_checks_total": 0,
+    "candidate_callbacks_total": 2,
+    "fullC_validated_candidates_total": 1,
+    "original_pair_replay_databases": 2,
+    "new_independent_tests": 0
+  },
+  "prior_32_row_result": "PRESERVED_ROW_CAP_STOP_NOT_EMPTY_OR_BASELINE_FAILURE",
+  "first_run_D_vs_supplement_D_identity": "NOT_ESTABLISHED_FIRST_D_WAS_NOT_MATERIALIZED; sameinput/seed/config andsame45rowcount only",
+  "scientific_limits": [
+    "This is a development positive control, not a new mechanism result or benchmark ranking.",
+    "One equal observation is not an equivalence proof and no satisfiable NEQ target was presumed.",
+    "Original unadapted failure stays visible; no claim upstream has full PostgreSQL Boolean literal compatibility.",
+    "No fair timing/coverage comparison with old SQLite random controls: engines, budgets and generation procedures differ.",
+    "Seed early exit can return emptycoverage lists and generator.nonempty True; backend replays supply nonempty evidence.",
+    "Existing speculation/fresh-key/FK machinery remains prior art; no relabeling as CaliberGraph novelty."
+  ],
+  "next_research_implication": "Freeze this admitted adapted baseline for later controlled comparisons. This GitLab original-query nonempty target is solved by the existing baseline without SMT, so it cannot by itself establish a new mechanism need.",
+  "scientific_claim_status": "NO_GO_NEW_MECHANISM_CLAIM",
+  "datahub": "DATAHUB_REGISTRATION_BLOCKED",
+  "created_utc": "2026-10-11T20:50:36.084472+00:00"
+}

@@ -1,0 +1,117 @@
+{"t_s": 0.05434458330273628, "phase": "FULL_C_AND_KNOWN_CONTROL", "state": "START"}
+{"t_s": 0.056495833210647106, "phase": "FULL_C_AND_KNOWN_CONTROL", "state": "PASS", "outputs": [[[1]], [[0]]]}
+{"t_s": 0.05711191613227129, "phase": "RUNTIME_IMPORT", "state": "START"}
+{"t_s": 0.529964208137244, "phase": "RUNTIME_IMPORT", "state": "PASS", "versions": {"python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]", "sqlite": "3.53.3", "sqlglot": "23.12.1", "z3": "4.16.0", "sqlalchemy": "2.0.49"}}
+{"t_s": 0.5300839580595493, "phase": "OFFICIAL_DISPROVE", "state": "START"}
+{"t_s": 0.5306021249853075, "phase": "ORIGINAL_SQL_PARSE", "state": "START", "side": 0}
+{"t_s": 0.531107125338167, "phase": "ORIGINAL_SQL_PARSE", "state": "PASS", "statements": 1}
+{"t_s": 0.5311539163812995, "phase": "ORIGINAL_SQL_PARSE", "state": "START", "side": 1}
+{"t_s": 0.5315687912516296, "phase": "ORIGINAL_SQL_PARSE", "state": "PASS", "statements": 1}
+{"t_s": 0.5318574160337448, "phase": "OFFICIAL_CONSTRAINT_LOAD", "state": "START"}
+{"t_s": 0.5402057082392275, "phase": "OFFICIAL_CONSTRAINT_LOAD", "state": "PASS", "tables": [{"table": "examination", "columns": ["id", "examination date", "acl igg", "acl igm", "ana", "ana pattern", "acl iga", "diagnosis", "kct", "rvvt", "lac", "symptoms", "thrombosis"], "constraints": ["ForeignKeyDecl"]}, {"table": "patient", "columns": ["id", "sex", "birthday", "description", "first date", "admission", "diagnosis"], "constraints": ["NotNullDecl", "PrimaryKeyDecl"]}, {"table": "laboratory", "columns": ["id", "date", "got", "gpt", "ldh", "alp", "tp", "alb", "ua", "un", "cre", "t-bil", "t-cho", "tg", "cpk", "glu", "wbc", "rbc", "hgb", "hct", "plt", "pt", "aptt", "fg", "pic", "tat", "tat2", "u-pro", "igg", "iga", "igm", "crp", "ra", "rf", "c3", "c4", "rnp", "sm", "sc170", "ssa", "ssb", "centromea", "dna", "dna-ii"], "constraints": ["NotNullDecl", "NotNullDecl", "PrimaryKeyDecl", "ForeignKeyDecl"]}]}
+{"t_s": 0.5582064581103623, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 0, "row_counts": {"examination": 0, "patient": 0, "laboratory": 0}}
+{"t_s": 0.5589295830577612, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.558981791138649, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.5592962084338069, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[0]]}
+{"t_s": 0.5593990832567215, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.559684875421226, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[0]]}
+{"t_s": 0.5598987913690507, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[0]], [[0]]]}
+{"t_s": 0.5599550413899124, "phase": "GENERATION", "state": "START", "side": 0}
+{"t_s": 0.5605180412530899, "phase": "QUERY_LOWERING", "state": "START"}
+{"t_s": 0.5635359999723732, "phase": "QUERY_LOWERING", "state": "PASS"}
+{"t_s": 0.5658473754301667, "phase": "QUERY_LOWERING", "state": "START"}
+{"t_s": 0.5688430001027882, "phase": "QUERY_LOWERING", "state": "PASS"}
+{"t_s": 0.6102804159745574, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 1, "row_counts": {"examination": 0, "patient": 4, "laboratory": 5}}
+{"t_s": 0.6167473332025111, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.6168183754198253, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.6170157501474023, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[2]]}
+{"t_s": 0.6170607502572238, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.6172454580664635, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[2]]}
+{"t_s": 0.6174203329719603, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[2]], [[2]]]}
+{"t_s": 0.6260877503082156, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.6310611660592258, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.SAT"}
+{"t_s": 0.6450474159792066, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 2, "row_counts": {"examination": 0, "patient": 5, "laboratory": 6}}
+{"t_s": 0.6495539583265781, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.6496345833875239, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.6498087500222027, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.6498575410805643, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.6499916664324701, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.650112250354141, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[3]], [[3]]]}
+{"t_s": 0.6585661661811173, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.6650354163721204, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.SAT"}
+{"t_s": 0.6787965004332364, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 3, "row_counts": {"examination": 0, "patient": 5, "laboratory": 7}}
+{"t_s": 0.6833332912065089, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.683400291018188, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.6836162912659347, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.6837201253511012, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.6839087083935738, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.6840745410881937, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[3]], [[3]]]}
+{"t_s": 0.7031724583357573, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.7070298329927027, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.UNSAT"}
+{"t_s": 0.7165721249766648, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.7391908750869334, "phase": "Z3_CHECK", "state": "END", "result": "unsat"}
+{"t_s": 0.739762875251472, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.UNSAT"}
+{"t_s": 0.7565521253272891, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.7936525833792984, "phase": "Z3_CHECK", "state": "END", "result": "unsat"}
+{"t_s": 0.794195291120559, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.UNSAT"}
+{"t_s": 0.7943831253796816, "phase": "GENERATION", "state": "END", "side": 0, "nonempty": true, "reached": ["/agg.global_fold:nonempty", "/agg.global_fold:output", "0.0.0/u.sum:positive", "0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:unknown", "-1/agg.global_fold:duplicate", "-1/agg.global_fold:null", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:false", "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:true", "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:unknown", "0.0.0.0.0.0.0.0.0.1.0.0/predicate.lt3:false", "0.0.0.0.0.0.0.0.0.1.0.0/predicate.lt3:true", "0.0.0.0.0.0.0.0.0.1.0.0/predicate.lt3:unknown"], "covered": ["/agg.global_fold:nonempty", "/agg.global_fold:output", "0.0.0/u.sum:positive", "0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:unknown", "-1/agg.global_fold:duplicate", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:false", "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:true", "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:unknown", "0.0.0.0.0.0.0.0.0.1.0.0/predicate.lt3:false", "0.0.0.0.0.0.0.0.0.1.0.0/predicate.lt3:true", "0.0.0.0.0.0.0.0.0.1.0.0/predicate.lt3:unknown"], "timed_out": false, "unsupported": null, "attempts": [{"label": "0.0.0.0.0.0.0.0.0.2.0/predicate.eq3:unknown", "status": "Status.SAT", "accepted": true, "reason": null}, {"label": "-1/agg.global_fold:null", "status": "Status.UNSAT", "accepted": false, "reason": "no binding within the budget reaches it"}, {"label": "0.0.0.0.0.0.0.0.0.1.0/predicate.not3:unknown", "status": "Status.SAT", "accepted": true, "reason": null}, {"label": "-1/agg.global_fold:null", "status": "Status.UNSAT", "accepted": false, "reason": "no binding within the budget reaches it"}, {"label": "-1/agg.global_fold:null", "status": "Status.UNSAT", "accepted": false, "reason": "contradictory requirements"}]}
+{"t_s": 0.7955215410329401, "phase": "GENERATION", "state": "START", "side": 1}
+{"t_s": 0.796505625359714, "phase": "QUERY_LOWERING", "state": "START"}
+{"t_s": 0.7994620832614601, "phase": "QUERY_LOWERING", "state": "PASS"}
+{"t_s": 0.8015965414233506, "phase": "QUERY_LOWERING", "state": "START"}
+{"t_s": 0.8040579999797046, "phase": "QUERY_LOWERING", "state": "PASS"}
+{"t_s": 0.8207736662589014, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 4, "row_counts": {"examination": 0, "patient": 3, "laboratory": 3}}
+{"t_s": 0.8255135412327945, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.8255694583058357, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.8257967503741384, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[2]]}
+{"t_s": 0.8258680002763867, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.826040375046432, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[2]]}
+{"t_s": 0.8261779583990574, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[2]], [[2]]]}
+{"t_s": 0.8349122083745897, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.8384287082590163, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.SAT"}
+{"t_s": 0.8516456661745906, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 5, "row_counts": {"examination": 0, "patient": 4, "laboratory": 4}}
+{"t_s": 0.8563113752752542, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.8563721664249897, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.8565950002521276, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.8568946253508329, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.85707554128021, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.8577745831571519, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[3]], [[3]]]}
+{"t_s": 0.8578580413013697, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.8581631253473461, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.SAT"}
+{"t_s": 0.8828405411913991, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 6, "row_counts": {"examination": 0, "patient": 5, "laboratory": 4}}
+{"t_s": 0.8877915004268289, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.8878711252473295, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.8881195411086082, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.8882530410774052, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.8884514160454273, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.8886150834150612, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[3]], [[3]]]}
+{"t_s": 0.8887068331241608, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.8936327081173658, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.SAT"}
+{"t_s": 0.906960666179657, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 7, "row_counts": {"examination": 0, "patient": 5, "laboratory": 5}}
+{"t_s": 0.912996250204742, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.9130716663785279, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.9132660832256079, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.9133212501183152, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.9134687501937151, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.9135892502963543, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[3]], [[3]]]}
+{"t_s": 0.9215066661126912, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.9268092080019414, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.SAT"}
+{"t_s": 0.9397094161249697, "phase": "CANDIDATE_LOAD", "state": "START", "candidate": 8, "row_counts": {"examination": 0, "patient": 5, "laboratory": 6}}
+{"t_s": 0.9448555000126362, "phase": "CANDIDATE_LOAD", "state": "PASS"}
+{"t_s": 0.9449184159748256, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 0}
+{"t_s": 0.9450875832699239, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.9451378751546144, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "START", "side": 1}
+{"t_s": 0.9452770412899554, "phase": "ORIGINAL_QUERY_EXECUTION", "state": "END", "rows": [[3]]}
+{"t_s": 0.9453902500681579, "phase": "DIFFERENCE_CHECK", "state": "END", "different": false, "inputs": [[[3]], [[3]]]}
+{"t_s": 0.962457500398159, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.9658704162575305, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.UNSAT"}
+{"t_s": 0.9745447500608861, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 0.9922803333029151, "phase": "Z3_CHECK", "state": "END", "result": "unsat"}
+{"t_s": 0.992710208054632, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.UNSAT"}
+{"t_s": 1.008064249996096, "phase": "GENERATOR_SOLVE", "state": "START"}
+{"t_s": 1.0428580832667649, "phase": "Z3_CHECK", "state": "END", "result": "unsat"}
+{"t_s": 1.0433127083815634, "phase": "GENERATOR_SOLVE", "state": "END", "status": "Status.UNSAT"}
+{"t_s": 1.0434885411523283, "phase": "GENERATION", "state": "END", "side": 1, "nonempty": true, "reached": ["/agg.global_fold:nonempty", "/agg.global_fold:output", "0.0.0/u.sum:positive", "0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:unknown", "-1/agg.global_fold:duplicate", "-1/agg.global_fold:null", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:false", "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:true", "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:unknown"], "covered": ["/agg.global_fold:nonempty", "/agg.global_fold:output", "0.0.0/u.sum:positive", "0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0/u.sum:positive", "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:unknown", "-1/agg.global_fold:duplicate", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:false", "0.0.0.0.0.0.0.0.0.4.0/predicate.eq3:true", "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:false", "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:true", "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:unknown"], "timed_out": false, "unsupported": null, "attempts": [{"label": "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:false", "status": "Status.SAT", "accepted": true, "reason": null}, {"label": "0.0.0.0.0.0.0.0.0.1.0/predicate.eq3:unknown", "status": "Status.SAT", "accepted": true, "reason": null}, {"label": "-1/agg.global_fold:duplicate", "status": "Status.SAT", "accepted": true, "reason": null}, {"label": "-1/agg.global_fold:null", "status": "Status.UNSAT", "accepted": false, "reason": "no binding within the budget reaches it"}, {"label": "0.0.0.0.0.0.0.0.0.2.0/predicate.lt3:false", "status": "Status.SAT", "accepted": true, "reason": null}, {"label": "-1/agg.global_fold:null", "status": "Status.UNSAT", "accepted": false, "reason": "no binding within the budget reaches it"}, {"label": "-1/agg.global_fold:null", "status": "Status.UNSAT", "accepted": false, "reason": "contradictory requirements"}]}
+{"t_s": 1.0456857080571353, "phase": "OFFICIAL_DISPROVE", "state": "END", "verdict": "EQ", "reason": null}
+{"t_s": 1.0473574581556022, "phase": "INDEPENDENT_CANDIDATE_REPLAY", "state": "START"}
+{"t_s": 1.0484061250463128, "phase": "INDEPENDENT_CANDIDATE_REPLAY", "state": "ERROR", "error": {"type": "KeyError", "message": "'Patient'", "phase": "INDEPENDENT_CANDIDATE_REPLAY"}}

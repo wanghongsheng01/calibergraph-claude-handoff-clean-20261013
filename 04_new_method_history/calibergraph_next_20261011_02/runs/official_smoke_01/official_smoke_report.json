@@ -1,0 +1,56 @@
+{
+  "protocol_id": "calibergraph-02-official-smoke-v1",
+  "protocol_sha256": "8f43a0053aeec5d3a9430232883f3b7a533fa5f4bb3ec4fae275660b213b0c59",
+  "worker_sha256": "15993cfcca91142691074799e94cef205d60c6664b6e86b40309868384019b97",
+  "backend_sha256": "1ecf4a7bdd199913ee79f2efec6cc21c9904fd75a6cf36d7a2f1f10cc06b880c",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/data/development.jsonl",
+    "sha256": "a51307167fb80e5caaf83b18fcd929e8781183fd7130821134eae18782e32430"
+  },
+  "status": "STOPPED_OR_FAILED_REMAINDER_NOT_RUN",
+  "denominator": {
+    "pairs": 6,
+    "query_slots": 12
+  },
+  "scope": "Engineering dependency gate on six exposed original development pairs. Full official query encoder and full original operational contract; no novelty, natural-defect gold, speedup or up-to-bound equivalence claim.",
+  "records": [
+    {
+      "id": "dev_01",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "dev_02",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "dev_03",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "dev_04",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "dev_05",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "dev_06",
+      "status": "NOT_RUN"
+    }
+  ],
+  "error_type": "SyntaxError",
+  "error": "invalid syntax (environment.py, line 557)",
+  "worker_usage": {
+    "cpu_user_seconds": 0.37080599999999997,
+    "cpu_system_seconds": 0.06794499999999999,
+    "peak_rss_bytes_macos": 65208320,
+    "wall_seconds": 0.43239408300000004
+  },
+  "status_counts": {
+    "NOT_RUN": 6
+  },
+  "effective_verdict_counts": {
+    "NOT_RUN": 6
+  }
+}

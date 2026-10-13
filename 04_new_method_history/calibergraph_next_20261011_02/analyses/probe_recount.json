@@ -1,0 +1,30 @@
+{
+  "status": "AUTHOR_RECOUNT_NOT_INDEPENDENT_REVIEW",
+  "report_sha256": "eebdf67557eeb37e26b6f8251f54f6a5fbf7e2e7b7948d8ad288e847d03c8cd8",
+  "registered_arms": 12,
+  "candidate_attempts": 64,
+  "full_C_PASS": 64,
+  "SQL_slot_end_statuses": {
+    "RETURNED": 132
+  },
+  "SQL_phases": {
+    "initial": 128,
+    "excluded_reverse_control": 4
+  },
+  "eligible_arms": 8,
+  "eligible_candidates_per_arm": {
+    "B": 23,
+    "C": 23
+  },
+  "eligible_validated_differences": 0,
+  "same_candidate_sets": true,
+  "failure_count": 0,
+  "stopping_rule": {
+    "status": "STOP_FALLBACK_SAVINGS_CLAIM_NO_SOLVER_REPEAT_NEEDED",
+    "applicable": true,
+    "reason": "Both permutations completely scanned the identical fixed pool and found zero eligible witnesses; neither can avoid fallback on these four exposed groups.",
+    "claim_scope": "this frozen candidate set and exposed development groups only; no equivalence or unseen generalization claim",
+    "automatic_solver_call": false
+  },
+  "results_selected_or_replaced": false
+}

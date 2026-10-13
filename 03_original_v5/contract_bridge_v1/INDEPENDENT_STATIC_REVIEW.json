@@ -1,0 +1,170 @@
+{
+  "status": "STATIC_REVIEW_COMPLETE_NO_REMAINING_P0_P1_FOR_REGISTERED_CASES_TARGET_NOT_RUN",
+  "reviewer": "/root/support_closure",
+  "supporting_reviewer": "/root/support_closure/spotit_semantics_correction",
+  "target_executed": false,
+  "target_imported": false,
+  "native_loaded": false,
+  "rounds": [
+    {
+      "manifest_sha256": "433a0444c48f6aa967dfbb93608f43f4f7cc1346bf337fdb0bb054cac1b04957",
+      "reference_sha256": "e57496ec0b1d1198370c0d96cb8891fad31a34ebfed4dd162c9738920cb9bdd1",
+      "runner_sha256": "3ecc2bd2c6ed0c16fb50d63fe4597a636a732d3995ebef255267a897e5f1fbf4",
+      "supervisor_sha256": "ed8e31ce2997fae1f21d1632ec6b96887342c3d22737121e69350a8fd5eea978",
+      "fixtures_sha256": "7f7341d0c8495e67532e5d3780da11e8a48f3f024e9b06fd98adaaf43d324eab",
+      "registered_case_scope": "34 fixed T.A cases: 30 supported and 4 deliberately UNVERIFIED; no current registered-case P0/P1 blocker found.",
+      "findings": [
+        {
+          "severity": "P1",
+          "scope": "Advertised supported-schema module API, not triggered by existing T.A fixtures",
+          "file": "contract_reference.py",
+          "lines": [
+            53,
+            64
+          ],
+          "finding": "Simple uppercase names without double underscores can still collide under table+double-underscore+column; dict construction silently overwrites.",
+          "counterexample_schema": {
+            "A_": {
+              "B": "INT"
+            },
+            "A": {
+              "_B": "INT"
+            }
+          },
+          "ambiguous_encoded_reference": "A___B",
+          "impact": "prepare can label an ambiguous raw reference as a unique supported column, violating fail-closed contract interpretation.",
+          "required_change": "Reject duplicate encoded keys and require compatibility with upstream first-double-underscore table/column split. Preserve original AST and no upstream-source modification.",
+          "author_confirmed_addendum": "Even single table A_ with column B fails upstream first-separator roundtrip (A___B splits into A and _B)."
+        }
+      ],
+      "verified_paths": [
+        "Original operand order retained in reference SMT/Python evaluation; only normalized copy swaps and reverses ordered operators.",
+        "NULL fails strict all-physical-row contract; eq/neq remain symmetric.",
+        "base-only SAT and cannot-delete gate occur before IC compilation; each original/normalized append delta restores base facts and checks unchanged bounds.",
+        "XOR solved with base only, avoiding a tested false premise; SAT witness validated against actual assertions and independent concrete reference.",
+        "Fixed complete DB binds all rows, widths, NULL/value cells; explicit-context wrappers and decimal-string IntVal match fast bindings.",
+        "Original pair runs under base+independent reference, validates full SAT witness, then common int64 audit precedes unchanged SQLite replay.",
+        "4 unsupported fixtures return before native load with solver slots NOT_RUN; all 34 IDs and per-check/fixed states retained.",
+        "Child CPU14/15, wall24; supervisor child25/internal26; sampled RSS1GiB, process reaping and full process costs."
+      ],
+      "nonblocking_boundaries": [
+        "Reference evaluate_reference alone does not establish exact_rows, INT32 type facts or liveness; full physical contract relies on runner base/type/exact-row gate.",
+        "Two current pair strings are statically simple safe raw SQL; runner invokes common raw frontend gate only later within replay, so future arbitrary pair inputs need a common pre-analyze gate.",
+        "Supervisor EXITED is process status, not scientific success; consumer must require no stop_reason, exit0 and an appropriate terminal worker report.",
+        "No general certificate, performance, natural defect incidence or human-gold result follows from these constructed controls."
+      ]
+    },
+    {
+      "round": 2,
+      "frozen_sha256": {
+        "MANIFEST.json": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd",
+        "contract_reference.py": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+        "run_diagnostic.py": "67c08263166637b1381929b0fe47d7bc26eb7ac3884a011587ac55cc2489fdae",
+        "supervise.py": "ed8e31ce2997fae1f21d1632ec6b96887342c3d22737121e69350a8fd5eea978",
+        "fixtures.json": "dfeb748d189d05b4cf535773d07a9a009c67f225e8095cb47dbd2e6519f4168b"
+      },
+      "status": "P1_STATICALLY_RESOLVED_NO_REMAINING_REGISTERED_CASE_BLOCKER",
+      "resolved_finding": "Nonunique/noninvertible physical column encoding now rejects the complete schema in prepare before any reference or normalized clause is accepted.",
+      "repair_evidence": {
+        "file": "contract_reference.py",
+        "lines": [
+          64,
+          70
+        ],
+        "condition": "encoded in names OR encoded.split(double-underscore,1) != [table,name] -> UnverifiedContract"
+      },
+      "admission_regressions": {
+        "count": 3,
+        "registered_cases": [
+          {
+            "id": "cross_table_encoding_collision",
+            "schema": {
+              "A_": {
+                "B": "INT"
+              },
+              "A": {
+                "_B": "INT"
+              }
+            },
+            "constraint": [
+              {
+                "not_null": {
+                  "value": "A___B"
+                }
+              }
+            ],
+            "expected_admission": "UNVERIFIED_CONTRACT"
+          },
+          {
+            "id": "single_table_noninvertible_encoding",
+            "schema": {
+              "A_": {
+                "B": "INT"
+              }
+            },
+            "constraint": [
+              {
+                "not_null": {
+                  "value": "A___B"
+                }
+              }
+            ],
+            "expected_admission": "UNVERIFIED_CONTRACT"
+          },
+          {
+            "id": "leading_column_underscore_unambiguous",
+            "schema": {
+              "A": {
+                "_B": "INT"
+              }
+            },
+            "constraint": [
+              {
+                "not_null": {
+                  "value": "A___B"
+                }
+              }
+            ],
+            "expected_admission": "SUPPORTED_REFERENCE"
+          }
+        ],
+        "runner_lines": [
+          123,
+          156
+        ],
+        "ordering": "All pure admission regressions are registered before invocation and checked before loading common/native; no solver result is attributed to these regressions.",
+        "review_method": "Source/JSON reasoning only; reviewer did not import or run prepare."
+      },
+      "registered_solver_denominator": {
+        "total": 34,
+        "SUPPORTED_REFERENCE": 30,
+        "UNVERIFIED_CONTRACT": 4
+      },
+      "two_pair_checks": [
+        "lt_literal_left_N1",
+        "lt_literal_left_N2"
+      ],
+      "static_checks": {
+        "all_manifest_file_sha_and_sizes": true,
+        "three_program_ast_syntax": true,
+        "full_fixed_schema_rows_width_and_cell_types": true,
+        "all_reported_hashes_still_match_after_review": true
+      },
+      "remaining_P0_P1": [],
+      "preserved_boundaries": [
+        "Exact N and INT32 physical validity are established by runner base facts, not evaluate_reference alone.",
+        "Current pair SQL strings are statically safe/simple; a future generalized runner should move common raw-frontend gate before any analyze call.",
+        "Supervisor status EXITED alone is not successful scientific completion; inspect stop_reason, exit status and full worker report.",
+        "Static review has not executed any solver/native/target code. Constructed diagnostics are not benchmark performance, human gold, natural incidence, or a general certificate."
+      ]
+    }
+  ],
+  "current_reviewed_sha256": {
+    "MANIFEST.json": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd",
+    "contract_reference.py": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "run_diagnostic.py": "67c08263166637b1381929b0fe47d7bc26eb7ac3884a011587ac55cc2489fdae",
+    "supervise.py": "ed8e31ce2997fae1f21d1632ec6b96887342c3d22737121e69350a8fd5eea978",
+    "fixtures.json": "dfeb748d189d05b4cf535773d07a9a009c67f225e8095cb47dbd2e6519f4168b"
+  },
+  "remaining_execution_gate": "Root controls supervised execution; require no supervisor stop_reason, exit code 0, and expected terminal worker state. A process EXITED status alone is not scientific completion."
+}

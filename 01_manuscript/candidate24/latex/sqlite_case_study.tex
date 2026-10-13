@@ -1,0 +1,103 @@
+\section{Natural-query development diagnostics}\label{sec:natural}
+\subsection{Source and selection protocol}
+The zero-join admission result in Table~\ref{tab:versionedcoverage} concerns the original cached recognizer and its narrow language; no solver ran in that scan. It therefore cannot be explained as a solver timeout. In particular, whole-schema INT restrictions and the exclusions of DISTINCT, grouping and mixed-type expressions block queries before candidate encoding. Relaxing a parser guard alone does not establish the premises of the factorization lemmas.
+
+We separately inspect a frozen ParSEval artifact \citep{chen2025parseval}: 1,534 records at source commit \texttt{88cfe245}, official run 37547685455, artifact 11452059162. The selection retains the previously observed pair 1172 and adds three pairs from each official EQ, NEQ and unresolved stratum. Unresolved includes UNKNOWN, TIMEOUT and SYNTAX\_ERROR. A lexical JOIN and aggregate-token screen is followed by ranking the SHA-256 hash of a UTF-8 string containing the prefix \texttt{cg-boundary09-v1}, database identifier and pair index, separated by vertical bars, exact unordered-pair deduplication and a maximum of two cases per database, applied in stratum order. There is no outcome-driven refill. Semantic duplicates are not ruled out. This is a diagnostic sample, not a population estimator: the anchor and an earlier aggregate-DISTINCT summary were already inspected, and all extracted records are exposed development material.
+
+Table~\ref{tab:natural} preserves all ten selected pairs. Original source SQL and all source DDL are retained. ``Full contract'' here means those registered source constraints, not unstated business rules or a universal proof of SQLite type fidelity. This later contract includes foreign keys and differs from the original v5 AST contract. We do not pool their results or costs.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{r l r X}
+\toprule
+Pair & Source database & Tables/columns & Final diagnostic status\\
+\midrule
+750 & superhero & 10/31 & Polygon: concrete NEQ in both modes\\
+319 & toxicology & 4/11 & Polygon: bounded UNSAT in both modes; identical SQL\\
+1172 & thrombosis & 3/64 & Polygon with local observation adapter: concrete NEQ\\
+1261 & thrombosis & 3/64 & Polygon with separate RF adapter: bounded UNSAT\\
+1073 & football & 7/199 & Not admitted to Polygon; two SQLite distinguishing databases\\
+45 & california & 3/89 & Not admitted to Polygon; four SQLite distinguishing databases\\
+1526 & debit\_card & 5/21 & Not admitted to Polygon; two SQLite distinguishing databases\\
+1490 & debit\_card & 5/21 & Not admitted; static rewrite analysis only, no solver result\\
+26 & california & 3/89 & Invalid predicted SQL: unresolved \texttt{T1.Street}\\
+1390 & student\_club & 8/48 & Invalid predicted SQL: unresolved \texttt{T2.link\_to\_event}\\
+\bottomrule
+\end{tabularx}
+\caption{The complete ten-pair development inventory. Four of eight syntactically valid pairs reach the adapted Polygon experiment. The other four are not counted as solver failures; the two invalid inputs remain in the ten-pair denominator.}\label{tab:natural}
+\end{table}
+
+\subsection{Sampled testing and bounded symbolic search}
+For pair 1172, both source queries count distinct patient IDs after joining Patient to Laboratory and selecting male patients. The gold query tests \texttt{T-BIL} $\ge 2.0$; the predicted query tests $>2.0$. One official ParSEval call returned EQ. All nine saved candidate databases satisfy the source contract and yield equal outputs on independent replay. A separate valid three-table control with a male patient and laboratory TBIL value 2 yields 1 versus 0. The generated candidates do not isolate this difference: other qualifying rows can mask it under DISTINCT. This is one exposed diagnostic, not a measured error rate or a proof of a unique causal mechanism. Our first post-call replay worker raised a case-sensitive \texttt{Patient} lookup error. That local error remains recorded and is not attributed to ParSEval. An independent reader replayed the saved candidates and control without rerunning the baseline or using the control as a generation seed.
+
+We subsequently execute Polygon commit \texttt{5e182373} in under-approximation (UA) and precise modes on four admitted pairs. The serial resource adapter changes the per-call limit from 300 seconds to 3 seconds, also caps UA solver calls at 3 seconds, sets each Z3 call's internal memory limit to 512 MiB, and enforces a 12-second worker limit and 60-second batch limit. Per-call memory is not aggregate resident memory. All owned process handles were reaped. Python 3.12, Z3 4.16.0 and SQLite 3.53.3 differ from the original v5 setup; these are short adapted diagnostics, not a reproduction of Polygon's published timings.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{r l rr rr}
+\toprule
+ & & \multicolumn{2}{c}{UA} & \multicolumn{2}{c}{Precise}\\
+Pair & Outcome in each mode & Wall seconds & Z3 calls & Wall seconds & Z3 calls\\
+\midrule
+750 & Validated NEQ & 0.816278 & 2 & 0.587529 & 1\\
+319 & Bounded UNSAT & 0.434618 & 3 & 0.409159 & 1\\
+1172 & Validated NEQ & 0.891738 & 2 & 0.399413 & 1\\
+1261 & Bounded UNSAT & 0.951991 & 3 & 0.369814 & 1\\
+\bottomrule
+\end{tabular}
+\caption{Eight completed Polygon slots at at most one row per source table, with 14 Z3 calls. Times are single worker-wall observations including local setup and checks; they are not comparable to the v5 CPU table and do not establish a speed ranking.}\label{tab:polygon}
+\end{table}
+
+Pair 750 has eight primary-key, eight NOT NULL and eleven foreign-key constraints. Its concrete outputs are NULL versus $-54.0$ in UA and $-55.0$ versus NULL in precise mode. Negative values satisfy the source DDL; we do not infer business plausibility. Pair 319 has four primary-key, five NOT NULL and five foreign-key constraints and byte-identical SQL. Its bounded UNSAT result supplies no distinguishing witness.
+
+Pairs 1172 and 1261 retain the three-table, 64-column schema and its two primary-key, three NOT NULL and two foreign-key constraints. They use separate source-specific observation adapters at $N\le1$. For 1172, TBIL classes preserve NULL and the relevant comparison outcomes using NULL, 0.0, 2.0 and 3.0 representatives; sex classes preserve the male test. Pair 1261 instead preserves the RF TEXT comparison with 20 and Thrombosis comparison with 0. These are manually checked, query-specific classes, not a generic SQLite abstraction. An abstract candidate must satisfy the encoded contract before a fixed lift; the original contract and SQL are then checked without repairing an invalid model. Both 1172 modes lift to the same concrete 1-versus-0 witness, hence do not constitute two independent failures. For 1261, an intermediate UA SAT assignment lacks the required full join/filter match and is not a counterexample. Completed searches return bounded UNSAT. No argument establishes unbounded equivalence or a complete implementation theorem.
+
+These observations defeat the motivation that existing strong symbolic methods cannot handle the selected cases. They do not establish broad Polygon coverage: four valid pairs remain outside the admitted local contract, and two selected inputs are invalid.
+
+\subsection{SQLite witnesses outside the admitted symbolic contract}
+Eight constructed databases distinguish three of the remaining source pairs (Table~\ref{tab:sqlite}). Each was checked against the complete original DDL and registered constraints, and both original SQL strings were replayed independently. They are synthetic witnesses for natural query pairs, not naturally occurring database defects, official test databases, or Polygon solver successes. No exhaustive minimality or business-realism claim is made. Pair 1490 remains a static IIF/CASE and non-NULL COUNT rewrite analysis; it has no new dynamic equivalence result. The competing source-date interpretations for 1526 remain unresolved.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{r l rr X}
+\toprule
+Pair & Distinguishing condition & $N$ & Rows & Output difference\\
+\midrule
+1073 & Invalid date conversion & 1 & 2 & 1 versus 0\\
+1073 & Nullable INT primary key & 1 & 2 & 0 versus 1\\
+45 & Text numeric coercion & 1 & 2 & $(S,\texttt{x})$ versus $(S,0.0)$\\
+45 & Large integer and REAL & 1 & 2 & 9007199254740993 versus 9007199254740992.0\\
+45 & Group merging & 2 & 4 & $(S,1),(S,3)$ versus $(S,2.0)$\\
+45 & Output bag multiplicity & 2 & 4 & Two copies of $(S,0)$ versus one of $(S,0.0)$\\
+1526 & Empty scalar contribution & 1 & 4 & 1.0 versus NULL\\
+1526 & SUM and scalar scope & 3 & 7 & 0.8333333333333334 versus 0.5\\
+\bottomrule
+\end{tabularx}
+\caption{Eight SQLite witnesses across three exposed query pairs. $N$ is the largest table cardinality in that concrete database; Rows is the total over all source tables. The short output descriptions retain the values or multiplicities deciding inequality.}\label{tab:sqlite}
+\end{table}
+
+\subsection{COUNT repairs and implementation boundary}\label{sec:diagnosticimplementation}
+Local diagnosis found three COUNT implementation issues in the pinned Polygon-based runtime. P1 uses integer indicators for ordinary COUNT(*); P2 extends the grouped COUNT(*) FILTER path; P3 resolves bare-column FILTER expressions at three parser entry points. These are engineering repairs. The same 42 exposed regressions comprise 28 concrete parser-expression cases and 14 concrete FProject/FGroupBy operator-chain cases, including NULL, deleted slots, filters and grouping. They evaluate concrete symbolic expressions without starting a solver or the complete QueryEncoder/Environment pipeline.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{l rrr rrr}
+\toprule
+ & \multicolumn{3}{c}{28 expression cases} & \multicolumn{3}{c}{14 operator-chain cases}\\
+Version & Pass & Mismatch & Error & Pass & Mismatch & Error\\
+\midrule
+Original & 12 & 4 & 12 & 7 & 6 & 1\\
+P1 & 28 & 0 & 0 & 9 & 5 & 0\\
+P2 & 28 & 0 & 0 & 11 & 3 & 0\\
+P3 & 28 & 0 & 0 & 14 & 0 & 0\\
+\bottomrule
+\end{tabular}
+\caption{Fixed-development regression results for successive COUNT repairs. Independent SQLite and separate Python references checked all 168 saved records; that review did not rerun Polygon's encoder. Passing P3 does not prove arbitrary FILTER or aggregate semantics.}\label{tab:countrepair}
+\end{table}
+
+The successful local regression execution used 0.847168 seconds across three segments, with zero solver calls and a reported process RSS of 60,489,728 bytes. Earlier Python-version and harness errors remain in the attempt record. One unused review-helper file changed before the final review-ready freeze; this preservation exception is disclosed rather than erased. The final 003 snapshot's 541 checked file hashes match. The independent result check is a recomputation of known development observations, not a held-out test. The three specific repairs do not affect the AVG or DISTINCT forms in the four earlier Polygon pairs; this impact analysis does not certify the rest of the baseline.
+
+OpenAI Codex assisted with adapters, regression code, concrete witness construction, local execution and analysis. Independent AI agents inspected source contracts and replay records; their roles and prior involvement are retained in the local evidence ledger. No human gold labels, independent final test, model training or new experiment in the manuscript-integration phase is claimed.
+
+\subsection{What the combined evidence establishes}
+The abstract multiplicity equations and finite selector are known constructions, and the six-arm experiment does not establish a selector advantage. The public scan measures a frontend admission boundary rather than search cost. The natural-query inventory then distinguishes invalid inputs, unsupported semantics, concrete refutations and bounded UNSAT. Existing Polygon modes resolve the admitted examples; the remaining SQLite witnesses expose semantic obligations rather than a demonstrated missing search mechanism. Query-specific value classes and COUNT repairs cannot, by themselves, supply an original abstraction method. The evidence is consequently a restricted implementation study and a set of traceable diagnostics; a generalizable new algorithm or benefit remains unestablished.

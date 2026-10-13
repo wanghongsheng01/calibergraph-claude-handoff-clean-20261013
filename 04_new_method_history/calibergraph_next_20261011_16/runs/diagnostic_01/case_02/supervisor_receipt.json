@@ -1,0 +1,1116 @@
+{
+  "case_index": 2,
+  "case_id": "dev03_07_exact4_rep1",
+  "registered_slot": {
+    "id": "dev03_07_exact4_rep1",
+    "kind": "official",
+    "source_case_index": 6,
+    "source_case_id": "dev03_07",
+    "exact_rows": 4,
+    "repeat_id": 1
+  },
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T17:01:55.840294+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 104529920,
+  "sampled_peak_group_cpu_seconds": 0.75,
+  "sample_count": 8,
+  "stop_remainder": null,
+  "worker_wait4_usage": {
+    "pid": 61703,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.781511,
+    "system_cpu_seconds": 0.069428,
+    "cpu_seconds": 0.850939,
+    "maxrss_bytes_darwin": 108199936
+  },
+  "observed_stage_sequence": [
+    "NATIVE_AND_OFFICIAL_IMPORT",
+    "OFFICIAL_PARSE_QUERY_0"
+  ],
+  "cpu_accounting_before_launch": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "prior_resource_observation_cpu_charge_seconds": 0.48529100000000003,
+    "prior_resource_observation_measured_cpu_seconds": 0.085291,
+    "prior_resource_observation_tail_reserve_seconds": 0.4,
+    "prior_observation_accounting_status": "REGISTERED_CHARGE",
+    "parent_user_cpu_seconds": 0.111091,
+    "parent_system_cpu_seconds": 0.07206,
+    "all_reaped_children_user_cpu_seconds": 1.6468909999999999,
+    "all_reaped_children_system_cpu_seconds": 0.5273289999999999,
+    "supervisor_plus_reaped_cpu_seconds": 2.3573709999999997,
+    "observed_total_cpu_seconds": 12.842662,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 13.042662,
+    "known_minimum_charged_seconds_excluding_prior_observation": 12.557371,
+    "scope": "Preparation10s plus separately registered prior observation charge, absolute current parent SELF and all reaped CHILDREN including memory_pressure, ps, failed preexec children and workers, plus batch tail0.2s. Live worker CPU separately sampled. No child or observation CPU is added twice. A missing prior ledger makes the full total unknown, not zero."
+  },
+  "command": [
+    "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_worker.py",
+    "--protocol",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/generation_replay.registered.json",
+    "--case-index",
+    "2",
+    "--out",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_02"
+  ],
+  "pid": 61703,
+  "owned_pgid": 61703,
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.8602095828391612,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.022065583150833845,
+    "check_count": 2,
+    "case_index": 2,
+    "id": "dev03_07_exact4_rep1",
+    "updated_monotonic": 2274888.041943875,
+    "observed_monotonic": 2274888.048284583,
+    "solver_watchdog_estimated_seconds": 0.022065583150833845,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "f548da9721cdef369ae9c64cbfcff59482c92d8fa590217d372aa120604b719a",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_07_exact4_rep1",
+    "source_case_id": "dev03_07",
+    "repeat_id": 1,
+    "case_index": 2,
+    "status": "RETURNED",
+    "engineering_class": "QUERY_RETURNED",
+    "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_07",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0017705000936985016,
+            "cpu_seconds": 0.001771000000000078
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 2,
+            "base_fact_count": 52,
+            "admitted_delta_facts": 2,
+            "full_fact_count": 54,
+            "wall_seconds": 0.002512041013687849,
+            "cpu_seconds": 0.00251099999999993
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.003511750139296055,
+            "cpu_seconds": 0.0035119999999999596
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004794208332896233,
+            "actual_check_cpu_seconds": 0.004801999999999973,
+            "answer": "sat",
+            "wall_seconds": 0.007207750342786312,
+            "cpu_seconds": 0.007184999999999997
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0005425829440355301,
+            "cpu_seconds": 0.0005439999999999889
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              2,
+              16
+            ],
+            "output_tuple_counts": [
+              2,
+              4
+            ],
+            "wall_seconds": 0.08011387474834919,
+            "cpu_seconds": 0.07994999999999997
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "142f2c73fd0d8ccaebfd2866e8da785e32e0ee890a39c3e11b8e942c996e3b6e",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.06600554240867496,
+            "cpu_seconds": 0.06590600000000002
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "5fa438826bbbda27128ad82eb928441473e166b907a50e5d2be089559c329c44",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.004702333360910416,
+            "cpu_seconds": 0.004695000000000005
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 700,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.017271374817937613,
+            "actual_check_cpu_seconds": 0.017237999999999976,
+            "answer": "unsat",
+            "wall_seconds": 0.021083499770611525,
+            "cpu_seconds": 0.020975999999999995
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "DELIVERY": 4
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "comparison_formula_encode": {
+          "wall_seconds": 0.005778208374977112,
+          "cpu_seconds": 0.00575900000000007
+        },
+        "comparison_formula_encode_status": "REACHED_QUERY_CHECK",
+        "contract_model_sanity": {
+          "status": "NOT_ADMITTED",
+          "model_origin": "FULL_C_NONEMPTY_CHECK",
+          "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+          "query_sat_witness": false,
+          "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY"
+        },
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "1d4afe2a6abc05bdee71f73dfc400bc1caad9699b4c9874ba7d6b5e441b738c9",
+        "solver_cumulative_wall_seconds": 0.022065583150833845,
+        "solver_cumulative_cpu_seconds": 0.02203999999999995,
+        "parsed_asts": [
+          {
+            "select": {
+              "value": {
+                "round": [
+                  {
+                    "mul": [
+                      {
+                        "div": [
+                          {
+                            "sum": {
+                              "eq": [
+                                "ORDER_DATE",
+                                "CUSTOMER_PREF_DELIVERY_DATE"
+                              ]
+                            }
+                          },
+                          {
+                            "count": "*"
+                          }
+                        ]
+                      },
+                      100
+                    ]
+                  },
+                  2
+                ]
+              },
+              "name": "IMMEDIATE_PERCENTAGE"
+            },
+            "from": "DELIVERY"
+          },
+          {
+            "select": {
+              "value": {
+                "round": [
+                  {
+                    "mul": [
+                      100,
+                      {
+                        "div": [
+                          "IMM",
+                          "TOT"
+                        ]
+                      }
+                    ]
+                  },
+                  2
+                ]
+              },
+              "name": "IMMEDIATE_PERCENTAGE"
+            },
+            "from": [
+              {
+                "value": {
+                  "select": {
+                    "value": {
+                      "count": "*"
+                    },
+                    "name": "IMM"
+                  },
+                  "from": "DELIVERY",
+                  "where": {
+                    "eq": [
+                      "ORDER_DATE",
+                      "CUSTOMER_PREF_DELIVERY_DATE"
+                    ]
+                  }
+                },
+                "name": "IMM1"
+              },
+              {
+                "value": {
+                  "select": {
+                    "value": {
+                      "count": "*"
+                    },
+                    "name": "TOT"
+                  },
+                  "from": "DELIVERY"
+                },
+                "name": "TOT1"
+              }
+            ]
+          }
+        ],
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.008808291982859373,
+          "cpu_seconds": 0.008793999999999969
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.07060100000000002,
+          "scope_encode": 0.00934899999999994,
+          "compare_encode": 0.00575900000000007,
+          "query_check": 0.017237999999999976
+        },
+        "exclusive_phase_cpu_status": {
+          "parse": "MEASURED",
+          "scope_encode": "DERIVED_ANALYZE_MINUS_PARSE",
+          "compare_encode": "REACHED_QUERY_CHECK",
+          "query_check": "MEASURED"
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.14308700000000008,
+          "wall_seconds": 0.14372045826166868,
+          "worker_peak_rss_bytes_macos": 108150784
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_and_structure_admission_cost": {
+      "status": "RETURNED",
+      "wall_seconds": 0.0009864578023552895,
+      "cpu_seconds": 0.0009650000000000006,
+      "scope": "Source/provenance/hash/structural admission plus in-phase persistence; excludes boundary event writes and earlier worker/registry startup. Hard termination may censor this phase."
+    },
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 11415,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "DELIVERY__DELIVERY_ID"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "DELIVERY__ORDER_DATE"
+            },
+            {
+              "value": "DELIVERY__CUSTOMER_PREF_DELIVERY_DATE"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1173.csv",
+      "index": 34,
+      "pair": [
+        "SELECT ROUND((SUM(ORDER_DATE = CUSTOMER_PREF_DELIVERY_DATE) / COUNT(*)) * 100 , 2) AS IMMEDIATE_PERCENTAGE FROM DELIVERY",
+        "SELECT ROUND(100*(IMM/TOT),2) AS IMMEDIATE_PERCENTAGE FROM (SELECT COUNT(*) AS IMM FROM DELIVERY WHERE ORDER_DATE = CUSTOMER_PREF_DELIVERY_DATE) AS IMM1, (SELECT COUNT(*) AS TOT FROM DELIVERY) AS TOT1"
+      ],
+      "schema": {
+        "DELIVERY": {
+          "CUSTOMER_ID": "INT",
+          "CUSTOMER_PREF_DELIVERY_DATE": "DATE",
+          "DELIVERY_ID": "INT",
+          "ORDER_DATE": "DATE"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+      "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+    ],
+    "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+    "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+      "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+      "table_count": 1,
+      "column_count": 4,
+      "schema_type_counts": {
+        "DATE": 2,
+        "INT": 2
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 2,
+      "operator_counts": {
+        "lte": 1,
+        "primary": 1,
+        "value": 3
+      },
+      "reference_counts": {
+        "DELIVERY__CUSTOMER_PREF_DELIVERY_DATE": 1,
+        "DELIVERY__DELIVERY_ID": 1,
+        "DELIVERY__ORDER_DATE": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004794208332896233,
+        "actual_check_cpu_seconds": 0.004801999999999973,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.017271374817937613,
+        "actual_check_cpu_seconds": 0.017237999999999976,
+        "timeout_ms": 700
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.022065583150833845,
+    "solver_cumulative_cpu_seconds": 0.02203999999999995,
+    "query_solver_called": true,
+    "hardness_claim": "NOT_ESTABLISHED_SINGLE_ATTEMPT",
+    "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+  },
+  "worker_result_unmodified": {
+    "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+    "record": {
+      "id": "dev03_07_exact4_rep1",
+      "source_case_id": "dev03_07",
+      "repeat_id": 1,
+      "case_index": 2,
+      "status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "attempts": [
+        {
+          "id": "dev03_07",
+          "attempt": 1,
+          "status": "RETURNED",
+          "stages": [
+            {
+              "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+              "status": "RETURNED",
+              "wall_seconds": 0.0017705000936985016,
+              "cpu_seconds": 0.001771000000000078
+            },
+            {
+              "name": "FULL_ORIGINAL_IC_ADMISSION",
+              "status": "RETURNED",
+              "original_clause_count": 2,
+              "base_fact_count": 52,
+              "admitted_delta_facts": 2,
+              "full_fact_count": 54,
+              "wall_seconds": 0.002512041013687849,
+              "cpu_seconds": 0.00251099999999993
+            },
+            {
+              "name": "FULL_C_SOLVER_SETUP",
+              "status": "RETURNED",
+              "wall_seconds": 0.003511750139296055,
+              "cpu_seconds": 0.0035119999999999596
+            },
+            {
+              "name": "FULL_C_NONEMPTY_CHECK",
+              "status": "RETURNED",
+              "timeout_ms": 100,
+              "attempt": 1,
+              "stage": "FULL_C_NONEMPTY_CHECK",
+              "actual_check_wall_seconds": 0.004794208332896233,
+              "actual_check_cpu_seconds": 0.004801999999999973,
+              "answer": "sat",
+              "wall_seconds": 0.007207750342786312,
+              "cpu_seconds": 0.007184999999999997
+            },
+            {
+              "name": "FULL_C_SAT_MODEL_VALIDATION",
+              "status": "RETURNED",
+              "wall_seconds": 0.0005425829440355301,
+              "cpu_seconds": 0.0005439999999999889
+            },
+            {
+              "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+              "status": "RETURNED",
+              "formula_counts": [
+                2,
+                16
+              ],
+              "output_tuple_counts": [
+                2,
+                4
+              ],
+              "wall_seconds": 0.08011387474834919,
+              "cpu_seconds": 0.07994999999999997
+            },
+            {
+              "name": "OFFICIAL_PARSE_QUERY_0",
+              "status": "RETURNED",
+              "ast_json_lossless": true,
+              "ast_sha256": "142f2c73fd0d8ccaebfd2866e8da785e32e0ee890a39c3e11b8e942c996e3b6e",
+              "ast_hash_scope": "lossless canonical JSON",
+              "wall_seconds": 0.06600554240867496,
+              "cpu_seconds": 0.06590600000000002
+            },
+            {
+              "name": "OFFICIAL_PARSE_QUERY_1",
+              "status": "RETURNED",
+              "ast_json_lossless": true,
+              "ast_sha256": "5fa438826bbbda27128ad82eb928441473e166b907a50e5d2be089559c329c44",
+              "ast_hash_scope": "lossless canonical JSON",
+              "wall_seconds": 0.004702333360910416,
+              "cpu_seconds": 0.004695000000000005
+            },
+            {
+              "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+              "status": "RETURNED",
+              "timeout_ms": 700,
+              "attempt": 1,
+              "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+              "actual_check_wall_seconds": 0.017271374817937613,
+              "actual_check_cpu_seconds": 0.017237999999999976,
+              "answer": "unsat",
+              "wall_seconds": 0.021083499770611525,
+              "cpu_seconds": 0.020975999999999995
+            }
+          ],
+          "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+          "exact_rows": {
+            "DELIVERY": 4
+          },
+          "raw_query_verdict": "unsat",
+          "full_C_nonempty": "sat",
+          "comparison_formula_encode": {
+            "wall_seconds": 0.005778208374977112,
+            "cpu_seconds": 0.00575900000000007
+          },
+          "comparison_formula_encode_status": "REACHED_QUERY_CHECK",
+          "contract_model_sanity": {
+            "status": "NOT_ADMITTED",
+            "model_origin": "FULL_C_NONEMPTY_CHECK",
+            "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+            "query_sat_witness": false,
+            "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY"
+          },
+          "active_stage": null,
+          "latest_stage": "CLEANUP",
+          "full_contract_fact_sha256": "1d4afe2a6abc05bdee71f73dfc400bc1caad9699b4c9874ba7d6b5e441b738c9",
+          "solver_cumulative_wall_seconds": 0.022065583150833845,
+          "solver_cumulative_cpu_seconds": 0.02203999999999995,
+          "parsed_asts": [
+            {
+              "select": {
+                "value": {
+                  "round": [
+                    {
+                      "mul": [
+                        {
+                          "div": [
+                            {
+                              "sum": {
+                                "eq": [
+                                  "ORDER_DATE",
+                                  "CUSTOMER_PREF_DELIVERY_DATE"
+                                ]
+                              }
+                            },
+                            {
+                              "count": "*"
+                            }
+                          ]
+                        },
+                        100
+                      ]
+                    },
+                    2
+                  ]
+                },
+                "name": "IMMEDIATE_PERCENTAGE"
+              },
+              "from": "DELIVERY"
+            },
+            {
+              "select": {
+                "value": {
+                  "round": [
+                    {
+                      "mul": [
+                        100,
+                        {
+                          "div": [
+                            "IMM",
+                            "TOT"
+                          ]
+                        }
+                      ]
+                    },
+                    2
+                  ]
+                },
+                "name": "IMMEDIATE_PERCENTAGE"
+              },
+              "from": [
+                {
+                  "value": {
+                    "select": {
+                      "value": {
+                        "count": "*"
+                      },
+                      "name": "IMM"
+                    },
+                    "from": "DELIVERY",
+                    "where": {
+                      "eq": [
+                        "ORDER_DATE",
+                        "CUSTOMER_PREF_DELIVERY_DATE"
+                      ]
+                    }
+                  },
+                  "name": "IMM1"
+                },
+                {
+                  "value": {
+                    "select": {
+                      "value": {
+                        "count": "*"
+                      },
+                      "name": "TOT"
+                    },
+                    "from": "DELIVERY"
+                  },
+                  "name": "TOT1"
+                }
+              ]
+            }
+          ],
+          "submitted_query_assertion_count": 1,
+          "official_compare_return": true,
+          "engineering_class": "QUERY_RETURNED",
+          "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+          "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+          "cleanup_cost": {
+            "wall_seconds": 0.008808291982859373,
+            "cpu_seconds": 0.008793999999999969
+          },
+          "exclusive_phase_cpu": {
+            "parse": 0.07060100000000002,
+            "scope_encode": 0.00934899999999994,
+            "compare_encode": 0.00575900000000007,
+            "query_check": 0.017237999999999976
+          },
+          "exclusive_phase_cpu_status": {
+            "parse": "MEASURED",
+            "scope_encode": "DERIVED_ANALYZE_MINUS_PARSE",
+            "compare_encode": "REACHED_QUERY_CHECK",
+            "query_check": "MEASURED"
+          },
+          "attempt_cost": {
+            "cpu_seconds": 0.14308700000000008,
+            "wall_seconds": 0.14372045826166868,
+            "worker_peak_rss_bytes_macos": 108150784
+          }
+        }
+      ],
+      "active_stage": null,
+      "source_and_structure_admission_cost": {
+        "status": "RETURNED",
+        "wall_seconds": 0.0009864578023552895,
+        "cpu_seconds": 0.0009650000000000006,
+        "scope": "Source/provenance/hash/structural admission plus in-phase persistence; excludes boundary event writes and earlier worker/registry startup. Hard termination may censor this phase."
+      },
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11415,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "provenance_class": "PRESENT_JSON",
+      "original_source_record": {
+        "constraint": [
+          {
+            "primary": [
+              {
+                "value": "DELIVERY__DELIVERY_ID"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "DELIVERY__ORDER_DATE"
+              },
+              {
+                "value": "DELIVERY__CUSTOMER_PREF_DELIVERY_DATE"
+              }
+            ]
+          }
+        ],
+        "file": "benchmark/leetcode/raw_data/1173.csv",
+        "index": 34,
+        "pair": [
+          "SELECT ROUND((SUM(ORDER_DATE = CUSTOMER_PREF_DELIVERY_DATE) / COUNT(*)) * 100 , 2) AS IMMEDIATE_PERCENTAGE FROM DELIVERY",
+          "SELECT ROUND(100*(IMM/TOT),2) AS IMMEDIATE_PERCENTAGE FROM (SELECT COUNT(*) AS IMM FROM DELIVERY WHERE ORDER_DATE = CUSTOMER_PREF_DELIVERY_DATE) AS IMM1, (SELECT COUNT(*) AS TOT FROM DELIVERY) AS TOT1"
+        ],
+        "schema": {
+          "DELIVERY": {
+            "CUSTOMER_ID": "INT",
+            "CUSTOMER_PREF_DELIVERY_DATE": "DATE",
+            "DELIVERY_ID": "INT",
+            "ORDER_DATE": "DATE"
+          }
+        }
+      },
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "semantic_admission": {},
+      "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+      "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+      "structural_admission": {
+        "status": "ADMITTED_STRUCTURALLY",
+        "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+        "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+        "table_count": 1,
+        "column_count": 4,
+        "schema_type_counts": {
+          "DATE": 2,
+          "INT": 2
+        },
+        "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+        "original_clause_count": 2,
+        "operator_counts": {
+          "lte": 1,
+          "primary": 1,
+          "value": 3
+        },
+        "reference_counts": {
+          "DELIVERY__CUSTOMER_PREF_DELIVERY_DATE": 1,
+          "DELIVERY__DELIVERY_ID": 1,
+          "DELIVERY__ORDER_DATE": 1
+        },
+        "full_preservation": true,
+        "dropped_tables": 0,
+        "dropped_fields": 0,
+        "dropped_clauses": 0,
+        "rewrites": 0,
+        "operational_notes": [
+          "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS"
+        ],
+        "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+      },
+      "latest_stage": "CLEANUP",
+      "repeat_triggered": false,
+      "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004794208332896233,
+          "actual_check_cpu_seconds": 0.004801999999999973,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.017271374817937613,
+          "actual_check_cpu_seconds": 0.017237999999999976,
+          "timeout_ms": 700
+        }
+      ],
+      "solver_cumulative_wall_seconds": 0.022065583150833845,
+      "solver_cumulative_cpu_seconds": 0.02203999999999995,
+      "query_solver_called": true,
+      "hardness_claim": "NOT_ESTABLISHED_SINGLE_ATTEMPT",
+      "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+    },
+    "scope": "Registered input only; registered exact N official semantics, no business or cross-dialect gold",
+    "last_event": {
+      "event": "SINGLE_ATTEMPT_COMPLETE",
+      "id": "dev03_07_exact4_rep1",
+      "attempt": null,
+      "active_stage": null
+    },
+    "protocol_sha256": "6d4f9bfb6939bf4af5f94b0813c303f9aaa30617cb197b16605b7683b6d0ff87",
+    "input": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+      "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+    },
+    "code_sha256": {
+      "official_generation_worker.py": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+      "official_generation_backend.py": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+      "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+      "generation_common.py": "2fd58f41e25c59d0842bfecaa90edd5f62162a8e3b7d86ff8b117646f6492d6b",
+      "safe_sqlite_replay.py": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5"
+    },
+    "registered_group_count": 4,
+    "registered_slot": {
+      "id": "dev03_07_exact4_rep1",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 4,
+      "repeat_id": 1
+    },
+    "denominator_unchanged": true,
+    "runtime": {
+      "id": "runtime",
+      "stages": [
+        {
+          "name": "LOCK_AND_DEPENDENCY_HASH",
+          "status": "RETURNED",
+          "checked_files": 848,
+          "wall_seconds": 0.039938374888151884,
+          "cpu_seconds": 0.03992
+        },
+        {
+          "name": "NATIVE_AND_OFFICIAL_IMPORT",
+          "status": "RETURNED",
+          "version": [
+            4,
+            12,
+            0,
+            0
+          ],
+          "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+          "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+          "wall_seconds": 0.6241155825555325,
+          "cpu_seconds": 0.623308
+        }
+      ],
+      "active_stage": null,
+      "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+    },
+    "latest_attempt_snapshot": {
+      "id": "dev03_07",
+      "attempt": 1,
+      "status": "RETURNED",
+      "stages": [
+        {
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "status": "RETURNED",
+          "wall_seconds": 0.0017705000936985016,
+          "cpu_seconds": 0.001771000000000078
+        },
+        {
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "status": "RETURNED",
+          "original_clause_count": 2,
+          "base_fact_count": 52,
+          "admitted_delta_facts": 2,
+          "full_fact_count": 54,
+          "wall_seconds": 0.002512041013687849,
+          "cpu_seconds": 0.00251099999999993
+        },
+        {
+          "name": "FULL_C_SOLVER_SETUP",
+          "status": "RETURNED",
+          "wall_seconds": 0.003511750139296055,
+          "cpu_seconds": 0.0035119999999999596
+        },
+        {
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "status": "RETURNED",
+          "timeout_ms": 100,
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004794208332896233,
+          "actual_check_cpu_seconds": 0.004801999999999973,
+          "answer": "sat",
+          "wall_seconds": 0.007207750342786312,
+          "cpu_seconds": 0.007184999999999997
+        },
+        {
+          "name": "FULL_C_SAT_MODEL_VALIDATION",
+          "status": "RETURNED",
+          "wall_seconds": 0.0005425829440355301,
+          "cpu_seconds": 0.0005439999999999889
+        },
+        {
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "status": "RETURNED",
+          "formula_counts": [
+            2,
+            16
+          ],
+          "output_tuple_counts": [
+            2,
+            4
+          ],
+          "wall_seconds": 0.08011387474834919,
+          "cpu_seconds": 0.07994999999999997
+        },
+        {
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "status": "RETURNED",
+          "ast_json_lossless": true,
+          "ast_sha256": "142f2c73fd0d8ccaebfd2866e8da785e32e0ee890a39c3e11b8e942c996e3b6e",
+          "ast_hash_scope": "lossless canonical JSON",
+          "wall_seconds": 0.06600554240867496,
+          "cpu_seconds": 0.06590600000000002
+        },
+        {
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "status": "RETURNED",
+          "ast_json_lossless": true,
+          "ast_sha256": "5fa438826bbbda27128ad82eb928441473e166b907a50e5d2be089559c329c44",
+          "ast_hash_scope": "lossless canonical JSON",
+          "wall_seconds": 0.004702333360910416,
+          "cpu_seconds": 0.004695000000000005
+        },
+        {
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "status": "RETURNED",
+          "timeout_ms": 700,
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.017271374817937613,
+          "actual_check_cpu_seconds": 0.017237999999999976,
+          "answer": "unsat",
+          "wall_seconds": 0.021083499770611525,
+          "cpu_seconds": 0.020975999999999995
+        }
+      ],
+      "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+      "exact_rows": {
+        "DELIVERY": 4
+      },
+      "raw_query_verdict": "unsat",
+      "full_C_nonempty": "sat",
+      "comparison_formula_encode": {
+        "wall_seconds": 0.005778208374977112,
+        "cpu_seconds": 0.00575900000000007
+      },
+      "comparison_formula_encode_status": "REACHED_QUERY_CHECK",
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "model_origin": "FULL_C_NONEMPTY_CHECK",
+        "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+        "query_sat_witness": false,
+        "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY"
+      },
+      "active_stage": null,
+      "latest_stage": "CLEANUP",
+      "full_contract_fact_sha256": "1d4afe2a6abc05bdee71f73dfc400bc1caad9699b4c9874ba7d6b5e441b738c9",
+      "solver_cumulative_wall_seconds": 0.022065583150833845,
+      "solver_cumulative_cpu_seconds": 0.02203999999999995,
+      "parsed_asts": [
+        {
+          "select": {
+            "value": {
+              "round": [
+                {
+                  "mul": [
+                    {
+                      "div": [
+                        {
+                          "sum": {
+                            "eq": [
+                              "ORDER_DATE",
+                              "CUSTOMER_PREF_DELIVERY_DATE"
+                            ]
+                          }
+                        },
+                        {
+                          "count": "*"
+                        }
+                      ]
+                    },
+                    100
+                  ]
+                },
+                2
+              ]
+            },
+            "name": "IMMEDIATE_PERCENTAGE"
+          },
+          "from": "DELIVERY"
+        },
+        {
+          "select": {
+            "value": {
+              "round": [
+                {
+                  "mul": [
+                    100,
+                    {
+                      "div": [
+                        "IMM",
+                        "TOT"
+                      ]
+                    }
+                  ]
+                },
+                2
+              ]
+            },
+            "name": "IMMEDIATE_PERCENTAGE"
+          },
+          "from": [
+            {
+              "value": {
+                "select": {
+                  "value": {
+                    "count": "*"
+                  },
+                  "name": "IMM"
+                },
+                "from": "DELIVERY",
+                "where": {
+                  "eq": [
+                    "ORDER_DATE",
+                    "CUSTOMER_PREF_DELIVERY_DATE"
+                  ]
+                }
+              },
+              "name": "IMM1"
+            },
+            {
+              "value": {
+                "select": {
+                  "value": {
+                    "count": "*"
+                  },
+                  "name": "TOT"
+                },
+                "from": "DELIVERY"
+              },
+              "name": "TOT1"
+            }
+          ]
+        }
+      ],
+      "submitted_query_assertion_count": 1,
+      "official_compare_return": true,
+      "engineering_class": "QUERY_RETURNED",
+      "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+      "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+      "cleanup_cost": {
+        "wall_seconds": 0.008808291982859373,
+        "cpu_seconds": 0.008793999999999969
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.07060100000000002,
+        "scope_encode": 0.00934899999999994,
+        "compare_encode": 0.00575900000000007,
+        "query_check": 0.017237999999999976
+      },
+      "exclusive_phase_cpu_status": {
+        "parse": "MEASURED",
+        "scope_encode": "DERIVED_ANALYZE_MINUS_PARSE",
+        "compare_encode": "REACHED_QUERY_CHECK",
+        "query_check": "MEASURED"
+      },
+      "attempt_cost": {
+        "cpu_seconds": 0.14308700000000008,
+        "wall_seconds": 0.14372045826166868,
+        "worker_peak_rss_bytes_macos": 108150784
+      }
+    },
+    "worker_usage": {
+      "cpu_user_seconds": 0.780975,
+      "cpu_system_seconds": 0.068974,
+      "peak_rss_bytes_macos": 108199936,
+      "wall_from_main_seconds": 0.831553790718317
+    }
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "prior_resource_observation_cpu_charge_seconds": 0.48529100000000003,
+    "prior_resource_observation_measured_cpu_seconds": 0.085291,
+    "prior_resource_observation_tail_reserve_seconds": 0.4,
+    "prior_observation_accounting_status": "REGISTERED_CHARGE",
+    "parent_user_cpu_seconds": 0.116658,
+    "parent_system_cpu_seconds": 0.081137,
+    "all_reaped_children_user_cpu_seconds": 2.461637,
+    "all_reaped_children_system_cpu_seconds": 0.743138,
+    "supervisor_plus_reaped_cpu_seconds": 3.4025700000000003,
+    "observed_total_cpu_seconds": 13.887861000000001,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 14.087861,
+    "known_minimum_charged_seconds_excluding_prior_observation": 13.60257,
+    "scope": "Preparation10s plus separately registered prior observation charge, absolute current parent SELF and all reaped CHILDREN including memory_pressure, ps, failed preexec children and workers, plus batch tail0.2s. Live worker CPU separately sampled. No child or observation CPU is added twice. A missing prior ledger makes the full total unknown, not zero."
+  }
+}

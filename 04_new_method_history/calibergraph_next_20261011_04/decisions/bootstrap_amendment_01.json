@@ -1,0 +1,36 @@
+{
+  "id": "round04-zero-exec-bootstrap-amendment-01",
+  "utc": "2026-10-11T13:30:29.275365+00:00",
+  "status": "PROSPECTIVE_EXCEPTION_NO_SCIENTIFIC_OUTPUT_OBSERVED",
+  "prior_protocol": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/boundary_pilot.registered.json",
+  "preserved_failed_batch": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01",
+  "evidence": "First slot forked but Popen preexec_fn failed; no worker events/progress/target code or SQL/solver. Separate stdlib tests show sandbox self setpriority denied and approved host-context self nice15 succeeds.",
+  "diagnostic_cpu_snapshots_seconds": [
+    0.052683,
+    0.036665
+  ],
+  "new_prior_charge_seconds": 3.408329,
+  "charge_decomposition": {
+    "failed_batch_conservative_including_original_preflight_and_tail": 1.408329,
+    "stdlib_diagnostics_reserved": 1.0,
+    "new_freeze_reserved": 1.0
+  },
+  "changes": [
+    "Run under approved host execution context so own worker priority can be lowered; same numeric resources, original source and order.",
+    "Copy supervisor to distinct new file, only change prior CPU charge from1 to3.408329.",
+    "Preserve v1 code/protocol/freeze/results; prospective recovery protocol/freeze and new result directory."
+  ],
+  "no_changes": [
+    "SQL",
+    "schema",
+    "C",
+    "bounds1..5",
+    "10slotorder",
+    "solver_check_limits",
+    "60CPUglobalcap",
+    "unrelated_project/processes",
+    "system_security"
+  ],
+  "recovery_limit": 1,
+  "further_failure": "Retain denominator and stop scientific execution. No third batch or budget increase."
+}

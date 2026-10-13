@@ -1,0 +1,27 @@
+{
+  "status": "PASS_STATIC_ADMISSION",
+  "must_fix": [],
+  "files_sha256": {
+    "calibergraph_count_parser_closure_20261012_20/parser_test_v2.py": "366a7bb62e6e59146c896da6f1b2898a2296627bd60378e7e44d693f7a0753a3",
+    "calibergraph_count_parser_closure_20261012_20/COUNT_P3.patch": "1e41bbdf6f66f9ce3d77343c4cfa259b13a3d777f69ab72a77b34dbe1634e4cf",
+    "calibergraph_count_parser_closure_20261012_20/review_local/verify_results_v2.py": "76887aa8bce669d32d49c70bce92536cfee0823f0db8d825e7130f92681d10f8",
+    "calibergraph_count_parser_closure_20261012_20/ATTEMPT_REVISION.zh.md": "0d4e825c11648b73b0b1312667ae1f88d9e93886f83bae85b7173b7dfb031242",
+    "calibergraph_count_parser_closure_20261012_20/run_budget.py": "64ba48e10aa48963b840745115cc7cd45298873291ea04e848b32af847bf1add",
+    "calibergraph_count_parser_closure_20261012_20/RECEIPT_001.json": "95a8eee5122bd0fe680dc6894676caf1fd15ddb79d1c78f66a1384be8ae5e896",
+    "calibergraph_count_parser_closure_20261012_20/RECEIPT_002.json": "254e20845d060ac6281754432bda3a51378a2977c52c3fae41e601848fd6ad55",
+    "calibergraph_count_parser_closure_20261012_20/PARSER_RESULTS.json": "71af83da19ece0fa43b5b41a1971efc7bfee96d365fef3f89731e876e2130288"
+  },
+  "patch_changed_files": [
+    "sql_parser.py",
+    "visitors/expression_encoder.py",
+    "visitors/group_expression_encoder.py"
+  ],
+  "same_source_file_set": 49,
+  "test_changes": "Real Implies has premise/conclusion, now evaluated before generic a/b. Env.string_hash reproduces frozen method behavior with local dictionaries. Same42 inputs per version, adds P3 version only; preserved old result.",
+  "p3_static": "Three aggregate FILTER entry sites call a local parse_aggregate_filter helper: bare str becomes Attribute; other inputs preserve parse_expression. Quoted literal dictionaries preserve Literal. General parse_expression primitive behavior unchanged. Expr/group fixes identical to P2.",
+  "prior_admission_correction": "Initial static review missed Implies field mismatch and bare FILTER identifier parser issue. It also incorrectly predicted singleton Bool error: expression_for_tuple applies EnsureInt to singleton, so bound1 filtered cases PASS; bound2 Bool Plus remains ill-sorted. Existing admission and scripts are preserved as historical records; v2 verifier corrects expected statuses.",
+  "expected_results": "Original matrix12PASS/4MISMATCH/12ERROR. P1/P2/P3 matrices28PASS. Pipeline original7PASS/6MISMATCH/1ERROR; P1 9PASS/5MISMATCH; P2 11PASS/3MISMATCH; P3 14PASS, subject to actual run.",
+  "scope": "No execution in this static review. P3 quoted-literal preservation is static only unless separately recorded tests are added. No whole Environment.check/QueryEncoder/SMT or general SQL correctness claim. Prior four natural cases have no FILTER, hence P3 not on their path.",
+  "budget": "Existing001+002 receipts total0.4445960418871939s; controller003 must use remaining cumulative60s and preserve prior attempts.",
+  "verifier": "New script only. Independent fresh SQLite and Python reference for168 records, status and saved parser AST checks, no target import or solver."
+}

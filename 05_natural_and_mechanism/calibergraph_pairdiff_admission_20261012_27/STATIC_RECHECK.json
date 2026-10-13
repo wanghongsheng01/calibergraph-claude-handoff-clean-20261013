@@ -1,0 +1,44 @@
+{
+  "role": "author static consistency recheck, not independent review or semantic oracle",
+  "frozen_file_checks": [
+    {
+      "path": "PROTOCOL.md",
+      "match": true
+    },
+    {
+      "path": "INPUT_FREEZE.json",
+      "match": true
+    },
+    {
+      "path": "EXCLUSION_FREEZE.json",
+      "match": true
+    },
+    {
+      "path": "scan.py",
+      "match": true
+    },
+    {
+      "path": "static_checks.py",
+      "match": true
+    },
+    {
+      "path": "STATIC_CHECKS.json",
+      "match": true
+    }
+  ],
+  "all_record_count": 25528,
+  "unique_ids": 25528,
+  "record_counts": {
+    "parseval_bird": 1534,
+    "verieql_leetcode": 23994
+  },
+  "admitted": 315,
+  "nontrivial_admitted": 183,
+  "eligible": 0,
+  "verbatim_representatives_checked": 12,
+  "tokenization_errors_mislabeled_scanner_error_in_raw_receipt": 11,
+  "rules_or_scanner_changed_after_scan": false,
+  "new_sql_executions": 0,
+  "new_solver_calls": 0,
+  "checks_passed": true
+}

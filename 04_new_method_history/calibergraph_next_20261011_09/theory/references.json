@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "cutoff": "2026-10-11",
+  "scope": "targeted primary-source verification, not an exhaustive literature nonexistence proof",
+  "third_party_paper_copies_saved": false,
+  "sources": [
+    {
+      "id": "CM2016",
+      "authors": ["Hubie Chen", "Stefan Mengel"],
+      "title": "Counting Answers to Existential Positive Queries: A Complexity Classification",
+      "read_version": "arXiv:1601.03240v2, 2016-04-20",
+      "url": "https://arxiv.org/pdf/1601.03240v2",
+      "publication_state": "PUBLISHED",
+      "publication_evidence": "https://dl.acm.org/doi/10.1145/2902251.2902279",
+      "publication_note": "PODS 2016 pp315-326; exact theorem pages here refer to arXiv v2, not an independently read ACM PDF",
+      "anchors": ["section 2.1 printed pp4-5 (relational pp/ep and liberal variables)", "Definition 5.1 printed p14", "Definition 5.3 and Theorem 5.4 printed p15", "Observation 5.5 printed p15", "Theorem 5.4 Cartesian blow-up proof printed p16", "Theorem 3.1 printed p11", "Proposition 5.16 printed p22"],
+      "premise": "all finite relational structures over the same vocabulary; pp formulas; no built-in equality; no schema PK/FK restriction",
+      "transfer": "sound renaming directions survive restricted classes; original necessity/blow-up does not directly restrict to keys",
+      "independent_helper": "primary_counting_sources read-only source check; author also read theorem and construction"
+    },
+    {
+      "id": "CHIRKOVA2014_ARXIV",
+      "authors": ["Rada Chirkova"],
+      "title": "Combined-Semantics Equivalence Is Decidable For a Practical Class of Conjunctive Queries",
+      "read_version": "arXiv:1308.4027v2, 2014-08-13",
+      "url": "https://arxiv.org/html/1308.4027v2",
+      "publication_state_of_read_version": "PREPRINT",
+      "related_journal_record": "https://doi.org/10.1016/j.jcss.2015.11.001",
+      "anchors": ["Definition 3.5", "Theorem 3.11 and Proof 3.12", "Proposition 3.13", "Definition 4.1", "Theorem 4.5"],
+      "premise": "copy-sensitive combined queries, unconstrained database semantics; necessity on explicit-wave queries",
+      "transfer": "no copy-sensitive atoms satisfy explicit-wave clause 1; covering injection is direct prior art; no arbitrary PK/FK necessity transferred"
+    },
+    {
+      "id": "DEHAAN2009_THESIS",
+      "authors": ["David E. DeHaan"],
+      "title": "Equivalence of Queries with Nested Aggregation",
+      "read_version": "University of Waterloo PhD thesis, 2009, 223 PDF pages",
+      "url": "https://uwspace.uwaterloo.ca/bitstreams/75481061-96ae-4f14-89b7-44c6aab72683/download",
+      "publication_state": "THESIS",
+      "anchors": ["title page", "Definition 3.2.1 printed p84 / PDF page104", "Theorem 3.2.4 printed p85 / PDF page105", "section 3.3.2 printed pp87-88 / PDF pages107-108", "Appendix A.2 diversification"],
+      "premise": "conjunctive encoding queries, their normal forms, index-covering homomorphisms",
+      "transfer": "combined-counting special case and polynomial diversification already covered; do not silently add arbitrary schema dependencies",
+      "title_correction": "This 223-page link is not the PODS article with the different title Equivalence of nested queries with mixed semantics.",
+      "related_original_report_record": "https://uwspace.uwaterloo.ca/items/fbefd812-fcd1-42ff-88eb-489a85fb7def"
+    },
+    {
+      "id": "FEWROWS2026",
+      "authors": ["Sara Cohen"],
+      "title": "Few Rows Tell Them Apart: Equivalence of Queries Mixing Set and Bag Semantics",
+      "read_version": "arXiv:2609.09978v1, 2026-09-09",
+      "url": "https://arxiv.org/html/2609.09978v1",
+      "publication_state": "PREPRINT",
+      "anchors": ["Theorem 4", "Theorem 7", "Example 8", "Lemma 11", "Theorem 13", "Theorem 15", "section 4 residual open case"],
+      "premise": "set tables, satisfiable and set-equivalent query pair; key-anchorable reduct/chase for constrained theorems",
+      "transfer": "already combines FD demotion, key-chase, homomorphisms and legal witness bounds on its anchored fragment, including selfjoins",
+      "boundary": "nonanchorable legality/separation not supplied; {1,2} domain sizes do not imply two physical rows per table; chase size must account for branching/schema"
+    }
+  ],
+  "alternative_CM_version_numbers_not_to_conflate": [
+    {"title": "The Logic of Counting Query Answers", "version": "1501.07195v1", "url": "https://arxiv.org/pdf/1501.07195v1", "anchor": "Theorem 6.3"},
+    {"title": "The Logic of Counting Query Answers", "version": "1501.07195v2", "url": "https://arxiv.org/pdf/1501.07195v2", "anchor": "Theorem D.2"},
+    {"title": "The Logic of Counting Query Answers", "version": "1501.07195v3", "url": "https://arxiv.org/pdf/1501.07195v3", "anchor": "Theorem 10.2, citing CM2016 Theorem5.4"}
+  ]
+}

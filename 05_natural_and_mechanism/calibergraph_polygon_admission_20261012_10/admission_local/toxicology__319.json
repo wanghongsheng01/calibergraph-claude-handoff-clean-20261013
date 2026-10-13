@@ -1,0 +1,242 @@
+{
+  "case_id": "toxicology__319",
+  "source_ddl_sha256": "33b439b05b6084604baa2b55dd02cc4f9452cc4910a186b58c6ecc4d0065874f",
+  "tables": [
+    {
+      "table": "atom",
+      "columns": [
+        {
+          "name": "atom_id",
+          "source_type": "TEXT",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "molecule_id",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "element",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "atom_id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "molecule_id"
+          ],
+          "target_table": "molecule",
+          "target_columns": [
+            "molecule_id"
+          ],
+          "actions": ""
+        }
+      ]
+    },
+    {
+      "table": "bond",
+      "columns": [
+        {
+          "name": "bond_id",
+          "source_type": "TEXT",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "molecule_id",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "bond_type",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "bond_id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "molecule_id"
+          ],
+          "target_table": "molecule",
+          "target_columns": [
+            "molecule_id"
+          ],
+          "actions": ""
+        }
+      ]
+    },
+    {
+      "table": "connected",
+      "columns": [
+        {
+          "name": "atom_id",
+          "source_type": "TEXT",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "atom_id2",
+          "source_type": "TEXT",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "bond_id",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "atom_id",
+        "atom_id2"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "atom_id"
+          ],
+          "target_table": "atom",
+          "target_columns": [
+            "atom_id"
+          ],
+          "actions": "ON DELETE CASCADE ON UPDATE CASCADE"
+        },
+        {
+          "columns": [
+            "atom_id2"
+          ],
+          "target_table": "atom",
+          "target_columns": [
+            "atom_id"
+          ],
+          "actions": "ON DELETE CASCADE ON UPDATE CASCADE"
+        },
+        {
+          "columns": [
+            "bond_id"
+          ],
+          "target_table": "bond",
+          "target_columns": [
+            "bond_id"
+          ],
+          "actions": "ON DELETE CASCADE ON UPDATE CASCADE"
+        }
+      ]
+    },
+    {
+      "table": "molecule",
+      "columns": [
+        {
+          "name": "molecule_id",
+          "source_type": "TEXT",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "label",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "molecule_id"
+      ],
+      "foreign_keys": []
+    }
+  ],
+  "proposed_polygon_constraint_entries": [
+    {
+      "primary": [
+        "atom.atom_id"
+      ]
+    },
+    {
+      "not_null": "atom.atom_id"
+    },
+    {
+      "eq": [
+        "atom.molecule_id",
+        "molecule.molecule_id"
+      ]
+    },
+    {
+      "primary": [
+        "bond.bond_id"
+      ]
+    },
+    {
+      "not_null": "bond.bond_id"
+    },
+    {
+      "eq": [
+        "bond.molecule_id",
+        "molecule.molecule_id"
+      ]
+    },
+    {
+      "primary": [
+        "connected.atom_id",
+        "connected.atom_id2"
+      ]
+    },
+    {
+      "not_null": "connected.atom_id"
+    },
+    {
+      "not_null": "connected.atom_id2"
+    },
+    {
+      "eq": [
+        "connected.atom_id",
+        "atom.atom_id"
+      ]
+    },
+    {
+      "eq": [
+        "connected.atom_id2",
+        "atom.atom_id"
+      ]
+    },
+    {
+      "eq": [
+        "connected.bond_id",
+        "bond.bond_id"
+      ]
+    },
+    {
+      "primary": [
+        "molecule.molecule_id"
+      ]
+    },
+    {
+      "not_null": "molecule.molecule_id"
+    }
+  ],
+  "status": "STATIC_MAPPING_INVENTORY_NOT_EXECUTABLE_ADAPTER",
+  "bound": {
+    "live_rows_per_table": "0..1",
+    "no_forced_nonempty_tables": true
+  },
+  "update_delete_actions": "Retained in source and inventory; must exist on original replay DDL, do not affect validity of a static instance without UPDATE/DELETE",
+  "unresolved": [
+    "SQLite type affinities versus symbolic integer domain",
+    "Range-safe and equality-preserving model concretization",
+    "Complete runnable pinned source/dependencies",
+    "Owned process-tree RSS and kill/reap protection"
+  ]
+}

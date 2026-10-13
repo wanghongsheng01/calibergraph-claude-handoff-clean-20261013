@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "date": "2026-10-11",
+  "hypothesis": "H12",
+  "author_role": "/root/round12_legal_lift_falsifier",
+  "status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "outcome": "REJECT_H12_EXPLICIT_COUNTEREXAMPLE",
+  "source_of_math": "Hand derivation, with parent-provided triangle and denominator crosschecks; no independent review claimed",
+  "durable_artifacts": ["theory.md", "result.json", "primaryanchors.md", "handcontrols.md", "SOURCE_SHA256SUMS", "AUTHOR_MANIFEST.json"],
+  "hash_manifest": "SHA256SUMS.outputs",
+  "json_syntax_check": "jq empty result.json; exit 0",
+  "scientific_execution": "NONE",
+  "non_scientific_validation": "JSON syntax validation and SHA-256 file hashes only",
+  "constraints_read": ["/Users/loctek/AGENTS.md", "top-conference-opportunity/SKILL.md", "top-conference-opportunity/references/workflow.md", "top-conference-opportunity/references/literature-and-gap.md"],
+  "third_party_source_bytes_in_deliverables": false,
+  "historical_directories_modified": false,
+  "author_independent_review_separation": "Root to commission independent review after this freeze",
+  "backup_owner": "root",
+  "backup_status": "PENDING_ROOT_PRIVATE_BACKUP_VERIFICATION",
+  "datahub_status": "DATAHUB_REGISTRATION_BLOCKED_REGISTRY_OUTSIDE_WRITE_SCOPE_NO_BUSINESS_DATA_ACCESSED",
+  "no_next_experiment": "H12 falsifier met; no scientific code, SQL, SMT, enumeration, model experiment, GPU or queue authorized by this result"
+}

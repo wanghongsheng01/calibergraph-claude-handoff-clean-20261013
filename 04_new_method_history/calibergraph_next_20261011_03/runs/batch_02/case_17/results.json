@@ -1,0 +1,107 @@
+{
+  "status": "STARTED",
+  "record": {
+    "id": "dev03_18",
+    "case_index": 17,
+    "status": "STARTED",
+    "engineering_class": "NOT_RUN",
+    "strict_class": "NOT_RUN",
+    "attempts": [],
+    "active_stage": "NATIVE_AND_OFFICIAL_IMPORT",
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 2924,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "fe3f09e4498474f0b399abe5efd9fc74844d4e08d93395384d21e554e941a0a4",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "COURSES__STUDENT"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/596.csv",
+      "index": 73,
+      "pair": [
+        "SELECT CLASS FROM COURSES GROUP BY CLASS HAVING COUNT(*)>=5",
+        "SELECT CLASS FROM COURSES AS CS GROUP BY CLASS HAVING (SELECT COUNT(DISTINCT STUDENT) FROM COURSES CP WHERE CP.CLASS= CS.CLASS) >=5"
+      ],
+      "schema": {
+        "COURSES": {
+          "CLASS": "VARCHAR",
+          "STUDENT": "VARCHAR"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+      "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+    ],
+    "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+    "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+      "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+      "table_count": 1,
+      "column_count": 2,
+      "schema_type_counts": {
+        "VARCHAR": 2
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 1,
+      "operator_counts": {
+        "primary": 1,
+        "value": 1
+      },
+      "reference_counts": {
+        "COURSES__STUDENT": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "LOCK_AND_DEPENDENCY_HASH"
+  },
+  "scope": "Registered input only; exact2 official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "065f8574563a3cb0fab2dd98a4e64fd44fe17f66f4b32ec73a2bee9bb39b8a55",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_diagnostic_worker.py": "c8c9ffcc2d22807ef4333d43ebdc11dc08b64f54956a00ce1dc0f2675b9bb1ec",
+    "official_diagnostic_backend.py": "b599f04890b8d7cbf5b12b872a8cbf8a97a0fa74f2ac49ec9eb88fa48e115e5e",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d"
+  },
+  "registered_group_count": 21,
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "STAGE_START",
+    "id": "runtime",
+    "attempt": null,
+    "active_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  }
+}

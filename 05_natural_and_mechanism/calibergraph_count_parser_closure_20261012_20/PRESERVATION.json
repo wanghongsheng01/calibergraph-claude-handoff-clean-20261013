@@ -1,0 +1,38 @@
+{
+  "status": "EXECUTED_INPUTS_PRESERVED_WITH_DECLARED_UNUSED_AUXILIARY_DIFF",
+  "checks": {
+    "FREEZE_001.json": {
+      "count": 478,
+      "mismatches": [
+        {
+          "path": "review_local/verify_results.py",
+          "prefreeze_sha256": "1b1f64a3db415511a968467be2e9e1d917650e7a312290501f757d20851f63a4",
+          "current_sha256": "3c9b715ffc7a2d95a1f074e4198784c589a3c8152e3cc66e9d9f237529a31a93"
+        }
+      ]
+    },
+    "FREEZE_002.json": {
+      "count": 481,
+      "mismatches": [
+        {
+          "path": "review_local/verify_results.py",
+          "prefreeze_sha256": "1b1f64a3db415511a968467be2e9e1d917650e7a312290501f757d20851f63a4",
+          "current_sha256": "3c9b715ffc7a2d95a1f074e4198784c589a3c8152e3cc66e9d9f237529a31a93"
+        }
+      ]
+    },
+    "FREEZE_003.json": {
+      "count": 541,
+      "mismatches": []
+    }
+  },
+  "unused_auxiliary_diff": {
+    "file": "review_local/verify_results.py",
+    "change": "Reviewer added initial INTERRUPTED result before readiness to avoid finally referencing an unbound variable",
+    "executed_in_attempts": [],
+    "deterministic_reconstruction_matches_early_hash": true,
+    "scope": "Post-execution explanation; neither freeze nor old script rewritten"
+  },
+  "final_attempt_541_inputs_all_match": true,
+  "original_baseline_changes": []
+}

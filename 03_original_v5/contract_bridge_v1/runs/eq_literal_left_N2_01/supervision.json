@@ -1,0 +1,41 @@
+{
+  "status": "EXITED",
+  "case_id": "eq_literal_left_N2",
+  "manifest_sha256": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd",
+  "runtime_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+  "sampled_peak_rss_bytes": 102350848,
+  "sampled_max_threads": 2,
+  "limits": {
+    "child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "child_wall_alarm_seconds": 24,
+    "supervisor_child_wall_seconds": 25,
+    "supervisor_internal_wall_seconds": 26,
+    "child_rss_soft_bytes": 1073741824,
+    "rss_sampling_seconds": 0.05
+  },
+  "boundary": "one computation child; RSS sampled, not a hard RSS cap; initial interpreter launch excluded from own timer",
+  "pid": 6572,
+  "command": [
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/run_diagnostic.py",
+    "--runtime-lock",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+    "--runtime-lock-sha256",
+    "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+    "--manifest-sha256",
+    "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd",
+    "--case-id",
+    "eq_literal_left_N2",
+    "--out-dir",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_literal_left_N2_01"
+  ],
+  "exit_code": 0,
+  "child_process_wall_seconds": 1.5463396250270307,
+  "child_cpu_seconds": 1.427991
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "project_id": "calibergraph-next-20261011-04",
+  "created_utc": "2026-10-11T13:11:32.406643+00:00",
+  "stage": "INTAKE",
+  "topic_status": "UNCOMMITTED",
+  "venue": {
+    "name": "UNCOMMITTED",
+    "year": 2026,
+    "track": "mechanism-exploration"
+  },
+  "resource_envelope": {
+    "status": "UNVERIFIED",
+    "budget_ledger_sha256": null,
+    "feasibility_audit_sha256": null,
+    "gpu": {
+      "adapter": "UNKNOWN",
+      "devices": null,
+      "memory_gb_each": null,
+      "status": "UNVERIFIED"
+    },
+    "llm_api": {
+      "adapter": "UNKNOWN",
+      "providers": [],
+      "call_cap": null,
+      "token_cap": null,
+      "currency_cap": null,
+      "status": "UNVERIFIED"
+    },
+    "cpu": {
+      "status": "UNVERIFIED"
+    },
+    "storage": {
+      "status": "UNVERIFIED"
+    }
+  },
+  "split_policy": {
+    "identity_unit": null,
+    "development_ids_sha256": null,
+    "calibration_ids_sha256": null,
+    "confirmation_ids_sha256": null,
+    "split_manifest_sha256": null,
+    "overlap_checked": false,
+    "exposure_ledger": "governance/exposure-ledger.jsonl"
+  },
+  "gates": {
+    "venue_profile": "MISSING",
+    "problem_landscape": "MISSING",
+    "opportunity": "MISSING",
+    "novelty": "MISSING",
+    "feasibility": "MISSING",
+    "protocol_freeze": "MISSING",
+    "harness_baseline": "MISSING",
+    "development_run": "MISSING",
+    "development": "MISSING",
+    "method_lock": "MISSING",
+    "confirmation": "MISSING",
+    "promotion": "MISSING",
+    "submission_readiness": "MISSING"
+  },
+  "latest_next_gate": "Verify the current venue rules and resource envelope.",
+  "events": [
+    {
+      "seq": 1,
+      "event_id": "EVT-0001",
+      "created_utc": "2026-10-11T13:11:32.406643+00:00",
+      "stage": "INTAKE",
+      "summary": "Research project initialized.",
+      "next_gate": "Verify the current venue rules and resource envelope.",
+      "evidence": [],
+      "previous_event_sha256": null,
+      "event_sha256": "2d7286d567e2e54bb5771623f80a10e4b43610fe6d7ff7b7025f956d43606741"
+    }
+  ]
+}

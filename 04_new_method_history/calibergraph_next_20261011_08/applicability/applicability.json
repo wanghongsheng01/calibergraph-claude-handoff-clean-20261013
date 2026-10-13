@@ -1,0 +1,1177 @@
+{
+  "report_id": "round08_fixed21_manual_static_applicability",
+  "created_local_date": "2026-10-11",
+  "language": "zh-CN",
+  "scope": {
+    "input_path": "calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "input_sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb",
+    "source_unit": "ORIGINAL_WHOLE_QUERY_PAIR",
+    "denominator": 21,
+    "selection_status": "PREVIOUSLY_EXPOSED_STRATIFIED_DEVELOPMENT_HOLD_NOT_HIDDEN_TEST",
+    "source_group_independence": "NOT_ESTABLISHED_BEYOND_SOURCE_FILE_LABELS",
+    "input_immutable": true,
+    "other_datasets_or_runs_read": false
+  },
+  "theorem_gate": {
+    "body": "Same comparison-free, NULL-free conjunctive body B, self-join-free, each base relation appearing once; FK closure explicitly present.",
+    "output": "Same output H; only counted variable sets M and N may differ; other variables are existential.",
+    "normal_form": "Outer bag projection of inner SELECT DISTINCT H,M FROM conjunctive body, with existential variables removed inside; SELECT DISTINCT H and SELECT H may be special cases.",
+    "constraints": "Every relation has declared PK; every FK points to the full target PK; relation FK graph is a forest. No constraints are added, deleted, or reinterpreted in this audit.",
+    "complete_C_caveat_zh": "完整 C 的附加非 PK/FK 约束必须保留；若精确定理的 C 语言仅容许 PK/FK，它们也在适用域外。若理论作者允许更多约束，则需另证这些条件不改变精确充要判据，当前文本审计不作此证。",
+    "FK_graph_caveat_zh": "多条 FK 是否在关系图合并为简单边尚未在任务片段中规定，相关组保留条件式说明。"
+  },
+  "method": {
+    "judgment": "MANUALLY_AUTHORED_TEXTUAL_SUFFICIENT_REJECTION_ONLY",
+    "allowed_machine_operations": [
+      "Read frozen JSONL with Python standard-library json",
+      "Serialize manually authored judgments",
+      "SHA256 hashing",
+      "Read applicable AGENTS and DataHub module catalog only"
+    ],
+    "SQL_execution": false,
+    "SQL_parser": false,
+    "SQL_solver": false,
+    "scientific_computation": false,
+    "normalization_or_query_rewrite": false,
+    "new_data_or_schema_or_constraint": false,
+    "full_original_SQL_copied_to_report": false,
+    "pair_labels_used_as_truth": false
+  },
+  "summary": {
+    "denominator_original_pairs": 21,
+    "confirmed_applicable_original_pairs": 0,
+    "static_sufficient_rejections": 21,
+    "unresolved_overall_pair_decisions": 0,
+    "textual_candidates_for_further_admission": 0,
+    "parser_verified_pairs": 0,
+    "executed_pairs": 0,
+    "new_tests": 0,
+    "new_natural_defect_evidence": 0,
+    "interpretation_zh": "0/21 是固定已暴露开发切片上的原始整对静态覆盖数，不是解析器认证、查询等价性结果、自然缺陷率或外推覆盖率。21 个整体结论均由语法层充分排除；并不代表类型、NULL 或完整 C 的语义全部已判定。"
+  },
+  "constraint_findings_index": {
+    "explicit_pk_fk_shape_violations": [
+      "dev03_02",
+      "dev03_03",
+      "dev03_05",
+      "dev03_09",
+      "dev03_15",
+      "dev03_17"
+    ],
+    "unspecified_C": [
+      "dev03_20"
+    ],
+    "constraint_interpretation_or_graph_convention_uncertainty": [
+      "dev03_06",
+      "dev03_13"
+    ],
+    "additional_non_pk_fk_C_visible": [
+      "dev03_01",
+      "dev03_02",
+      "dev03_03",
+      "dev03_04",
+      "dev03_05",
+      "dev03_07",
+      "dev03_09",
+      "dev03_10",
+      "dev03_11",
+      "dev03_12",
+      "dev03_13",
+      "dev03_15",
+      "dev03_16",
+      "dev03_17",
+      "dev03_21"
+    ]
+  },
+  "governance": {
+    "AGENTS_read": [
+      "/Users/loctek/AGENTS.md"
+    ],
+    "write_scope": "calibergraph_next_20261011_08/applicability only",
+    "backup": "PARENT_COORDINATOR_RESPONSIBILITY_NOT_CLAIMED_COMPLETE",
+    "datahub_mapping": "datahub list and opensource +info inspected; available opensource entry describes Spider/BIRD, not this fixed LeetCode slice. No external data was called; no global registry modification was authorized in this subtask. Mapping gap reported to parent.",
+    "source_paths_in_input_not_opened": true
+  },
+  "cases": [
+    {
+      "id": "dev03_01",
+      "development_line_1based": 1,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1127.csv",
+      "source_line_1based": 9581,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "3a089d4292cd95de6a725b163704249d3b39f6424d348a8ebcc70e2f6839a405",
+      "sql_sha256": [
+        "8ea23f976781dd631b981a28009e1dc189085374724c205fa1b89c3007174f88",
+        "3a963258edc1d58e51defbcb2793830e8a86c92bbbc9bcd771851a48a634f234"
+      ],
+      "schema_sha256": "91e4e9a0a027377fd0b1eccf4a0923378d0c4e11d5136bc9aa7bd635fba1e41b",
+      "constraint_sha256": "c54a2812b9846f26b468cb13e43212b7ac003218e995ccccad8dfa0f2473841d",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均含聚合、集合并及外连接；输出含计算表达式，不是仅 M/N 不同的固定 CQ body 投影。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "UNION"
+          },
+          {
+            "query": 1,
+            "text": "LEFT JOIN"
+          },
+          {
+            "query": 2,
+            "text": "SUM(AMOUNT)"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "SPENDING 有三列复合 primary；无 foreign 条目。",
+        "additional_non_pk_fk_operators_visible": [
+          "gt",
+          "in"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "PLATFORM、SPEND_DATE、USER_ID 的非空性只能在 primary 被正确解释的条件下成立；AMOUNT 未声明 NOT NULL。IFNULL 与 LEFT JOIN 引入本片段未覆盖的 NULL 处理。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_02",
+      "development_line_1based": 2,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+      "source_line_1based": 2421,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "2cb3e05c18bacb7f7de7d3a4f55612b5bad8a42925ab2e12a2a41ed90d59748c",
+      "sql_sha256": [
+        "04cda1c9e559e788fef7dbd228b1c0474d6d569a253cc19dcc551ef468eec094",
+        "19d98e29bcb66f151d8bec6ddecdfd9f2b06a41dd5cc6f55bcd8e26a75dc8d89"
+      ],
+      "schema_sha256": "64f3d1ffcc7106d7b2692f9ce04090c436dca76301f62ac3bfd953d4100845ef",
+      "constraint_sha256": "06192a2824767adf627b125b99e2b7de612737dcf02773ebf96484403e1b1ff8",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 含不等比较、OR、IS NULL；Q2 含 UNION ALL 与 IS NULL。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "REFEREE_ID <> 2 OR REFEREE_ID IS NULL"
+          },
+          {
+            "query": 2,
+            "text": "UNION ALL"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FAIL_RELATION_FK_FOREST",
+        "reason_zh": "CUSTOMER.REFEREE_ID → CUSTOMER.ID 是关系 FK 图自环；完整 C 另含 neq。",
+        "additional_non_pk_fk_operators_visible": [
+          "neq"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "REFEREE_ID 未有 NOT NULL；IS NULL 分支显式涉及 NULL。INT/VARCHAR 标签不足以证明逻辑域及 SQL 类型解释。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_03",
+      "development_line_1based": 3,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "source_line_1based": 20110,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "f69a9ad4bdd9e7d6ad758d49a7b4df270890225769fea205081ef7411c2d3b6e",
+      "sql_sha256": [
+        "378117929088bd0c082838758804d2c88beacc5ff435cd237b845143ae2aeea7",
+        "606e5b40b18575253eaa035d37a28f9ddafece41b0e49da495d1952fc9db1266"
+      ],
+      "schema_sha256": "e4b9fe65ad755094147fb2df581a11aa29e84ea0d4953325f1b2bf2e779ec999",
+      "constraint_sha256": "40938c14c002183689969499a12c9ba16ea13f792896c07e84ad001488174750",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均含聚合和 GROUP BY；Q2 另含 UNION ALL、NOT IN 与算术。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "COUNT(DISTINCT LEAD_ID)"
+          },
+          {
+            "query": 2,
+            "text": "UNION ALL"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FAIL_REQUIRED_PK_NOT_DECLARED",
+        "reason_zh": "完整 C 仅声明 LEAD_ID 与 PARTNER_ID 的 neq，DAILYSALES 未声明 primary。",
+        "additional_non_pk_fk_operators_visible": [
+          "neq"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "DATE_ID、MAKE_NAME、LEAD_ID、PARTNER_ID 均未声明 NOT NULL；COUNT DISTINCT 的 NULL 行为未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_04",
+      "development_line_1based": 4,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+      "source_line_1based": 17255,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+      "sql_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "schema_sha256": "ffc10e15b114fe0550dc29ee4a3c314f84c1fdc91a5cbaa2710122d720729d48",
+      "constraint_sha256": "7649cf2fdfb924e153454d6b2af32580a7dc9852473ae7c0a81cca115c108850",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 含 MAX/GROUP BY、CASE/BETWEEN/ROUND；Q2 含 UNION、聚合及比较，SALARIES 多次出现。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "MAX(SALARY)"
+          },
+          {
+            "query": 2,
+            "text": "UNION"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "SALARIES 有 (COMPANY_ID, EMPLOYEE_ID) 复合 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [
+          "gt"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "SALARY 和 EMPLOYEE_NAME 未有 NOT NULL；ROUND/乘法/比较的类型语义及溢出规则未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_05",
+      "development_line_1based": 5,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+      "source_line_1based": 10021,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "8a168706ea27e0cc41fa411ec5bd4d777cbe39503454fe178e949d0666494381",
+      "sql_sha256": [
+        "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+        "71edda688f50325688171de2489d473d742dd33ea626082b6b7e6d82821bbf83"
+      ],
+      "schema_sha256": "c67daa15c7f3b2b0a28a0bc9b3d3e8f31a16af90e04a08988cb8e95b0cffc0f8",
+      "constraint_sha256": "561da2a4582eae44870e212a6e7c58aee0d710b321cde24b3623f5006c76800c",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 原文以 FROM 开始，未呈现完整 SELECT 投影；两边还含 LEFT JOIN 和聚合。文本足以拒绝，未进行 SQL 语法错误诊断。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "FROM (SELECT"
+          },
+          {
+            "query": 2,
+            "text": "ROUND(AVG(DAILY_PERCENT)*100,2)"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FAIL_REQUIRED_PK_AND_FK_TARGET",
+        "reason_zh": "仅 REMOVALS.POST_ID 声明 primary；ACTIONS 无 primary。REMOVALS.POST_ID → ACTIONS.POST_ID 不能由当前 C 认证为指向完整已声明 PK。",
+        "additional_non_pk_fk_operators_visible": [
+          "in",
+          "imply",
+          "eq",
+          "neq"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "EXTRA 的 ENUM 标签含 NULL，C 又出现字符串 NULL；它们与 SQL NULL 的对应未明确。POST_ID 等未有完整非空证明，且含外连接。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_06",
+      "development_line_1based": 6,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1783.csv",
+      "source_line_1based": 21931,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "ce6c505cf246071049892963acba9d7c7f3cc21f96d8a31e2934c4ffb13b7d43",
+      "sql_sha256": [
+        "6ef8deb357ca91dfdd59c03c0816445da350543af7c9be3eb284193d9929a1da",
+        "4a1782d4f51e94c004c3c3eda7a98e44fbb640874332139c594d5df94fa2e436"
+      ],
+      "schema_sha256": "54bd3fbe590503737af37a83554faf1e2fd722e2d0c5058c445afb65dce71e3b",
+      "constraint_sha256": "47aabdb0fb1c94b19f69163b6a2919d0590701ec3a80e9772c0c3f732654043c",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边含 SUM/CASE、GROUP BY 与结果比较；不能把聚合重写为 M/N 差异。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "GRAND_SLAMS_COUNT > 0"
+          },
+          {
+            "query": 2,
+            "text": "SUM(CASE"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FK_GRAPH_CONVENTION_AND_EXPLICIT_CLOSURE_UNESTABLISHED",
+        "reason_zh": "两表各有 primary，四个 CHAMPIONSHIPS 字段分别 foreign→PLAYERS.PLAYER_ID。若关系图合并平行边，它只有一条关系邻接；若保留 FK 边，则有四条平行边。图约定未明确；原文 CROSS JOIN 未显式给出这些 FK 目标等式闭合。",
+        "additional_non_pk_fk_operators_visible": [],
+        "language_scope_status": "NO_NON_PK_FK_OPERATOR_VISIBLE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "四个冠军 FK 字段未有 NOT NULL；SQL FK 本身不排除 NULL。PLAYER_NAME 未有 NOT NULL。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_07",
+      "development_line_1based": 7,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "source_line_1based": 11415,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+      "sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+      "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均为计数/求和、除法及 ROUND 的聚合表达式；Q2 在两个派生子查询重复读取 DELIVERY。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "SUM(ORDER_DATE = CUSTOMER_PREF_DELIVERY_DATE)"
+          },
+          {
+            "query": 2,
+            "text": "SELECT COUNT(*) AS TOT"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "DELIVERY.DELIVERY_ID 声明 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [
+          "lte"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "两个日期字段无 NOT NULL；日期比较和聚合/除法语义未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_08",
+      "development_line_1based": 8,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/183.csv",
+      "source_line_1based": 580,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "7ed141033282d3954db5d36ee1c1cf2bedffee61a70bfe309a3466506ec3032d",
+      "sql_sha256": [
+        "e73a11a070d6c4283a46066bb9a1166ab5fe45b48386fb2036f9273f53096b11",
+        "eeb41b0721c6ea3bbc000931983be3aa1ede7a85c7974c765cd89eb590be4c9e"
+      ],
+      "schema_sha256": "de7e4d1cd8eacce9811e0a13368ea62b0ef3a90711214f328aa2b7978ce88740",
+      "constraint_sha256": "e86179f7aa1688a09e1bb8560b118db6a098c85fa6500ed7bccfbcafbfb2fc97",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 为 NOT IN 反连接；Q2 含 LEFT JOIN、COUNT、GROUP BY、HAVING。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "ID NOT IN"
+          },
+          {
+            "query": 2,
+            "text": "HAVING FO=0"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "CUSTOMERS.ID 与 ORDERS.ID 均有 primary；ORDERS.CUSTOMERID foreign→CUSTOMERS.ID，单条关系边。此观察不证明原始整对是同一 FK 闭合 CQ。",
+        "additional_non_pk_fk_operators_visible": [],
+        "language_scope_status": "NO_NON_PK_FK_OPERATOR_VISIBLE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "ORDERS.CUSTOMERID 与 CUSTOMERS.NAME 未有 NOT NULL；foreign 不等于非空，NOT IN 的 NULL 行为未排除。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_09",
+      "development_line_1based": 9,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+      "source_line_1based": 21639,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "9bef71d705d82831ac86ebde606cb03ca6e8b5ab4fd2d471fd4e49825515362d",
+      "sql_sha256": [
+        "3547132979f80e460543f1caf9f8509649e4b2018674e1d82942bacca0f19379",
+        "6ce2ba0c792d8f1b4aa23c48f085ab83e25f7f6523cfedc886003992101705f6"
+      ],
+      "schema_sha256": "423d47cef78387ad930de974bb56b4a458e0c6614319ab356190d0ebaaa08609",
+      "constraint_sha256": "d21bc20d716fcb63eff9438a29f9e9a61c79b08bae433fe39c81a1e289f2c12a",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "重复 LOGINFO 自连接；不等比较、BETWEEN；Q2 还含 OR 与 IN 子查询。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "JOIN LOGINFO AS I2"
+          },
+          {
+            "query": 2,
+            "text": "L1.IP_ADDRESS!=L2.IP_ADDRESS"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FAIL_REQUIRED_PK_NOT_DECLARED",
+        "reason_zh": "完整 C 仅 LOGINFO.LOGIN < LOGINFO.LOGOUT，LOGINFO 无 primary。",
+        "additional_non_pk_fk_operators_visible": [
+          "lt"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "各列均无 NOT NULL；TIME 类型及区间边界语义未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_10",
+      "development_line_1based": 10,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "source_line_1based": 13041,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+      "sql_sha256": [
+        "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+        "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+      ],
+      "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+      "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均含 CASE 和 NOT IN；LIKES 在外层和子查询重复出现。Q1 显式 ELSE NULL，Q2 省略 ELSE。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "ELSE NULL END"
+          },
+          {
+            "query": 2,
+            "text": "PAGE_ID NOT IN"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "FRIENDSHIP 和 LIKES 分别有覆盖各自两列的复合 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [
+          "neq"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "即使所有基表列因 primary 而非空，CASE 未匹配分支仍产生 NULL；原始查询不满足无 NULL 片段。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_11",
+      "development_line_1based": 11,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/511.csv",
+      "source_line_1based": 673,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "a0c5d2e61deeed9a2dbf0660134714fdab0362d45e080efb3dc9975d929d8fca",
+      "sql_sha256": [
+        "3512eea31beeaa1be5d7ad138291728024e4ba15de29a1fc9f0b64925149666a",
+        "31fa22189249592a63d2519c5715c3029cd59bd00ac9390e7e2cdf3ed6af83f7"
+      ],
+      "schema_sha256": "b6696b2f50432ac9fb785874aac32b0f5321c0cd879cbca9b72f08b153b03c11",
+      "constraint_sha256": "530894fb8012ab930d1a4d135993da11fe618f9543e1045a6a94d8a08af8c3c9",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边含 MIN 聚合与 GROUP BY；Q2 的 ACTIVITY 在外层及聚合子查询重复出现。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "MIN(EVENT_DATE)"
+          },
+          {
+            "query": 2,
+            "text": "IN (SELECT PLAYER_ID, MIN(EVENT_DATE)"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "ACTIVITY 有 (PLAYER_ID, EVENT_DATE) 复合 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [
+          "gte"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "使用字段 PLAYER_ID/EVENT_DATE 若确为 SQL PK 则非空；但 JSON primary 的执行语义、DATE 域和其余基表属性的非空性均未验证。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_12",
+      "development_line_1based": 12,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/577.csv",
+      "source_line_1based": 2173,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "aafb8cc31d19aacf836ece7b4402189e272305c6784bb528c3fad8579399839f",
+      "sql_sha256": [
+        "afdaa0bc9bfbd9e2de238cae495b5bc6a99924f3a665cb500adfe69763a6b05b",
+        "80736bec695a246422a9f37276b6ba1129c33c89ab2b16335c0c20593332c4b5"
+      ],
+      "schema_sha256": "0730302af135c41a115c1f84911bcc0524efa6b55d166d23961cb60513ead6c4",
+      "constraint_sha256": "4a13716ee23878fccb511fc8842d00ae4c97ce82ea91c889e05336bf301b34f0",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均为 LEFT JOIN；Q1 含比较、OR、IS NULL，Q2 另含 NOT IN。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "BONUS < 1000 OR BONUS IS NULL"
+          },
+          {
+            "query": 2,
+            "text": "EMPLOYEE.EMPID NOT IN"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "EMPLOYEE.EMPID 和 BONUS.EMPID 各有 primary，BONUS.EMPID foreign→EMPLOYEE.EMPID；单条关系边。",
+        "additional_non_pk_fk_operators_visible": [
+          "neq",
+          "gte"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "BONUS.BONUS、EMPLOYEE.NAME 等无 NOT NULL；外连接能够产生 NULL，查询显式处理 NULL。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_13",
+      "development_line_1based": 13,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1677.csv",
+      "source_line_1based": 19915,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "3c10936a9ace16d97a74fb1b755dacbcb620c092303435dd6e47ba4cc76c0459",
+      "sql_sha256": [
+        "736171b3b2b779b54c3db66e67103a090cb1a0ac0b9b01eb61de6c98570f81dc",
+        "d1002ce35fa0017f17b6a61422147b2d5fb9e644c0f6fb540dcd519e1d6ba48c"
+      ],
+      "schema_sha256": "6132679fc718e3c83bd63706b565350f418162239710b7b45da7ecfacb346c21",
+      "constraint_sha256": "a219ca9ec6b3bf14cfb4088801a5dcde679318546f2355188ab5344bbc307fbc",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均为外连接加 SUM/GROUP BY、IFNULL 和 ORDER BY。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "RIGHT JOIN"
+          },
+          {
+            "query": 2,
+            "text": "LEFT OUTER JOIN"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PRIMARY_DECLARATION_INTERPRETATION_UNCERTAIN",
+        "reason_zh": "PRODUCT 有 PRODUCT_ID、NAME 两个单独 primary 条目，INVOICE.INVOICE_ID 也有 primary；foreign 指向 PRODUCT_ID。两个 primary 条目是两组逻辑键还是 DDL 主键编码须由约束格式定义，不能静态补定。",
+        "additional_non_pk_fk_operators_visible": [
+          "gte"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "发票金额字段与 INVOICE.PRODUCT_ID 未有 NOT NULL；外连接及 IFNULL 显式涉及 NULL。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_14",
+      "development_line_1based": 14,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/613.csv",
+      "source_line_1based": 4513,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "5741930550dd51f86c0b0fbc68ad84571d28712cd4082d648c7eeb9d61111ee6",
+      "sql_sha256": [
+        "d95ce8a5047c801b269f3f39c0f20d8fa88e5a173414708d14e1b39b6396658b",
+        "c0a6f047e26f8293c1acdc0f197cc99557d07a84009f50da6a753e7a4aadeff9"
+      ],
+      "schema_sha256": "f72b45f187ae5c8f4fb495fe22e227483d978549f0a2bb2e9a706a85b3345c1e",
+      "constraint_sha256": "5b37363b7c23c660961d44ba7d5f65c478a7c76cbd8a608012ebca189358b936",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "POINT 自连接；两边均含 MIN、ABS、减法及不等比较，Q2 还有 LEFT JOIN。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "POINT AS A, POINT AS B"
+          },
+          {
+            "query": 2,
+            "text": "LEFT JOIN POINT B ON A.X != B.X"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "POINT.X 声明 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [],
+        "language_scope_status": "NO_NON_PK_FK_OPERATOR_VISIBLE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "基表唯一属性 X 若为实际 SQL PK 则非空；LEFT JOIN 仍可产生 NULL。INT 算术的范围/溢出及空聚合语义未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_15",
+      "development_line_1based": 15,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "source_line_1based": 15534,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "31255142400af226ca6a2fc91b35d2a3585d81ee318af4348e70012e15d1eb48",
+      "sql_sha256": [
+        "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+        "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+      ],
+      "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+      "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边为 LEFT/RIGHT 外连接，并使用 IFNULL 或 COALESCE；不能改成内连接后算命中。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "LEFT JOIN NPV N"
+          },
+          {
+            "query": 2,
+            "text": "COALESCE(NPV.NPV, 0)"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FAIL_FK_NOT_FULL_PRIMARY_KEY",
+        "reason_zh": "NPV 的 primary 为 (ID, YEAR)，但 C 中 foreign 仅 QUERIES.ID→NPV.ID，未覆盖目标完整 PK；不得自行补 YEAR 外键。",
+        "additional_non_pk_fk_operators_visible": [
+          "gte"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "NPV.NPV 无 NOT NULL；外连接、IFNULL/COALESCE 本身属于 NULL 扩展/处理。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_16",
+      "development_line_1based": 16,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1777.csv",
+      "source_line_1based": 21819,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "d96038667ed9d7c2f6c3deaee15fed2836f5e587a558baa3006317ecd3949034",
+      "sql_sha256": [
+        "c3d7e166826e7907bc3acad604f96a6318004c1b783a96c9fa8b8b922e2d6137",
+        "f8f4b2f7bdaeecc60d92fd309474f126d089ac28ea8035d32a3b380ba45c6fae"
+      ],
+      "schema_sha256": "89fb7b5e889cac853461b4c876949c497462ea07cce5b072e839b68d48e8d79b",
+      "constraint_sha256": "8a90940e1f438ffe5566a0dcb3ebabd4dce884b1927b80e7d6090aa18672fbe8",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 为 SUM/CASE/GROUP BY；Q2 为多次 PRODUCTS 读取及连续 LEFT JOIN，含筛选常量。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "THEN PRICE ELSE NULL END"
+          },
+          {
+            "query": 2,
+            "text": "LEFT JOIN T1"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "PRODUCTS 有 (PRODUCT_ID, STORE) 复合 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [
+          "in",
+          "gt"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "PRICE 无 NOT NULL；Q1 显式 ELSE NULL，Q2 的外连接产生 NULL。ENUM 与 SQL 字符串/比较规则未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_17",
+      "development_line_1based": 17,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1211.csv",
+      "source_line_1based": 12206,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "8ec1202fde53fb8e0668e9db0a82a7f532c1de35a577c11e2c3687a37d964657",
+      "sql_sha256": [
+        "996ed54205f380d691e691a3d0bc1b184d144704ff18b236042bc4cd6893233a",
+        "8b3b84992c3bbb8a38b1ed1b7b616554e2c134e1bfe98f53d842066186d24c31"
+      ],
+      "schema_sha256": "707318b12dde4a451ec90ab551060553ba2cc1726ce212b88823e4cda8300864",
+      "constraint_sha256": "392d43c0e112da27b44be381b2fd03e427850b4b717a6e8462c5bc479049e429",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均含 AVG/SUM/COUNT、ROUND、除法及比较；Q2 在相关标量子查询重复 QUERIES。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "ROUND(AVG(RATING/POSITION), 2)"
+          },
+          {
+            "query": 2,
+            "text": "SELECT COUNT(1) FROM QUERIES"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "FAIL_REQUIRED_PK_NOT_DECLARED",
+        "reason_zh": "完整 C 只有 RATING 和 POSITION 的 between 区间限制，没有 QUERIES primary。",
+        "additional_non_pk_fk_operators_visible": [
+          "between"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "所有列均无 NOT NULL；between 的导入语义并非已验证的 SQL 非空约束；除法/舍入类型规则未建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_18",
+      "development_line_1based": 18,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+      "source_line_1based": 2924,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "fe3f09e4498474f0b399abe5efd9fc74844d4e08d93395384d21e554e941a0a4",
+      "sql_sha256": [
+        "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+        "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+      ],
+      "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+      "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "两边均含 GROUP BY/HAVING 及 COUNT；Q2 重复读取 COURSES 并含相关子查询。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "HAVING COUNT(*)>=5"
+          },
+          {
+            "query": 2,
+            "text": "COUNT(DISTINCT STUDENT)"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "COURSES.STUDENT 声明 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [],
+        "language_scope_status": "NO_NON_PK_FK_OPERATOR_VISIBLE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "CLASS 无 NOT NULL；VARCHAR 等值、分组与 NULL 语义不由类型标签建立。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_19",
+      "development_line_1based": 19,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1683.csv",
+      "source_line_1based": 20022,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "8acfa01d6800a31552ab3a4a6aeb4ada0660da4cac2d559aca3fd79480dadaee",
+      "sql_sha256": [
+        "e057101a88d2425b0bf7d2d89216d44cd5e1371ed4cf48e8e7d46dd6b235c1fa",
+        "62e6b097f92b9eaaba20adfb9f3cf82ce11f71d6c2b7ce9e2b7c585feae9259e"
+      ],
+      "schema_sha256": "c695f34c4b86a2680f77c5c92d4087467e3f0ea5b6122c68b3a2957ab6dad439",
+      "constraint_sha256": "3265604aefdac56c94efe20bb0db8265b4f96ecc9426c30a50851f4337d8f041",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 含 CHAR_LENGTH 及 >；Q2 含 LENGTH、GROUP BY/HAVING 并重复读取 TWEETS。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "CHAR_LENGTH(CONTENT) > 15"
+          },
+          {
+            "query": 2,
+            "text": "GROUP BY TWEET_ID HAVING LEN>15"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "TWEETS.TWEET_ID 声明 primary；无 foreign。",
+        "additional_non_pk_fk_operators_visible": [],
+        "language_scope_status": "NO_NON_PK_FK_OPERATOR_VISIBLE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "CONTENT 无 NOT NULL；字符/字节长度、编码和 SQL 方言并未给出，不能据文本将两函数视为同义。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_20",
+      "development_line_1based": 20,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1149.csv",
+      "source_line_1based": 11280,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "4fd0ba3f6d21714e8ecfd1ff7a8d28973a0e939b1257b54ce2f259d7bdb26667",
+      "sql_sha256": [
+        "9221c85d94ad224064ac34787ca9d188f130b338f07b67c73d3d8a9a3cd322b7",
+        "454aa925cc3eaf30e699059350e10a690018de29368069cbb1d585d4c21b96c4"
+      ],
+      "schema_sha256": "a82fb5dfe46597ea5c37887454bd0f1dddcd6326123cb37a7f0fbe8a0de6b0f9",
+      "constraint_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 含 GROUP BY/HAVING COUNT 和 ORDER BY；Q2 含 VIEWS 自连接、不等比较及 ORDER BY。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "HAVING COUNT(DISTINCT ARTICLE_ID) > 1"
+          },
+          {
+            "query": 2,
+            "text": "JOIN VIEWS T2"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "UNSPECIFIED_C_NOT_EMPTY_C",
+        "reason_zh": "constraint 字段为 null：C 未指定，不能解释为已验证空约束，也不能补一个 VIEWS PK。",
+        "additional_non_pk_fk_operators_visible": [],
+        "language_scope_status": "UNSPECIFIED_C",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "四列只有 INT/DATE 标签，无 NOT NULL 或已知 PK 非空保证。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    },
+    {
+      "id": "dev03_21",
+      "development_line_1based": 21,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/607.csv",
+      "source_line_1based": 4241,
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_raw_line_sha256": "9f699d7e49f5f8b0ba2dd67fc943b5b770927d289a20adb3ae13fbf00c6a76e5",
+      "sql_sha256": [
+        "a01a96264e8c0c19533dff8b5638992a40ec7fad8eec56df033ae03868e81875",
+        "f23aba77910c7854bd2f1cd5db862157aabb5cbe28cd0c52d32f706b2fd02a56"
+      ],
+      "schema_sha256": "6558cc47020a9d84ce6a11540d192995ebd3c008bd52c80593209aef35dcf5f9",
+      "constraint_sha256": "45b452542f61513f25bf272a2e9cf730fdc50fe98f4b350d0c67f5dc55b2f0f0",
+      "decision": "STATIC_SUFFICIENT_REJECTION",
+      "applicable_original_pair": false,
+      "parser_verified": false,
+      "syntax": {
+        "status": "FAIL_VISIBLE_OUTSIDE_FRAGMENT",
+        "reason_zh": "Q1 为相关 COUNT(*)=0 子查询，Q2 为 NOT IN；均含对 RED 的常量筛选，不是纯 CQ 计数变量差异。",
+        "minimal_original_evidence": [
+          {
+            "query": 1,
+            "text": "0 = ( SELECT COUNT(*)"
+          },
+          {
+            "query": 2,
+            "text": "SALES_ID NOT IN"
+          }
+        ]
+      },
+      "full_constraints": {
+        "pk_fk_shape_status": "PK_FK_SHAPE_TEXTUALLY_COMPATIBLE",
+        "reason_zh": "三表均有 primary；ORDERS 分别 foreign→COMPANY.COM_ID 和 SALESPERSON.SALES_ID，关系图文本为三节点两边树。完整 C 另含薪酬/金额范围和跨表日期 imply；不能删去这些条件认证精确闭包。",
+        "additional_non_pk_fk_operators_visible": [
+          "gte",
+          "imply",
+          "eq",
+          "lt"
+        ],
+        "language_scope_status": "OUTSIDE_PK_FK_ONLY_LANGUAGE_IF_THAT_IS_THE_THEOREM_SCOPE",
+        "complete_C_certified": false
+      },
+      "type_and_null": {
+        "status": "PREMISES_NOT_ESTABLISHED",
+        "reason_zh": "NAME 和 ORDERS 的两个外键列无 NOT NULL；日期列标为 VARCHAR，其比较规则未建立；NOT IN 的 NULL 语义未排除。"
+      },
+      "cannot_decide_from_text": {
+        "same_B_and_H": "NOT_CERTIFIED_OR_NORMALIZED",
+        "FK_explicit_closure": "NOT_CERTIFIED_FOR_A_VALID_CQ_BODY",
+        "source_constraint_semantics": "NOT_VERIFIED",
+        "SQL_dialect_and_typed_domains": "NOT_ESTABLISHED"
+      },
+      "no_rewrite_or_repair_performed": true
+    }
+  ],
+  "claim_limits_zh": [
+    "没有发现或复核新的自然缺陷；这里仅记录片段覆盖。",
+    "没有新 test、隐藏 test、保留集或整库读取；未运行任何查询、parser、solver 或科学计算。",
+    "不把聚合、outer join、NOT IN 等改写后的查询计为原始对适用。",
+    "未修复 Q1 残缺文本、SQL、schema 或 C；未补 NOT NULL、PK、外键列或其他约束。",
+    "研究机制是否新颖以及定理是否正确由理论/新颖性审查负责；本报告不提供新机制 proposal。"
+  ]
+}
+

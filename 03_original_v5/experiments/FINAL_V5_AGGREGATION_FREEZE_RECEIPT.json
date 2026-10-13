@@ -1,0 +1,123 @@
+{
+  "status": "AGGREGATION_FROZEN_ALL_SELECTED_LOGICAL_SLOTS_TERMINAL",
+  "created_utc": "2026-10-11T06:07:42.218755+00:00",
+  "files": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/BUILD_FINAL_V5_EXECUTION_CUT.py",
+      "sha256": "83a23fc07b0185f39bd106be2a4c1d893c5c18a4a99592012ca6ed098275fe32",
+      "bytes": 40421
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/CHECK_V5_AGGREGATOR_CLASSIFICATION.py",
+      "sha256": "989a9cdf83609702b1726651903d795c6fa4d59d7d0d31059739ebb90773882b",
+      "bytes": 6370
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_AGGREGATOR_CLASSIFICATION_REGRESSION_01.json",
+      "sha256": "2aba6e89eed27b1e3fc0e6756a3d6d2a485b14f5c7d643de824b4d67ef73ce9a",
+      "bytes": 2032
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_AGGREGATOR_CLASSIFICATION_REGRESSION_02.json",
+      "sha256": "2d1e1697c55898e1bbcc9b3abdb2782859c8b4a623d3f4120d273e545332cd1d",
+      "bytes": 6697
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/FINAL_V5_EXECUTION_CUT.json",
+      "sha256": "1d6d0291fda36937a26da6b46c9d07b18899a21686708fa4279c7a814e48b95c",
+      "bytes": 11189714
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/FINAL_V5_EXECUTION_CUT.zh.md",
+      "sha256": "58fca896cd3bd2cc8ea3c54bab774eb9cc9d29380eb29a4c0d32199ff26f9ed7",
+      "bytes": 5272
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_SLOT_SELECTION_FINAL.json",
+      "sha256": "791693b25afdbae2be4143dadac51cf9a2af315417086ca56a96a3d9076f9e1b",
+      "bytes": 456475
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/CAMPAIGN_V5_RECOVERY_01.json",
+      "sha256": "98153e8987bd9df3081a069d508a2c2f228c7df3fba6313cae3ae9a37956d819",
+      "bytes": 6762
+    }
+  ],
+  "readiness": {
+    "ready": true,
+    "blockers": [],
+    "summary": {
+      "main_cost": {
+        "full": 168,
+        "selected": 168,
+        "states": {
+          "RETURNED": 168
+        },
+        "started_attempts": 169,
+        "terminal_raw": {
+          "unsat": 78,
+          "sat": 52,
+          "unknown": 8,
+          "UNKNOWN_ORACLE_DOMAIN": 6,
+          "CONTRACT_UNSAT_REJECTED": 18,
+          "UNVERIFIED_CONTRACT": 6
+        },
+        "not_run_indices": [],
+        "unfinished_indices": []
+      },
+      "main_differential": {
+        "full": 168,
+        "selected": 168,
+        "states": {
+          "RETURNED": 168
+        },
+        "started_attempts": 168,
+        "terminal_raw": {
+          "UNSAT_DIFFERENTIAL": 120,
+          "UNKNOWN_OUTPUT_DIFFERENCE": 24,
+          "CONTRACT_UNSAT_REJECTED": 18,
+          "UNVERIFIED_CONTRACT": 6
+        },
+        "not_run_indices": [],
+        "unfinished_indices": []
+      },
+      "spotit_cost": {
+        "full": 168,
+        "selected": 28,
+        "states": {
+          "RETURNED": 28
+        },
+        "started_attempts": 28,
+        "terminal_raw": {
+          "unsat": 12,
+          "sat": 9,
+          "unknown": 2,
+          "UNKNOWN_ORACLE_DOMAIN": 1,
+          "CONTRACT_UNSAT_REJECTED": 3,
+          "UNVERIFIED_CONTRACT": 1
+        },
+        "not_run_indices": [],
+        "unfinished_indices": []
+      }
+    },
+    "orphan_run_directories": []
+  },
+  "audit": {
+    "checks": 665,
+    "failed_checks": []
+  },
+  "regression_current": {
+    "source_sha256": "83a23fc07b0185f39bd106be2a4c1d893c5c18a4a99592012ca6ed098275fe32",
+    "test_count": 16,
+    "result": "PASS",
+    "report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_AGGREGATOR_CLASSIFICATION_REGRESSION_02.json"
+  },
+  "regression_historical_only": "REGRESSION_01 binds the earlier ad834850 source and is preserved, not reused as evidence for the final source.",
+  "scope": "Only stdlib aggregation, hashing and classification checks. No target/native/parser/solver execution by this agent; frozen target and raw results unmodified.",
+  "limits": [
+    "One controlled run per logical slot; no speedup or stability claim.",
+    "Old cost slot52 incomplete attempt retained and total attempts169; incomplete cold CPU/wall remains missing.",
+    "RSS_OBSERVATION_UNAVAILABLE is monitoring unavailability, not evidence of actual RSS limit excess.",
+    "Differential agreement remains bounded encoder-relative; exposed controls do not establish heldout generalization."
+  ]
+}

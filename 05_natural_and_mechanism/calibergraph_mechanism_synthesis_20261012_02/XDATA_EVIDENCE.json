@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "scope": "TARGETED_PRIMARY_SOURCE_STATIC_EVIDENCE",
+  "runtime": "NOT_RUN",
+  "new_tests": 0,
+  "decision": "REJECT_GENERIC_COVERAGE_PLUS_DIFFERENCE_OBJECTIVE_AS_STANDALONE_NOVELTY",
+  "xdata": {
+    "commit": "a86031197fd1b572bd7782431331e8cb15554f88",
+    "commit_date": "2024-11-24",
+    "commit_is_paper_snapshot": "UNVERIFIED",
+    "paper_version": "arXiv:2409.18821v1",
+    "published_2025_version_reviewed": false,
+    "core_java_source_verified": false,
+    "jar_git_blob": "05a92c0187e2ddccdc6f3fb332f3d4be9c991c9a",
+    "jar_sha256": null,
+    "jar_executed": false,
+    "code_license": "UNVERIFIED",
+    "wrapper": {
+      "url": "https://gitlab.com/xdata/xdatapublic/-/blob/a86031197fd1b572bd7782431331e8cb15554f88/xdata/execute_tests.py#L34",
+      "functions": [
+        "prepare_input",
+        "run_tests"
+      ],
+      "lines": [
+        8,
+        31,
+        34,
+        55
+      ],
+      "direct_pair_synthesis_proven": false
+    }
+  },
+  "paper_claims": [
+    {
+      "source": "https://www.cse.iitb.ac.in/infolab/xdata/xdata-icde2011.pdf",
+      "section": "pp1–2, I–II",
+      "claim": "Constraint-targeted mutant killing already distinguishes goal from merely nonempty generation; CVC3, limited SQL/mutation scope."
+    },
+    {
+      "source": "https://arxiv.org/html/2409.18821v1",
+      "section": "3.5,5.2",
+      "claim": "Generate nonempty first, then modify constraints at mutation target; must preserve effect at final result."
+    },
+    {
+      "source": "https://arxiv.org/html/2409.18821v1",
+      "section": "7",
+      "claim": "Bounded pair objective exists t with unequal output counts; UNSAT is not unbounded equivalence; native pair method evaluation deferred to future."
+    },
+    {
+      "source": "https://arxiv.org/html/2409.18821v1",
+      "section": "9 Tables2–3",
+      "reported_counts": {
+        "XDataN": [
+          378,
+          407
+        ],
+        "XDataO": [
+          244,
+          407
+        ],
+        "VEQL": [
+          230,
+          407
+        ],
+        "USSm": [
+          320,
+          407
+        ],
+        "correlated_subqueries_XDataN": [
+          79,
+          80
+        ]
+      },
+      "locally_recomputed": false,
+      "supports_native_pair_mode": false
+    },
+    {
+      "source": "https://arxiv.org/html/2409.18821v1",
+      "section": "9.2",
+      "claim": "Qualitative unfolding vs no-unfolding comparison reported without detailed results; no isolated quantitative ablation for all core components."
+    }
+  ],
+  "official_failure_leads": [
+    {
+      "query_id": "Q14",
+      "line": 81,
+      "status": "NotKilled",
+      "mutation": "count(id) to count(dept_name), grouped by dept_name",
+      "class": "NULL_sensitive_aggregate",
+      "root_cause": "UNKNOWN",
+      "valid_algorithmic_gap_established": false
+    },
+    {
+      "query_id": "Q17",
+      "line": 98,
+      "status": "NotKilled",
+      "mutation": "group by id,name to group by name",
+      "class": "group_cardinality",
+      "root_cause": "UNKNOWN",
+      "valid_algorithmic_gap_established": false
+    },
+    {
+      "query_id": "Q26",
+      "line": 130,
+      "status": "Unsupported",
+      "admission": "EXCLUDED_FROM_METHOD_FAILURE"
+    },
+    {
+      "query_id": "Q8",
+      "line": 59,
+      "status": "NotKilled",
+      "admission": "POSSIBLE_EQUIVALENCE_DUE_TO_NULL_REJECTING_DOWNSTREAM_JOIN;_NOT_A_CONFIRMED_MISS"
+    }
+  ],
+  "failure_log_url": "https://gitlab.com/xdata/xdatapublic/-/blob/a86031197fd1b572bd7782431331e8cb15554f88/results/XData-BM-mutant-result.out",
+  "ddl_url": "https://gitlab.com/xdata/xdatapublic/-/blob/a86031197fd1b572bd7782431331e8cb15554f88/benchmarks/XData-BM/DDL.sql",
+  "evosql": {
+    "source_commit": "5a90e4d4a360642c160013a049d8532c43962c3c",
+    "icse_tag_commit": "1015196397e376deb203c0e2ee6dc019be289613",
+    "paper_read_scope": "OFFICIAL_ABSTRACT",
+    "paper_url": "https://research.tudelft.nl/en/publications/search-based-test-data-generation-for-sql-queries/",
+    "paper_reported_query_count": 2135,
+    "paper_reported_full_coverage_percent": 98.6,
+    "static_functions": [
+      {
+        "name": "StandardGA.calculateFitness",
+        "url": "https://github.com/SERG-Delft/evosql/blob/5a90e4d4a360642c160013a049d8532c43962c3c/ga/src/main/java/nl/tudelft/serg/evosql/metaheuristics/StandardGA.java#L212"
+      },
+      {
+        "name": "Approach.hasOutput",
+        "url": "https://github.com/SERG-Delft/evosql/blob/5a90e4d4a360642c160013a049d8532c43962c3c/ga/src/main/java/nl/tudelft/serg/evosql/metaheuristics/Approach.java#L116"
+      }
+    ],
+    "pair_difference_guarantee": false
+  },
+  "inherited_task_status": {
+    "Discourse3_fullC_NEQ": "SOLVED_BY_PARSEVAL",
+    "GitLab47_fullC_nonempty": "SOLVED",
+    "source": 50,
+    "eligible": 1,
+    "solved": 1,
+    "not_run": 49,
+    "new_tests": 0
+  },
+  "blockers": [
+    "XData core Java source and actual classpath selection unverified; jar not read or run",
+    "XData code license and exact paper/artifact mapping unknown",
+    "No per-case solver/fixture logs establish algorithmic cause of published NotKilled",
+    "No baseline runtime or local method comparison authorized/performed",
+    "No general DataHub module found; registration unchanged under task scope"
+  ],
+  "backup": "DEFERRED_TO_ROOT_TASK_AS_REQUESTED"
+}

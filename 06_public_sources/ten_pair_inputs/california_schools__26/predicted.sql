@@ -1,0 +1,1 @@
+SELECT T1.`School Name`, T1.Street, T1.City, T1.Zip, T1.State FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T1.`FRPM Count (Ages 5-17)` > 800 AND T1.`County Name` = 'Monterey' AND T1.`School Type` = 'High School'

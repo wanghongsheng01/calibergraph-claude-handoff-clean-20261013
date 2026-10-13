@@ -1,0 +1,390 @@
+{
+  "status": "CONSTRUCTED_CORRECTNESS_DIAGNOSTICS_NOT_BENCHMARK_RESULTS",
+  "label_provenance": "Analytical expectations authored by AI; no human gold or measured outcomes.",
+  "schema": {
+    "F": {
+      "K": "INT",
+      "L": "INT",
+      "V": "INT"
+    },
+    "D": {
+      "ID": "INT",
+      "P": "INT"
+    },
+    "E": {
+      "ID": "INT",
+      "Q": "INT"
+    }
+  },
+  "exact_rows": {
+    "F": 2,
+    "D": 2,
+    "E": 2
+  },
+  "cases": [
+    {
+      "id": "S01_reordered_conjunction",
+      "constraint": null,
+      "expected": "unsat",
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            10,
+            2
+          ],
+          [
+            2,
+            20,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "E": [
+          [
+            10,
+            1
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "S02_nullable_count",
+      "constraint": null,
+      "expected": "sat",
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            10,
+            null
+          ],
+          [
+            2,
+            20,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "E": [
+          [
+            10,
+            1
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "S03_full_not_null_IC",
+      "constraint": [
+        {
+          "not_null": "F__V"
+        }
+      ],
+      "expected": "unsat",
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            10,
+            2
+          ],
+          [
+            2,
+            20,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "E": [
+          [
+            10,
+            1
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "S04_sum_vs_count",
+      "constraint": null,
+      "expected": "sat",
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            10,
+            2
+          ],
+          [
+            2,
+            20,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "E": [
+          [
+            10,
+            1
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            5
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "S05_empty_SUM_NULL",
+      "constraint": null,
+      "expected": "unsat",
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>1 AND F.V<0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>2 AND F.V<0"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            10,
+            null
+          ],
+          [
+            2,
+            20,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "E": [
+          [
+            10,
+            1
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "S06_all_NULL_SUM",
+      "constraint": null,
+      "expected": "unsat",
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL AND D.P>0"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            10,
+            null
+          ],
+          [
+            2,
+            20,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "E": [
+          [
+            10,
+            1
+          ],
+          [
+            20,
+            2
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ]
+    }
+  ],
+  "rejection_queries": [
+    {
+      "id": "R01_outer_join",
+      "sql": "SELECT SUM(F.V) FROM F LEFT JOIN D ON F.K=D.ID"
+    },
+    {
+      "id": "R02_cross_leaf",
+      "sql": "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P=E.Q"
+    },
+    {
+      "id": "R03_leaf_SUM",
+      "sql": "SELECT SUM(D.P) FROM F JOIN D ON F.K=D.ID"
+    },
+    {
+      "id": "R04_DISTINCT",
+      "sql": "SELECT SUM(DISTINCT F.V) FROM F JOIN D ON F.K=D.ID"
+    },
+    {
+      "id": "R05_nonlinear_root",
+      "sql": "SELECT SUM(F.V*F.K) FROM F JOIN D ON F.K=D.ID"
+    },
+    {
+      "id": "R06_GROUP_BY",
+      "sql": "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID GROUP BY F.K"
+    },
+    {
+      "id": "R07_non_equi_join",
+      "sql": "SELECT SUM(F.V) FROM F JOIN D ON F.K>D.ID"
+    }
+  ]
+}

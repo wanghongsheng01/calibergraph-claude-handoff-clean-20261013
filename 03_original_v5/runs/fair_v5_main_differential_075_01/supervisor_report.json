@@ -1,0 +1,3366 @@
+{
+  "status": "SELECTED_JOBS_COMPLETE",
+  "kind": "differential",
+  "data_role": "EXPOSED_DEV_PLUS_CONSTRUCTED_ANALYTICAL_CONTROLS_NOT_HELDOUT",
+  "source_provenance": {
+    "inherited_registration_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "inherited_registration_sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746",
+    "original_22_cases_preserved_exactly": true,
+    "inherited_original_provenance": {
+      "original_stress_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+      "sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4",
+      "original_N2_N4_cases_preserved": 12,
+      "new_constructed_cases": 10,
+      "N8": "not in this suite; prior N8 registration remains separate, no claim of running it"
+    },
+    "bridge_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py",
+    "bridge_source_sha256": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "new_controls": "Six source-derived constructed repair controls D01-D06; expected labels analytical only, not measured."
+  },
+  "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+  "runtime_lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+  "program_sha256": {
+    "common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+    "worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+    "supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+  },
+  "full_case_denominator": 28,
+  "full_job_denominator": 168,
+  "selected_job_start": 75,
+  "selected_job_limit": 3,
+  "jobs": [
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "PROCESS_EXITED",
+      "final_decision": "UNSAT_DIFFERENTIAL",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_075_01/job_0075",
+      "sampled_peak_rss_bytes": 112590848,
+      "sampled_max_kernel_threads": 2,
+      "pid": 13648,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.506061458028853,
+      "full_process_cpu_user_seconds": 1.336755,
+      "full_process_cpu_system_seconds": 0.126783,
+      "full_process_cpu_seconds": 1.463538,
+      "worker_report_sha256": "5798ea991d819fe2f7f282cdeb2e8b513b4ea638f0ca0297a00c105b5c53b0d2",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.24892025021836162,
+      "semantic_e2e_cpu_seconds": 0.24720200000000014,
+      "differential": {
+        "status": "UNSAT_DIFFERENTIAL",
+        "sql": "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID",
+        "mode": "flat",
+        "correctness_only": true,
+        "solver_timeout_ms": "DYNAMIC_REMAINING_BUDGET",
+        "solver_threads": 1,
+        "gates": {
+          "full_contract_sat": {
+            "status": "sat",
+            "premise_count": 49,
+            "timeout_ms": 12373,
+            "goal": null,
+            "assertions_sha256": "00cc5e308af7809741289868431ea78fb0edae936b7d4202fb99514e819dc7ae",
+            "check_wall_seconds": 0.0042798747308552265,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "exact_rows_no_deletion": {
+            "status": "unsat",
+            "premise_count": 49,
+            "timeout_ms": 12363,
+            "goal": "(or (DELETED t1)\n    (DELETED t2)\n    (DELETED t3)\n    (DELETED t4)\n    (DELETED t5)\n    (DELETED t6))",
+            "assertions_sha256": "bbc0ffedd027c165a90853c7cc3ca2b00e2cd5d38362fbfdea1a66ad2005d2d6",
+            "check_wall_seconds": 0.003593750298023224
+          },
+          "official_premise_sat": {
+            "status": "sat",
+            "premise_count": 59,
+            "timeout_ms": 12278,
+            "goal": null,
+            "assertions_sha256": "4647ae7935b3fc60f0649bd0c4b12aabf72b42a343d9a030e5ce178e95b71178",
+            "check_wall_seconds": 0.005607749801129103,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "official_scalar_shape": {
+            "status": "unsat",
+            "premise_count": 59,
+            "timeout_ms": 12262,
+            "goal": "(let ((a!1 (+ (ite (not (DELETED t15)) 1 0)\n              (ite (not (DELETED pity_tuple_of_Table6)) 1 0))))\n  (distinct 1 a!1))",
+            "assertions_sha256": "ed78c93df312854299343c9bc7df58050392d1cb9a804cb2aae3629a5c1adabe",
+            "check_wall_seconds": 0.005831541959196329
+          },
+          "joint_premise_sat": {
+            "status": "sat",
+            "premise_count": 59,
+            "timeout_ms": 12235,
+            "goal": null,
+            "assertions_sha256": "4647ae7935b3fc60f0649bd0c4b12aabf72b42a343d9a030e5ce178e95b71178",
+            "check_wall_seconds": 0.005224833730608225,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "output_mismatch": {
+            "status": "unsat",
+            "premise_count": 59,
+            "timeout_ms": 12219,
+            "goal": "(let ((a!1 (or (and (not (DELETED t15)) (NULL t15 TABLE5__SUM_F__V__String))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String))))\n      (a!2 (and (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (not (DELETED t3))\n                (not (NULL t1 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t1) (D__ID t3))))\n      (a!3 (and (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (not (DELETED t4))\n                (not (NULL t1 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t1) (D__ID t4))))\n      (a!4 (and (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (not (DELETED t3))\n                (not (NULL t2 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t2) (D__ID t3))))\n      (a!5 (and (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (not (DELETED t4))\n                (not (NULL t2 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t2) (D__ID t4))))\n      (a!7 (ite (and (not (DELETED t15))\n                     (not (NULL t15 TABLE5__SUM_F__V__String)))\n                (TABLE5__SUM_F__V t15)\n                0))\n      (a!8 (ite (and (not (DELETED pity_tuple_of_Table6))\n                     (not (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String)))\n                (TABLE5__SUM_F__V pity_tuple_of_Table6)\n                0)))\n(let ((a!6 (= 0 (+ (ite a!2 1 0) (ite a!3 1 0) (ite a!4 1 0) (ite a!5 1 0))))\n      (a!9 (distinct (+ a!7 a!8)\n                     (+ (ite a!2 (F__V t1) 0)\n                        (ite a!3 (F__V t1) 0)\n                        (ite a!4 (F__V t2) 0)\n                        (ite a!5 (F__V t2) 0)))))\n  (or (distinct a!1 a!6) (and (not a!1) (not a!6) a!9))))",
+            "assertions_sha256": "d974ddd7117afff5be84c797de3d8a95140b89ab6b39f7714c7c17d1cb7703fa",
+            "check_wall_seconds": 0.009313458111137152
+          }
+        },
+        "counts": {
+          "planned_solver_checks": 6,
+          "attempted_solver_checks": 6,
+          "completed_solver_checks": 6,
+          "not_run_solver_checks": 0
+        },
+        "candidate_auxiliary_extension": {
+          "status": "CHECKED_ACYCLIC_FRESH_TOTAL_INT_DEFINITIONS",
+          "method": "Quantifier-free AST audit, not a quantified SMT proof or SAT-only inference.",
+          "definition_count": 0,
+          "ordered_definitions": [],
+          "obligation": "Every interpretation of the original base symbols uniquely extends to these auxiliary constants.",
+          "scope": "Emitted definitions only; does not establish aggregate expression semantics."
+        },
+        "sqlite_replay": {
+          "status": "NOT_RUN_BY_THIS_MODULE",
+          "required_for_sat_witness": true
+        },
+        "proof_boundary": [
+          "Same full DBMS_facts, existing bound_constraints and base mappings; no IC inferred or removed.",
+          "Exact row counts mean the caller-created physical slots, independently checked all alive.",
+          "Joint SAT demonstrates nonvacuity only; auxiliary totality uses a separate acyclic fresh-definition check.",
+          "Official encoding totality/correctness for every base model is not established by this diagnostic.",
+          "An UNSAT difference is bounded encoder-relative agreement, not unbounded SQL correctness.",
+          "No q1/q2 equivalence result, cost measurement or SQLite oracle is substituted for this single-query comparison."
+        ],
+        "source_ast_bridge": {
+          "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+          "original_ast_sha256": "c7752cfc866b9fad595067db810358f3e1a0d0a7686da03f2a2cc078d44ebda5",
+          "normalized_ast_sha256": "44918fc07a0f382ff0697d3218dba92b0f28830cd1712a23eef5aeb9b7fb0d04",
+          "complete_facts_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604"
+        },
+        "raw_frontend_guard": "ADMITTED",
+        "contract": {
+          "dbms_fact_count": 49,
+          "bound_constraint_count": 0,
+          "facts_sha256": "00cc5e308af7809741289868431ea78fb0edae936b7d4202fb99514e819dc7ae",
+          "bounds_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "base_mapping_sha256": "530a0e95ca146f26c757303f402c56bdf005e9d7bb0b432c8fcec55a7d9dea56",
+          "exact_rows": {
+            "F": 2,
+            "D": 2,
+            "E": 2
+          },
+          "column_order": {
+            "F": [
+              "K",
+              "L",
+              "V"
+            ],
+            "D": [
+              "ID",
+              "P"
+            ],
+            "E": [
+              "ID",
+              "Q"
+            ]
+          },
+          "unchanged_after_both_encoders": true
+        },
+        "phase": "FINISHED",
+        "elapsed_wall_seconds_before_checkpoint": 0.17897845804691315,
+        "parsed_ast": {
+          "select": {
+            "value": {
+              "sum": "F__V"
+            }
+          },
+          "from": [
+            "F",
+            {
+              "join": "D",
+              "on": {
+                "eq": [
+                  "F__K",
+                  "D__ID"
+                ]
+              }
+            }
+          ]
+        },
+        "official": {
+          "physical_output_slots": 2,
+          "column_count_per_slot": 1,
+          "result_formula_count": 10,
+          "result_formulas": [
+            "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t3)))\n               (and (not (DELETED t7))\n                    (= (NULL t7 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t7) (F__K t1))\n                    (= (NULL t7 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t7) (F__L t1))\n                    (= (NULL t7 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t7) (F__V t1))\n                    (= (NULL t7 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t7) (D__ID t3))\n                    (= (NULL t7 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t7) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t7))))",
+            "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t3)))\n               (and (not (DELETED t8))\n                    (= (NULL t8 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t8) (F__K t2))\n                    (= (NULL t8 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t8) (F__L t2))\n                    (= (NULL t8 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t8) (F__V t2))\n                    (= (NULL t8 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t8) (D__ID t3))\n                    (= (NULL t8 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t8) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t8))))",
+            "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t4)))\n               (and (not (DELETED t9))\n                    (= (NULL t9 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t9) (F__K t1))\n                    (= (NULL t9 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t9) (F__L t1))\n                    (= (NULL t9 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t9) (F__V t1))\n                    (= (NULL t9 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t9) (D__ID t4))\n                    (= (NULL t9 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t9) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t9))))",
+            "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t4)))\n               (and (not (DELETED t10))\n                    (= (NULL t10 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t10) (F__K t2))\n                    (= (NULL t10 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t10) (F__L t2))\n                    (= (NULL t10 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t10) (F__V t2))\n                    (= (NULL t10 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t10) (D__ID t4))\n                    (= (NULL t10 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t10) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t10))))",
+            "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t7)) a!1)\n               (and (not (DELETED t11)) (= t11 t7))))\n      (a!3 (not (and (not (DELETED t7)) a!1))))\n  (and a!2 (=> a!3 (DELETED t11)))))",
+            "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t8)) a!1)\n               (and (not (DELETED t12)) (= t12 t8))))\n      (a!3 (not (and (not (DELETED t8)) a!1))))\n  (and a!2 (=> a!3 (DELETED t12)))))",
+            "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t9)) a!1)\n               (and (not (DELETED t13)) (= t13 t9))))\n      (a!3 (not (and (not (DELETED t9)) a!1))))\n  (and a!2 (=> a!3 (DELETED t13)))))",
+            "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t10)) a!1)\n               (and (not (DELETED t14)) (= t14 t10))))\n      (a!3 (not (and (not (DELETED t10)) a!1))))\n  (and a!2 (=> a!3 (DELETED t14)))))",
+            "(let ((a!1 (or (not (DELETED t11))\n               (not (DELETED t12))\n               (not (DELETED t13))\n               (not (DELETED t14))))\n      (a!2 (ite (and (DELETED _find_1st_non_deleted_t17)\n                     (not (DELETED _find_1st_non_deleted_t18)))\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t18)\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t17)))\n      (a!3 (ite (and (DELETED _find_1st_non_deleted_t21)\n                     (not (DELETED _find_1st_non_deleted_t19)))\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t19)\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t21)))\n      (a!4 (ite (and (DELETED _find_1st_non_deleted_t22)\n                     (not (DELETED _find_1st_non_deleted_t20)))\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t20)\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t22)))\n      (a!5 (and (or (DELETED t11) (NULL t11 F__V__String))\n                (or (DELETED t12) (NULL t12 F__V__String))\n                (or (DELETED t13) (NULL t13 F__V__String))\n                (or (DELETED t14) (NULL t14 F__V__String))))\n      (a!6 (+ (ite (or (DELETED t11) (NULL t11 F__V__String)) 0 (F__V t11))\n              (ite (or (DELETED t12) (NULL t12 F__V__String)) 0 (F__V t12))\n              (ite (or (DELETED t13) (NULL t13 F__V__String)) 0 (F__V t13))\n              (ite (or (DELETED t14) (NULL t14 F__V__String)) 0 (F__V t14)))))\n(let ((a!7 (=> a!1\n               (and (not (DELETED t15))\n                    (= _find_1st_non_deleted_t17 t11)\n                    (= _find_1st_non_deleted_t18 t12)\n                    (= _find_1st_non_deleted_t19 t13)\n                    (= _find_1st_non_deleted_t20 t14)\n                    a!2\n                    a!3\n                    a!4\n                    (= (NULL t15 TABLE5__SUM_F__V__String) a!5)\n                    (= (TABLE5__SUM_F__V t15) (ite a!5 (- 10) a!6))))))\n  (and a!7 (=> (not a!1) (DELETED t15)))))",
+            "(let ((a!1 (and (or (DELETED t11) (NULL t11 F__V__String))\n                (or (DELETED t12) (NULL t12 F__V__String))\n                (or (DELETED t13) (NULL t13 F__V__String))\n                (or (DELETED t14) (NULL t14 F__V__String))))\n      (a!2 (+ (ite (or (DELETED t11) (NULL t11 F__V__String)) 0 (F__V t11))\n              (ite (or (DELETED t12) (NULL t12 F__V__String)) 0 (F__V t12))\n              (ite (or (DELETED t13) (NULL t13 F__V__String)) 0 (F__V t13))\n              (ite (or (DELETED t14) (NULL t14 F__V__String)) 0 (F__V t14))))\n      (a!4 (=> (not (and (DELETED t11)\n                         (DELETED t12)\n                         (DELETED t13)\n                         (DELETED t14)))\n               (DELETED pity_tuple_of_Table6))))\n(let ((a!3 (=> (and (DELETED t11) (DELETED t12) (DELETED t13) (DELETED t14))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (= (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String) a!1)\n                    (= (TABLE5__SUM_F__V pity_tuple_of_Table6)\n                       (ite a!1 (- 10) a!2))))))\n  (and a!3 a!4)))"
+          ],
+          "result_formulas_sha256": "b2416b79f06628982497cf36bb081c75b346fd3f9c8e65f6536caef012042320",
+          "slots": [
+            {
+              "key": "t15",
+              "tuple": "t15",
+              "deleted": "(DELETED t15)",
+              "is_null": "(NULL t15 TABLE5__SUM_F__V__String)",
+              "value": "(TABLE5__SUM_F__V t15)"
+            },
+            {
+              "key": "pity_tuple_of_Table6",
+              "tuple": "pity_tuple_of_Table6",
+              "deleted": "(DELETED pity_tuple_of_Table6)",
+              "is_null": "(NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String)",
+              "value": "(TABLE5__SUM_F__V pity_tuple_of_Table6)"
+            }
+          ]
+        },
+        "candidate": {
+          "prefix": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_flat_1",
+          "encoding_counts": {
+            "match_terms": 0,
+            "flat_rows": 4,
+            "selectors": 0,
+            "expression_contains_variable_product": false,
+            "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+            "multiplicity_encoding": "flat",
+            "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+          },
+          "is_null": "(let ((a!1 (and (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (not (DELETED t3))\n                (not (NULL t1 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t1) (D__ID t3))))\n      (a!2 (and (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (not (DELETED t4))\n                (not (NULL t1 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t1) (D__ID t4))))\n      (a!3 (and (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (not (DELETED t3))\n                (not (NULL t2 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t2) (D__ID t3))))\n      (a!4 (and (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (not (DELETED t4))\n                (not (NULL t2 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t2) (D__ID t4)))))\n  (= 0 (+ (ite a!1 1 0) (ite a!2 1 0) (ite a!3 1 0) (ite a!4 1 0))))",
+          "value": "(let ((a!1 (and (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (not (DELETED t3))\n                (not (NULL t1 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t1) (D__ID t3))))\n      (a!2 (and (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (not (DELETED t4))\n                (not (NULL t1 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t1) (D__ID t4))))\n      (a!3 (and (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (not (DELETED t3))\n                (not (NULL t2 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t2) (D__ID t3))))\n      (a!4 (and (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (not (DELETED t4))\n                (not (NULL t2 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t2) (D__ID t4)))))\n  (+ (ite a!1 (F__V t1) 0)\n     (ite a!2 (F__V t1) 0)\n     (ite a!3 (F__V t2) 0)\n     (ite a!4 (F__V t2) 0)))",
+          "definition_count": 0,
+          "definitions": []
+        },
+        "agreement_scope": "BOUNDED_ENCODER_RELATIVE_NULL_AND_NON_NULL_INTEGER_VALUE"
+      },
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "not_null": "F__L"
+          }
+        ],
+        "original_ast_sha256": "c7752cfc866b9fad595067db810358f3e1a0d0a7686da03f2a2cc078d44ebda5",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 48,
+          "assertion_sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 49,
+          "assertion_sha256": "4e06fa7f1f2154189ab9a3d25371ef079132ded2d52bfb70e00a76a473dc6c87"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 1,
+          "actual_formula": "(and (not (NULL t1 F__L__String)) (not (NULL t2 F__L__String)))",
+          "reference_formula": "(and (not (NULL t1 F__L__String)) (not (NULL t2 F__L__String)))"
+        },
+        "normalized_ast": [
+          {
+            "not_null": {
+              "value": "F__L"
+            }
+          }
+        ],
+        "normalized_ast_sha256": "44918fc07a0f382ff0697d3218dba92b0f28830cd1712a23eef5aeb9b7fb0d04",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "not_null": "F__L"
+            },
+            "normalized_ast": {
+              "not_null": {
+                "value": "F__L"
+              }
+            },
+            "source_operator": "not_null",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (F__K t1) String_x1__Int)",
+            "(= (F__L t1) String_x2__Int)",
+            "(= (F__V t1) String_x3__Int)",
+            "(not (DELETED t2))",
+            "(= (F__K t2) String_x4__Int)",
+            "(= (F__L t2) String_x5__Int)",
+            "(= (F__V t2) String_x6__Int)",
+            "(<= (- 2147483648) (F__K t1))",
+            "(>= 2147483647 (F__K t1))",
+            "(<= (- 2147483648) (F__L t1))",
+            "(>= 2147483647 (F__L t1))",
+            "(<= (- 2147483648) (F__V t1))",
+            "(>= 2147483647 (F__V t1))",
+            "(<= (- 2147483648) (F__K t2))",
+            "(>= 2147483647 (F__K t2))",
+            "(<= (- 2147483648) (F__L t2))",
+            "(>= 2147483647 (F__L t2))",
+            "(<= (- 2147483648) (F__V t2))",
+            "(>= 2147483647 (F__V t2))",
+            "(not (DELETED t3))",
+            "(= (D__ID t3) String_x7__Int)",
+            "(= (D__P t3) String_x8__Int)",
+            "(not (DELETED t4))",
+            "(= (D__ID t4) String_x9__Int)",
+            "(= (D__P t4) String_x10__Int)",
+            "(<= (- 2147483648) (D__ID t3))",
+            "(>= 2147483647 (D__ID t3))",
+            "(<= (- 2147483648) (D__P t3))",
+            "(>= 2147483647 (D__P t3))",
+            "(<= (- 2147483648) (D__ID t4))",
+            "(>= 2147483647 (D__ID t4))",
+            "(<= (- 2147483648) (D__P t4))",
+            "(>= 2147483647 (D__P t4))",
+            "(not (DELETED t5))",
+            "(= (E__ID t5) String_x11__Int)",
+            "(= (E__Q t5) String_x12__Int)",
+            "(not (DELETED t6))",
+            "(= (E__ID t6) String_x13__Int)",
+            "(= (E__Q t6) String_x14__Int)",
+            "(<= (- 2147483648) (E__ID t5))",
+            "(>= 2147483647 (E__ID t5))",
+            "(<= (- 2147483648) (E__Q t5))",
+            "(>= 2147483647 (E__Q t5))",
+            "(<= (- 2147483648) (E__ID t6))",
+            "(>= 2147483647 (E__ID t6))",
+            "(<= (- 2147483648) (E__Q t6))",
+            "(>= 2147483647 (E__Q t6))"
+          ],
+          "sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "F": 2,
+            "D": 2,
+            "E": 2
+          }
+        },
+        "complete_facts_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 49,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "PROCESS_EXITED",
+      "final_decision": "UNSAT_DIFFERENTIAL",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_075_01/job_0076",
+      "sampled_peak_rss_bytes": 114212864,
+      "sampled_max_kernel_threads": 2,
+      "pid": 13650,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.5051649999804795,
+      "full_process_cpu_user_seconds": 1.353385,
+      "full_process_cpu_system_seconds": 0.13146,
+      "full_process_cpu_seconds": 1.484845,
+      "worker_report_sha256": "5098bad244289fdf62c10463b0025a36943d487fea6221d20a17480cf7e780ef",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.25562341697514057,
+      "semantic_e2e_cpu_seconds": 0.2541340000000001,
+      "differential": {
+        "status": "UNSAT_DIFFERENTIAL",
+        "sql": "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID",
+        "mode": "product",
+        "correctness_only": true,
+        "solver_timeout_ms": "DYNAMIC_REMAINING_BUDGET",
+        "solver_threads": 1,
+        "gates": {
+          "full_contract_sat": {
+            "status": "sat",
+            "premise_count": 49,
+            "timeout_ms": 12363,
+            "goal": null,
+            "assertions_sha256": "00cc5e308af7809741289868431ea78fb0edae936b7d4202fb99514e819dc7ae",
+            "check_wall_seconds": 0.003939583897590637,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "exact_rows_no_deletion": {
+            "status": "unsat",
+            "premise_count": 49,
+            "timeout_ms": 12353,
+            "goal": "(or (DELETED t1)\n    (DELETED t2)\n    (DELETED t3)\n    (DELETED t4)\n    (DELETED t5)\n    (DELETED t6))",
+            "assertions_sha256": "bbc0ffedd027c165a90853c7cc3ca2b00e2cd5d38362fbfdea1a66ad2005d2d6",
+            "check_wall_seconds": 0.0033195000141859055
+          },
+          "official_premise_sat": {
+            "status": "sat",
+            "premise_count": 59,
+            "timeout_ms": 12268,
+            "goal": null,
+            "assertions_sha256": "4647ae7935b3fc60f0649bd0c4b12aabf72b42a343d9a030e5ce178e95b71178",
+            "check_wall_seconds": 0.005264250095933676,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "official_scalar_shape": {
+            "status": "unsat",
+            "premise_count": 59,
+            "timeout_ms": 12251,
+            "goal": "(let ((a!1 (+ (ite (not (DELETED t15)) 1 0)\n              (ite (not (DELETED pity_tuple_of_Table6)) 1 0))))\n  (distinct 1 a!1))",
+            "assertions_sha256": "ed78c93df312854299343c9bc7df58050392d1cb9a804cb2aae3629a5c1adabe",
+            "check_wall_seconds": 0.005465750116854906
+          },
+          "joint_premise_sat": {
+            "status": "sat",
+            "premise_count": 65,
+            "timeout_ms": 12224,
+            "goal": null,
+            "assertions_sha256": "21c8c3e364be727f46eca76970867945518a01e629540070a4fef06f18f91dd4",
+            "check_wall_seconds": 0.005359832663089037,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "output_mismatch": {
+            "status": "unsat",
+            "premise_count": 65,
+            "timeout_ms": 12207,
+            "goal": "(let ((a!1 (or (and (not (DELETED t15)) (NULL t15 TABLE5__SUM_F__V__String))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String))))\n      (a!2 (ite (and (not (DELETED t15))\n                     (not (NULL t15 TABLE5__SUM_F__V__String)))\n                (TABLE5__SUM_F__V t15)\n                0))\n      (a!3 (ite (and (not (DELETED pity_tuple_of_Table6))\n                     (not (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String)))\n                (TABLE5__SUM_F__V pity_tuple_of_Table6)\n                0)))\n(let ((a!4 (and (not a!1)\n                (not (= 0\n                        (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_0_0\n                           CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_1_0)))\n                (distinct (+ a!2 a!3)\n                          (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_0_0\n                             CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_1_0)))))\n  (or (distinct a!1\n                (= 0\n                   (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_0_0\n                      CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_1_0)))\n      a!4)))",
+            "assertions_sha256": "6ae23162ebc77f21f35ed8583fdfe6b009a9fab4c90ac8df79d14a8a1e6cacbf",
+            "check_wall_seconds": 0.017485458869487047
+          }
+        },
+        "counts": {
+          "planned_solver_checks": 6,
+          "attempted_solver_checks": 6,
+          "completed_solver_checks": 6,
+          "not_run_solver_checks": 0
+        },
+        "candidate_auxiliary_extension": {
+          "status": "CHECKED_ACYCLIC_FRESH_TOTAL_INT_DEFINITIONS",
+          "method": "Quantifier-free AST audit, not a quantified SMT proof or SAT-only inference.",
+          "definition_count": 6,
+          "ordered_definitions": [
+            {
+              "index": 0,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_0_0",
+              "rhs_sha256": "357978b440e6f8fa232217aed539fac8a78bdfa7d0a0f54ef052ea10b141ada5"
+            },
+            {
+              "index": 1,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_0_0",
+              "rhs_sha256": "f6b812dfe12cce10eec0a570122bc6e6070100859d6ce0e9a8299a8456803118"
+            },
+            {
+              "index": 2,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_0_0",
+              "rhs_sha256": "de19013ec2101d250609be07711299d715adac69b07d7c1ff64a0bfc22a475b6"
+            },
+            {
+              "index": 3,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_1_0",
+              "rhs_sha256": "08735bc1aed61f65ee61ca57cab75fc23f45fcb0ea4fdbf635446c86b304658b"
+            },
+            {
+              "index": 4,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_1_0",
+              "rhs_sha256": "46f8df263b6591b654850c131db5190818d5f80711f1a2d3a273b5dc81cb2dba"
+            },
+            {
+              "index": 5,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_1_0",
+              "rhs_sha256": "86253e8d95112ccb15f6c52053404565ed7e5be65317fbf44555ff0cd30c0b84"
+            }
+          ],
+          "obligation": "Every interpretation of the original base symbols uniquely extends to these auxiliary constants.",
+          "scope": "Emitted definitions only; does not establish aggregate expression semantics."
+        },
+        "sqlite_replay": {
+          "status": "NOT_RUN_BY_THIS_MODULE",
+          "required_for_sat_witness": true
+        },
+        "proof_boundary": [
+          "Same full DBMS_facts, existing bound_constraints and base mappings; no IC inferred or removed.",
+          "Exact row counts mean the caller-created physical slots, independently checked all alive.",
+          "Joint SAT demonstrates nonvacuity only; auxiliary totality uses a separate acyclic fresh-definition check.",
+          "Official encoding totality/correctness for every base model is not established by this diagnostic.",
+          "An UNSAT difference is bounded encoder-relative agreement, not unbounded SQL correctness.",
+          "No q1/q2 equivalence result, cost measurement or SQLite oracle is substituted for this single-query comparison."
+        ],
+        "source_ast_bridge": {
+          "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+          "original_ast_sha256": "c7752cfc866b9fad595067db810358f3e1a0d0a7686da03f2a2cc078d44ebda5",
+          "normalized_ast_sha256": "44918fc07a0f382ff0697d3218dba92b0f28830cd1712a23eef5aeb9b7fb0d04",
+          "complete_facts_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604"
+        },
+        "raw_frontend_guard": "ADMITTED",
+        "contract": {
+          "dbms_fact_count": 49,
+          "bound_constraint_count": 0,
+          "facts_sha256": "00cc5e308af7809741289868431ea78fb0edae936b7d4202fb99514e819dc7ae",
+          "bounds_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "base_mapping_sha256": "530a0e95ca146f26c757303f402c56bdf005e9d7bb0b432c8fcec55a7d9dea56",
+          "exact_rows": {
+            "F": 2,
+            "D": 2,
+            "E": 2
+          },
+          "column_order": {
+            "F": [
+              "K",
+              "L",
+              "V"
+            ],
+            "D": [
+              "ID",
+              "P"
+            ],
+            "E": [
+              "ID",
+              "Q"
+            ]
+          },
+          "unchanged_after_both_encoders": true
+        },
+        "phase": "FINISHED",
+        "elapsed_wall_seconds_before_checkpoint": 0.18799212528392673,
+        "parsed_ast": {
+          "select": {
+            "value": {
+              "sum": "F__V"
+            }
+          },
+          "from": [
+            "F",
+            {
+              "join": "D",
+              "on": {
+                "eq": [
+                  "F__K",
+                  "D__ID"
+                ]
+              }
+            }
+          ]
+        },
+        "official": {
+          "physical_output_slots": 2,
+          "column_count_per_slot": 1,
+          "result_formula_count": 10,
+          "result_formulas": [
+            "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t3)))\n               (and (not (DELETED t7))\n                    (= (NULL t7 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t7) (F__K t1))\n                    (= (NULL t7 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t7) (F__L t1))\n                    (= (NULL t7 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t7) (F__V t1))\n                    (= (NULL t7 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t7) (D__ID t3))\n                    (= (NULL t7 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t7) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t7))))",
+            "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t3)))\n               (and (not (DELETED t8))\n                    (= (NULL t8 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t8) (F__K t2))\n                    (= (NULL t8 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t8) (F__L t2))\n                    (= (NULL t8 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t8) (F__V t2))\n                    (= (NULL t8 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t8) (D__ID t3))\n                    (= (NULL t8 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t8) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t8))))",
+            "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t4)))\n               (and (not (DELETED t9))\n                    (= (NULL t9 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t9) (F__K t1))\n                    (= (NULL t9 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t9) (F__L t1))\n                    (= (NULL t9 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t9) (F__V t1))\n                    (= (NULL t9 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t9) (D__ID t4))\n                    (= (NULL t9 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t9) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t9))))",
+            "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t4)))\n               (and (not (DELETED t10))\n                    (= (NULL t10 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t10) (F__K t2))\n                    (= (NULL t10 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t10) (F__L t2))\n                    (= (NULL t10 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t10) (F__V t2))\n                    (= (NULL t10 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t10) (D__ID t4))\n                    (= (NULL t10 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t10) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t10))))",
+            "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t7)) a!1)\n               (and (not (DELETED t11)) (= t11 t7))))\n      (a!3 (not (and (not (DELETED t7)) a!1))))\n  (and a!2 (=> a!3 (DELETED t11)))))",
+            "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t8)) a!1)\n               (and (not (DELETED t12)) (= t12 t8))))\n      (a!3 (not (and (not (DELETED t8)) a!1))))\n  (and a!2 (=> a!3 (DELETED t12)))))",
+            "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t9)) a!1)\n               (and (not (DELETED t13)) (= t13 t9))))\n      (a!3 (not (and (not (DELETED t9)) a!1))))\n  (and a!2 (=> a!3 (DELETED t13)))))",
+            "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t10)) a!1)\n               (and (not (DELETED t14)) (= t14 t10))))\n      (a!3 (not (and (not (DELETED t10)) a!1))))\n  (and a!2 (=> a!3 (DELETED t14)))))",
+            "(let ((a!1 (or (not (DELETED t11))\n               (not (DELETED t12))\n               (not (DELETED t13))\n               (not (DELETED t14))))\n      (a!2 (ite (and (DELETED _find_1st_non_deleted_t17)\n                     (not (DELETED _find_1st_non_deleted_t18)))\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t18)\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t17)))\n      (a!3 (ite (and (DELETED _find_1st_non_deleted_t21)\n                     (not (DELETED _find_1st_non_deleted_t19)))\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t19)\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t21)))\n      (a!4 (ite (and (DELETED _find_1st_non_deleted_t22)\n                     (not (DELETED _find_1st_non_deleted_t20)))\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t20)\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t22)))\n      (a!5 (and (or (DELETED t11) (NULL t11 F__V__String))\n                (or (DELETED t12) (NULL t12 F__V__String))\n                (or (DELETED t13) (NULL t13 F__V__String))\n                (or (DELETED t14) (NULL t14 F__V__String))))\n      (a!6 (+ (ite (or (DELETED t11) (NULL t11 F__V__String)) 0 (F__V t11))\n              (ite (or (DELETED t12) (NULL t12 F__V__String)) 0 (F__V t12))\n              (ite (or (DELETED t13) (NULL t13 F__V__String)) 0 (F__V t13))\n              (ite (or (DELETED t14) (NULL t14 F__V__String)) 0 (F__V t14)))))\n(let ((a!7 (=> a!1\n               (and (not (DELETED t15))\n                    (= _find_1st_non_deleted_t17 t11)\n                    (= _find_1st_non_deleted_t18 t12)\n                    (= _find_1st_non_deleted_t19 t13)\n                    (= _find_1st_non_deleted_t20 t14)\n                    a!2\n                    a!3\n                    a!4\n                    (= (NULL t15 TABLE5__SUM_F__V__String) a!5)\n                    (= (TABLE5__SUM_F__V t15) (ite a!5 (- 10) a!6))))))\n  (and a!7 (=> (not a!1) (DELETED t15)))))",
+            "(let ((a!1 (and (or (DELETED t11) (NULL t11 F__V__String))\n                (or (DELETED t12) (NULL t12 F__V__String))\n                (or (DELETED t13) (NULL t13 F__V__String))\n                (or (DELETED t14) (NULL t14 F__V__String))))\n      (a!2 (+ (ite (or (DELETED t11) (NULL t11 F__V__String)) 0 (F__V t11))\n              (ite (or (DELETED t12) (NULL t12 F__V__String)) 0 (F__V t12))\n              (ite (or (DELETED t13) (NULL t13 F__V__String)) 0 (F__V t13))\n              (ite (or (DELETED t14) (NULL t14 F__V__String)) 0 (F__V t14))))\n      (a!4 (=> (not (and (DELETED t11)\n                         (DELETED t12)\n                         (DELETED t13)\n                         (DELETED t14)))\n               (DELETED pity_tuple_of_Table6))))\n(let ((a!3 (=> (and (DELETED t11) (DELETED t12) (DELETED t13) (DELETED t14))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (= (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String) a!1)\n                    (= (TABLE5__SUM_F__V pity_tuple_of_Table6)\n                       (ite a!1 (- 10) a!2))))))\n  (and a!3 a!4)))"
+          ],
+          "result_formulas_sha256": "b2416b79f06628982497cf36bb081c75b346fd3f9c8e65f6536caef012042320",
+          "slots": [
+            {
+              "key": "t15",
+              "tuple": "t15",
+              "deleted": "(DELETED t15)",
+              "is_null": "(NULL t15 TABLE5__SUM_F__V__String)",
+              "value": "(TABLE5__SUM_F__V t15)"
+            },
+            {
+              "key": "pity_tuple_of_Table6",
+              "tuple": "pity_tuple_of_Table6",
+              "deleted": "(DELETED pity_tuple_of_Table6)",
+              "is_null": "(NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String)",
+              "value": "(TABLE5__SUM_F__V pity_tuple_of_Table6)"
+            }
+          ]
+        },
+        "candidate": {
+          "prefix": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1",
+          "encoding_counts": {
+            "match_terms": 4,
+            "flat_rows": 0,
+            "selectors": 0,
+            "expression_contains_variable_product": false,
+            "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+            "multiplicity_encoding": "product",
+            "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+          },
+          "is_null": "(= 0\n   (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_0_0\n      CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_1_0))",
+          "value": "(+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_0_0\n   CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_1_0)",
+          "definition_count": 6,
+          "definitions": [
+            "(let ((a!1 (ite (and (not (DELETED t3))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3)))\n                1\n                0))\n      (a!2 (ite (and (not (DELETED t4))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4)))\n                1\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_0_0 (+ a!1 a!2)))",
+            "(let ((a!1 (ite (and (not (DELETED t1)) (not (NULL t1 F__V__String))) 1 0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_0_0\n     (* a!1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_0_0)))",
+            "(let ((a!1 (ite (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (F__V t1)\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_0_0\n     (* a!1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_0_0)))",
+            "(let ((a!1 (ite (and (not (DELETED t3))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3)))\n                1\n                0))\n      (a!2 (ite (and (not (DELETED t4))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4)))\n                1\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_1_0 (+ a!1 a!2)))",
+            "(let ((a!1 (ite (and (not (DELETED t2)) (not (NULL t2 F__V__String))) 1 0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_n_1_0\n     (* a!1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_1_0)))",
+            "(let ((a!1 (ite (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (F__V t2)\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_v_1_0\n     (* a!1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_product_1_c_1_0)))"
+          ]
+        },
+        "agreement_scope": "BOUNDED_ENCODER_RELATIVE_NULL_AND_NON_NULL_INTEGER_VALUE"
+      },
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "not_null": "F__L"
+          }
+        ],
+        "original_ast_sha256": "c7752cfc866b9fad595067db810358f3e1a0d0a7686da03f2a2cc078d44ebda5",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 48,
+          "assertion_sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 49,
+          "assertion_sha256": "4e06fa7f1f2154189ab9a3d25371ef079132ded2d52bfb70e00a76a473dc6c87"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 1,
+          "actual_formula": "(and (not (NULL t1 F__L__String)) (not (NULL t2 F__L__String)))",
+          "reference_formula": "(and (not (NULL t1 F__L__String)) (not (NULL t2 F__L__String)))"
+        },
+        "normalized_ast": [
+          {
+            "not_null": {
+              "value": "F__L"
+            }
+          }
+        ],
+        "normalized_ast_sha256": "44918fc07a0f382ff0697d3218dba92b0f28830cd1712a23eef5aeb9b7fb0d04",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "not_null": "F__L"
+            },
+            "normalized_ast": {
+              "not_null": {
+                "value": "F__L"
+              }
+            },
+            "source_operator": "not_null",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (F__K t1) String_x1__Int)",
+            "(= (F__L t1) String_x2__Int)",
+            "(= (F__V t1) String_x3__Int)",
+            "(not (DELETED t2))",
+            "(= (F__K t2) String_x4__Int)",
+            "(= (F__L t2) String_x5__Int)",
+            "(= (F__V t2) String_x6__Int)",
+            "(<= (- 2147483648) (F__K t1))",
+            "(>= 2147483647 (F__K t1))",
+            "(<= (- 2147483648) (F__L t1))",
+            "(>= 2147483647 (F__L t1))",
+            "(<= (- 2147483648) (F__V t1))",
+            "(>= 2147483647 (F__V t1))",
+            "(<= (- 2147483648) (F__K t2))",
+            "(>= 2147483647 (F__K t2))",
+            "(<= (- 2147483648) (F__L t2))",
+            "(>= 2147483647 (F__L t2))",
+            "(<= (- 2147483648) (F__V t2))",
+            "(>= 2147483647 (F__V t2))",
+            "(not (DELETED t3))",
+            "(= (D__ID t3) String_x7__Int)",
+            "(= (D__P t3) String_x8__Int)",
+            "(not (DELETED t4))",
+            "(= (D__ID t4) String_x9__Int)",
+            "(= (D__P t4) String_x10__Int)",
+            "(<= (- 2147483648) (D__ID t3))",
+            "(>= 2147483647 (D__ID t3))",
+            "(<= (- 2147483648) (D__P t3))",
+            "(>= 2147483647 (D__P t3))",
+            "(<= (- 2147483648) (D__ID t4))",
+            "(>= 2147483647 (D__ID t4))",
+            "(<= (- 2147483648) (D__P t4))",
+            "(>= 2147483647 (D__P t4))",
+            "(not (DELETED t5))",
+            "(= (E__ID t5) String_x11__Int)",
+            "(= (E__Q t5) String_x12__Int)",
+            "(not (DELETED t6))",
+            "(= (E__ID t6) String_x13__Int)",
+            "(= (E__Q t6) String_x14__Int)",
+            "(<= (- 2147483648) (E__ID t5))",
+            "(>= 2147483647 (E__ID t5))",
+            "(<= (- 2147483648) (E__Q t5))",
+            "(>= 2147483647 (E__Q t5))",
+            "(<= (- 2147483648) (E__ID t6))",
+            "(>= 2147483647 (E__ID t6))",
+            "(<= (- 2147483648) (E__Q t6))",
+            "(>= 2147483647 (E__Q t6))"
+          ],
+          "sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "F": 2,
+            "D": 2,
+            "E": 2
+          }
+        },
+        "complete_facts_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 49,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "PROCESS_EXITED",
+      "final_decision": "UNSAT_DIFFERENTIAL",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_075_01/job_0077",
+      "sampled_peak_rss_bytes": 110592000,
+      "sampled_max_kernel_threads": 2,
+      "pid": 13661,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.588561249896884,
+      "full_process_cpu_user_seconds": 1.3565270000000003,
+      "full_process_cpu_system_seconds": 0.11830199999999996,
+      "full_process_cpu_seconds": 1.4748290000000002,
+      "worker_report_sha256": "1272c97db88e183092dafde47192ef8a1b5b887b9b910cfd09101262ad13a941",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.2551818750798702,
+      "semantic_e2e_cpu_seconds": 0.25369700000000006,
+      "differential": {
+        "status": "UNSAT_DIFFERENTIAL",
+        "sql": "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID",
+        "mode": "selector",
+        "correctness_only": true,
+        "solver_timeout_ms": "DYNAMIC_REMAINING_BUDGET",
+        "solver_threads": 1,
+        "gates": {
+          "full_contract_sat": {
+            "status": "sat",
+            "premise_count": 49,
+            "timeout_ms": 12369,
+            "goal": null,
+            "assertions_sha256": "00cc5e308af7809741289868431ea78fb0edae936b7d4202fb99514e819dc7ae",
+            "check_wall_seconds": 0.004547749646008015,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "exact_rows_no_deletion": {
+            "status": "unsat",
+            "premise_count": 49,
+            "timeout_ms": 12358,
+            "goal": "(or (DELETED t1)\n    (DELETED t2)\n    (DELETED t3)\n    (DELETED t4)\n    (DELETED t5)\n    (DELETED t6))",
+            "assertions_sha256": "bbc0ffedd027c165a90853c7cc3ca2b00e2cd5d38362fbfdea1a66ad2005d2d6",
+            "check_wall_seconds": 0.0033644582144916058
+          },
+          "official_premise_sat": {
+            "status": "sat",
+            "premise_count": 59,
+            "timeout_ms": 12273,
+            "goal": null,
+            "assertions_sha256": "4647ae7935b3fc60f0649bd0c4b12aabf72b42a343d9a030e5ce178e95b71178",
+            "check_wall_seconds": 0.005644042044878006,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "official_scalar_shape": {
+            "status": "unsat",
+            "premise_count": 59,
+            "timeout_ms": 12256,
+            "goal": "(let ((a!1 (+ (ite (not (DELETED t15)) 1 0)\n              (ite (not (DELETED pity_tuple_of_Table6)) 1 0))))\n  (distinct 1 a!1))",
+            "assertions_sha256": "ed78c93df312854299343c9bc7df58050392d1cb9a804cb2aae3629a5c1adabe",
+            "check_wall_seconds": 0.005437375046312809
+          },
+          "joint_premise_sat": {
+            "status": "sat",
+            "premise_count": 65,
+            "timeout_ms": 12228,
+            "goal": null,
+            "assertions_sha256": "66e8bbcc1b0e971482fa3432527526c2ed7b6b20244a3d63a017b78649bd323f",
+            "check_wall_seconds": 0.005303667392581701,
+            "model_satisfies_all_submitted_formulas": true
+          },
+          "output_mismatch": {
+            "status": "unsat",
+            "premise_count": 65,
+            "timeout_ms": 12211,
+            "goal": "(let ((a!1 (or (and (not (DELETED t15)) (NULL t15 TABLE5__SUM_F__V__String))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String))))\n      (a!2 (ite (and (not (DELETED t15))\n                     (not (NULL t15 TABLE5__SUM_F__V__String)))\n                (TABLE5__SUM_F__V t15)\n                0))\n      (a!3 (ite (and (not (DELETED pity_tuple_of_Table6))\n                     (not (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String)))\n                (TABLE5__SUM_F__V pity_tuple_of_Table6)\n                0)))\n(let ((a!4 (and (not a!1)\n                (not (= 0\n                        (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_0_0\n                           CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_1_0)))\n                (distinct (+ a!2 a!3)\n                          (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_0_0\n                             CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_1_0)))))\n  (or (distinct a!1\n                (= 0\n                   (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_0_0\n                      CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_1_0)))\n      a!4)))",
+            "assertions_sha256": "0dfae7c305c79d46e3890ae603ea47bf161fb623e75379f8a874a67abcf99d19",
+            "check_wall_seconds": 0.01265745796263218
+          }
+        },
+        "counts": {
+          "planned_solver_checks": 6,
+          "attempted_solver_checks": 6,
+          "completed_solver_checks": 6,
+          "not_run_solver_checks": 0
+        },
+        "candidate_auxiliary_extension": {
+          "status": "CHECKED_ACYCLIC_FRESH_TOTAL_INT_DEFINITIONS",
+          "method": "Quantifier-free AST audit, not a quantified SMT proof or SAT-only inference.",
+          "definition_count": 6,
+          "ordered_definitions": [
+            {
+              "index": 0,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0",
+              "rhs_sha256": "357978b440e6f8fa232217aed539fac8a78bdfa7d0a0f54ef052ea10b141ada5"
+            },
+            {
+              "index": 1,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_0_0",
+              "rhs_sha256": "f990b6f031a34eaa3d1de700c72b9e711006ebd75709e53c4bb83ca087135c4d"
+            },
+            {
+              "index": 2,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_0_0",
+              "rhs_sha256": "9899ba0186e4c9fa289274fac81b0a0a88bfdfac4be04df4d422104837ab5241"
+            },
+            {
+              "index": 3,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0",
+              "rhs_sha256": "08735bc1aed61f65ee61ca57cab75fc23f45fcb0ea4fdbf635446c86b304658b"
+            },
+            {
+              "index": 4,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_1_0",
+              "rhs_sha256": "1b017559e8e8502705423dd167c8a0e7b4fcf600789028ed18a5b51ad0b411aa"
+            },
+            {
+              "index": 5,
+              "lhs": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_1_0",
+              "rhs_sha256": "33723af80d2a0e9c756b9d49e7208cb092129b77d5821f88de802692c87f52ca"
+            }
+          ],
+          "obligation": "Every interpretation of the original base symbols uniquely extends to these auxiliary constants.",
+          "scope": "Emitted definitions only; does not establish aggregate expression semantics."
+        },
+        "sqlite_replay": {
+          "status": "NOT_RUN_BY_THIS_MODULE",
+          "required_for_sat_witness": true
+        },
+        "proof_boundary": [
+          "Same full DBMS_facts, existing bound_constraints and base mappings; no IC inferred or removed.",
+          "Exact row counts mean the caller-created physical slots, independently checked all alive.",
+          "Joint SAT demonstrates nonvacuity only; auxiliary totality uses a separate acyclic fresh-definition check.",
+          "Official encoding totality/correctness for every base model is not established by this diagnostic.",
+          "An UNSAT difference is bounded encoder-relative agreement, not unbounded SQL correctness.",
+          "No q1/q2 equivalence result, cost measurement or SQLite oracle is substituted for this single-query comparison."
+        ],
+        "source_ast_bridge": {
+          "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+          "original_ast_sha256": "c7752cfc866b9fad595067db810358f3e1a0d0a7686da03f2a2cc078d44ebda5",
+          "normalized_ast_sha256": "44918fc07a0f382ff0697d3218dba92b0f28830cd1712a23eef5aeb9b7fb0d04",
+          "complete_facts_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604"
+        },
+        "raw_frontend_guard": "ADMITTED",
+        "contract": {
+          "dbms_fact_count": 49,
+          "bound_constraint_count": 0,
+          "facts_sha256": "00cc5e308af7809741289868431ea78fb0edae936b7d4202fb99514e819dc7ae",
+          "bounds_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "base_mapping_sha256": "530a0e95ca146f26c757303f402c56bdf005e9d7bb0b432c8fcec55a7d9dea56",
+          "exact_rows": {
+            "F": 2,
+            "D": 2,
+            "E": 2
+          },
+          "column_order": {
+            "F": [
+              "K",
+              "L",
+              "V"
+            ],
+            "D": [
+              "ID",
+              "P"
+            ],
+            "E": [
+              "ID",
+              "Q"
+            ]
+          },
+          "unchanged_after_both_encoders": true
+        },
+        "phase": "FINISHED",
+        "elapsed_wall_seconds_before_checkpoint": 0.18606833275407553,
+        "parsed_ast": {
+          "select": {
+            "value": {
+              "sum": "F__V"
+            }
+          },
+          "from": [
+            "F",
+            {
+              "join": "D",
+              "on": {
+                "eq": [
+                  "F__K",
+                  "D__ID"
+                ]
+              }
+            }
+          ]
+        },
+        "official": {
+          "physical_output_slots": 2,
+          "column_count_per_slot": 1,
+          "result_formula_count": 10,
+          "result_formulas": [
+            "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t3)))\n               (and (not (DELETED t7))\n                    (= (NULL t7 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t7) (F__K t1))\n                    (= (NULL t7 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t7) (F__L t1))\n                    (= (NULL t7 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t7) (F__V t1))\n                    (= (NULL t7 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t7) (D__ID t3))\n                    (= (NULL t7 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t7) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t7))))",
+            "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t3)))\n               (and (not (DELETED t8))\n                    (= (NULL t8 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t8) (F__K t2))\n                    (= (NULL t8 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t8) (F__L t2))\n                    (= (NULL t8 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t8) (F__V t2))\n                    (= (NULL t8 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t8) (D__ID t3))\n                    (= (NULL t8 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t8) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t8))))",
+            "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t4)))\n               (and (not (DELETED t9))\n                    (= (NULL t9 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t9) (F__K t1))\n                    (= (NULL t9 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t9) (F__L t1))\n                    (= (NULL t9 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t9) (F__V t1))\n                    (= (NULL t9 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t9) (D__ID t4))\n                    (= (NULL t9 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t9) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t9))))",
+            "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t4)))\n               (and (not (DELETED t10))\n                    (= (NULL t10 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t10) (F__K t2))\n                    (= (NULL t10 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t10) (F__L t2))\n                    (= (NULL t10 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t10) (F__V t2))\n                    (= (NULL t10 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t10) (D__ID t4))\n                    (= (NULL t10 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t10) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t10))))",
+            "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t7)) a!1)\n               (and (not (DELETED t11)) (= t11 t7))))\n      (a!3 (not (and (not (DELETED t7)) a!1))))\n  (and a!2 (=> a!3 (DELETED t11)))))",
+            "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t8)) a!1)\n               (and (not (DELETED t12)) (= t12 t8))))\n      (a!3 (not (and (not (DELETED t8)) a!1))))\n  (and a!2 (=> a!3 (DELETED t12)))))",
+            "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t9)) a!1)\n               (and (not (DELETED t13)) (= t13 t9))))\n      (a!3 (not (and (not (DELETED t9)) a!1))))\n  (and a!2 (=> a!3 (DELETED t13)))))",
+            "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t10)) a!1)\n               (and (not (DELETED t14)) (= t14 t10))))\n      (a!3 (not (and (not (DELETED t10)) a!1))))\n  (and a!2 (=> a!3 (DELETED t14)))))",
+            "(let ((a!1 (or (not (DELETED t11))\n               (not (DELETED t12))\n               (not (DELETED t13))\n               (not (DELETED t14))))\n      (a!2 (ite (and (DELETED _find_1st_non_deleted_t17)\n                     (not (DELETED _find_1st_non_deleted_t18)))\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t18)\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t17)))\n      (a!3 (ite (and (DELETED _find_1st_non_deleted_t21)\n                     (not (DELETED _find_1st_non_deleted_t19)))\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t19)\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t21)))\n      (a!4 (ite (and (DELETED _find_1st_non_deleted_t22)\n                     (not (DELETED _find_1st_non_deleted_t20)))\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t20)\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t22)))\n      (a!5 (and (or (DELETED t11) (NULL t11 F__V__String))\n                (or (DELETED t12) (NULL t12 F__V__String))\n                (or (DELETED t13) (NULL t13 F__V__String))\n                (or (DELETED t14) (NULL t14 F__V__String))))\n      (a!6 (+ (ite (or (DELETED t11) (NULL t11 F__V__String)) 0 (F__V t11))\n              (ite (or (DELETED t12) (NULL t12 F__V__String)) 0 (F__V t12))\n              (ite (or (DELETED t13) (NULL t13 F__V__String)) 0 (F__V t13))\n              (ite (or (DELETED t14) (NULL t14 F__V__String)) 0 (F__V t14)))))\n(let ((a!7 (=> a!1\n               (and (not (DELETED t15))\n                    (= _find_1st_non_deleted_t17 t11)\n                    (= _find_1st_non_deleted_t18 t12)\n                    (= _find_1st_non_deleted_t19 t13)\n                    (= _find_1st_non_deleted_t20 t14)\n                    a!2\n                    a!3\n                    a!4\n                    (= (NULL t15 TABLE5__SUM_F__V__String) a!5)\n                    (= (TABLE5__SUM_F__V t15) (ite a!5 (- 10) a!6))))))\n  (and a!7 (=> (not a!1) (DELETED t15)))))",
+            "(let ((a!1 (and (or (DELETED t11) (NULL t11 F__V__String))\n                (or (DELETED t12) (NULL t12 F__V__String))\n                (or (DELETED t13) (NULL t13 F__V__String))\n                (or (DELETED t14) (NULL t14 F__V__String))))\n      (a!2 (+ (ite (or (DELETED t11) (NULL t11 F__V__String)) 0 (F__V t11))\n              (ite (or (DELETED t12) (NULL t12 F__V__String)) 0 (F__V t12))\n              (ite (or (DELETED t13) (NULL t13 F__V__String)) 0 (F__V t13))\n              (ite (or (DELETED t14) (NULL t14 F__V__String)) 0 (F__V t14))))\n      (a!4 (=> (not (and (DELETED t11)\n                         (DELETED t12)\n                         (DELETED t13)\n                         (DELETED t14)))\n               (DELETED pity_tuple_of_Table6))))\n(let ((a!3 (=> (and (DELETED t11) (DELETED t12) (DELETED t13) (DELETED t14))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (= (NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String) a!1)\n                    (= (TABLE5__SUM_F__V pity_tuple_of_Table6)\n                       (ite a!1 (- 10) a!2))))))\n  (and a!3 a!4)))"
+          ],
+          "result_formulas_sha256": "b2416b79f06628982497cf36bb081c75b346fd3f9c8e65f6536caef012042320",
+          "slots": [
+            {
+              "key": "t15",
+              "tuple": "t15",
+              "deleted": "(DELETED t15)",
+              "is_null": "(NULL t15 TABLE5__SUM_F__V__String)",
+              "value": "(TABLE5__SUM_F__V t15)"
+            },
+            {
+              "key": "pity_tuple_of_Table6",
+              "tuple": "pity_tuple_of_Table6",
+              "deleted": "(DELETED pity_tuple_of_Table6)",
+              "is_null": "(NULL pity_tuple_of_Table6 TABLE5__SUM_F__V__String)",
+              "value": "(TABLE5__SUM_F__V pity_tuple_of_Table6)"
+            }
+          ]
+        },
+        "candidate": {
+          "prefix": "CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1",
+          "encoding_counts": {
+            "match_terms": 4,
+            "flat_rows": 0,
+            "selectors": 12,
+            "expression_contains_variable_product": false,
+            "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+            "multiplicity_encoding": "selector",
+            "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+          },
+          "is_null": "(= 0\n   (+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_0_0\n      CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_1_0))",
+          "value": "(+ CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_0_0\n   CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_1_0)",
+          "definition_count": 6,
+          "definitions": [
+            "(let ((a!1 (ite (and (not (DELETED t3))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3)))\n                1\n                0))\n      (a!2 (ite (and (not (DELETED t4))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4)))\n                1\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0 (+ a!1 a!2)))",
+            "(let ((a!1 (ite (and (not (DELETED t1)) (not (NULL t1 F__V__String))) 1 0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_0_0\n     (+ (ite (= 0 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0)\n             (* 0 a!1)\n             0)\n        (ite (= 1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0)\n             (* 1 a!1)\n             0)\n        (ite (= 2 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0)\n             (* 2 a!1)\n             0))))",
+            "(let ((a!1 (ite (and (not (DELETED t1)) (not (NULL t1 F__V__String)))\n                (F__V t1)\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_0_0\n     (+ (ite (= 0 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0)\n             (* 0 a!1)\n             0)\n        (ite (= 1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0)\n             (* 1 a!1)\n             0)\n        (ite (= 2 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_0_0)\n             (* 2 a!1)\n             0))))",
+            "(let ((a!1 (ite (and (not (DELETED t3))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3)))\n                1\n                0))\n      (a!2 (ite (and (not (DELETED t4))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4)))\n                1\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0 (+ a!1 a!2)))",
+            "(let ((a!1 (ite (and (not (DELETED t2)) (not (NULL t2 F__V__String))) 1 0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_n_1_0\n     (+ (ite (= 0 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0)\n             (* 0 a!1)\n             0)\n        (ite (= 1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0)\n             (* 1 a!1)\n             0)\n        (ite (= 2 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0)\n             (* 2 a!1)\n             0))))",
+            "(let ((a!1 (ite (and (not (DELETED t2)) (not (NULL t2 F__V__String)))\n                (F__V t2)\n                0)))\n  (= CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_v_1_0\n     (+ (ite (= 0 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0)\n             (* 0 a!1)\n             0)\n        (ite (= 1 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0)\n             (* 1 a!1)\n             0)\n        (ite (= 2 CALIBER_QUERY_DIFF_35950d1e9a1836fd_selector_1_c_1_0)\n             (* 2 a!1)\n             0))))"
+          ]
+        },
+        "agreement_scope": "BOUNDED_ENCODER_RELATIVE_NULL_AND_NON_NULL_INTEGER_VALUE"
+      },
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "not_null": "F__L"
+          }
+        ],
+        "original_ast_sha256": "c7752cfc866b9fad595067db810358f3e1a0d0a7686da03f2a2cc078d44ebda5",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 48,
+          "assertion_sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 49,
+          "assertion_sha256": "4e06fa7f1f2154189ab9a3d25371ef079132ded2d52bfb70e00a76a473dc6c87"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 1,
+          "actual_formula": "(and (not (NULL t1 F__L__String)) (not (NULL t2 F__L__String)))",
+          "reference_formula": "(and (not (NULL t1 F__L__String)) (not (NULL t2 F__L__String)))"
+        },
+        "normalized_ast": [
+          {
+            "not_null": {
+              "value": "F__L"
+            }
+          }
+        ],
+        "normalized_ast_sha256": "44918fc07a0f382ff0697d3218dba92b0f28830cd1712a23eef5aeb9b7fb0d04",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "not_null": "F__L"
+            },
+            "normalized_ast": {
+              "not_null": {
+                "value": "F__L"
+              }
+            },
+            "source_operator": "not_null",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (F__K t1) String_x1__Int)",
+            "(= (F__L t1) String_x2__Int)",
+            "(= (F__V t1) String_x3__Int)",
+            "(not (DELETED t2))",
+            "(= (F__K t2) String_x4__Int)",
+            "(= (F__L t2) String_x5__Int)",
+            "(= (F__V t2) String_x6__Int)",
+            "(<= (- 2147483648) (F__K t1))",
+            "(>= 2147483647 (F__K t1))",
+            "(<= (- 2147483648) (F__L t1))",
+            "(>= 2147483647 (F__L t1))",
+            "(<= (- 2147483648) (F__V t1))",
+            "(>= 2147483647 (F__V t1))",
+            "(<= (- 2147483648) (F__K t2))",
+            "(>= 2147483647 (F__K t2))",
+            "(<= (- 2147483648) (F__L t2))",
+            "(>= 2147483647 (F__L t2))",
+            "(<= (- 2147483648) (F__V t2))",
+            "(>= 2147483647 (F__V t2))",
+            "(not (DELETED t3))",
+            "(= (D__ID t3) String_x7__Int)",
+            "(= (D__P t3) String_x8__Int)",
+            "(not (DELETED t4))",
+            "(= (D__ID t4) String_x9__Int)",
+            "(= (D__P t4) String_x10__Int)",
+            "(<= (- 2147483648) (D__ID t3))",
+            "(>= 2147483647 (D__ID t3))",
+            "(<= (- 2147483648) (D__P t3))",
+            "(>= 2147483647 (D__P t3))",
+            "(<= (- 2147483648) (D__ID t4))",
+            "(>= 2147483647 (D__ID t4))",
+            "(<= (- 2147483648) (D__P t4))",
+            "(>= 2147483647 (D__P t4))",
+            "(not (DELETED t5))",
+            "(= (E__ID t5) String_x11__Int)",
+            "(= (E__Q t5) String_x12__Int)",
+            "(not (DELETED t6))",
+            "(= (E__ID t6) String_x13__Int)",
+            "(= (E__Q t6) String_x14__Int)",
+            "(<= (- 2147483648) (E__ID t5))",
+            "(>= 2147483647 (E__ID t5))",
+            "(<= (- 2147483648) (E__Q t5))",
+            "(>= 2147483647 (E__Q t5))",
+            "(<= (- 2147483648) (E__ID t6))",
+            "(>= 2147483647 (E__ID t6))",
+            "(<= (- 2147483648) (E__Q t6))",
+            "(>= 2147483647 (E__Q t6))"
+          ],
+          "sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "F": 2,
+            "D": 2,
+            "E": 2
+          }
+        },
+        "complete_facts_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 49,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "244740dd9d32b07ad675e46dcc078ec9b425217286833a6e419dc99d8e12f604"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    }
+  ],
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_supervisor_seconds": 25,
+    "per_child_wall_alarm_seconds": 24,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Six arms include pure-fragment AND canonicalization. Fresh process/Environment per admitted arm. Full schema/exact rows preserved. Original source-AST IC normalized on a copy; common base-only SAT and XOR(normalized upstream C, independent original-AST C) UNSAT audit precedes all six arms and per-query differential. Whole unsupported/unknown contracts stop without fallback. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+  "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate or canonical Ineligible/normalization miss -> official with same audited normalized C; candidate unknown -> official with same audited normalized C only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+  "oracle_domain_policy": "SAT replay requires common int64-domain audit; out-of-domain/errors retain witnesses and denominator and cannot count as success or a win.",
+  "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+  "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+  "clock_boundary": "89s guard starts after initial stdlib time import; per-child supervisor wall includes spawn/startup through reap. Worker final checkpoint excludes final write, full process wall/CPU measured here.",
+  "wall_seconds_before_final_write": 4.648613916244358
+}

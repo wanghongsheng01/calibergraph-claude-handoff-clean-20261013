@@ -1,0 +1,145 @@
+{
+  "status": "APPEND_ONLY_WORDING_CORRECTION",
+  "created_utc": "2026-10-11T07:11:42.272749+00:00",
+  "scope": "Correction of the stated cause of the already-observed session 56495 supervisor exit2; no experiment, native execution, solver, replay, code change, or result reclassification.",
+  "correction_id": "STATUSFIX_EXIT2_SELECTED_TYPED_STOPS_01",
+  "corrected_interpretation": "Exit2 is expected because seven of the fourteen selected slots ended with typed contract stops (child exit2 and valid_completed_result=false). The ten unselected NOT_RUN slots do not participate in the selected-slot status aggregation and are not a cause of exit2. Per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement is inferred.",
+  "occurrences": [
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/STATUSFIX_SUPERVISOR_SESSION56495_REAP_RECEIPT.json",
+      "source_sha256": "c6f70a9942508dfee0d2f16136fd8086c2018830f17158e2a8412a278563c201",
+      "json_pointer": "/interpretation",
+      "line_1_based": 12,
+      "record_role": "original_workspace_record",
+      "old_text": "Exit2 expected for typed contract stops plus ten not-selected slots; per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement inferred.",
+      "corrected_interpretation": "Exit2 is expected because seven of the fourteen selected slots ended with typed contract stops (child exit2 and valid_completed_result=false). The ten unselected NOT_RUN slots do not participate in the selected-slot status aggregation and are not a cause of exit2. Per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement is inferred.",
+      "source_modified": false
+    },
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/final_package_20261011_v5_01/workspace/calibergraph_revision_20261009/today_20261011/experiments/STATUSFIX_SUPERVISOR_SESSION56495_REAP_RECEIPT.json",
+      "source_sha256": "c6f70a9942508dfee0d2f16136fd8086c2018830f17158e2a8412a278563c201",
+      "json_pointer": "/interpretation",
+      "line_1_based": 12,
+      "record_role": "frozen_package_copy",
+      "old_text": "Exit2 expected for typed contract stops plus ten not-selected slots; per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement inferred.",
+      "corrected_interpretation": "Exit2 is expected because seven of the fourteen selected slots ended with typed contract stops (child exit2 and valid_completed_result=false). The ten unselected NOT_RUN slots do not participate in the selected-slot status aggregation and are not a cause of exit2. Per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement is inferred.",
+      "source_modified": false
+    },
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/STATUSFIX_SUPERVISOR_EXECUTED_REVIEW.json",
+      "source_sha256": "7c8d23d8cfb0f2734051ca517c66880d1062eb3e3a7bb5724b6d3e8ad2829903",
+      "json_pointer": "/external_execution_receipt/interpretation",
+      "line_1_based": 18,
+      "record_role": "original_workspace_record",
+      "old_text": "Exit2 expected for typed contract stops plus ten not-selected slots; per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement inferred.",
+      "corrected_interpretation": "Exit2 is expected because seven of the fourteen selected slots ended with typed contract stops (child exit2 and valid_completed_result=false). The ten unselected NOT_RUN slots do not participate in the selected-slot status aggregation and are not a cause of exit2. Per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement is inferred.",
+      "source_modified": false
+    },
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/final_package_20261011_v5_01/workspace/calibergraph_revision_20261009/today_20261011/science_review/STATUSFIX_SUPERVISOR_EXECUTED_REVIEW.json",
+      "source_sha256": "7c8d23d8cfb0f2734051ca517c66880d1062eb3e3a7bb5724b6d3e8ad2829903",
+      "json_pointer": "/external_execution_receipt/interpretation",
+      "line_1_based": 18,
+      "record_role": "frozen_package_copy",
+      "old_text": "Exit2 expected for typed contract stops plus ten not-selected slots; per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement inferred.",
+      "corrected_interpretation": "Exit2 is expected because seven of the fourteen selected slots ended with typed contract stops (child exit2 and valid_completed_result=false). The ten unselected NOT_RUN slots do not participate in the selected-slot status aggregation and are not a cause of exit2. Per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement is inferred.",
+      "source_modified": false
+    }
+  ],
+  "coverage": {
+    "requested_original_json_occurrences": 2,
+    "frozen_package_copy_occurrences": 2,
+    "total_recorded_occurrences": 4,
+    "all_requested_occurrences_covered": true,
+    "scope_note": "The correction applies by exact bytes/hash and JSON pointer to the two named records and their two copies in this task's frozen final package. Originals and package copies remain unchanged."
+  },
+  "supervisor_code_evidence": [
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py",
+      "source_sha256": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+      "line_start_1_based": 90,
+      "line_end_1_based": 91,
+      "purpose": "Only indices in the selected range are dispatched.",
+      "exact_code": "    for index in range(args.job_start, args.job_start + args.job_limit):\n        job = jobs[index]"
+    },
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py",
+      "source_sha256": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+      "line_start_1_based": 151,
+      "line_end_1_based": 152,
+      "purpose": "A nonzero child exit prevents valid_completed_result.",
+      "exact_code": "            job[\"valid_completed_result\"] = (\"stop_reason\" not in job and job[\"exit_code\"] == 0 and worker[\"status\"] == \"COMPLETE\"\n                                             and worker.get(\"analytical_expectation_match\", True) is not False)"
+    },
+    {
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py",
+      "source_sha256": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+      "line_start_1_based": 156,
+      "line_end_1_based": 161,
+      "purpose": "Only selected jobs determine report status and supervisor exit code.",
+      "exact_code": "    selected = jobs[args.job_start:args.job_start + args.job_limit]\n    report[\"status\"] = \"SELECTED_JOBS_COMPLETE\" if all(j.get(\"valid_completed_result\") for j in selected) else \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\"\n    report[\"wall_seconds_before_final_write\"] = time.monotonic() - START\n    save(output, report)\n    print(json.dumps({\"status\": report[\"status\"], \"report\": str(output)}), flush=True)\n    os._exit(0 if report[\"status\"] == \"SELECTED_JOBS_COMPLETE\" else 2)"
+    }
+  ],
+  "existing_observation_evidence": {
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/supervisor_report.json",
+    "source_sha256": "ec1836bdab9b3f7980fb7a209a9a9d83bc1ddcd575e4b9e354633987197605de",
+    "selected_slice_python": "jobs[5:19]",
+    "selected_slot_count": 14,
+    "selected_returned_exit0_valid_true_indices": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "selected_typed_stop_exit2_valid_false_indices": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "typed_stop_decisions": {
+      "CONTRACT_UNSAT_REJECTED": 6,
+      "UNVERIFIED_CONTRACT": 1
+    },
+    "unselected_NOT_RUN_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "unselected_slots_in_exit_aggregation": false,
+    "existing_report_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN",
+    "observed_supervisor_exit_code": 2,
+    "derivation": "The selected slice contains seven false valid_completed_result values from typed contract stops, so all(...) is false and lines156–161 select exit2. The ten outside-slice NOT_RUN jobs are excluded from this predicate. These are reads of retained observations, not rerun results."
+  },
+  "unchanged_boundaries": {
+    "scientific_status": "SCIENCE_NO_GO",
+    "automatic_bbox_status": "UNAVAILABLE",
+    "automatic_bbox_failure": "SIGABRT retained; no automated pass claimed",
+    "experiment_round_status": "CLOSED",
+    "new_scientific_experiments_executed": 0,
+    "old_files_rewritten": 0,
+    "old_frozen_package_rewritten": false,
+    "upload_push_or_submission_performed": false,
+    "backup_status": "BACKUP_BLOCKED_BY_EXPLICIT_NO_UPLOAD_NO_PUSH_INSTRUCTION"
+  },
+  "package_identity_before": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/final_package_20261011_v5_01",
+    "manifest_sha256": "04c596a825cef9dbe6e1ee66805c5fc21e79cb1ed868914636016df88fc85298",
+    "manifest_declared_payload_files": 1723,
+    "payload_sha_mismatches": [],
+    "all_regular_files_including_3_metadata": 1726,
+    "inventory_sha256": "f26ba2961dcf19cbca0af8c46dcc8aa2cc9d626f2fb070350836746809d69129"
+  }
+}

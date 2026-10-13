@@ -1,0 +1,311 @@
+[
+  {
+    "category": "different_selection_same_input",
+    "dataset": "verieql_leetcode",
+    "id": "verieql_leetcode|benchmark/leetcode/raw_data/595.csv|13|line2815|90cb7d67cd0dab01",
+    "rank": "05aa879c2dfcf947f6ec64f0cafef549aa65eb317dd91cf9a5348c2b392a88c7",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_different_same_input_descriptive"
+    ],
+    "original_sql": [
+      "SELECT NAME, POPULATION, AREA FROM WORLD WHERE AREA >= 3000000 OR POPULATION >= 25000000",
+      "SELECT NAME, POPULATION, AREA FROM WORLD WHERE (AREA) > 3000000 OR POPULATION > 25000000"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+    "source_line": 2815,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_different_same_input_descriptive": 1
+      },
+      "shared_dag_nodes": 1,
+      "original_shared_dag_nodes": 5,
+      "residual_dag_nodes": 5,
+      "net_saved_nodes": 0
+    }
+  },
+  {
+    "category": "different_selection_same_input",
+    "dataset": "verieql_leetcode",
+    "id": "verieql_leetcode|benchmark/leetcode/raw_data/595.csv|37|line2839|b429578d998c5029",
+    "rank": "0f7c0095b929d4c8336cdebdc9e42a4638367b6d23cd0d787273f4c8ee4f8a81",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_different_same_input_descriptive"
+    ],
+    "original_sql": [
+      "SELECT NAME, POPULATION, AREA FROM WORLD WHERE AREA >= 3000000 OR POPULATION >= 25000000",
+      "SELECT NAME ,POPULATION ,AREA FROM WORLD WHERE 1=1 AND (POPULATION >= 25000000 OR AREA >= 3000000 )"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+    "source_line": 2839,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_different_same_input_descriptive": 1
+      },
+      "shared_dag_nodes": 1,
+      "original_shared_dag_nodes": 5,
+      "residual_dag_nodes": 5,
+      "net_saved_nodes": 0
+    }
+  },
+  {
+    "category": "different_selection_same_input",
+    "dataset": "verieql_leetcode",
+    "id": "verieql_leetcode|benchmark/leetcode/raw_data/595.csv|20|line2822|f431bf01f12d8b0a",
+    "rank": "16602b09b3229bf7024884ff2c831a0ac297a9f9c17ee9db4d41907480effb4c",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_different_same_input_descriptive"
+    ],
+    "original_sql": [
+      "SELECT NAME, POPULATION, AREA FROM WORLD WHERE AREA >= 3000000 OR POPULATION >= 25000000",
+      "SELECT NAME , POPULATION , AREA FROM WORLD WHERE (AREA > 3000000) OR(POPULATION>25000000)"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+    "source_line": 2822,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_different_same_input_descriptive": 1
+      },
+      "shared_dag_nodes": 1,
+      "original_shared_dag_nodes": 5,
+      "residual_dag_nodes": 5,
+      "net_saved_nodes": 0
+    }
+  },
+  {
+    "category": "nontrivial_JOIN",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|codebase_community|575|line576|1e201c94359adfb2",
+    "rank": "0330f3fdd68cd99efdbb01f544b609a21b724f4fb618d86352bc2414be42c88c",
+    "tags": [
+      "admitted"
+    ],
+    "original_sql": [
+      "SELECT T2.Name FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T1.DisplayName = 'SilentGhost'",
+      "SELECT T1.Name FROM badges AS T1 INNER JOIN users AS T2 ON T1.UserId = T2.Id WHERE T2.DisplayName = 'SilentGhost'"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 576,
+    "metrics": {
+      "events": {},
+      "shared_dag_nodes": 2,
+      "original_shared_dag_nodes": 8,
+      "residual_dag_nodes": 9,
+      "net_saved_nodes": -1
+    }
+  },
+  {
+    "category": "nontrivial_JOIN",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|student_club|1429|line1430|7d5f9d3142c0ecc7",
+    "rank": "0486c2185a1d5d68874d275b7dd42eca4c6f769b25ba5d31259c6ff90b2ea690",
+    "tags": [
+      "admitted"
+    ],
+    "original_sql": [
+      "SELECT T2.event_name FROM attendance AS T1 INNER JOIN event AS T2 ON T2.event_id = T1.link_to_event INNER JOIN member AS T3 ON T1.link_to_member = T3.member_id WHERE T3.position = 'Vice President' AND T2.location = '900 E. Washington St.' AND T2.type = 'Social'",
+      "SELECT T1.event_name FROM event AS T1 INNER JOIN attendance AS T2 ON T1.event_id = T2.link_to_event INNER JOIN member AS T3 ON T2.link_to_member = T3.member_id WHERE T1.type = 'Social' AND T3.position = 'Vice President' AND T1.location = '900 E. Washington St.'"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 1430,
+    "metrics": {
+      "events": {},
+      "shared_dag_nodes": 3,
+      "original_shared_dag_nodes": 11,
+      "residual_dag_nodes": 12,
+      "net_saved_nodes": -1
+    }
+  },
+  {
+    "category": "nontrivial_JOIN",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|superhero|825|line826|8ff71c0d4934cb84",
+    "rank": "04f9884b86bad5147b0791ba0652cb9726a170e87647b74160471894d666546b",
+    "tags": [
+      "admitted"
+    ],
+    "original_sql": [
+      "SELECT T4.gender FROM superhero AS T1 INNER JOIN hero_power AS T2 ON T1.id = T2.hero_id INNER JOIN superpower AS T3 ON T2.power_id = T3.id INNER JOIN gender AS T4 ON T1.gender_id = T4.id WHERE T3.power_name = 'Phoenix Force'",
+      "SELECT T2.gender FROM superhero AS T1 INNER JOIN gender AS T2 ON T1.gender_id = T2.id INNER JOIN hero_power AS T3 ON T1.id = T3.hero_id INNER JOIN superpower AS T4 ON T3.power_id = T4.id WHERE T4.power_name = 'Phoenix Force'"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 826,
+    "metrics": {
+      "events": {},
+      "shared_dag_nodes": 4,
+      "original_shared_dag_nodes": 14,
+      "residual_dag_nodes": 15,
+      "net_saved_nodes": -1
+    }
+  },
+  {
+    "category": "same_projection",
+    "dataset": "verieql_leetcode",
+    "id": "verieql_leetcode|benchmark/leetcode/raw_data/595.csv|13|line2815|90cb7d67cd0dab01",
+    "rank": "05aa879c2dfcf947f6ec64f0cafef549aa65eb317dd91cf9a5348c2b392a88c7",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_different_same_input_descriptive"
+    ],
+    "original_sql": [
+      "SELECT NAME, POPULATION, AREA FROM WORLD WHERE AREA >= 3000000 OR POPULATION >= 25000000",
+      "SELECT NAME, POPULATION, AREA FROM WORLD WHERE (AREA) > 3000000 OR POPULATION > 25000000"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+    "source_line": 2815,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_different_same_input_descriptive": 1
+      },
+      "shared_dag_nodes": 1,
+      "original_shared_dag_nodes": 5,
+      "residual_dag_nodes": 5,
+      "net_saved_nodes": 0
+    }
+  },
+  {
+    "category": "same_projection",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|formula_1|875|line876|a358de40f9a1571a",
+    "rank": "0c8517f7a7eef8024feb857caa3ad7048fab78eab11ce26f58fcc3121b72d7da",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_common_context"
+    ],
+    "original_sql": [
+      "SELECT T2.url FROM races AS T1 INNER JOIN seasons AS T2 ON T2.year = T1.year WHERE T1.raceId = 901",
+      "SELECT T2.url FROM races AS T1 INNER JOIN seasons AS T2 ON T1.year = T2.year WHERE T1.raceId = 901"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 876,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_common_context": 1
+      },
+      "shared_dag_nodes": 2,
+      "original_shared_dag_nodes": 8,
+      "residual_dag_nodes": 7,
+      "net_saved_nodes": 1
+    }
+  },
+  {
+    "category": "same_projection",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|card_games|471|line472|f295df6ccedc26ec",
+    "rank": "0da1f83d857ea8f6e83d7ac5b31408701eba3e28b3d9e15ce2628edaab1fbe27",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_common_context"
+    ],
+    "original_sql": [
+      "SELECT T1.type FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T2.translation = 'Hauptset Zehnte Edition'",
+      "SELECT T1.type FROM sets AS T1 INNER JOIN set_translations AS T2 ON T1.code = T2.setCode WHERE T2.translation = 'Hauptset Zehnte Edition'"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 472,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_common_context": 1
+      },
+      "shared_dag_nodes": 2,
+      "original_shared_dag_nodes": 8,
+      "residual_dag_nodes": 7,
+      "net_saved_nodes": 1
+    }
+  },
+  {
+    "category": "same_selection",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|formula_1|875|line876|a358de40f9a1571a",
+    "rank": "0c8517f7a7eef8024feb857caa3ad7048fab78eab11ce26f58fcc3121b72d7da",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_common_context"
+    ],
+    "original_sql": [
+      "SELECT T2.url FROM races AS T1 INNER JOIN seasons AS T2 ON T2.year = T1.year WHERE T1.raceId = 901",
+      "SELECT T2.url FROM races AS T1 INNER JOIN seasons AS T2 ON T1.year = T2.year WHERE T1.raceId = 901"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 876,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_common_context": 1
+      },
+      "shared_dag_nodes": 2,
+      "original_shared_dag_nodes": 8,
+      "residual_dag_nodes": 7,
+      "net_saved_nodes": 1
+    }
+  },
+  {
+    "category": "same_selection",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|card_games|471|line472|f295df6ccedc26ec",
+    "rank": "0da1f83d857ea8f6e83d7ac5b31408701eba3e28b3d9e15ce2628edaab1fbe27",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_common_context"
+    ],
+    "original_sql": [
+      "SELECT T1.type FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T2.translation = 'Hauptset Zehnte Edition'",
+      "SELECT T1.type FROM sets AS T1 INNER JOIN set_translations AS T2 ON T1.code = T2.setCode WHERE T2.translation = 'Hauptset Zehnte Edition'"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 472,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_common_context": 1
+      },
+      "shared_dag_nodes": 2,
+      "original_shared_dag_nodes": 8,
+      "residual_dag_nodes": 7,
+      "net_saved_nodes": 1
+    }
+  },
+  {
+    "category": "same_selection",
+    "dataset": "parseval_bird",
+    "id": "parseval_bird|card_games|502|line503|df22523dd81dc38c",
+    "rank": "2d8bcac52d842bfdbf5b1ca74eee641979cb891061cc7013aea1682b2fc09203",
+    "tags": [
+      "admitted",
+      "P_common_context",
+      "S_common_context"
+    ],
+    "original_sql": [
+      "SELECT T1.releaseDate FROM sets AS T1 INNER JOIN set_translations AS T2 ON T2.setCode = T1.code WHERE T2.translation = 'Ola de frío'",
+      "SELECT T1.releaseDate FROM sets AS T1 INNER JOIN set_translations AS T2 ON T1.code = T2.setCode WHERE T2.translation = 'Ola de frío'"
+    ],
+    "source_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+    "source_line": 503,
+    "metrics": {
+      "events": {
+        "P_common_context": 1,
+        "S_common_context": 1
+      },
+      "shared_dag_nodes": 2,
+      "original_shared_dag_nodes": 8,
+      "residual_dag_nodes": 7,
+      "net_saved_nodes": 1
+    }
+  }
+]

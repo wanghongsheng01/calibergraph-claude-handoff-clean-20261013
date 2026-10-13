@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scope": "STATIC_ANALYSIS_ONLY",
+  "utc": "2026-10-12T11:19:03.485110+00:00",
+  "must_fix": [],
+  "resolved_review_notes": [
+    {
+      "case": "california_schools__45",
+      "issue": "Paper candidates needed explicit NOT NULL fillers for satscores and fully specified schools NN",
+      "resolution": "Author added shared legal representatives for both N1 value-domain candidates and N2 group-merging candidates; checked against original DDL, not executed"
+    }
+  ],
+  "reviewed_files_sha256": {
+    "ANALYSIS.zh.md": "d3416c3d2f128a6cfd46756e674086bd3dedac8a4f642f286dba205bf630b338",
+    "DECISION.json": "e5814d5d80bd4e3598f1202c8496c64af79988829bdfed270e6d8323e01b6410",
+    "SOURCE_EVIDENCE.json": "197ac22a7b3f6d1d2758d7c91556277c3fd4b0f047315117e39b907844a18747",
+    "review_local/INDEPENDENT_REVIEW.zh.md": "5534b82db6ef3c088dc1feba3d134ac5f937a1093234709a86afe3b67674db6b"
+  },
+  "source_evidence_hashes_verified": 32,
+  "cases": {
+    "1490": "PASS static built-in equivalence derivation, no machine proof",
+    "1073": "PASS N1 total2 date and nullable-int-PK paper candidates; no replay",
+    "45": "PASS source-domain N1 value candidates distinct from group-merging N2 total4 lower bound; fullC fillers supplied; no replay",
+    "1526": "PASS N1 total4 source-constraint closure; mixed date/missing-year mechanism acknowledged; no replay"
+  },
+  "source_conflict": {
+    "case": 1526,
+    "question_date": "2012/8/25",
+    "evidence_date": "2012/8/24",
+    "gold_date": "2012-08-25",
+    "predicted_date": "2012-08-24",
+    "status": "CONFIRMED_BY_FROZEN_TEXT_READ_NOT_BUSINESS_TRUTH"
+  },
+  "COUNT_star": "Conditional static defect accurately scoped; project/nonGrouped path statically supported; actual parser execution not performed; grouped path distinct",
+  "scientific_decision": {
+    "new_solver_experiments": 0,
+    "N2_existing_Polygon_capability_not_innovation": true,
+    "known_uncertain_contract_precedents_not_revived": true,
+    "new_mechanism_hypothesis": null,
+    "source_qualification_direction": "HOLD_PROBLEM_CLARIFICATION_ONLY",
+    "coverage_unchanged": {
+      "development": 10,
+      "valid": 8,
+      "completed_bounded_runs": 4,
+      "unadmitted": 4,
+      "invalid": 2
+    },
+    "new_witnesses_not_counted_as_validated": true
+  },
+  "reviewer_actions": {
+    "file_read_and_hash_only": true,
+    "source_SQL_executions": 0,
+    "witness_replays": 0,
+    "target_imports": 0,
+    "parser_runs": 0,
+    "solver_calls": 0,
+    "network_requests": 0,
+    "commits_or_pushes": 0,
+    "edits_to_17": 0
+  },
+  "evidence_limits": [
+    "No new paper candidate has been executed or replayed.",
+    "Prior literature audits reused, not a fresh novelty certification.",
+    "Business intent remains unresolved despite confirmed date text conflict.",
+    "No backup or registry action attempted."
+  ],
+  "reviewer_finished_writing": true
+}

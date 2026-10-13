@@ -1,0 +1,65 @@
+{
+  "status": "SOURCE_IDENTITY_INVENTORY_NOT_NEW_APPLICABILITY",
+  "sources": [
+    {
+      "dataset": "calcite",
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/benchmarks/calcite/calcite2.jsonlines",
+      "bytes": 1060379,
+      "sha256": "5fc6e0740134220856e93743147038cacaf22cb9d9823e7d6b8da2b461939ac4",
+      "previous_frozen_pairs": 397,
+      "previous_query_slots": 794,
+      "new_source_JSON_or_SQL_scan": false
+    },
+    {
+      "dataset": "literature",
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/benchmarks/literature/literature-rewrite.jsonlines",
+      "bytes": 42046,
+      "sha256": "4c5e2661797177fd865a3f57c887376cb01bcbeec57ec77a032124e04c77f42f",
+      "previous_frozen_pairs": 64,
+      "previous_query_slots": 128,
+      "new_source_JSON_or_SQL_scan": false
+    },
+    {
+      "dataset": "leetcode",
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "bytes": 22995478,
+      "sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "previous_frozen_pairs": 23994,
+      "previous_query_slots": 47988,
+      "new_source_JSON_or_SQL_scan": true
+    }
+  ],
+  "total_previous_query_slots": 48910,
+  "evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/FINAL_CALIBERGRAPH_HANDOFF.zh.md",
+      "sha256": "4c4fb4566d8a3cbe158e5e9afef2bd898f4c80598497bed1230588b45b41ec6e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/wording_revision_20261011_01/README.zh.md",
+      "sha256": "6f45fa952aac97c1c96badaab1dbe5f6257a9990da7d2060166a6b55a1dfa6dc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/SOURCE_RECEIPT.json",
+      "sha256": "ddbb76df02e93e94e839de7859ef8f87ac5f74d78d79afcb784ed87e5e809f1b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/PUBLIC_APPLICABILITY_FINAL_CUT.zh.md",
+      "sha256": "967896dd6ef891fb0486f8fda87f2aa5bb3697711077c7d098c934d527da645d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/PUBLIC_APPLICABILITY_FINAL_CUT.json",
+      "sha256": "0e8535436be62cc08bc545391e64eec4e64ce4a05aa48e40b3c09dab14b38764"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/README.md",
+      "sha256": "51401a36ac82711f0e4eda818f43b446ab5421d26258e9e0d5dfdc2e9ed67189"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_v4_cached/README.md",
+      "sha256": "23eca338b714c8f565181a04a50e3720f3e73bdd4fce0a46f783971dc3f22469"
+    }
+  ],
+  "upstream_provenance": "VeriEQL/VeriEQL fixed commit 3b99928bf976c11cb59c9db6a177adba21f75798 per existing source receipt; no new network verification",
+  "source_selection": "LeetCode original source pairs only. Literature explicitly simplified by upstream rewriting per README; Calcite is optimizer benchmark, not a confirmed production-defect source. Neither added to new development set."
+}

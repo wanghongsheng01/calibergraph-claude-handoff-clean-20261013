@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "reviewer": "/root/masking08_independent_review",
+  "verdict": "MUST_FIX",
+  "review_type": "INDEPENDENT_STATIC_REVIEW_ONLY",
+  "author_reviewer_separate": true,
+  "reviewed_author_sha256": {
+    "ANALYSIS.zh.md": "4b68a9ae7fb400056d5a1c74bdfd644a3a17e2d67011e8e8092103f540f08ff5",
+    "EVIDENCE.json": "8aabdf33885f3ec1dda02f17db346588f17dcb3375535e25775a5e88ae9e54ef",
+    "DECISION.json": "8f712abcd8c6f56267a6bc21d9052f96cc823d8228c4ccfcc35cf21e7b0a804e"
+  },
+  "execution": {
+    "new_science_runs": 0,
+    "sql_calls": 0,
+    "baseline_calls": 0,
+    "generator_calls": 0,
+    "solver_calls": 0,
+    "new_test_cases": 0,
+    "source_or_jar_downloads": 0,
+    "expanded_literature_search": false,
+    "author_or_historical_files_modified": false,
+    "subdelegation": false
+  },
+  "findings": [
+    {
+      "id": "R1",
+      "severity": "MUST_FIX",
+      "locations": ["ANALYSIS.zh.md:48", "ANALYSIS.zh.md:57", "DECISION.json:proposal"],
+      "issue": "Nested predicates plus the same COUNT(DISTINCT key) alone do not ensure the proposed on condition yields final NEQ when nullable keys or downstream masking operators are admitted.",
+      "required_change": "Explicitly restrict to identical FROM/INNER JOIN, one ungrouped scalar COUNT(DISTINCT same proven non-null key), changes only in WHERE truth-set inclusion, and no HAVING, LIMIT/OFFSET, set operations, window, outer join, correlated subquery, other projection or post-aggregate transformation. Otherwise unsupported. Apply the same admission and non-null constraints to both arms, differing only in strict-side absence for the selected key.",
+      "case1172_proof_affected": false,
+      "basis": "STATIC_LOGIC_NOT_EXECUTED_COUNTEREXAMPLE"
+    },
+    {
+      "id": "R2",
+      "severity": "MUST_FIX",
+      "locations": ["ANALYSIS.zh.md:34", "EVIDENCE.json:papers[2].sections"],
+      "issue": "Deduplicate coverage is in Table 2, not Table 1 of the cited ParSEval PDF.",
+      "required_change": "Replace Table 1 with Table 2 in prose and structured evidence.",
+      "source": "https://dbgroup.cs.tsinghua.edu.cn/jnwang/papers/vldb2025-parseval.pdf",
+      "source_location": "PDF page 5, printed page 4754, Table 2 Projection/Deduplicate row"
+    },
+    {
+      "id": "R3",
+      "severity": "MUST_FIX",
+      "locations": ["ANALYSIS.zh.md:63", "EVIDENCE.json:papers[1].sections"],
+      "issue": "The specified Polygon v1 describes VeriEQL/LeetCode benchmark provenance in Section 4, not Section 6.",
+      "required_change": "Correct the cited section to Section 4 Evaluation, retaining the unacquired/unqualified status of potential cases.",
+      "source": "https://arxiv.org/html/2504.06542v1#S4"
+    }
+  ],
+  "passed_checks": {
+    "original_query_and_full_DDL_static_match": true,
+    "A_union_B_and_A_minus_B_proof_for_case1172": true,
+    "tuple_distinct_key_aggregate_layers_distinguished": true,
+    "non_nested_cancellation_limit_declared": true,
+    "nine_saved_candidate_rows_match_prior_audit": true,
+    "boundary_candidates": [1, 2, 3, 8],
+    "saved_final_neq_candidates": 0,
+    "prior_constructed_control_not_promoted_to_independent_test": true,
+    "parseval_comparison_vs_generation_target_distinguished": true,
+    "no_unique_internal_cause_claim": true,
+    "polygon_count_distinct_and_final_neq_source_match": true,
+    "polygon_runtime_success_not_claimed": true,
+    "xdata_core_java_unverified_preserved": true,
+    "xdata_native_pair_evaluation_not_inferred_from_mutation_results": true,
+    "single_factor_design_valid_with_R1_domain_restriction": true,
+    "ablation_not_misrepresented_as_official_parseval_baseline": true,
+    "budget_only_unexecuted_unauthorized_ablation_plan": true,
+    "official_strong_baseline_cost_excluded": true,
+    "no_new_independent_cases_claimed": true,
+    "original_ERROR_NOT_ALGORITHM_FAILURE_and_KeyError_preserved": true,
+    "markdown_json_substantive_consistency_except_required_corrections": true,
+    "novel_mechanism_NO_GO_supported": true,
+    "superiority_claim_not_supported_and_not_made": true
+  },
+  "key_reference_sha256_observed": {
+    "prior_INDEPENDENT_REVIEW.json": "93089e6756d9cbd314d74992da2e1ea88563a8f9ed0c10ac55aa33d1fef813af",
+    "prior_AUDIT_RESULT.json": "56193cfdc6defb1a4a648b4a87d146e6d26904c6c046ac322769dc2027d0b664",
+    "prior_science_RESULT.json": "93e361d5955fe1b659e97d913c653b7b7f7b562df8dccffc458fb406f25a6e29",
+    "prior_science_error.txt": "9dccced6431192359e745bdf646b263c91a89dbcfb04ea5c02b413717c3ad547",
+    "polygon_expression_encoder.py.txt": "904e2654d2709a12f009d7ffa4fbbfebbb211dea665b29cf0bca548a77035c91",
+    "polygon_environment.py.txt": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+    "parseval_main.py": "771c58bb1acee1cf00075e56308167cea711e3e799bed262c8eb5e519697957e",
+    "parseval_generate.py": "2e9200c322868de266ffe9ac8768e0462720b26d07180884017f3f5e3dd7ee6d",
+    "XDATA_EVIDENCE.json": "f82e86c87490fd6f590123c68b55aee4518ab877bb4231935addcf4c3c5cab20",
+    "case1172.gold.sql": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb",
+    "case1172.predicted.sql": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545",
+    "case1172.full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+  },
+  "review_limits": [
+    "Prior saved SQLite replay results were read and cross-checked; SQL was not rerun.",
+    "Pinned code was inspected, not executed; full encoder correctness was not proven.",
+    "Only the three already cited papers and targeted relevant sections were read.",
+    "The author-reported 46-item manifest and 588-item freeze sweep was not repeated; selected key hashes were independently checked.",
+    "No independent verification of the author's current XData network-access failure log was attempted.",
+    "No Polygon full-C admission, matched baseline runtime, XData core implementation check, fresh case acquisition, or budget enforcement validation was performed."
+  ],
+  "remaining_blockers": [
+    "R1-R3 require author correction and targeted static re-review.",
+    "Polygon full-C runtime admission and matched comparison remain unperformed.",
+    "XData core Java, actual classpath and paper/artifact mapping remain unverified.",
+    "No independent natural cases have been acquired or qualified.",
+    "Historical third-party raw/native BACKUP_BLOCKED and DATAHUB_REGISTRATION_BLOCKED remain unchanged."
+  ],
+  "backup": "DEFERRED_TO_ROOT_TASK_AS_REQUESTED"
+}

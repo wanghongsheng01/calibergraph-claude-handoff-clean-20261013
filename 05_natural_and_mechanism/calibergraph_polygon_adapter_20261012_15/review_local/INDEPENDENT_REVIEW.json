@@ -1,0 +1,82 @@
+{
+  "status": "PASS_PREPARED_ADAPTER_ONLY",
+  "reviewer": "polygon15_semantic_review",
+  "review_completed_at_utc": "2026-10-12T10:43:43.249087+00:00",
+  "case": "thrombosis_prediction__1172",
+  "remaining_mustfix": [],
+  "solver_execution_authorized": false,
+  "reviewer_solver_calls": 0,
+  "final_review_method": "Read-only documents/code/evidence review, SHA256 validation, Python AST checks, exact diff comparison. No repeated semantic runs, no worker or solver execution in this final pass.",
+  "checks": {
+    "freeze_all_declared_hashes_match": true,
+    "freeze_gate_false": true,
+    "gate_before_argument_and_socket_handling": true,
+    "saved_no_solver_gate_receipt_consistent_with_code": true,
+    "source13_worker_hash_matches_freeze": true,
+    "integration_patch_exactly_matches_source13_to_current_worker": true,
+    "only_worker_change_since_revision02": "schema_C timing begins before load_contract, proven by reconstructing prior worker SHA256 237d29d3536f3a10a73b11b17eb7ce62caa118e6f7dcea8458f9f411de2ed382",
+    "adapter_same_as_passed_revision02": true,
+    "temp_shadow_issue": "FIXED: validation rejects TEMP objects and attached schemas before unqualified reads; first counterexample evidence preserved.",
+    "three_tables_64_columns_seven_constraint_entries_preserved": true,
+    "abstract_C_validated_before_fixed_lift": true,
+    "original_DDL_C_and_SQL_replay_required_for_NEQ": true,
+    "no_posthoc_model_repair_or_new_retry_path": true,
+    "documentation_separates_preparation_from_scientific_execution": true
+  },
+  "prior_evidence": {
+    "independent_sqlite_semantics": {
+      "cross_product_cases": 7500,
+      "presence_configurations": 11,
+      "sqlite_version": "3.43.2"
+    },
+    "independent_actual_adapter_revision02": {
+      "cross_product_cases": 150,
+      "abstract_negative_cases": 4,
+      "temp_table_view_and_attach_rejected": true
+    },
+    "author_recorded_tests": {
+      "value_sex_combinations": 217,
+      "presence_configurations": 6,
+      "sqlite_version": "3.53.3",
+      "parse_encode_only_modes": [
+        "UA",
+        "precise"
+      ],
+      "solver_calls": 0
+    }
+  },
+  "scope": [
+    "Exactly the frozen #1172 SQL pair and full DDL; each source table has at most one row.",
+    "Standard fresh SQLite connection, default built-ins and BINARY comparison, no custom UDF/collation, TEMP shadowing or attached schema.",
+    "Static snapshot query observation equivalence and fixed backward lifting, not per-value reversibility or update-trace equivalence.",
+    "Not generic REAL/DATE support, N>1 support, unmodified official baseline reproduction or a new scientific mechanism.",
+    "Current delivery is a prepared worker diff with closed solver gate. The parent controller and any new scientific batch remain future work requiring separate authorization and freezing.",
+    "Future NEQ requires original full-C SQLite replay. Future UNSAT remains a bounded symbolic claim; the adapter proof does not certify Polygon internals."
+  ],
+  "files_sha256": {
+    "case1172_adapter.py": "d0f13404622f8e78ea8c3549a6f19a65a403dafda6bc49fca8d7e7422ad3a06b",
+    "build_slot_adapter.py": "aec67e628f17932f385c608d8f7ec6d09eebc2525742d6575ebb411f132d8330",
+    "slot_worker.py": "f453b5f738a5886a197d36dbcd510a9a874daf8ae3a7a3d99e0ef3485e7f77b6",
+    "INTEGRATION.patch": "41306bb1b1a08d9340737c69ef6123ceb3363afd24953456cb75fe791460f604",
+    "test_adapter.py": "2323ea1c14241b0b0049350aae8a0cab54359d948c25fe454ba47139b9f7e476",
+    "PROOF.zh.md": "68f2cb8915ab56861960115f897c27ba868c4bdc5fbd81cab10b3804c0ccf9aa",
+    "RESULT.zh.md": "1af2a9e907bdbe5c564860b09abf4671a6fd096eac2d70730957f83f5818c046",
+    "RUN_PROPOSAL.zh.md": "14d389ed3c33d6fcff9891d06e987e719102a14a3da428edc89cbaa947545197",
+    "RECOVERY.zh.md": "7a6b76a2adf633e0923e924f5fae987283da05bb5cd16e86902e2f7cac3f8b2a",
+    "FREEZE.json": "10796e4c55c3ead35e859ac3f7ccfc487bcd2c999908826664c88be9e3f8d37b",
+    "NO_SOLVER_GATE_CHECK.json": "e76687f69be1364730fc40c0654fab74c533fbddbf8cfd2773bc4ae498206e4b",
+    "TEST_RESULTS.json": "2315503ff4b890803e0e76d2ca6221ba0716a9e1c3b9dacd043a01f013934fbc",
+    "TEST_RESULTS.revision02.json": "db3a6b104a2247d050b01b995af07b7b4858ef6b429c363a609e0a77496ebcd3",
+    "review_local/SEMANTIC_REVIEW.zh.md": "7c204e5049e9cbaa06ceae4331061f4eb42d7a090fb599128b40e2264bf8a348",
+    "review_local/semantic_quotient_check.py": "2d9c377182e132d6420f572626c004c0b7ae73cd5f18b3d81c05f6fca0755469",
+    "review_local/semantic_quotient_check.json": "3d0226ce2857c3a4e7239e52ae80e7a2746b37fa27553d20fa58d241be18f027",
+    "review_local/ADAPTER_CODE_REVIEW.zh.md": "dbc1200131169acfe910c5d98b05cc706050902e2474c1af392276b5b4ca3d58",
+    "review_local/ADAPTER_CODE_REVIEW.revision02.zh.md": "20160a8b674d98e083a72e0db4d9d32809f3a6fb477b45def134e712a1b1037a",
+    "review_local/adapter_semantic_check.py": "a67b712d95541787dbf3bb22cb2d4bffe6edcbea1b467af95379ca1c2759ebc7",
+    "review_local/adapter_semantic_check.json": "13b9da6151fb351affde4c6b47788719190390b6332153f1985e2f6e184473d9",
+    "review_local/adapter_semantic_check_revision02.py": "14989931f729c05213d98885b8f48fc648a48ef806bc4aff1768fb137df8d607",
+    "review_local/adapter_semantic_check.revision02.json": "b2c0b656f541f0c278a6e4ad386cb788a3e7337b9fa0526fc48f45bec37cdd43"
+  },
+  "hash_scope_note": "All reviewed final documents/code and cited evidence are hashed here. This JSON and its companion Markdown are excluded from their own hash map to avoid self-reference.",
+  "review_complete_no_further_reviewer_file_changes": true
+}

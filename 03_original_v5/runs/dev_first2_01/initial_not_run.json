@@ -1,0 +1,178 @@
+{
+  "status": "RUNNING",
+  "data_role": "EXISTING_EXPOSED_ANALYTICAL_DEV_NOT_NEW_TEST",
+  "performance_claim": false,
+  "fixture_sha256": "b3be16fd0f2c5a03513363c907d773e3087bbab16c2633ca4a4656ec256f4918",
+  "runtime_lock_sha256": "3c166b165cec8f0029c0cbf78321ae21894d0dbbe8dda287a426c9f3cefd2506",
+  "worker_sha256": "c576c2677c9228a02a546e6f33ec87ea633ba6cda6dd7e21822c319fc3b2e24f",
+  "supervisor_sha256": "2b2e7df5c84512d54de2a82564d199d9fed343d3289aab1a878a8ab8aee63a72",
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_seconds": 25,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "thread_note": "One computation child at a time; mo-imports temporary monitor threads are observed, not mislabeled as solver workers.",
+  "full_case_denominator": 6,
+  "full_arm_denominator": 24,
+  "scheduled_case_start": 0,
+  "scheduled_case_limit": 2,
+  "cases": [
+    {
+      "id": "S01_reordered_conjunction",
+      "expected": "unsat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S02_nullable_count",
+      "expected": "sat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S03_full_not_null_IC",
+      "expected": "unsat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S04_sum_vs_count",
+      "expected": "sat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S05_empty_SUM_NULL",
+      "expected": "unsat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S06_all_NULL_SUM",
+      "expected": "unsat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    }
+  ],
+  "rejection_queries": [
+    {
+      "id": "R01_outer_join",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R02_cross_leaf",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R03_leaf_SUM",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R04_DISTINCT",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R05_nonlinear_root",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R06_GROUP_BY",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R07_non_equi_join",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    }
+  ],
+  "spotit_status": "NOT_RUN_LOCAL_SOURCE_CLOSURE_INCOMPLETE_NOT_FULL_SPOTIT_PLUS_REPRODUCTION"
+}

@@ -1,0 +1,399 @@
+{
+  "passed": true,
+  "test_count": 7,
+  "records": [
+    {
+      "reason": null,
+      "elapsed_s": 0.02164187515154481,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        0
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.406245875,
+          "bytes": 16744448
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332949.407327125,
+          "index": 0,
+          "pid_for_logging_only": 39941
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332949.427759791,
+          "pid_for_logging_only": 39941,
+          "returncode": 0
+        }
+      ],
+      "test": "normal",
+      "expected": "normal return + wait"
+    },
+    {
+      "reason": "CASE_DEADLINE",
+      "elapsed_s": 0.6602359167300165,
+      "wall_seconds": 0.5,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        -9
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.428198541,
+          "bytes": 16760832
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332949.42910425,
+          "index": 0,
+          "pid_for_logging_only": 39942
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.455141958,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.482193083,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.512217791,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.540633125,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.57067175,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.599047541,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.629173375,
+          "bytes": 16777216
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.658208458,
+          "bytes": 16809984
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.684111333,
+          "bytes": 16809984
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.709737416,
+          "bytes": 16842752
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.739908666,
+          "bytes": 16875520
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.770119083,
+          "bytes": 16908288
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.800228791,
+          "bytes": 16908288
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.825793916,
+          "bytes": 16908288
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.851020291,
+          "bytes": 16908288
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.880592125,
+          "bytes": 16908288
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332949.908383125,
+          "bytes": 16908288
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2332949.931593375,
+          "pid_for_logging_only": 39942
+        },
+        {
+          "kind": "kill",
+          "monotonic": 2332950.086782833,
+          "pid_for_logging_only": 39942
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.088243416,
+          "pid_for_logging_only": 39942,
+          "returncode": -9
+        }
+      ],
+      "test": "deadline_kill",
+      "expected": "CASE_DEADLINE + SIGKILL escalation + wait"
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.19717166712507606,
+      "wall_seconds": 2,
+      "handle_count": 2,
+      "all_reaped": true,
+      "returncodes": [
+        -15,
+        -9
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.089451375,
+          "bytes": 16941056
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332950.091175375,
+          "index": 0,
+          "pid_for_logging_only": 39943
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332950.111445625,
+          "index": 1,
+          "pid_for_logging_only": 39944
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.119503875,
+          "bytes": 17039360
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2332950.129602958,
+          "pid_for_logging_only": 39944
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2332950.129610916,
+          "pid_for_logging_only": 39943
+        },
+        {
+          "kind": "kill",
+          "monotonic": 2332950.284849958,
+          "pid_for_logging_only": 39944
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.286190458,
+          "pid_for_logging_only": 39944,
+          "returncode": -9
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.286213666,
+          "pid_for_logging_only": 39943,
+          "returncode": -15
+        }
+      ],
+      "test": "exception_two_handles",
+      "expected": "all retained handles cleaned, not only newest"
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.02909391699358821,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        0
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.287882333,
+          "bytes": 17039360
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332950.290148125,
+          "index": 0,
+          "pid_for_logging_only": 39946
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.316631875,
+          "pid_for_logging_only": 39946,
+          "returncode": 0
+        }
+      ],
+      "test": "protocol_eof",
+      "expected": "non-success state is not EQU"
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.027556249871850014,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        -15
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.31728825,
+          "bytes": 17039360
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332950.318786791,
+          "index": 0,
+          "pid_for_logging_only": 39947
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2332950.343412458,
+          "pid_for_logging_only": 39947
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.3446965,
+          "pid_for_logging_only": 39947,
+          "returncode": -15
+        }
+      ],
+      "test": "protocol_unknown",
+      "expected": "non-success state is not EQU"
+    },
+    {
+      "reason": "SELF_RSS_SAMPLED_STOP",
+      "elapsed_s": 0.13299429137259722,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        -15
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 50331648,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.345301041,
+          "bytes": 17039360
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2332950.346589583,
+          "index": 0,
+          "pid_for_logging_only": 39948
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.371688208,
+          "bytes": 59015168
+        },
+        {
+          "kind": "stop",
+          "monotonic": 2332950.371699375,
+          "reason": "SELF_RSS_SAMPLED_STOP"
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.372109041,
+          "bytes": 59015168
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2332950.372133375,
+          "pid_for_logging_only": 39948
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.37342025,
+          "pid_for_logging_only": 39948,
+          "returncode": -15
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2332950.476849833,
+          "pid_for_logging_only": 39948,
+          "returncode": -15
+        }
+      ],
+      "test": "self_rss_stop",
+      "expected": "own RSS crossed test threshold; child reaped"
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.0001826668158173561,
+      "wall_seconds": 2,
+      "handle_count": 0,
+      "all_reaped": true,
+      "returncodes": [],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2332950.478936375,
+          "bytes": 59015168
+        }
+      ],
+      "test": "science_gate",
+      "expected": "reject before Popen"
+    }
+  ],
+  "science_admission": {
+    "admitted": false,
+    "reason": "EXTERNAL_Z3_RSS_COVERAGE_UNAVAILABLE",
+    "forbidden_process_probe_retried": false,
+    "native_memory_parameter_substitutes_for_rss": false,
+    "science_threshold_bytes": 1073741824
+  },
+  "scientific_calls": 0,
+  "system_process_queries": 0,
+  "fixtures_max_allocation_bytes": 41943040
+}

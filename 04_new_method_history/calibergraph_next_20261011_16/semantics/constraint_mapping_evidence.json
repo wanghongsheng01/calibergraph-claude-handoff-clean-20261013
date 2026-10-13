@@ -1,0 +1,71 @@
+{
+  "audit_date": "2026-10-11",
+  "status": "CHECKEDCODE_STATIC_ONLY",
+  "scientific_execution": "NONE_BY_THIS_AUDIT",
+  "official_pin": "3b99928bf976c11cb59c9db6a177adba21f75798",
+  "paper": {
+    "url": "https://arxiv.org/html/2403.03193v2",
+    "freshly_opened": true,
+    "locators": ["Definition 3.5", "Theorem 4.8"],
+    "claim_scope": "At most N tuples per relation; paper Verify theorem; not independently reproduced or established for the inspected exact-live code path"
+  },
+  "bound": {
+    "inspected_runtime": "EXACT_LIVE_PER_TABLE",
+    "official_chain": ["environment.py:518,580-591", "verifiers/verifier.py:79-91,127", "environment.py:942-952", "parallel/cli_within_bound.py:35-43,97,139-140"],
+    "experiment_bounds": [2,3,4],
+    "repeats_do_not_expand_semantic_coverage": true,
+    "domains_nested": false,
+    "padding_certificate": "NOT_ESTABLISHED; no claim of impossibility",
+    "deletion_flag_only_patch_sufficient": false,
+    "deletion_flag_caveat_refs": ["environment.py:607", "environment.py:627-656", "environment.py:695-750"],
+    "single_table_pairs": ["dev03_07", "dev03_04"],
+    "two_table_pairs": ["dev03_10", "dev03_15"],
+    "single_table_gap": "Full completed scalar 1..N omits 0; this plan 2/3/4 also omits 1",
+    "two_table_gap": "Scalar positive diagonal omits zero and unequal cardinalities; this plan also omits 1",
+    "pair_analytic_controls": "Existing reports for 1264 and 1421; no independent symbolic derivation performed in this audit; not padding or encoder completeness proofs"
+  },
+  "admission_refs": ["official_contract_admission.py:151-179", "official_contract_admission.py:203-227"],
+  "encoding_refs": ["environment.py:627-656", "environment.py:695-750", "environment.py:779-782", "utils.py:42-46"],
+  "replay_refs": ["safe_sqlite_replay.py:25-44", "safe_sqlite_replay.py:47-120", "safe_sqlite_replay.py:147-157", "safe_sqlite_replay.py:168-213"],
+  "clauses": [
+    {"id":"dev03_07","index":0,"operator":"primary","fields":["DELIVERY.DELIVERY_ID"],"official":"non-null and unique key","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"WHOLE_PAIR_NOT_ADMITTED"},
+    {"id":"dev03_07","index":1,"operator":"lte","fields":["DELIVERY.ORDER_DATE","DELIVERY.CUSTOMER_PREF_DELIVERY_DATE"],"official":"all Cartesian column-value pairs, both non-null","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"WHOLE_PAIR_NOT_ADMITTED_DATE_DIVISION_ROUND"},
+    {"id":"dev03_10","index":0,"operator":"primary","fields":["FRIENDSHIP.USER1_ID","FRIENDSHIP.USER2_ID"],"official":"all key fields non-null; composite tuple unique","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_COMPLETE_COMPOSITE_KEY_BRANCH"},
+    {"id":"dev03_10","index":1,"operator":"primary","fields":["LIKES.USER_ID","LIKES.PAGE_ID"],"official":"all key fields non-null; composite tuple unique","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_COMPLETE_COMPOSITE_KEY_BRANCH"},
+    {"id":"dev03_10","index":2,"operator":"neq","fields":["FRIENDSHIP.USER1_ID","FRIENDSHIP.USER2_ID"],"official":"all Cartesian column-value pairs unequal and non-null","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_CARTESIAN_COMPARISON_BRANCH"},
+    {"id":"dev03_15","index":0,"operator":"primary","fields":["NPV.ID","NPV.YEAR"],"official":"all key fields non-null; composite tuple unique","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_COMPLETE_COMPOSITE_KEY_BRANCH"},
+    {"id":"dev03_15","index":1,"operator":"primary","fields":["QUERIES.ID","QUERIES.YEAR"],"official":"all key fields non-null; composite tuple unique","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_COMPLETE_COMPOSITE_KEY_BRANCH"},
+    {"id":"dev03_15","index":2,"operator":"foreign","fields":["QUERIES.ID","NPV.ID"],"official":"each non-null source ID has a non-null equal target ID; no target ID uniqueness or YEAR requirement","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_SAME_ID_ONLY_EXISTENCE_BRANCH"},
+    {"id":"dev03_15","index":3,"operator":"gte","fields":["NPV.NPV"],"literal":0,"official":"each value non-null and >=0","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"SUPPORTED_STATIC_SCALAR_COMPARISON_BRANCH"},
+    {"id":"dev03_04","index":0,"operator":"primary","fields":["SALARIES.COMPANY_ID","SALARIES.EMPLOYEE_ID"],"official":"all key fields non-null; composite tuple unique","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"WHOLE_PAIR_NOT_ADMITTED"},
+    {"id":"dev03_04","index":1,"operator":"gt","fields":["SALARIES.SALARY"],"literal":0,"official":"each value non-null and >0","structural_admission":"SUPPORTED_STATIC_BRANCH","replay":"WHOLE_PAIR_NOT_ADMITTED_VARCHAR_DECODER_DECIMAL_ROUND"}
+  ],
+  "scope_totals": {"pairs":4,"explicit_clauses":11,"primary":6,"foreign":1,"comparison":4,"physical_schema_columns":17,"int_replay_pairs":2,"int_replay_columns":9,"int_replay_clauses":7},
+  "omission_findings": {
+    "selected_original_source_record_fields_dropped":0,
+    "selected_schema_fields_dropped":0,
+    "selected_constraint_clauses_dropped":0,
+    "selected_projection_omits_registry_metadata":["exposure","provenance_eligibility","selection","status"],
+    "runtime_uses_original_registry":true,
+    "runtime_source_record_drop_detected":false,
+    "runtime_semantics_certified":false,
+    "meaning":"No static dropped-input clause/field detected for these four cases; not a global correctness certificate"
+  },
+  "additional_type_semantics": {
+    "official":"INT signed 32-bit value bounds; DATE integer interval; VARCHAR encoded above INT upper bound",
+    "refs":["environment.py:555-578","constants.py:49-57"],
+    "replay":"INT only, NULL permitted unless C prohibits; checks complete table and column sets and exact row counts",
+    "unused_admission_operators_replay_supported":"NOT_CLAIMED; in/between/inc etc do not occur in these four fullC records"
+  },
+  "result_scope": {
+    "business_contract_truth_completeness":"UNKNOWN",
+    "fullC_meaning":"Complete provided official operational C, not independently certified business C",
+    "C_model_sanity":"C_MODEL_SANITY_ONLY_NOT_QUERY_SAT; never a query counterexample or natural defect",
+    "UNSAT":"Official exact-cardinality encoding only",
+    "SAT":"Requires validated original fullC, faithful decoding, unchanged original SQL and differing bag results before concrete-witness claim",
+    "UNKNOWN_or_error":"Not semantic inequivalence",
+    "SQLSolver_fullC_translation":"Not performed by this audit; stage15 incomplete mapping boundary retained"
+  },
+  "backup":"PARENT_COORDINATED_PENDING; no third-party raw SQL included",
+  "restoration":"Use source IDs, pinned official commit, exact byte offsets and hashes in four_source_identity_evidence.json; do not scan the full corpus or substitute generated data"
+}

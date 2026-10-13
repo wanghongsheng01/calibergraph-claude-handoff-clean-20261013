@@ -1,0 +1,17 @@
+{
+  "scope": "Round 02, one serial tiny worker; no large queue or GPU/API",
+  "version": 2,
+  "maximum_active_workers": 1,
+  "nice": 15,
+  "max_1min_load": 4.0,
+  "min_memory_available_percentage": 25,
+  "max_cpu_seconds": 10,
+  "max_wall_seconds": 25,
+  "max_rss_bytes": 268435456,
+  "solver_timeout_ms": 500,
+  "z3_memory_max_mb": 128,
+  "thread_environment": 1,
+  "missing_observation": "STOP_UNOBSERVABLE",
+  "justification": "01 compressor<=6GiB was a conservative proxy and remains frozen. Round02 reads actual macOS memory_pressure -Q availability (observed 33%, load2.98 before registration), uses >=25% available (4GiB on this16GiB host), and tightens each worker to10CPU seconds/256MiB with serialnice15. This revised criterion is explicit and does not claim unrelated_project performance is unaffected.",
+  "forbidden": "No signals/reprioritization of other tasks; no installs, GPU/API, reserve/test access, or old-source writes."
+}

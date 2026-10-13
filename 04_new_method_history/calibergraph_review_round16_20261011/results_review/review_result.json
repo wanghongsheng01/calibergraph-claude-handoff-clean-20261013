@@ -1,0 +1,130 @@
+{
+  "schema": "calibergraph.round16.independent_result_review.v1",
+  "created_utc": "2026-10-11T17:16:38.884434+00:00",
+  "reviewer": "/root/round16_independent",
+  "cost_and_finalization_subreviewer": "/root/round16_independent/wait_budget_criteria",
+  "decision": "ACCEPT_COMPLETED_24_SLOT_TOOL_DIAGNOSTIC",
+  "method_decision": "NONE_NO_GO",
+  "scientific_relaunch_authorized": false,
+  "blocking_result_findings": [],
+  "planned_slots": 24,
+  "returned_valid_slots": 24,
+  "full_C_sat": 24,
+  "query_checks": 18,
+  "query_unsat": 14,
+  "query_unknown_timeout": 4,
+  "valid_prequery_encoding_errors": 6,
+  "query_sat": 0,
+  "C_model_sanity": {
+    "saved_models_independently_checked": 12,
+    "saved_physical_rows": 72,
+    "previous_original_SQL_executions": 24,
+    "outputs_equal": 12,
+    "query_sat_witnesses": 0,
+    "reviewer_SQL_executions": 0
+  },
+  "historical_round06_separate": {
+    "slots": 12,
+    "query_unsat": 5,
+    "query_unknown_timeout": 2,
+    "query_unknown_out_of_memory": 2,
+    "prequery_errors": 3
+  },
+  "repeated_tool_cost_pattern": {
+    "sources": [
+      "dev03_10",
+      "dev03_15"
+    ],
+    "accepted_bound_pairs": [
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "rejected_bound_pair": [
+      2,
+      3
+    ],
+    "two_repetitions_preserved": true,
+    "basis": "Low-bound UNSAT and high-bound same timeout in both predetermined repetitions; source-SQL mature identity proofs prevent promotion into semantic difficulty or new method."
+  },
+  "scheduling": {
+    "count": 2,
+    "monotonic_interval_s": 929.4617090830579,
+    "unix_interval_s": 929.4649970531464,
+    "measured_cpu_s": 0.085291,
+    "tail_reserve_s": 0.4,
+    "charge_s": 0.48529100000000003,
+    "batch_created_seconds_after_eligible": 23.47871494293213,
+    "request_exact_time_known": false
+  },
+  "cost": {
+    "parent_measured_cpu_s": 0.759441,
+    "all_reaped_children_cpu_s": 32.436312,
+    "workers_wait4_cpu_s": 26.406519000000003,
+    "nonworker_reaped_children_cpu_s": 6.029792999999998,
+    "current_internal_sample_cpu_s": 33.195753,
+    "all_measured_samples_cpu_s": 33.281044,
+    "prep_reserve_s": 10,
+    "batch_tail_reserve_s": 0.2,
+    "conservative_total_s": 43.881044,
+    "remaining_to_60_s": 16.118955999999997,
+    "outer_wall_s_rounded": 28.49,
+    "outer_cpu_s_rounded": 33.19,
+    "outer_minus_internal_sample_s": -0.00575300000000567,
+    "outer_internal_wall_s": 28.44005298614502
+  },
+  "resources": {
+    "workers": 24,
+    "monitor_samples": 261,
+    "max_monitor_load1": 3.3671875,
+    "min_slot_memory_free_percent": 35,
+    "max_worker_cpu_s": 1.736529,
+    "max_worker_wall_s": 1.8478119592182338,
+    "max_worker_rss_bytes": 131743744,
+    "max_solver_cumulative_wall_s": 0.7244544997811317,
+    "max_monitor_solver_watchdog_estimate_s": 0.7244544997811317,
+    "max_monitor_account_s": 42.922806,
+    "max_monitor_account_plus_live_s": 43.782806,
+    "gate50_max_prelaunch_charge_s": 42.69954
+  },
+  "account_snapshots_independently_recomputed": 334,
+  "monitor_samples": 261,
+  "finalization_only_allowed_changes": true,
+  "runtime_freeze_files": 909,
+  "old_bindings_retained": 880,
+  "old13_and_old15_unchanged": true,
+  "preexec_and_waiting_review_seals_unchanged": true,
+  "final_author_report_accepted_sha256": "d2609b50971c9237eb00fd8c07ecd2f0c8bed82d09942419c6adfbbdcd5728f8",
+  "final_author_manifest_sha256": "76be43aff6f662cf913f9a4695ba36ad0d0fa43ceb5dcda0db8a341756726107",
+  "raw_provenance_files_verified": 170,
+  "evidence_limits": [
+    "Local receipts/hash association does not by itself independently establish syscall O_EXCL or absence of all other tool calls; root retains original request/completion chunks d74bf2/93b879.",
+    "Earlier literature/public corpus statements are carried with prior review provenance; no new literature retrieval or full corpus reexecution was performed.",
+    "Raw payload upload status is the author declaration and local provenance policy; this review does not inspect remote Git contents or certify clean restore.",
+    "No scientific code, SQL, SMT, new model, target import/compile or resource probe was executed.",
+    "Four query checks exceeded the 700ms timeout setting in actual wall time; maximum 719.017375ms, below separately monitored cumulative solver and watchdog gates.",
+    "43.881044 CPU seconds is a conservative science-batch charge including observation/preparation/tails; it is not all work in the task and contains 10.6 seconds of reserves.",
+    "UNSAT applies to the frozen official exact-N encoding. No independent final test, up-to certification, full pipeline proof, causal full-C bottleneck, timed baseline win or novel mechanism is established.",
+    "Sampling and saved receipts do not establish continuous process-tree kernel hard bounds or absence of impact on unrelated_project."
+  ],
+  "remaining_delivery_blocks": {
+    "clean_restore": "BACKUP_BLOCKED",
+    "canonical_DataHub": "DATAHUB_REGISTRATION_BLOCKED",
+    "review_artifact_backup": "ROOT_TO_VERIFY_SEPARATELY"
+  },
+  "review_execution_scope": "Read-only hashes, JSON arithmetic, saved finite-value C checks and source diffs only. No scientific/SQL/SMT rerun, target import/compile, new database or resource probe.",
+  "report_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/results_review/RESULTS_REVIEW.zh.md",
+  "supporting_files": [
+    "INDEPENDENT_RAW_RESULTS.json",
+    "COST_BOUNDARY_EVIDENCE.json",
+    "COST_BOUNDARY_REVIEW.zh.md",
+    "AUTHOR_REPORT_CROSSCHECK.json",
+    "PRIOR_ROUNDS_IMMUTABILITY.json",
+    "REVIEW_INPUT_HASHES.json"
+  ]
+}

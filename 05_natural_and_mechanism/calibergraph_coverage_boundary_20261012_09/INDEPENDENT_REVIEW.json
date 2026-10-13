@@ -1,0 +1,85 @@
+{
+  "review_role": "independent_author_external_review",
+  "created_utc": "2026-10-12T08:32:04.735120+00:00",
+  "verdict": "MUST_FIX",
+  "scope": "static local standard-library and fixed-source review only",
+  "science_executions": 0,
+  "sql_calls": 0,
+  "solver_calls": 0,
+  "baseline_calls": 0,
+  "new_tests": 0,
+  "network_calls": 0,
+  "author_files_modified": false,
+  "must_fix": [
+    {
+      "id": "R1",
+      "category": "source_byte_fidelity_claim",
+      "case": "superhero__750",
+      "description": "Differentiate raw dail line bytes from official predicted.strip() input; REPORT and SOURCE_CHECKS currently overstate raw equality.",
+      "raw_line_bytes": 57,
+      "official_input_bytes": 56,
+      "raw_line_sha256": "c737a4643d8b37df0240dcb0a3ce65932738bd7830390d1f415b53baaf505a03",
+      "official_input_sha256": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32",
+      "semantic_query_change": false,
+      "required_action": "Keep official input, record exact strip transformation and raw-line comparison/hash, revise unqualified byte-equality claims."
+    }
+  ],
+  "checks": {
+    "independent_selection_recomputed": true,
+    "full_records": 1534,
+    "lexical_pool": 551,
+    "selected": 10,
+    "selected_case_order": [
+      "1172",
+      "319",
+      "1261",
+      "1490",
+      "750",
+      "1073",
+      "45",
+      "1526",
+      "26",
+      "1390"
+    ],
+    "candidate_hashes_verified": 40,
+    "source_boundary_hashes_verified": 14,
+    "official_zip_member_exact": true,
+    "gold_matches_dev_json_utf8": 10,
+    "predicted_matches_official_jsonl_utf8": 10,
+    "predicted_matches_raw_dail_line_utf8": 9,
+    "predicted_matches_official_strip_dail_utf8": 10,
+    "all_source_ddl_joins_exact": 10,
+    "case_26_lexical_false_positive_disclosed": true,
+    "case_1261_static_fk_eq_valid": true,
+    "case_750_static_countermodel_valid": true,
+    "case_45_static_countermodel_extendable_to_full_C": true,
+    "official_NEQ_saved_D": false,
+    "unknown_not_timeout_or_EQ": true,
+    "syntax_invalid_pairs_separated": true,
+    "polygon_boundaries_not_runtime_failures": true,
+    "pilot_admitted": false,
+    "pilot_execution_authorized_by_review": false,
+    "preselection_chronology_independently_proven": false
+  },
+  "inherited_not_reexecuted": [
+    "1172 old replay and 9 missed candidates",
+    "XData primary-source evidence"
+  ],
+  "remaining_pilot_prerequisites": [
+    "N1 type/string/NULL/numeric concretization proof for both cases",
+    "All source PK/FK/NOT NULL entries mapped and independently checked",
+    "Process-tree RSS accounting and process-group cleanup",
+    "Fresh Mac/unrelated_project observation and exclusive lock"
+  ],
+  "reviewed_file_sha256": {
+    "REPORT.zh.md": "fb013277db9b9660583060e1fc0ca6b2044a13da076b0a3458b15bfe4ea9bc27",
+    "SELECTION_PROTOCOL.json": "fe00aafe46fc18eeefb0548b6bff69247307605ceafb1b609f39b24de8bb1d90",
+    "extract_static.py": "73409e74081622609c655342b693128036da3da1f27fb7137b0cff6b6b57b93e",
+    "EXTRACTION_RECEIPT.json": "51de8200571ae9a1ffd11b55523fa219ecafe384acef0138c21ec31380b3158c",
+    "CANDIDATES.json": "312230e4c4181acbe8b8f34a7e61ceb5b71936772db665635d6e9e500b2d7053",
+    "SOURCE_CHECKS.json": "32ae4b8daab0defed6625738f68262fbe0de16c8891b17d182e59c71249f8f9e",
+    "CASE_ASSESSMENTS.json": "727b3373e3e9c31e849c25c8a22c636b4f35475e5826b8290a5afe7908e54ba9",
+    "SOURCE_BOUNDARIES.json": "97d3d2a821d29c71bf337a842762b0ef97ca1a890a2634436bc30d2c2d690b12",
+    "NEXT_STEP.json": "809fa4c67e8dc7d870a2c855ab45b4956445f593e2e0eaeb5d88a98ff20f2ac9"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "calibergraph-03-official-diagnostic-v1",
+  "status": "REGISTERED_BEFORE_FIRST_WORKER_REQUIRES_FREEZE",
+  "scope": "At most 32 pre-registered source-label groups, one original pair each; engineering diagnosis only, exact two live rows per complete physical table; not up-to-bound or unbounded equivalence, natural bug gold, or evidence all SQL problems are fast.",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "registered_case_ids": [
+    "dev03_01",
+    "dev03_02",
+    "dev03_03",
+    "dev03_04",
+    "dev03_05",
+    "dev03_06",
+    "dev03_07",
+    "dev03_08",
+    "dev03_09",
+    "dev03_10",
+    "dev03_11",
+    "dev03_12",
+    "dev03_13",
+    "dev03_14",
+    "dev03_15",
+    "dev03_16",
+    "dev03_17",
+    "dev03_18",
+    "dev03_19",
+    "dev03_20",
+    "dev03_21"
+  ],
+  "runtime_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+    "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+  },
+  "exact_rows_per_table": 2,
+  "contract_profile": "PINNED_OFFICIAL_OPERATIONAL_C_V3_FULL_SOURCE_NO_DROPPED_CLAUSES",
+  "worker_cpu_limit_seconds": 4,
+  "worker_wall_limit_seconds": 5,
+  "external_rss_limit_bytes": 268435456,
+  "internal_z3_memory_parameter_mb": 128,
+  "contract_check_timeout_ms": 100,
+  "query_check_timeout_ms": 800,
+  "solver_cumulative_wall_limit_seconds": 2,
+  "solver_timeout_reserve_seconds": 0.1,
+  "supervisor_solver_stop_seconds": 1.9,
+  "cost_query_cpu_threshold_seconds": 0.25,
+  "max_repeat_cost_ratio": 2,
+  "maximum_independent_environment_attempts": 2,
+  "maximum_active_workers": 1,
+  "repeat_policy": "Only first query check CPU>=0.25s or query UNKNOWN triggers a second independently created Environment, full schema/C admission, C check, parse, encode and fresh query solver. No warm-formula recheck. Insufficient remaining budget preserves first observation without stability promotion.",
+  "stable_timing_policy": "Both independent attempts complete with full-C SAT; query verdicts are known SAT/UNSAT and identical; both query check CPU>=0.25s and max/min CPU<=2. UNKNOWN/timeouts, errors, interrupted encodings, missing second attempt or budget overrun are not stable cost evidence.",
+  "semantic_promotion_policy": "STABLE_COST_CANDIDATE_EXACT2 additionally requires PRESENT_JSON provenance and explicit semantic_admission.complete_original_schema_and_C=true and semantic_admission.original_sql_to_official_ast_reviewed=true. Missing evidence fails closed to COST_SIGNAL_UNCONFIRMED. No status proves business contract truth, a natural bug, or a new scientific mechanism.",
+  "provenance_classes": [
+    "PRESENT_JSON",
+    "EXPLICIT_EMPTY_OPERATIONAL",
+    "NULL_UNSPECIFIED",
+    "MISSING",
+    "INSUFFICIENT"
+  ],
+  "contract_missing_policy": "Absent constraint field or explicit null: CONTRACT_SOURCE_INSUFFICIENT, no solver attempt, preserve registered slot. Explicit [] may execute no-extra-operational-C only; business completeness remains unverified. Nonempty lists go through complete structural admission; unknown operations/types/arity reject whole input without deletion.",
+  "schema_policy": "Only types actually encoded by pinned create_database are admitted: INT, BOOL, BOOLEAN, DATE, VARCHAR. Unknown/None types are schema unsupported instead of silently accepted by upstream pass. No field/table/type rewrite.",
+  "sat_policy": "Raw official SAT only; validate model against all original submitted C/base/type/bound facts and actual query assertions, export full physical raw model. VARCHAR stays encoded because generic literal/collation decoding is unproven. No generic independent concrete-C checker or SQLite replay claimed.",
+  "unsupported_policy": "Retain source slot and exact failing phase. SQL parse/scope errors and unsupported schema/C are not solver-cost candidates. Encoding resource stop is COST_SIGNAL_ENCODING_UNCONFIRMED, not parser unsupported. Other resource/unknown/not-run observations remain inconclusive.",
+  "artifacts": {
+    "result": "results.json",
+    "events": "events.jsonl",
+    "progress": "progress.json"
+  },
+  "external_guard_requirement": "Supervisor checks unrelated_project/machine gate first, runs one process at a time, enforces 4s CPU/5s hard wall and sampled 256MiB RSS, and terminates active solver interval at cumulative completed+active wall>=1.9s. Total global CPU must include registered scan, imports, failures, supervisor self and children including monitors. Stop before 120s hard total, preserve remaining NOT_RUN slots, no replacement or rerun top-ups.",
+  "supervisor": {
+    "python_executable": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "pre_registered_scan_cpu_seconds": 6.708654999999999,
+    "scan_cost_receipt": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/receipt.json",
+      "sha256": "3c41dbdfdaad84ba8dc494593ca46e3cfe2ed25ee9e5df3869be33af7e5ebff0"
+    },
+    "policy": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/protocols/probe_supervisor_policy.json",
+      "sha256": "160bf6ce4fd369585ec4b2ce31815ec8f0c46259e4c72b24216186ee29219d8e"
+    }
+  },
+  "registered_utc": "2026-10-11T12:30:39.564210+00:00",
+  "lexical_strata_note": "First-match lexical candidates only. 21 source-label groups; no shortfall top-ups; finaltest/reserve not used.",
+  "no_semantic_admission_fabricated": true
+}

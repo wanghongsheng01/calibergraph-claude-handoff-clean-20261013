@@ -1,0 +1,42 @@
+{
+  "status": "PASS_STATIC_ADMISSION",
+  "must_fix": [],
+  "files_sha256": {
+    "calibergraph_count_parser_closure_20261012_20/parser_test.py": "e07db0c0bb6c0e8e3c41c7fa2c1ed5bbf14b1c1befc3f9adf8c4cdd91057d14b",
+    "calibergraph_count_parser_closure_20261012_20/run_budget.py": "64ba48e10aa48963b840745115cc7cd45298873291ea04e848b32af847bf1add",
+    "calibergraph_count_parser_closure_20261012_20/COUNT_P1.patch": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+    "calibergraph_count_parser_closure_20261012_20/COUNT_P2.patch": "39b8557fa0be71a64397b34ddd8a49680af9cf6a07ad2f34721b4ea40ff00e68",
+    "calibergraph_count_parser_closure_20261012_20/CONTRACT.zh.md": "7165b3854c5f67e298344881dab2aa64bbb59fc117377d312ee88077686a2d2c",
+    "calibergraph_count_parser_closure_20261012_20/review_local/verify_results.py": "3c9b715ffc7a2d95a1f074e4198784c589a3c8152e3cc66e9d9f237529a31a93"
+  },
+  "isolated_copy_check": {
+    "p1": {
+      "files": 49,
+      "changed": [
+        "visitors/expression_encoder.py"
+      ],
+      "patch_matches_copies": true
+    },
+    "p2": {
+      "files": 49,
+      "changed": [
+        "visitors/expression_encoder.py",
+        "visitors/group_expression_encoder.py"
+      ],
+      "patch_matches_copies": true
+    }
+  },
+  "zero_executions": {
+    "sql": 0,
+    "target_imports": 0,
+    "parser": 0,
+    "solver": 0
+  },
+  "formula_review": "FGroupBy assignments include two Choice ranges, positive and negative Deleted, complete SMTGrouping grid; FProject assigns projected cells and evaluates every appended formula with strict AST types. This verifies each concrete assignment only, not formula completeness or full Environment.check/QueryEncoder.",
+  "patch_review": "P1 one statement dedents append and makes integer indicator. P2 only group COUNT(*) adds member AND NOT filter_null AND EnsureBool(filter_val), retains zero-valued existing groups; other grouped aggregate FILTER excluded.",
+  "dependency_adapter": "mo_imports.Thread monitor replaced with no-op start/join only; real export runs synchronously, expectations asserted empty; original parser unchanged. This is a disclosed dependency adaptation.",
+  "resource_review": "Common nonblocking lock, load and initial RSS gates, no target imports before countdown, Thread.start/subprocess/network guards, elapsed cumulative <=60 s control, exclusive attempt marker. RSS is sampled via virtual timer, not an OS hard memory ceiling.",
+  "test_boundary": "28 parsed expression cases include bound0; 14 operator chains use at least one slot, including all-deleted empty input; no zero-slot FGroupBy chain claim.",
+  "original_matrix_expected": "Because Sum(singleton Bool) returns Bool, strict scalar Int output check also rejects bound1 filtered cases, beyond the 12 bound2 ill-sorted Plus cases from19. Preserve distinctions rather than forcing the19 count.",
+  "independent_verifier": "Prepared only, not run. Parent to execute under controller. Fresh SQLite plus independent Python COUNT expected values, expected original/P1/P2 status patterns, 126 saved-case records. Operator AST formulas are not independently re-executed by verifier."
+}

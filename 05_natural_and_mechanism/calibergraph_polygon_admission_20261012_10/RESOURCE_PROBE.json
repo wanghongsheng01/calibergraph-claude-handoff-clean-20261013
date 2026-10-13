@@ -1,0 +1,32 @@
+{
+  "scope": "One no-escalation owned-process RSS capability probe plus stdlib load/path metadata",
+  "command": "/bin/ps -o pid=,rss= -p $$",
+  "exit_code": 127,
+  "stderr": "zsh:1: operation not permitted: /bin/ps",
+  "owned_process_only": true,
+  "system_process_list_requested": false,
+  "escalation_requested": false,
+  "retried_or_alternative_process_api_used": false,
+  "observed_loadavg": [
+    2.3544921875,
+    2.5693359375,
+    2.89208984375
+  ],
+  "loadavg_is_not_an_unrelated_project_or_process_inventory": true,
+  "unrelated_project_status": "User reports data collection only; no unrelated_project processes enumerated or touched",
+  "metadata_probe_self_peak_rss_bytes": 10502144,
+  "z3_on_PATH": null,
+  "local_z3_file_exists": true,
+  "missing_required_polygon_snapshot_files": [
+    "polygon/smt/ast.py.txt",
+    "polygon/smt/knowledgebase.py.txt",
+    "polygon/ast/expressions/operator.py.txt",
+    "polygon/errors.py.txt",
+    "polygon/utils.py.txt"
+  ],
+  "source_search_scope": "Existing frozen Polygon snapshot only, not global absence claim",
+  "science_workers_started": 0,
+  "sql_calls": 0,
+  "solver_calls": 0,
+  "scope_limits": "No retry, permission escalation, installation, source download, or replacement model/engine."
+}

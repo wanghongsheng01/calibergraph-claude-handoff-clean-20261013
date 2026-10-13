@@ -1,0 +1,17 @@
+Final freeze requirements — preparation only, no live-output snapshot
+
+1. Root supplies an explicit completed cut: campaign source/hash, terminal campaign and all queue manifests, selected supervisor/worker paths plus SHA, source lock identities, and actual manuscript compiler success receipt (source and exported PDF hashes if a PDF is delivered). A queue RETURNED is execution completion, not correctness or scientific success.
+
+2. Construct a new immutable ATTEMPT_SELECTION ledger, separate main cost, main differential and SpotIt engine. Logical identities are kind + engine/runtime lock + case_id + arm + query_index. Select exactly one attempt for every required logical slot; preserve every alternative. For main cost: old94 terminal slots stay selected, old52 unfinished remains an explicit alternative, recovery52 is the new selected attempt, and original53 NOT_RUN is retained beside its first actual attempt. Historical partial report status RUNNING remains unchanged; document that it is an immutable historical interrupted artifact, not a live queue at the final cut.
+
+3. Existing summarize_saved_v5.py cannot select only old slot51 from batch[51,54). Create a new slot-aware summarizer or selection adapter with explicit indices and source hashes; do not edit raw old reports and do not use latest-wins. Every duplicate/missing selection, worker/supervisor hash mismatch, wrong complete case input, different source/native lock, or illegal selection index must fail closed. Keep main and SpotIt pools separate.
+
+4. Independently check strict success: process status PROCESS_EXITED, no stop_reason, exit0, worker COMPLETE, recorded valid_completed_result true, expectation match not false, successful bridge/nonvacuity evidence, and original-C/int64/SQLite checks for SAT. Preserve raw decisions for resource-stopped rows separately; slots19/39/51 are not strict successes despite any saved solver answer. Contract rejections and unsupported contracts remain denominator outcomes, never pair UNSAT.
+
+5. Record costs in separate categories: selected-attempt observed CPU/wall, every additional attempt's observed CPU/wall, unavailable final costs for interrupted attempts, and controller overhead if measured. Old52's 1.234137 CPU-second checkpoint is only a lower bound; no final CPU/reap is known. Never imply selected sums measure all historical computation.
+
+6. After cut, use explicit files with expected hashes, no broad copy of today's mutable runs tree. Read/hash before copy and verify destination hashes after copy. Include all original partial artifacts, all attempts and selection ledger, all source/registration/review locks, final summaries, manuscript sources and compile receipt. The package manifest should exclude itself from its file digest list and have a separate external manifest hash; never create cyclic hashes. Record original absolute source paths and relative packaged paths.
+
+7. Re-read source metadata/hash before finalization; abort if any selected file differs from the cut. Root must confirm no active writers for selected current artifacts; the tool cannot infer this solely from a report named COMPLETE. Record total files/bytes, exact manifest SHA, full main168 cost/main168 differential/SpotIt28 selected denominators, every resource stop/unknown/error/contract rejection, and claim boundaries. No outcome claim until actual saved reports support it.
+
+This document creates no snapshot and executes/imports no target code. Recovery remains root's sole managed session.

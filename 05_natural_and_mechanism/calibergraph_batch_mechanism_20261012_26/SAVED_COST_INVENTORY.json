@@ -1,0 +1,173 @@
+{
+  "source_files": [
+    {
+      "path": "calibergraph_polygon_pilot_20261012_13/SUMMARY.json",
+      "sha256": "a28d4d1b7e31728edb257e9a6fe85f8935ffa2df43069dc814ec0bc7bd361010"
+    },
+    {
+      "path": "calibergraph_polygon_case1172_20261012_16/SUMMARY.json",
+      "sha256": "ba3b361aad7b6d2725cc4c2efb41ca3e390e33c95b75253df3d6d6a61db6659f"
+    },
+    {
+      "path": "calibergraph_polygon_case1261_20261012_17/SUMMARY.json",
+      "sha256": "c11cc01186a4c3a5d91b96f9b4ff93f7888c1b3767e6a9c53f58c39a43710b78"
+    }
+  ],
+  "rows": [
+    {
+      "source": "calibergraph_polygon_pilot_20261012_13/SUMMARY.json",
+      "case": "superhero__750",
+      "mode": "UA",
+      "status": "VALIDATED_NEQ",
+      "worker_wall_s": 0.8162775002419949,
+      "imports": 0.3557822504080832,
+      "schema_C": 0.0007947920821607113,
+      "parse": 0.2592797498218715,
+      "encode": 0.006659707985818386,
+      "search_including_solver": 0.05505733285099268,
+      "solver_calls": 0.03794854134321213,
+      "decode": 0.008757333736866713,
+      "replay": 0.0074119591154158115
+    },
+    {
+      "source": "calibergraph_polygon_pilot_20261012_13/SUMMARY.json",
+      "case": "superhero__750",
+      "mode": "precise",
+      "status": "VALIDATED_NEQ",
+      "worker_wall_s": 0.5875289998948574,
+      "imports": 0.20968687487766147,
+      "schema_C": 0.0008868328295648098,
+      "parse": 0.20709512569010258,
+      "encode": 0.00236837612465024,
+      "search_including_solver": 0.017338292207568884,
+      "solver_calls": 0.009068208280950785,
+      "decode": 0.0016714995726943016,
+      "replay": 0.0009085419587790966
+    },
+    {
+      "source": "calibergraph_polygon_pilot_20261012_13/SUMMARY.json",
+      "case": "toxicology__319",
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "worker_wall_s": 0.43461791705340147,
+      "imports": 0.12781249964609742,
+      "schema_C": 0.003075624816119671,
+      "parse": 0.205676581710577,
+      "encode": 0.0018004989251494408,
+      "search_including_solver": 0.02829704200848937,
+      "solver_calls": 0.02714487537741661,
+      "decode": null,
+      "replay": null
+    },
+    {
+      "source": "calibergraph_polygon_pilot_20261012_13/SUMMARY.json",
+      "case": "toxicology__319",
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "worker_wall_s": 0.4091591672040522,
+      "imports": 0.10714354226365685,
+      "schema_C": 0.0006840000860393047,
+      "parse": 0.2066626250743866,
+      "encode": 0.005563667509704828,
+      "search_including_solver": 0.00887629110366106,
+      "solver_calls": 0.008526583202183247,
+      "decode": null,
+      "replay": null
+    },
+    {
+      "source": "calibergraph_polygon_case1172_20261012_16/SUMMARY.json",
+      "case": "thrombosis_prediction__1172",
+      "mode": "UA",
+      "status": "VALIDATED_NEQ",
+      "worker_wall_s": 0.8917383328080177,
+      "imports": 0.13259620778262615,
+      "schema_C": 0.003769457805901766,
+      "parse": 0.18914433242753148,
+      "encode": 0.010519834235310555,
+      "search_including_solver": 0.45583924977108836,
+      "solver_calls": 0.45305349910631776,
+      "decode": 0.002951208967715502,
+      "replay": 0.0012452080845832825
+    },
+    {
+      "source": "calibergraph_polygon_case1172_20261012_16/SUMMARY.json",
+      "case": "thrombosis_prediction__1172",
+      "mode": "precise",
+      "status": "VALIDATED_NEQ",
+      "worker_wall_s": 0.39941275026649237,
+      "imports": 0.10255549987778068,
+      "schema_C": 0.001345749944448471,
+      "parse": 0.1864709579385817,
+      "encode": 0.010681250598281622,
+      "search_including_solver": 0.010517042130231857,
+      "solver_calls": 0.009031749796122313,
+      "decode": 0.0009991670958697796,
+      "replay": 0.0005559171549975872
+    },
+    {
+      "source": "calibergraph_polygon_case1261_20261012_17/SUMMARY.json",
+      "case": "thrombosis_prediction__1261",
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "worker_wall_s": 0.9519907077774405,
+      "imports": 0.12341749994084239,
+      "schema_C": 0.004054332617670298,
+      "parse": 0.1767680011689663,
+      "encode": 0.011331001296639442,
+      "search_including_solver": 0.5420532082207501,
+      "solver_calls": 0.5391908739693463,
+      "decode": null,
+      "replay": null
+    },
+    {
+      "source": "calibergraph_polygon_case1261_20261012_17/SUMMARY.json",
+      "case": "thrombosis_prediction__1261",
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "worker_wall_s": 0.36981416679918766,
+      "imports": 0.09909074986353517,
+      "schema_C": 0.0011935420334339142,
+      "parse": 0.17449645791202784,
+      "encode": 0.011343833524733782,
+      "search_including_solver": 0.012942957691848278,
+      "solver_calls": 0.011893666815012693,
+      "decode": null,
+      "replay": null
+    }
+  ],
+  "sums": {
+    "imports": 1.2580851246602833,
+    "schema_C": 0.015804332215338945,
+    "parse": 1.605593831744045,
+    "encode": 0.060268170200288296,
+    "search_including_solver": 1.1309214159846306,
+    "solver_calls": 1.0958579978905618,
+    "decode": 0.014379209373146296,
+    "replay": 0.010121626313775778
+  },
+  "worker_wall_sum": 4.860539542045444,
+  "shares_of_worker_wall": {
+    "imports": 0.25883651676473096,
+    "schema_C": 0.0032515592309507397,
+    "parse": 0.330332428705717,
+    "encode": 0.012399481514129571,
+    "search_including_solver": 0.2326740490848283,
+    "solver_calls": 0.22546015486778564,
+    "decode": 0.0029583566286748367,
+    "replay": 0.002082407976772951
+  },
+  "schema_C_plus_encode_s": 0.07607250241562724,
+  "schema_C_plus_encode_share": 0.01565104074508031,
+  "limitations": [
+    "8 exposed slots across4 querypairs; not a batch experiment",
+    "source-specific N<=1 adapters and different modes; no population estimate",
+    "imports/startup process costs and generic AST parse caching belong to strong engineering controls",
+    "schema_C field measures setup construction, not all downstream constraint solving",
+    "solver_calls is nested inside search_including_solver; do not sum both",
+    "no per-target time savings or cache hit rate measured",
+    "decode/replay null for UNSAT not evidence of zero cost for all tasks",
+    "no causal cost-ablation or Amdahl bound for unseen natural batches"
+  ],
+  "new_SQL_calls": 0,
+  "new_solver_calls": 0
+}

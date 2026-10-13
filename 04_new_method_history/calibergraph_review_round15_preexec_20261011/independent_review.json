@@ -1,0 +1,99 @@
+{
+  "schema": "calibergraph.round15.independent_resource_stop_review.v1",
+  "reviewer": "/root/round15_independent_gate",
+  "created_utc": "2026-10-11T16:31:03.032501+00:00",
+  "decision": "STOP_RESOURCE_GATE / SCIENTIFIC_NOT_LAUNCHED",
+  "accept_resource_stop": true,
+  "scientific_execution_authorized": false,
+  "enabled_preexec_pass": false,
+  "author_manifest_sha256": "a73a7c9aea510e4b687bcc5b2dd0669c6d11a16079e0fd7a520e5202b24c1bb2",
+  "reviewed_local_inputs": 88,
+  "input_hashes_all_match": true,
+  "scientific_status": {
+    "planned_slots": 24,
+    "launched_slots": 0,
+    "all_slots_status": "NOT_LAUNCHED_RESOURCE_GATE",
+    "all_c_query_replay_timing_fields_null": true,
+    "protocol": "DRAFT_DISABLED",
+    "source_enabled": false,
+    "permanent_close_lock": true,
+    "H15_answer": "UNMEASURED",
+    "mechanism_promotion": "NULL"
+  },
+  "probe": {
+    "source_sha256": "89610d812d9aba116c56cb65f8f96b38ea2cb7d930b420866849b0dd8cc5d94b",
+    "attempts": 1,
+    "status": "NOTCOMPLETED",
+    "exit_code": 1,
+    "approval_rejected": false,
+    "reason": "LOAD_1M_4.6015625_EXCEEDS_PREDECLARED_4",
+    "self_plus_reaped_children_cpu_sample_s": 0.048232,
+    "wait4_not_added_twice": true,
+    "whole_preparation_cpu_measured": false,
+    "conservative_preparation_charge_s": 10,
+    "retry_allowed": false
+  },
+  "static_verification": {
+    "author_stop_files": 37,
+    "author_stop_hashes_match": 37,
+    "disabled_manifest_listed_files_match": 12,
+    "old_source_files_match": 6,
+    "new_sources_ast_parse_pass": 6,
+    "slot_order_and_unique_ids_pass": true,
+    "extra_solver_calls_found": false,
+    "removed_fullC_found": false,
+    "outer_receipt_pins_match": true,
+    "probe_stdout_equals_receipt": true
+  },
+  "historical_round06": {
+    "rows": 12,
+    "source_and_result_hashes_verified": true,
+    "query_unsat": 5,
+    "query_unknown": 4,
+    "query_not_entered": 3,
+    "query_cost_null_overlay_verified": true,
+    "pooled_as_new_independent_samples": false
+  },
+  "unexecuted_implementation_limitations": [
+    {
+      "location": "official_generation_backend.py:433-437",
+      "issue": "Empty stage sums can encode unmeasured parse/analyze/query costs as zero; future analysis must use stage evidence/null."
+    },
+    {
+      "location": "generation_supervisor.py:543-545,611",
+      "issue": "flock is concurrent exclusion only; once-per-batch depends on root permanent outer lock."
+    },
+    {
+      "location": "generation_supervisor.py:29,161-164,600",
+      "issue": "Early validation failure precedes prep10 assignment; future outer accounting must retain preparation charge."
+    }
+  ],
+  "reviewer_correction": {
+    "claim": "Probe regex/write double-escaping",
+    "disposition": "WITHDRAWN_BEFORE_EXECUTION",
+    "reason": "Misread tool JSON display escaping; independent AST literal confirms single regex backslashes and one newline codepoint10; source unchanged."
+  },
+  "reviewer_actions": {
+    "scientific_runs": 0,
+    "scientific_imports": 0,
+    "compile": 0,
+    "sql_runs": 0,
+    "smt_runs": 0,
+    "scientific_enumeration": 0,
+    "capability_probes": 0,
+    "escalation_requests": 0,
+    "author_files_modified": false,
+    "allowed_work": "text/JSON/hash/AST; bounded read-only primary literature"
+  },
+  "primary_scope_review": "SCOPE_REVIEW.zh.md",
+  "detailed_review": "REVIEW.zh.md",
+  "remaining_blockers": [
+    "H15 not empirically answered in round15",
+    "DKE primary full text unresolved",
+    "Business C truth/completeness unknown",
+    "Exact-live vs up-to bridge not established",
+    "Parent retains DATAHUB_REGISTRATION_BLOCKED and historical raw/native clean restore BACKUP_BLOCKED"
+  ],
+  "backup_owner": "root",
+  "backup_status": "PENDING_ROOT_UNIFIED_PRIVATE_BACKUP"
+}

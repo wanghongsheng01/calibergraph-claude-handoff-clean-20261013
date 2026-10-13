@@ -1,0 +1,1232 @@
+{
+  "status": "FIXED_RAW_SOURCE_STATIC_AUDIT_NOT_RUNTIME",
+  "files": 154,
+  "binding_comparison": [
+    {
+      "file": "__init__.py",
+      "spot_sha256": "53c4529a01f38e7c0d593b7548c79e0d7398aa09f7d7cbd1773470859ee2febd",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3.py",
+      "spot_sha256": "514874d00337fe2632cea805524c4c83c8ee6e25cc3243463c4f9db3b75c2909",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3_copy.py",
+      "spot_sha256": "399a9562a2d836f651f9f767e7d1489cd79f6b20e40ded85344e000b60c94910",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3consts.py",
+      "spot_sha256": "c5caeb6fefc79aef3a051fb8cbf568625c6d7354aa010d88fd0fb2fefde2a0b9",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3core.py",
+      "spot_sha256": "b05e9d82f632495237942c632294a210ee4308c6d7cb339b2a899a08519313b8",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3num.py",
+      "spot_sha256": "d7ad7cceb560867f55dcbd87c5866e1c365fddec92faa22321bf91b60c431dee",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3poly.py",
+      "spot_sha256": "fd06029418e5899b300fe3b3a300d110c8e174e633cba8b751314f22a583394e",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3printer.py",
+      "spot_sha256": "b4806fb91ae3d22095ae88a0360b30d0d9c8dcae0e70b023ef1b7e5be7b5a6ee",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3rcf.py",
+      "spot_sha256": "504e0339b1bb06075c19ca52e51457716671218a2f2191d0c9754e0b75bede87",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3types.py",
+      "spot_sha256": "79df0dc17247efb1ed91a9bd2ca6137b3396c2f1de66be102a7e0a21b587d566",
+      "same_as_verified_binding": true
+    },
+    {
+      "file": "z3util.py",
+      "spot_sha256": "aaa2231b21d1dbaa40bdd03a2df6f7472d77e94bfa723688184a3461e319e747",
+      "same_as_verified_binding": true
+    }
+  ],
+  "imports": {
+    "constants.py": [
+      "import datetime",
+      "import os",
+      "import re",
+      "from z3 import Context, ArithRef, Function, Int as Z3_Int, String as Z3_String, BoolVal as Z3_BoolVal, IntVal as Z3_IntVal, RealVal as Z3_RealVal, StringVal as Z3_StringVal, And as Z3_And, Or as Z3_Or, Not as Z3_Not, If as Z3_If, Sum as Z3_Sum, Implies as Z3_Implies, DeclareSort as Z3_DeclareSort, IntSort as Z3_IntSort, BoolSort as Z3_BoolSort, RatVal as Z3_RatVal, StringSort as Z3_StringSort, SeqRef as Z3_SeqRef, StrToInt, IntToStr, Concat, Replace, InRe, Re as Z3_Re, Full, ReSort, ToReal, ToInt, IntNumRef, RatNumRef, BoolRef"
+    ],
+    "logger.py": [
+      "import logging"
+    ],
+    "encoder.py": [
+      "import itertools",
+      "import math",
+      "import re",
+      "from copy import deepcopy, copy",
+      "from typing import *",
+      "from ordered_set import OrderedSet",
+      "from z3 import ArithRef, ExprRef, is_true, is_false",
+      "import utils",
+      "from constants import *",
+      "from context import Context, GroupbyContext",
+      "from errors import *",
+      "from formulas.columns import *",
+      "from formulas.expressions import *",
+      "from formulas.tables import *",
+      "from formulas.tuples import *",
+      "from logger import LOGGER",
+      "from utils import CodeSnippet, ValuesTable, now",
+      "from visitors.interm_function import IntermFunc",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions.expression import FExpression",
+      "from formulas.tables.join_tables._utils import _find_overlapping_attributes"
+    ],
+    "context.py": [
+      "from collections import OrderedDict as _OrderedDict",
+      "from ordered_set import OrderedSet",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "utils.py": [
+      "import ctypes",
+      "import datetime",
+      "import calendar",
+      "import functools",
+      "import math",
+      "import os",
+      "import re",
+      "import time",
+      "import uuid",
+      "import ujson",
+      "from constants import *",
+      "from z3 import ForAll, StrToCode, StrToInt, IntToStr, SubString, Length",
+      "from formulas.columns.base_column import FBaseColumn",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions import FDate",
+      "from formulas.expressions.date import FDate",
+      "from errors import NotSupportedError",
+      "from errors import NotSupportedError"
+    ],
+    "environment.py": [
+      "import functools",
+      "import gc",
+      "import itertools",
+      "import operator as Operator",
+      "import pprint",
+      "import random",
+      "from collections import defaultdict",
+      "from time import time",
+      "from typing import *",
+      "import re",
+      "from ordered_set import OrderedSet",
+      "from z3 import DeclareSort, StringSort, BoolSort, IntSort, Const, Solver, Function, Length, sat, unknown, ExprRef",
+      "import utils",
+      "from constants import *",
+      "from errors import UnknownError, NotSupportedError, NotEquivalenceError",
+      "from formulas.columns import FAttribute, FDateAttribute",
+      "from formulas.expressions import FSymbol, FDate, FExpression, FCast, FVarchar, FTime, FTimestamp, FExpressionTuple",
+      "from formulas.tables import FBaseTable, FOrderByTable",
+      "from formulas.tuples import FBaseTuple, FField",
+      "from logger import LOGGER",
+      "from parsers import SQLParser",
+      "from scope import Scope",
+      "from utils import CodeSnippet",
+      "from verifiers import Verifier, BagSemanticsVerifier, ListSemanticsVerifier",
+      "from visitors.interm_function import IntermFunc",
+      "from visitors.visitor import Visitor",
+      "from writers.script import Script"
+    ],
+    "errors.py": [],
+    "__main__.py": [
+      "from constants import DIALECT",
+      "from environment import Environment"
+    ],
+    "scope.py": [
+      "import pprint",
+      "from context import Context",
+      "from encoder import Encoder",
+      "from logger import LOGGER",
+      "from visitors.dump_tuple import DumpTuple",
+      "from visitors.visitor import Visitor"
+    ],
+    "visitors/__init__.py": [
+      "import functools"
+    ],
+    "visitors/visitor.py": [
+      "import functools",
+      "import itertools",
+      "from typing import Dict, Sequence",
+      "from ordered_set import OrderedSet",
+      "from z3 import ArithRef, FuncDeclRef, ExprRef, BoolRef, ToReal, AstRef, SeqRef, Function, is_bool, is_true, is_false, is_int, is_seq, Length, SubString, StrToInt, IntToStr, PrefixOf, SuffixOf, eq as Z3_EQ",
+      "import utils",
+      "from constants import *",
+      "from errors import NotSupportedError",
+      "from formulas.columns import *",
+      "from formulas.expressions import *",
+      "from formulas.tables import *",
+      "from formulas.tuples import *",
+      "from utils import encode_same, encode_equality, encode_inequality, encode_is_distinct_from, encode_is_not_distinct_from, simplify, encode_concate_by_and, encode_concate_by_or, is_uninterpreted_func, __pos_hash__, CodeSnippet",
+      "from visitors import visitor",
+      "from visitors.dump_tuple import DumpTuple",
+      "from visitors.interm_function import IntermFunc"
+    ],
+    "visitors/interm_function.py": [
+      "from typing import Callable",
+      "from z3 import FuncDeclRef",
+      "from utils import __pos_hash__"
+    ],
+    "visitors/dump_tuple.py": [
+      "from ordered_set import OrderedSet"
+    ],
+    "parallel/cli_within_bound.py": [
+      "import argparse",
+      "import time",
+      "from multiprocessing import Process, Queue, cpu_count, Manager",
+      "import tqdm",
+      "import ujson",
+      "from prettytable import PrettyTable",
+      "from constants import *",
+      "from environment import Environment",
+      "from errors import *",
+      "from utils import divide"
+    ],
+    "parsers/__init__.py": [
+      "from .constraint_parser import ConstraintParser",
+      "from .sql_parser import SQLParser"
+    ],
+    "parsers/sql_parser.py": [
+      "import re",
+      "from typing import Dict, Union",
+      "from mo_parsing import ParseException",
+      "from mo_sql_parsing import parse",
+      "from constants import SQL_NULL, IS_TRUE, IS_FALSE, SPACE_STRING, DIALECT",
+      "from errors import ParserSyntaxError",
+      "from logger import LOGGER",
+      "from utils import is_date_format, ValuesTable"
+    ],
+    "parsers/constraint_parser.py": [
+      "import itertools",
+      "import yaml",
+      "from lark import Lark, Transformer"
+    ],
+    "writers/__init__.py": [],
+    "writers/script.py": [
+      "from formulas.expressions.digits import FDigits",
+      "from utils import CodeSnippet",
+      "from writers.code_writer import CodeWriter"
+    ],
+    "writers/code_writer.py": [
+      "from typing import Sequence, Optional",
+      "from utils import CodeSnippet"
+    ],
+    "verifiers/bag_semantics_verifier.py": [
+      "from z3 import ArithRef",
+      "from constants import NumericType, Or, And, Not, Implies, If, Sum, Z3_1, Z3_0",
+      "from formulas.columns import *",
+      "from formulas.expressions import *",
+      "from utils import encode_same, CodeSnippet, align_attrs",
+      "from verifiers.verifier import Verifier"
+    ],
+    "verifiers/list_semantics_verifier.py": [
+      "from constants import And, Or, Not, Implies",
+      "from formulas.columns import FAttribute",
+      "from utils import encode_same, CodeSnippet, align_attrs",
+      "from verifiers.verifier import Verifier"
+    ],
+    "verifiers/__init__.py": [
+      "from .bag_semantics_verifier import BagSemanticsVerifier",
+      "from .list_semantics_verifier import ListSemanticsVerifier",
+      "from .verifier import Verifier"
+    ],
+    "verifiers/verifier.py": [
+      "import abc",
+      "from z3 import ArithRef",
+      "from constants import And, Implies, If, Sum, Z3_1, Z3_0",
+      "from errors import NotEquivalenceError",
+      "from formulas.columns import *",
+      "from formulas.expressions import *",
+      "from utils import CodeSnippet",
+      "from writers.code_writer import CodeWriter",
+      "from .set_semantics_verifier import SetSemanticsVerifier",
+      "from .set_semantics_verifier import SetSemanticsVerifier"
+    ],
+    "z3py_libs/z3.py": [
+      "import copy",
+      "import io",
+      "import math",
+      "import sys",
+      "from fractions import Fraction",
+      "import functools",
+      "from . import z3core",
+      "from .z3core import *",
+      "from .z3printer import *",
+      "from typing import Iterable",
+      "import threading"
+    ],
+    "z3py_libs/z3num.py": [
+      "from .z3 import *",
+      "from .z3core import *",
+      "from .z3printer import *",
+      "from fractions import Fraction",
+      "from .z3 import _get_ctx"
+    ],
+    "z3py_libs/__init__.py": [
+      "from .z3 import *",
+      "from . import z3num",
+      "from . import z3poly",
+      "from . import z3printer",
+      "from . import z3rcf",
+      "from . import z3types",
+      "from . import z3util",
+      "from . import z3core",
+      "from . import z3consts"
+    ],
+    "z3py_libs/z3_copy.py": [
+      "from . import z3core",
+      "from .z3core import *",
+      "from .z3types import *",
+      "from .z3consts import *",
+      "from .z3printer import *",
+      "from fractions import Fraction",
+      "import sys",
+      "import io",
+      "import math",
+      "import copy",
+      "from typing import Iterable",
+      "import threading"
+    ],
+    "z3py_libs/z3printer.py": [
+      "import sys",
+      "import io",
+      "from .z3consts import *",
+      "from .z3core import *",
+      "from ctypes import *",
+      "import z3",
+      "from . import z3",
+      "import codecs"
+    ],
+    "z3py_libs/z3types.py": [
+      "import ctypes"
+    ],
+    "z3py_libs/z3consts.py": [],
+    "z3py_libs/z3poly.py": [
+      "from .z3 import *",
+      "import doctest"
+    ],
+    "z3py_libs/z3core.py": [
+      "import sys, os",
+      "import ctypes",
+      "import pkg_resources",
+      "from .z3types import *",
+      "from .z3consts import *",
+      "import __builtin__",
+      "import builtins"
+    ],
+    "z3py_libs/z3rcf.py": [
+      "from .z3 import *",
+      "from .z3core import *",
+      "from .z3printer import *"
+    ],
+    "z3py_libs/z3util.py": [
+      "import ctypes",
+      "from .z3 import *"
+    ],
+    "formulas/__init__.py": [
+      "import importlib",
+      "import os",
+      "from .base_formula import BaseFormula"
+    ],
+    "formulas/base_formula.py": [
+      "import abc",
+      "import ctypes"
+    ],
+    "formulas/_utils.py": [
+      "from typing import Sequence",
+      "from formulas.columns import FAttribute, AggregationType",
+      "from formulas.expressions import FIfPredicate, FCasePredicate",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.digits import FDigits"
+    ],
+    "formulas/tables/value_table.py": [
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "formulas/tables/product_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import alias_check",
+      "from formulas.tuples.concate_tuple import FConcateTuple"
+    ],
+    "formulas/tables/union_all_table.py": [
+      "import itertools",
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.alias_table import FAliasTable",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "formulas/tables/fake_projection_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.fake_projection_tuple import FFakeProjectionTuple"
+    ],
+    "formulas/tables/union_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.distinct_table import _distinct",
+      "from formulas.tables.union_all_table import FUnionAllTable"
+    ],
+    "formulas/tables/base_table.py": [
+      "from copy import deepcopy",
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula"
+    ],
+    "formulas/tables/order_by_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.orderby_tuple import FOrderByTuple"
+    ],
+    "formulas/tables/intersect_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.distinct_table import _distinct",
+      "from formulas.tables.intersect_all_table import FIntersectAllTable"
+    ],
+    "formulas/tables/except_all_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.projection_tuple import FProjectionTuple"
+    ],
+    "formulas/tables/__init__.py": [
+      "from .alias_table import FAliasTable",
+      "from .base_table import FBaseTable",
+      "from .distinct_table import FDistinctTable",
+      "from .empty_table import FEmptyTable",
+      "from .except_all_table import FExceptAllTable",
+      "from .except_table import FExceptTable",
+      "from .fake_projection_table import FFakeProjectionTable",
+      "from .fetch_table import FFetchTable",
+      "from .filter_table import FFilterTable",
+      "from .groupby_tables import FGroupByMapTable, FGroupByTable",
+      "from .intersect_all_table import FIntersectAllTable",
+      "from .intersect_table import FIntersectTable",
+      "from .join_tables import FJoinBaseTable, FInnerJoinTable, FCrossJoinTable, FNaturalJoinTable, FOuterJoinBaseTable, FLeftOuterJoinTable, FRightOuterJoinTable, FFullOuterJoinTable, OuterJoinTableType, JoinTableType",
+      "from .limit_table import FLimitTable",
+      "from .offset_table import FOffsetTable",
+      "from .order_by_table import FOrderByTable",
+      "from .product_table import FProductTable",
+      "from .projection_table import FProjectionTable",
+      "from .stack_table import FStackTable",
+      "from .union_all_table import FUnionAllTable",
+      "from .union_table import FUnionTable",
+      "from .value_table import FValueTable"
+    ],
+    "formulas/tables/fetch_table.py": [
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "formulas/tables/filter_table.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables.cross_join_table import FCrossJoinTable",
+      "from formulas.tables.join_tables.inner_join_table import FInnerJoinTable",
+      "from formulas.tables.join_tables.outer_join_tables import FOuterJoinBaseTable",
+      "from formulas.tuples.filter_tuple import FFilterTuple"
+    ],
+    "formulas/tables/except_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.distinct_table import _distinct",
+      "from formulas.tables.except_all_table import FExceptAllTable"
+    ],
+    "formulas/tables/intersect_all_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.projection_tuple import FProjectionTuple"
+    ],
+    "formulas/tables/stack_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "formulas/tables/projection_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.order_by_table import FOrderByTable",
+      "from formulas.tuples.projection_pity_tuple import FProjectionPityTuple",
+      "from formulas.tuples.projection_tuple import FProjectionTuple",
+      "from formulas.tables.groupby_tables.groupby_table import FGroupByTable"
+    ],
+    "formulas/tables/limit_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.limit_tuple import FLimitTuple"
+    ],
+    "formulas/tables/offset_table.py": [
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "formulas/tables/empty_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.deleted_tuple import FDeletedTuple"
+    ],
+    "formulas/tables/distinct_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.distinct_tuple import FDistinctTuple"
+    ],
+    "formulas/tables/alias_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.alias_tuple import FAliasTuple"
+    ],
+    "formulas/tuples/tuple.py": [
+      "import abc",
+      "from typing import Any, Sequence",
+      "from ordered_set import OrderedSet",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula"
+    ],
+    "formulas/tuples/outer_join_tuple.py": [
+      "import itertools",
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions import PredicateType",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/alias_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/distinct_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/natural_join_tuple.py": [
+      "import itertools",
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions import PredicateType",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/concate_tuple.py": [
+      "import itertools",
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/_field.py": [
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions import FSymbol, FOperator, FExpression"
+    ],
+    "formulas/tuples/limit_tuple.py": [
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/inner_join_tuple.py": [
+      "import itertools",
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions import PredicateType",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/__init__.py": [
+      "from ._field import FField",
+      "from .base_tuple import FBaseTuple",
+      "from .tuple import FTuple",
+      "from .alias_tuple import FAliasTuple",
+      "from .concate_tuple import FConcateTuple",
+      "from .filter_tuple import FFilterTuple",
+      "from .null_tuple import FNullTuple",
+      "from .projection_tuple import FProjectionTuple",
+      "from .projection_pity_tuple import FProjectionPityTuple",
+      "from .fake_projection_tuple import FFakeProjectionTuple",
+      "from .distinct_tuple import FDistinctTuple",
+      "from .inner_join_tuple import FInnerJoinTuple",
+      "from .natural_join_tuple import FNaturalJoinTuple",
+      "from .group_by_tuple import FGroupByTuple",
+      "from .deleted_tuple import FDeletedTuple",
+      "from .limit_tuple import FLimitTuple"
+    ],
+    "formulas/tuples/null_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.null import FNull",
+      "from formulas.tuples._field import FField",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/group_by_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/projection_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/filter_tuple.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions import PredicateType",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/orderby_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/base_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from formulas.tuples._field import FField"
+    ],
+    "formulas/tuples/projection_pity_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/fake_projection_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple",
+      "from formulas.tuples.tuple import FTuple"
+    ],
+    "formulas/tuples/deleted_tuple.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.tuples.base_tuple import FBaseTuple"
+    ],
+    "formulas/expressions/base_expression.py": [
+      "import abc",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula"
+    ],
+    "formulas/expressions/null.py": [
+      "from constants import Z3_TRUE",
+      "from formulas import register_formula",
+      "from formulas.expressions.symbol import FSymbol",
+      "from utils import uuid_hash",
+      "from visitors.interm_function import IntermFunc"
+    ],
+    "formulas/expressions/sym_func.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions import FExpression"
+    ],
+    "formulas/expressions/operator.py": [
+      "import operator",
+      "from typing import Any",
+      "from constants import Not, And, Or, If, Implies, Z3_0, Z3_1",
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from utils import __pos_hash__"
+    ],
+    "formulas/expressions/__init__.py": [
+      "from .base_expression import FBaseExpression",
+      "from .digits import FDigits",
+      "from .expression import FExpression",
+      "from .date import FDate",
+      "from .expression_tuple import FExpressionTuple",
+      "from .null import FNull",
+      "from .operator import FOperator",
+      "from .predicates import FInPredicate, FNotInPredicate, FIsNullPredicate, FIsNotNullPredicate, FCasePredicate, FCoalescePredicate, FIfPredicate, FAbsPredicate, FPowerPredicate, FExistsPredicate, FAnyValuePredicate, FFirstValuePredicate, FLastValuePredicate, FModPredicate, FIsTruePredicate, FIsFalsePredicate, FIsNotTruePredicate, FIsNotFalsePredicate, FIsNullOrHoldPredicate, FNullIfPredicate, FToRealPredicate, FSubstrPredicate, FLikePredicate, FDateLikePredicate, FToDatePredicate, FStrftimePredicate, FToJulianDatePredicate, PredicateType",
+      "from .sym_func import FSymbolicFunc",
+      "from .symbol import FSymbol",
+      "from .uniter_functions import FRound, FTime, FUDate, FTimestamp, FCast, FInteger, FDouble, FFloat, FBoolean, FVarchar, FDecimal, FUpper, FLower, FNumeric, UninterFunctionType"
+    ],
+    "formulas/expressions/symbol.py": [
+      "from formulas import register_formula",
+      "from formulas.base_formula import BaseFormula",
+      "from utils import __pos_hash__"
+    ],
+    "formulas/expressions/expression_tuple.py": [
+      "from z3 import ArithRef, is_seq",
+      "from constants import And, Not, NumericType",
+      "from errors import NotSupportedError",
+      "from formulas.expressions.date import FDate"
+    ],
+    "formulas/expressions/digits.py": [
+      "import operator",
+      "from constants import Z3_FALSE, INTEGER",
+      "from formulas import register_formula",
+      "from formulas.expressions.symbol import FSymbol",
+      "from visitors.interm_function import IntermFunc"
+    ],
+    "formulas/expressions/expression.py": [
+      "from typing import Sequence",
+      "import utils",
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from constants import INTEGER",
+      "from formulas.tables.base_table import FBaseTable",
+      "from visitors.interm_function import IntermFunc"
+    ],
+    "formulas/columns/attribute.py": [
+      "from copy import copy",
+      "from z3 import ArithRef",
+      "from constants import NumericType, Z3_NULL_VALUE, Z3_FALSE, Z3_TRUE, INTEGER",
+      "from formulas import register_formula",
+      "from formulas.columns.base_column import FBaseColumn",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.null import FNull",
+      "from visitors.interm_function import IntermFunc",
+      "from formulas.columns.aggregations import AggregationType",
+      "from formulas.expressions.expression import FExpression",
+      "from formulas.expressions.predicates.case_predicate import FCasePredicate",
+      "from formulas.expressions.predicates.last_value_predicate import FLastValuePredicate",
+      "from formulas.expressions.digits import FDigits"
+    ],
+    "formulas/columns/__init__.py": [
+      "from .aggregations import FAggregation, FAggAvg, FAggCount, FAggMax, FAggMin, FAggSum, FStddevPop, FVarPop, FStddevSamp, FVarSamp, FBoolAnd, FBoolOr",
+      "from .attribute import FAttribute",
+      "from .date_attr import FDateAttribute",
+      "from .base_column import FBaseColumn"
+    ],
+    "formulas/columns/base_column.py": [
+      "from abc import abstractmethod",
+      "from typing import Sequence",
+      "from constants import And, Not, Z3_NULL_VALUE",
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.null import FNull"
+    ],
+    "formulas/tables/groupby_tables/groupby_table.py": [
+      "from typing import Sequence, Callable",
+      "from ordered_set import OrderedSet",
+      "from z3 import Function",
+      "from formulas import register_formula",
+      "from formulas.expressions.expression import FExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.filter_table import FFilterTable",
+      "from formulas.tables.groupby_tables.groupby_map_table import FGroupByMapTable",
+      "from formulas.tables.union_all_table import FUnionAllTable",
+      "from writers.code_writer import CodeSnippet"
+    ],
+    "formulas/tables/groupby_tables/__init__.py": [
+      "from .groupby_map_table import FGroupByMapTable",
+      "from .groupby_table import FGroupByTable"
+    ],
+    "formulas/tables/groupby_tables/groupby_map_table.py": [
+      "from typing import Sequence, Callable",
+      "from formulas import register_formula",
+      "from formulas.expressions import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tuples.group_by_tuple import FGroupByTuple"
+    ],
+    "formulas/tables/join_tables/join_base_table.py": [
+      "from typing import Sequence, Optional",
+      "from formulas import register_formula",
+      "from formulas.tables.base_table import FBaseTable"
+    ],
+    "formulas/tables/join_tables/__init__.py": [
+      "from .cross_join_table import FCrossJoinTable",
+      "from .inner_join_table import FInnerJoinTable",
+      "from .join_base_table import FJoinBaseTable",
+      "from .natural_join_table import FNaturalJoinTable",
+      "from .outer_join_tables import FOuterJoinBaseTable, FLeftOuterJoinTable, FRightOuterJoinTable, FFullOuterJoinTable, OuterJoinTableType"
+    ],
+    "formulas/tables/join_tables/natural_join_table.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions.predicates import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import _analyze_using, _analyze_default",
+      "from formulas.tables.join_tables._utils import alias_check",
+      "from formulas.tables.join_tables.join_base_table import FJoinBaseTable",
+      "from formulas.tuples.natural_join_tuple import FNaturalJoinTuple"
+    ],
+    "formulas/tables/join_tables/inner_join_table.py": [
+      "from typing import Sequence",
+      "from context import Context",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.predicates import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import _analyze_using",
+      "from formulas.tables.join_tables._utils import alias_check",
+      "from formulas.tables.join_tables.join_base_table import FJoinBaseTable",
+      "from formulas.tuples.inner_join_tuple import FInnerJoinTuple"
+    ],
+    "formulas/tables/join_tables/cross_join_table.py": [
+      "from typing import Sequence",
+      "from context import Context",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.predicates import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import _analyze_using",
+      "from formulas.tables.join_tables.inner_join_table import _inner_product",
+      "from formulas.tables.join_tables.join_base_table import FJoinBaseTable"
+    ],
+    "formulas/tables/join_tables/_utils.py": [
+      "import copy",
+      "import itertools",
+      "from typing import Sequence",
+      "from formulas.expressions.expression import FExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.tables.alias_table import FAliasTable",
+      "from formulas.tables.base_table import FBaseTable",
+      "from utils import uuid_hash"
+    ],
+    "formulas/tables/join_tables/outer_join_tables/right_outer_join_table.py": [
+      "from typing import Sequence",
+      "from context import Context",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.predicates import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import _analyze_using",
+      "from formulas.tables.join_tables._utils import alias_check",
+      "from formulas.tables.join_tables.outer_join_tables.outer_join_base_table import FOuterJoinBaseTable",
+      "from formulas.tuples.null_tuple import FNullTuple",
+      "from formulas.tuples.outer_join_tuple import FOuterJoinTuple"
+    ],
+    "formulas/tables/join_tables/outer_join_tables/full_outer_join_table.py": [
+      "from typing import Sequence",
+      "from context import Context",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.predicates import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import _analyze_using",
+      "from formulas.tables.join_tables._utils import alias_check",
+      "from formulas.tables.join_tables.outer_join_tables.outer_join_base_table import FOuterJoinBaseTable",
+      "from formulas.tuples.null_tuple import FNullTuple",
+      "from formulas.tuples.outer_join_tuple import FOuterJoinTuple"
+    ],
+    "formulas/tables/join_tables/outer_join_tables/__init__.py": [
+      "from .full_outer_join_table import FFullOuterJoinTable",
+      "from .left_outer_join_table import FLeftOuterJoinTable",
+      "from .outer_join_base_table import FOuterJoinBaseTable",
+      "from .right_outer_join_table import FRightOuterJoinTable"
+    ],
+    "formulas/tables/join_tables/outer_join_tables/left_outer_join_table.py": [
+      "from typing import Sequence",
+      "from context import Context",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from formulas.expressions.predicates import PredicateType",
+      "from formulas.tables.base_table import FBaseTable",
+      "from formulas.tables.join_tables._utils import _analyze_using",
+      "from formulas.tables.join_tables._utils import alias_check",
+      "from formulas.tables.join_tables.outer_join_tables.outer_join_base_table import FOuterJoinBaseTable",
+      "from formulas.tuples.null_tuple import FNullTuple",
+      "from formulas.tuples.outer_join_tuple import FOuterJoinTuple"
+    ],
+    "formulas/tables/join_tables/outer_join_tables/outer_join_base_table.py": [
+      "from formulas import register_formula",
+      "from formulas.tables.join_tables.join_base_table import FJoinBaseTable"
+    ],
+    "formulas/expressions/predicates/any_value_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/case_predicate.py": [
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+      "from formulas.expressions.digits import FDigits"
+    ],
+    "formulas/expressions/predicates/coalesce_predicate.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/power_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/abs_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/in_predicate.py": [
+      "from typing import Sequence",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+      "from formulas.expressions.predicates.not_in_condition import _fuzzy_check",
+      "from formulas.tables import FBaseTable, FProjectionTable, FGroupByTable, FLimitTable, FOrderByTable"
+    ],
+    "formulas/expressions/predicates/__init__.py": [
+      "from .abs_predicate import FAbsPredicate",
+      "from .any_value_predicate import FAnyValuePredicate",
+      "from .base_predicate import FBasePredicate",
+      "from .case_predicate import FCasePredicate",
+      "from .coalesce_predicate import FCoalescePredicate",
+      "from .exists_predicate import FExistsPredicate",
+      "from .first_value_predicate import FFirstValuePredicate",
+      "from .if_predicate import FIfPredicate",
+      "from .in_predicate import FInPredicate",
+      "from .is_false_predicate import FIsFalsePredicate",
+      "from .is_not_false_predicate import FIsNotFalsePredicate",
+      "from .is_not_null_predicate import FIsNotNullPredicate",
+      "from .is_not_true_predicate import FIsNotTruePredicate",
+      "from .is_null_or_hold_predicate import FIsNullOrHoldPredicate",
+      "from .is_null_predicate import FIsNullPredicate",
+      "from .is_true_predicate import FIsTruePredicate",
+      "from .last_value_predicate import FLastValuePredicate",
+      "from .mod_predicate import FModPredicate",
+      "from .not_in_condition import FNotInPredicate",
+      "from .nullif_predicate import FNullIfPredicate",
+      "from .power_predicate import FPowerPredicate",
+      "from .to_real_predicate import FToRealPredicate",
+      "from .substr_predicate import FSubstrPredicate",
+      "from .like_predicate import FLikePredicate",
+      "from .date_like_predicate import FDateLikePredicate",
+      "from .to_date_predicate import FToDatePredicate",
+      "from .strftime_predicate import FStrftimePredicate",
+      "from .to_juliandate_predicate import FToJulianDatePredicate"
+    ],
+    "formulas/expressions/predicates/last_value_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/not_in_condition.py": [
+      "from typing import Sequence",
+      "from errors import NotSupportedError",
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression import FExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.tables import FBaseTable, FProjectionTable, FGroupByTable, FLimitTable, FOrderByTable"
+    ],
+    "formulas/expressions/predicates/is_false_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/is_not_true_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/is_not_null_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/base_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.expression import FExpression"
+    ],
+    "formulas/expressions/predicates/first_value_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/is_null_or_hold_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/nullif_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/if_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/mod_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/is_null_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.operator import FOperator",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/is_not_false_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/predicates/is_true_predicate.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.predicates.base_predicate import FBasePredicate"
+    ],
+    "formulas/expressions/uniter_functions/time.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/cast.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/float.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/upper.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/__init__.py": [
+      "from .base_function import FUninterpretedFunction",
+      "from .boolean import FBoolean",
+      "from .cast import FCast",
+      "from .date import FUDate",
+      "from .decimal import FDecimal",
+      "from .double import FDouble",
+      "from .float import FFloat",
+      "from .integer import FInteger",
+      "from .lower import FLower",
+      "from .numeric import FNumeric",
+      "from .round import FRound",
+      "from .time import FTime",
+      "from .timestamp import FTimestamp",
+      "from .upper import FUpper",
+      "from .varchar import FVarchar"
+    ],
+    "formulas/expressions/uniter_functions/decimal.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/boolean.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/integer.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/lower.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/round.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/varchar.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/numeric.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/double.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/timestamp.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/expressions/uniter_functions/base_function.py": [
+      "from typing import Sequence",
+      "from formulas import register_formula",
+      "from formulas.expressions.expression import FExpression"
+    ],
+    "formulas/expressions/uniter_functions/date.py": [
+      "from formulas import register_formula",
+      "from formulas.expressions.uniter_functions.base_function import FUninterpretedFunction"
+    ],
+    "formulas/columns/aggregations/max.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Z3_NULL_VALUE, NEG_INF__Int",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import _MAX, simplify"
+    ],
+    "formulas/columns/aggregations/var_samp.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Sum, Z3_0, Z3_1, IntVal, Z3_NULL_VALUE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/aggregation.py": [
+      "from z3 import BoolRef, ArithRef",
+      "from constants import If, Z3_FALSE, IntVal, Z3_1, Z3_0, INTEGER",
+      "from errors import SyntaxError",
+      "from formulas import register_formula",
+      "from formulas.columns.attribute import FAttribute",
+      "from formulas.columns.base_column import FBaseColumn",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.digits import FDigits",
+      "from formulas.expressions.expression import FExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import __pos_hash__"
+    ],
+    "formulas/columns/aggregations/stddev_pop.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Sum, IntVal, Z3_0, Z3_NULL_VALUE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/__init__.py": [
+      "from .aggregation import FAggregation",
+      "from .avg import FAggAvg",
+      "from .bool_and import FBoolAnd",
+      "from .bool_or import FBoolOr",
+      "from .count import FAggCount",
+      "from .max import FAggMax",
+      "from .min import FAggMin",
+      "from .stddev_pop import FStddevPop",
+      "from .stddev_samp import FStddevSamp",
+      "from .sum import FAggSum",
+      "from .var_pop import FVarPop",
+      "from .var_samp import FVarSamp"
+    ],
+    "formulas/columns/aggregations/bool_and.py": [
+      "from z3 import ExprRef, ArithRef",
+      "from constants import If, Not, Or, And, Z3_1, Z3_0, Z3_TRUE, Z3_FALSE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/stddev_samp.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Sum, Z3_0, Z3_1, IntVal, Z3_NULL_VALUE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/min.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Z3_NULL_VALUE, POS_INF__Int",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import _MIN, simplify"
+    ],
+    "formulas/columns/aggregations/bool_or.py": [
+      "from z3 import ExprRef, ArithRef",
+      "from constants import If, Not, Or, And, Z3_1, Z3_0, Z3_TRUE, Z3_FALSE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/sum.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Sum, Z3_0, Z3_NULL_VALUE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/var_pop.py": [
+      "from z3 import ExprRef",
+      "from constants import If, Not, Or, And, Sum, Z3_0, IntVal, Z3_NULL_VALUE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ],
+    "formulas/columns/aggregations/count.py": [
+      "from typing import Sequence",
+      "from z3 import ExprRef",
+      "from constants import Sum, If, Not, Or, And, Z3_0, Z3_1, Z3_FALSE",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation, CONSTANT_TYPE",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify, uuid_hash"
+    ],
+    "formulas/columns/aggregations/avg.py": [
+      "from z3 import ExprRef, AstRef, ToReal",
+      "from constants import If, Not, Sum, Or, And, Z3_NULL_VALUE, Z3_1, Z3_0",
+      "from formulas import register_formula",
+      "from formulas.columns.aggregations.aggregation import FAggregation",
+      "from formulas.expressions.base_expression import FBaseExpression",
+      "from formulas.expressions.expression_tuple import FExpressionTuple",
+      "from utils import simplify"
+    ]
+  },
+  "missing_license": "LICENSE path404; do not infer license absent or reuseouterlicense",
+  "native_pin_note": "OuterSpotIt+ requirements4.15; engine own bundled binding must be independently checked against native. Matching full binding to verified4.12 candidate supports engineering choice but not original author environment."
+}

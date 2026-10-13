@@ -1,0 +1,251 @@
+{
+  "case_index": 1,
+  "case_id": "dev03_02",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:17.558085+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 102891520,
+  "sampled_peak_group_cpu_seconds": 0.76,
+  "sample_count": 17,
+  "stop_remainder": null,
+  "pid": 43491,
+  "owned_pgid": 43491,
+  "worker_wait4_usage": {
+    "pid": 43491,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.6910529999999999,
+    "system_cpu_seconds": 0.08723299999999999,
+    "cpu_seconds": 0.7782859999999999,
+    "maxrss_bytes_darwin": 105037824
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.9454335416667163,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.0038270829245448112,
+    "check_count": 1,
+    "case_index": 1,
+    "id": "dev03_02",
+    "updated_monotonic": 2259249.809412208,
+    "observed_monotonic": 2259249.846372291,
+    "solver_watchdog_estimated_seconds": 0.0038270829245448112,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "0ac9d2552d9aae21f7c92abb62331191ffdbf54a0eb71c737fad04e70ee25d8c",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_02",
+    "case_index": 1,
+    "status": "RETURNED",
+    "engineering_class": "CONTRACT_INCONSISTENT_EXACT2",
+    "strict_class": "CONTRACT_INCONSISTENT_EXACT2",
+    "attempts": [
+      {
+        "id": "dev03_02",
+        "attempt": 1,
+        "status": "CONTRACT_STOP",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0009245830588042736,
+            "cpu_seconds": 0.0009249999999999536
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 3,
+            "base_fact_count": 18,
+            "admitted_delta_facts": 3,
+            "full_fact_count": 21,
+            "wall_seconds": 0.0015291250310838223,
+            "cpu_seconds": 0.0015290000000000026
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.005145667120814323,
+            "cpu_seconds": 0.005143000000000009
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.0038270829245448112,
+            "actual_check_cpu_seconds": 0.003835000000000033,
+            "answer": "unsat",
+            "wall_seconds": 0.006032499950379133,
+            "cpu_seconds": 0.006009000000000042
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "CUSTOMER": 2
+        },
+        "raw_query_verdict": null,
+        "full_C_nonempty": "unsat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "4997521e87a4053ff71b0a33815004a8e360d02351d14a1a796aeecb974153f7",
+        "solver_cumulative_wall_seconds": 0.0038270829245448112,
+        "solver_cumulative_cpu_seconds": 0.003835000000000033,
+        "engineering_class": "CONTRACT_INCONSISTENT_EXACT2",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.0050608329474925995,
+          "cpu_seconds": 0.005057000000000089
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0,
+          "scope_encode": 0,
+          "compare_encode": null,
+          "query_check": 0
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.02384300000000006,
+          "wall_seconds": 0.024033167399466038,
+          "worker_peak_rss_bytes_macos": 104890368
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 2421,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "2cb3e05c18bacb7f7de7d3a4f55612b5bad8a42925ab2e12a2a41ed90d59748c",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "CUSTOMER__ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "CUSTOMER__REFEREE_ID"
+            },
+            {
+              "value": "CUSTOMER__ID"
+            }
+          ]
+        },
+        {
+          "neq": [
+            {
+              "value": "CUSTOMER__REFEREE_ID"
+            },
+            {
+              "value": "CUSTOMER__ID"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/584.csv",
+      "index": 48,
+      "pair": [
+        "SELECT NAME FROM CUSTOMER WHERE REFEREE_ID <> 2 OR REFEREE_ID IS NULL",
+        "SELECT NAME FROM CUSTOMER WHERE REFEREE_ID!=2 UNION ALL SELECT NAME FROM CUSTOMER WHERE REFEREE_ID IS NULL"
+      ],
+      "schema": {
+        "CUSTOMER": {
+          "ID": "INT",
+          "NAME": "VARCHAR",
+          "REFEREE_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "04cda1c9e559e788fef7dbd228b1c0474d6d569a253cc19dcc551ef468eec094",
+      "19d98e29bcb66f151d8bec6ddecdfd9f2b06a41dd5cc6f55bcd8e26a75dc8d89"
+    ],
+    "schema_sha256": "64f3d1ffcc7106d7b2692f9ce04090c436dca76301f62ac3bfd953d4100845ef",
+    "constraint_sha256": "06192a2824767adf627b125b99e2b7de612737dcf02773ebf96484403e1b1ff8",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "64f3d1ffcc7106d7b2692f9ce04090c436dca76301f62ac3bfd953d4100845ef",
+      "constraint_sha256": "06192a2824767adf627b125b99e2b7de612737dcf02773ebf96484403e1b1ff8",
+      "table_count": 1,
+      "column_count": 3,
+      "schema_type_counts": {
+        "INT": 2,
+        "VARCHAR": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 3,
+      "operator_counts": {
+        "foreign": 1,
+        "neq": 1,
+        "primary": 1,
+        "value": 5
+      },
+      "reference_counts": {
+        "CUSTOMER__ID": 3,
+        "CUSTOMER__REFEREE_ID": 2
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS",
+        "OFFICIAL_FOREIGN_REQUIRES_NON_NULL_SOURCE_AND_TARGET_MATCH"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.0038270829245448112,
+        "actual_check_cpu_seconds": 0.003835000000000033,
+        "timeout_ms": 100
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.0038270829245448112,
+    "solver_cumulative_cpu_seconds": 0.003835000000000033,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.050234,
+    "parent_system_cpu_seconds": 0.049837,
+    "all_reaped_children_user_cpu_seconds": 0.80038,
+    "all_reaped_children_system_cpu_seconds": 0.46543599999999996,
+    "supervisor_plus_reaped_cpu_seconds": 1.3658869999999999,
+    "observed_total_cpu_seconds": 9.242608999999998,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

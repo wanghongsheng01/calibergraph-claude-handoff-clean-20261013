@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-10-11",
+  "decision": "NULL / HOLD",
+  "author_final_decision_retained": true,
+  "new_validated_mechanism": null,
+  "promote_to_method": false,
+  "approve_new_experiments": false,
+  "scientific_experiments": 0,
+  "evidence_mode": "PRIMARY_LITERATURE_AND_MANUAL_DERIVATIONS_ONLY",
+  "author_inputs": [
+    {
+      "path": "calibergraph_next_20261011_07/literature/constraint_polynomial_opportunity_v1.md",
+      "sha256": "7910e788e834148805d183872e2c30679d42ad2fec6e6068b5f8fbeb4623dadc",
+      "bytes": 15298
+    },
+    {
+      "path": "calibergraph_next_20261011_07/literature/neighbor_audit.md",
+      "sha256": "a56e261f027648e889f3a16dcaa1f25092da278d00986e086918c0fe54a85003",
+      "bytes": 10282
+    },
+    {
+      "path": "calibergraph_next_20261011_07/literature/hand_witnesses.sql",
+      "sha256": "fdd72cb9dfb6a0f51c6e46ae65902f5299d92042b21787950dca61ace043780b",
+      "bytes": 1208
+    },
+    {
+      "path": "calibergraph_next_20261011_07/literature/hand_witnesses.json",
+      "sha256": "f9d31463b1bb8e5d5ecac62190f27005b312902ff1b2cc1bba9d05435d39c152",
+      "bytes": 1384
+    }
+  ],
+  "findings": [
+    {
+      "id": "P1-01",
+      "priority": "P1",
+      "type": "AUTHOR_WORDING_OVERREACH",
+      "author_anchor": "constraint_polynomial_opportunity_v1.md:63",
+      "claim": "minmax rules out unconditional domain-independent success",
+      "verdict": "NARROW",
+      "reason": "1/T depends on type-space size T, not value-domain cardinality q. Uniform feasible-type sampling attains 1/T independently of q. The proof is query-independent, one-row-per-table and uses predicates outside equality-only C.",
+      "effect": "Keep lower bound with these quantifiers; no pair-driven impossibility."
+    },
+    {
+      "id": "P1-02",
+      "priority": "P1",
+      "type": "PROMOTION_BLOCKER_NOT_HOLD_ERROR",
+      "author_anchor": "constraint_polynomial_opportunity_v1.md:49",
+      "claim": "H1 describes a nontrivial new polynomial mechanism",
+      "verdict": "NOT_ESTABLISHED",
+      "reason": "Only computable bounds are required. If a computable global row bound exists on a fragment, constant templates enumerating legal finite types satisfy H1. No compressed family or new complete nonanchorable fragment has been specified.",
+      "effect": "Keep H1 as proof obligation, not as validated opportunity."
+    },
+    {
+      "id": "P2-01",
+      "priority": "P2",
+      "type": "PROBABILITY_PRECISION",
+      "author_anchor": "constraint_polynomial_opportunity_v1.md:31",
+      "verdict": "QUALIFY",
+      "reason": "For prime-power q, degree q-1 yields success lower bound 1/q, not a near-one guarantee; call it weak rather than strictly vacuous."
+    },
+    {
+      "id": "P2-02",
+      "priority": "P2",
+      "type": "SEMANTIC_LAYER",
+      "author_anchor": "constraint_polynomial_opportunity_v1.md:19,41; hand_witnesses.sql:25",
+      "verdict": "QUALIFY",
+      "reason": "COUNT SQL is an observer. Constant-head bag queries below it lie in C. Database legality and 2 versus 4 remain correct."
+    },
+    {
+      "id": "P2-03",
+      "priority": "P2",
+      "type": "CITATION_INDEX",
+      "author_anchor": "neighbor_audit.md:75",
+      "verdict": "CORRECT_INDEX_LABEL",
+      "reason": "Printed 170–171 corresponds to PDF pages 190–191 (1-based) or indices 189–190 (0-based)."
+    }
+  ],
+  "priority_counts": {
+    "P0": 0,
+    "P1": 2,
+    "P2": 3
+  },
+  "witness_checks": [
+    {
+      "id": "A_collision",
+      "legal_under_full_C_constraints": true,
+      "underlying_queries_in_C": true,
+      "manual_answers": {
+        "distinct": [
+          0
+        ],
+        "bag": [
+          0,
+          0
+        ]
+      },
+      "probability": "1/q, exactly, for two IID uniform v values with fixed distinct keys",
+      "engine_executed": false
+    },
+    {
+      "id": "B_nonanchorable",
+      "legal_under_full_C_constraints": true,
+      "underlying_queries_in_C": true,
+      "key_anchorable": false,
+      "manual_answers": {
+        "counted_c": [
+          1,
+          1
+        ],
+        "set_unit": [
+          1
+        ]
+      },
+      "novel_counterexample_shape": false,
+      "rigid_family": "PK-invalid at N_c=2, FK-valid",
+      "engine_executed": false
+    },
+    {
+      "id": "C_modular_alias",
+      "legal_under_full_C_constraints": true,
+      "literal_count_sql": "Observer rather than combined-query core",
+      "underlying_queries_in_C": true,
+      "manual_multiplicities": [
+        2,
+        4
+      ],
+      "modulus": 2,
+      "residues": [
+        0,
+        0
+      ],
+      "engine_executed": false
+    }
+  ],
+  "gap_classification": {
+    "already_known": [
+      "PK/FK algebraic identities",
+      "Dependency-aware sound chase",
+      "Multiplicity-polynomial diversification and PIT",
+      "Anchored canonical corners",
+      "Bounded equality-type enumeration"
+    ],
+    "explicit_open_frontier_in_primary_source": [
+      "Non-key-anchorable realizability and computable witness bound in Few Rows §4/§7"
+    ],
+    "unproved_not_established_novel": [
+      "Efficient pair-driven separating type distribution",
+      "Complete finite-field/database lift for arbitrary declared C",
+      "Nontrivial compressed H1 atlas"
+    ]
+  },
+  "retained_precise_question": null,
+  "next_scientific_step": "No new experiment or candidate is retained. Reopening requires one fully quantified nonanchorable-fragment legality-and-separation proposition with a non-enumerative complexity target and a proof or counterexample.",
+  "forbidden_scope_accessed": false,
+  "author_files_modified": false,
+  "backup_status": "PENDING_PARENT_BACKUP",
+  "report": "REVIEW.zh.md",
+  "anchor_check": "PRIMARY_ANCHOR_CHECK.json"
+}

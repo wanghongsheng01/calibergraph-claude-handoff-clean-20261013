@@ -1,0 +1,824 @@
+{
+  "status": "ALL_SELECTED_BATCHES_RETURNED",
+  "kind": "cost",
+  "mode": "main",
+  "full_registered_job_denominator": 168,
+  "selected_job_denominator": 42,
+  "runtime_lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+  "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+  "script_sha256": "56c5f768da28e35a3e796638b6754c6274a006eec4ca11331a7260fffa07a933",
+  "entries": [
+    {
+      "start": 90,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_090_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_090_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "90",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.000741499941796,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_090_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 93,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_093_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_093_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "93",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.118043083231896,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_093_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 96,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_096_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_096_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "96",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.249585249926895,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_096_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 99,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_099_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_099_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "99",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.210496583022177,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_099_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 102,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_102_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_102_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "102",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.358387124724686,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_102_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 105,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_105_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_105_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "105",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.2485247906297445,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_105_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 108,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_108_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_108_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "108",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.366696249693632,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_108_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 111,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_111_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_111_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "111",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.180995958391577,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_111_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 114,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_114_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_114_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "114",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.236499167047441,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_114_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 117,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_117_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_117_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "117",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 4.444206959102303,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_117_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        },
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "valid_completed_result": true
+        }
+      ]
+    },
+    {
+      "start": 120,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_120_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_120_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "120",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 2,
+      "wall_seconds": 4.42887237528339,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_120_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "valid_completed_result": false
+        }
+      ]
+    },
+    {
+      "start": 123,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_123_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_123_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "123",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 2,
+      "wall_seconds": 4.444605625234544,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_123_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "valid_completed_result": false
+        }
+      ]
+    },
+    {
+      "start": 126,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_126_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_126_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "126",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 2,
+      "wall_seconds": 4.008060167077929,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_126_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "CONTRACT_UNSAT_REJECTED",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "CONTRACT_UNSAT_REJECTED",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "CONTRACT_UNSAT_REJECTED",
+          "stop_reason": null,
+          "valid_completed_result": false
+        }
+      ]
+    },
+    {
+      "start": 129,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_129_01",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+        "--runtime-lock",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "--suite",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+        "--out-dir",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_129_01",
+        "--kind",
+        "cost",
+        "--job-start",
+        "129",
+        "--job-limit",
+        "3"
+      ],
+      "exit_code": 2,
+      "wall_seconds": 4.12927595898509,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_129_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "CONTRACT_UNSAT_REJECTED",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "CONTRACT_UNSAT_REJECTED",
+          "stop_reason": null,
+          "valid_completed_result": false
+        },
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "CONTRACT_UNSAT_REJECTED",
+          "stop_reason": null,
+          "valid_completed_result": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "status": "FROZEN_ARTIFICIAL_POOL_NOT_EXECUTED",
+  "created_utc": "2026-10-11T11:46:19.126263+00:00",
+  "source": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/data/development.jsonl",
+    "sha256": "a51307167fb80e5caaf83b18fcd929e8781183fd7130821134eae18782e32430",
+    "bytes": 14366
+  },
+  "copy": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/data/development_v2.jsonl",
+    "sha256": "a51307167fb80e5caaf83b18fcd929e8781183fd7130821134eae18782e32430",
+    "byte_identical": true
+  },
+  "pool": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/data/probe_pool.jsonl",
+    "sha256": "9971d4469f4a123a8e7fb38bd7f7529af366c7898f2e1e80a2417d536caaf401",
+    "candidates": 32,
+    "groups": [
+      {
+        "case_id": "dev_01",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/182.csv",
+        "planned": 4,
+        "selected": 4,
+        "accepted": 4,
+        "rejected": 0,
+        "truncated": 0
+      },
+      {
+        "case_id": "dev_02",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/614.csv",
+        "planned": 1,
+        "selected": 1,
+        "accepted": 1,
+        "rejected": 0,
+        "truncated": 0
+      },
+      {
+        "case_id": "dev_03",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1075.csv",
+        "planned": 5,
+        "selected": 5,
+        "accepted": 5,
+        "rejected": 0,
+        "truncated": 0
+      },
+      {
+        "case_id": "dev_04",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1581.csv",
+        "planned": 8,
+        "selected": 8,
+        "accepted": 8,
+        "rejected": 0,
+        "truncated": 0
+      },
+      {
+        "case_id": "dev_05",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1587.csv",
+        "planned": 8,
+        "selected": 8,
+        "accepted": 8,
+        "rejected": 0,
+        "truncated": 0
+      },
+      {
+        "case_id": "dev_06",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1715.csv",
+        "planned": 6,
+        "selected": 6,
+        "accepted": 6,
+        "rejected": 0,
+        "truncated": 0
+      }
+    ]
+  },
+  "rule": {
+    "rows_per_original_table": 2,
+    "maximum_candidates_per_group": 12,
+    "order": "base then original table and column lexicographic order; per column null_all, null_single(row0), duplicate_nonkey(row1<-row0) when structurally eligible; take first12 before C check; never replace failures",
+    "null_columns": "exclude every primary-key member, every FK participating column, not_null columns, and gte LHS columns",
+    "duplicate_columns": "every non-primary-key column, including legal FK source or gte columns; separate full-C checker decides admission; no replacement",
+    "value_rule": "INT ordinal*100+row+1; VARCHAR table_column_row; DATE 2000-01-01+3*ordinal+row; FK uses corresponding target row; gte scalar lower-bound adjustment; no SQL-derived constants"
+  },
+  "contract": "Original full schema/C retained. Separate finite checker: PK nonNULL tuple unique; single-column FK nonNULL membership; gte nonNULL; column-column neq Cartesian and nonNULL; exact2rows/all tables; original INT/VARCHAR/DATE types.",
+  "comparison": "All methods must receive this same immutable candidate set; generic NULL-first strong baseline, candidate query-aware ranking, and pure-fallback ablation are downstream order/strategy choices. This pool was not selected by pair outputs.",
+  "exposure": "All six development groups are author-exposed, including previous49k applicability scans and01 development/replay; development_v2 filename does not create an unseen test. Reserve was not opened.",
+  "novelty": "Known XData-style preprobe plus VeriEQL fallback engineering combination; no claimed scientific increment and no result-based selection.",
+  "prohibited_claims": [
+    "natural databases",
+    "natural defect gold",
+    "test accuracy",
+    "automatic promotion",
+    "gain established before comparative experiment"
+  ],
+  "usage": {
+    "generation_wall_seconds": 0.006222249999999999,
+    "checker_total_seconds": 0.00043950100000003656,
+    "peak_rss_bytes_macos": 23527424,
+    "processes": 1,
+    "alarm_seconds": 1
+  },
+  "executed": {
+    "sql": false,
+    "solver": false,
+    "parser": false,
+    "query_output_inspection": false
+  },
+  "code_sha256": "04169f5ad218487885e3f56569a91eb3461247a4df41c13bcb8767bfcf7d29cc",
+  "science_status": "HOLD"
+}

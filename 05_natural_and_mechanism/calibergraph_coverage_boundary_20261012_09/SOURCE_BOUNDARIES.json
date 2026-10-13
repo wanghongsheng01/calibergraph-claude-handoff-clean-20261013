@@ -1,0 +1,108 @@
+{
+  "scope": "Pinned static code and inherited primary-source evidence, not new literature review",
+  "files": [
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/scripts/disprove_bird.py",
+      "sha256": "22f270d5cd4cbf3daac08ecd877c2877dc5d17725b0fc8c8d91e8010048f28fc",
+      "lines_or_anchor": "38-48,66-77",
+      "finding": "Official input assembly; output strings truncated at300, no counterexample export",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/machine.py",
+      "sha256": "de0c5916d6e2f92917de923442c297332090a45287551c219d6b01dd243a7a94",
+      "lines_or_anchor": "718-726",
+      "finding": "UnsupportedQuery when row variable absent; official1526 reason matches; root cause beyond this guard unknown",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/main.py",
+      "sha256": "771c58bb1acee1cf00075e56308167cea711e3e799bed262c8eb5e519697957e",
+      "lines_or_anchor": "111-161",
+      "finding": "Original output check, per-query generation, separate EQ/UNKNOWN/TIMEOUT",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/db_manager.py",
+      "sha256": "e5143b559b028776368c3aa9b8c0d802a4d4d4e463cf021cffa019e80fab6c4a",
+      "lines_or_anchor": "64-68",
+      "finding": "SQLite foreign_keys enabled",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/test_main.py",
+      "sha256": "61d113f94ddec95367b6fe4b1ad200845258033e4852fb677827eda836184b42",
+      "lines_or_anchor": "14-70",
+      "finding": "Synthetic boundary/JOIN/DISTINCT/NULL/timeout tests present; NOT_RUN",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/instance/test_machine.py",
+      "sha256": "e3514f29ea5b928aaada05ff37ffca1b6507ccf17b873ce00eb1194b3a17c6c6",
+      "lines_or_anchor": "20-34",
+      "finding": "Synthetic aggregate/distinct SQL present; NOT_RUN",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/parser/test_dataset_catalogs.py",
+      "sha256": "d0a731e43a9fc7df24bec8c0cebb2e31f0fa672546f6c0fe739de09daae4c9ce",
+      "lines_or_anchor": "76-117",
+      "finding": "Dataset schema catalog and unsupported constraint tests present; NOT_RUN",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/expression_encoder.py.txt",
+      "sha256": "904e2654d2709a12f009d7ffa4fbbfebbb211dea665b29cf0bca548a77035c91",
+      "lines_or_anchor": "145-155,486-537,611-612",
+      "finding": "AVG division, aggregates, erased CAST; static code not SQLite admission",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/smt/provers/smtlibv2.py.txt",
+      "sha256": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc",
+      "lines_or_anchor": "101-102,156-163",
+      "finding": "SMT integer div and integer cell declarations",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/formulas/integrity_constraint.py.txt",
+      "sha256": "6a81b8600cf781574b0e04e12979bd6155f6e7f78f3ef271f9fbc8e437512fa1",
+      "lines_or_anchor": "15-39",
+      "finding": "Finite constraint dispatch, unknown warning",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/testers/mysql_tester.py.txt",
+      "sha256": "3325c842728bd2388603b55dfe9341f8edcf9bb568036172a6389ee723763df1",
+      "lines_or_anchor": "124-173",
+      "finding": "Recreated columns omit original DDL constraints, integrity check failure logged",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/environment.py.txt",
+      "sha256": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+      "lines_or_anchor": "181-230,452-475",
+      "finding": "Same-code UA/precise and output NEQ comparison",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/sql_parser.py.txt",
+      "sha256": "8f756d131348d32aa244070ebf51429363a68ad18a372bc0b572cec0ac053acc",
+      "lines_or_anchor": "500-595",
+      "finding": "Generic expression/aggregate paths; not proof strftime/substring normalized",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    },
+    {
+      "path": "calibergraph_mechanism_synthesis_20261012_02/XDATA_EVIDENCE.json",
+      "sha256": "f82e86c87490fd6f590123c68b55aee4518ab877bb4231935addcf4c3c5cab20",
+      "lines_or_anchor": "paper sections4.3,7 / core_java_source_verified=false",
+      "finding": "Inherited independently audited paper scope; no new XData access",
+      "runtime": "NOT_RUN_THIS_WORK_PACKAGE"
+    }
+  ],
+  "parseval_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "polygon_commit": "5e18237394d025dbb805cf833b4f54c321470774",
+  "xdata_commit": "a86031197fd1b572bd7782431331e8cb15554f88",
+  "xdata_core_verified": false,
+  "new_science_calls": 0
+}

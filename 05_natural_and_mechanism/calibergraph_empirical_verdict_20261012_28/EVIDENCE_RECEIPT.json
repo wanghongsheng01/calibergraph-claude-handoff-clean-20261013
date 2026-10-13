@@ -1,0 +1,68 @@
+{
+  "created_utc": "2026-10-12T15:09:30.389447+00:00",
+  "decision": "HOLD_EMPIRICAL_PAPER_EVIDENCE",
+  "purpose": "Narrow paper-type judgment, not a new algorithm project, venue profile or submission audit",
+  "paper_sample": "Purposive two adjacent published systems evaluations, not a representative venue sample",
+  "local_sources": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-2/p19_r4_limited_review_20261009/snapshot/source/manuscript/P19_DKE_revised.tex",
+      "sha256": "f4e66ef3308cc75d66f08bd09e7b61a3f4b8de02d1344d92b50d3d44ae801c2c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_candidate_dke_20261012_24/overleaf_validation/main.tex",
+      "sha256": "ada1b12ed886acac445dd38e2f71ee4beb1d68754be2e4c59a77f1285b11f0b0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_candidate_dke_20261012_24/overleaf_validation/results_current.tex",
+      "sha256": "d38b8115ff564de72b1b8eb787b0a9d09c377f3aeeedcc43ba6b1934098c334a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_candidate_dke_20261012_24/overleaf_validation/sqlite_case_study.tex",
+      "sha256": "f8f408b7475555fad55bd8b24c75ba725680561f48f97281b4662f97bb1c14e8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_pairdiff_admission_20261012_27/FINAL_DECISION.json",
+      "sha256": "b3dd18e4ac1a23eba259484e332f7aefdd8f775a962e6b6d496a0ebd78379c3d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+      "sha256": "0eda3e2f9c3ce04b373fe61e5943681fac3a5234a6a1e05e1d8b800e1ad4fc3e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/schema.json",
+      "sha256": "5379f02bc4100f9521f442c132a37da40d4ebb532c32ec319f68ecb95c80ba2b"
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://shop.elsevier.com/journals/data-and-knowledge-engineering/0169-023X",
+      "access": "Official description body read; lines 85–96 cover aims and applications/case studies",
+      "supports": "Empirical/system contribution type is within scope; not acceptance threshold"
+    },
+    {
+      "url": "https://www.sciencedirect.com/journal/data-and-knowledge-engineering/publish/guide-for-authors",
+      "access": "403 on this turn; not verified"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0169023X24000338",
+      "doi": "10.1016/j.datak.2024.102309",
+      "publication": "Data & Knowledge Engineering 152 (2024), 102309",
+      "access": "Publisher indexed abstract/introduction/section snippets read; direct open 403; complete final result tables not obtained",
+      "supports": "Benchmark harmonization, deployment/soundness/performance evaluation, reproducible scripting",
+      "not_claimed": "exact system counts, workload scale, full-paper read, replication",
+      "version_note": "2020 Semantic Web submission discovered, not used as 2024 final evaluation evidence"
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0169023X23000149",
+      "doi": "10.1016/j.datak.2023.102154",
+      "publication": "Data & Knowledge Engineering 145 (2023), 102154",
+      "access": "Publisher indexed abstract/introduction/section snippets/conclusion read; direct open 403; author PDF link timed out, HAL document not obtained",
+      "supports": "Textual/tabular models; scaling parameter; ten tasks/twenty queries; quantitative and UX protocols; AUDAL proof of concept",
+      "not_claimed": "number of survey users, multiple independent systems evaluation, full-paper read, replication"
+    }
+  ],
+  "P19_boundary": "Named local revised manuscript substantive sections actually read; hash matches old record; submission-version identity unverified; no full text/data duplication audit or nonoverlap certification",
+  "resource_note": "No SQL/parser/SMT or benchmark launched; local read/hash and web tools only; uptime load 2.84/2.99/2.79 not an unrelated_project throughput measurement",
+  "new_experiment_authorized_or_started": false,
+  "rewrote_manuscript": false
+}

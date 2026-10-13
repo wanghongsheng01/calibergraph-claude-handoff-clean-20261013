@@ -1,0 +1,69 @@
+{
+  "review_id": "calibergraph-round06-preexec-independent-20261011",
+  "review_type": "STATIC_PREEXECUTION_ONLY",
+  "verdict": "REQUEST_CHANGES_BEFORE_ENABLE_AND_FREEZE",
+  "execution_authorized_by_this_review": false,
+  "target_code_executed": false,
+  "sql_parser_solver_vm_executed": false,
+  "author_files_modified": false,
+  "scope": "Six Round06 Python files, INTERFACE.md, STATIC_ADAPTATION_REPORT.md, generation_replay.draft.json and selection_summary.zh.md. Exact diff against previously reviewed Round04 recovery supervisor; targeted official source text for semantic comparison. No corpus expansion or reserve/test data access.",
+  "counts": {"P0": 0, "P1": 2, "P2": 3},
+  "findings": [
+    {
+      "id": "R06-P1-01",
+      "priority": "P1",
+      "title": "SQLite callback can hide a resource-stop exception and permit later slots",
+      "locations": ["code/safe_sqlite_replay.py:180", "code/safe_sqlite_replay.py:199", "code/official_generation_backend.py:351", "code/generation_supervisor.py:487"],
+      "trigger": "budget.check raises BudgetStop during SQLite execute/fetchall progress callback, before the external hard guard fires.",
+      "evidence": "CPython 3.12 progress_callback calls the Python handler, clears callback errors and returns a negative interruption code. The SQL caller consequently observes a database error, not the original BudgetStop. The generic replay exception handler converts it to REPLAY_ERROR; backend then reports QUERY_RETURNED. resource_status_in finds no RESOURCE_STOP and the batch may continue.",
+      "impact": "Violates the registered fail-closed stop-remainder policy and mislabels resource exhaustion as an ordinary replay error. External CPU/wall/RSS guards still apply, so this is not an assertion of unbounded execution.",
+      "required_fix": "Capture the original callback guard exception in a closure; return a nonzero callback result to interrupt SQLite; execute/fetchall exception handling must re-raise the captured exception before generic replay error conversion. Ensure monitor/probe exceptions also take a fail-closed resource/monitor stop route. Do not rely on exception type-name matching after crossing the SQLite callback boundary.",
+      "verification": "Static control-flow inspection is sufficient before enablement: every stored guard failure must reach backend RESOURCE_STOP or an explicitly supervisor-recognized monitor stop. Do not run SQL merely to address this review.",
+      "external_primary_source": "https://raw.githubusercontent.com/python/cpython/v3.12.0/Modules/_sqlite/connection.c"
+    },
+    {
+      "id": "R06-P1-02",
+      "priority": "P1",
+      "title": "Fixed twelve-slot denominator is neither retained across early precheck failure nor enforced exactly",
+      "locations": ["code/generation_supervisor.py:517", "code/generation_supervisor.py:160", "code/generation_supervisor.py:165", "code/generation_common.py:92"],
+      "trigger": "Lock acquisition, registration, execution-gate, original input/runtime integrity, or another precheck fails before validate_inputs initializes report slots; alternatively source_case_indices is changed to another distinct subset of the 21 exposed records.",
+      "evidence": "Initial batch receipt has registered_denominator=null and slots=[]. Slot materialization occurs only after load_registered(...,0) succeeds. load_registered permits any nonempty distinct valid index list and constructs its Cartesian bounds, instead of enforcing [6,9,14,3] and 12 canonical slots.",
+      "impact": "An integrity/refusal failure can produce a zero-slot report even though the registered protocol requires all twelve cells, including NOT_RUN. The executable admission also does not enforce the stated fixed source set/order/no-replacement rule.",
+      "required_fix": "Define the canonical ordered twelve slots for [6,9,14,3] x [2,4,8]; initialize the report with those NOT_RUN slots before fallible lock/prechecks and reject any differing registered source indices/slot identity/order. On precheck failure retain all twelve with the halt reason. Final freeze must bind the exact resulting code and registered protocol.",
+      "verification": "Read the early-failure paths and literal/JSON registration checks; confirm all twelve rows exist before the first fallible operational precheck, and validate exact source IDs, slot IDs, kind and bound. No target execution required."
+    }
+  ],
+  "optional_P2": [
+    {
+      "id": "R06-P2-01",
+      "title": "C-model sanity replay is optional scope expansion",
+      "recommendation": "A separately labeled C_MODEL_SANITY_ONLY replay can improve dynamic replay coverage if preregistered with full slot cost, but it is not necessary to permit the present limited feasibility trial. A contract model is not the query-SAT counterexample model and must never establish distinguishing-generation yield. If all twelve slots are UNSAT/refused/not-run, report that SAT export and replay dynamic coverage remain unestablished. Do not add a new method just to satisfy this review."
+    },
+    {
+      "id": "R06-P2-02",
+      "title": "Phase costs are not a flat partition",
+      "recommendation": "Keep process CPU/wall and supervisor wait4 as authoritative. Replay phase costs nest inside the enclosing decode/replay stage; import/connection setup/SQLite close and logging overhead are not all separately itemized. Do not sum both levels. Adding explicit SQLite setup/cleanup/overhead fields would improve attribution, but current enclosing/whole-process measurements avoid a serious missing-total claim."
+    },
+    {
+      "id": "R06-P2-03",
+      "title": "Preparation charge is an explicit reserve, not a measurement",
+      "recommendation": "The draft's 10 seconds is explicitly labeled conservative and unmeasured. Preserve that disclosure and document its coverage; do not rename it measured CPU or infer precise end-to-end preparation cost. Final registration should reconcile INTERFACE wording requesting an actual prior charge with the chosen defensible reserve/measurement policy."
+    }
+  ],
+  "confirmed_static_properties": [
+    "Original source SQL bytes and complete schema/C are hash-checked and passed unchanged to official parsing/encoding and to the admitted SQLite replay.",
+    "Independent checker matches pinned operational FK non-NULL membership, compound primary non-NULL uniqueness, Cartesian column comparisons, literal-left swap, not-null and complete AND/OR traversal within the supported INT profile.",
+    "Query-SAT model from the actual query solver is validated against full facts/assertions, exported via physical base tuples with separate model NULL flags, and reused for replay; no fabricated witness or formatter sentinel conversion was found.",
+    "Only dev03_10 and dev03_15 exact source hashes admit INT replay. DATE/division/ROUND and decimal/ROUND/VARCHAR cases remain inconclusive for query replay.",
+    "DATE display decoding matches pinned official epoch/range facts; no independent DATE query-dialect correctness claim follows from it.",
+    "Round04 supervisor ownership-sensitive kill/reap, single worker, nice15, 3CPU/4wall/256MiB, parent60, load1<=4 and availability>=25 admission are preserved by exact diff. Resource checks remain sampled with disclosed possible overshoot.",
+    "No automatic retry, bound enlargement, scientific method promotion, hardness or speedup claim is enabled by this protocol.",
+    "All six Python files were AST-parsed as text only. EXECUTION_ENABLED was False and protocol status DRAFT_NOT_REGISTERED in the reviewed snapshot."
+  ],
+  "remaining_gates": [
+    "Root repairs both P1 findings and checks the resulting exact diff.",
+    "Root completes exact registration, preparation charge policy, enablement and freeze under existing authorization.",
+    "Dynamic correctness, native imports, SQLite capability and practical resource fit remain untested and cannot be inferred from static review."
+  ],
+  "hash_manifest": "reviewed_input_hashes.json"
+}

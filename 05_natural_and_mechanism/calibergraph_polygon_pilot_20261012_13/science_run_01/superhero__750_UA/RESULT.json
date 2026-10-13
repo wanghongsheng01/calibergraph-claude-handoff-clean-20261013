@@ -1,0 +1,517 @@
+{
+  "case": "superhero__750",
+  "mode": "UA",
+  "status": "VALIDATED_NEQ",
+  "stages_seconds": {
+    "imports": 0.3557822504080832,
+    "schema_C": 0.0007947920821607113,
+    "parse": 0.2592797498218715,
+    "encode": 0.006659707985818386,
+    "search_including_solver": 0.05505733285099268,
+    "solver_calls": 0.03794854134321213,
+    "decode": 0.008757333736866713,
+    "replay": 0.0074119591154158115
+  },
+  "schema_C": {
+    "tables": 10,
+    "columns": 31,
+    "constraints": 27,
+    "all_source_columns_kept": true,
+    "constraint_kinds": [
+      "eq",
+      "not_null",
+      "primary"
+    ],
+    "auxiliary_integrity_list_not_appended": true
+  },
+  "raw_return": [
+    false,
+    {
+      "alignment": [
+        [
+          "id",
+          "alignment"
+        ],
+        [
+          17,
+          "Female20"
+        ]
+      ],
+      "attribute": [
+        [
+          "id",
+          "attribute_name"
+        ],
+        [
+          21,
+          "Female20"
+        ]
+      ],
+      "colour": [
+        [
+          "id",
+          "colour"
+        ],
+        [
+          20,
+          "Female20"
+        ]
+      ],
+      "gender": [
+        [
+          "id",
+          "gender"
+        ],
+        [
+          2,
+          null
+        ]
+      ],
+      "publisher": [
+        [
+          "id",
+          "publisher_name"
+        ],
+        [
+          18,
+          "Female20"
+        ]
+      ],
+      "race": [
+        [
+          "id",
+          "race"
+        ],
+        [
+          19,
+          "Female20"
+        ]
+      ],
+      "superhero": [
+        [
+          "id",
+          "superhero_name",
+          "full_name",
+          "gender_id",
+          "eye_colour_id",
+          "hair_colour_id",
+          "skin_colour_id",
+          "race_id",
+          "publisher_id",
+          "alignment_id",
+          "height_cm",
+          "weight_kg"
+        ],
+        [
+          22,
+          "Female26",
+          "Female27",
+          2,
+          20,
+          20,
+          20,
+          19,
+          18,
+          17,
+          28,
+          -54
+        ]
+      ],
+      "hero_attribute": [
+        [
+          "hero_id",
+          "attribute_id",
+          "attribute_value"
+        ],
+        [
+          22,
+          21,
+          20
+        ]
+      ],
+      "superpower": [
+        [
+          "id",
+          "power_name"
+        ],
+        [
+          23,
+          "Female20"
+        ]
+      ],
+      "hero_power": [
+        [
+          "hero_id",
+          "power_id"
+        ],
+        [
+          22,
+          23
+        ]
+      ]
+    },
+    null,
+    0.065033,
+    {
+      "iters": 2,
+      "backtracks": 0,
+      "type_2_backtracks": 0,
+      "unsat_core_sizes": [],
+      "M_sizes": [],
+      "solving_time_per_iter": [
+        0.010889,
+        0.017451
+      ],
+      "num_nodes_changed": [],
+      "ast_size": 5,
+      "complete_time": "2026-10-12 10:11:37.662160",
+      "total_time": 0.064361,
+      "status": "NEQ",
+      "cex": {
+        "alignment": [
+          [
+            "id",
+            "alignment"
+          ],
+          [
+            17,
+            "Female20"
+          ]
+        ],
+        "attribute": [
+          [
+            "id",
+            "attribute_name"
+          ],
+          [
+            21,
+            "Female20"
+          ]
+        ],
+        "colour": [
+          [
+            "id",
+            "colour"
+          ],
+          [
+            20,
+            "Female20"
+          ]
+        ],
+        "gender": [
+          [
+            "id",
+            "gender"
+          ],
+          [
+            2,
+            null
+          ]
+        ],
+        "publisher": [
+          [
+            "id",
+            "publisher_name"
+          ],
+          [
+            18,
+            "Female20"
+          ]
+        ],
+        "race": [
+          [
+            "id",
+            "race"
+          ],
+          [
+            19,
+            "Female20"
+          ]
+        ],
+        "superhero": [
+          [
+            "id",
+            "superhero_name",
+            "full_name",
+            "gender_id",
+            "eye_colour_id",
+            "hair_colour_id",
+            "skin_colour_id",
+            "race_id",
+            "publisher_id",
+            "alignment_id",
+            "height_cm",
+            "weight_kg"
+          ],
+          [
+            22,
+            "Female26",
+            "Female27",
+            2,
+            20,
+            20,
+            20,
+            19,
+            18,
+            17,
+            28,
+            -54
+          ]
+        ],
+        "hero_attribute": [
+          [
+            "hero_id",
+            "attribute_id",
+            "attribute_value"
+          ],
+          [
+            22,
+            21,
+            20
+          ]
+        ],
+        "superpower": [
+          [
+            "id",
+            "power_name"
+          ],
+          [
+            23,
+            "Female20"
+          ]
+        ],
+        "hero_power": [
+          [
+            "hero_id",
+            "power_id"
+          ],
+          [
+            22,
+            23
+          ]
+        ]
+      }
+    }
+  ],
+  "replay": {
+    "full_C_valid": true,
+    "foreign_key_check": [],
+    "gold": [
+      [
+        null
+      ]
+    ],
+    "predicted": [
+      [
+        -54.0
+      ]
+    ],
+    "different": true,
+    "storage_types": {
+      "alignment": [
+        [
+          "integer",
+          "text"
+        ]
+      ],
+      "attribute": [
+        [
+          "integer",
+          "text"
+        ]
+      ],
+      "colour": [
+        [
+          "integer",
+          "text"
+        ]
+      ],
+      "gender": [
+        [
+          "integer",
+          "null"
+        ]
+      ],
+      "publisher": [
+        [
+          "integer",
+          "text"
+        ]
+      ],
+      "race": [
+        [
+          "integer",
+          "text"
+        ]
+      ],
+      "superhero": [
+        [
+          "integer",
+          "text",
+          "text",
+          "integer",
+          "integer",
+          "integer",
+          "integer",
+          "integer",
+          "integer",
+          "integer",
+          "integer",
+          "integer"
+        ]
+      ],
+      "hero_attribute": [
+        [
+          "integer",
+          "integer",
+          "integer"
+        ]
+      ],
+      "superpower": [
+        [
+          "integer",
+          "text"
+        ]
+      ],
+      "hero_power": [
+        [
+          "integer",
+          "integer"
+        ]
+      ]
+    },
+    "source_schema_executed_unchanged": true
+  },
+  "interpretation": "N=1 symbolic typed fragment; no whole SQLite-domain equivalence claim",
+  "solver_calls": [
+    {
+      "index": 0,
+      "state": "SAT",
+      "elapsed_s": 0.017226291820406914
+    },
+    {
+      "index": 1,
+      "state": "SAT",
+      "elapsed_s": 0.02014991594478488
+    }
+  ],
+  "protocol_events": [],
+  "self_guard": {
+    "reason": null,
+    "elapsed_s": 0.6989166252315044,
+    "wall_seconds": 12,
+    "handle_count": 0,
+    "all_reaped": true,
+    "returncodes": [],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.151820958,
+        "bytes": 17547264
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.207599083,
+        "bytes": 21725184
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.24897125,
+        "bytes": 26951680
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.282065958,
+        "bytes": 27279360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.308284166,
+        "bytes": 27787264
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.33835825,
+        "bytes": 28180480
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.376255625,
+        "bytes": 30130176
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.409438125,
+        "bytes": 31031296
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.445583583,
+        "bytes": 32161792
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.477764166,
+        "bytes": 32194560
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.508586791,
+        "bytes": 35094528
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.541712541,
+        "bytes": 35651584
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.574725791,
+        "bytes": 36618240
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.611043833,
+        "bytes": 37060608
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.647343666,
+        "bytes": 37945344
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.684008875,
+        "bytes": 38453248
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.720548416,
+        "bytes": 38862848
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.760750833,
+        "bytes": 40157184
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.792678625,
+        "bytes": 40157184
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.821107833,
+        "bytes": 40157184
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.847176625,
+        "bytes": 40157184
+      }
+    ]
+  }
+}

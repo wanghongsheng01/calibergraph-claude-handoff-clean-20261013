@@ -1,0 +1,37 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix.json
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix_reviewed_main_01.json
+@@ -1,6 +1,6 @@
+ {
+   "schema_version": 1,
+-  "status": "PENDING_INDEPENDENT_STATIC_REVIEW",
++  "status": "STATIC_REVIEWED_READY_FOR_LOCAL_RUN",
+   "source_root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+   "binding_root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+   "support_root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+@@ -938,5 +938,26 @@
+     "cost_cohort": "distinct program identity and additional logging overhead; do not pool as unchanged cost experiment",
+     "fixture_receipt_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/PURE_STATUS_FIXTURE_RECEIPT.json",
+     "fixture_receipt_sha256": "688423e88f5b099f1c5f1949c9be08e17b2f3fa7624c4326f87fb3d4ed6fb909"
++  },
++  "statusfix_integration_registration_01": {
++    "created_utc": "2026-10-11T06:17:27.624347+00:00",
++    "prior_pending_lock": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix.json",
++    "prior_pending_lock_sha256": "994537c79bfaf7998800adcd3eb87092d6feaa56ecb053dfb142e09951e2ac76",
++    "source_revision": "UNCHANGED_SIX_PROGRAMS",
++    "static_source_review": {
++      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/PAIR_WORK_STATUS_FIX_INDEPENDENT_REVIEW.json",
++      "sha256": "8df48aa798c9422cef6bc92a8c169b7a612bd0a88dba582394d21c6164bb4d5d"
++    },
++    "purpose": "Limited new-supervisor integration receipt, not rerun/replacement of old v5 cost cohort",
++    "target_execution_by_author": "NONE",
++    "selection_interface_boundary": "Original continuous range interface retained: unchanged four source cases yield24slots, select5..18 exactly14 in one invocation.",
++    "selected_suite": {
++      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_14_SLOTS_01.json",
++      "sha256": "84b1077a998a5cac1d05e6ad5631fc3f6b0f6a618f0e228402c2eb70c08f12e9",
++      "selected_start": 5,
++      "selected_limit": 14,
++      "full_denominator": 24
++    },
++    "independent_ready_check": "Exact new lock integration review requested before root starts; existing 8df48 source review and full hash precheck cover unchanged bytes."
+   }
+ }

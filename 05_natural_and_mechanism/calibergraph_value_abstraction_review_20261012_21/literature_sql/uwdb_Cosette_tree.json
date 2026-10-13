@@ -1,0 +1,3564 @@
+{
+  "repo": "uwdb/Cosette",
+  "commit": "7a951aa3b1a70a8b310c676e524740b7114975c3",
+  "tree": {
+    "sha": "7a951aa3b1a70a8b310c676e524740b7114975c3",
+    "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/7a951aa3b1a70a8b310c676e524740b7114975c3",
+    "tree": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b0ae9a9ae886edd0e0ddd19a004d50181bbe705b",
+        "size": 31,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b0ae9a9ae886edd0e0ddd19a004d50181bbe705b"
+      },
+      {
+        "path": ".travis.yml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "20a709eef41314682183a8d62cf1df7d8ddccf5c",
+        "size": 272,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/20a709eef41314682183a8d62cf1df7d8ddccf5c"
+      },
+      {
+        "path": "Dockerfile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd821863d33ca90b3bade44c5a7d5af4d08e7234",
+        "size": 1445,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/dd821863d33ca90b3bade44c5a7d5af4d08e7234"
+      },
+      {
+        "path": "FrontendDockerFile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c330a545aabf63cb047f00f0ecc1992bff1cceb7",
+        "size": 1495,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c330a545aabf63cb047f00f0ecc1992bff1cceb7"
+      },
+      {
+        "path": "LICENSE.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a73a128c2854a6a1fdcb7cca16c622c8863f627",
+        "size": 1321,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2a73a128c2854a6a1fdcb7cca16c622c8863f627"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec331bc439afaf685c3b6d8d0c80e2abcb130cef",
+        "size": 925,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ec331bc439afaf685c3b6d8d0c80e2abcb130cef"
+      },
+      {
+        "path": "__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+        "size": 0,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+      },
+      {
+        "path": "analyze_result.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "848bd260027fea8b0ac8b4ff79da75954024babc",
+        "size": 1136,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/848bd260027fea8b0ac8b4ff79da75954024babc"
+      },
+      {
+        "path": "coq_solve.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "b4e6fd8b0150a4b271a482655c4b28fecbdb7980",
+        "size": 474,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b4e6fd8b0150a4b271a482655c4b28fecbdb7980"
+      },
+      {
+        "path": "dsl",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a52d978c41533e32f9b572a5f39dd2efd58c0b3b",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/a52d978c41533e32f9b572a5f39dd2efd58c0b3b"
+      },
+      {
+        "path": "dsl/.gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f68bc685193bd1c43d22fbf17d1d6917998d73b5",
+        "size": 9,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f68bc685193bd1c43d22fbf17d1d6917998d73b5"
+      },
+      {
+        "path": "dsl/CoqCodeGen.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4191062b6889f4723367d7ace9096f704b868f86",
+        "size": 617,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4191062b6889f4723367d7ace9096f704b868f86"
+      },
+      {
+        "path": "dsl/CosetteParser.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e9ea71f495a9b0a751fda8906432e999c008eba6",
+        "size": 27669,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e9ea71f495a9b0a751fda8906432e999c008eba6"
+      },
+      {
+        "path": "dsl/CosetteSolver.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "96f497ce7020b7e6d15ff408f3fb459a85dc2076",
+        "size": 853,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/96f497ce7020b7e6d15ff408f3fb459a85dc2076"
+      },
+      {
+        "path": "dsl/FunctionsAndTypesForParsing.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37008857ea5374546954cb467ff025b1b8638a7b",
+        "size": 5157,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/37008857ea5374546954cb467ff025b1b8638a7b"
+      },
+      {
+        "path": "dsl/LeanCodeGen.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c228ca2cd81e92764636c8ec21fe1738e844838c",
+        "size": 615,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c228ca2cd81e92764636c8ec21fe1738e844838c"
+      },
+      {
+        "path": "dsl/QueryParseTest.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3a83a0787b110848447ff2a1f671c30187f937a",
+        "size": 5048,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f3a83a0787b110848447ff2a1f671c30187f937a"
+      },
+      {
+        "path": "dsl/RosetteCodeGen.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c8bfe9682f4cb28460d7cc9deac1828f2453498f",
+        "size": 620,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c8bfe9682f4cb28460d7cc9deac1828f2453498f"
+      },
+      {
+        "path": "dsl/Text",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e11f486571f1258fc520d2bff57688ff6f2ae40c",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/e11f486571f1258fc520d2bff57688ff6f2ae40c"
+      },
+      {
+        "path": "dsl/Text/Parsec",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bfd4cc70ffc4827138faec2e034456b36c973b62",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/bfd4cc70ffc4827138faec2e034456b36c973b62"
+      },
+      {
+        "path": "dsl/Text/Parsec/String",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "61b39c9cda6b875392cfe6a5c685378405cf66fa",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/61b39c9cda6b875392cfe6a5c685378405cf66fa"
+      },
+      {
+        "path": "dsl/Text/Parsec/String/Char.hs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c153db8cc2f8373f7f4aa6fbda19c02479a5fa24",
+        "size": 1025,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c153db8cc2f8373f7f4aa6fbda19c02479a5fa24"
+      },
+      {
+        "path": "dsl/Text/Parsec/String/Combinator.hs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "373c5c6f5cf96eb072b94ccc656c1ae79d437ae4",
+        "size": 1789,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/373c5c6f5cf96eb072b94ccc656c1ae79d437ae4"
+      },
+      {
+        "path": "dsl/Text/Parsec/String/Expr.hs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a54bb188d4e258a26cfff236edc87082858b1050",
+        "size": 867,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a54bb188d4e258a26cfff236edc87082858b1050"
+      },
+      {
+        "path": "dsl/Text/Parsec/String/Parsec.hs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "43ed85aa9713eb54137e1e4cbb580a5388e511a6",
+        "size": 314,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/43ed85aa9713eb54137e1e4cbb580a5388e511a6"
+      },
+      {
+        "path": "dsl/ToHoTTSQL.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "50b822478b5939dafc9cb1098d66bab3b144c549",
+        "size": 29753,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/50b822478b5939dafc9cb1098d66bab3b144c549"
+      },
+      {
+        "path": "dsl/ToHoTTSQLTest.hs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e8e9559c28fce49a1048a04aa9ff96383d010ad",
+        "size": 941,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8e8e9559c28fce49a1048a04aa9ff96383d010ad"
+      },
+      {
+        "path": "dsl/ToLean.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4fb298d81e86a9916c2d6699f71f25ef49357cdf",
+        "size": 28377,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4fb298d81e86a9916c2d6699f71f25ef49357cdf"
+      },
+      {
+        "path": "dsl/ToRosette.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c8d29d7ec4e385c7e8de2680556492ad24fcb6f6",
+        "size": 28624,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c8d29d7ec4e385c7e8de2680556492ad24fcb6f6"
+      },
+      {
+        "path": "dsl/ToRosetteTest.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d313f1a9c32852b950e5a37d13a10798b72e9e5c",
+        "size": 527,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d313f1a9c32852b950e5a37d13a10798b72e9e5c"
+      },
+      {
+        "path": "dsl/Utilities.lhs",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3050353802b9c113876cdb71415b7fe4337f82af",
+        "size": 1031,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3050353802b9c113876cdb71415b7fe4337f82af"
+      },
+      {
+        "path": "dsl/build.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "17c32d231ac24465e9977509b432245d37522423",
+        "size": 71,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/17c32d231ac24465e9977509b432245d37522423"
+      },
+      {
+        "path": "dsl/cosette.cabal",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "176ac778d748f9a886d4668cda20c94c53a9199d",
+        "size": 1438,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/176ac778d748f9a886d4668cda20c94c53a9199d"
+      },
+      {
+        "path": "dsl/dsl-example.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "38155dbd67d024285a905d0ef9ab7fa36b58af30",
+        "size": 2117,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/38155dbd67d024285a905d0ef9ab7fa36b58af30"
+      },
+      {
+        "path": "dsl/readme.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d71a40d0706c4dbd30fbdc0d3b94fb0c796c4e03",
+        "size": 389,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d71a40d0706c4dbd30fbdc0d3b94fb0c796c4e03"
+      },
+      {
+        "path": "examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "157ff798d46932149ad485c5ccb894801cc5f094",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/157ff798d46932149ad485c5ccb894801cc5f094"
+      },
+      {
+        "path": "examples/calcite",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "759ad874417fa67d313be8e4e82b2cd7c9fe45e8",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/759ad874417fa67d313be8e4e82b2cd7c9fe45e8"
+      },
+      {
+        "path": "examples/calcite/calcite_result_with_label.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e2b8f0bc47aa68a0827266c4d8cacf4939d5660",
+        "size": 10992,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9e2b8f0bc47aa68a0827266c4d8cacf4939d5660"
+      },
+      {
+        "path": "examples/calcite/calcite_test.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ccac894d916989f42d71eba31fe057318dcc3004",
+        "size": 745,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ccac894d916989f42d71eba31fe057318dcc3004"
+      },
+      {
+        "path": "examples/calcite/calcite_tests.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2bfdcb23bd443a99271a8e47d0332b2e7437d5e",
+        "size": 92267,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f2bfdcb23bd443a99271a8e47d0332b2e7437d5e"
+      },
+      {
+        "path": "examples/calcite/testAddRedundantSemiJoinRule.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "143145df98ab709bdeb2034bb62d230a22f2c1b8",
+        "size": 434,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/143145df98ab709bdeb2034bb62d230a22f2c1b8"
+      },
+      {
+        "path": "examples/calcite/testAggregateConstantKeyRule.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ac73ec5501ec02c5cb4ae30e24b92f9d145a7e6c",
+        "size": 651,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ac73ec5501ec02c5cb4ae30e24b92f9d145a7e6c"
+      },
+      {
+        "path": "examples/calcite/testAggregateConstantKeyRule2.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "00a4b9ed04f4f4396f869fb7851d5f5e878d553f",
+        "size": 645,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/00a4b9ed04f4f4396f869fb7851d5f5e878d553f"
+      },
+      {
+        "path": "examples/calcite/testAggregateGroupingSetsProjectMerge.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cfa64aacccba711542091337eaa36a0d9a8daa09",
+        "size": 375,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/cfa64aacccba711542091337eaa36a0d9a8daa09"
+      },
+      {
+        "path": "examples/calcite/testAggregateProjectMerge.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "45c67d2d6a7b6119745986fa6b0956a796c9352f",
+        "size": 374,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/45c67d2d6a7b6119745986fa6b0956a796c9352f"
+      },
+      {
+        "path": "examples/calcite/testAggregateProjectPullUpConstants.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ef05e2a92179593a76e658835043e418f024981",
+        "size": 422,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3ef05e2a92179593a76e658835043e418f024981"
+      },
+      {
+        "path": "examples/calcite/testDecorrelateExists.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "61ce1abd466d3b7c2b26a3030346808b77614d43",
+        "size": 408,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/61ce1abd466d3b7c2b26a3030346808b77614d43"
+      },
+      {
+        "path": "examples/calcite/testDecorrelateTwoExists.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7f9d17d20a6696cfd08b935b814f8700046d234",
+        "size": 1060,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f7f9d17d20a6696cfd08b935b814f8700046d234"
+      },
+      {
+        "path": "examples/calcite/testDecorrelateTwoIn.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "df0166369c8632610a7e057cfa448cbe6608fc6e",
+        "size": 912,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/df0166369c8632610a7e057cfa448cbe6608fc6e"
+      },
+      {
+        "path": "examples/calcite/testEmptyAggregate.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2aba5516342721b8bcdfcc299012576c719e0823",
+        "size": 570,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2aba5516342721b8bcdfcc299012576c719e0823"
+      },
+      {
+        "path": "examples/calcite/testEmptyAggregateEmptyKey.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fab43efe4420c5bbcb669e243a232f28b1b005e8",
+        "size": 564,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fab43efe4420c5bbcb669e243a232f28b1b005e8"
+      },
+      {
+        "path": "examples/calcite/testEmptyAggregateEmptyKeyWithAggregateValuesRule.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b1e8487b4a7eee6d320c45eeafec3c2c3b93d50b",
+        "size": 573,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b1e8487b4a7eee6d320c45eeafec3c2c3b93d50b"
+      },
+      {
+        "path": "examples/calcite/testExpandFilterExists.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3781b6d525f3cb62aa6f48abf078fc87e122860f",
+        "size": 769,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3781b6d525f3cb62aa6f48abf078fc87e122860f"
+      },
+      {
+        "path": "examples/calcite/testExpandFilterExistsSimple.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aad72eee68e023c9e4927ca8de36752c65f40fa7",
+        "size": 694,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/aad72eee68e023c9e4927ca8de36752c65f40fa7"
+      },
+      {
+        "path": "examples/calcite/testExpandFilterExistsSimpleAnd.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe0a73d2a66bf025e805bd9bf9b5ea7d3a9a6ec1",
+        "size": 733,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fe0a73d2a66bf025e805bd9bf9b5ea7d3a9a6ec1"
+      },
+      {
+        "path": "examples/calcite/testExpandProjectScalar.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a272af33536b961b92dde300cd336cc90d30af9",
+        "size": 740,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3a272af33536b961b92dde300cd336cc90d30af9"
+      },
+      {
+        "path": "examples/calcite/testMergeFilter.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27350d18b2460b05b44119e77735fee0588fe63b",
+        "size": 251,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/27350d18b2460b05b44119e77735fee0588fe63b"
+      },
+      {
+        "path": "examples/calcite/testMergeJoinFilter.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4e7d91e6e2489c841e2050dd7e1506f6d4a211fa",
+        "size": 525,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4e7d91e6e2489c841e2050dd7e1506f6d4a211fa"
+      },
+      {
+        "path": "examples/calcite/testMergeUnionAll.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ced238662d7fe3971fdd20835900d8aa35049722",
+        "size": 838,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ced238662d7fe3971fdd20835900d8aa35049722"
+      },
+      {
+        "path": "examples/calcite/testPullAggregateThroughUnion.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9d0beb6d734132d1e71b136c946deda168e859e",
+        "size": 880,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a9d0beb6d734132d1e71b136c946deda168e859e"
+      },
+      {
+        "path": "examples/calcite/testPullConstantIntoProject.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e1f5e0ef963b926e2fb5e19207e5d2b6dbbf7976",
+        "size": 661,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e1f5e0ef963b926e2fb5e19207e5d2b6dbbf7976"
+      },
+      {
+        "path": "examples/calcite/testPullConstantThroughUnion.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6ec485d76f3b81d87b9223c10346305653a28f82",
+        "size": 416,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6ec485d76f3b81d87b9223c10346305653a28f82"
+      },
+      {
+        "path": "examples/calcite/testPullConstantThroughUnion2.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "31b0c904be7a73ce2e4ad105b566bb8cb49f2fc3",
+        "size": 697,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/31b0c904be7a73ce2e4ad105b566bb8cb49f2fc3"
+      },
+      {
+        "path": "examples/calcite/testPullConstantThroughUnion3.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "011e1336d44bdccb1babab31c58e01432dfddc10",
+        "size": 638,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/011e1336d44bdccb1babab31c58e01432dfddc10"
+      },
+      {
+        "path": "examples/calcite/testPullFilterThroughAggregate.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c45122ebaa870641237edcab6a172043e19f8d5f",
+        "size": 775,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c45122ebaa870641237edcab6a172043e19f8d5f"
+      },
+      {
+        "path": "examples/calcite/testPushFilterPastAgg.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "41d87ac96a742d1cc29eed8c208bbabbf8dc63d5",
+        "size": 322,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/41d87ac96a742d1cc29eed8c208bbabbf8dc63d5"
+      },
+      {
+        "path": "examples/calcite/testPushFilterPastAggTwo.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72e812644298edda5163d3141fb0e1683827bb52",
+        "size": 775,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/72e812644298edda5163d3141fb0e1683827bb52"
+      },
+      {
+        "path": "examples/calcite/testPushJoinCondDownToProject.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6832d70a88cb8797670c261119793d03ed4e5f2f",
+        "size": 913,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6832d70a88cb8797670c261119793d03ed4e5f2f"
+      },
+      {
+        "path": "examples/calcite/testPushJoinThroughUnionOnLeft.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d17bfcbba8b6dd0914fae08fa6578306024c845",
+        "size": 698,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4d17bfcbba8b6dd0914fae08fa6578306024c845"
+      },
+      {
+        "path": "examples/calcite/testPushJoinThroughUnionOnRight.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bfcb6512b4b01b2ad2d517eff3affa0b5849d217",
+        "size": 700,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bfcb6512b4b01b2ad2d517eff3affa0b5849d217"
+      },
+      {
+        "path": "examples/calcite/testPushProjectPastSetOp.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d6e2f8a8e93e545e59927db252f4f3dff018c7b",
+        "size": 646,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8d6e2f8a8e93e545e59927db252f4f3dff018c7b"
+      },
+      {
+        "path": "examples/calcite/testPushSemiJoinPastJoinRuleLeft.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "778bf71250b5e1d72fa055de26c18057dbecaa00",
+        "size": 592,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/778bf71250b5e1d72fa055de26c18057dbecaa00"
+      },
+      {
+        "path": "examples/calcite/testPushSemiJoinPastJoinRuleRight.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b5ed6c781500b31587eff0832e5f952f77875a31",
+        "size": 858,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b5ed6c781500b31587eff0832e5f952f77875a31"
+      },
+      {
+        "path": "examples/calcite/testReduceConstantsDup.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a192a934faa73713e3c1c7710296b5826d8cdab",
+        "size": 622,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3a192a934faa73713e3c1c7710296b5826d8cdab"
+      },
+      {
+        "path": "examples/calcite/testReduceConstantsNegated.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92e3c3b4ec071a8198ce067c247505ca7e18b560",
+        "size": 597,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/92e3c3b4ec071a8198ce067c247505ca7e18b560"
+      },
+      {
+        "path": "examples/calcite/testReduceConstantsNegatedInverted.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "54358623bcb1dae1dcacaa97a61820a65c8e1046",
+        "size": 594,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/54358623bcb1dae1dcacaa97a61820a65c8e1046"
+      },
+      {
+        "path": "examples/calcite/testRemoveSemiJoin.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "029b6f5696d282128688e1369e4d659811a58859",
+        "size": 652,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/029b6f5696d282128688e1369e4d659811a58859"
+      },
+      {
+        "path": "examples/calcite/testRemoveSemiJoinRight.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9222a12010265bb9c64797bd659a3a4fb919e8c",
+        "size": 485,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c9222a12010265bb9c64797bd659a3a4fb919e8c"
+      },
+      {
+        "path": "examples/calcite/testRemoveSemiJoinRightWithFilter.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbfa5011cc13243043c0bbae2b94aa85cf44dd01",
+        "size": 548,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/dbfa5011cc13243043c0bbae2b94aa85cf44dd01"
+      },
+      {
+        "path": "examples/calcite/testRemoveSemiJoinWithFilter.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e20cdf0f8a4c55239ddcf3527b6e309c791bd474",
+        "size": 717,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e20cdf0f8a4c55239ddcf3527b6e309c791bd474"
+      },
+      {
+        "path": "examples/calcite/testSemiJoinRuleExists.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a1992231c66a29b32972abab3d1dfd6049fc6318",
+        "size": 817,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a1992231c66a29b32972abab3d1dfd6049fc6318"
+      },
+      {
+        "path": "examples/calcite/testTransitiveInferenceAggregate.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e95ac3f855b2d0d33249ad8f71b35eea7ad4f470",
+        "size": 844,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e95ac3f855b2d0d33249ad8f71b35eea7ad4f470"
+      },
+      {
+        "path": "examples/calcite/testTransitiveInferenceConjunctInPullUp.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "301445f791cd29822cb2ac2aed02b44535b0ac16",
+        "size": 877,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/301445f791cd29822cb2ac2aed02b44535b0ac16"
+      },
+      {
+        "path": "examples/calcite/testTransitiveInferenceJoin.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cf4ab8c52bcf53608e8f769f3906ad89cb8b6ba3",
+        "size": 762,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/cf4ab8c52bcf53608e8f769f3906ad89cb8b6ba3"
+      },
+      {
+        "path": "examples/calcite/testTransitiveInferenceJoin3wayAgg.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "466c05f8bec7782d4d027557c80598e642e64b95",
+        "size": 1006,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/466c05f8bec7782d4d027557c80598e642e64b95"
+      },
+      {
+        "path": "examples/calcite/testTransitiveInferenceProject.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0339fc18629db5ea858efae68660d1fed36b04c5",
+        "size": 762,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0339fc18629db5ea858efae68660d1fed36b04c5"
+      },
+      {
+        "path": "examples/calcite/testUnionToDistinctRule.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b8acea146132071f4a61700034f43ede464294aa",
+        "size": 678,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b8acea146132071f4a61700034f43ede464294aa"
+      },
+      {
+        "path": "examples/conditional",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "126a7fe550dbd7062e4454987cb902b4bdc2be23",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/126a7fe550dbd7062e4454987cb902b4bdc2be23"
+      },
+      {
+        "path": "examples/conditional/conditional.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a585149f09f623ff668f37dcba8642df0491b8be",
+        "size": 5794,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a585149f09f623ff668f37dcba8642df0491b8be"
+      },
+      {
+        "path": "examples/conditional/ex1sigmod92.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e088c4a0920694567bd61b7fb03c48bec8697c9f",
+        "size": 792,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e088c4a0920694567bd61b7fb03c48bec8697c9f"
+      },
+      {
+        "path": "examples/conditional/ex2sigmod83.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6189415821bc4dbc177dd46f76001273c9aaa041",
+        "size": 325,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6189415821bc4dbc177dd46f76001273c9aaa041"
+      },
+      {
+        "path": "examples/conditional/ex2sigmod92.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b06d556d7bc0fe0e67fbf74ea6683d025720d704",
+        "size": 594,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b06d556d7bc0fe0e67fbf74ea6683d025720d704"
+      },
+      {
+        "path": "examples/conditional/ex2sigmod92simpl.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4bc57824a0269b89cb683cea6fb636d7e6c9d158",
+        "size": 529,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4bc57824a0269b89cb683cea6fb636d7e6c9d158"
+      },
+      {
+        "path": "examples/conditional/ex3sigmod92.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d912dc545dfd24f657d87b915dcc63228bd981d3",
+        "size": 599,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d912dc545dfd24f657d87b915dcc63228bd981d3"
+      },
+      {
+        "path": "examples/conditional/fkPennTR.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72b372db44e8a9d8488385cd54e402f8be616f88",
+        "size": 707,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/72b372db44e8a9d8488385cd54e402f8be616f88"
+      },
+      {
+        "path": "examples/conditional/index_sigmod82.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ee1204d6aa5ad711276ce4e37aaaff5e9a76920",
+        "size": 428,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4ee1204d6aa5ad711276ce4e37aaaff5e9a76920"
+      },
+      {
+        "path": "examples/conditional/inline-exists.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8d6ac6c6fe072ec974431d08b8d59196a1b93876",
+        "size": 466,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8d6ac6c6fe072ec974431d08b8d59196a1b93876"
+      },
+      {
+        "path": "examples/conditional/missing-pred.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "56207f24a085c5d8101d96619c224846bba444e1",
+        "size": 189,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/56207f24a085c5d8101d96619c224846bba444e1"
+      },
+      {
+        "path": "examples/inequal_queries",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bd7b13311d8252ce8a270ffea6bf94f012ab962f",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/bd7b13311d8252ce8a270ffea6bf94f012ab962f"
+      },
+      {
+        "path": "examples/inequal_queries/344-exam-1.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e7431dd647f2ffc8252784b1af7f19367e39bf9",
+        "size": 507,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8e7431dd647f2ffc8252784b1af7f19367e39bf9"
+      },
+      {
+        "path": "examples/inequal_queries/344Q1.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "23ee1b097df4b2df67b436019bbc3314e62458c7",
+        "size": 574,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/23ee1b097df4b2df67b436019bbc3314e62458c7"
+      },
+      {
+        "path": "examples/inequal_queries/344Q2.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef9bcd7c117d53eee62a63388d78ad6cf62746be",
+        "size": 422,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ef9bcd7c117d53eee62a63388d78ad6cf62746be"
+      },
+      {
+        "path": "examples/inequal_queries/countbug.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e736479f9591ead6771bdf82829e7d8f1560ec1e",
+        "size": 516,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e736479f9591ead6771bdf82829e7d8f1560ec1e"
+      },
+      {
+        "path": "examples/inequal_queries/inline-exists.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f0725f0875e468df322af4b2602d95551d1a2a6e",
+        "size": 406,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f0725f0875e468df322af4b2602d95551d1a2a6e"
+      },
+      {
+        "path": "examples/inequal_queries/issue29.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "75fdc64562616359af59d40dc3b06365e1a1c8cb",
+        "size": 543,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/75fdc64562616359af59d40dc3b06365e1a1c8cb"
+      },
+      {
+        "path": "examples/inequal_queries/string_ex1.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d01e14a27e5e394f28dc6faa907281f7d6acce2c",
+        "size": 362,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d01e14a27e5e394f28dc6faa907281f7d6acce2c"
+      },
+      {
+        "path": "examples/sqlrewrites",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2a0ee8bbe884c7ffaaceb40b1f421f274cc95801",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/2a0ee8bbe884c7ffaaceb40b1f421f274cc95801"
+      },
+      {
+        "path": "examples/sqlrewrites/CQExample0.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2451ed00e03187b0fb93277180d30420b0844c58",
+        "size": 278,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2451ed00e03187b0fb93277180d30420b0844c58"
+      },
+      {
+        "path": "examples/sqlrewrites/CQExample1.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f99ae0a375d28a3da5f21bc068e32bde819d014a",
+        "size": 210,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f99ae0a375d28a3da5f21bc068e32bde819d014a"
+      },
+      {
+        "path": "examples/sqlrewrites/SelfJoin0.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7e829cfd6797f7425b84446ccac405f847579354",
+        "size": 131,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7e829cfd6797f7425b84446ccac405f847579354"
+      },
+      {
+        "path": "examples/sqlrewrites/SelfJoin1.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8aac67b8d404a3ea3d9ad5f97a67b9af77169a64",
+        "size": 162,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8aac67b8d404a3ea3d9ad5f97a67b9af77169a64"
+      },
+      {
+        "path": "examples/sqlrewrites/SelfJoin2.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fb8bd6ef7a2057f520050f761ad2f9034df0e6fb",
+        "size": 220,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fb8bd6ef7a2057f520050f761ad2f9034df0e6fb"
+      },
+      {
+        "path": "examples/sqlrewrites/aggOnExpr.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b7759e52a203610622e3aecf69cd46d829c9a67a",
+        "size": 381,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b7759e52a203610622e3aecf69cd46d829c9a67a"
+      },
+      {
+        "path": "examples/sqlrewrites/commutativeSelect.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bc8aad101a97e34560db4aa750f58e218701ee1e",
+        "size": 222,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bc8aad101a97e34560db4aa750f58e218701ee1e"
+      },
+      {
+        "path": "examples/sqlrewrites/conjunctSelect.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d91a735879481ff1cc0d64def27cdf3e7e3fd298",
+        "size": 202,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d91a735879481ff1cc0d64def27cdf3e7e3fd298"
+      },
+      {
+        "path": "examples/sqlrewrites/countProject.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8b1efc973c4a86410d9fe54217f191b6b04104e1",
+        "size": 337,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8b1efc973c4a86410d9fe54217f191b6b04104e1"
+      },
+      {
+        "path": "examples/sqlrewrites/disjointSelect.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5d82bb055ab34d8e0dbb47e97d74fd5c53eca894",
+        "size": 252,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5d82bb055ab34d8e0dbb47e97d74fd5c53eca894"
+      },
+      {
+        "path": "examples/sqlrewrites/havingToWhere.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92d8df4137a0ba85b6b8afb9f74551f6c3a87af5",
+        "size": 351,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/92d8df4137a0ba85b6b8afb9f74551f6c3a87af5"
+      },
+      {
+        "path": "examples/sqlrewrites/idempotentSelect.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b251dec95f79bf67939f6c93e55203025d15e32",
+        "size": 171,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1b251dec95f79bf67939f6c93e55203025d15e32"
+      },
+      {
+        "path": "examples/sqlrewrites/inlineCorrelatedSubqueries.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a1c9c5a40bda5ed3117d23cd22384a7df96e85ed",
+        "size": 159,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a1c9c5a40bda5ed3117d23cd22384a7df96e85ed"
+      },
+      {
+        "path": "examples/sqlrewrites/joinCommute.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "436b93ebf9742827f0e0307a18b6e046d445c934",
+        "size": 561,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/436b93ebf9742827f0e0307a18b6e046d445c934"
+      },
+      {
+        "path": "examples/sqlrewrites/productDistributesOverUnion.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e91aed83299e9f1e7de3f672b41e9607a25b4970",
+        "size": 217,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e91aed83299e9f1e7de3f672b41e9607a25b4970"
+      },
+      {
+        "path": "examples/sqlrewrites/projectJoinTranspose.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c36160af2d8af7d654fc7081f909d8648b71a033",
+        "size": 531,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c36160af2d8af7d654fc7081f909d8648b71a033"
+      },
+      {
+        "path": "examples/sqlrewrites/projectionDistributesOverUnion.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "df242a51088dd2a288f866f391ab3855ee6e4fdb",
+        "size": 161,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/df242a51088dd2a288f866f391ab3855ee6e4fdb"
+      },
+      {
+        "path": "examples/sqlrewrites/pullsubquery.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7eb3cb977a2d182d646cea5fc45ea43c9553146f",
+        "size": 254,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7eb3cb977a2d182d646cea5fc45ea43c9553146f"
+      },
+      {
+        "path": "examples/sqlrewrites/pushProj.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9367824679c6b1fa058649b234d7868efc5b48d7",
+        "size": 239,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9367824679c6b1fa058649b234d7868efc5b48d7"
+      },
+      {
+        "path": "examples/sqlrewrites/pushdownSelect.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "abbc76c3f26c758beb5d73fcb335295a2012aeb5",
+        "size": 207,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/abbc76c3f26c758beb5d73fcb335295a2012aeb5"
+      },
+      {
+        "path": "examples/sqlrewrites/readme.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3bbb3abbecfba5b0a35513840fcb82fced9b3bdd",
+        "size": 278,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3bbb3abbecfba5b0a35513840fcb82fced9b3bdd"
+      },
+      {
+        "path": "examples/sqlrewrites/timesAndDiv.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "857e68e1c100168c1f7a676a676cca34fdb84df5",
+        "size": 361,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/857e68e1c100168c1f7a676a676cca34fdb84df5"
+      },
+      {
+        "path": "examples/sqlrewrites/unionEmpty.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c338607a23afef7dc4bc7d0bc39e7d80feab22b7",
+        "size": 325,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c338607a23afef7dc4bc7d0bc39e7d80feab22b7"
+      },
+      {
+        "path": "examples/to_be_supported",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "863185ea936e586e41f06a123b4c45edcc513ed0",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/863185ea936e586e41f06a123b4c45edcc513ed0"
+      },
+      {
+        "path": "examples/to_be_supported/thetaSemiJoinIntro.cos",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8f4465f75f4d90d68b83d1934df720d155fa0be",
+        "size": 219,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e8f4465f75f4d90d68b83d1934df720d155fa0be"
+      },
+      {
+        "path": "gen_cos_files.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "767ee617e514d9dc5f4c6698bf98c172df88bfbb",
+        "size": 5028,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/767ee617e514d9dc5f4c6698bf98c172df88bfbb"
+      },
+      {
+        "path": "hott",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "9255f27426cc201fb68693c0ed44f907f25a8327",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/9255f27426cc201fb68693c0ed44f907f25a8327"
+      },
+      {
+        "path": "hott/.dir-locals.el",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc8314a8a3b83c1e31c89020fee4f1c852f957b4",
+        "size": 652,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fc8314a8a3b83c1e31c89020fee4f1c852f957b4"
+      },
+      {
+        "path": "hott/BlogPost.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "16ff061572756c6fec94ed94d11c75894ef72257",
+        "size": 20335,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/16ff061572756c6fec94ed94d11c75894ef72257"
+      },
+      {
+        "path": "hott/Makefile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d4d332f971c78f40360535583401541542114082",
+        "size": 1183,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d4d332f971c78f40360535583401541542114082"
+      },
+      {
+        "path": "hott/library",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "91e73323bcfaf47830bcd703e9446dac2e5b11fa",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/91e73323bcfaf47830bcd703e9446dac2e5b11fa"
+      },
+      {
+        "path": "hott/library/AutoTactics.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3832626a5491be165320e7b3022140df7624a103",
+        "size": 4232,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3832626a5491be165320e7b3022140df7624a103"
+      },
+      {
+        "path": "hott/library/CQTactics.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "817c34e767a6fd855f0b4af64b4b9e2cd4bf8a0c",
+        "size": 1578,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/817c34e767a6fd855f0b4af64b4b9e2cd4bf8a0c"
+      },
+      {
+        "path": "hott/library/Denotation.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "51dc9297efcbd68e8bf71208cb3953c983d3a98c",
+        "size": 111,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/51dc9297efcbd68e8bf71208cb3953c983d3a98c"
+      },
+      {
+        "path": "hott/library/HoTTEx.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0383afc7fe83ae1b558c7919ece1c853eabe4672",
+        "size": 28916,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0383afc7fe83ae1b558c7919ece1c853eabe4672"
+      },
+      {
+        "path": "hott/library/UnivalentSemantics.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12c81520b099e84828d6ea2e7906238283a5e8a0",
+        "size": 18512,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/12c81520b099e84828d6ea2e7906238283a5e8a0"
+      },
+      {
+        "path": "hott/optimizations",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f9318e006749c331c67bed16d3fb1c253877c36d",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/f9318e006749c331c67bed16d3fb1c253877c36d"
+      },
+      {
+        "path": "hott/optimizations/AddRedundantSemiJoinRule.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ed02f9904316cf8204fca2b1f2e594cec7876fea",
+        "size": 3958,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ed02f9904316cf8204fca2b1f2e594cec7876fea"
+      },
+      {
+        "path": "hott/optimizations/AggregateGroupingSetsProjectMerge.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93888a80f49acfeb7cc3d6f96a1d1f6c356cb8a6",
+        "size": 2089,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/93888a80f49acfeb7cc3d6f96a1d1f6c356cb8a6"
+      },
+      {
+        "path": "hott/optimizations/AggregateProjectMerge.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3bb37c4123cc40ce12a62095dc9092f4d28f3f51",
+        "size": 2416,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3bb37c4123cc40ce12a62095dc9092f4d28f3f51"
+      },
+      {
+        "path": "hott/optimizations/AggregateProjectPullUpConstants.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4cc8f0b6b50cf614c165fc997c276da36d5e4927",
+        "size": 3679,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4cc8f0b6b50cf614c165fc997c276da36d5e4927"
+      },
+      {
+        "path": "hott/optimizations/Aggregation.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ca9c79357754b096e0f30f881d9ec5bd4c3be61",
+        "size": 2711,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9ca9c79357754b096e0f30f881d9ec5bd4c3be61"
+      },
+      {
+        "path": "hott/optimizations/CSE344.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd6ccc2d0a23e4cc22a40d9857bc0635e698268d",
+        "size": 5861,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fd6ccc2d0a23e4cc22a40d9857bc0635e698268d"
+      },
+      {
+        "path": "hott/optimizations/CSE344Final1.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65b1e83e655a6e662af0bbb467275031ce39d503",
+        "size": 2621,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/65b1e83e655a6e662af0bbb467275031ce39d503"
+      },
+      {
+        "path": "hott/optimizations/Conjunctive.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "736d3a717c1cdaac293ab6cd3cfb190d6e61bdfd",
+        "size": 2268,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/736d3a717c1cdaac293ab6cd3cfb190d6e61bdfd"
+      },
+      {
+        "path": "hott/optimizations/DecorrelateExists.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0fd84a47b85d6e9df24ab84334f731985b80c808",
+        "size": 3305,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0fd84a47b85d6e9df24ab84334f731985b80c808"
+      },
+      {
+        "path": "hott/optimizations/Index.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9b395636f0f3b3317f09a4a4727e92f785ecd2ee",
+        "size": 2691,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9b395636f0f3b3317f09a4a4727e92f785ecd2ee"
+      },
+      {
+        "path": "hott/optimizations/Magic.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "550f4f95fac6d9281a24f8bf2401e8d3767b720c",
+        "size": 11351,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/550f4f95fac6d9281a24f8bf2401e8d3767b720c"
+      },
+      {
+        "path": "hott/optimizations/MergeFilter.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46114f2237d59f7540be4600eed9a32276a14ae4",
+        "size": 2018,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/46114f2237d59f7540be4600eed9a32276a14ae4"
+      },
+      {
+        "path": "hott/optimizations/MergeJoinFilter.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a5bdbb712e607c1925c4e61e5a805c1b0ee52d1b",
+        "size": 4426,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a5bdbb712e607c1925c4e61e5a805c1b0ee52d1b"
+      },
+      {
+        "path": "hott/optimizations/PullAggregateThroughUnion.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "812aa58b33545628a03333341e18e170c4bd8b39",
+        "size": 3723,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/812aa58b33545628a03333341e18e170c4bd8b39"
+      },
+      {
+        "path": "hott/optimizations/PullConstantThroughUnion.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "badcbb1535a56ef98156673bf2eb5d75e3b586de",
+        "size": 3432,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/badcbb1535a56ef98156673bf2eb5d75e3b586de"
+      },
+      {
+        "path": "hott/optimizations/PullConstantThroughUnion3.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "adaf00dcd95a704aadd847b24c1871210407cb6c",
+        "size": 3347,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/adaf00dcd95a704aadd847b24c1871210407cb6c"
+      },
+      {
+        "path": "hott/optimizations/PullFilterThroughAggregate.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6fa314d5946c9f984b98634de48ed760d8220ab7",
+        "size": 3391,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6fa314d5946c9f984b98634de48ed760d8220ab7"
+      },
+      {
+        "path": "hott/optimizations/PushFilterPastAgg.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1f789c633208f7a18a5f7208cf5387094c6961a0",
+        "size": 4330,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1f789c633208f7a18a5f7208cf5387094c6961a0"
+      },
+      {
+        "path": "hott/optimizations/PushJoinThroughUnionOnLeft.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "85ab753c5fd33428fefe7fcfe553bd272b2e9f72",
+        "size": 3198,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/85ab753c5fd33428fefe7fcfe553bd272b2e9f72"
+      },
+      {
+        "path": "hott/optimizations/PushJoinThroughUnionOnRight.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1bd308b772f185969a6e634a2d7044274e05cf4e",
+        "size": 3198,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1bd308b772f185969a6e634a2d7044274e05cf4e"
+      },
+      {
+        "path": "hott/optimizations/PushProjectPastSetOp.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc00de5989fd8924b56a96e8ead6a8419c5a3595",
+        "size": 2846,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fc00de5989fd8924b56a96e8ead6a8419c5a3595"
+      },
+      {
+        "path": "hott/optimizations/PushSemiJoinPastJoinRuleLeft.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6ce6b46c12117390761bf4885d2d45c60ebcbec",
+        "size": 7268,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c6ce6b46c12117390761bf4885d2d45c60ebcbec"
+      },
+      {
+        "path": "hott/optimizations/RelationalAlgebra.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "13612e02ef465a5b7d4ca9335d65d5272ca3803d",
+        "size": 4791,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/13612e02ef465a5b7d4ca9335d65d5272ca3803d"
+      },
+      {
+        "path": "hott/optimizations/RemoveSemiJoinRightWithFilter.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c7ee93e62225807a497d091d14ca85b29b5ae87c",
+        "size": 3120,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c7ee93e62225807a497d091d14ca85b29b5ae87c"
+      },
+      {
+        "path": "hott/optimizations/RemoveSemiJoinWithFilter.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f4d7a8ace70a745fc1b09109926394695e5642cf",
+        "size": 3149,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f4d7a8ace70a745fc1b09109926394695e5642cf"
+      },
+      {
+        "path": "hott/optimizations/Rewrite.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eebf513b8b80f85f9734655d3e918d33b764c9a0",
+        "size": 619,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/eebf513b8b80f85f9734655d3e918d33b764c9a0"
+      },
+      {
+        "path": "hott/optimizations/Subquery.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fff5077c74a33aa8d768eede89cd9950cf4bc8b6",
+        "size": 1872,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fff5077c74a33aa8d768eede89cd9950cf4bc8b6"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceAggregate.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "58236d8aff43fe5d13364168fbda3e57d6ffbf6a",
+        "size": 4034,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/58236d8aff43fe5d13364168fbda3e57d6ffbf6a"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceComplexPredicate.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5ad0802461f2f0006d6d5e799f9d04618ea0e834",
+        "size": 5399,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5ad0802461f2f0006d6d5e799f9d04618ea0e834"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceConjunctInPullUp.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7565191573efb48cb7fa0c8a4651e88792d2a094",
+        "size": 4383,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7565191573efb48cb7fa0c8a4651e88792d2a094"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceJoin.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b789584d0cb2f90fb49f2a8d6c590f0723185474",
+        "size": 3970,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b789584d0cb2f90fb49f2a8d6c590f0723185474"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceJoin3way.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "39ec062685a3f7437e262ada4a024322287301ea",
+        "size": 4717,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/39ec062685a3f7437e262ada4a024322287301ea"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceJoin3wayAgg.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6c3397b91491e8d2d87ee108b13753c69b2c114",
+        "size": 5190,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c6c3397b91491e8d2d87ee108b13753c69b2c114"
+      },
+      {
+        "path": "hott/optimizations/TransitiveInferenceProject.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "10207a7ae8c1ed9af97ce279d2315799438c0d4a",
+        "size": 4006,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/10207a7ae8c1ed9af97ce279d2315799438c0d4a"
+      },
+      {
+        "path": "hott/optimizations/card.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1ea069fbc6af2bb4fab7b0cfce9c0c53f44e5893",
+        "size": 913,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1ea069fbc6af2bb4fab7b0cfce9c0c53f44e5893"
+      },
+      {
+        "path": "hott/optimizations/commonexp.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cbae86fa36520309af42bea3143c36ac0cd29a8c",
+        "size": 1178,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/cbae86fa36520309af42bea3143c36ac0cd29a8c"
+      },
+      {
+        "path": "hott/optimizations/ex1sigmod92.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1188cd3f11e96727a9d0f6da8e0460acca11ccba",
+        "size": 5977,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1188cd3f11e96727a9d0f6da8e0460acca11ccba"
+      },
+      {
+        "path": "hott/optimizations/ex2sigmod92.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b6f8691be853c4fcffb7fe597fbc2eb8ec42d31",
+        "size": 4860,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1b6f8691be853c4fcffb7fe597fbc2eb8ec42d31"
+      },
+      {
+        "path": "hott/optimizations/ex2sigmod92simpl.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "34e1be75bba3ea2857836b02c85395ea8e1efed9",
+        "size": 3804,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/34e1be75bba3ea2857836b02c85395ea8e1efed9"
+      },
+      {
+        "path": "hott/optimizations/ex3sigmod92.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2d8e307207c9ace6a598175795aede8ad22ca288",
+        "size": 3050,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2d8e307207c9ace6a598175795aede8ad22ca288"
+      },
+      {
+        "path": "hott/optimizations/fkPennTR.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7a9c6d171f34390a72f17fb3bd8989e208c276f",
+        "size": 9319,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f7a9c6d171f34390a72f17fb3bd8989e208c276f"
+      },
+      {
+        "path": "hott/optimizations/index_sigmod82.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e382f167e0ee814133efcb84b8e342305b6044f8",
+        "size": 4893,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e382f167e0ee814133efcb84b8e342305b6044f8"
+      },
+      {
+        "path": "hott/optimizations/joinCommute.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8e6936e2af35ecf824857612c6702749b16f8133",
+        "size": 2004,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8e6936e2af35ecf824857612c6702749b16f8133"
+      },
+      {
+        "path": "hott/optimizations/oracle15fk.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5f05ea4b8e179074b1db907dafcbe552c12be530",
+        "size": 6262,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5f05ea4b8e179074b1db907dafcbe552c12be530"
+      },
+      {
+        "path": "hott/optimizations/projectJoinTranspose.v",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1a0b9fa2cd64b24f6b2f32e2628f2b7d66de270b",
+        "size": 2748,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1a0b9fa2cd64b24f6b2f32e2628f2b7d66de270b"
+      },
+      {
+        "path": "hott/optimizations/stats.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b052f9ef53b70f884b4d505079b37866be8aa9ad",
+        "size": 727,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b052f9ef53b70f884b4d505079b37866be8aa9ad"
+      },
+      {
+        "path": "hott/readme.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bcee988304e6e6a0e063bd8dbf8823f2bb8cd1b5",
+        "size": 770,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bcee988304e6e6a0e063bd8dbf8823f2bb8cd1b5"
+      },
+      {
+        "path": "init_docker.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "d15a909824dcb1b241aa332bcd025af6cb53a2db",
+        "size": 619,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d15a909824dcb1b241aa332bcd025af6cb53a2db"
+      },
+      {
+        "path": "manual_test.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "065ca49b549a41f33608911a95e5797c93e7c8fa",
+        "size": 1964,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/065ca49b549a41f33608911a95e5797c93e7c8fa"
+      },
+      {
+        "path": "rosette",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b06b23344039bca859c5fd8d9dd910b2047f99cf",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/b06b23344039bca859c5fd8d9dd910b2047f99cf"
+      },
+      {
+        "path": "rosette/cidr-benchmarks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "3eb3153408a80e814f31e304935d7fba488d9f07",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/3eb3153408a80e814f31e304935d7fba488d9f07"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/aggr-join.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3f1d35024b6f15417757edc6e16522f34351b712",
+        "size": 1979,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3f1d35024b6f15417757edc6e16522f34351b712"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/aggr-pull-up.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "743ac9794154627b4faeaf595ee27a2386008998",
+        "size": 3283,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/743ac9794154627b4faeaf595ee27a2386008998"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/count-bug.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "332ad88ca6448b522bfeeb58e250c27d70d5dc30",
+        "size": 2486,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/332ad88ca6448b522bfeeb58e250c27d70d5dc30"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/final-exam-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "50faa4503cd97fd44f12fb8d0a2c55ee06d34ac8",
+        "size": 4736,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/50faa4503cd97fd44f12fb8d0a2c55ee06d34ac8"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/final-exam-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0af0157ce0a80690a9915b9a645cd34587f3b42f",
+        "size": 2759,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0af0157ce0a80690a9915b9a645cd34587f3b42f"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/final-exam-3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b75513c4959d3469a7e0b58dac75503819af3679",
+        "size": 2769,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b75513c4959d3469a7e0b58dac75503819af3679"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/final-exam-4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "42308c5fc7f614667f0b864164c40d7876be6e48",
+        "size": 3106,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/42308c5fc7f614667f0b864164c40d7876be6e48"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/magic-set.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9a7a655142d0d117acca49df811f24130d73f4b",
+        "size": 642,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d9a7a655142d0d117acca49df811f24130d73f4b"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/mutant-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7ced23514477717d8b242622cc869163e558d6d",
+        "size": 1613,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f7ced23514477717d8b242622cc869163e558d6d"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/mutant-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "171566f6fffc8712d7a3bf0a7094d0a7202dd6d8",
+        "size": 1603,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/171566f6fffc8712d7a3bf0a7094d0a7202dd6d8"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/mutant-3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0db3b7bb77a30f326d75f92fa95f2748cf45f1f9",
+        "size": 1802,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0db3b7bb77a30f326d75f92fa95f2748cf45f1f9"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/mutant-4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9b494544ed541682187333feb23fafa950c8f966",
+        "size": 2784,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9b494544ed541682187333feb23fafa950c8f966"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/oracle-12c-bug.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3ce12af386f076af18028d7afbf3821c66ace6cc",
+        "size": 4284,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3ce12af386f076af18028d7afbf3821c66ace6cc"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/pgsql-bug-simplified.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7eb5c8c352fac2c26c68e63cfb06b6a15c30ce8",
+        "size": 7283,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f7eb5c8c352fac2c26c68e63cfb06b6a15c30ce8"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/pgsql-bug-super-simplified.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72fda77d13ee8d919f5d4ac18df0ddcf7de000ee",
+        "size": 6929,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/72fda77d13ee8d919f5d4ac18df0ddcf7de000ee"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/pgsql-bug.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "382b7e589d6c13367b35f01abc352446fcd32d81",
+        "size": 7341,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/382b7e589d6c13367b35f01abc352446fcd32d81"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/push-projection.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bdf136f19e8513b1d7042e0a6366aedd5eaf0c59",
+        "size": 863,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bdf136f19e8513b1d7042e0a6366aedd5eaf0c59"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/run-tests.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "431612a30892d300811fe97420a7466d365c594f",
+        "size": 713,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/431612a30892d300811fe97420a7466d365c594f"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/simpleRA.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9210fb8ad821be84c6fd1c934a443b42e1e1c256",
+        "size": 817,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9210fb8ad821be84c6fd1c934a443b42e1e1c256"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/subquery-exists.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fbd5cf3e4183e048547e4fbfb709e2d0e498f9ab",
+        "size": 1356,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fbd5cf3e4183e048547e4fbfb709e2d0e498f9ab"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/subquery-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4655b12cb452467de0e77d02bebda721c02a2d18",
+        "size": 1044,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4655b12cb452467de0e77d02bebda721c02a2d18"
+      },
+      {
+        "path": "rosette/cidr-benchmarks/test-util.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4540e78ab8969bed551ca7ea9558682919c7e7b4",
+        "size": 1049,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4540e78ab8969bed551ca7ea9558682919c7e7b4"
+      },
+      {
+        "path": "rosette/cosette.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2c77d901f8fd14ed6b0c1ed9ce98884f12571a4e",
+        "size": 11143,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2c77d901f8fd14ed6b0c1ed9ce98884f12571a4e"
+      },
+      {
+        "path": "rosette/denotation.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9fdff00588af4a922a3923ad9998eae93f1ba5f",
+        "size": 15329,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c9fdff00588af4a922a3923ad9998eae93f1ba5f"
+      },
+      {
+        "path": "rosette/equal.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9f3af32634c884c270fab293087993e317c7b25a",
+        "size": 1574,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9f3af32634c884c270fab293087993e317c7b25a"
+      },
+      {
+        "path": "rosette/evaluator.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5b0fa8cab54e8c1d5db41813af5a0757f3062d73",
+        "size": 12396,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5b0fa8cab54e8c1d5db41813af5a0757f3062d73"
+      },
+      {
+        "path": "rosette/neudbclass",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c74851d26b6b78214022e2fd781f31b4606c0078",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/c74851d26b6b78214022e2fd781f31b4606c0078"
+      },
+      {
+        "path": "rosette/neudbclass/wfea.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ee52bfad0c9b15ff95e3998662b3d4e178b42448",
+        "size": 3300,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ee52bfad0c9b15ff95e3998662b3d4e178b42448"
+      },
+      {
+        "path": "rosette/neudbclass/wfea1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c27d76a633c31ccc2f84b7d4b9c0fe8b3476998",
+        "size": 3746,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8c27d76a633c31ccc2f84b7d4b9c0fe8b3476998"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "788d9b9dd91330dcce426a94b5cca06d33503f7a",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/788d9b9dd91330dcce426a94b5cca06d33503f7a"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "79c6bb9ba7d111418eae56ad463d3b3472772dff",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/79c6bb9ba7d111418eae56ad463d3b3472772dff"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CA1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d9f1bc4b0cf8de69d66d4fcf4b17d992da00cad3",
+        "size": 1390,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d9f1bc4b0cf8de69d66d4fcf4b17d992da00cad3"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CA4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "338ca88dfe08e38c9af86702ec9099b0296673b9",
+        "size": 2413,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/338ca88dfe08e38c9af86702ec9099b0296673b9"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CA6.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2b1b26da8d3339fa1527803c4d1529872e7e3914",
+        "size": 2481,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2b1b26da8d3339fa1527803c4d1529872e7e3914"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CA7.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1d67ee6daf6d8c082ce5388189e7eefb48eafc8",
+        "size": 2436,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c1d67ee6daf6d8c082ce5388189e7eefb48eafc8"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CA8.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3b84eb94e4e7d646cc418acdb66122870803831",
+        "size": 2771,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f3b84eb94e4e7d646cc418acdb66122870803831"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CA9.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bab82092e871c3b66ec4fea1d136c508ef6b53dc",
+        "size": 2057,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bab82092e871c3b66ec4fea1d136c508ef6b53dc"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CQ10.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49e1ae1bfe574f4b90ce773f3c75dd1db8c5b462",
+        "size": 2032,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/49e1ae1bfe574f4b90ce773f3c75dd1db8c5b462"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/CQ9.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "097ee1b1dde9788c5d758a6d8c1adc7663e6b279",
+        "size": 2672,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/097ee1b1dde9788c5d758a6d8c1adc7663e6b279"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/cse344au_hw2_q4_1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d0917fc8fb06abe4e85e8f434aad5cf670aaf233",
+        "size": 1230,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d0917fc8fb06abe4e85e8f434aad5cf670aaf233"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/csep544_hw2_q4_3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "479696145a83a985b61459fa63a3cf994b281e3e",
+        "size": 1238,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/479696145a83a985b61459fa63a3cf994b281e3e"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/csep544_hw3_q1_1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a8993e0729a80d582bb1602b52a2cd30e80d15de",
+        "size": 1675,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a8993e0729a80d582bb1602b52a2cd30e80d15de"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/csep544_hw3_q1_2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e485be2a73f8e581c4a826386ef53c38fd0f1f8a",
+        "size": 1485,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e485be2a73f8e581c4a826386ef53c38fd0f1f8a"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/cex-benchmarks/example-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "97efbadeaea408674d951bb0359e6b1ef270e2f3",
+        "size": 3462,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/97efbadeaea408674d951bb0359e6b1ef270e2f3"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f46ef3da818102b4d3a1f86e7836bb7aa5087349",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/f46ef3da818102b4d3a1f86e7836bb7aa5087349"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c71e4ee37637899f3674ad887433a0032a784ca",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9c71e4ee37637899f3674ad887433a0032a784ca"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9dc8a06694b6f18a3e1daca05f652bd53f3d86b",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a9dc8a06694b6f18a3e1daca05f652bd53f3d86b"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "94584f8144660291bafc701bde4e4c8096855c07",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/94584f8144660291bafc701bde4e4c8096855c07"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49ce02a21b1b539fab09edbd7aa026394320ccc6",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/49ce02a21b1b539fab09edbd7aa026394320ccc6"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/5.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7ec3b8834ea0cfcf8f31d22a6e239762e645c446",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7ec3b8834ea0cfcf8f31d22a6e239762e645c446"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/6.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb527419468aa059beefdd4cd00c39fbc3bb2084",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bb527419468aa059beefdd4cd00c39fbc3bb2084"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/7.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4bb4fc4c30ff5e00ca40982f699cb64a484af16a",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4bb4fc4c30ff5e00ca40982f699cb64a484af16a"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/8.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5f35cecf35a754a39848e07fc0e15e244596c04b",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5f35cecf35a754a39848e07fc0e15e244596c04b"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/micro-bench/9.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c98b081ed5beca93987f7c6b443458a0f877db62",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c98b081ed5beca93987f7c6b443458a0f877db62"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4ca9e194413f36e82fbc15b928691097dd387d92",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/4ca9e194413f36e82fbc15b928691097dd387d92"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e0ce14666e439584d6d9da368a0c018d492053c8",
+        "size": 1398,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e0ce14666e439584d6d9da368a0c018d492053c8"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "15572d6a05a56d4ce4c3ba7fab2f1b70ea7f42a7",
+        "size": 1806,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/15572d6a05a56d4ce4c3ba7fab2f1b70ea7f42a7"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6e1ebae50bf85c3fb244ebea3f17fb78c9974d40",
+        "size": 1880,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6e1ebae50bf85c3fb244ebea3f17fb78c9974d40"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "338ca88dfe08e38c9af86702ec9099b0296673b9",
+        "size": 2413,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/338ca88dfe08e38c9af86702ec9099b0296673b9"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA5.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f40f2a16b5786de8705f56ef16be3033f6ddfb10",
+        "size": 1975,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f40f2a16b5786de8705f56ef16be3033f6ddfb10"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA6.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2b1b26da8d3339fa1527803c4d1529872e7e3914",
+        "size": 2481,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2b1b26da8d3339fa1527803c4d1529872e7e3914"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA7.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c1d67ee6daf6d8c082ce5388189e7eefb48eafc8",
+        "size": 2436,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c1d67ee6daf6d8c082ce5388189e7eefb48eafc8"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA8.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3b84eb94e4e7d646cc418acdb66122870803831",
+        "size": 2771,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f3b84eb94e4e7d646cc418acdb66122870803831"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CA9.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bab82092e871c3b66ec4fea1d136c508ef6b53dc",
+        "size": 2057,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bab82092e871c3b66ec4fea1d136c508ef6b53dc"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CQ1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e625e60501e98306ad8bc3e8861752a5e27b4698",
+        "size": 1016,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e625e60501e98306ad8bc3e8861752a5e27b4698"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CQ10.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "49e1ae1bfe574f4b90ce773f3c75dd1db8c5b462",
+        "size": 2032,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/49e1ae1bfe574f4b90ce773f3c75dd1db8c5b462"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CQ3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4127031c290feebb977674e4684f50212f6d7e11",
+        "size": 1575,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4127031c290feebb977674e4684f50212f6d7e11"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CQ7.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de3d3be4a416dd77c031d0fd808938e03129fd8b",
+        "size": 1061,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/de3d3be4a416dd77c031d0fd808938e03129fd8b"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/mutation-test/CQ9.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "097ee1b1dde9788c5d758a6d8c1adc7663e6b279",
+        "size": 2672,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/097ee1b1dde9788c5d758a6d8c1adc7663e6b279"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-bench-new",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "384af7a80290bae7e3e75ac7da03a113ddaae2d5",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/384af7a80290bae7e3e75ac7da03a113ddaae2d5"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-bench-new/example-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "94584f8144660291bafc701bde4e4c8096855c07",
+        "size": 1010,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/94584f8144660291bafc701bde4e4c8096855c07"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-bench-new/example-3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f4a42d4d2501469f09239a7cfa81cf75179042b4",
+        "size": 1259,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f4a42d4d2501469f09239a7cfa81cf75179042b4"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d17faa95b4484c914d00d98e9f5cad89b9657907",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/d17faa95b4484c914d00d98e9f5cad89b9657907"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d39f71823b4e35916f4ffdfdecf198c16e3dda61",
+        "size": 963,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d39f71823b4e35916f4ffdfdecf198c16e3dda61"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "326673a91d49b006de9e302b68deef23a4a704d1",
+        "size": 1096,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/326673a91d49b006de9e302b68deef23a4a704d1"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e5cd1c90eb9fba1668af2ab71cf1ab7954309fd",
+        "size": 1450,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9e5cd1c90eb9fba1668af2ab71cf1ab7954309fd"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3e6fec55a780f0b04099b27be1bc4906262fd4a",
+        "size": 1128,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f3e6fec55a780f0b04099b27be1bc4906262fd4a"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-5.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bafb1711fcdcd6f4175466c13c6feb3d84c98063",
+        "size": 1347,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bafb1711fcdcd6f4175466c13c6feb3d84c98063"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-6.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "290fab856f46bc570ff50da523c515473490a015",
+        "size": 1180,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/290fab856f46bc570ff50da523c515473490a015"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-7.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2487a1970ca48a2c04cb1bad6bc054e746a3e0c9",
+        "size": 1202,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2487a1970ca48a2c04cb1bad6bc054e746a3e0c9"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-8.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c8a97d65b72a66780ceb4e52bed2cc730c28e19d",
+        "size": 935,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c8a97d65b72a66780ceb4e52bed2cc730c28e19d"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/qex-benchmarks/example-9.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f91daaaf2e7a632fe3e781ac6d08349a4e7d2ae5",
+        "size": 1218,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f91daaaf2e7a632fe3e781ac6d08349a4e7d2ae5"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0edf5cae614d42df00acdcc39b519b5601e56844",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/0edf5cae614d42df00acdcc39b519b5601e56844"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/example-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "97efbadeaea408674d951bb0359e6b1ef270e2f3",
+        "size": 3462,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/97efbadeaea408674d951bb0359e6b1ef270e2f3"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-004.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dd12608c9007fd7be2a54e10d1a09a546593915b",
+        "size": 4499,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/dd12608c9007fd7be2a54e10d1a09a546593915b"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-007.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f49bf32ade154a5857951dfac0c8989e24ffd9be",
+        "size": 4492,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f49bf32ade154a5857951dfac0c8989e24ffd9be"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-017.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e42c4a8ad8dee21a737e0f1872784bc2595ef948",
+        "size": 5941,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e42c4a8ad8dee21a737e0f1872784bc2595ef948"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-019.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ed206cd2b94ba18aa0f975cf63ed0969ca83db68",
+        "size": 1666,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ed206cd2b94ba18aa0f975cf63ed0969ca83db68"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-021.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ea07efe709eabe4a60bb08867cb285a4452f14d3",
+        "size": 4959,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ea07efe709eabe4a60bb08867cb285a4452f14d3"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-022.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3fb7beccadab2617c56f62293474ace4b731f584",
+        "size": 1586,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3fb7beccadab2617c56f62293474ace4b731f584"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-025.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2f01c66c8dfc5360c90ad4687a16aa4104b9895a",
+        "size": 4851,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2f01c66c8dfc5360c90ad4687a16aa4104b9895a"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-032.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65d6072ab3a3ba080876d6b853a5a16d02185306",
+        "size": 3992,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/65d6072ab3a3ba080876d6b853a5a16d02185306"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-034.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f4fadbe26f5a8888fbb158528fb18a888624bbe6",
+        "size": 3707,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f4fadbe26f5a8888fbb158528fb18a888624bbe6"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-039.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c392135cc34dce1dc4e2e2921a9b343dcea0a45a",
+        "size": 6064,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c392135cc34dce1dc4e2e2921a9b343dcea0a45a"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/recent-040.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c437791980794a6bca4a83d1fa8f860b85cdb8f3",
+        "size": 1792,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/c437791980794a6bca4a83d1fa8f860b85cdb8f3"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-002.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f72d5e8db26740667647721885b2670493f06982",
+        "size": 2712,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f72d5e8db26740667647721885b2670493f06982"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-004.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f165ac423d1a088cd07006714f1a3ad7c9a5141",
+        "size": 3963,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7f165ac423d1a088cd07006714f1a3ad7c9a5141"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-005.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5008cb03f99b06388c3d469a5263b6b13e12edb9",
+        "size": 4883,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5008cb03f99b06388c3d469a5263b6b13e12edb9"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-012.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "48ce916487e947f3de27f9d3952e96f3e47fccc1",
+        "size": 3256,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/48ce916487e947f3de27f9d3952e96f3e47fccc1"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-013.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b30d9dab090b1ee9aadee7e0ffa996959499c3ce",
+        "size": 3710,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b30d9dab090b1ee9aadee7e0ffa996959499c3ce"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-018.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b669c133d5544e51f053428cbbb36ed32dc3f91f",
+        "size": 4529,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b669c133d5544e51f053428cbbb36ed32dc3f91f"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-021.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b06a2a33f9f3b2785358c417e50746383be9b4bb",
+        "size": 2516,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b06a2a33f9f3b2785358c417e50746383be9b4bb"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-027.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf8691474f693d231710f326bb1dc5c98eaabb8d",
+        "size": 1222,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bf8691474f693d231710f326bb1dc5c98eaabb8d"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-030.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aae3945ff1934a1e0bdca5a1a4fba4eb36c6893c",
+        "size": 4325,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/aae3945ff1934a1e0bdca5a1a4fba4eb36c6893c"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-031.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ea577a0d3b969e014ac902fd10543af3c2be375",
+        "size": 4671,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4ea577a0d3b969e014ac902fd10543af3c2be375"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-034.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "30f983923bc9bdc8c478cabeb98ba2ce41c1edc5",
+        "size": 4143,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/30f983923bc9bdc8c478cabeb98ba2ce41c1edc5"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-038.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "34653ee0ccdab2fccc7f6c87ad187eeadc1d7567",
+        "size": 3468,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/34653ee0ccdab2fccc7f6c87ad187eeadc1d7567"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-039.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "102b7abae1bfa098d79ea119af32f68963ed65ae",
+        "size": 3370,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/102b7abae1bfa098d79ea119af32f68963ed65ae"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-045.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "55c62cc6f7bba5dfeb6c589886277eacd5543c8f",
+        "size": 2775,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/55c62cc6f7bba5dfeb6c589886277eacd5543c8f"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-047.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e3acb331707954031fac8c958a04f9704c4943aa",
+        "size": 1410,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e3acb331707954031fac8c958a04f9704c4943aa"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-054.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2c43f995e164ac2ea75ba0348df65c8b5f7fdd3",
+        "size": 2911,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f2c43f995e164ac2ea75ba0348df65c8b5f7fdd3"
+      },
+      {
+        "path": "rosette/oopsla-benchmarks/scythe-benchmarks/top-057.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e351da1f30715e7e3579d6fb602ebce65b099d05",
+        "size": 1950,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e351da1f30715e7e3579d6fb602ebce65b099d05"
+      },
+      {
+        "path": "rosette/playground",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "af434e59f0ad73b86e18afe21a51a06775f89e94",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/af434e59f0ad73b86e18afe21a51a06775f89e94"
+      },
+      {
+        "path": "rosette/playground/aggr-join.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2982327114754b2f90f9a29a74cd6be2dc382244",
+        "size": 2687,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2982327114754b2f90f9a29a74cd6be2dc382244"
+      },
+      {
+        "path": "rosette/playground/aggregation-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3793fdeb7557a3f781fc8a99fc129f30691560bd",
+        "size": 2603,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3793fdeb7557a3f781fc8a99fc129f30691560bd"
+      },
+      {
+        "path": "rosette/playground/eg-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ed9deecd40967b608e7c067c7f3692294b143439",
+        "size": 795,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ed9deecd40967b608e7c067c7f3692294b143439"
+      },
+      {
+        "path": "rosette/playground/examples.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "efbd05a804a812e095981a66bc82a0b07ca8f7fe",
+        "size": 3227,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/efbd05a804a812e095981a66bc82a0b07ca8f7fe"
+      },
+      {
+        "path": "rosette/playground/pullsubquery.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "55cf922690fd67654c8c184beb1bcb33f05d2f4f",
+        "size": 768,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/55cf922690fd67654c8c184beb1bcb33f05d2f4f"
+      },
+      {
+        "path": "rosette/playground/raw-queries.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2dcfc57bbf40baf7eedefae79941c926c4df355d",
+        "size": 2180,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2dcfc57bbf40baf7eedefae79941c926c4df355d"
+      },
+      {
+        "path": "rosette/playground/test-symbolic-pred.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "773fba566824a5860041d8f1f29e922c3b073114",
+        "size": 1043,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/773fba566824a5860041d8f1f29e922c3b073114"
+      },
+      {
+        "path": "rosette/qex-test-server.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b09276bcd848328f448807448e8cc077ebe5fa1",
+        "size": 2054,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1b09276bcd848328f448807448e8cc077ebe5fa1"
+      },
+      {
+        "path": "rosette/ruby-example",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6d80bc047276565ea20b8650ee80c9d12a6cdd3f",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/6d80bc047276565ea20b8650ee80c9d12a6cdd3f"
+      },
+      {
+        "path": "rosette/ruby-example/project_activities.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7476f188eb9e58b5f6d2d89662a13ba070817ece",
+        "size": 11997,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7476f188eb9e58b5f6d2d89662a13ba070817ece"
+      },
+      {
+        "path": "rosette/server.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ed8e77fee949e7c9d567d2e2be1f901ec4a6add7",
+        "size": 1908,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ed8e77fee949e7c9d567d2e2be1f901ec4a6add7"
+      },
+      {
+        "path": "rosette/sql.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a32cb7ac1b6d58d2c00ff3dfe58ff917edc319de",
+        "size": 4236,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a32cb7ac1b6d58d2c00ff3dfe58ff917edc319de"
+      },
+      {
+        "path": "rosette/symmetry.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5da7704ab0f48ca0945c01d1ecf5d9a8957b31ec",
+        "size": 24309,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5da7704ab0f48ca0945c01d1ecf5d9a8957b31ec"
+      },
+      {
+        "path": "rosette/syntax.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04c95e0b4ee6221b6a822d4698ccbab33f5facb5",
+        "size": 1401,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/04c95e0b4ee6221b6a822d4698ccbab33f5facb5"
+      },
+      {
+        "path": "rosette/table.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d59a0c3143aea36271719e5b987c735e8b25942f",
+        "size": 2999,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d59a0c3143aea36271719e5b987c735e8b25942f"
+      },
+      {
+        "path": "rosette/test-server.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4556ee49974c92be8471336568ab54a63eccb3dc",
+        "size": 2266,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4556ee49974c92be8471336568ab54a63eccb3dc"
+      },
+      {
+        "path": "rosette/test-util.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7e15a1005d85df84c7b0ac2c34bd76608a43341e",
+        "size": 6522,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7e15a1005d85df84c7b0ac2c34bd76608a43341e"
+      },
+      {
+        "path": "rosette/tests",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e274276b3a63fe540bec9354533801f87fedcbc7",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/e274276b3a63fe540bec9354533801f87fedcbc7"
+      },
+      {
+        "path": "rosette/tests/denotation-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7b4763c53aad422b50cd50ee4faf899fb01f7047",
+        "size": 4677,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7b4763c53aad422b50cd50ee4faf899fb01f7047"
+      },
+      {
+        "path": "rosette/tests/evaluator-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fab73cf0f8e29ff5391a1f802a056b9bb9118f1e",
+        "size": 3118,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fab73cf0f8e29ff5391a1f802a056b9bb9118f1e"
+      },
+      {
+        "path": "rosette/tests/exists.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad65e8f24d2befc10f4340737d6317543e2d21f7",
+        "size": 1132,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ad65e8f24d2befc10f4340737d6317543e2d21f7"
+      },
+      {
+        "path": "rosette/tests/interface-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9a459d7f7a2a90b04cf637eb87339ac0c36362a2",
+        "size": 1048,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/9a459d7f7a2a90b04cf637eb87339ac0c36362a2"
+      },
+      {
+        "path": "rosette/tests/non-empty-test-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e0512cda3c5556817ff42c354fedb8bb140f75bf",
+        "size": 2184,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e0512cda3c5556817ff42c354fedb8bb140f75bf"
+      },
+      {
+        "path": "rosette/tests/non-empty-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "119f7ca96bf5f7733ee73ae1c54354ea78a70276",
+        "size": 1860,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/119f7ca96bf5f7733ee73ae1c54354ea78a70276"
+      },
+      {
+        "path": "rosette/tests/proof-test-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "946909c70a21c25d6dea50a829f70e24d171e1ee",
+        "size": 3241,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/946909c70a21c25d6dea50a829f70e24d171e1ee"
+      },
+      {
+        "path": "rosette/tests/proof-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dc65c0a4b0b69be0219347d309e215c7ee50f635",
+        "size": 3202,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/dc65c0a4b0b69be0219347d309e215c7ee50f635"
+      },
+      {
+        "path": "rosette/tests/quick-test-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2f34257335a70d3c54cda64cf302f18832f48bdf",
+        "size": 897,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2f34257335a70d3c54cda64cf302f18832f48bdf"
+      },
+      {
+        "path": "rosette/tests/quick-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3f3674f855bab54188fd654e2f28c6e7501d5612",
+        "size": 1804,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3f3674f855bab54188fd654e2f28c6e7501d5612"
+      },
+      {
+        "path": "rosette/tests/sql-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "80c09f4d1c24ac5e77d7a3e48b774203a370fbe9",
+        "size": 850,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/80c09f4d1c24ac5e77d7a3e48b774203a370fbe9"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-1.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2dee14263d7a0790aa8cd3757a8d80a95ceb4e7e",
+        "size": 1744,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2dee14263d7a0790aa8cd3757a8d80a95ceb4e7e"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-2.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acb5a313db159ea20181da230bd4d34df2d13d77",
+        "size": 2145,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/acb5a313db159ea20181da230bd4d34df2d13d77"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-3.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98cc7678b8d61b381e53b17f59d15221a606cb1d",
+        "size": 3873,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/98cc7678b8d61b381e53b17f59d15221a606cb1d"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-4.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c4aec41658ec67cb77d36d2bd6edc65a03c6c59",
+        "size": 2429,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5c4aec41658ec67cb77d36d2bd6edc65a03c6c59"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-5.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "50c6f834786f3559563ce620261f5e0950d1c5fb",
+        "size": 2400,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/50c6f834786f3559563ce620261f5e0950d1c5fb"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-6.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a4b4875b4f09359267dafb690c39907d71e0bfcb",
+        "size": 2988,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a4b4875b4f09359267dafb690c39907d71e0bfcb"
+      },
+      {
+        "path": "rosette/tests/symmetry-test-7.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d0dc5cc1f3891d5a4cf3c3c51b3c3448cb74bd21",
+        "size": 2361,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d0dc5cc1f3891d5a4cf3c3c51b3c3448cb74bd21"
+      },
+      {
+        "path": "rosette/tests/tmp.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8ea9ebe6f39d386164f8db37eb5b568495414c12",
+        "size": 1277,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8ea9ebe6f39d386164f8db37eb5b568495414c12"
+      },
+      {
+        "path": "rosette/tests/util-test.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c6a10ab7fa1667661d12edbf8762c23cc0d8b9c",
+        "size": 1465,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6c6a10ab7fa1667661d12edbf8762c23cc0d8b9c"
+      },
+      {
+        "path": "rosette/util.rkt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "be87b4d82525a59c701cae256c7c74464eaff5f4",
+        "size": 5708,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/be87b4d82525a59c701cae256c7c74464eaff5f4"
+      },
+      {
+        "path": "rosette_solve.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "06985d26211abcec731810ff9514e82ed2d1cd27",
+        "size": 277,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/06985d26211abcec731810ff9514e82ed2d1cd27"
+      },
+      {
+        "path": "run_calcite_examples.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b1445a353778d237fee96491a2e33e967fdd2dc0",
+        "size": 1292,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b1445a353778d237fee96491a2e33e967fdd2dc0"
+      },
+      {
+        "path": "run_ros_only.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "529751baa67e5f2864b4bfb04fe531b8e8481f2e",
+        "size": 1594,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/529751baa67e5f2864b4bfb04fe531b8e8481f2e"
+      },
+      {
+        "path": "solver.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fadda6a63f4f516e8be88d683ea2933fac398459",
+        "size": 6496,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fadda6a63f4f516e8be88d683ea2933fac398459"
+      },
+      {
+        "path": "solver_test.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0d9fbf8f8c1529af4e932c58147b493926b2e8ee",
+        "size": 5966,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0d9fbf8f8c1529af4e932c58147b493926b2e8ee"
+      },
+      {
+        "path": "test_in_docker.sh",
+        "mode": "100755",
+        "type": "blob",
+        "sha": "e49240d93ed937f754d1639385b821cc25e8ff8c",
+        "size": 603,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e49240d93ed937f754d1639385b821cc25e8ff8c"
+      },
+      {
+        "path": "uexp",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ec64cb06805b87607bffad7cd0e9012ffc6e4a48",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/ec64cb06805b87607bffad7cd0e9012ffc6e4a48"
+      },
+      {
+        "path": "uexp/leanpkg.path",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a45b2955f6739d17d82e5ae27b3a799ec396258b",
+        "size": 24,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a45b2955f6739d17d82e5ae27b3a799ec396258b"
+      },
+      {
+        "path": "uexp/leanpkg.toml",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "420359f47416b1045b95a53af35fd63a71a13631",
+        "size": 93,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/420359f47416b1045b95a53af35fd63a71a13631"
+      },
+      {
+        "path": "uexp/src",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "aa4687cb0eb87854c52ad41e63490060d9675124",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/aa4687cb0eb87854c52ad41e63490060d9675124"
+      },
+      {
+        "path": "uexp/src/uexp",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1de36af139d54eb205feb6934cd394110dab6ec3",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/1de36af139d54eb205feb6934cd394110dab6ec3"
+      },
+      {
+        "path": "uexp/src/uexp/examples.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "243930b876925b16822e55d438c79d2d79af888b",
+        "size": 1134,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/243930b876925b16822e55d438c79d2d79af888b"
+      },
+      {
+        "path": "uexp/src/uexp/extra_constants.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef836f0a97313c69953ea1f68b65db02279e3c7a",
+        "size": 1126,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ef836f0a97313c69953ea1f68b65db02279e3c7a"
+      },
+      {
+        "path": "uexp/src/uexp/meta",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "c78a276074bfd34da4989bd28fb9760f1be668ed",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/c78a276074bfd34da4989bd28fb9760f1be668ed"
+      },
+      {
+        "path": "uexp/src/uexp/meta/SDP.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "04ff058c08fdb72cb7c4d7ac666fc150fbebb4e8",
+        "size": 10338,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/04ff058c08fdb72cb7c4d7ac666fc150fbebb4e8"
+      },
+      {
+        "path": "uexp/src/uexp/meta/TDP.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "534662a4b51d29030bb95417bd57d54f13737401",
+        "size": 3632,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/534662a4b51d29030bb95417bd57d54f13737401"
+      },
+      {
+        "path": "uexp/src/uexp/meta/UDP.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "759c992494819d123e1b58ec583ae0266c63f51b",
+        "size": 2332,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/759c992494819d123e1b58ec583ae0266c63f51b"
+      },
+      {
+        "path": "uexp/src/uexp/meta/canonize.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6bb6ffcebb85523adbab351f4b23862a454e52a3",
+        "size": 4441,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6bb6ffcebb85523adbab351f4b23862a454e52a3"
+      },
+      {
+        "path": "uexp/src/uexp/meta/cosette_lemmas.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c36b9b9f989fce7f430254c7d0c0bbdb3ec4031",
+        "size": 5577,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8c36b9b9f989fce7f430254c7d0c0bbdb3ec4031"
+      },
+      {
+        "path": "uexp/src/uexp/meta/cosette_tactics.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7b87f8a45577d5211899941052ed2fe13cb397f8",
+        "size": 24176,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7b87f8a45577d5211899941052ed2fe13cb397f8"
+      },
+      {
+        "path": "uexp/src/uexp/meta/generator_generator.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a258d187584f72cedc99d5ea30e6a636b8e83a52",
+        "size": 255,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a258d187584f72cedc99d5ea30e6a636b8e83a52"
+      },
+      {
+        "path": "uexp/src/uexp/meta/u_semiring_AST.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ddb790deac72f76fc97b02cac00a7fc2ea6cc956",
+        "size": 4005,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ddb790deac72f76fc97b02cac00a7fc2ea6cc956"
+      },
+      {
+        "path": "uexp/src/uexp/meta/ucongr.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8c99bcbf0cf620402c5c4dfa7b42407b5b48cbf8",
+        "size": 10682,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/8c99bcbf0cf620402c5c4dfa7b42407b5b48cbf8"
+      },
+      {
+        "path": "uexp/src/uexp/rules",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "0775f007ae114cf1a4b1266b360da79401e15055",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/0775f007ae114cf1a4b1266b360da79401e15055"
+      },
+      {
+        "path": "uexp/src/uexp/rules/ExtractJoinFilterRule.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3cf317bddf4b6359c5afc5c69a01f152bac1f3c5",
+        "size": 1885,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3cf317bddf4b6359c5afc5c69a01f152bac1f3c5"
+      },
+      {
+        "path": "uexp/src/uexp/rules/MergeFilter.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "016840fdeb8a75ae140dde969338fa1bef889622",
+        "size": 900,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/016840fdeb8a75ae140dde969338fa1bef889622"
+      },
+      {
+        "path": "uexp/src/uexp/rules/addRedundantSemijoinRule.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c5db2660a27b59c3d9fd6291a1b394fad9c7496",
+        "size": 2654,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5c5db2660a27b59c3d9fd6291a1b394fad9c7496"
+      },
+      {
+        "path": "uexp/src/uexp/rules/aggregateGroupingSetsProjectMerge.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3a92de1bc5106588cf1dd351fb0cc407944b74be",
+        "size": 1212,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3a92de1bc5106588cf1dd351fb0cc407944b74be"
+      },
+      {
+        "path": "uexp/src/uexp/rules/aggregateProjectMerge.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f2b442155e11d8e07c813ddc2bc6a84aa6370bfb",
+        "size": 1616,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f2b442155e11d8e07c813ddc2bc6a84aa6370bfb"
+      },
+      {
+        "path": "uexp/src/uexp/rules/aggregateProjectPullUpConstants.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "832969828c409e46c55fd4da03b1e69ca4c90a0a",
+        "size": 2743,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/832969828c409e46c55fd4da03b1e69ca4c90a0a"
+      },
+      {
+        "path": "uexp/src/uexp/rules/aggregation.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ef2af2944f2aa0a2bfd3909ac9072c1668f6ad6",
+        "size": 999,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0ef2af2944f2aa0a2bfd3909ac9072c1668f6ad6"
+      },
+      {
+        "path": "uexp/src/uexp/rules/commonexp.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "051c1fc49f641d2675b12c56f85f387d06ea6ce3",
+        "size": 1181,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/051c1fc49f641d2675b12c56f85f387d06ea6ce3"
+      },
+      {
+        "path": "uexp/src/uexp/rules/conjunctive.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "780a806124b8048c67aed009cbafd9af5d05756f",
+        "size": 922,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/780a806124b8048c67aed009cbafd9af5d05756f"
+      },
+      {
+        "path": "uexp/src/uexp/rules/cse344.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1daf1d667968a3fbfb9ea01a5a45786911293588",
+        "size": 1470,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1daf1d667968a3fbfb9ea01a5a45786911293588"
+      },
+      {
+        "path": "uexp/src/uexp/rules/decorrelateExists.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "80a5b53ecaa4d020b7bebfefdb59a74922bbe174",
+        "size": 1641,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/80a5b53ecaa4d020b7bebfefdb59a74922bbe174"
+      },
+      {
+        "path": "uexp/src/uexp/rules/ex1sigmod92.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6728f37185e82b227acc7afab3ec26e324f69900",
+        "size": 3646,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6728f37185e82b227acc7afab3ec26e324f69900"
+      },
+      {
+        "path": "uexp/src/uexp/rules/ex2sigmod92.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7e2cd5b78e339ed51e8f29a1b681da4d56f94977",
+        "size": 2147,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7e2cd5b78e339ed51e8f29a1b681da4d56f94977"
+      },
+      {
+        "path": "uexp/src/uexp/rules/ex2sigmod92simpl.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a2760f6c1a4b03a0dda95017eb74ab849a0e7ee",
+        "size": 1398,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6a2760f6c1a4b03a0dda95017eb74ab849a0e7ee"
+      },
+      {
+        "path": "uexp/src/uexp/rules/ex3sigmod92.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bd33f205648fd72c9b25d3d77061e7800c0aca7f",
+        "size": 1892,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bd33f205648fd72c9b25d3d77061e7800c0aca7f"
+      },
+      {
+        "path": "uexp/src/uexp/rules/fkPennTR.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "27343dbad25d5c8b72ef0263a22d0a2488d16006",
+        "size": 2855,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/27343dbad25d5c8b72ef0263a22d0a2488d16006"
+      },
+      {
+        "path": "uexp/src/uexp/rules/index.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5d057f704b4413ddb1d901fdf04a8b96d7244d0e",
+        "size": 1146,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5d057f704b4413ddb1d901fdf04a8b96d7244d0e"
+      },
+      {
+        "path": "uexp/src/uexp/rules/mergeJoinFilter.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a90ff8f8f67c29b0cc4dd3f4dd0a1892ad2d545",
+        "size": 1591,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2a90ff8f8f67c29b0cc4dd3f4dd0a1892ad2d545"
+      },
+      {
+        "path": "uexp/src/uexp/rules/projectJoinTranspose.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0b86cd272ae06c13644bf43dcdc3237bd4d28248",
+        "size": 1001,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0b86cd272ae06c13644bf43dcdc3237bd4d28248"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pullAggregateThroughUnion.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "96235303b5cfeecc4b20901fea2b31b323770456",
+        "size": 2005,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/96235303b5cfeecc4b20901fea2b31b323770456"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pullConstantThroughUnion.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "46115cc29ba6889a4e7496c16c9c7f88ade1fc58",
+        "size": 1361,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/46115cc29ba6889a4e7496c16c9c7f88ade1fc58"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pullConstantThroughUnion2.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ab98ec5d97bd859967040e0f052fdd3681ab8bba",
+        "size": 2089,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ab98ec5d97bd859967040e0f052fdd3681ab8bba"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pullConstantThroughUnion3.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ca56517395ffe875d74654c39daf917481f417f9",
+        "size": 2022,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/ca56517395ffe875d74654c39daf917481f417f9"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pullFilterThroughAggregate.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4dc906d0b2a71cdf0d7c6aea87200d26ccf59b9f",
+        "size": 2162,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/4dc906d0b2a71cdf0d7c6aea87200d26ccf59b9f"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushAggregateThroughJoin3.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f0d1bb739553f6441e73b13e6ae2617cd45735b2",
+        "size": 2176,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f0d1bb739553f6441e73b13e6ae2617cd45735b2"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushFilterPastAgg.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fdcf45468cd1378ec31e2026eb84fd60da967433",
+        "size": 1058,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fdcf45468cd1378ec31e2026eb84fd60da967433"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushFilterPastAggThree.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3eaaa6dd0289ee5f7f6b684685f6886344e056f",
+        "size": 2100,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f3eaaa6dd0289ee5f7f6b684685f6886344e056f"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushJoinThroughUnionOnLeft.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d12660d3ce98bf99ac7c199b666982584fad62f9",
+        "size": 1833,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d12660d3ce98bf99ac7c199b666982584fad62f9"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushJoinThroughUnionOnRight.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "84864bcce04afd63385b551b40a595ddb4c478b1",
+        "size": 1841,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/84864bcce04afd63385b551b40a595ddb4c478b1"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushProjectPastSetOp.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ed17bd37ba495120534c542d20d1df6c88d2218",
+        "size": 1686,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0ed17bd37ba495120534c542d20d1df6c88d2218"
+      },
+      {
+        "path": "uexp/src/uexp/rules/pushSemiJoinPastJoinRuleLeft.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a94113032432e35ae2dd8e70abc7ab46bb1bf6b7",
+        "size": 2038,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a94113032432e35ae2dd8e70abc7ab46bb1bf6b7"
+      },
+      {
+        "path": "uexp/src/uexp/rules/relationalAlgebra.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60c0acf65bf34480dd41ee6113b52531d2aaac86",
+        "size": 2887,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/60c0acf65bf34480dd41ee6113b52531d2aaac86"
+      },
+      {
+        "path": "uexp/src/uexp/rules/removeSemiJoin.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b3e555874bc7748b4df47429d0028515191e919",
+        "size": 1849,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1b3e555874bc7748b4df47429d0028515191e919"
+      },
+      {
+        "path": "uexp/src/uexp/rules/removeSemiJoinRight.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "787293a993ef97c9422a413b218b66928768b9a5",
+        "size": 1496,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/787293a993ef97c9422a413b218b66928768b9a5"
+      },
+      {
+        "path": "uexp/src/uexp/rules/removeSemiJoinRightWithFilter.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "160ab88dd680c08e45796957e3c6f8d5f08ba746",
+        "size": 1787,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/160ab88dd680c08e45796957e3c6f8d5f08ba746"
+      },
+      {
+        "path": "uexp/src/uexp/rules/removeSemiJoinWithFilter.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "457d601fc01f64907d4d39df2a7c39370db7a4f5",
+        "size": 2139,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/457d601fc01f64907d4d39df2a7c39370db7a4f5"
+      },
+      {
+        "path": "uexp/src/uexp/rules/subquery.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f48d497a169fe3d0da139955408bc2b664ed5348",
+        "size": 1201,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f48d497a169fe3d0da139955408bc2b664ed5348"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceAggregate.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "85ef59a4fded47f040da7c356b296ae18861f6e5",
+        "size": 2896,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/85ef59a4fded47f040da7c356b296ae18861f6e5"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceComplexPredicate.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7041e03f33b6adc0baea0bab0fdbd1028a68298a",
+        "size": 3110,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/7041e03f33b6adc0baea0bab0fdbd1028a68298a"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceConjunctInPullUp.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3d619544a1b1a15dab1ed66071412e32cf47404d",
+        "size": 2762,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/3d619544a1b1a15dab1ed66071412e32cf47404d"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceConstantEquiPredicate.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "79a82b647c59a0e8468ac83ceaaa566e839996f3",
+        "size": 1908,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/79a82b647c59a0e8468ac83ceaaa566e839996f3"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceJoin.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "63e5f559bb24de4a729c8789b612927ea6df31ab",
+        "size": 2271,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/63e5f559bb24de4a729c8789b612927ea6df31ab"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceJoin3way.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a9deb0445c96c1381824d5784430d7640478c51c",
+        "size": 2660,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/a9deb0445c96c1381824d5784430d7640478c51c"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceJoin3wayAgg.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "553ccb262053a1d2a5303f2d45e588ddc8affbf7",
+        "size": 2942,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/553ccb262053a1d2a5303f2d45e588ddc8affbf7"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceNoPullUpExprs.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1a72ae8fa5d048b687d14af6215aea4526a959c5",
+        "size": 2559,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/1a72ae8fa5d048b687d14af6215aea4526a959c5"
+      },
+      {
+        "path": "uexp/src/uexp/rules/transitiveInferenceProject.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fa8932f99184d198d93d2e96e4b5ad0f44cc0439",
+        "size": 2344,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fa8932f99184d198d93d2e96e4b5ad0f44cc0439"
+      },
+      {
+        "path": "uexp/src/uexp/sql.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eb8e15e28026bdc5afd8bbca0e87704bf910320b",
+        "size": 9480,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/eb8e15e28026bdc5afd8bbca0e87704bf910320b"
+      },
+      {
+        "path": "uexp/src/uexp/tactics.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6093e4018d33b4b3fb25a5eeb4b73412b51ad7c3",
+        "size": 1590,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6093e4018d33b4b3fb25a5eeb4b73412b51ad7c3"
+      },
+      {
+        "path": "uexp/src/uexp/u_semiring.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d41bec446c9e91ab85ac0394f68afc45480cc480",
+        "size": 7830,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d41bec446c9e91ab85ac0394f68afc45480cc480"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "03beb4f7af1963bf0a923df1183787db939584ec",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/03beb4f7af1963bf0a923df1183787db939584ec"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/debugger_examples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5bcb44cec254247b465a423825da19707b6e61c2",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/5bcb44cec254247b465a423825da19707b6e61c2"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/debugger_examples/monitor1.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1a0b16dd0c14e30872c7b4c92a963dc0c298238",
+        "size": 1894,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d1a0b16dd0c14e30872c7b4c92a963dc0c298238"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/gapt_export",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "7441a85ab29e824a3883225037e8301dabcca900",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/7441a85ab29e824a3883225037e8301dabcca900"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/gapt_export/grp778_1.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b6e1e2d9c92f2f0f8d864beb978b0af1889a2342",
+        "size": 99768,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b6e1e2d9c92f2f0f8d864beb978b0af1889a2342"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/gapt_export/grp778_1.opt1.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fc2a74dacd836c1b1197b5295ac48d1732e74894",
+        "size": 122510,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/fc2a74dacd836c1b1197b5295ac48d1732e74894"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/gapt_export/grp778_1.opt2.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bfcd74de156f99df7a1cf3c4a315a58e12b546c3",
+        "size": 123711,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bfcd74de156f99df7a1cf3c4a315a58e12b546c3"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/gapt_export/grp778_1.opt3.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e6939044b8d7e099ad12009b827201db56f9e544",
+        "size": 123726,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/e6939044b8d7e099ad12009b827201db56f9e544"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/lazy_tactic.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "12748fc576da664251da1726f545b9f5d72d5248",
+        "size": 2289,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/12748fc576da664251da1726f545b9f5d72d5248"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/mechanics.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aa680001f35bfbe54f28402dc4cf00dbd42cad2c",
+        "size": 256,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/aa680001f35bfbe54f28402dc4cf00dbd42cad2c"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/mk_dec_eq_instance",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "37910c33c86352910a203990a9ff82ff44f40a94",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/37910c33c86352910a203990a9ff82ff44f40a94"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/mk_dec_eq_instance/benchmark.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf5e6979b2b361ae467f1895a766162419d0f263",
+        "size": 521,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/bf5e6979b2b361ae467f1895a766162419d0f263"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2ba77c90aef0bec303cbdda04c2b96b7fd89be70",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/2ba77c90aef0bec303cbdda04c2b96b7fd89be70"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation/benchmark.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "01de132ea8a7cd8705b6bfc5771d18d84eb30367",
+        "size": 1385,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/01de132ea8a7cd8705b6bfc5771d18d84eb30367"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation/cancellation_solver.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "312b57c072ef26da714ba417922726c904150878",
+        "size": 1586,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/312b57c072ef26da714ba417922726c904150878"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation/cancellation_solver_opt.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b83708b9467dbd9d1a497712c9318e699e8b786d",
+        "size": 1145,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/b83708b9467dbd9d1a497712c9318e699e8b786d"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation/monoid.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f3a97f1aebca3a939e485a77d0d7eb228b8af20e",
+        "size": 286,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/f3a97f1aebca3a939e485a77d0d7eb228b8af20e"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation/simp.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37d8b48b487e8fab60717ea5e557919f2ab743e5",
+        "size": 244,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/37d8b48b487e8fab60717ea5e557919f2ab743e5"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/monoid_cancellation/smt.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2f3e41aae691c481082512efb9eca9fdbefbe311",
+        "size": 204,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/2f3e41aae691c481082512efb9eca9fdbefbe311"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/nano_crush",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "55812819cc71da00a78e9869ec650da9b9dac98c",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/55812819cc71da00a78e9869ec650da9b9dac98c"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/nano_crush/cpdt_nano.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5cede5690f298c7c2000ba609341c495276dae04",
+        "size": 1027,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/5cede5690f298c7c2000ba609341c495276dae04"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/nano_crush/nano_crush.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ecd97cf259a1a088d91cf04920aad8c58a98f9c",
+        "size": 3444,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/0ecd97cf259a1a088d91cf04920aad8c58a98f9c"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/robust_simp",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "1ddfd0e15edda1a47c5f03412989e5aee8340581",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/1ddfd0e15edda1a47c5f03412989e5aee8340581"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/robust_simp/robust_simp.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "31079597367939f817debf1c64670cfbd92434d6",
+        "size": 3481,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/31079597367939f817debf1c64670cfbd92434d6"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/robust_simp/robust_simp_caching_size.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "beb8dbdf780f37983f24503d30fa03aac0c302de",
+        "size": 3158,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/beb8dbdf780f37983f24503d30fa03aac0c302de"
+      },
+      {
+        "path": "uexp/tactic_paper_supplemental_material/separation_logic.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d5d1e33e27019dd02290374b49a9cc7ff4f93cfa",
+        "size": 778,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/d5d1e33e27019dd02290374b49a9cc7ff4f93cfa"
+      },
+      {
+        "path": "uexp/test",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "655895f23b96c844d0c34cf0a77999cc745744c2",
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/trees/655895f23b96c844d0c34cf0a77999cc745744c2"
+      },
+      {
+        "path": "uexp/test/TDP_test.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a00eff22570d2ce71a8a1f3a5b7d712a5a34179",
+        "size": 1730,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/6a00eff22570d2ce71a8a1f3a5b7d712a5a34179"
+      },
+      {
+        "path": "uexp/test/ucongr_test.lean",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "344e092007ae40074a59ae844e0c8fda5ead3e69",
+        "size": 2069,
+        "url": "https://api.github.com/repos/uwdb/Cosette/git/blobs/344e092007ae40074a59ae844e0c8fda5ead3e69"
+      }
+    ],
+    "truncated": false
+  }
+}

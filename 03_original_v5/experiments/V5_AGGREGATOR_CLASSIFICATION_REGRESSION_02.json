@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "scope": "Pure stdlib aggregator classifier regression only; identity=True is a unit fixture, not an experimental verification claim. No target/native/parser/solver run.",
+  "aggregator_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/BUILD_FINAL_V5_EXECUTION_CUT.py",
+  "aggregator_sha256": "83a23fc07b0185f39bd106be2a4c1d893c5c18a4a99592012ca6ed098275fe32",
+  "check_source_sha256": "989a9cdf83609702b1726651903d795c6fa4d59d7d0d31059739ebb90773882b",
+  "fixture_inputs_sha256": {
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_READONLY_RECOVERY_RECONCILED_01.json": "9bf69150b506774cf93e0f8222995f53df6fada076ebddde10a0db30bb434755",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_000_01/supervisor_report.json": "81de9902404e1e1a3f2e0112478be0b0b801e5d572f9e1550b1144ade52a8962",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_000_01/job_0000/worker_report.json": "a614373a235c28dff2106a45352992cf396462db87205b9d119d01e9ab435cc1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_018_01/supervisor_report.json": "4f29c0f217e81155296950242e4b3a05c7777c8a1d054719c2f90074436ad20a",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_018_01/job_0019/worker_report.json": "74696393d86c75592e95d7ae756a05678df761531301d9bb9b71c8f3f5de0123",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_039_01/supervisor_report.json": "279538c73a405b8b5c6ab633aa07b0e1345edea37f3845a7d9273e2574443d5c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_039_01/job_0041/worker_report.json": "09d3be508d598d40eaa6430bd9f40602af2c0b55dd09d33136b4ebb41126a76b",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_126_01/supervisor_report.json": "f7a5d0b82a957ec9b92b1807b62e6e12fc2c90e4fe45ca14e00096c70353f8fc",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_126_01/job_0126/worker_report.json": "3752ccdfc14e89a2fabd7e39eab6613d93fa4485e17aa8cea8c4a68f24c8692d",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_000_01/supervisor_report.json": "44104de091a1e970d1b2f3e5c81d163704eb996d7950d5157814d14a056dd9d5",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_000_01/job_0000/worker_report.json": "27c4f40b9fe850f878076522d1f27431f99f4b4680c8c59a91b4f6c5dd398c5f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_051_01/job_0052/worker_report.json": "7359a49e341a45348fffaad167009cf5d05b830d9eee76ae5755974d4163957b"
+  },
+  "checks": [
+    {
+      "name": "actual_completed_unsat",
+      "pass": true,
+      "strict": true,
+      "category": "STRICT_VALID_PAIR_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "empty_stop_field_is_not_clean",
+      "pass": true,
+      "strict": false,
+      "category": "RESOURCE_STOP_OR_BUDGET_FAILURE",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "null_stop_field_is_not_clean",
+      "pass": true,
+      "strict": false,
+      "category": "RESOURCE_STOP_OR_BUDGET_FAILURE",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "stale_unsat_final_missing_attempt",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "pair_started_false_has_no_return_receipt",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "NO_PAIR_RETURN_RECEIPT"
+    },
+    {
+      "name": "pair_started_missing_has_no_return_receipt",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "NO_PAIR_RETURN_RECEIPT"
+    },
+    {
+      "name": "unclean_exit_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "resource_reaped_raw_sat_stays_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "RESOURCE_STOP_OR_BUDGET_FAILURE",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "canonical_shortcut_returned_not_solver_claim",
+      "pass": true,
+      "strict": true,
+      "category": "STRICT_VALID_PAIR_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "typed_reject_not_query_success",
+      "pass": true,
+      "strict": false,
+      "category": "EXPECTED_TYPED_NO_QUERY_REJECTION",
+      "derived_pair": "NOT_RUN_CONTRACT_STOP"
+    },
+    {
+      "name": "actual_differential_agreement",
+      "pass": true,
+      "strict": true,
+      "category": "STRICT_VALID_BOUNDED_DIFFERENTIAL_AGREEMENT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "diff_missing_pair_start_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "NO_PAIR_RETURN_RECEIPT"
+    },
+    {
+      "name": "diff_failed_exit_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "diff_solver_unknown_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "old52_official_attempt_remains_unknown",
+      "pass": true
+    },
+    {
+      "name": "old52_zero_RSS_excluded_not_replaced_by_checkpoint",
+      "pass": true,
+      "RSS_distribution": {
+        "observed_count": 168,
+        "sum": 18536808448,
+        "min": 84508672,
+        "median": 109641728.0,
+        "max": 229752832,
+        "missing_count": 1
+      }
+    }
+  ]
+}

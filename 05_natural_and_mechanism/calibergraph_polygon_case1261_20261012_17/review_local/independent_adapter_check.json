@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "solver_calls": 0,
+  "sqlite_version": "3.43.2",
+  "adapter_sha256": "c2db90b71096f2ddb9447a62daec156e3677376b93c722bc14861881bd2334f6",
+  "worker_sha256": "6609f41cf577a93ff81cdc0b8d5bd8c4d694b72f244683a604fd50a44492efc7",
+  "actual_adapter_boundary_cases": 2500,
+  "negative_rejections": [
+    "('laboratory', 'id', 11)",
+    "('examination', 'id', 11)",
+    "('patient', 'id', None)",
+    "('laboratory', 'date', None)",
+    "('laboratory', 'id', None)",
+    "('patient', 'sex', 'M')",
+    "('examination', 'thrombosis', False)",
+    "('laboratory', 'rf', 0.0)",
+    "patient N2",
+    "examination N2",
+    "laboratory N2",
+    "bound2",
+    "1172 hash",
+    "CREATE TEMP TABLE Patient(ID INTEGER)",
+    "ATTACH DATABASE ':memory:' AS outside",
+    "original orphan FK",
+    "original N2"
+  ],
+  "invalid_utf8_text": "PASS",
+  "reverse_arbitrary_Int_cases": 81,
+  "constraints": [
+    {
+      "eq": [
+        "Examination.ID",
+        "Patient.ID"
+      ]
+    },
+    {
+      "primary": [
+        "Patient.ID"
+      ]
+    },
+    {
+      "not_null": "Patient.ID"
+    },
+    {
+      "primary": [
+        "Laboratory.ID",
+        "Laboratory.Date"
+      ]
+    },
+    {
+      "not_null": "Laboratory.ID"
+    },
+    {
+      "not_null": "Laboratory.Date"
+    },
+    {
+      "eq": [
+        "Laboratory.ID",
+        "Patient.ID"
+      ]
+    }
+  ]
+}

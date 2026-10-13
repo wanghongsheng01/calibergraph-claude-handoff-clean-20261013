@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "hypothesis_id": "H12",
+  "hypothesis_count": 1,
+  "role": "candidate_author_and_falsifier",
+  "review_status": "AUTHOR_FROZEN_PENDING_INDEPENDENT_REVIEW",
+  "decision": "REJECT",
+  "hypothesis_outcome": "FALSIFIED_BY_HAND_PROOF",
+  "new_promotable_opportunity": null,
+  "formal_topic": "UNCOMMITTED",
+  "scope": {
+    "common_body": true,
+    "pure_variables": true,
+    "base_relations": "SET",
+    "domain": "INFINITE_OPAQUE_EQUALITY_DOMAIN",
+    "completed_key_chase": true,
+    "self_joins_allowed": true,
+    "explicit_fk_closure": true,
+    "counterexample_has_foreign_keys": false
+  },
+  "counterexample": {
+    "relation": "R",
+    "arity": 2,
+    "primary_key_positions_one_based": [1, 2],
+    "foreign_keys": [],
+    "variables": ["v0", "v1", "v2", "v3", "v4", "v5"],
+    "body": [["R", ["v0", "v1"]], ["R", ["v1", "v2"]], ["R", ["v2", "v3"]], ["R", ["v3", "v4"]], ["R", ["v4", "v5"]], ["R", ["v5", "v0"]]],
+    "head": [],
+    "count_set_M": ["v0", "v1", "v3"],
+    "count_set_N": ["v0", "v1", "v4"],
+    "gap_sequence_M": [1, 2, 3],
+    "gap_sequence_N": [1, 3, 2],
+    "all_subsets_fd_closed": true,
+    "endomorphisms": "Exactly the six directed rotations",
+    "all_lift_full_assignment_count": 12,
+    "all_lift_count_formula": "12 - sum_j max(d_j - component_length, 0)",
+    "full_family": {
+      "closed_sets": 64,
+      "closed_set_component_pairs": 97,
+      "distinct_labeled_lifts": 31,
+      "manual_component_length_classes": 6,
+      "separating_pairs": 0,
+      "separating_distinct_lifts": 0,
+      "status": "ALL_CASES_HAND_PROVED_EQUAL",
+      "cases": [
+        {"component_length": 1, "raw_pair_count": 48, "distinct_lift_count": 6, "M": 9, "N": 9},
+        {"component_length": 2, "raw_pair_count": 24, "distinct_lift_count": 6, "M": 11, "N": 11},
+        {"component_length": 3, "raw_pair_count": 12, "distinct_lift_count": 6, "M": 12, "N": 12},
+        {"component_length": 4, "raw_pair_count": 6, "distinct_lift_count": 6, "M": 12, "N": 12},
+        {"component_length": 5, "raw_pair_count": 6, "distinct_lift_count": 6, "M": 12, "N": 12},
+        {"component_length": 6, "raw_pair_count": 1, "distinct_lift_count": 1, "M": 12, "N": 12}
+      ],
+      "canonical_control": {"M": 6, "N": 6},
+      "not_an_empirical_success_rate": true
+    },
+    "cheap_controls": {
+      "closures": [["v0", "v1", "v3"], ["v0", "v1", "v4"]],
+      "cases": [
+        {"fixed_closure": "M", "S": ["v2"], "M": 9, "N": 9},
+        {"fixed_closure": "M", "S": ["v4", "v5"], "M": 11, "N": 11},
+        {"fixed_closure": "N", "S": ["v2", "v3"], "M": 11, "N": 11},
+        {"fixed_closure": "N", "S": ["v5"], "M": 9, "N": 9}
+      ],
+      "separated": 0,
+      "denominator": 4
+    },
+    "separating_database": {
+      "layer_sizes": [2, 2, 1, 2, 1, 1],
+      "rows": [["a0", "a1"], ["a0", "b1"], ["b0", "a1"], ["b0", "b1"], ["a1", "a2"], ["b1", "a2"], ["a2", "a3"], ["a2", "b3"], ["a3", "a4"], ["b3", "a4"], ["a4", "a5"], ["a5", "a0"], ["a5", "b0"]],
+      "row_count": 13,
+      "active_domain_count": 9,
+      "M_rotation_contributions": [8, 2, 2, 4, 2, 2],
+      "N_rotation_contributions": [4, 2, 4, 4, 1, 4],
+      "M_multiplicity": 20,
+      "N_multiplicity": 19,
+      "legal": true,
+      "exact_strong_control": "FewRows v1 Appendix A Definition A.1 independent Cartesian corner for M, parameter vector (2,2,2)",
+      "minimal_database_claim": false,
+      "minimal_body_claim": false
+    }
+  },
+  "hand_controls": {
+    "count": 4,
+    "file": "handcontrols.md",
+    "ids": ["HC1_SWAP_EQUIVALENCE", "HC2_FULL_TUPLE_TRIANGLE", "HC3_SINGLE_COLUMN_KEY_TRIANGLE", "HC4_HIDDEN_SHARED_PARENT_NONANCHOR"],
+    "source": "HAND_CONSTRUCTED_SYNTHETIC",
+    "execution": "NOT_EXECUTED"
+  },
+  "prior_art_deductions": [
+    "Closure agreement two-tuple primitive is covered by Armstrong prior art",
+    "Independent Cartesian {1,2} strong control separates the actual counterexample",
+    "Do not rebrand mature chase/FD-expansion/normalization equivalence decisions"
+  ],
+  "cost_boundary": {
+    "closed_set_candidates_worst_case": "2^|V|",
+    "closed_set_component_pairs_upper_bound": "|V| * 2^|V|",
+    "include_costs": ["FD closure", "component extraction", "materialization", "set deduplication", "legality validation", "exact projected self-join evaluation", "all failed candidate tests"],
+    "efficiency_claim": false,
+    "runtime_measurements": null,
+    "author_reasoning_cost_not_measured": true
+  },
+  "execution_facts": {
+    "scientific_code_runs": 0,
+    "database_or_assignment_enumeration_runs": 0,
+    "sql_runs": 0,
+    "smt_runs": 0,
+    "model_experiments": 0,
+    "gpu_runs": 0,
+    "queue_submissions": 0,
+    "natural_data_access": false,
+    "enterprise_data_access": false,
+    "credentials_read": false,
+    "allowed_operations": ["Read AGENTS and stage-relevant skill", "Read prior evidence", "Read public primary sources", "Write author artifacts", "Artifact syntax validation and hashing"]
+  },
+  "remaining_gates": ["Root-managed independent review", "Root-managed private backup verification"],
+  "datahub_status": "DATAHUB_REGISTRATION_BLOCKED_REGISTRY_OUTSIDE_WRITE_SCOPE_NO_BUSINESS_DATA_ACCESSED",
+  "next_scientific_action": "NONE_H12_FALSIFIER_MET_STOP",
+  "submission_or_topic_promotion": false
+}

@@ -1,0 +1,324 @@
+{
+  "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev03_02",
+    "case_index": 1,
+    "status": "RETURNED",
+    "engineering_class": "CONTRACT_INCONSISTENT_EXACT2",
+    "strict_class": "CONTRACT_INCONSISTENT_EXACT2",
+    "attempts": [
+      {
+        "id": "dev03_02",
+        "attempt": 1,
+        "status": "CONTRACT_STOP",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0009245830588042736,
+            "cpu_seconds": 0.0009249999999999536
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 3,
+            "base_fact_count": 18,
+            "admitted_delta_facts": 3,
+            "full_fact_count": 21,
+            "wall_seconds": 0.0015291250310838223,
+            "cpu_seconds": 0.0015290000000000026
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.005145667120814323,
+            "cpu_seconds": 0.005143000000000009
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.0038270829245448112,
+            "actual_check_cpu_seconds": 0.003835000000000033,
+            "answer": "unsat",
+            "wall_seconds": 0.006032499950379133,
+            "cpu_seconds": 0.006009000000000042
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "CUSTOMER": 2
+        },
+        "raw_query_verdict": null,
+        "full_C_nonempty": "unsat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "4997521e87a4053ff71b0a33815004a8e360d02351d14a1a796aeecb974153f7",
+        "solver_cumulative_wall_seconds": 0.0038270829245448112,
+        "solver_cumulative_cpu_seconds": 0.003835000000000033,
+        "engineering_class": "CONTRACT_INCONSISTENT_EXACT2",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.0050608329474925995,
+          "cpu_seconds": 0.005057000000000089
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0,
+          "scope_encode": 0,
+          "compare_encode": null,
+          "query_check": 0
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.02384300000000006,
+          "wall_seconds": 0.024033167399466038,
+          "worker_peak_rss_bytes_macos": 104890368
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 2421,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "2cb3e05c18bacb7f7de7d3a4f55612b5bad8a42925ab2e12a2a41ed90d59748c",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "CUSTOMER__ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "CUSTOMER__REFEREE_ID"
+            },
+            {
+              "value": "CUSTOMER__ID"
+            }
+          ]
+        },
+        {
+          "neq": [
+            {
+              "value": "CUSTOMER__REFEREE_ID"
+            },
+            {
+              "value": "CUSTOMER__ID"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/584.csv",
+      "index": 48,
+      "pair": [
+        "SELECT NAME FROM CUSTOMER WHERE REFEREE_ID <> 2 OR REFEREE_ID IS NULL",
+        "SELECT NAME FROM CUSTOMER WHERE REFEREE_ID!=2 UNION ALL SELECT NAME FROM CUSTOMER WHERE REFEREE_ID IS NULL"
+      ],
+      "schema": {
+        "CUSTOMER": {
+          "ID": "INT",
+          "NAME": "VARCHAR",
+          "REFEREE_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "04cda1c9e559e788fef7dbd228b1c0474d6d569a253cc19dcc551ef468eec094",
+      "19d98e29bcb66f151d8bec6ddecdfd9f2b06a41dd5cc6f55bcd8e26a75dc8d89"
+    ],
+    "schema_sha256": "64f3d1ffcc7106d7b2692f9ce04090c436dca76301f62ac3bfd953d4100845ef",
+    "constraint_sha256": "06192a2824767adf627b125b99e2b7de612737dcf02773ebf96484403e1b1ff8",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "64f3d1ffcc7106d7b2692f9ce04090c436dca76301f62ac3bfd953d4100845ef",
+      "constraint_sha256": "06192a2824767adf627b125b99e2b7de612737dcf02773ebf96484403e1b1ff8",
+      "table_count": 1,
+      "column_count": 3,
+      "schema_type_counts": {
+        "INT": 2,
+        "VARCHAR": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 3,
+      "operator_counts": {
+        "foreign": 1,
+        "neq": 1,
+        "primary": 1,
+        "value": 5
+      },
+      "reference_counts": {
+        "CUSTOMER__ID": 3,
+        "CUSTOMER__REFEREE_ID": 2
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS",
+        "OFFICIAL_FOREIGN_REQUIRES_NON_NULL_SOURCE_AND_TARGET_MATCH"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.0038270829245448112,
+        "actual_check_cpu_seconds": 0.003835000000000033,
+        "timeout_ms": 100
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.0038270829245448112,
+    "solver_cumulative_cpu_seconds": 0.003835000000000033,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "scope": "Registered input only; exact2 official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "065f8574563a3cb0fab2dd98a4e64fd44fe17f66f4b32ec73a2bee9bb39b8a55",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_diagnostic_worker.py": "c8c9ffcc2d22807ef4333d43ebdc11dc08b64f54956a00ce1dc0f2675b9bb1ec",
+    "official_diagnostic_backend.py": "b599f04890b8d7cbf5b12b872a8cbf8a97a0fa74f2ac49ec9eb88fa48e115e5e",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d"
+  },
+  "registered_group_count": 21,
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "FIRST_ATTEMPT_COMPLETE",
+    "id": "dev03_02",
+    "attempt": null,
+    "active_stage": null
+  },
+  "runtime": {
+    "id": "runtime",
+    "stages": [
+      {
+        "name": "LOCK_AND_DEPENDENCY_HASH",
+        "status": "RETURNED",
+        "checked_files": 848,
+        "wall_seconds": 0.15767854172736406,
+        "cpu_seconds": 0.059345
+      },
+      {
+        "name": "NATIVE_AND_OFFICIAL_IMPORT",
+        "status": "RETURNED",
+        "version": [
+          4,
+          12,
+          0,
+          0
+        ],
+        "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+        "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+        "wall_seconds": 0.684843750204891,
+        "cpu_seconds": 0.6547769999999999
+      }
+    ],
+    "active_stage": null,
+    "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  },
+  "latest_attempt_snapshot": {
+    "id": "dev03_02",
+    "attempt": 1,
+    "status": "CONTRACT_STOP",
+    "stages": [
+      {
+        "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+        "status": "RETURNED",
+        "wall_seconds": 0.0009245830588042736,
+        "cpu_seconds": 0.0009249999999999536
+      },
+      {
+        "name": "FULL_ORIGINAL_IC_ADMISSION",
+        "status": "RETURNED",
+        "original_clause_count": 3,
+        "base_fact_count": 18,
+        "admitted_delta_facts": 3,
+        "full_fact_count": 21,
+        "wall_seconds": 0.0015291250310838223,
+        "cpu_seconds": 0.0015290000000000026
+      },
+      {
+        "name": "FULL_C_SOLVER_SETUP",
+        "status": "RETURNED",
+        "wall_seconds": 0.005145667120814323,
+        "cpu_seconds": 0.005143000000000009
+      },
+      {
+        "name": "FULL_C_NONEMPTY_CHECK",
+        "status": "RETURNED",
+        "timeout_ms": 100,
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.0038270829245448112,
+        "actual_check_cpu_seconds": 0.003835000000000033,
+        "answer": "unsat",
+        "wall_seconds": 0.006032499950379133,
+        "cpu_seconds": 0.006009000000000042
+      }
+    ],
+    "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+    "exact_rows": {
+      "CUSTOMER": 2
+    },
+    "raw_query_verdict": null,
+    "full_C_nonempty": "unsat",
+    "active_stage": null,
+    "latest_stage": "CLEANUP",
+    "full_contract_fact_sha256": "4997521e87a4053ff71b0a33815004a8e360d02351d14a1a796aeecb974153f7",
+    "solver_cumulative_wall_seconds": 0.0038270829245448112,
+    "solver_cumulative_cpu_seconds": 0.003835000000000033,
+    "engineering_class": "CONTRACT_INCONSISTENT_EXACT2",
+    "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+    "cleanup_cost": {
+      "wall_seconds": 0.0050608329474925995,
+      "cpu_seconds": 0.005057000000000089
+    },
+    "exclusive_phase_cpu": {
+      "parse": 0,
+      "scope_encode": 0,
+      "compare_encode": null,
+      "query_check": 0
+    },
+    "attempt_cost": {
+      "cpu_seconds": 0.02384300000000006,
+      "wall_seconds": 0.024033167399466038,
+      "worker_peak_rss_bytes_macos": 104890368
+    }
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.690789,
+    "cpu_system_seconds": 0.08685799999999999,
+    "peak_rss_bytes_macos": 105037824,
+    "wall_from_main_seconds": 0.8864204999990761
+  }
+}

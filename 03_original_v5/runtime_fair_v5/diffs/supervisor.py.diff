@@ -1,0 +1,35 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/supervisor.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py
+@@ -60,7 +60,7 @@
+         raise ValueError("use a new result directory under today_20261011")
+     args.out_dir.mkdir(parents=True)
+     EMERGENCY_FD = os.open(args.out_dir / "emergency.jsonl", os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_APPEND, 0o600)
+-    program_hashes = {name: sha(HERE / name) for name in ("common.py", "worker.py", "supervisor.py", "query_differential.py")}
++    program_hashes = {name: sha(HERE / name) for name in ("common.py", "worker.py", "supervisor.py", "query_differential.py", "contract_reference.py")}
+     for job in jobs:
+         job.update(status="NOT_RUN", final_decision="NOT_RUN", attempts=[], fallback={"status": "NOT_RUN"})
+     report = {"status": "RUNNING", "kind": args.kind, "data_role": suite["data_role"],
+@@ -71,8 +71,8 @@
+               "limits": {"per_child_cpu_soft_hard_seconds": [14, 15], "per_child_wall_supervisor_seconds": 25,
+                          "per_child_wall_alarm_seconds": 24, "total_internal_wall_seconds": 89,
+                          "child_rss_soft_bytes": RSS_LIMIT, "solver_threads": 1},
+-              "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Six arms include pure-fragment AND canonicalization. Fresh process/Environment per admitted arm. Full schema, exact rows and IC unchanged. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+-              "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate or canonical Ineligible/normalization miss -> raw official; candidate unknown -> raw official only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
++              "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Six arms include pure-fragment AND canonicalization. Fresh process/Environment per admitted arm. Full schema/exact rows preserved. Original source-AST IC normalized on a copy; common base-only SAT and XOR(normalized upstream C, independent original-AST C) UNSAT audit precedes all six arms and per-query differential. Whole unsupported/unknown contracts stop without fallback. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
++              "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate or canonical Ineligible/normalization miss -> official with same audited normalized C; candidate unknown -> official with same audited normalized C only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+               "oracle_domain_policy": "SAT replay requires common int64-domain audit; out-of-domain/errors retain witnesses and denominator and cannot count as success or a win.",
+               "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+               "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+@@ -145,10 +145,10 @@
+             job["final_decision"] = worker.get("final_decision", "NOT_RUN")
+             job["attempts"] = worker.get("attempts", [])
+             job["fallback"] = worker.get("fallback", {"status": "NOT_RUN"})
+-            for field in ("semantic_e2e_wall_seconds", "semantic_e2e_cpu_seconds", "analytical_expectation_match", "differential", "raw_frontend_guard", "actual_verifier_semantics"):
++            for field in ("semantic_e2e_wall_seconds", "semantic_e2e_cpu_seconds", "analytical_expectation_match", "differential", "raw_frontend_guard", "actual_verifier_semantics", "contract_bridge", "contract_guard", "contract_adapter_label", "environment_cleanup"):
+                 if field in worker:
+                     job[field] = worker[field]
+-            job["valid_completed_result"] = (job["exit_code"] == 0 and worker["status"] == "COMPLETE"
++            job["valid_completed_result"] = ("stop_reason" not in job and job["exit_code"] == 0 and worker["status"] == "COMPLETE"
+                                              and worker.get("analytical_expectation_match", True) is not False)
+         else:
+             job.update(worker_status="NO_REPORT_EFFECT_UNKNOWN", valid_completed_result=False)

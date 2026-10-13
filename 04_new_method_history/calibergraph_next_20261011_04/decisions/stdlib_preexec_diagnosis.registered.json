@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-11T13:29:17.558133+00:00",
+  "id": "stdlib-preexec-diagnosis-01",
+  "status": "REGISTERED_BEFORE_DIAGNOSIS",
+  "binding": {
+    "batch_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/batch_receipt.json",
+    "batch_sha256": "5149c90e411714c8b3adb7ab189a310c5b32e89eaf74aada98748c22a9b40579",
+    "case_sha256": "aad9cd42b714aa7e91e2c811af834d4f7042f39e19c138603da3d1cf1ac5d47d"
+  },
+  "scientific_exec_evidence": "Popen preexec_fn exception before worker exec; no worker events or progress; does not mean no forked child existed.",
+  "allowed": [
+    "self getpriority",
+    "self setpriority max(current,15)",
+    "self RLIMIT_CPU(3,3)",
+    "self RLIMIT_CORE(0,0)"
+  ],
+  "forbidden": [
+    "SQL",
+    "parser",
+    "solver",
+    "new benchmark access",
+    "other process mutation"
+  ],
+  "charge_reserve_seconds": 1.0,
+  "prior_conservative_charge_seconds": 1.408329,
+  "recovery_authorized_by_this_diagnosis": false
+}

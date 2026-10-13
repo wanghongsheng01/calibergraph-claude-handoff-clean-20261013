@@ -1,0 +1,109 @@
+{
+  "created_utc": "2026-10-11T03:37:25.911726+00:00",
+  "status": "NO_VERIFIED_NEW_CONTRIBUTION_TWO_UNIMPLEMENTED_CUTS_AT_REVIEW_SNAPSHOT",
+  "reviewer": "Distinct AI /root/independent_review; no target execution",
+  "current_cost_recount": {
+    "source": "all runs/fair_v3_cost*/supervisor_report.json, unique realized case_id+arm",
+    "total": 60,
+    "N2": {
+      "total": 30,
+      "sat": 10,
+      "unsat": 20,
+      "unknown": 0
+    },
+    "N4": {
+      "total": 30,
+      "sat": 8,
+      "unsat": 15,
+      "unknown": 7
+    },
+    "role": "exposed constructed DEV; same-expected not general correctness"
+  },
+  "cuts": [
+    {
+      "id": "A",
+      "priority": 1,
+      "name": "Original-contract semantic fidelity bridge",
+      "guarantee": "BN implies Cref iff Cemit; per-source-clause total coverage; independent concrete contract validation",
+      "new_queries": [
+        "SAT(BN AND XOR(Cref,Cemit))",
+        "SAT(BN AND Cref)"
+      ],
+      "failure_conditions": [
+        "only one bug patch without general supported-subset guarantee",
+        "only seeded synthetic defects",
+        "no prior-art distinction"
+      ],
+      "novelty": "not established; translation validation itself not claimed novel"
+    },
+    {
+      "id": "B",
+      "priority": 2,
+      "name": "All-admissible-base-state coverage certificate for official auxiliary encoding",
+      "guarantee": "forall B: Cref(B) implies exists A:G(B,A)",
+      "implementation": "restricted ground fresh definition extraction, totality DAG certificate, residual R(B), UNSAT(BN AND Cref AND NOT R)",
+      "limits": [
+        "UF application aliases and tuple-sort identity need explicit discharge",
+        "cycles/nondefinitions stay unproved",
+        "not merely a premise SAT test"
+      ],
+      "novelty": "not established"
+    }
+  ],
+  "static_risks": [
+    {
+      "id": "literal_left_reverse",
+      "producer_direction_confirmed": true,
+      "fixture": "IC_LITERAL_LEFT_STATIC_CASE.json",
+      "target_executed": false
+    },
+    {
+      "id": "unsupported_clause_drop",
+      "evidence": "ConstraintVisitor.unsupported returns None; constraints filters None; parse_file flag only on exceptions",
+      "target_executed": false
+    }
+  ],
+  "prior_art_boundary": {
+    "known_factorization_selector": "not independent innovation",
+    "Polygon": "parent-provided PLDI2025 arXiv2504.06542 conflict-directed under-approximation prior, full text not newly reviewed",
+    "SpotIt": "no unverified staged description"
+  },
+  "evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/constraint_parser.py",
+      "sha256": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+      "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+      "sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/common.py",
+      "sha256": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/worker.py",
+      "sha256": "5baf3d5719db583abfc58553392ab4e711ee1c37ca8e0bdc1217dabd8f52efc1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/query_differential.py",
+      "sha256": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+      "sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/IC_LITERAL_LEFT_STATIC_CASE.json",
+      "sha256": "3d770c63ce27d34707898da05317614c96df900bef9dfeda111a6892765a0d3c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/CONTRIBUTION_CUTS.zh.md",
+      "sha256": "6c8effb89c9fbf944e94356d92eca1b759205bb297d4a3cd88f1cac7da857c81"
+    }
+  ]
+}

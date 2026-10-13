@@ -1,0 +1,39 @@
+{
+  "reason": null,
+  "elapsed_s": 0.021050209179520607,
+  "wall_seconds": 2,
+  "handle_count": 1,
+  "all_reaped": true,
+  "returncodes": [
+    -15
+  ],
+  "cleanup_errors": [],
+  "self_rss_stop_bytes": 1073741824,
+  "rss_scope": "own Python high-water RSS only; excludes all children",
+  "events": [
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333145.243900208,
+      "bytes": 17186816
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2333145.245388083,
+      "index": 0,
+      "pid_for_logging_only": 40470
+    },
+    {
+      "kind": "terminate",
+      "monotonic": 2333145.26354125,
+      "pid_for_logging_only": 40470
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2333145.264814041,
+      "pid_for_logging_only": 40470,
+      "returncode": -15
+    }
+  ],
+  "test": "protocol_unknown",
+  "expected": "non-success state is not EQU"
+}

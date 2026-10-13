@@ -1,0 +1,500 @@
+{
+  "schema": "calibergraph.round13.failed_launch_disposition.v1",
+  "created_utc": "2026-10-11T15:59:19.561517+00:00",
+  "overall_status": "NOTCOMPLETED",
+  "execution_attempts": 1,
+  "retry_allowed": false,
+  "planned_database_instances": 98,
+  "planned_count_selects": 196,
+  "denominator_constructed": false,
+  "initial_NOTRUN_ledger_exists": false,
+  "valid_result_receipt_exists": false,
+  "valid_completion_exists": false,
+  "known_failure": "PermissionError setting nice in replay.py line 34 before main; /usr/bin/time also reported sysctl kern.clockrate EPERM",
+  "sandbox_review_rejection": false,
+  "failure_is_scientific_evidence_against_H12": false,
+  "scientific_result": "NO_SQLITE_COUNT_RESULTS_OBSERVED",
+  "theoretical_H12_status": "REJECTED_BY_HAND_PROOF_AND_INDEPENDENT_THEORY_REVIEW_ONLY",
+  "root_added_consumption_lock": true,
+  "runner_created_lock": false,
+  "actual_progress_policy": "All planned entries UNKNOWN without valid final receipts; initial scientific input generation did not produce its ledger. Do not replace missing observations with zero counts. Traceback separately supports a pre-main launch failure.",
+  "attempted_count_selects": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 196
+  },
+  "completed_count_selects": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 196
+  },
+  "ddl": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 98
+  },
+  "pragma_setter": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 588
+  },
+  "pragma_readback": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 588
+  },
+  "insert": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 883
+  },
+  "total_explicit_sql": {
+    "value": null,
+    "status": "UNKNOWN",
+    "minimum": 0,
+    "maximum": 2353
+  },
+  "external_cost_receipt": {
+    "printed_real_s": 0.05,
+    "printed_user_s": 0.01,
+    "printed_sys_s": 0.01,
+    "precision": "rounded to 0.01s",
+    "rss_available": false,
+    "complete_whole_launch_resource_receipt": false,
+    "performance_claim_allowed": false
+  },
+  "entries": [
+    {
+      "id": "family_000",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_001",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_002",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_003",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_004",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_005",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_006",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_007",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_008",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_009",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_010",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_011",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_012",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_013",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_014",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_015",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_016",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_017",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_018",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_019",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_020",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_021",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_022",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_023",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_024",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_025",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_026",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_027",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_028",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_029",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_030",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_031",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_032",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_033",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_034",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_035",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_036",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_037",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_038",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_039",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_040",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_041",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_042",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_043",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_044",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_045",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_046",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_047",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_048",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_049",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_050",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_051",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_052",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_053",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_054",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_055",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_056",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_057",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_058",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_059",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_060",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_061",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_062",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_063",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_064",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_065",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_066",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_067",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_068",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_069",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_070",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_071",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_072",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_073",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_074",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_075",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_076",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_077",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_078",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_079",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_080",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_081",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_082",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_083",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_084",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_085",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_086",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_087",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_088",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_089",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_090",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_091",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_092",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_093",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_094",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_095",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "family_096",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    },
+    {
+      "id": "cartesian_control",
+      "actual_status": "ACTUAL_STATUS_UNKNOWN"
+    }
+  ],
+  "raw_evidence": [
+    {
+      "path": "outer_launch/exit_receipt.json",
+      "sha256": "15f6530e75823e2a52a165dbbd39b86c5d851a40f87eedf096ca3276fadfdb88"
+    },
+    {
+      "path": "outer_launch/stderr_and_time.txt",
+      "sha256": "b6424c00788bce55b7971072f83ee3cd9d5fcf73201af47b79a0a6390c155dbe"
+    },
+    {
+      "path": "outer_launch/stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "protocols/execution_freeze.json",
+      "sha256": "0f2ca94b571c0f2d7099429a3b4303a90a965d12fef671d7115ac914bcc3ff12"
+    },
+    {
+      "path": "protocols/machine_preflight.json",
+      "sha256": "f657443e61cfee35be545be20b10e197b80143aaa66200d7ab00005e84197158"
+    },
+    {
+      "path": "code/replay.py",
+      "sha256": "50e6d27ad3ebaa9227e274f4247f97d91a2641bfb79ee8b6cf6d2d47df72d755"
+    },
+    {
+      "path": "code/source_snapshot_disabled.py",
+      "sha256": "467f8df522a9dbb845ec35542f9dd412452ede05debffb9d9056b144c30a5004"
+    },
+    {
+      "path": "EXECUTION_ONCE.lock",
+      "sha256": "3f5f388fc21b2274d78249fcc2a26951fd085f0928bb4557adb77d4751456929"
+    }
+  ]
+}

@@ -1,0 +1,3058 @@
+{
+  "status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN",
+  "kind": "cost",
+  "data_role": "EXPOSED_LOGGING_SUPERVISOR_INTEGRATION_REGRESSION_NOT_SCIENTIFIC_SAMPLE",
+  "source_provenance": {
+    "source_suite": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "source_suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "cases_extracted_unchanged": [
+      "D01_literal_left_forced_A6",
+      "D02_same_SQL_same_C",
+      "D04_contradictory_literal_left",
+      "D06_unsupported_whole_C"
+    ],
+    "all_case_dictionaries_exactly_unchanged": true
+  },
+  "suite_sha256": "84b1077a998a5cac1d05e6ad5631fc3f6b0f6a618f0e228402c2eb70c08f12e9",
+  "runtime_lock_sha256": "16c76c134cdca4ef9461506968cecbbdb73ce6bc6304acdbeb7e878f19613d18",
+  "program_sha256": {
+    "common.py": "aad39a0fe6eeb0dbafbc949a16c81cda1aa5268f7b519dedf6275e46acc10576",
+    "worker.py": "5848538a168495d3a336afedd5d1efe696d43eea8a15d353679b905be7ecc320",
+    "supervisor.py": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "pair_status.py": "65edfe932aee49a64f3986d420eb3115bb71d271d3ac402e039052ea5826ca5f"
+  },
+  "full_case_denominator": 4,
+  "full_job_denominator": 24,
+  "selected_job_start": 5,
+  "selected_job_limit": 14,
+  "jobs": [
+    {
+      "case_index": 0,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "sat",
+      "attempts": [
+        {
+          "route": "official_canonical_sql",
+          "status": "NORMALIZED_AST_NOT_IDENTICAL",
+          "normalization": "recursively sort AND children only; preserve all other AST components",
+          "stage_costs": {
+            "parse": {
+              "wall_seconds": 0.06006845785304904,
+              "cpu_seconds": 0.05993399999999993
+            },
+            "recognize": {
+              "wall_seconds": 4.1082967072725296e-05,
+              "cpu_seconds": 4.100000000017978e-05
+            },
+            "normalize": {
+              "wall_seconds": 5.166977643966675e-06,
+              "cpu_seconds": 4.999999999810711e-06
+            }
+          },
+          "expression_contains_variable_product": [
+            false,
+            false
+          ],
+          "canonical_asts": [
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T",
+              "where": {
+                "lt": [
+                  "T__A",
+                  5
+                ]
+              }
+            },
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T"
+            }
+          ]
+        },
+        {
+          "route": "official",
+          "reason": "canonical_asts_not_identical",
+          "status": "sat",
+          "solver_timeout_ms": 12398,
+          "witness": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "solver_decision": "sat",
+          "oracle_validation": {
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN",
+            "domain_audits": [
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "0",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "0",
+                "mathematical_result_diagnostic_only": null
+              },
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "6",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "1",
+                "mathematical_result_diagnostic_only": "6"
+              }
+            ],
+            "queries": [
+              "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+              "SELECT SUM(T.A) FROM T"
+            ],
+            "sqlite": {
+              "relations": [
+                [
+                  [
+                    null
+                  ]
+                ],
+                [
+                  [
+                    6
+                  ]
+                ]
+              ],
+              "sqlite_version": "3.53.3",
+              "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+              "unequal_as_bags": true,
+              "matches_audited_mathematical_values": [
+                true,
+                true
+              ],
+              "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+            },
+            "original_ast_contract_validation": {
+              "status": "EVALUATED_SUPPORTED_REFERENCE",
+              "holds": true,
+              "clauses": [
+                {
+                  "source_path": "$/0",
+                  "row_results": [
+                    true
+                  ],
+                  "all_rows": true
+                },
+                {
+                  "source_path": "$/1",
+                  "row_results": [
+                    true
+                  ],
+                  "all_rows": true
+                }
+              ],
+              "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred",
+              "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e"
+            }
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  null
+                ]
+              ],
+              [
+                [
+                  6
+                ]
+              ]
+            ],
+            "sqlite_version": "3.53.3",
+            "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+            "unequal_as_bags": true,
+            "matches_audited_mathematical_values": [
+              true,
+              true
+            ],
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+          }
+        }
+      ],
+      "fallback": {
+        "status": "RETURNED",
+        "reason": "canonical_asts_not_identical",
+        "complete_input_preserved": true
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0005",
+      "sampled_peak_rss_bytes": 111443968,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16689,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.389663000125438,
+      "full_process_cpu_user_seconds": 1.148977,
+      "full_process_cpu_system_seconds": 0.129152,
+      "full_process_cpu_seconds": 1.2781289999999998,
+      "worker_report_sha256": "2867c6a86ea2f89ccd6069c2523ea912a2370dc3cfc389f3564a0227c6f21af1",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.14095004089176655,
+      "semantic_e2e_cpu_seconds": 0.1369100000000001,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "sat",
+        "reported_outcome_kind": "SAT_REPORTED_ORACLE_AND_CONTRACT_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 1,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "official",
+          "reason": null,
+          "status": "unsat",
+          "solver_timeout_ms": 12403
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0006",
+      "sampled_peak_rss_bytes": 113836032,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16691,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.3901266250759363,
+      "full_process_cpu_user_seconds": 1.224717,
+      "full_process_cpu_system_seconds": 0.10391,
+      "full_process_cpu_seconds": 1.328627,
+      "worker_report_sha256": "431baaa2b4e455df07dbfe099001fe471de7141bc4d1683d41bb7e81b5041432",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.13057649973779917,
+      "semantic_e2e_cpu_seconds": 0.12882399999999983,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 1,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "official_generic_smt",
+          "reason": null,
+          "status": "unsat",
+          "tactic_pipeline": [
+            "simplify",
+            "propagate-values",
+            "solve-eqs",
+            "smt"
+          ],
+          "solver_timeout_ms": 12454
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0007",
+      "sampled_peak_rss_bytes": 108314624,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16734,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.286335458047688,
+      "full_process_cpu_user_seconds": 1.162054,
+      "full_process_cpu_system_seconds": 0.10578199999999999,
+      "full_process_cpu_seconds": 1.267836,
+      "worker_report_sha256": "7fad1e98ac5fba33c84a429633f21820de566d7df4218f1332365727f068d797",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.1166107919998467,
+      "semantic_e2e_cpu_seconds": 0.11560900000000007,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 1,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "flat",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 1,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "flat",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 1,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "flat",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0008",
+      "sampled_peak_rss_bytes": 113639424,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16747,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.4928985419683158,
+      "full_process_cpu_user_seconds": 1.278231,
+      "full_process_cpu_system_seconds": 0.10728300000000002,
+      "full_process_cpu_seconds": 1.385514,
+      "worker_report_sha256": "7dd4b049fef6bf251238a1a1e5666e9779d13fcd096b3bd5dffc95cb7cae4d8a",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.12537766573950648,
+      "semantic_e2e_cpu_seconds": 0.12445499999999976,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 1,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "product",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "product",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "product",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0009",
+      "sampled_peak_rss_bytes": 118423552,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16759,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.2869540420360863,
+      "full_process_cpu_user_seconds": 1.1039190000000003,
+      "full_process_cpu_system_seconds": 0.11294199999999993,
+      "full_process_cpu_seconds": 1.2168610000000002,
+      "worker_report_sha256": "8b51b7419591f0bdaec21059f21217392410771163a7d44622dd02dec1392507",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.12941970815882087,
+      "semantic_e2e_cpu_seconds": 0.12520100000000012,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 1,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "selector",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "selector",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "selector",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0010",
+      "sampled_peak_rss_bytes": 112984064,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16761,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.4038906251080334,
+      "full_process_cpu_user_seconds": 1.183852,
+      "full_process_cpu_system_seconds": 0.10707500000000003,
+      "full_process_cpu_seconds": 1.290927,
+      "worker_report_sha256": "0d795adde694d7a974ca85bc02404c23ccf407f4f5613048ccfd30803491e811",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.12277658330276608,
+      "semantic_e2e_cpu_seconds": 0.12194700000000003,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 1,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "official_canonical_sql",
+          "status": "unsat",
+          "normalization": "recursively sort AND children only; preserve all other AST components",
+          "stage_costs": {
+            "parse": {
+              "wall_seconds": 0.06030325032770634,
+              "cpu_seconds": 0.06016699999999986
+            },
+            "recognize": {
+              "wall_seconds": 3.587501123547554e-05,
+              "cpu_seconds": 3.500000000000725e-05
+            },
+            "normalize": {
+              "wall_seconds": 5.375128239393234e-06,
+              "cpu_seconds": 5.000000000032756e-06
+            }
+          },
+          "expression_contains_variable_product": [
+            false,
+            false
+          ],
+          "canonical_asts": [
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T"
+            },
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T"
+            }
+          ],
+          "decision_source": "PURE_FRAGMENT_AND_COMMUTATIVITY",
+          "soundness": "Only order of pure admitted Boolean AND operands changed; three-valued AND is commutative; every other AST component and complete input contract are identical.",
+          "proof_boundary": "conditional on admitted raw frontend and AST semantics; no IC inference and no pair-equivalence oracle pre-run"
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0011",
+      "sampled_peak_rss_bytes": 107102208,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16768,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.2779162088409066,
+      "full_process_cpu_user_seconds": 1.1331390000000008,
+      "full_process_cpu_system_seconds": 0.10813600000000001,
+      "full_process_cpu_seconds": 1.2412750000000008,
+      "worker_report_sha256": "25c774a97ef2439a5cfd02f90c91fdc4e11233bafc1addc77fdd24b4d15f8d97",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.11577399959787726,
+      "semantic_e2e_cpu_seconds": 0.11515699999999995,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "8fe2dbb8f78a5b453430fe6508e94914c46a8d3154d382ac6ad681df1f9aad55"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_started": true,
+      "pair_work_status": "RETURNED",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "CANONICAL_AST_IDENTITY_REPORTED_NO_PAIR_SOLVER",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 2,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0012",
+      "sampled_peak_rss_bytes": 97026048,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16771,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.279806667007506,
+      "full_process_cpu_user_seconds": 1.160556999999999,
+      "full_process_cpu_system_seconds": 0.10375699999999999,
+      "full_process_cpu_seconds": 1.2643139999999988,
+      "worker_report_sha256": "4db16ed4a07dcaaf768f243f0415254378400d5aafa0d145b468be053d53f70f",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.05074824998155236,
+      "semantic_e2e_cpu_seconds": 0.04997900000000022,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "d9884b0b5a101de465784d549fd3128a609e1133be8c3cd876ea6c2d443e8f76"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 2,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0013",
+      "sampled_peak_rss_bytes": 103464960,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16775,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.2870795829221606,
+      "full_process_cpu_user_seconds": 1.1071980000000003,
+      "full_process_cpu_system_seconds": 0.10301400000000005,
+      "full_process_cpu_seconds": 1.2102120000000003,
+      "worker_report_sha256": "4c4874462b269e1aefd2cfd3c71b0729af808836ba2d5e347c27a1550dec2c46",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.04854870820418,
+      "semantic_e2e_cpu_seconds": 0.04818000000000011,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "d9884b0b5a101de465784d549fd3128a609e1133be8c3cd876ea6c2d443e8f76"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 2,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0014",
+      "sampled_peak_rss_bytes": 102367232,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16777,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.2836306248791516,
+      "full_process_cpu_user_seconds": 1.1309839999999998,
+      "full_process_cpu_system_seconds": 0.10406900000000008,
+      "full_process_cpu_seconds": 1.2350529999999997,
+      "worker_report_sha256": "0c0c39cdc4f9f55e43807c41d815cb9d8466dae6c28d3ba2a7e86c630735459e",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.05177208362147212,
+      "semantic_e2e_cpu_seconds": 0.05139300000000002,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "d9884b0b5a101de465784d549fd3128a609e1133be8c3cd876ea6c2d443e8f76"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 2,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0015",
+      "sampled_peak_rss_bytes": 94978048,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16786,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.2961331247352064,
+      "full_process_cpu_user_seconds": 1.1175320000000006,
+      "full_process_cpu_system_seconds": 0.10277599999999998,
+      "full_process_cpu_seconds": 1.2203080000000006,
+      "worker_report_sha256": "76ecd6ae41ea72eb941412d0839a08a3ede10ba7b48454a39888d87f0254c4ec",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.049303791020065546,
+      "semantic_e2e_cpu_seconds": 0.04899599999999982,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "d9884b0b5a101de465784d549fd3128a609e1133be8c3cd876ea6c2d443e8f76"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 2,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0016",
+      "sampled_peak_rss_bytes": 97894400,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16787,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.2714430829510093,
+      "full_process_cpu_user_seconds": 1.1243149999999993,
+      "full_process_cpu_system_seconds": 0.10860599999999998,
+      "full_process_cpu_seconds": 1.2329209999999993,
+      "worker_report_sha256": "272d09218788d46e8ee676c1f5bb12b6e1641773dd7eaae963db6bef92a937a4",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.0488452916033566,
+      "semantic_e2e_cpu_seconds": 0.04865099999999978,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "d9884b0b5a101de465784d549fd3128a609e1133be8c3cd876ea6c2d443e8f76"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 2,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0017",
+      "sampled_peak_rss_bytes": 101728256,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16788,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.294420124962926,
+      "full_process_cpu_user_seconds": 1.1067350000000005,
+      "full_process_cpu_system_seconds": 0.10575699999999988,
+      "full_process_cpu_seconds": 1.2124920000000003,
+      "worker_report_sha256": "8f684a0a3ed5ae274a1e77398485e8932c41a379d209de4bfe3072d4932f81c2",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.04969220794737339,
+      "semantic_e2e_cpu_seconds": 0.04932399999999992,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "d9884b0b5a101de465784d549fd3128a609e1133be8c3cd876ea6c2d443e8f76"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 2,
+          "actual_formula": "(and (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String))\n     (< 5 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              5
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            "normalized_ast": {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lt",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          },
+          {
+            "source_path": "$/1",
+            "source_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "normalized_ast": {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                5
+              ]
+            },
+            "source_operator": "lte",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 3,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "UNVERIFIED_CONTRACT",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0018",
+      "sampled_peak_rss_bytes": 92897280,
+      "sampled_max_kernel_threads": 2,
+      "pid": 16792,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.2723849997855723,
+      "full_process_cpu_user_seconds": 1.114116000000001,
+      "full_process_cpu_system_seconds": 0.10091099999999997,
+      "full_process_cpu_seconds": 1.215027000000001,
+      "worker_report_sha256": "95a40d1e03cf3c3a8ead49cef3b165ffc29a50ef5e8aea2e7dbe3ffdfc5e74a4",
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "semantic_e2e_wall_seconds": 0.012196166906505823,
+      "semantic_e2e_cpu_seconds": 0.012037000000000075,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "UNVERIFIED_CONTRACT",
+        "original_ast": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "or": [
+              {
+                "eq": [
+                  {
+                    "value": "T__A"
+                  },
+                  6
+                ]
+              },
+              {
+                "eq": [
+                  {
+                    "value": "T__A"
+                  },
+                  7
+                ]
+              }
+            ]
+          }
+        ],
+        "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "NOT_RUN"
+        },
+        "normalized_vs_reference": {
+          "status": "NOT_RUN"
+        },
+        "compilation": {
+          "status": "NOT_RUN"
+        },
+        "reason": "$/1: unsupported operator or",
+        "unsupported_policy": "WHOLE_CONTRACT_STOP_NO_DROP_NO_FALLBACK"
+      },
+      "environment_cleanup": "COMPLETE",
+      "pair_work_status": "NOT_RUN_CONTRACT_STOP",
+      "pair_work_receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "UNVERIFIED_CONTRACT",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 3,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    }
+  ],
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_supervisor_seconds": 25,
+    "per_child_wall_alarm_seconds": 24,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Six arms include pure-fragment AND canonicalization. Fresh process/Environment per admitted arm. Full schema/exact rows preserved. Original source-AST IC normalized on a copy; common base-only SAT and XOR(normalized upstream C, independent original-AST C) UNSAT audit precedes all six arms and per-query differential. Whole unsupported/unknown contracts stop without fallback. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+  "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate or canonical Ineligible/normalization miss -> official with same audited normalized C; candidate unknown -> official with same audited normalized C only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+  "oracle_domain_policy": "SAT replay requires common int64-domain audit; out-of-domain/errors retain witnesses and denominator and cannot count as success or a win.",
+  "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+  "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+  "clock_boundary": "89s guard starts after initial stdlib time import; per-child supervisor wall includes spawn/startup through reap. Worker final checkpoint excludes final write, full process wall/CPU measured here.",
+  "wall_seconds_before_final_write": 18.63190387468785
+}

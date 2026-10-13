@@ -1,0 +1,120 @@
+{
+  "case_index": 8,
+  "case_id": "dev03_09",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:22.949352+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 1146880,
+  "sampled_peak_group_cpu_seconds": 0.0,
+  "sample_count": 1,
+  "stop_remainder": null,
+  "pid": 43616,
+  "owned_pgid": 43616,
+  "worker_wait4_usage": {
+    "pid": 43616,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.027316999999999998,
+    "system_cpu_seconds": 0.00805,
+    "cpu_seconds": 0.035366999999999996,
+    "maxrss_bytes_darwin": 19955712
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.05434049991890788,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "latest_stage": null,
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.0,
+    "check_count": 0,
+    "case_index": 8,
+    "id": "dev03_09",
+    "updated_monotonic": 2259254.329122041,
+    "observed_monotonic": 2259254.346517916,
+    "solver_watchdog_estimated_seconds": 0.0,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "a34103b4b9244a1698508ef75b1e06f4bf4ba11ffbf5b76c27ba47c199d5370d",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_09",
+    "case_index": 8,
+    "status": "RETURNED",
+    "engineering_class": "SCHEMA_UNSUPPORTED",
+    "strict_class": "SCHEMA_UNSUPPORTED",
+    "attempts": [],
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 21639,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "9bef71d705d82831ac86ebde606cb03ca6e8b5ab4fd2d471fd4e49825515362d",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "lt": [
+            {
+              "value": "LOGINFO__LOGIN"
+            },
+            {
+              "value": "LOGINFO__LOGOUT"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1747.csv",
+      "index": 410,
+      "pair": [
+        "SELECT DISTINCT I1.ACCOUNT_ID FROM LOGINFO AS I1 JOIN LOGINFO AS I2 ON (I1.ACCOUNT_ID = I2.ACCOUNT_ID AND I1.IP_ADDRESS <> I2.IP_ADDRESS AND I2.LOGIN BETWEEN I1.LOGIN AND I1.LOGOUT)",
+        "SELECT DISTINCT ACCOUNT_ID FROM LOGINFO WHERE ACCOUNT_ID IN (SELECT L1.ACCOUNT_ID FROM LOGINFO L1 JOIN LOGINFO L2 ON L1.ACCOUNT_ID=L2.ACCOUNT_ID AND L1.IP_ADDRESS!=L2.IP_ADDRESS AND (L1.LOGIN BETWEEN L2.LOGIN AND L2.LOGOUT OR L2.LOGIN BETWEEN L1.LOGIN AND L1.LOGOUT))"
+      ],
+      "schema": {
+        "LOGINFO": {
+          "ACCOUNT_ID": "INT",
+          "IP_ADDRESS": "INT",
+          "LOGIN": "TIME",
+          "LOGOUT": "TIME"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "3547132979f80e460543f1caf9f8509649e4b2018674e1d82942bacca0f19379",
+      "6ce2ba0c792d8f1b4aa23c48f085ab83e25f7f6523cfedc886003992101705f6"
+    ],
+    "schema_sha256": "423d47cef78387ad930de974bb56b4a458e0c6614319ab356190d0ebaaa08609",
+    "constraint_sha256": "d21bc20d716fcb63eff9438a29f9e9a61c79b08bae433fe39c81a1e289f2c12a",
+    "failure_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "reason": "schema.LOGINFO.LOGIN: official create_database does not encode this type: 'TIME'",
+    "solver_calls": [],
+    "solver_cumulative_wall_seconds": 0.0,
+    "solver_cumulative_cpu_seconds": 0.0
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.12661899999999998,
+    "parent_system_cpu_seconds": 0.136078,
+    "all_reaped_children_user_cpu_seconds": 5.041206,
+    "all_reaped_children_system_cpu_seconds": 2.448942,
+    "supervisor_plus_reaped_cpu_seconds": 7.752845000000001,
+    "observed_total_cpu_seconds": 15.629567,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

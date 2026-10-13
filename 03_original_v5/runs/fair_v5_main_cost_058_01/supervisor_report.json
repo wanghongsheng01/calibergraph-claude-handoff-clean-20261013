@@ -1,0 +1,2978 @@
+{
+  "status": "SELECTED_JOBS_COMPLETE",
+  "kind": "cost",
+  "data_role": "EXPOSED_DEV_PLUS_CONSTRUCTED_ANALYTICAL_CONTROLS_NOT_HELDOUT",
+  "source_provenance": {
+    "inherited_registration_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "inherited_registration_sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746",
+    "original_22_cases_preserved_exactly": true,
+    "inherited_original_provenance": {
+      "original_stress_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+      "sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4",
+      "original_N2_N4_cases_preserved": 12,
+      "new_constructed_cases": 10,
+      "N8": "not in this suite; prior N8 registration remains separate, no claim of running it"
+    },
+    "bridge_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py",
+    "bridge_source_sha256": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "new_controls": "Six source-derived constructed repair controls D01-D06; expected labels analytical only, not measured."
+  },
+  "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+  "runtime_lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+  "program_sha256": {
+    "common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+    "worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+    "supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+  },
+  "full_case_denominator": 28,
+  "full_job_denominator": 168,
+  "selected_job_start": 58,
+  "selected_job_limit": 3,
+  "jobs": [
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "sat",
+      "attempts": [
+        {
+          "route": "official_generic_smt",
+          "reason": null,
+          "status": "sat",
+          "tactic_pipeline": [
+            "simplify",
+            "propagate-values",
+            "solve-eqs",
+            "smt"
+          ],
+          "solver_timeout_ms": 12304,
+          "witness": {
+            "F": [
+              [
+                -1,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0
+              ],
+              [
+                -1,
+                0,
+                0
+              ]
+            ],
+            "D": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "E": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                null,
+                0
+              ]
+            ]
+          },
+          "solver_decision": "sat",
+          "oracle_validation": {
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN",
+            "domain_audits": [
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "0",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "0",
+                "mathematical_result_diagnostic_only": null
+              },
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "0",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "0",
+                "mathematical_result_diagnostic_only": "0"
+              }
+            ],
+            "queries": [
+              "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+              "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+            ],
+            "sqlite": {
+              "relations": [
+                [
+                  [
+                    null
+                  ]
+                ],
+                [
+                  [
+                    0
+                  ]
+                ]
+              ],
+              "sqlite_version": "3.53.3",
+              "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+              "unequal_as_bags": true,
+              "matches_audited_mathematical_values": [
+                true,
+                true
+              ],
+              "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+            },
+            "original_ast_contract_validation": {
+              "status": "EVALUATED_SUPPORTED_REFERENCE",
+              "holds": true,
+              "clauses": [],
+              "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred",
+              "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            }
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  null
+                ]
+              ],
+              [
+                [
+                  0
+                ]
+              ]
+            ],
+            "sqlite_version": "3.53.3",
+            "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+            "unequal_as_bags": true,
+            "matches_audited_mathematical_values": [
+              true,
+              true
+            ],
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+          }
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_058_01/job_0058",
+      "sampled_peak_rss_bytes": 115179520,
+      "sampled_max_kernel_threads": 2,
+      "pid": 12344,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.6158898752182722,
+      "full_process_cpu_user_seconds": 1.479463,
+      "full_process_cpu_system_seconds": 0.111895,
+      "full_process_cpu_seconds": 1.591358,
+      "worker_report_sha256": "602f1da4c585cd733a94b0f508ba2f72d19ab5bc40c275a92d01a859d58fb7bc",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.3115847082808614,
+      "semantic_e2e_cpu_seconds": 0.31045599999999984,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": null,
+        "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 96,
+          "assertion_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 97,
+          "assertion_sha256": "f1952bd7c6f1028c1dcd3ab3ec2e0e0f4000b3f4695ef77a5c26d3023b32e247"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 0,
+          "actual_formula": "true",
+          "reference_formula": "true"
+        },
+        "normalized_ast": null,
+        "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "ledger": [],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (F__K t1) String_x1__Int)",
+            "(= (F__L t1) String_x2__Int)",
+            "(= (F__V t1) String_x3__Int)",
+            "(not (DELETED t2))",
+            "(= (F__K t2) String_x4__Int)",
+            "(= (F__L t2) String_x5__Int)",
+            "(= (F__V t2) String_x6__Int)",
+            "(not (DELETED t3))",
+            "(= (F__K t3) String_x7__Int)",
+            "(= (F__L t3) String_x8__Int)",
+            "(= (F__V t3) String_x9__Int)",
+            "(not (DELETED t4))",
+            "(= (F__K t4) String_x10__Int)",
+            "(= (F__L t4) String_x11__Int)",
+            "(= (F__V t4) String_x12__Int)",
+            "(<= (- 2147483648) (F__K t1))",
+            "(>= 2147483647 (F__K t1))",
+            "(<= (- 2147483648) (F__L t1))",
+            "(>= 2147483647 (F__L t1))",
+            "(<= (- 2147483648) (F__V t1))",
+            "(>= 2147483647 (F__V t1))",
+            "(<= (- 2147483648) (F__K t2))",
+            "(>= 2147483647 (F__K t2))",
+            "(<= (- 2147483648) (F__L t2))",
+            "(>= 2147483647 (F__L t2))",
+            "(<= (- 2147483648) (F__V t2))",
+            "(>= 2147483647 (F__V t2))",
+            "(<= (- 2147483648) (F__K t3))",
+            "(>= 2147483647 (F__K t3))",
+            "(<= (- 2147483648) (F__L t3))",
+            "(>= 2147483647 (F__L t3))",
+            "(<= (- 2147483648) (F__V t3))",
+            "(>= 2147483647 (F__V t3))",
+            "(<= (- 2147483648) (F__K t4))",
+            "(>= 2147483647 (F__K t4))",
+            "(<= (- 2147483648) (F__L t4))",
+            "(>= 2147483647 (F__L t4))",
+            "(<= (- 2147483648) (F__V t4))",
+            "(>= 2147483647 (F__V t4))",
+            "(not (DELETED t5))",
+            "(= (D__ID t5) String_x13__Int)",
+            "(= (D__P t5) String_x14__Int)",
+            "(not (DELETED t6))",
+            "(= (D__ID t6) String_x15__Int)",
+            "(= (D__P t6) String_x16__Int)",
+            "(not (DELETED t7))",
+            "(= (D__ID t7) String_x17__Int)",
+            "(= (D__P t7) String_x18__Int)",
+            "(not (DELETED t8))",
+            "(= (D__ID t8) String_x19__Int)",
+            "(= (D__P t8) String_x20__Int)",
+            "(<= (- 2147483648) (D__ID t5))",
+            "(>= 2147483647 (D__ID t5))",
+            "(<= (- 2147483648) (D__P t5))",
+            "(>= 2147483647 (D__P t5))",
+            "(<= (- 2147483648) (D__ID t6))",
+            "(>= 2147483647 (D__ID t6))",
+            "(<= (- 2147483648) (D__P t6))",
+            "(>= 2147483647 (D__P t6))",
+            "(<= (- 2147483648) (D__ID t7))",
+            "(>= 2147483647 (D__ID t7))",
+            "(<= (- 2147483648) (D__P t7))",
+            "(>= 2147483647 (D__P t7))",
+            "(<= (- 2147483648) (D__ID t8))",
+            "(>= 2147483647 (D__ID t8))",
+            "(<= (- 2147483648) (D__P t8))",
+            "(>= 2147483647 (D__P t8))",
+            "(not (DELETED t9))",
+            "(= (E__ID t9) String_x21__Int)",
+            "(= (E__Q t9) String_x22__Int)",
+            "(not (DELETED t10))",
+            "(= (E__ID t10) String_x23__Int)",
+            "(= (E__Q t10) String_x24__Int)",
+            "(not (DELETED t11))",
+            "(= (E__ID t11) String_x25__Int)",
+            "(= (E__Q t11) String_x26__Int)",
+            "(not (DELETED t12))",
+            "(= (E__ID t12) String_x27__Int)",
+            "(= (E__Q t12) String_x28__Int)",
+            "(<= (- 2147483648) (E__ID t9))",
+            "(>= 2147483647 (E__ID t9))",
+            "(<= (- 2147483648) (E__Q t9))",
+            "(>= 2147483647 (E__Q t9))",
+            "(<= (- 2147483648) (E__ID t10))",
+            "(>= 2147483647 (E__ID t10))",
+            "(<= (- 2147483648) (E__Q t10))",
+            "(>= 2147483647 (E__Q t10))",
+            "(<= (- 2147483648) (E__ID t11))",
+            "(>= 2147483647 (E__ID t11))",
+            "(<= (- 2147483648) (E__Q t11))",
+            "(>= 2147483647 (E__Q t11))",
+            "(<= (- 2147483648) (E__ID t12))",
+            "(>= 2147483647 (E__ID t12))",
+            "(<= (- 2147483648) (E__Q t12))",
+            "(>= 2147483647 (E__Q t12))"
+          ],
+          "sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "F": 4,
+            "D": 4,
+            "E": 4
+          }
+        },
+        "complete_facts_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 96,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "sat",
+      "attempts": [
+        {
+          "route": "flat",
+          "status": "sat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 64,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "flat",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 64,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "flat",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0,
+          "witness": {
+            "F": [
+              [
+                0,
+                0,
+                3
+              ],
+              [
+                0,
+                -1,
+                0
+              ],
+              [
+                -1,
+                -2,
+                0
+              ],
+              [
+                -1,
+                -2,
+                0
+              ]
+            ],
+            "D": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "E": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                -1,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          "solver_decision": "sat",
+          "oracle_validation": {
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN",
+            "domain_audits": [
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "3",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "2",
+                "mathematical_result_diagnostic_only": "3"
+              },
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "0",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "2",
+                "mathematical_result_diagnostic_only": "2"
+              }
+            ],
+            "queries": [
+              "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+              "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+            ],
+            "sqlite": {
+              "relations": [
+                [
+                  [
+                    3
+                  ]
+                ],
+                [
+                  [
+                    2
+                  ]
+                ]
+              ],
+              "sqlite_version": "3.53.3",
+              "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+              "unequal_as_bags": true,
+              "matches_audited_mathematical_values": [
+                true,
+                true
+              ],
+              "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+            },
+            "original_ast_contract_validation": {
+              "status": "EVALUATED_SUPPORTED_REFERENCE",
+              "holds": true,
+              "clauses": [],
+              "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred",
+              "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b"
+            }
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  3
+                ]
+              ],
+              [
+                [
+                  2
+                ]
+              ]
+            ],
+            "sqlite_version": "3.53.3",
+            "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+            "unequal_as_bags": true,
+            "matches_audited_mathematical_values": [
+              true,
+              true
+            ],
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+          }
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_058_01/job_0059",
+      "sampled_peak_rss_bytes": 112590848,
+      "sampled_max_kernel_threads": 2,
+      "pid": 12346,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.3889382500201464,
+      "full_process_cpu_user_seconds": 1.265981,
+      "full_process_cpu_system_seconds": 0.10294500000000001,
+      "full_process_cpu_seconds": 1.368926,
+      "worker_report_sha256": "0d2b13a554dea147722ee22c7c5fc8216457b76efd6befb394666eb3b52776e7",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.1665622079744935,
+      "semantic_e2e_cpu_seconds": 0.16589199999999993,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": null,
+        "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 96,
+          "assertion_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 97,
+          "assertion_sha256": "f1952bd7c6f1028c1dcd3ab3ec2e0e0f4000b3f4695ef77a5c26d3023b32e247"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 0,
+          "actual_formula": "true",
+          "reference_formula": "true"
+        },
+        "normalized_ast": null,
+        "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "ledger": [],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (F__K t1) String_x1__Int)",
+            "(= (F__L t1) String_x2__Int)",
+            "(= (F__V t1) String_x3__Int)",
+            "(not (DELETED t2))",
+            "(= (F__K t2) String_x4__Int)",
+            "(= (F__L t2) String_x5__Int)",
+            "(= (F__V t2) String_x6__Int)",
+            "(not (DELETED t3))",
+            "(= (F__K t3) String_x7__Int)",
+            "(= (F__L t3) String_x8__Int)",
+            "(= (F__V t3) String_x9__Int)",
+            "(not (DELETED t4))",
+            "(= (F__K t4) String_x10__Int)",
+            "(= (F__L t4) String_x11__Int)",
+            "(= (F__V t4) String_x12__Int)",
+            "(<= (- 2147483648) (F__K t1))",
+            "(>= 2147483647 (F__K t1))",
+            "(<= (- 2147483648) (F__L t1))",
+            "(>= 2147483647 (F__L t1))",
+            "(<= (- 2147483648) (F__V t1))",
+            "(>= 2147483647 (F__V t1))",
+            "(<= (- 2147483648) (F__K t2))",
+            "(>= 2147483647 (F__K t2))",
+            "(<= (- 2147483648) (F__L t2))",
+            "(>= 2147483647 (F__L t2))",
+            "(<= (- 2147483648) (F__V t2))",
+            "(>= 2147483647 (F__V t2))",
+            "(<= (- 2147483648) (F__K t3))",
+            "(>= 2147483647 (F__K t3))",
+            "(<= (- 2147483648) (F__L t3))",
+            "(>= 2147483647 (F__L t3))",
+            "(<= (- 2147483648) (F__V t3))",
+            "(>= 2147483647 (F__V t3))",
+            "(<= (- 2147483648) (F__K t4))",
+            "(>= 2147483647 (F__K t4))",
+            "(<= (- 2147483648) (F__L t4))",
+            "(>= 2147483647 (F__L t4))",
+            "(<= (- 2147483648) (F__V t4))",
+            "(>= 2147483647 (F__V t4))",
+            "(not (DELETED t5))",
+            "(= (D__ID t5) String_x13__Int)",
+            "(= (D__P t5) String_x14__Int)",
+            "(not (DELETED t6))",
+            "(= (D__ID t6) String_x15__Int)",
+            "(= (D__P t6) String_x16__Int)",
+            "(not (DELETED t7))",
+            "(= (D__ID t7) String_x17__Int)",
+            "(= (D__P t7) String_x18__Int)",
+            "(not (DELETED t8))",
+            "(= (D__ID t8) String_x19__Int)",
+            "(= (D__P t8) String_x20__Int)",
+            "(<= (- 2147483648) (D__ID t5))",
+            "(>= 2147483647 (D__ID t5))",
+            "(<= (- 2147483648) (D__P t5))",
+            "(>= 2147483647 (D__P t5))",
+            "(<= (- 2147483648) (D__ID t6))",
+            "(>= 2147483647 (D__ID t6))",
+            "(<= (- 2147483648) (D__P t6))",
+            "(>= 2147483647 (D__P t6))",
+            "(<= (- 2147483648) (D__ID t7))",
+            "(>= 2147483647 (D__ID t7))",
+            "(<= (- 2147483648) (D__P t7))",
+            "(>= 2147483647 (D__P t7))",
+            "(<= (- 2147483648) (D__ID t8))",
+            "(>= 2147483647 (D__ID t8))",
+            "(<= (- 2147483648) (D__P t8))",
+            "(>= 2147483647 (D__P t8))",
+            "(not (DELETED t9))",
+            "(= (E__ID t9) String_x21__Int)",
+            "(= (E__Q t9) String_x22__Int)",
+            "(not (DELETED t10))",
+            "(= (E__ID t10) String_x23__Int)",
+            "(= (E__Q t10) String_x24__Int)",
+            "(not (DELETED t11))",
+            "(= (E__ID t11) String_x25__Int)",
+            "(= (E__Q t11) String_x26__Int)",
+            "(not (DELETED t12))",
+            "(= (E__ID t12) String_x27__Int)",
+            "(= (E__Q t12) String_x28__Int)",
+            "(<= (- 2147483648) (E__ID t9))",
+            "(>= 2147483647 (E__ID t9))",
+            "(<= (- 2147483648) (E__Q t9))",
+            "(>= 2147483647 (E__Q t9))",
+            "(<= (- 2147483648) (E__ID t10))",
+            "(>= 2147483647 (E__ID t10))",
+            "(<= (- 2147483648) (E__Q t10))",
+            "(>= 2147483647 (E__Q t10))",
+            "(<= (- 2147483648) (E__ID t11))",
+            "(>= 2147483647 (E__ID t11))",
+            "(<= (- 2147483648) (E__Q t11))",
+            "(>= 2147483647 (E__Q t11))",
+            "(<= (- 2147483648) (E__ID t12))",
+            "(>= 2147483647 (E__ID t12))",
+            "(<= (- 2147483648) (E__Q t12))",
+            "(>= 2147483647 (E__Q t12))"
+          ],
+          "sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "F": 4,
+            "D": 4,
+            "E": 4
+          }
+        },
+        "complete_facts_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 96,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "selector",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 32,
+              "flat_rows": 0,
+              "selectors": 80,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "selector",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 32,
+              "flat_rows": 0,
+              "selectors": 80,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "selector",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 48
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_058_01/job_0060",
+      "sampled_peak_rss_bytes": 109838336,
+      "sampled_max_kernel_threads": 2,
+      "pid": 12355,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.3676271247677505,
+      "full_process_cpu_user_seconds": 1.224932,
+      "full_process_cpu_system_seconds": 0.10868799999999998,
+      "full_process_cpu_seconds": 1.3336199999999998,
+      "worker_report_sha256": "a66e5e586fd816106b9ef28d957a1f499b07a782158d427f3c19d83bb9f73574",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.19353058375418186,
+      "semantic_e2e_cpu_seconds": 0.19274700000000022,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": null,
+        "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 96,
+          "assertion_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 97,
+          "assertion_sha256": "f1952bd7c6f1028c1dcd3ab3ec2e0e0f4000b3f4695ef77a5c26d3023b32e247"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 0,
+          "actual_formula": "true",
+          "reference_formula": "true"
+        },
+        "normalized_ast": null,
+        "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "ledger": [],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (F__K t1) String_x1__Int)",
+            "(= (F__L t1) String_x2__Int)",
+            "(= (F__V t1) String_x3__Int)",
+            "(not (DELETED t2))",
+            "(= (F__K t2) String_x4__Int)",
+            "(= (F__L t2) String_x5__Int)",
+            "(= (F__V t2) String_x6__Int)",
+            "(not (DELETED t3))",
+            "(= (F__K t3) String_x7__Int)",
+            "(= (F__L t3) String_x8__Int)",
+            "(= (F__V t3) String_x9__Int)",
+            "(not (DELETED t4))",
+            "(= (F__K t4) String_x10__Int)",
+            "(= (F__L t4) String_x11__Int)",
+            "(= (F__V t4) String_x12__Int)",
+            "(<= (- 2147483648) (F__K t1))",
+            "(>= 2147483647 (F__K t1))",
+            "(<= (- 2147483648) (F__L t1))",
+            "(>= 2147483647 (F__L t1))",
+            "(<= (- 2147483648) (F__V t1))",
+            "(>= 2147483647 (F__V t1))",
+            "(<= (- 2147483648) (F__K t2))",
+            "(>= 2147483647 (F__K t2))",
+            "(<= (- 2147483648) (F__L t2))",
+            "(>= 2147483647 (F__L t2))",
+            "(<= (- 2147483648) (F__V t2))",
+            "(>= 2147483647 (F__V t2))",
+            "(<= (- 2147483648) (F__K t3))",
+            "(>= 2147483647 (F__K t3))",
+            "(<= (- 2147483648) (F__L t3))",
+            "(>= 2147483647 (F__L t3))",
+            "(<= (- 2147483648) (F__V t3))",
+            "(>= 2147483647 (F__V t3))",
+            "(<= (- 2147483648) (F__K t4))",
+            "(>= 2147483647 (F__K t4))",
+            "(<= (- 2147483648) (F__L t4))",
+            "(>= 2147483647 (F__L t4))",
+            "(<= (- 2147483648) (F__V t4))",
+            "(>= 2147483647 (F__V t4))",
+            "(not (DELETED t5))",
+            "(= (D__ID t5) String_x13__Int)",
+            "(= (D__P t5) String_x14__Int)",
+            "(not (DELETED t6))",
+            "(= (D__ID t6) String_x15__Int)",
+            "(= (D__P t6) String_x16__Int)",
+            "(not (DELETED t7))",
+            "(= (D__ID t7) String_x17__Int)",
+            "(= (D__P t7) String_x18__Int)",
+            "(not (DELETED t8))",
+            "(= (D__ID t8) String_x19__Int)",
+            "(= (D__P t8) String_x20__Int)",
+            "(<= (- 2147483648) (D__ID t5))",
+            "(>= 2147483647 (D__ID t5))",
+            "(<= (- 2147483648) (D__P t5))",
+            "(>= 2147483647 (D__P t5))",
+            "(<= (- 2147483648) (D__ID t6))",
+            "(>= 2147483647 (D__ID t6))",
+            "(<= (- 2147483648) (D__P t6))",
+            "(>= 2147483647 (D__P t6))",
+            "(<= (- 2147483648) (D__ID t7))",
+            "(>= 2147483647 (D__ID t7))",
+            "(<= (- 2147483648) (D__P t7))",
+            "(>= 2147483647 (D__P t7))",
+            "(<= (- 2147483648) (D__ID t8))",
+            "(>= 2147483647 (D__ID t8))",
+            "(<= (- 2147483648) (D__P t8))",
+            "(>= 2147483647 (D__P t8))",
+            "(not (DELETED t9))",
+            "(= (E__ID t9) String_x21__Int)",
+            "(= (E__Q t9) String_x22__Int)",
+            "(not (DELETED t10))",
+            "(= (E__ID t10) String_x23__Int)",
+            "(= (E__Q t10) String_x24__Int)",
+            "(not (DELETED t11))",
+            "(= (E__ID t11) String_x25__Int)",
+            "(= (E__Q t11) String_x26__Int)",
+            "(not (DELETED t12))",
+            "(= (E__ID t12) String_x27__Int)",
+            "(= (E__Q t12) String_x28__Int)",
+            "(<= (- 2147483648) (E__ID t9))",
+            "(>= 2147483647 (E__ID t9))",
+            "(<= (- 2147483648) (E__Q t9))",
+            "(>= 2147483647 (E__Q t9))",
+            "(<= (- 2147483648) (E__ID t10))",
+            "(>= 2147483647 (E__ID t10))",
+            "(<= (- 2147483648) (E__Q t10))",
+            "(>= 2147483647 (E__Q t10))",
+            "(<= (- 2147483648) (E__ID t11))",
+            "(>= 2147483647 (E__ID t11))",
+            "(<= (- 2147483648) (E__Q t11))",
+            "(>= 2147483647 (E__Q t11))",
+            "(<= (- 2147483648) (E__ID t12))",
+            "(>= 2147483647 (E__ID t12))",
+            "(<= (- 2147483648) (E__Q t12))",
+            "(>= 2147483647 (E__Q t12))"
+          ],
+          "sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "F": 4,
+            "D": 4,
+            "E": 4
+          }
+        },
+        "complete_facts_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 96,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "fdd713ebff4118fa63499a6162c0f63484e48cb2a9a783ba8728a79a1e37db99"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official_canonical_sql",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    }
+  ],
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_supervisor_seconds": 25,
+    "per_child_wall_alarm_seconds": 24,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Six arms include pure-fragment AND canonicalization. Fresh process/Environment per admitted arm. Full schema/exact rows preserved. Original source-AST IC normalized on a copy; common base-only SAT and XOR(normalized upstream C, independent original-AST C) UNSAT audit precedes all six arms and per-query differential. Whole unsupported/unknown contracts stop without fallback. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+  "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate or canonical Ineligible/normalization miss -> official with same audited normalized C; candidate unknown -> official with same audited normalized C only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+  "oracle_domain_policy": "SAT replay requires common int64-domain audit; out-of-domain/errors retain witnesses and denominator and cannot count as success or a win.",
+  "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+  "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+  "clock_boundary": "89s guard starts after initial stdlib time import; per-child supervisor wall includes spawn/startup through reap. Worker final checkpoint excludes final write, full process wall/CPU measured here.",
+  "wall_seconds_before_final_write": 4.412685791961849
+}

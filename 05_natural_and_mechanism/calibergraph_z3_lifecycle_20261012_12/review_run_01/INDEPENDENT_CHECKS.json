@@ -1,0 +1,50 @@
+{
+  "source_sha256": {
+    "owned_processes.py": "06b422461caf49a62044c0db457ca1b8e322693652b3f8eb66f6bac55a368b62",
+    "fixtures.py": "fea09c9cbc5f13c45cb67bb421ff43bba9c60ddf9e87cac72eedf614a5906104",
+    "validate.py": "c2525968c514f55c778188d179e479d8c583814de6ea7a0802e096a49574782e"
+  },
+  "results": [
+    {
+      "test": "alarm_registration_window",
+      "error": "Stopped: CASE_DEADLINE",
+      "created": 1,
+      "registered": 0,
+      "unregistered_handles": 1,
+      "unregistered_still_running": 1
+    },
+    {
+      "test": "cleanup_kill_exception",
+      "error": "OSError: controlled owned-handle kill failure",
+      "handler_restored": false,
+      "cleanup_errors": [],
+      "wait_events": 0,
+      "handle_count": 2
+    },
+    {
+      "test": "stream_close_exception",
+      "error": "OSError: controlled close failure",
+      "handler_restored": false,
+      "cleanup_errors": []
+    },
+    {
+      "test": "enter_deadline_exception",
+      "error": "Stopped: CASE_DEADLINE",
+      "handler_restored": false,
+      "closed": false,
+      "thread_created": false
+    }
+  ],
+  "science_admission": {
+    "admitted": false,
+    "reason": "EXTERNAL_Z3_RSS_COVERAGE_UNAVAILABLE",
+    "forbidden_process_probe_retried": false,
+    "native_memory_parameter_substitutes_for_rss": false,
+    "science_threshold_bytes": 1073741824
+  },
+  "scientific_calls": 0,
+  "process_enumeration_or_foreign_rss_queries": 0,
+  "owned_fixture_children": 4,
+  "allocated_test_buffer_bytes": 0,
+  "emergency_reap_completed": true
+}

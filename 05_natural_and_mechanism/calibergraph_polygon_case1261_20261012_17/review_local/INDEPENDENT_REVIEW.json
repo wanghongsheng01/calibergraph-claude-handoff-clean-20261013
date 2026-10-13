@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "gate": "SCIENTIFIC_ADAPTER_ADMISSION",
+  "case": "thrombosis_prediction__1261",
+  "must_fix": [],
+  "semantic_directions": [
+    "concrete_to_abstract",
+    "abstract_to_concrete"
+  ],
+  "scope": {
+    "bound": 1,
+    "tables": 3,
+    "columns": 64,
+    "PK": 2,
+    "explicit_NN": 3,
+    "FK": 2,
+    "original_SQL_retained": true,
+    "full_C": true
+  },
+  "reviewer_solver_calls": 0,
+  "reviewed_hashes": {
+    "case1261_adapter.py": "c2db90b71096f2ddb9447a62daec156e3677376b93c722bc14861881bd2334f6",
+    "slot_worker.py": "6609f41cf577a93ff81cdc0b8d5bd8c4d694b72f244683a604fd50a44492efc7",
+    "FIVE_CASE_SCREEN.json": "08c824554029e8c470a1c8bcc03ea4237a920e83ea4d5ef8c9fec2c9350c41f9",
+    "SOURCE.json": "5da19b2f0f5e185688f00135caa72ccc31a5b1497a94e2c6ddf29851bc9b6466",
+    "HYPOTHESIS_CLOSURE.zh.md": "1014796f02a94a4a64e904fcdab57527eb6d7cb40931904a9b164de35d1bf4d3"
+  },
+  "evidence": [
+    "SEMANTIC_REVIEW.zh.md",
+    "ADAPTER_CODE_REVIEW.zh.md",
+    "independent_sqlite_quotient.py",
+    "independent_sqlite_quotient.json",
+    "independent_adapter_check.py",
+    "independent_adapter_check.json"
+  ],
+  "run_scope": "Only the user-authorized once-only sequential UA then precise #1261 batch, 60s batch/3s per solver/512MiB internal Z3 cap; controller/freeze resource admission remains separate; no new approval needed after all gates pass",
+  "UNSAT_interpretation": "finite bound and local quotient only; no generic support/infinite equivalence/new denominator"
+}

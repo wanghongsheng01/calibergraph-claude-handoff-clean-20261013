@@ -1,0 +1,11 @@
+{
+  "dbid": "thrombosis_prediction",
+  "index": "1172",
+  "difficulty": "simple",
+  "verdict": "EQ",
+  "reason": null,
+  "results": null,
+  "end_to_end_s": 2.727,
+  "gold": "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.`T-BIL` >= 2.0 AND T1.SEX = 'M'",
+  "predicted": "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T1.SEX = 'M' AND T2.`T-BIL` > 2.0"
+}

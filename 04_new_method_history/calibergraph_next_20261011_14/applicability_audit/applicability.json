@@ -1,0 +1,436 @@
+{
+  "schema": "calibergraph.h14.manual_whole_pair_applicability.v1",
+  "status": "AUTHOR_FROZEN_PENDING_APPLICABILITY_REVIEW",
+  "author_id": "/root/round13_sqlite_counterexample_replay",
+  "role": "READ_ONLY_MANUAL_APPLICABILITY_AUDITOR_NOT_H14_MATH_REVIEWER",
+  "theory_source": {
+    "path": "calibergraph_next_20261011_14/theory/theory.md",
+    "sha256": "3925237a0f59110b505982187c56ee92656531d34b67184184f8b892b7d3ff03"
+  },
+  "registry_source": {
+    "path": "calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "scope": "Original entire query pair under H14 common finite pure-variable relational-core body, full-tuple PK only, no FK, common head H, M/N subsets of V minus H, projection-count semantics; no constants, comparisons, NULL, arithmetic or extra aggregation/operators",
+  "method": "Human reading of every source_record.pair/schema/constraint; JSON identity reading and hash verification only. No SQL parser or keyword classifier.",
+  "denominator": {
+    "registered_pairs": 21,
+    "manually_read_pairs": 21,
+    "excluded_whole_pairs": 21,
+    "confirmed_directly_applicable_pairs": 0,
+    "uncertain_pairs": 0,
+    "dropped_or_replaced_pairs": 0,
+    "supplemental_pairs": 0
+  },
+  "interpretation": "Zero direct whole-pair applicability in this exposed development registry; not an empirical success/failure rate, not natural-business coverage, not a proof that no semantics-preserving transformation could ever be proved.",
+  "natural_business_origin": "UNKNOWN",
+  "exposure": "EXISTING_FULLY_EXPOSED_DEVELOPMENT_NOT_NEW_OR_HIDDEN_TEST",
+  "source_group_independence": "FILE_LABELS_ONLY_NO_STATISTICAL_INDEPENDENCE_CLAIM",
+  "business_contract_truth": "UNVERIFIED_SOURCE_ASSERTIONS_ONLY",
+  "SQL_semantic_fidelity": "UNPROVEN_NO_REPAIR_OR_REWRITE",
+  "pair_label_truth": "NOT_USED_FOR_APPLICABILITY",
+  "core_promises_verified": 0,
+  "scientific_effect_test": false,
+  "execution": {
+    "queries": 0,
+    "SQL_parsers": 0,
+    "database_or_assignment_enumeration": 0,
+    "SMT": 0,
+    "models": 0,
+    "GPU": 0
+  },
+  "cost": {
+    "kind": "AUTHOR_MANUAL_READING_NOT_QUANTIFIED",
+    "cpu_s": null,
+    "wall_s": null,
+    "rss_bytes": null,
+    "not_a_measured_experiment": true
+  },
+  "redistribution": "No third-party raw SQL, schema or constraint text copied; only identity hashes, restriction categories and authored short reasons.",
+  "historical_files_modified": false,
+  "round13_files_modified": false,
+  "backup_owner": "root",
+  "remaining_gates": [
+    "Root or another person applicability review",
+    "Root private backup verification"
+  ],
+  "entries": [
+    {
+      "id": "dev03_01",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1127.csv",
+      "query_sha256": [
+        "8ea23f976781dd631b981a28009e1dc189085374724c205fa1b89c3007174f88",
+        "3a963258edc1d58e51defbcb2793830e8a86c92bbbc9bcd771851a48a634f234"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "NON_PROJECTION_AGGREGATE",
+        "OUTER_JOIN",
+        "NULL_HANDLING",
+        "SET_OPERATION"
+      ],
+      "manual_reason_zh": "整对含 SUM 金额聚合、外连接和 NULL 填补；第一式还按平台常量作 UNION。完整输出不是同一纯变量 core body 上仅改变计数集的两投影计数。",
+      "contract_note_zh": "SPENDING 记录 PK 为三列而 schema 为四列，另有金额正值和平台枚举约束；不符合仅满元组 PK 的 contract promise。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_02",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+      "query_sha256": [
+        "04cda1c9e559e788fef7dbd228b1c0474d6d569a253cc19dcc551ef468eec094",
+        "19d98e29bcb66f151d8bec6ddecdfd9f2b06a41dd5cc6f55bcd8e26a75dc8d89"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "DISEQUALITY_CONSTANT",
+        "NULL_PREDICATE",
+        "UNION_ALL",
+        "FOREIGN_KEY"
+      ],
+      "manual_reason_zh": "第一式以对常量的非相等比较或 IS NULL 过滤，第二式用 UNION ALL 合并两个分支；NULL、比较、析取/集合组合已足以整对排除。",
+      "contract_note_zh": "CUSTOMER 单列 ID key 不是三列满元组 key，且记录了自引用 FK 与不等约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_03",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "query_sha256": [
+        "378117929088bd0c082838758804d2c88beacc5ff435cd237b845143ae2aeea7",
+        "606e5b40b18575253eaa035d37a28f9ddafece41b0e49da495d1952fc9db1266"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "UNION_ALL",
+        "ARITHMETIC",
+        "CASE_SUM",
+        "CONSTRAINT_DISEQUALITY"
+      ],
+      "manual_reason_zh": "第二式把标识加一、填入零哨兵，再 UNION ALL 并以 CASE/SUM 汇总；不能把第一式中的两个 distinct counts 单独抽出当作完整原始 pair。",
+      "contract_note_zh": "记录另有 lead 与 partner 不等约束；schema 未提供可信的满元组 set/core promise。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_04",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+      "query_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "MAX_AGGREGATE",
+        "ARITHMETIC_ROUND",
+        "COMPARISON_CONSTANT",
+        "UNION"
+      ],
+      "manual_reason_zh": "整对围绕分组 MAX、区间/阈值比较、工资乘法和 ROUND 计算，第二式还有 UNION；输出是数值变换而非纯变量投影重数。",
+      "contract_note_zh": "SALARIES 两列 key 不是四列满元组 key，另有工资正值约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_05",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+      "query_sha256": [
+        "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+        "71edda688f50325688171de2489d473d742dd33ea626082b6b7e6d82821bbf83"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "OUTER_JOIN",
+        "ARITHMETIC_RATIO",
+        "AVG_AGGREGATE",
+        "CONSTANT_FILTER",
+        "FOREIGN_KEY"
+      ],
+      "manual_reason_zh": "两式含外连接与 distinct-count 比值，第二式进一步 AVG/ROUND，且过滤固定文本值；这些完整算子超出 H14。第一条原记录从 FROM 开始，本审计未修补其文本或假定语义忠实性。",
+      "contract_note_zh": "记录有 REMOVALS 的非满元组 key、FK 和值/NULL 相关条件约束；均不作业务真实性背书。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_06",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1783.csv",
+      "query_sha256": [
+        "6ef8deb357ca91dfdd59c03c0816445da350543af7c9be3eb284193d9929a1da",
+        "4a1782d4f51e94c004c3c3eda7a98e44fbb640874332139c594d5df94fa2e436"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "CASE_SUM",
+        "AGGREGATE_THRESHOLD",
+        "FOREIGN_KEY",
+        "NON_FULLTUPLE_PRIMARY_KEY"
+      ],
+      "manual_reason_zh": "两式将多个条件 CASE 的指示量相加并 SUM，再按聚合结果大于零筛选；这种计算和阈值选择不是 H14 允许的单纯 projection-count。",
+      "contract_note_zh": "PLAYERS、CHAMPIONSHIPS 各有非满元组单列 key，并记录四个 FK。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_07",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "query_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "ARITHMETIC_RATIO",
+        "ROUND_FUNCTION",
+        "BOOLEAN_SUM",
+        "NON_FULLTUPLE_PRIMARY_KEY"
+      ],
+      "manual_reason_zh": "完整输出是两类数量的比值、百分比与 ROUND；第一式还对日期相等的布尔表达式 SUM，不能视为只比较 M/N 的投影重数。",
+      "contract_note_zh": "DELIVERY 单列 key 不是四列满元组 key，另有日期先后约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_08",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/183.csv",
+      "query_sha256": [
+        "e73a11a070d6c4283a46066bb9a1166ab5fe45b48386fb2036f9273f53096b11",
+        "eeb41b0721c6ea3bbc000931983be3aa1ede7a85c7974c765cd89eb590be4c9e"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "NEGATED_SUBQUERY",
+        "OUTER_JOIN",
+        "AGGREGATE_ZERO_FILTER",
+        "FOREIGN_KEY"
+      ],
+      "manual_reason_zh": "第一式使用 NOT IN，第二式使用外连接并筛选聚合数量为零；二者表达缺失/反匹配，完整 pair 不属于正的纯变量 relational CQ 投影计数片段。",
+      "contract_note_zh": "CUSTOMERS 和 ORDERS 都有非满元组单列 key，且记录 FK。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_09",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+      "query_sha256": [
+        "3547132979f80e460543f1caf9f8509649e4b2018674e1d82942bacca0f19379",
+        "6ce2ba0c792d8f1b4aa23c48f085ab83e25f7f6523cfedc886003992101705f6"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "DISEQUALITY",
+        "BETWEEN_ORDER_COMPARISON",
+        "DISJUNCTION",
+        "ORDER_CONSTRAINT"
+      ],
+      "manual_reason_zh": "两式比较不同 IP 并以时间 BETWEEN 判断重叠，第二式还有 OR；自连接本身被 H14 允许，明确排除依据是这些非相等/次序比较和析取。",
+      "contract_note_zh": "记录有登录时间小于退出时间的非平凡约束；未确认满元组 set/core promise。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_10",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "query_sha256": [
+        "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+        "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "CASE_CONSTANT",
+        "NULL_SEMANTICS",
+        "NEGATED_SUBQUERY",
+        "CONSTRAINT_DISEQUALITY"
+      ],
+      "manual_reason_zh": "整对用 CASE 按固定用户常量选另一端并可能产生 NULL，再以 NOT IN 排除已喜欢页面；这些算子不能直接置入 H14 纯变量 body。",
+      "contract_note_zh": "两表记录的 PK 均覆盖各自整行，但 FRIENDSHIP 另有不等约束；即使 PK 部分匹配，整对操作仍明确越界。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_11",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/511.csv",
+      "query_sha256": [
+        "3512eea31beeaa1be5d7ad138291728024e4ba15de29a1fc9f0b64925149666a",
+        "31fa22189249592a63d2519c5715c3029cd59bd00ac9390e7e2cdf3ed6af83f7"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "MIN_AGGREGATE",
+        "ORDER_DEPENDENT_VALUE",
+        "NON_FULLTUPLE_PRIMARY_KEY"
+      ],
+      "manual_reason_zh": "两式都依赖分组 MIN 选最早日期，第二式再以该最小值子查询筛选；MIN 输出的是次序决定的值，不是 H14 的纯投影计数。",
+      "contract_note_zh": "ACTIVITY 两列 key 不是四列满元组 key，另有游戏次数非负约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_12",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/577.csv",
+      "query_sha256": [
+        "afdaa0bc9bfbd9e2de238cae495b5bc6a99924f3a665cb500adfe69763a6b05b",
+        "80736bec695a246422a9f37276b6ba1129c33c89ab2b16335c0c20593332c4b5"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "OUTER_JOIN",
+        "NULL_PREDICATE",
+        "COMPARISON_CONSTANT",
+        "NEGATED_SUBQUERY",
+        "FOREIGN_KEY"
+      ],
+      "manual_reason_zh": "两式均为外连接并按奖金常量阈值选择；第一式有 IS NULL，第二式以 NOT IN 检查缺失。完整 pair 明确依赖超出 H14 的 NULL/否定/比较语义。",
+      "contract_note_zh": "EMPLOYEE、BONUS 均有非满元组 key，并记录 FK、不等及数值下界约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_13",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1677.csv",
+      "query_sha256": [
+        "736171b3b2b779b54c3db66e67103a090cb1a0ac0b9b01eb61de6c98570f81dc",
+        "d1002ce35fa0017f17b6a61422147b2d5fb9e644c0f6fb540dcd519e1d6ba48c"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "OUTER_JOIN",
+        "SUM_AGGREGATE",
+        "NULL_REPLACEMENT",
+        "FOREIGN_KEY"
+      ],
+      "manual_reason_zh": "完整 pair 对多列金额 SUM，并经外连接保留无发票产品、以 NULL 替换函数填零；这些值聚合和 NULL 处理已足以排除整对。",
+      "contract_note_zh": "记录有 PRODUCT 多个单列 key、INVOICE 单列 key、FK 与数值下界，超过仅满元组 PK 的片段。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_14",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/613.csv",
+      "query_sha256": [
+        "d95ce8a5047c801b269f3f39c0f20d8fa88e5a173414708d14e1b39b6396658b",
+        "c0a6f047e26f8293c1acdc0f197cc99557d07a84009f50da6a753e7a4aadeff9"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "ARITHMETIC_ABS",
+        "MIN_AGGREGATE",
+        "DISEQUALITY",
+        "OUTER_JOIN"
+      ],
+      "manual_reason_zh": "两式对不同点坐标作减法、ABS 和 MIN，第二式还使用外连接；完整输出是最短距离数值，超出 opaque equality projection-count。",
+      "contract_note_zh": "POINT 是单列关系，X key 的确是满元组；此例不因 PK 排除，而因整对算子越界排除。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_15",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "query_sha256": [
+        "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+        "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "OUTER_JOIN",
+        "NULL_REPLACEMENT",
+        "FOREIGN_KEY",
+        "NON_FULLTUPLE_PRIMARY_KEY"
+      ],
+      "manual_reason_zh": "两式均使用外连接并以 IFNULL/COALESCE 将缺失 NPV 改为零；保留未匹配行及 NULL 替换不在 H14 正纯变量 core body 内。",
+      "contract_note_zh": "QUERIES 两列 key 覆盖整行，但 NPV 的 ID/YEAR key 不覆盖 NPV 值列；另记录 FK 与非负约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_16",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1777.csv",
+      "query_sha256": [
+        "c3d7e166826e7907bc3acad604f96a6318004c1b783a96c9fa8b8b922e2d6137",
+        "f8f4b2f7bdaeecc60d92fd309474f126d089ac28ea8035d32a3b380ba45c6fae"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "CASE_SUM",
+        "CONSTANT_FILTER",
+        "NULL_SEMANTICS",
+        "OUTER_JOIN"
+      ],
+      "manual_reason_zh": "第一式以平台常量 CASE/SUM 枢轴聚合并含 NULL，第二式拆为带常量过滤的分支后多次外连接；完整原始两式不是同 body 上两投影计数。",
+      "contract_note_zh": "PRODUCTS 两列 key 不是三列满元组 key，另有商店枚举及价格正值约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_17",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1211.csv",
+      "query_sha256": [
+        "996ed54205f380d691e691a3d0bc1b184d144704ff18b236042bc4cd6893233a",
+        "8b3b84992c3bbb8a38b1ed1b7b616554e2c134e1bfe98f53d842066186d24c31"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "AVG_AGGREGATE",
+        "ARITHMETIC_RATIO",
+        "ROUND_FUNCTION",
+        "COMPARISON_CONSTANT"
+      ],
+      "manual_reason_zh": "两式输出评级/位置的 AVG 与条件比例并 ROUND；还含评级阈值判断。不能把内部 COUNT 单独抽出并替代完整比值聚合 pair。",
+      "contract_note_zh": "记录有评级和位置区间约束，没有给出可信的满元组 set/core promise。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_18",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+      "query_sha256": [
+        "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+        "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "HAVING_COUNT_THRESHOLD",
+        "COMPARISON_CONSTANT",
+        "NON_FULLTUPLE_PRIMARY_KEY"
+      ],
+      "manual_reason_zh": "整对都通过 HAVING 将计数与常量阈值比较来决定是否输出 class；H14 允许投影重数，但没有覆盖重数再经过阈值选择的完整查询。",
+      "contract_note_zh": "COURSES 的 STUDENT key 不是 STUDENT/CLASS 两列满元组 key。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_19",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1683.csv",
+      "query_sha256": [
+        "e057101a88d2425b0bf7d2d89216d44cd5e1371ed4cf48e8e7d46dd6b235c1fa",
+        "62e6b097f92b9eaaba20adfb9f3cf82ce11f71d6c2b7ce9e2b7c585feae9259e"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "STRING_LENGTH_FUNCTION",
+        "COMPARISON_CONSTANT",
+        "HAVING_FILTER",
+        "NON_FULLTUPLE_PRIMARY_KEY"
+      ],
+      "manual_reason_zh": "第一式依赖字符串长度函数与大于常量比较，第二式同样计算 LENGTH 后在 HAVING 中过滤；文本长度不是 opaque equality 关系原子。",
+      "contract_note_zh": "TWEETS 的 TWEET_ID 单列 key 不是两列满元组 key。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_20",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1149.csv",
+      "query_sha256": [
+        "9221c85d94ad224064ac34787ca9d188f130b338f07b67c73d3d8a9a3cd322b7",
+        "454aa925cc3eaf30e699059350e10a690018de29368069cbb1d585d4c21b96c4"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "HAVING_COUNT_THRESHOLD",
+        "DISEQUALITY",
+        "CONTRACT_UNSPECIFIED"
+      ],
+      "manual_reason_zh": "第一式以 distinct-count 大于一筛选分组，第二式要求两个 article 标识不相等；任一理由已排除完整 pair 的直接 H14 适用。",
+      "contract_note_zh": "constraint 字段为 null，保留约束未指定；不据此假定 bags、满元组 PK、无 NULL 或 core。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    },
+    {
+      "id": "dev03_21",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/607.csv",
+      "query_sha256": [
+        "a01a96264e8c0c19533dff8b5638992a40ec7fad8eec56df033ae03868e81875",
+        "f23aba77910c7854bd2f1cd5db862157aabb5cbe28cd0c52d32f706b2fd02a56"
+      ],
+      "decision": "EXCLUDED_WHOLE_PAIR",
+      "limitation_categories": [
+        "NEGATED_SUBQUERY",
+        "COUNT_ZERO_FILTER",
+        "CONSTANT_FILTER",
+        "FOREIGN_KEY"
+      ],
+      "manual_reason_zh": "第一式把相关计数与零比较，第二式使用 NOT IN；两式还过滤固定公司文本值。否定/零测试与常量使完整 pair 超出纯变量正 CQ 片段。",
+      "contract_note_zh": "三表都有非满元组单列 key，并记录 FK、数值下界及日期条件约束。",
+      "common_body_core_certificate": "NOT_ASSESSED_AFTER_SUFFICIENT_WHOLE_PAIR_EXCLUSION"
+    }
+  ]
+}

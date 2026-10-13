@@ -1,0 +1,15 @@
+{
+  "review_initial_verdict": "MUST_FIX",
+  "initial_author_files_preserved": "reviewed_initial/",
+  "resolutions": {
+    "R1": "Explicitly restrict both arms to same inner join, nonnull key, single ungrouped scalar count distinct, only nested WHERE changes; reject all post-aggregate transformations and listed unsupported operators.",
+    "R2": "ParSEval Table 1 corrected to Table 2 in prose/evidence.",
+    "R3": "Polygon source section 6 corrected to section 4 in prose/evidence."
+  },
+  "science_executions": 0,
+  "current_author_sha256": {
+    "ANALYSIS.zh.md": "25569032405ef1a25423494cd906e884424f017e331bb111351d94e4b3df11b4",
+    "EVIDENCE.json": "602cede34915c75b9bff19cf398bb9e4e051bebf05f1fa366e371122d1c5faa1",
+    "DECISION.json": "0b7834b530e7546c7366cf286c0d2d970cb11a9221d3243d78fd1ee45e4593ad"
+  }
+}

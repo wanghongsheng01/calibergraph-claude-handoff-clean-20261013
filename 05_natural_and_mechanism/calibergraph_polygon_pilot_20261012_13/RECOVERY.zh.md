@@ -1,0 +1,13 @@
+# 本轮恢复与证据核验
+
+作者代码、冻结资源合同、执行回执、生成的SMT/合成见证、阶段统计及独审保存到既有私有仓库 `wanghongsheng01/calibergraph-method-research-20261011` 的 `polygon_pilot_20261012_13/`。不提交原始公共数据集/SQL/DDL、上游源码归档、原生二进制或安装依赖。DELIVERY_MANIFEST.json核对作者包；FREEZE.json绑定运行时完整输入，历史未运行批次保持原样。
+
+第三方恢复：下载 `https://codeload.github.com/polygon-sql/polygon/tar.gz/5e18237394d025dbb805cf833b4f54c321470774`，核对SOURCE.json archive_sha256。该归档和旧连接器文本仅末尾换行不同，不能为通过校验随意改哈希。以原固定完整polygon目录为底，覆盖已备份11包build_adapter.py从旧固定文本生成的environment.py、smt/formula.py、smt/provers/smtlibv2.py（hash见FREEZE）。恢复512MiB原生Z3二进制配置所用的Z3文件身份，复用12包BINARY_COPY来源，字节SHA `edae32f9e37ea4b5bb35310d72f0e352d0dc07626cac4e9e30bc1ea9a5bc8efb`；只给新副本0755，不改旧来源。
+
+依赖只按DEPENDENCIES.json列出的wheel URL及sha256恢复到dependencies_local，不装到系统目录；本机已有Python3.12.13，路径在脚本中。原SQL/DDL依据coverage_boundary_20261012_09/RECOVERY.zh.md恢复两例公开固定输入，用10包提取器恢复inventory，逐个核对FREEZE哈希；14表42列不能裁剪。输入来源治理沿前轮公共研究源登记缺口记录，不宣称此作者包补齐外部DataHub注册。
+
+本轮marker已存在且禁止科学重试。恢复后不要直接运行run_batch.py，它代表另一次科学尝试、需要新的明确授权和批次。独立复核应运行review_local中的SQLite审核逻辑，只读取保存见证并在内存数据库执行原DDL/SQL，不能改值或再求解。重建公式与原生SMT验证若需要求解器，同样不是无成本的“文件检查”，不得冒充本轮独审已重复求解。
+
+作者保护代码副本来自12包，新的批准门槛在FREEZE/EXECUTION_FREEZE里，不修改12包固定拒绝函数；新总控只在核验明确授权后直接创建已批准的Z3。两次broker metadata预检结果和科学一次记录分开，第一次预检通信错误保留，不能算作科学失败或科学重试。独审脚本的路径需要按恢复布局调整时，应另存新副本并记录变化，不能覆盖原审核输出。
+
+原生运行文件/上游来源使用哈希和恢复说明而非Git重复分发；本作者包的备份状态应以实际远端SHA与私有性核验为准，不将历史第三方raw/native BACKUP_BLOCKED冒称全部解除。

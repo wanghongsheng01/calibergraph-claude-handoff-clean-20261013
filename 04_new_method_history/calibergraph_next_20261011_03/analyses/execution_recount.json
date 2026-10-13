@@ -1,0 +1,431 @@
+{
+  "created_utc": "2026-10-11T12:43:40.776378+00:00",
+  "registered_group_count": 21,
+  "actual_started_workers_batch02": 18,
+  "returned_workers": 17,
+  "import_monitor_stopped_workers": 1,
+  "unstarted_registered_groups": 3,
+  "unused_capacity_not_denominator": 11,
+  "bootstrap_failed_launches_before_worker_exec": 1,
+  "solver_call_counts": {
+    "FULL_C_NONEMPTY_CHECK": 13,
+    "OFFICIAL_QUERY_SOLVER_CHECK": 10
+  },
+  "all_solver_CPU_seconds": 0.3194609999999999,
+  "all_solver_wall_seconds": 0.3200428760610521,
+  "query_CPU_seconds": {
+    "min": 0.007907999999999915,
+    "median": 0.021191499999999974,
+    "max": 0.06063799999999997,
+    "sum": 0.2616769999999998
+  },
+  "query_wall_seconds": {
+    "min": 0.007901167031377554,
+    "max": 0.06073549995198846,
+    "sum": 0.26237037498503923
+  },
+  "maximum_completed_group_solver_wall_seconds": 0.06572120822966099,
+  "maximum_worker_peak_RSS_bytes": 118259712,
+  "query_raw_verdict_counts": {
+    "sat": 1,
+    "unsat": 9
+  },
+  "cost_repeats_triggered": 0,
+  "budget_violations": [],
+  "batch_charge": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.277933,
+    "parent_system_cpu_seconds": 0.258928,
+    "all_reaped_children_user_cpu_seconds": 10.925307,
+    "all_reaped_children_system_cpu_seconds": 5.256324,
+    "supervisor_plus_reaped_cpu_seconds": 16.718492,
+    "observed_total_cpu_seconds": 24.595214,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled",
+    "reserved_final_report_exit_tail_seconds": 0.1,
+    "conservative_charged_total_seconds": 24.695214
+  },
+  "no_new_mechanism": "STOP_RESEARCH_PROBLEM_NOT_ESTABLISHED",
+  "scope": "Read-only arithmetic from sealed receipts, not new SQL/solver execution. Exact two live rows per physical table, official operational C; incomplete due monitor stop.",
+  "rows": [
+    {
+      "id": "dev03_01",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1127.csv",
+      "source_line": 9581,
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SCHEMA_UNSUPPORTED",
+      "worker_strict_class": "SCHEMA_UNSUPPORTED",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.0,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_02",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+      "source_line": 2421,
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "CONTRACT_INCONSISTENT_EXACT2",
+      "worker_strict_class": "CONTRACT_INCONSISTENT_EXACT2",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.0038270829245448112,
+      "query_raw_verdicts": [],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_03",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "source_line": 20110,
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.016657000000000033
+      ],
+      "solver_cumulative_wall_seconds": 0.022013541776686907,
+      "query_raw_verdicts": [
+        "sat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_04",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+      "source_line": 17255,
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "INCONCLUSIVE",
+      "worker_strict_class": "INCONCLUSIVE",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.004276125226169825,
+      "query_raw_verdicts": [],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_05",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+      "source_line": 10021,
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SCHEMA_UNSUPPORTED",
+      "worker_strict_class": "SCHEMA_UNSUPPORTED",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.0,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_06",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1783.csv",
+      "source_line": 21931,
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.06063799999999997
+      ],
+      "solver_cumulative_wall_seconds": 0.06572120822966099,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_07",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "source_line": 11415,
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.008796999999999944
+      ],
+      "solver_cumulative_wall_seconds": 0.013549458235502243,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_08",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/183.csv",
+      "source_line": 580,
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.014500000000000068
+      ],
+      "solver_cumulative_wall_seconds": 0.018792541231960058,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_09",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+      "source_line": 21639,
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SCHEMA_UNSUPPORTED",
+      "worker_strict_class": "SCHEMA_UNSUPPORTED",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.0,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_10",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "source_line": 13041,
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.025725999999999916
+      ],
+      "solver_cumulative_wall_seconds": 0.030219125095754862,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_11",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/511.csv",
+      "source_line": 673,
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.007907999999999915
+      ],
+      "solver_cumulative_wall_seconds": 0.012026126030832529,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_12",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/577.csv",
+      "source_line": 2173,
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.02760499999999999
+      ],
+      "solver_cumulative_wall_seconds": 0.03222779231145978,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_13",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1677.csv",
+      "source_line": 19915,
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.058423
+      ],
+      "solver_cumulative_wall_seconds": 0.06361674889922142,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_14",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/613.csv",
+      "source_line": 4513,
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.008240999999999943
+      ],
+      "solver_cumulative_wall_seconds": 0.0121608329936862,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_15",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "source_line": 15534,
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SUPPORTED_FAST",
+      "worker_strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+      "query_cpu_seconds": [
+        0.033182000000000045
+      ],
+      "solver_cumulative_wall_seconds": 0.03752316813915968,
+      "query_raw_verdicts": [
+        "unsat"
+      ],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_16",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1777.csv",
+      "source_line": 21819,
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "SCHEMA_UNSUPPORTED",
+      "worker_strict_class": "SCHEMA_UNSUPPORTED",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.0,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_17",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1211.csv",
+      "source_line": 12206,
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "RETURNED",
+      "worker_raw_engineering_class": "INCONCLUSIVE",
+      "worker_strict_class": "INCONCLUSIVE",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": 0.004089124966412783,
+      "query_raw_verdicts": [],
+      "repeat_triggered": false,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_18",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+      "source_line": 2924,
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "MONITOR_OR_LAUNCH_EXCEPTION",
+      "worker_raw_engineering_class": "NOT_RUN",
+      "worker_strict_class": "NOT_RUN",
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": null,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": {
+        "type": "TimeoutExpired",
+        "message": "Command '['/bin/ps', '-A', '-o', 'pid=,pgid=,rss=,time=']' timed out after 0.05 seconds"
+      }
+    },
+    {
+      "id": "dev03_19",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1683.csv",
+      "source_line": 20022,
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "NOT_RUN",
+      "worker_raw_engineering_class": null,
+      "worker_strict_class": null,
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": null,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_20",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1149.csv",
+      "source_line": 11280,
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "NULL_UNSPECIFIED",
+      "supervisor_status": "NOT_RUN",
+      "worker_raw_engineering_class": null,
+      "worker_strict_class": null,
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": null,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    },
+    {
+      "id": "dev03_21",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/607.csv",
+      "source_line": 4241,
+      "stratum": "S6_MULTI_JOIN_3_TABLES",
+      "contract_source": "PRESENT_JSON",
+      "supervisor_status": "NOT_RUN",
+      "worker_raw_engineering_class": null,
+      "worker_strict_class": null,
+      "query_cpu_seconds": [],
+      "solver_cumulative_wall_seconds": null,
+      "query_raw_verdicts": [],
+      "repeat_triggered": null,
+      "violations": [],
+      "failure": null
+    }
+  ]
+}

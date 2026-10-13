@@ -1,0 +1,180 @@
+{"processed": 1000, "cpu_s": 0.78, "wall_s": 0.78}
+{"processed": 2000, "cpu_s": 1.27, "wall_s": 1.27}
+{"processed": 3000, "cpu_s": 1.85, "wall_s": 1.86}
+{"processed": 4000, "cpu_s": 2.76, "wall_s": 2.77}
+{"processed": 5000, "cpu_s": 3.72, "wall_s": 3.73}
+{"processed": 6000, "cpu_s": 3.91, "wall_s": 3.92}
+{"processed": 7000, "cpu_s": 4.05, "wall_s": 4.05}
+{"processed": 8000, "cpu_s": 4.55, "wall_s": 4.56}
+{"processed": 9000, "cpu_s": 5.36, "wall_s": 5.37}
+{"processed": 10000, "cpu_s": 6.41, "wall_s": 6.42}
+{"processed": 11000, "cpu_s": 7.69, "wall_s": 7.7}
+{"processed": 12000, "cpu_s": 8.67, "wall_s": 8.68}
+{"processed": 13000, "cpu_s": 9.02, "wall_s": 9.03}
+{"processed": 14000, "cpu_s": 9.29, "wall_s": 9.3}
+{"processed": 15000, "cpu_s": 9.96, "wall_s": 9.97}
+{"processed": 16000, "cpu_s": 11.28, "wall_s": 11.29}
+{"processed": 17000, "cpu_s": 12.33, "wall_s": 12.34}
+{"processed": 18000, "cpu_s": 13.46, "wall_s": 13.47}
+{"processed": 19000, "cpu_s": 14.4, "wall_s": 14.42}
+{"processed": 20000, "cpu_s": 14.43, "wall_s": 14.44}
+{"processed": 21000, "cpu_s": 14.72, "wall_s": 14.74}
+{"processed": 22000, "cpu_s": 14.87, "wall_s": 14.88}
+{"processed": 23000, "cpu_s": 15.56, "wall_s": 15.57}
+{"processed": 24000, "cpu_s": 15.58, "wall_s": 15.6}
+{"processed": 25000, "cpu_s": 16.19, "wall_s": 16.21}
+{
+  "parseval_bird": {
+    "records": 1534,
+    "prior_developed_exclusions": 10,
+    "reasons": {
+      "BARRIER": 1065,
+      "NO_STRICT_ZERO_ELIMINATION": 152,
+      "UNSUPPORTED_PREDICATE_ADD": 1,
+      "UNSUPPORTED_PREDICATE_SUB": 4,
+      "UNSUPPORTED_PREDICATE_DIV": 3,
+      "PRIOR_CASE_DEVELOPMENT_OR_SQL_MATCH": 10,
+      "UNSUPPORTED_PREDICATE_BETWEEN": 16,
+      "NON_SIMPLE_PROJECTION": 25,
+      "EXACT_PAIR_CACHE_ONLY": 126,
+      "PAIR_OUTPUT_TYPE_MISMATCH": 30,
+      "SUBQUERY_OR_NONLITERAL_IN": 20,
+      "UNSUPPORTED_PREDICATE_TIMETOSTR": 10,
+      "UNSUPPORTED_PREDICATE_SUBQUERY": 12,
+      "UNRESOLVED_OR_AMBIGUOUS_COLUMN": 19,
+      "UNSUPPORTED_PREDICATE_ANONYMOUS": 18,
+      "SCANNER_ERROR": 8,
+      "UNSUPPORTED_PREDICATE_LIKE": 14,
+      "NOT_SINGLE_QUERY": 1
+    },
+    "barrier_multilabel_counts": {
+      "AGGREGATE": 709,
+      "LIMIT_OFFSET": 329,
+      "ORDER": 332,
+      "DISTINCT": 327,
+      "GROUP": 142,
+      "HAVING": 25,
+      "OUTER_OR_SPECIAL_JOIN": 11,
+      "NON_UNION_SET_OPERATION": 1,
+      "UNION_DISTINCT": 2,
+      "CTE": 7
+    },
+    "admitted_spju": 278,
+    "exact_pair_cache_only": 126,
+    "event_pair_counts": {
+      "P_common_context": 55,
+      "S_different_same_input_descriptive": 33,
+      "E_exact_zero": 126,
+      "S_common_context": 15
+    },
+    "eligible_records": 0,
+    "eligible_unique_pairs": 0,
+    "eligible_families": [],
+    "shared_dag_nodes": {
+      "n": 278,
+      "min": 1,
+      "median": 3,
+      "p90": 5,
+      "max": 7
+    },
+    "original_shared_dag_nodes": {
+      "n": 278,
+      "min": 3,
+      "median": 7,
+      "p90": 10,
+      "max": 14
+    },
+    "residual_dag_nodes": {
+      "n": 278,
+      "min": 0,
+      "median": 5,
+      "p90": 11,
+      "max": 15
+    },
+    "net_reduction": {
+      "n": 278,
+      "min": -0.25,
+      "median": 0.125,
+      "p90": 1.0,
+      "max": 1.0
+    }
+  },
+  "verieql_leetcode": {
+    "records": 23994,
+    "prior_developed_exclusions": 10558,
+    "reasons": {
+      "BARRIER": 12651,
+      "PRIOR_CASE_DEVELOPMENT_OR_SQL_MATCH": 10558,
+      "PARSE_ERROR": 95,
+      "NO_STRICT_ZERO_ELIMINATION": 31,
+      "EXACT_PAIR_CACHE_ONLY": 6,
+      "UNSUPPORTED_PREDICATE_MUL": 2,
+      "UNSUPPORTED_PREDICATE_SUBQUERY": 10,
+      "NON_SIMPLE_PROJECTION": 573,
+      "SCANNER_ERROR": 3,
+      "SUBQUERY_OR_NONLITERAL_IN": 64,
+      "NOT_SINGLE_QUERY": 1
+    },
+    "barrier_multilabel_counts": {
+      "DISTINCT": 6334,
+      "OUTER_OR_SPECIAL_JOIN": 5138,
+      "CTE": 3294,
+      "GROUP": 9360,
+      "ORDER": 3900,
+      "UNION_DISTINCT": 1008,
+      "AGGREGATE": 9578,
+      "WINDOW": 1219,
+      "LIMIT_OFFSET": 97,
+      "HAVING": 3349
+    },
+    "admitted_spju": 37,
+    "exact_pair_cache_only": 6,
+    "event_pair_counts": {
+      "P_common_context": 27,
+      "S_different_same_input_descriptive": 27,
+      "E_exact_zero": 6
+    },
+    "eligible_records": 0,
+    "eligible_unique_pairs": 0,
+    "eligible_families": [],
+    "shared_dag_nodes": {
+      "n": 37,
+      "min": 1,
+      "median": 1,
+      "p90": 3,
+      "max": 3
+    },
+    "original_shared_dag_nodes": {
+      "n": 37,
+      "min": 3,
+      "median": 5,
+      "p90": 5,
+      "max": 5
+    },
+    "residual_dag_nodes": {
+      "n": 37,
+      "min": 0,
+      "median": 5,
+      "p90": 5,
+      "max": 6
+    },
+    "net_reduction": {
+      "n": 37,
+      "min": -0.25,
+      "median": 0.0,
+      "p90": 1.0,
+      "max": 1.0
+    }
+  },
+  "_gate": {
+    "eligible_distinct_pairs": 0,
+    "eligible_source_families": 0,
+    "passed": false,
+    "decision": "REJECT_AVAILABLE_WORKLOAD",
+    "new_solver_calls": 0,
+    "new_sql_executions": 0,
+    "wall_s": 16.62656679097563,
+    "cpu_s": 16.605057,
+    "peak_rss_bytes": 107577344
+  }
+}

@@ -1,0 +1,1396 @@
+{
+  "status": "COMPLETE_DIAGNOSTIC",
+  "native_load": "LOADED",
+  "environment_import": "IMPORTED",
+  "pid": 3710,
+  "data_role": "CONSTRUCTED_CONTRACT_DIAGNOSTIC_NOT_BENCHMARK",
+  "cells": [
+    {
+      "operator": "lt",
+      "value": 6,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "unsat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "lt",
+      "value": 4,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "sat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "lt",
+      "value": null,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (> 5 (T__A t1)) (not true))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "lt",
+      "value": 5,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 5,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (> 5 5) (not false))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "lte",
+      "value": 6,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "lte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "unsat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "lte",
+      "value": 4,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "lte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "sat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "lte",
+      "value": null,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "lte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (>= 5 (T__A t1)) (not true))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "lte",
+      "value": 5,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "lte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 5,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (>= 5 5) (not false))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "gt",
+      "value": 6,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "gt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "sat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "gt",
+      "value": 4,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "gt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "unsat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "gt",
+      "value": null,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "gt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (< 5 (T__A t1)) (not true))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "gt",
+      "value": 5,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "gt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 5,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (< 5 5) (not false))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "gte",
+      "value": 6,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "gte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "sat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "gte",
+      "value": 4,
+      "status": "RECORDED_DISAGREEMENT",
+      "original_ast": {
+        "gte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "unsat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": false,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "gte",
+      "value": null,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "gte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (<= 5 (T__A t1)) (not true))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "gte",
+      "value": 5,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "gte": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 5,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (<= 5 5) (not false))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "eq",
+      "value": 6,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "eq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "unsat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "eq",
+      "value": 4,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "eq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "unsat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "eq",
+      "value": null,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "eq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (= 5 (T__A t1)) (not true))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "eq",
+      "value": 5,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "eq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 5,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (= 5 5) (not false))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "neq",
+      "value": 6,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "neq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "sat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": true,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "neq",
+      "value": 4,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "neq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "formula_evaluation_kind": "ACTUAL_FACT_EVALUATED_IN_FIXED_BASE_MODEL",
+      "fixed_smt": {
+        "status": "sat",
+        "reason_unknown": null
+      },
+      "official_fact_eval": true,
+      "official_fact_eval_text": "True",
+      "matches_original_strict_contract": true,
+      "fixed_smt_matches_fact_evaluation": true
+    },
+    {
+      "operator": "neq",
+      "value": null,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "neq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (distinct 5 (T__A t1)) (not true))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    },
+    {
+      "operator": "neq",
+      "value": 5,
+      "status": "RECORDED_AGREEMENT",
+      "original_ast": {
+        "neq": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      },
+      "original_truth": {
+        "left": 5,
+        "right": 5,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "formula_evaluation_kind": "EXACT_FORMULA_SUBSTITUTION_CONTROL_NO_NEW_MODEL_SOLVE",
+      "substituted_formula_sexpr": "(and (distinct 5 5) (not false))",
+      "fixed_smt": {
+        "status": "NOT_RUN_BY_DESIGN_NULL_OR_BOUNDARY_CONTROL"
+      },
+      "official_fact_eval": false,
+      "official_fact_eval_text": "False",
+      "matches_original_strict_contract": true
+    }
+  ],
+  "fixed_base_models": [
+    {
+      "value": 6,
+      "status": "sat",
+      "reason_unknown": null,
+      "database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "model_sexpr": ";; universe for TupleSort:\n;;   TupleSort!val!0 \n;; -----------\n;; definitions for universe elements:\n(declare-fun TupleSort!val!0 () TupleSort)\n;; cardinality constraint:\n(forall ((x TupleSort)) (= x TupleSort!val!0))\n;; -----------\n(define-fun T__A__String () String\n  \"!0!\")\n(define-fun t1 () TupleSort\n  TupleSort!val!0)\n(define-fun String_x1__Int () Int\n  6)\n(define-fun DELETED ((x!0 TupleSort)) Bool\n  false)\n(define-fun NULL ((x!0 TupleSort) (x!1 String)) Bool\n  false)\n(define-fun T__A ((x!0 TupleSort)) Int\n  6)"
+    },
+    {
+      "value": 4,
+      "status": "sat",
+      "reason_unknown": null,
+      "database": {
+        "T": [
+          [
+            4
+          ]
+        ]
+      },
+      "model_sexpr": ";; universe for TupleSort:\n;;   TupleSort!val!0 \n;; -----------\n;; definitions for universe elements:\n(declare-fun TupleSort!val!0 () TupleSort)\n;; cardinality constraint:\n(forall ((x TupleSort)) (= x TupleSort!val!0))\n;; -----------\n(define-fun T__A__String () String\n  \"!0!\")\n(define-fun t1 () TupleSort\n  TupleSort!val!0)\n(define-fun String_x1__Int () Int\n  4)\n(define-fun DELETED ((x!0 TupleSort)) Bool\n  false)\n(define-fun NULL ((x!0 TupleSort) (x!1 String)) Bool\n  false)\n(define-fun T__A ((x!0 TupleSort)) Int\n  4)"
+    }
+  ],
+  "sqlite_controls": [
+    {
+      "id": "intended_contract_true",
+      "database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "status": "RECORDED",
+      "raw_sql_unchanged": true,
+      "replay": {
+        "relations": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              6
+            ]
+          ]
+        ],
+        "sqlite_version": "3.53.3",
+        "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+        "unequal_as_bags": true
+      },
+      "explicit_domain": "One integer or NULL, absolute value <=6; SUM has at most one addend.",
+      "original_lt_truth": {
+        "left": 5,
+        "right": 6,
+        "three_valued_truth": true,
+        "satisfies_strict_contract": true
+      },
+      "matches_pre_registered_relations": true
+    },
+    {
+      "id": "wrong_contract_true",
+      "database": {
+        "T": [
+          [
+            4
+          ]
+        ]
+      },
+      "status": "RECORDED",
+      "raw_sql_unchanged": true,
+      "replay": {
+        "relations": [
+          [
+            [
+              4
+            ]
+          ],
+          [
+            [
+              4
+            ]
+          ]
+        ],
+        "sqlite_version": "3.53.3",
+        "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+        "unequal_as_bags": false
+      },
+      "explicit_domain": "One integer or NULL, absolute value <=6; SUM has at most one addend.",
+      "original_lt_truth": {
+        "left": 5,
+        "right": 4,
+        "three_valued_truth": false,
+        "satisfies_strict_contract": false
+      },
+      "matches_pre_registered_relations": true
+    },
+    {
+      "id": "null_control",
+      "database": {
+        "T": [
+          [
+            null
+          ]
+        ]
+      },
+      "status": "RECORDED",
+      "raw_sql_unchanged": true,
+      "replay": {
+        "relations": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              null
+            ]
+          ]
+        ],
+        "sqlite_version": "3.53.3",
+        "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+        "unequal_as_bags": false
+      },
+      "explicit_domain": "One integer or NULL, absolute value <=6; SUM has at most one addend.",
+      "original_lt_truth": {
+        "left": 5,
+        "right": null,
+        "three_valued_truth": "UNKNOWN",
+        "satisfies_strict_contract": false
+      },
+      "matches_pre_registered_relations": true
+    }
+  ],
+  "original_pair": {
+    "status": "RECORDED",
+    "original_pair": [
+      "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+      "SELECT SUM(T.A) FROM T"
+    ],
+    "actual_constraint_ast": [
+      {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      }
+    ],
+    "constraint_scope": "Official emitted constraint; not a correction to the original AST semantics.",
+    "contract_guard": {
+      "full_base_fact_count": 5,
+      "consistency": "sat",
+      "any_base_row_deleted": "unsat",
+      "base_fact_sha256": "20140c60cd244631e50d00e2afa9afe07f3ce111c768778145b6a92202427415"
+    },
+    "complete_fact_sexprs": [
+      "(not (DELETED t1))",
+      "(= (T__A t1) String_x1__Int)",
+      "(<= (- 2147483648) (T__A t1))",
+      "(>= 2147483647 (T__A t1))",
+      "(and (> 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+    ],
+    "actual_verifier_semantics": {
+      "requested_semantics": null,
+      "observed_wrapper_class": "verifiers.verifier.Verifier",
+      "actual_run_method": "verifiers.verifier.Verifier.run",
+      "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+      "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+      "dispatch_constructors_in_locked_run_ast": [
+        "BagSemanticsVerifier",
+        "ListSemanticsVerifier"
+      ],
+      "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+      "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+      "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+      "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+    },
+    "equivalence_boolean": true,
+    "solver_verdict": "unsat",
+    "matches_registered_emitted_contract_prediction": true,
+    "prediction_scope": "Prediction is equivalence under emitted reversed IC; completion status is separate from prediction agreement.",
+    "solver_assertions_sexprs": [
+      "(let ((a!1 (and (not (DELETED t1))\n                (ite (or (NULL t1 T__A__String) false) false (> 5 (T__A t1)))))\n      (a!3 (= (NULL t3 TABLE2__SUM_T__A__String)\n              (and (or (DELETED t2) (NULL t2 T__A__String)))))\n      (a!4 (+ (ite (or (DELETED t2) (NULL t2 T__A__String)) 0 (T__A t2))))\n      (a!7 (= (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String)\n              (and (or (DELETED t2) (NULL t2 T__A__String)))))\n      (a!9 (=> (not (and (DELETED t2))) (DELETED pity_tuple_of_Table3)))\n      (a!10 (= (NULL t5 T__SUM_T__A__String)\n               (and (or (DELETED t1) (NULL t1 T__A__String)))))\n      (a!11 (+ (ite (or (DELETED t1) (NULL t1 T__A__String)) 0 (T__A t1))))\n      (a!14 (= (NULL pity_tuple_of_Table4 T__SUM_T__A__String)\n               (and (or (DELETED t1) (NULL t1 T__A__String)))))\n      (a!16 (=> (not (and (DELETED t1))) (DELETED pity_tuple_of_Table4)))\n      (a!17 (= (+ (ite (DELETED t3) 0 1)\n                  (ite (DELETED pity_tuple_of_Table3) 0 1))\n               (+ (ite (DELETED t5) 0 1)\n                  (ite (DELETED pity_tuple_of_Table4) 0 1))))\n      (a!18 (or (and (NULL t3 TABLE2__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                (and (not (NULL t3 TABLE2__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A t3)\n                        (TABLE2__SUM_T__A pity_tuple_of_Table3)))))\n      (a!20 (or (and (NULL t3 TABLE2__SUM_T__A__String)\n                     (NULL t5 T__SUM_T__A__String))\n                (and (not (NULL t3 TABLE2__SUM_T__A__String))\n                     (not (NULL t5 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A t3) (T__SUM_T__A t5)))))\n      (a!22 (or (and (NULL t3 TABLE2__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                (and (not (NULL t3 TABLE2__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A t3)\n                        (T__SUM_T__A pity_tuple_of_Table4)))))\n      (a!25 (or (and (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String)\n                     (NULL t5 T__SUM_T__A__String))\n                (and (not (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                     (not (NULL t5 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A pity_tuple_of_Table3)\n                        (T__SUM_T__A t5)))))\n      (a!27 (or (and (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                (and (not (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A pity_tuple_of_Table3)\n                        (T__SUM_T__A pity_tuple_of_Table4)))))\n      (a!30 (or (and (NULL t5 T__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                (and (not (NULL t5 T__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                     (= (T__SUM_T__A t5) (T__SUM_T__A pity_tuple_of_Table4))))))\n(let ((a!2 (=> a!1 (and (not (DELETED t2)) (= t2 t1))))\n      (a!5 (ite (and (or (DELETED t2) (NULL t2 T__A__String))) (- 10) a!4))\n      (a!12 (ite (and (or (DELETED t1) (NULL t1 T__A__String))) (- 10) a!11))\n      (a!19 (or (and (DELETED t3) (DELETED pity_tuple_of_Table3))\n                (and (not (DELETED t3))\n                     (not (DELETED pity_tuple_of_Table3))\n                     a!18)))\n      (a!21 (or (and (DELETED t3) (DELETED t5))\n                (and (not (DELETED t3)) (not (DELETED t5)) a!20)))\n      (a!23 (or (and (DELETED t3) (DELETED pity_tuple_of_Table4))\n                (and (not (DELETED t3))\n                     (not (DELETED pity_tuple_of_Table4))\n                     a!22)))\n      (a!26 (or (and (DELETED pity_tuple_of_Table3) (DELETED t5))\n                (and (not (DELETED pity_tuple_of_Table3))\n                     (not (DELETED t5))\n                     a!25)))\n      (a!28 (or (and (DELETED pity_tuple_of_Table3)\n                     (DELETED pity_tuple_of_Table4))\n                (and (not (DELETED pity_tuple_of_Table3))\n                     (not (DELETED pity_tuple_of_Table4))\n                     a!27)))\n      (a!31 (or (and (DELETED t5) (DELETED pity_tuple_of_Table4))\n                (and (not (DELETED t5))\n                     (not (DELETED pity_tuple_of_Table4))\n                     a!30))))\n(let ((a!6 (=> (not (DELETED t2))\n               (and (not (DELETED t3)) a!3 (= (TABLE2__SUM_T__A t3) a!5))))\n      (a!8 (=> (and (DELETED t2))\n               (and (not (DELETED pity_tuple_of_Table3))\n                    a!7\n                    (= (TABLE2__SUM_T__A pity_tuple_of_Table3) a!5))))\n      (a!13 (=> (not (DELETED t1))\n                (and (not (DELETED t5)) a!10 (= (T__SUM_T__A t5) a!12))))\n      (a!15 (=> (and (DELETED t1))\n                (and (not (DELETED pity_tuple_of_Table4))\n                     a!14\n                     (= (T__SUM_T__A pity_tuple_of_Table4) a!12))))\n      (a!24 (=> (not (DELETED t3))\n                (= (+ 1 (ite a!19 1 0)) (+ (ite a!21 1 0) (ite a!23 1 0)))))\n      (a!29 (=> (not (DELETED pity_tuple_of_Table3))\n                (= (+ (ite a!19 1 0) 1) (+ (ite a!26 1 0) (ite a!28 1 0)))))\n      (a!32 (=> (not (DELETED t5))\n                (= (+ (ite a!21 1 0) (ite a!26 1 0)) (+ 1 (ite a!31 1 0)))))\n      (a!33 (=> (not (DELETED pity_tuple_of_Table4))\n                (= (+ (ite a!23 1 0) (ite a!28 1 0)) (+ (ite a!31 1 0) 1)))))\n(let ((a!34 (=> (and (not (DELETED t1))\n                     (= (T__A t1) String_x1__Int)\n                     (<= (- 2147483648) (T__A t1))\n                     (>= 2147483647 (T__A t1))\n                     (> 5 (T__A t1))\n                     (not (NULL t1 T__A__String))\n                     a!2\n                     (=> (not a!1) (DELETED t2))\n                     a!6\n                     (=> (DELETED t2) (DELETED t3))\n                     a!8\n                     a!9\n                     a!13\n                     (=> (DELETED t1) (DELETED t5))\n                     a!15\n                     a!16)\n                (and a!17 a!24 a!29 a!32 a!33))))\n  (not a!34)))))"
+    ]
+  },
+  "reserved_or_attempted_check_slots": 19,
+  "solver_slot_count_scope": "Guard reserves two slots and analyze reserves one; failure before a check can overcount actual calls. This is not an exact completed-check counter.",
+  "scientific_claim": "No natural defect prevalence, performance, or new contribution claim.",
+  "input": {
+    "schema_version": 1,
+    "status": "REGISTERED_NOT_RUN",
+    "id": "LITERAL_LEFT_ORDERED_IC_DIAGNOSTIC",
+    "data_role": "CONSTRUCTED_ADVERSARIAL_CONTRACT_DIAGNOSTIC_NOT_NATURAL_BENCHMARK_OR_NEW_CONTRIBUTION",
+    "independent_fixture": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/IC_LITERAL_LEFT_STATIC_CASE.json",
+      "sha256": "3d770c63ce27d34707898da05317614c96df900bef9dfeda111a6892765a0d3c"
+    },
+    "schema": {
+      "T": {
+        "A": "INT"
+      }
+    },
+    "exact_rows": {
+      "T": 1
+    },
+    "pair": [
+      "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+      "SELECT SUM(T.A) FROM T"
+    ],
+    "primary_constraint": [
+      {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      }
+    ],
+    "original_constraint_text": "5 < T.A",
+    "comparisons": [
+      {
+        "id": "lt",
+        "operator": "lt",
+        "original_text": "5 < T.A",
+        "constraint": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          }
+        ],
+        "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+        "direction_role": "ORDERED_COMPARISON"
+      },
+      {
+        "id": "lte",
+        "operator": "lte",
+        "original_text": "5 <= T.A",
+        "constraint": [
+          {
+            "lte": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          }
+        ],
+        "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+        "direction_role": "ORDERED_COMPARISON"
+      },
+      {
+        "id": "gt",
+        "operator": "gt",
+        "original_text": "5 > T.A",
+        "constraint": [
+          {
+            "gt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          }
+        ],
+        "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+        "direction_role": "ORDERED_COMPARISON"
+      },
+      {
+        "id": "gte",
+        "operator": "gte",
+        "original_text": "5 >= T.A",
+        "constraint": [
+          {
+            "gte": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          }
+        ],
+        "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+        "direction_role": "ORDERED_COMPARISON"
+      },
+      {
+        "id": "eq",
+        "operator": "eq",
+        "original_text": "5 = T.A",
+        "constraint": [
+          {
+            "eq": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          }
+        ],
+        "input_origin": "EXPLICIT_EMITTER_ONLY_CONTROL_GRAMMAR_HAS_NO_EQUALITY",
+        "direction_role": "SYMMETRIC_CONTROL"
+      },
+      {
+        "id": "neq",
+        "operator": "neq",
+        "original_text": "5 != T.A",
+        "constraint": [
+          {
+            "neq": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          }
+        ],
+        "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+        "direction_role": "SYMMETRIC_CONTROL"
+      }
+    ],
+    "fixed_databases": [
+      {
+        "id": "intended_contract_true",
+        "database": {
+          "T": [
+            [
+              6
+            ]
+          ]
+        },
+        "expected_original_contract_holds": true,
+        "expected_existing_emitted_contract_holds": false,
+        "expected_original_sql_results": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              6
+            ]
+          ]
+        ],
+        "reason": "5<6 is true; emitted 6<5 is false; WHERE 6<5 filters row only from first query."
+      },
+      {
+        "id": "wrong_contract_true",
+        "database": {
+          "T": [
+            [
+              4
+            ]
+          ]
+        },
+        "expected_original_contract_holds": false,
+        "expected_existing_emitted_contract_holds": true,
+        "expected_original_sql_results": [
+          [
+            [
+              4
+            ]
+          ],
+          [
+            [
+              4
+            ]
+          ]
+        ],
+        "reason": "5<4 is false; emitted 4<5 is true."
+      },
+      {
+        "id": "null_control",
+        "database": {
+          "T": [
+            [
+              null
+            ]
+          ]
+        },
+        "expected_original_contract_holds": false,
+        "expected_existing_emitted_contract_holds": false,
+        "expected_original_sql_results": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              null
+            ]
+          ]
+        ],
+        "reason": "This strict comparison contract requires nonnull attribute; SQL WHERE UNKNOWN does not select."
+      }
+    ],
+    "boundary_control": {
+      "value": 5,
+      "scope": "EXACT_SUBSTITUTION_ONLY_NO_ADDITIONAL_FIXED_MODEL_SOLVE"
+    },
+    "cell_denominator": 24,
+    "cell_definition": "6 comparison operators x 4 point values (6,4,NULL,5); actual fixed SMT checks only for 6 and 4, NULL/5 are labeled formula substitution controls.",
+    "original_truth_contract": "Evaluate original binary AST operands in source order; NULL -> UNKNOWN and satisfies_strict_contract=False. This is not SQL CHECK acceptance of UNKNOWN.",
+    "emission_method": "Use actual ConstraintParser.parse output except explicitly labeled eq emitter control. One no-IC environment supplies full baseline facts and row symbols. Capture each add_constraints delta; do not solve cumulative conjunction of unrelated operator controls. A separate fresh environment runs the single original lt constraint with the original SQL pair.",
+    "limits": {
+      "cpu_soft_seconds": 14,
+      "cpu_hard_seconds": 15,
+      "wall_hard_seconds": 24,
+      "rss_sampled_soft_bytes": 1073741824,
+      "solver_threads": 1,
+      "maximum_solver_check_calls": 19,
+      "solver_call_breakdown": {
+        "baseline_common_guard": 2,
+        "two_fixed_base_models": 2,
+        "six_operators_times_two_fixed_points": 12,
+        "original_pair_common_guard": 2,
+        "original_pair_analyze": 1
+      }
+    },
+    "expectations_are_predictions_not_results": {
+      "under_intended_5_lt_A": "sat / not equivalent; fixed A=6 is a mathematical witness",
+      "under_existing_A_lt_5": "unsat / equivalent at exact1; every allowed nonnull A is selected by first WHERE"
+    },
+    "not_claimed": [
+      "natural defect incidence",
+      "new scientific contribution from constructed examples",
+      "benchmark accuracy or performance",
+      "general official-verifier unsoundness",
+      "execution before root actually launches supervisor"
+    ],
+    "expected_runtime_lock": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+      "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+    },
+    "reused_common": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/common.py",
+      "sha256": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8"
+    },
+    "unchanged_source_evidence": [
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/constraint_parser.py",
+        "sha256": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0"
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+        "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8"
+      }
+    ]
+  },
+  "manifest_sha256": "f0f102f46ff8e2c4e5f3e567ffbf3e0612e9f26ed1624ef3dff8dcf8fe792feb",
+  "cell_denominator": 24,
+  "phase": "FINAL_COMPLETE_DIAGNOSTIC",
+  "resource_last_checkpoint": {
+    "wall_seconds": 1.7122124582529068,
+    "cpu_seconds": 1.60493,
+    "peak_rss_bytes_darwin": 117506048,
+    "python_threads": [
+      {
+        "name": "MainThread",
+        "daemon": false
+      }
+    ]
+  },
+  "native_identity": {
+    "pinned_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+    "sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+    "version": [
+      4,
+      12,
+      0,
+      0
+    ],
+    "binding_pointer": 4376989108,
+    "pinned_pointer": 4376989108,
+    "method": "same_process_function_identity_plus_locked_source"
+  },
+  "module_origins": {
+    "pkg_resources": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support/pkg_resources/__init__.py",
+    "z3.z3types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3types.py",
+    "z3.z3consts": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3consts.py",
+    "z3.z3core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3core.py",
+    "z3.z3printer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3printer.py",
+    "z3.z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3.py",
+    "z3.z3num": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3num.py",
+    "z3.z3poly": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3poly.py",
+    "z3.z3rcf": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3rcf.py",
+    "z3.z3util": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3util.py",
+    "z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/__init__.py",
+    "ordered_set": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0/ordered_set/__init__.py",
+    "ujson": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0/ujson.cpython-312-darwin.so",
+    "constants": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/constants.py",
+    "yaml.error": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/error.py",
+    "yaml.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/tokens.py",
+    "yaml.events": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/events.py",
+    "yaml.nodes": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/nodes.py",
+    "yaml.reader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/reader.py",
+    "yaml.scanner": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/scanner.py",
+    "yaml.parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/parser.py",
+    "yaml.composer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/composer.py",
+    "yaml.constructor": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/constructor.py",
+    "yaml.resolver": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/resolver.py",
+    "yaml.loader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/loader.py",
+    "yaml.emitter": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/emitter.py",
+    "yaml.serializer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/serializer.py",
+    "yaml.representer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/representer.py",
+    "yaml.dumper": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/dumper.py",
+    "yaml._yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/_yaml.cpython-312-darwin.so",
+    "yaml.cyaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/cyaml.py",
+    "yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/__init__.py",
+    "lark.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/utils.py",
+    "lark.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/exceptions.py",
+    "lark.grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/grammar.py",
+    "lark.lexer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lexer.py",
+    "lark.tree": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/tree.py",
+    "lark.visitors": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/visitors.py",
+    "lark.parse_tree_builder": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parse_tree_builder.py",
+    "lark.parsers": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/__init__.py",
+    "lark.common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/common.py",
+    "lark.parsers.grammar_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/grammar_analysis.py",
+    "lark.parsers.earley_common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_common.py",
+    "lark.parsers.earley_forest": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_forest.py",
+    "lark.parsers.earley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley.py",
+    "lark.parsers.xearley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/xearley.py",
+    "lark.parsers.cyk": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/cyk.py",
+    "lark.parsers.lalr_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_analysis.py",
+    "lark.parsers.lalr_interactive_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_interactive_parser.py",
+    "lark.parsers.lalr_parser_state": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser_state.py",
+    "lark.parsers.lalr_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser.py",
+    "lark.parser_frontends": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parser_frontends.py",
+    "lark.load_grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/load_grammar.py",
+    "lark.lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lark.py",
+    "lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/__init__.py",
+    "mo_future": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303/mo_future/__init__.py",
+    "mo_imports": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201/mo_imports/__init__.py",
+    "mo_dots.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/utils.py",
+    "mo_dots.lists": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/lists.py",
+    "mo_dots.nones": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/nones.py",
+    "mo_dots.datas": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/datas.py",
+    "mo_dots.objects": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/objects.py",
+    "mo_dots": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/__init__.py",
+    "mo_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/utils.py",
+    "mo_parsing.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/exceptions.py",
+    "mo_parsing.results": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/results.py",
+    "mo_parsing.core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py",
+    "mo_parsing.whitespaces": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/whitespaces.py",
+    "mo_parsing.enhancement": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/enhancement.py",
+    "mo_parsing.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/tokens.py",
+    "mo_parsing.expressions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/expressions.py",
+    "mo_parsing.infix": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/infix.py",
+    "mo_parsing.regex": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/regex.py",
+    "mo_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/__init__.py",
+    "mo_sql_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/utils.py",
+    "mo_sql_parsing.keywords": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/keywords.py",
+    "mo_sql_parsing.types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/types.py",
+    "mo_sql_parsing.windows": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/windows.py",
+    "mo_sql_parsing.sql_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/sql_parser.py",
+    "mo_sql_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py",
+    "environment": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py"
+  },
+  "raw_frontend_guard": {
+    "status": "ADMITTED",
+    "query_count": 2,
+    "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+    "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+  },
+  "baseline_guard": {
+    "full_base_fact_count": 4,
+    "consistency": "sat",
+    "any_base_row_deleted": "unsat",
+    "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+  },
+  "baseline_fact_sexprs": [
+    "(not (DELETED t1))",
+    "(= (T__A t1) String_x1__Int)",
+    "(<= (- 2147483648) (T__A t1))",
+    "(>= 2147483647 (T__A t1))"
+  ],
+  "producer_outputs": [
+    {
+      "operator": "lt",
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "original_text": "5 < T.A",
+      "actual_ast": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "matches_registered_ast": true,
+      "emitted_fact_sexprs": [
+        "(and (> 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+      ],
+      "emitted_fact_sha256": "2c2a173394667c2df360029a81471161becc0c79af7c5f8fc74d6c5f8a099f42",
+      "emission_scope": "Only this append delta is tested against captured no-IC baseline. Cumulative operator controls are never solved together."
+    },
+    {
+      "operator": "lte",
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "original_text": "5 <= T.A",
+      "actual_ast": [
+        {
+          "lte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "matches_registered_ast": true,
+      "emitted_fact_sexprs": [
+        "(and (>= 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+      ],
+      "emitted_fact_sha256": "74bb31a8fee0a78a3890fb18a91fc3508837f1690e6822065fdf290fefcda6fd",
+      "emission_scope": "Only this append delta is tested against captured no-IC baseline. Cumulative operator controls are never solved together."
+    },
+    {
+      "operator": "gt",
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "original_text": "5 > T.A",
+      "actual_ast": [
+        {
+          "gt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "matches_registered_ast": true,
+      "emitted_fact_sexprs": [
+        "(and (< 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+      ],
+      "emitted_fact_sha256": "ea3ca02f57b286ec9521e45a20627febcb1b2256074055c43e829257da71626f",
+      "emission_scope": "Only this append delta is tested against captured no-IC baseline. Cumulative operator controls are never solved together."
+    },
+    {
+      "operator": "gte",
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "original_text": "5 >= T.A",
+      "actual_ast": [
+        {
+          "gte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "matches_registered_ast": true,
+      "emitted_fact_sexprs": [
+        "(and (<= 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+      ],
+      "emitted_fact_sha256": "b497375a7590a05959b95d21225202d43d33e2ce8ed8aabd3dcd6cb0a9cd4469",
+      "emission_scope": "Only this append delta is tested against captured no-IC baseline. Cumulative operator controls are never solved together."
+    },
+    {
+      "operator": "eq",
+      "input_origin": "EXPLICIT_EMITTER_ONLY_CONTROL_GRAMMAR_HAS_NO_EQUALITY",
+      "original_text": "5 = T.A",
+      "actual_ast": [
+        {
+          "eq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "matches_registered_ast": true,
+      "emitted_fact_sexprs": [
+        "(and (= 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+      ],
+      "emitted_fact_sha256": "a34e8eefe104f80bb44095d883586af99e1d58fd7dfc6fd5e3392e6fe36e72fd",
+      "emission_scope": "Only this append delta is tested against captured no-IC baseline. Cumulative operator controls are never solved together."
+    },
+    {
+      "operator": "neq",
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "original_text": "5 != T.A",
+      "actual_ast": [
+        {
+          "neq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "matches_registered_ast": true,
+      "emitted_fact_sexprs": [
+        "(and (distinct 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+      ],
+      "emitted_fact_sha256": "550a25a00201f3e68bb8fd68fb03a4acf73817fdbd06c815e0767f708f25ab84",
+      "emission_scope": "Only this append delta is tested against captured no-IC baseline. Cumulative operator controls are never solved together."
+    }
+  ],
+  "registered_files_unchanged_after_run": true,
+  "summary": {
+    "cell_denominator": 24,
+    "cells_recorded": 24,
+    "agreement_cells": 16,
+    "disagreement_cells": 8,
+    "null_is_not_true": true
+  }
+}

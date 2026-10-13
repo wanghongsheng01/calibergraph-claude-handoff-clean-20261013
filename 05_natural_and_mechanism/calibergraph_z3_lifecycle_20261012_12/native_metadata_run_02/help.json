@@ -1,0 +1,40 @@
+{
+  "reason": null,
+  "elapsed_s": 0.004292541183531284,
+  "wall_seconds": 2,
+  "handle_count": 1,
+  "all_reaped": true,
+  "returncodes": [
+    0
+  ],
+  "cleanup_errors": [],
+  "self_rss_stop_bytes": 1073741824,
+  "rss_scope": "own Python high-water RSS only; excludes all children",
+  "events": [
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333187.68427425,
+      "bytes": 43204608
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2333187.68672475,
+      "index": 0,
+      "pid_for_logging_only": 40645
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2333187.688415625,
+      "pid_for_logging_only": 40645,
+      "returncode": 0
+    }
+  ],
+  "name": "help",
+  "args": [
+    "-h"
+  ],
+  "stdin": null,
+  "stdout": "Z3 [version 4.16.0 - 64 bit]. (C) Copyright 2006-2016 Microsoft Corp.\nUsage: z3 [options] [-file:]file\n\nInput format:\n  -smt2       use parser for SMT 2 input format.\n  -dl         use parser for Datalog input format.\n  -dimacs     use parser for DIMACS input format.\n  -wcnf       use parser for Weighted CNF DIMACS input format.\n  -opb        use parser for PB optimization input format.\n  -lp         use parser for a modest subset of CPLEX LP input format.\n  -log        use parser for Z3 log input format.\n  -in         read formula from standard input.\n  -model      display model for satisfiable SMT.\n\nMiscellaneous:\n  -h, -?      prints this message.\n  -version    prints version number of Z3.\n  -v:level    be verbose, where <level> is the verbosity level.\n  -nw         disable warning messages.\n  -p          display Z3 global (and module) parameters.\n  -pd         display Z3 global (and module) parameter descriptions.\n  -pm:name    display Z3 module ('name') parameters.\n  -pmmd:name  display Z3 module ('name') parameters in Markdown format.\n  -pp:name    display Z3 parameter description, if 'name' is not provided, then all module names are listed.\n  -tactics[:name]  display built-in tactics or if argument is given, display detailed information on tactic.\n  -simplifiers[:name]  display built-in simplifiers or if argument is given, display detailed information on simplifier.\n  -probes     display avilable probes.\n  --          all remaining arguments are assumed to be part of the input file name. This option allows Z3 to read files with strange names such as: -foo.smt2.\n\nResources:\n  -T:timeout  set the timeout (in seconds).\n  -t:timeout  set the soft timeout (in milli seconds). It only kills the current query.\n  -memory:Megabytes  set a limit for virtual memory consumption.\n\nOutput:\n  -st         display statistics.\n\nParameter setting:\nGlobal and module parameters can be set in the command line.\n  param_name=value              for setting global parameters.\n  module_name.param_name=value  for setting module parameters.\nUse 'z3 -p' for the complete list of global and module parameters.\n",
+  "stderr": "",
+  "returncode": 0
+}

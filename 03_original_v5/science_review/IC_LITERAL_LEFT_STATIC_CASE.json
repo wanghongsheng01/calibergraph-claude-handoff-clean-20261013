@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "status": "STATIC_SOURCE_DERIVED_NOT_EXECUTED",
+  "id": "IC_LITERAL_LEFT_LT_ORIENTATION",
+  "data_role": "INDEPENDENT_STATIC_REVIEW_GENERATED_ADVERSARIAL_CONTRACT_CONTROL_NOT_NATURAL_DEFECT",
+  "schema": {
+    "T": {
+      "A": "INT"
+    }
+  },
+  "exact_rows": {
+    "T": 1
+  },
+  "original_constraint_text": "5 < T.A",
+  "producer_ast_expected_from_source": [
+    {
+      "lt": [
+        5,
+        {
+          "value": "T__A"
+        }
+      ]
+    }
+  ],
+  "constraint": [
+    {
+      "lt": [
+        5,
+        {
+          "value": "T__A"
+        }
+      ]
+    }
+  ],
+  "pair": [
+    "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+    "SELECT SUM(T.A) FROM T"
+  ],
+  "fixed_databases": [
+    {
+      "id": "intended_contract_true",
+      "database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "expected_original_contract_holds": true,
+      "expected_existing_emitted_contract_holds": false,
+      "expected_original_sql_results": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            6
+          ]
+        ]
+      ],
+      "reason": "5<6 is true; emitted 6<5 is false; WHERE 6<5 filters row only from first query."
+    },
+    {
+      "id": "wrong_contract_true",
+      "database": {
+        "T": [
+          [
+            4
+          ]
+        ]
+      },
+      "expected_original_contract_holds": false,
+      "expected_existing_emitted_contract_holds": true,
+      "expected_original_sql_results": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "reason": "5<4 is false; emitted 4<5 is true."
+    },
+    {
+      "id": "null_control",
+      "database": {
+        "T": [
+          [
+            null
+          ]
+        ]
+      },
+      "expected_original_contract_holds": false,
+      "expected_existing_emitted_contract_holds": false,
+      "expected_original_sql_results": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ],
+      "reason": "This strict comparison contract requires nonnull attribute; SQL WHERE UNKNOWN does not select."
+    }
+  ],
+  "bounded_pair_prediction_not_executed": {
+    "under_intended_5_lt_A": "sat / not equivalent; fixed A=6 is a mathematical witness",
+    "under_existing_A_lt_5": "unsat / equivalent at exact1; every allowed nonnull A is selected by first WHERE"
+  },
+  "producer_direction_evidence": [
+    {
+      "file": "sources/verieql_v1/parsers/constraint_parser.py",
+      "lines": [
+        37,
+        41
+      ],
+      "fact": "comparison preserves source operands [tree[0],tree[2]] without swapping"
+    },
+    {
+      "file": "sources/verieql_v1/parsers/constraint_parser.py",
+      "lines": [
+        57,
+        58
+      ],
+      "fact": "< maps to lt"
+    },
+    {
+      "file": "sources/verieql_v1/parsers/constraint_parser.py",
+      "lines": [
+        69,
+        70
+      ],
+      "fact": "T.A maps to {value:T__A}"
+    },
+    {
+      "file": "sources/verieql_v1/parsers/constraint_parser.py",
+      "lines": [
+        107,
+        119
+      ],
+      "fact": "grammar admits value op value, including NUMBER on left"
+    }
+  ],
+  "emitter_evidence": [
+    {
+      "file": "sources/verieql_v1/environment.py",
+      "lines": [
+        669,
+        670
+      ],
+      "fact": "value wrapper resolves physical attribute values"
+    },
+    {
+      "file": "sources/verieql_v1/environment.py",
+      "lines": [
+        695,
+        705
+      ],
+      "fact": "keeps operator lt as Operator.lt"
+    },
+    {
+      "file": "sources/verieql_v1/environment.py",
+      "lines": [
+        718,
+        723
+      ],
+      "fact": "literal-left branch applies _op(right_f.VALUE,left_f), reversing noncommutative predicate"
+    }
+  ],
+  "prospective_execution_minimum": [
+    "Use original ConstraintParser.parse on original_constraint_text; save actual AST and compare to producer_ast_expected_from_source.",
+    "Create one-row full schema once in a fresh authorized environment; call add_constraints using actual parsed AST; retain all DBMS_facts and fact hash.",
+    "At fixed A=6/nonNULL and A=4/nonNULL independently evaluate direct ordered integer contract and emitted IC. No source correction before recording old behavior.",
+    "Independently execute the two unchanged SQL statements on each complete fixed DB; preserve SQLite full scalar relations and nullness.",
+    "Any optional bounded solver run must remain separately authorized and labeled. Do not call this a solver reproduction until it is executed."
+  ],
+  "not_claimed": [
+    "Target/runtime reproduction by this reviewer",
+    "Natural observed defect incidence",
+    "General official verifier unsoundness",
+    "New scientific method solely from this implementation bug"
+  ],
+  "source_files": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/constraint_parser.py",
+      "sha256": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+      "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8"
+    }
+  ]
+}

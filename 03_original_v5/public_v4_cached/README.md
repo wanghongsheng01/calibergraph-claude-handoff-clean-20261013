@@ -1,0 +1,25 @@
+# Cached official ALL AST → v4 applicability
+
+Implementation only. This directory has not been run by its author. Root owns the subsequent supervised run and evidence review.
+
+The scanner reuses the fixed official `ALL` parser ASTs recorded by the v3 scans. It calls the unchanged v4 `ensure_raw_identifiers(full_original_schema, original_sql)` followed, only when a usable cached AST exists, by `recognize(ast, full_original_schema, identifier_encoding="verieql_double_underscore", original_sql=original_sql)`. It never parses SQL, reconstructs serialized special AST objects, imports Z3, creates an Environment, checks constraints, encodes, solves, infers missing truth, or invokes fallback. This is a recognizer-extension applicability scan, **not independent parser validation, unseen generalization, equivalence accuracy, IC admissibility, or a performance experiment**.
+
+Pinned v4 kernel SHA-256: `17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78`.
+
+The denominator is 397 Calcite pairs + 64 literature pairs + 23,994 LeetCode pairs = **24,455 pairs / 48,910 query slots**. Every source row and both slots are registered before recognition. No eligibility filter or deduplication changes that denominator. LeetCode's source file, not its README count, defines the frozen 23,994 pairs. The 24 cached blocks are read one at a time; the largest numeric attempt with valid block identity is selected, including unfinished states. Invalid newer reports and selection reasons are recorded. Missing blocks remain NOT_RUN. Original status/reason remain separate from the new status/reason; parse errors and null ASTs cannot be converted into positive results.
+
+The original JSONL sources, source line hashes, full source records and per-slot original SQL must agree with the cache. Full schemas, original `constraint` fields (including null), and all other source metadata are preserved; they are not asserted or claimed satisfiable. `recognized_cases.jsonl` contains the entire original case whenever either query is recognized. `both_eligible_pairs.jsonl` is a convenience view with both recognized; neither file is a replacement denominator. `leaf_count` is the number of non-root aliases in `Plan.leaves`; valid single-table plans have 0, while unsupported/unknown/not-run slots have null. Full plans are serialized using `dataclasses.asdict`.
+
+Distinct exact SQL, SQL with all non-pair source context, original source problem labels, ordered SQL pairs, and full original records are reported separately. SQL is not normalized. LeetCode problem labels use original `file`, literature uses original `name`, and Calcite uses `benchmark + index`; these are source labels, not a proof of semantic independence. All-input and recognized subsets have separate counts.
+
+Root may run with a verified existing Python 3.10+ executable (the current host requires Darwin):
+
+```text
+/absolute/path/to/python3 -B -I -S /absolute/path/to/public_v4_cached/supervisor.py --out-dir /absolute/path/to/public_v4_cached/runs/run_001
+```
+
+The output directory must be new. One pure Python worker is launched. The supervisor has a 59-second internal alarm within the requested 60-second total envelope, samples combined parent + worker RSS against 1 GiB every 0.1 seconds, and kills on observation failure or limit. The child uses a 50-second cooperative scan budget, 56-second hard wall alarm, and 52/53-second CPU soft/hard limits. Worker audit hooks reject nonstdlib imports and child-process/network APIs; v4's solver imports occur only inside uncalled encoding functions. RSS is sampled, not an OS-enforced instantaneous memory cap. Budget measurements are operational evidence only.
+
+Normal/cooperative completion produces `slots.jsonl` with all 48,910 per-slot records, `scan_report.json`, both recognized-case views, and `supervisor_report.json`. Before recognition, `initial_slots.jsonl` is atomically installed as the full denominator. Each slot has a flushed `slot_attempts.jsonl` entry before any guard/recognizer call; `slot_results.jsonl` is the completed append-only ordinal prefix override. On a hard interruption, replay complete result lines onto the initial ledger, then mark attempted slots without complete results UNKNOWN; untouched slots remain NOT_RUN. Never interpret an incomplete result tail as a success. Summaries saved only at block boundaries are lower-bound checkpoints if the process is killed; the ledgers are authoritative. If initialization itself fails, no target recognition starts: the fixed source ranges in the report still define all original slots, and `initial_slots.jsonl.tmp` must not be represented as a complete ledger. A nonzero exit or invalidated input prevents a complete claim.
+
+All selected and rejected cached reports carry their SHA-256 when readable; original inputs and the kernel carry expected/actual SHA-256. If a selected report or pinned input changes before completion, the run is invalidated. Frozen upstream files are read-only. SSB is outside this cached-only scanner because its original SQL needs an actual parser run.

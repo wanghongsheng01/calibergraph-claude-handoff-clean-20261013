@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "reviewer": "/root/masking08_independent_review",
+  "verdict": "PASS_AFTER_REQUIRED_CORRECTIONS",
+  "scope": "ONE_TARGETED_STATIC_RECHECK_OF_R1_R2_R3_ONLY",
+  "original_review_scope_expanded": false,
+  "original_MUST_FIX_review_preserved": true,
+  "initial_author_files_match_original_review_hashes": true,
+  "current_author_files_match_AUTHOR_REVISIONS_hashes": true,
+  "diff_scope": "Only R1 admission/shared-arm conditions, R2 Table 2 and R3 Section 4 were changed in the three author files.",
+  "reviewed_author_sha256": {
+    "ANALYSIS.zh.md": "25569032405ef1a25423494cd906e884424f017e331bb111351d94e4b3df11b4",
+    "EVIDENCE.json": "602cede34915c75b9bff19cf398bb9e4e051bebf05f1fa366e371122d1c5faa1",
+    "DECISION.json": "0b7834b530e7546c7366cf286c0d2d970cb11a9221d3243d78fd1ee45e4593ad"
+  },
+  "initial_review_files_sha256_observed": {
+    "INDEPENDENT_REVIEW.zh.md": "b18ef1b98d6a83770ceab6f3cc3a06ec9973c31bb4461073632503bff0629fa8",
+    "INDEPENDENT_REVIEW.json": "f6211acb1bc2f3586a491375e11827b5bd540fe7e95f3ee3ca3df3e37dff8611"
+  },
+  "resolutions": {
+    "R1": {
+      "status": "RESOLVED",
+      "same_from_and_inner_join_explicit": true,
+      "same_proven_nonnull_key_explicit": true,
+      "single_ungrouped_scalar_count_distinct_explicit": true,
+      "only_where_truth_set_containment_changes": true,
+      "downstream_masking_and_listed_unsupported_operators_excluded": true,
+      "unproven_admission_is_unsupported": true,
+      "off_on_share_admission_and_nonnull_conditions": true,
+      "only_strict_side_absence_condition_varies": true,
+      "DECISION_json_synchronized": true
+    },
+    "R2": {
+      "status": "RESOLVED",
+      "prose_reference": "ParSEval Table 2",
+      "evidence_reference": "Table 2 (PDF page 5, printed page 4754)"
+    },
+    "R3": {
+      "status": "RESOLVED",
+      "prose_reference": "Polygon Section 4",
+      "evidence_sections": ["3", "4"],
+      "potential_cases_still_unacquired_and_unqualified": true
+    }
+  },
+  "unresolved_required_corrections": [],
+  "execution_this_recheck": {
+    "network_calls": 0,
+    "science_runs": 0,
+    "sql_calls": 0,
+    "baseline_calls": 0,
+    "generator_calls": 0,
+    "solver_calls": 0,
+    "experiments": 0,
+    "new_cases": 0,
+    "author_or_historical_files_modified": false
+  },
+  "limits_preserved": [
+    "PASS applies only to the corrected static report within the original independent review scope.",
+    "No implementation correctness, runtime performance, new mechanism, or superiority over strong baselines is certified.",
+    "Polygon full-C admission and matched runtime comparison remain unperformed.",
+    "XData core implementation remains unverified and no independent natural cases have been acquired.",
+    "Future ablation budgets remain unexecuted and exclude official strong-baseline costs.",
+    "Historical BACKUP_BLOCKED and DATAHUB_REGISTRATION_BLOCKED are unchanged."
+  ],
+  "mechanism_decision": "NO_GO_AS_NEW_MECHANISM",
+  "backup": "DEFERRED_TO_ROOT_TASK_AS_REQUESTED"
+}

@@ -1,0 +1,342 @@
+[
+  {
+    "case_id": "thrombosis_prediction__1172",
+    "classification": "PREVIOUSLY_REPLAY_CONFIRMED_FALSE_EQ",
+    "evidence": "Existing independent audit, control1/0; 9missed candidates",
+    "polygon_static_boundary": "CountDistinct supported in code; REAL/type/full-C mapping not admitted",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Previously exposed anchor; no new independent test",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/thrombosis_prediction__1172/gold.sql",
+        "sha256": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/thrombosis_prediction__1172/predicted.sql",
+        "sha256": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/thrombosis_prediction__1172/full-schema.sql",
+        "sha256": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/thrombosis_prediction__1172/official-record.json",
+        "sha256": "22878c48d28f2c5b2934954ead8766d68df832d507ba80af1029984098fb831a"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "toxicology__319",
+    "classification": "TRUE_EQ_IDENTICAL_SQL",
+    "evidence": "Gold and predicted byte-identical",
+    "polygon_static_boundary": "CountDistinct/JOIN paths; compositePK/FK/nonnull/string concretization pending",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same BIRD package; source distinct from anchor, not independent test",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/toxicology__319/gold.sql",
+        "sha256": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/toxicology__319/predicted.sql",
+        "sha256": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/toxicology__319/full-schema.sql",
+        "sha256": "33b439b05b6084604baa2b55dd02cc4f9452cc4910a186b58c6ecc4d0065874f"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/toxicology__319/official-record.json",
+        "sha256": "070750ad1d43039c3ed493663ee94ee4f5c932bdff69ddd7ee692a7930835ed5"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "thrombosis_prediction__1261",
+    "classification": "TRUE_EQ_STATIC_FK_ARGUMENT",
+    "evidence": "Laboratory FK guarantees Patient, joined IDs same; COUNT DISTINCT unaffected",
+    "polygon_static_boundary": "RF is TEXT compared with number; SQLite affinity requires admission",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same schema/database as1172; high structural dependence",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/thrombosis_prediction__1261/gold.sql",
+        "sha256": "8ca50bee79653ca58e24c34a734ac718d0b09446486caadef8c513f64c638e82"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/thrombosis_prediction__1261/predicted.sql",
+        "sha256": "c977e9d8fac35d63504c9cf9f2d84145a195974c58fde06640c4254b3c677028"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/thrombosis_prediction__1261/full-schema.sql",
+        "sha256": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/thrombosis_prediction__1261/official-record.json",
+        "sha256": "1eedf4a64615fcc5d30ad54863bbc7d1f91273fe6a44314ad50c64b092d4f09a"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "debit_card_specializing__1490",
+    "classification": "EQ_REWRITE_PLAUSIBLE_NOT_INDEPENDENTLY_CONFIRMED",
+    "evidence": "Nonnull joined key makes COUNT(key)=COUNT(*); SQLite IIF/CAST details left explicit",
+    "polygon_static_boundary": "IIF/CAST/real arithmetic not admitted; CAST erased in Polygon",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same BIRD package, no independence claim",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/debit_card_specializing__1490/gold.sql",
+        "sha256": "88dd42ee66e3878ee6e3655925f8c94a9dfd330391e07171c9542ac2baa53d14"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/debit_card_specializing__1490/predicted.sql",
+        "sha256": "63df01f90b8071a98654991d9113699d66e44a973be10f5139f61e5557993a55"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/debit_card_specializing__1490/full-schema.sql",
+        "sha256": "a786ad4828fd2218105fd1e543891fcee4668482657e0627bd6f9a43767ed59f"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/debit_card_specializing__1490/official-record.json",
+        "sha256": "cee5bf48ca1647208fb195f84cb2f648d7878ef44d92abf321937efbfa456fb1"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "superhero__750",
+    "classification": "OFFICIAL_NEQ_WITH_SEPARATE_STATIC_FULL_C_COUNTERMODEL",
+    "evidence": "Official10.0/NULL, missing database; static1gender1hero model satisfies10-table C",
+    "polygon_static_boundary": "AVG integer div limits general exactness; atN1 one hero bounds AVG to singleton; fullC mapping still pending",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Newly detailed development case in same old source package",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/superhero__750/gold.sql",
+        "sha256": "38c15c2084d1fc42087eb4f64f9119c6527043958aa5f0b2febd0601499e0513"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/superhero__750/predicted.sql",
+        "sha256": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/superhero__750/full-schema.sql",
+        "sha256": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/superhero__750/official-record.json",
+        "sha256": "efa79a00e13c4d1d0fdb1aa39dc7e52342387d07fd27dd9a86bf8a0b5d208a56"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "european_football_2__1073",
+    "classification": "OFFICIAL_NEQ_NOT_REPLAYED",
+    "evidence": "Official2/1, no database; no local execution",
+    "polygon_static_boundary": "SUBSTR/strftime lack direct checked encoder branch; parser-normalization unverified",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same old source package; development",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/european_football_2__1073/gold.sql",
+        "sha256": "9879bcce9e7e5f2884da0496e70f215e38a6fe38140167c4988c95a1619e659f"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/european_football_2__1073/predicted.sql",
+        "sha256": "b5e94651d309eb33c372acf50d0c2d8bf49d9ba2112b149788c260147a24130a"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/european_football_2__1073/full-schema.sql",
+        "sha256": "193112d7a1e9afde965dc6084b23e82d7c318a2543c3b894feab70d651b05bb4"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/european_football_2__1073/official-record.json",
+        "sha256": "874443f231bbb33744b7a37976c1d65c8e621c727f29c3cffabdd7c5f9a4adf5"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "california_schools__45",
+    "classification": "OFFICIAL_NEQ_WITH_SEPARATE_STATIC_FULL_C_COUNTERMODEL",
+    "evidence": "Officialbag/group difference; static2schools sameSchool with1,3scores",
+    "polygon_static_boundary": "Multirow AVG integer vsSQLite semantics and group NULL/bag admission missing",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same old source package; development",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/california_schools__45/gold.sql",
+        "sha256": "5bb822f092e03d289233e8a8301e73eea1bc2b6d08299a07410b19ac62d2f0aa"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/california_schools__45/predicted.sql",
+        "sha256": "76389a944ca6d229cccd5aa63f4600e1492677e5598c6d728e5947d5a6e9ae46"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/california_schools__45/full-schema.sql",
+        "sha256": "d8ddb1095d4b86278e960f5b992a6d506811a6aede94999e82a05caff5bcda7e"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/california_schools__45/official-record.json",
+        "sha256": "c67202ff40daf8a77029bdb6afaecd80fd5cdcee64df850152c0d1245e863334"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "debit_card_specializing__1526",
+    "classification": "REPORTED_EXECUTOR_UNSUPPORTED_NOT_TIMEOUT_OR_EQ",
+    "evidence": "q2 row binding guard; not enough trace to diagnose unique internal cause",
+    "polygon_static_boundary": "Scalar subqueries/IIF/CAST/LIKE not admitted",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same old source package; development",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/debit_card_specializing__1526/gold.sql",
+        "sha256": "53708e84296810891d34decb0e3ae99d112c06e6ed1a287a67e40783c8e9b92a"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/debit_card_specializing__1526/predicted.sql",
+        "sha256": "5d6099a7351c3129e61810695e1e1265c00ee39e706b83e7af29306a6a2a6491"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/debit_card_specializing__1526/full-schema.sql",
+        "sha256": "a786ad4828fd2218105fd1e543891fcee4668482657e0627bd6f9a43767ed59f"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/debit_card_specializing__1526/official-record.json",
+        "sha256": "274fd52ddb1896a0bc1f3e3c726928763b8eeda5fda86af834ae75c52a10356c"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "california_schools__26",
+    "classification": "SOURCE_QUERY_INVALID_AND_LEXICAL_SCREEN_FALSE_POSITIVE",
+    "evidence": "frpm.Street absent; quoted Count( identifier triggered lexical screening",
+    "polygon_static_boundary": "Invalid SQL pair; not a generation or cost failure",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Retained per frozen rule; not replaced",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/california_schools__26/gold.sql",
+        "sha256": "1d27f205d17954b2d8b73583631f8f381863969f9160f898eed91c33d3e8e056"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/california_schools__26/predicted.sql",
+        "sha256": "f54aae445bb2b52ad42dedeae0fc6c6ab17dc854215c65f1ecdb7212de047277"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/california_schools__26/full-schema.sql",
+        "sha256": "d8ddb1095d4b86278e960f5b992a6d506811a6aede94999e82a05caff5bcda7e"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/california_schools__26/official-record.json",
+        "sha256": "965bed0afe8c618a50d8c4b04c1b152203082d6fc0499080f3c7344da88b5bab"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  },
+  {
+    "case_id": "student_club__1390",
+    "classification": "SOURCE_QUERY_INVALID",
+    "evidence": "expense.link_to_event absent",
+    "polygon_static_boundary": "Invalid SQL pair; not generation or cost failure",
+    "xdata": "CORE_IMPLEMENTATION_UNVERIFIED_NOT_RUN",
+    "independence": "Same old source package; development",
+    "split": "DEVELOPMENT",
+    "source_sql_C": {
+      "gold.sql": {
+        "local_path": "sources_local/student_club__1390/gold.sql",
+        "sha256": "8b040f1bdfbb4d2f32d8e3201b41d79951867aef3152fd2ac79e45aaf9f76be3"
+      },
+      "predicted.sql": {
+        "local_path": "sources_local/student_club__1390/predicted.sql",
+        "sha256": "9ce57302465702bda5254e6676ba9b8df3236a395fc3d8ab45c9459dac52fe24"
+      },
+      "full-schema.sql": {
+        "local_path": "sources_local/student_club__1390/full-schema.sql",
+        "sha256": "c4d2456393e89bd173a0067c3ac742686d6383a98b2d740807c853c7427606a8"
+      },
+      "official-record.json": {
+        "local_path": "sources_local/student_club__1390/official-record.json",
+        "sha256": "3a66be408ac47e7a549256404b7dc4d6fb74bac58e34fd2c8a891396933f68f6"
+      }
+    },
+    "missing_evidence": [
+      "No new per-case original SQL execution",
+      "No admitted Polygon exact original full-C runtime",
+      "No XData exact original full-C runtime",
+      "No matched total-cost or solver-stage comparison"
+    ],
+    "official_saved_witness": false
+  }
+]

@@ -1,0 +1,79 @@
+{
+  "status": "NOT_RUN",
+  "case_denominator": 1,
+  "cost_job_denominator": 6,
+  "source_lock_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+  "source_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+  "suite_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/registration/E10_SIX_ARM_STATUS_ONLY.json",
+  "suite_sha256": "c50628e04e6f68980acd229f9258a77ba51b6e3e54243455c9f9248cee6cbbbc",
+  "program_sha256": {
+    "common.py": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8",
+    "worker.py": "6d964f580caef5130e25900cdb98fb2af77a98510a4748972c13d336884fa777",
+    "supervisor.py": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+  },
+  "jobs": [
+    {
+      "job_index": 0,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "product",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN"
+    },
+    {
+      "job_index": 1,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "selector",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN"
+    },
+    {
+      "job_index": 2,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "official_canonical_sql",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN"
+    },
+    {
+      "job_index": 3,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "official",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN"
+    },
+    {
+      "job_index": 4,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "official_generic_smt",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN"
+    },
+    {
+      "job_index": 5,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "flat",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN"
+    }
+  ],
+  "command_argv": [
+    "python3",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/supervisor.py",
+    "--runtime-lock",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+    "--suite",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/registration/E10_SIX_ARM_STATUS_ONLY.json",
+    "--out-dir",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_02_e10_contract_status_01",
+    "--kind",
+    "cost",
+    "--job-start",
+    "0",
+    "--job-limit",
+    "6"
+  ],
+  "execution": "Parent only; this agent has not run any target or imported runtime modules."
+}

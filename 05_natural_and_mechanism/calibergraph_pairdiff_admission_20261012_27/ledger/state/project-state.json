@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0",
+  "project_id": "dke-2026-static-pairdiff-admission",
+  "created_utc": "2026-10-12T14:35:01.049847+00:00",
+  "stage": "REJECTED",
+  "topic_status": "UNCOMMITTED",
+  "venue": {
+    "name": "DKE",
+    "year": 2026,
+    "track": "static-pairdiff-admission"
+  },
+  "resource_envelope": {
+    "status": "UNVERIFIED",
+    "budget_ledger_sha256": null,
+    "feasibility_audit_sha256": null,
+    "gpu": {
+      "adapter": "UNKNOWN",
+      "devices": null,
+      "memory_gb_each": null,
+      "status": "UNVERIFIED"
+    },
+    "llm_api": {
+      "adapter": "UNKNOWN",
+      "providers": [],
+      "call_cap": null,
+      "token_cap": null,
+      "currency_cap": null,
+      "status": "UNVERIFIED"
+    },
+    "cpu": {
+      "status": "UNVERIFIED"
+    },
+    "storage": {
+      "status": "UNVERIFIED"
+    }
+  },
+  "split_policy": {
+    "identity_unit": null,
+    "development_ids_sha256": null,
+    "calibration_ids_sha256": null,
+    "confirmation_ids_sha256": null,
+    "split_manifest_sha256": null,
+    "overlap_checked": false,
+    "exposure_ledger": "governance/exposure-ledger.jsonl"
+  },
+  "gates": {
+    "venue_profile": "MISSING",
+    "problem_landscape": "MISSING",
+    "opportunity": "MISSING",
+    "novelty": "MISSING",
+    "feasibility": "MISSING",
+    "protocol_freeze": "MISSING",
+    "harness_baseline": "MISSING",
+    "development_run": "MISSING",
+    "development": "MISSING",
+    "method_lock": "MISSING",
+    "confirmation": "MISSING",
+    "promotion": "MISSING",
+    "submission_readiness": "MISSING"
+  },
+  "latest_next_gate": "Stop this candidate; no solver budget or confirmation run.",
+  "events": [
+    {
+      "seq": 1,
+      "event_id": "EVT-0001",
+      "created_utc": "2026-10-12T14:35:01.049847+00:00",
+      "stage": "INTAKE",
+      "summary": "Research project initialized.",
+      "next_gate": "Verify the current venue rules and resource envelope.",
+      "evidence": [],
+      "previous_event_sha256": null,
+      "event_sha256": "f403580f3d5969b835ec5902aa1a727395a3fc2b7d3334bfa16040701c761a3e"
+    },
+    {
+      "seq": 2,
+      "event_id": "EVT-cd653116e5f1",
+      "created_utc": "2026-10-12T14:52:32.720488+00:00",
+      "stage": "REJECTED",
+      "summary": "Frozen natural admission found zero qualifying paired-difference eliminations in the declared fragment; no prototype warranted.",
+      "next_gate": "Stop this candidate; no solver budget or confirmation run.",
+      "evidence": [
+        {
+          "path": "decisions/static-rejection.json",
+          "sha256": "b3dd18e4ac1a23eba259484e332f7aefdd8f775a962e6b6d496a0ebd78379c3d",
+          "size_bytes": 3825,
+          "mode": "IMMUTABLE"
+        }
+      ],
+      "previous_event_sha256": "f403580f3d5969b835ec5902aa1a727395a3fc2b7d3334bfa16040701c761a3e",
+      "resume_reason": null,
+      "event_sha256": "ddd6b4b863e129ebc81143c6a215b35f49371989e4d34b563d08704f8d77717f"
+    }
+  ]
+}

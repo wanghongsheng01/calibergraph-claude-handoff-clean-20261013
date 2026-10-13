@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "records": [
+    {
+      "mode": "synthetic_memory",
+      "wall_budget_s": 5,
+      "threshold_bytes": 67108864,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27518,
+      "reaped": true,
+      "returncode": 86,
+      "elapsed_s": 0.08843870786949992,
+      "stop_reason": "MEMORY_SAMPLED_STOP",
+      "observed_peak_RSS_bytes": 98435072,
+      "max_observed_sample_gap_s": 0.053808582946658134,
+      "samples": 2
+    },
+    {
+      "mode": "synthetic_deadline",
+      "wall_budget_s": 0.3,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27519,
+      "reaped": true,
+      "returncode": -9,
+      "elapsed_s": 0.30571591621264815,
+      "stop_reason": "WALL_STOP",
+      "observed_peak_RSS_bytes": 14237696,
+      "max_observed_sample_gap_s": 0.05516975000500679,
+      "samples": 6
+    },
+    {
+      "mode": "synthetic_silence",
+      "wall_budget_s": 4,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27520,
+      "reaped": true,
+      "returncode": -9,
+      "elapsed_s": 2.13030495820567,
+      "stop_reason": "TELEMETRY_LOST_STOP",
+      "observed_peak_RSS_bytes": 14352384,
+      "max_observed_sample_gap_s": 0.051840666215866804,
+      "samples": 2
+    }
+  ],
+  "scientific_launches": 0,
+  "memory_test_threshold_bytes": 67108864,
+  "science_threshold_bytes": 1073741824,
+  "test_does_not_prove_hard_cap": true
+}

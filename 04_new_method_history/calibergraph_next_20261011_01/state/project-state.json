@@ -1,0 +1,93 @@
+{
+  "schema_version": "1.0",
+  "project_id": "calibergraph-next-20261011-01",
+  "created_utc": "2026-10-11T11:15:32.893515+00:00",
+  "stage": "HOLD",
+  "topic_status": "UNCOMMITTED",
+  "venue": {
+    "name": "UNCOMMITTED",
+    "year": 2026,
+    "track": "mechanism-exploration"
+  },
+  "resource_envelope": {
+    "status": "UNVERIFIED",
+    "budget_ledger_sha256": null,
+    "feasibility_audit_sha256": null,
+    "gpu": {
+      "adapter": "UNKNOWN",
+      "devices": null,
+      "memory_gb_each": null,
+      "status": "NOT_USED"
+    },
+    "llm_api": {
+      "adapter": "UNKNOWN",
+      "providers": [],
+      "call_cap": null,
+      "token_cap": null,
+      "currency_cap": null,
+      "status": "NO_EXPERIMENTAL_API_CALLS"
+    },
+    "cpu": {
+      "status": "VERIFIED_SHORT_SERIAL_RUNS_ONLY",
+      "logical_cpu": 10,
+      "memory_bytes": 17179869184
+    },
+    "storage": {
+      "status": "UNVERIFIED"
+    }
+  },
+  "split_policy": {
+    "identity_unit": null,
+    "development_ids_sha256": null,
+    "calibration_ids_sha256": null,
+    "confirmation_ids_sha256": null,
+    "split_manifest_sha256": null,
+    "overlap_checked": false,
+    "exposure_ledger": "governance/exposure-ledger.jsonl"
+  },
+  "gates": {
+    "venue_profile": "MISSING",
+    "problem_landscape": "MISSING",
+    "opportunity": "MISSING",
+    "novelty": "FAILED_FOR_CURRENT_FIXED_LEAF_CLAIM",
+    "feasibility": "MISSING",
+    "protocol_freeze": "MISSING",
+    "harness_baseline": "MISSING",
+    "development_run": "MISSING",
+    "development": "MISSING",
+    "method_lock": "MISSING",
+    "confirmation": "MISSING",
+    "promotion": "HOLD",
+    "submission_readiness": "MISSING"
+  },
+  "latest_next_gate": "Separate review of frozen evidence; new substantive hypothesis requires a new opportunity version.",
+  "events": [
+    {
+      "seq": 1,
+      "event_id": "EVT-0001",
+      "created_utc": "2026-10-11T11:15:32.893515+00:00",
+      "stage": "INTAKE",
+      "summary": "Research project initialized.",
+      "next_gate": "Verify the current venue rules and resource envelope.",
+      "evidence": [],
+      "previous_event_sha256": null,
+      "event_sha256": "6786068b59ee2856fe9a106f0929c2cc88af6c5751da084a3eca04911b65427d"
+    },
+    {
+      "seq": 2,
+      "event_id": "EVT-0002",
+      "created_utc": "2026-10-11T11:25:29.229715+00:00",
+      "stage": "HOLD",
+      "summary": "First-round source diagnosis and fixed light falsification complete; no viable new mechanism. No automatic promotion claimed.",
+      "next_gate": "Separate review of frozen evidence; new substantive hypothesis requires a new opportunity version.",
+      "evidence": [
+        "decisions/first_round_decision.json",
+        "runs/natural_replay_01/receipt.json",
+        "runs/theory_fixture_01/receipt.json",
+        "literature/primary-prior-art-audit.md"
+      ],
+      "previous_event_sha256": "6786068b59ee2856fe9a106f0929c2cc88af6c5751da084a3eca04911b65427d",
+      "event_sha256": "e940b55064782304841c0964addcde8d295d45804318171c42acd33b29b14b95"
+    }
+  ]
+}

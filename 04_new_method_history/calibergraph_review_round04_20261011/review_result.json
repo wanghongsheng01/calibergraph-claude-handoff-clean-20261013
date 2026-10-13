@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "id": "calibergraph-round04-independent-review-v1",
+  "created_utc": "2026-10-11T13:42:44.280628+00:00",
+  "reviewer": "/root/round04_independent_review",
+  "author_root": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04",
+  "review_root": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round04_20261011",
+  "decision": "ACCEPT_SCOPED_STAGE_CLAIMS",
+  "meaning": "Accept only the recorded problem-evidence and static semantic claims, not method promotion, scientific rerun, venue acceptance, or permission for new experiments.",
+  "stage_status": "PROBLEM_EVIDENCE_COMPLETED_METHOD_UNCOMMITTED_CONTINUE_EXPLORATION",
+  "method_hypothesis": null,
+  "method_promotion": false,
+  "overall_research_terminated": false,
+  "author_report": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/FOURTH_ROUND_REPORT.zh.md",
+    "sha256": "67699010beb50164542b16d821dc7a631b097f03716ddeeb00a2a05342afb859"
+  },
+  "author_recount": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/analyses/pilot_recount.json",
+    "sha256": "3629e64101ce66f2f47e2b8a9762890a470902c400fc67a699745c9dd1df44b7"
+  },
+  "independence": {
+    "author_directory_modified": false,
+    "author_design_or_code_participation": false,
+    "author_code_imported_or_executed": false,
+    "scientific_reexecution": false,
+    "SQL_parser_solver_DBMS_run": false,
+    "reserve_or_test_accessed": false,
+    "credentials_accessed": false,
+    "evidence_recount": "Reviewer-owned standard-library JSON/text/hash/bag/PK/arithmetic only",
+    "literature_subreviewer": "/root/round04_independent_review/prior_art_crosscheck"
+  },
+  "severity_summary": {
+    "P0": 0,
+    "blocking_P1": 0,
+    "P2": 2,
+    "P2_resolved_by_author_narrative": 2,
+    "remaining_blocking_findings": 0
+  },
+  "findings": [
+    {
+      "id": "R04-P2-01",
+      "severity": "P2",
+      "status": "RESOLVED_BY_PINNED_AUTHOR_REPORT_NOTE",
+      "finding": "Recovery raw measurement_note retains 1.0s prior, while authoritative numerical policy and accounting use 3.408329.",
+      "evidence": [
+        "runs/boundary_pilot_02/batch_receipt.json#/measurement_note",
+        "FOURTH_ROUND_REPORT.zh.md:65"
+      ],
+      "required_disposition": "Preserve frozen raw log and retain explicit note; do not present conservative charge as measured CPU."
+    },
+    {
+      "id": "R04-P2-02",
+      "severity": "P2",
+      "status": "RESOLVED_BY_PINNED_AUTHOR_REPORT_NOTE",
+      "finding": "Initial freeze prose says seven Python sources; binding list actually has six before recovery supervisor, seven afterward.",
+      "evidence": [
+        "protocols/execution_freeze.json#/root_static_review",
+        "protocols/execution_recovery_freeze.json#/files",
+        "FOURTH_ROUND_REPORT.zh.md:65"
+      ],
+      "required_disposition": "Preserve freeze and use file manifest plus explicit note."
+    }
+  ],
+  "bootstrap_exception": {
+    "admissible_for_this_stage": true,
+    "classification": "AMENDMENT_AFTER_FIRST_LAUNCH_FAILURE_BEFORE_FIRST_SCIENTIFIC_EXECUTION",
+    "original_protocol_retry_permitted": false,
+    "first_attempt_fork_occurred": true,
+    "first_worker_exec": false,
+    "scientific_slot_denominator": 10,
+    "initial_failed_launches_retained": 1,
+    "initial_not_run_slots_retained": 9,
+    "recovery_slots_returned": 10,
+    "supervisor_only_change": "prior charge 1.0 -> 3.408329",
+    "unchanged_previous_freeze_bindings": 861,
+    "recovery_freeze_bindings": 868,
+    "permission_boundary": "This review does not authorize another recovery or target execution."
+  },
+  "independent_saved_evidence_recount": {
+    "concrete_workers": 5,
+    "concrete_fixtures": 10,
+    "original_SQL_pair_executions": 10,
+    "original_SQL_query_executions": 20,
+    "official_environment_attempts": 5,
+    "official_C_checks": 5,
+    "official_C_sat": 5,
+    "official_query_checks": 0,
+    "official_raw_engineering_class_counts": {
+      "INCONCLUSIVE": 5
+    },
+    "official_derived_class_counts": {
+      "FRONTEND_CORRELATED_SUBQUERY_REJECTION": 5
+    },
+    "all_registered_slots_accounted_for": true,
+    "cost": {
+      "prior_conservative_seconds": 3.408329,
+      "current_parent_and_all_reaped_seconds": 5.927556999999999,
+      "worker_wait4_cpu_sum_seconds": 4.4292869999999995,
+      "current_monitor_children_cpu_seconds": 1.196587,
+      "current_parent_cpu_seconds": 0.30168300000000003,
+      "tail_reserve_seconds": 0.2,
+      "conservative_total_seconds": 9.535885999999998,
+      "charged_not_measured": true
+    },
+    "resources": {
+      "max_worker_cpu_seconds": 0.923918,
+      "max_worker_lifecycle_wall_seconds": 0.9751777499914169,
+      "max_wait4_rss_bytes": 110886912,
+      "max_slot_start_load1": 3.21484375,
+      "min_slot_start_memory_available_percentage": 32,
+      "saved_violations": []
+    }
+  },
+  "allowed_claims": [
+    "Saved SQLite 3.53.3 results show original dev03_18 differs at five all-NULL CLASS rows under explicit STUDENT PK; matched nonnull fixture is equal.",
+    "N=1..4 both constructed fixtures give equal empty outputs; this is not exhaustive database testing.",
+    "Static proof under stated standard SQL NULL/grouping/bag semantics and explicit PK gives pair equivalence iff n_NULL<5 and minimum distinguishing total cardinality 5.",
+    "Frozen official path uses exactly N live rows and produces C SAT then correlated-subquery scope/encoding rejection for N=1..5, with zero query solver checks.",
+    "One explicit zero-worker-exec bootstrap amendment preserved failures, ten slots, original SQL/schema/C, limits and all prior charges.",
+    "Conservative execution charge is 9.535886 seconds of 60; no saved guard violation; current candidates are not promoted and exploration continues."
+  ],
+  "forbidden_claims": [
+    "Official N5 query counterexample or official query equivalence verdict.",
+    "SQLite fixture replayed the same official SAT model.",
+    "SMT query hardness, cost growth with N, speedup, or stable method superiority.",
+    "Natural business defect, business-complete C, independent final test, or unrestricted SQL theorem.",
+    "Current generic bound/cardinality/abduction/multiplicity ideas are new algorithms.",
+    "All generic SQL abduction or key-erased lifting has been fully solved by prior art.",
+    "First bootstrap had no fork, retry was in original protocol, or initial failure cost can be dropped.",
+    "All research is exhausted or this review authorizes new experiments."
+  ],
+  "scope_limitations": [
+    "No independent scientific rerun; saved logs and code may not establish historical events beyond their evidence chain.",
+    "Original public JSONL and third-round cases were not reopened; provenance identity is checked from saved source records and hashes.",
+    "All freeze binding maps were compared, but all external target files were not independently rehashed by reviewer.",
+    "Business NULL allowance, cross-dialect behavior, unrestricted contracts and unread final XData body/artifact remain unverified.",
+    "Author report background statements on prior rounds, full-session machine changes, final-test nonaccess and backup are not independently certified here."
+  ],
+  "deliverables": {
+    "report": "INDEPENDENT_REVIEW.zh.md",
+    "saved_evidence_audit": "saved_evidence_audit.json",
+    "read_only_audit_source": "audit_saved_evidence.py",
+    "literature_crosscheck": "literature_crosscheck.json",
+    "manifest": "REVIEW_MANIFEST.json"
+  },
+  "backup": {
+    "reviewer_verified_remote_backup": false,
+    "status": "BACKUP_BLOCKED_UNTIL_PARENT_CONFIRMS_REQUIRED_RECOVERABILITY",
+    "owner": "parent/root",
+    "note": "Parent handles approved private source backup separately; no claim of full-evidence clean-machine restoration."
+  }
+}

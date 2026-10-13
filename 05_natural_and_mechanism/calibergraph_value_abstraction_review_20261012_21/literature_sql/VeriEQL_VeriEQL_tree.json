@@ -1,0 +1,2219 @@
+{
+  "repo": "VeriEQL/VeriEQL",
+  "commit": "493cbb81000205e33b0623cfd1c39106fa035fae",
+  "tree": {
+    "sha": "493cbb81000205e33b0623cfd1c39106fa035fae",
+    "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/493cbb81000205e33b0623cfd1c39106fa035fae",
+    "tree": [
+      {
+        "path": ".gitignore",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2953de4a5ee716170d08823e2a44bb7db60ba01b",
+        "size": 3241,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2953de4a5ee716170d08823e2a44bb7db60ba01b"
+      },
+      {
+        "path": "Dockerfile",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6d4b935b34aedc8bfd58b18cea06ae62f0e54d22",
+        "size": 41,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6d4b935b34aedc8bfd58b18cea06ae62f0e54d22"
+      },
+      {
+        "path": "README.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc5496c3ce2d14620648ad1fcf3cf33c809efcf4",
+        "size": 6015,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/cc5496c3ce2d14620648ad1fcf3cf33c809efcf4"
+      },
+      {
+        "path": "__figures__",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4ce3673425e1c408b9cfc523015991c01df884a2",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/4ce3673425e1c408b9cfc523015991c01df884a2"
+      },
+      {
+        "path": "__figures__/automation.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d7a4981e815e5ce386aa4be15142f6ea4f8806b8",
+        "size": 117334,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d7a4981e815e5ce386aa4be15142f6ea4f8806b8"
+      },
+      {
+        "path": "__figures__/example.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c6cd6d54bfd9a666fa0c1abbf009d0f769b562ee",
+        "size": 155507,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c6cd6d54bfd9a666fa0c1abbf009d0f769b562ee"
+      },
+      {
+        "path": "__figures__/grammar.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9939c0b6f1438b55b86ce14cd3d9d1aba8e1525b",
+        "size": 87867,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9939c0b6f1438b55b86ce14cd3d9d1aba8e1525b"
+      },
+      {
+        "path": "__figures__/overview.png",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "704f5e6986f5bed39960fcfcb596718e08a183f1",
+        "size": 941872,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/704f5e6986f5bed39960fcfcb596718e08a183f1"
+      },
+      {
+        "path": "__main__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "918e6ee84e54f9ef7d15ba754b4f879b055dd2d2",
+        "size": 2970,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/918e6ee84e54f9ef7d15ba754b4f879b055dd2d2"
+      },
+      {
+        "path": "benchmarks",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2a6e9a226e0c7eef9128bfe860ad80ba23ba0416",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/2a6e9a226e0c7eef9128bfe860ad80ba23ba0416"
+      },
+      {
+        "path": "benchmarks/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+        "size": 24,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/40a96afc6ff09d58a702b76e3f7dd412fe975e26"
+      },
+      {
+        "path": "benchmarks/calcite",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "4baaee7d1549c988c105c448b7a0b8409e53b377",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/4baaee7d1549c988c105c448b7a0b8409e53b377"
+      },
+      {
+        "path": "benchmarks/calcite/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b6e9805a9eaec366a7c6062a882fb5a15d92c84",
+        "size": 119,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1b6e9805a9eaec366a7c6062a882fb5a15d92c84"
+      },
+      {
+        "path": "benchmarks/calcite/calcite2.jsonlines",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "965a67805f3fc0e37ae1c89357ed69662f143cf4",
+        "size": 1060379,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/965a67805f3fc0e37ae1c89357ed69662f143cf4"
+      },
+      {
+        "path": "benchmarks/leetcode",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b25af2557744ac02186ce6ea0b471eb4ec432395",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/b25af2557744ac02186ce6ea0b471eb4ec432395"
+      },
+      {
+        "path": "benchmarks/leetcode/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "56396e54c60a8681fe30af8432f77850c42c3dcc",
+        "size": 119,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/56396e54c60a8681fe30af8432f77850c42c3dcc"
+      },
+      {
+        "path": "benchmarks/leetcode/leetcode.jsonlines",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8f66d312da2155345d7bf019623d1d81a8a56b01",
+        "size": 22995478,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/8f66d312da2155345d7bf019623d1d81a8a56b01"
+      },
+      {
+        "path": "benchmarks/literature",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "fd44abc7caa9a9d776832913f221a8d5e7ddc59e",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/fd44abc7caa9a9d776832913f221a8d5e7ddc59e"
+      },
+      {
+        "path": "benchmarks/literature/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9b05079a45df9e3ff196985468762f8cd9374c89",
+        "size": 122,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9b05079a45df9e3ff196985468762f8cd9374c89"
+      },
+      {
+        "path": "benchmarks/literature/literature-rewrite.jsonlines",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4287b71d863efc2e8c2562239775a0db6e7a2201",
+        "size": 42048,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/4287b71d863efc2e8c2562239775a0db6e7a2201"
+      },
+      {
+        "path": "benchmarks/literature/literature.jsonlines",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "506322f04973a7e394ba1f332fc12ead8077ed00",
+        "size": 41891,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/506322f04973a7e394ba1f332fc12ead8077ed00"
+      },
+      {
+        "path": "clean.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9d06dd6146168f6b60a7ff8f6921514d44904b43",
+        "size": 90,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9d06dd6146168f6b60a7ff8f6921514d44904b43"
+      },
+      {
+        "path": "constants.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef357900f52f33a0e03e4eae19882018025b8cf0",
+        "size": 2288,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ef357900f52f33a0e03e4eae19882018025b8cf0"
+      },
+      {
+        "path": "context.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93f2978e6e0b617e9911ac8a94a804c8bbddf8cf",
+        "size": 5811,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/93f2978e6e0b617e9911ac8a94a804c8bbddf8cf"
+      },
+      {
+        "path": "dbms_checker",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "418cdfabc364ba99bdeaa6c72d561e7d2d82f9f7",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/418cdfabc364ba99bdeaa6c72d561e7d2d82f9f7"
+      },
+      {
+        "path": "dbms_checker/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "380474e035b5dc5ff9007e09287af401cac9e90b",
+        "size": 23,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/380474e035b5dc5ff9007e09287af401cac9e90b"
+      },
+      {
+        "path": "dbms_checker/counterexample_checker.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "535a4931e003be874d4248dd0c2d13fc49712d14",
+        "size": 14750,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/535a4931e003be874d4248dd0c2d13fc49712d14"
+      },
+      {
+        "path": "dbms_checker/create_mysql_users.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe92ba1e34f805d48990f754455d5812fd3e138f",
+        "size": 539,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/fe92ba1e34f805d48990f754455d5812fd3e138f"
+      },
+      {
+        "path": "dbms_checker/drop_problem.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c3e9ec0039bc0df987f7dd4fe5620fc8c4171bbc",
+        "size": 1964,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c3e9ec0039bc0df987f7dd4fe5620fc8c4171bbc"
+      },
+      {
+        "path": "encoder.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ebb0823c45a0dddaa44f6a227072f92478148aae",
+        "size": 117015,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ebb0823c45a0dddaa44f6a227072f92478148aae"
+      },
+      {
+        "path": "environment.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5274abf6148a7d30ac38d3f0a9203417254ee691",
+        "size": 46813,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/5274abf6148a7d30ac38d3f0a9203417254ee691"
+      },
+      {
+        "path": "errors.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "53659a74565aa442ef9ca550ffdc9fccc1ca2d60",
+        "size": 1562,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/53659a74565aa442ef9ca550ffdc9fccc1ca2d60"
+      },
+      {
+        "path": "experiments",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2c47091cd68e0b635d9fc939926d10f5d8cd727b",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/2c47091cd68e0b635d9fc939926d10f5d8cd727b"
+      },
+      {
+        "path": "experiments/2023_03_27",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "d6893b10ba3753c161c724525500ce51fd88a370",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/d6893b10ba3753c161c724525500ce51fd88a370"
+      },
+      {
+        "path": "experiments/2023_03_27/calcite.out",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0daea5b5e9ada0a46c2172f1cd969783ee6b29c4",
+        "size": 1215252,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0daea5b5e9ada0a46c2172f1cd969783ee6b29c4"
+      },
+      {
+        "path": "experiments/2023_03_27/leetcode.out",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ef7c7c4a666b011aae917ca973bc317e176876c8",
+        "size": 32960814,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ef7c7c4a666b011aae917ca973bc317e176876c8"
+      },
+      {
+        "path": "experiments/2023_03_27/literature.out",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad3dd7579fbbfa63519d167ac8a83f39265f1ede",
+        "size": 86777,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ad3dd7579fbbfa63519d167ac8a83f39265f1ede"
+      },
+      {
+        "path": "experiments/2025_10_31",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "f97d8a8d340b7d04afa8ebfe2fc477100865370a",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/f97d8a8d340b7d04afa8ebfe2fc477100865370a"
+      },
+      {
+        "path": "experiments/2025_10_31/calcite.out",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0daea5b5e9ada0a46c2172f1cd969783ee6b29c4",
+        "size": 1215252,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0daea5b5e9ada0a46c2172f1cd969783ee6b29c4"
+      },
+      {
+        "path": "experiments/2025_10_31/leetcode.out",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fae4317980fe17f11cfcd2efe9cecd55494c9d93",
+        "size": 35320457,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/fae4317980fe17f11cfcd2efe9cecd55494c9d93"
+      },
+      {
+        "path": "experiments/2025_10_31/literature.out",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ad3dd7579fbbfa63519d167ac8a83f39265f1ede",
+        "size": 86777,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ad3dd7579fbbfa63519d167ac8a83f39265f1ede"
+      },
+      {
+        "path": "formulas",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "5ac7bff88c9ff649a3b6693d4005faa453959a03",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/5ac7bff88c9ff649a3b6693d4005faa453959a03"
+      },
+      {
+        "path": "formulas/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b2ffa0e2fbb09b37b03dc3a620550285de8229f1",
+        "size": 1057,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/b2ffa0e2fbb09b37b03dc3a620550285de8229f1"
+      },
+      {
+        "path": "formulas/_utils.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5c7e0fc61ad689e5449fe5b1d1871b690474c9ad",
+        "size": 1481,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/5c7e0fc61ad689e5449fe5b1d1871b690474c9ad"
+      },
+      {
+        "path": "formulas/base_formula.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "18817fa1d2953a77770cf1837d31ca3bd661c593",
+        "size": 526,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/18817fa1d2953a77770cf1837d31ca3bd661c593"
+      },
+      {
+        "path": "formulas/columns",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "183f49cb04f78606f8624c166d89d7f7c924c0a6",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/183f49cb04f78606f8624c166d89d7f7c924c0a6"
+      },
+      {
+        "path": "formulas/columns/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cdf12d40f5b5a2c1ce0e32e60af47c97188b8f18",
+        "size": 764,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/cdf12d40f5b5a2c1ce0e32e60af47c97188b8f18"
+      },
+      {
+        "path": "formulas/columns/aggregations",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6252f66ded1981f035c36680210349fa485dec9e",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/6252f66ded1981f035c36680210349fa485dec9e"
+      },
+      {
+        "path": "formulas/columns/aggregations/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c74626ce0f6c9f434a6453ecaacf0d952cbd7244",
+        "size": 1500,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c74626ce0f6c9f434a6453ecaacf0d952cbd7244"
+      },
+      {
+        "path": "formulas/columns/aggregations/aggregation.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ae957be6cb57b5764a489769dde5cd9cc97c9303",
+        "size": 4000,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ae957be6cb57b5764a489769dde5cd9cc97c9303"
+      },
+      {
+        "path": "formulas/columns/aggregations/avg.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "19de041c2436c33f10ad36a3728b978bebf41267",
+        "size": 3136,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/19de041c2436c33f10ad36a3728b978bebf41267"
+      },
+      {
+        "path": "formulas/columns/aggregations/bool_and.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d3bfae0fc6eacb7805088f9a3ab57216d2ab2d29",
+        "size": 2975,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d3bfae0fc6eacb7805088f9a3ab57216d2ab2d29"
+      },
+      {
+        "path": "formulas/columns/aggregations/bool_or.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0435450bec035de1e7f0d922fbfa41e676041e60",
+        "size": 3042,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0435450bec035de1e7f0d922fbfa41e676041e60"
+      },
+      {
+        "path": "formulas/columns/aggregations/count.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a7f79dd0e8d065e8c0fee623908f607aeb6ca6c",
+        "size": 6224,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6a7f79dd0e8d065e8c0fee623908f607aeb6ca6c"
+      },
+      {
+        "path": "formulas/columns/aggregations/max.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7b370dbb3884839fa0353f6e79e18547b68376bf",
+        "size": 2173,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7b370dbb3884839fa0353f6e79e18547b68376bf"
+      },
+      {
+        "path": "formulas/columns/aggregations/min.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fe9eaaf5efa7016a122add54edf250b1cac6373c",
+        "size": 2173,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/fe9eaaf5efa7016a122add54edf250b1cac6373c"
+      },
+      {
+        "path": "formulas/columns/aggregations/stddev_pop.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98c0e84dd37c918c541f45688dfaed68726ae1da",
+        "size": 3213,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/98c0e84dd37c918c541f45688dfaed68726ae1da"
+      },
+      {
+        "path": "formulas/columns/aggregations/stddev_samp.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "226822da7967a8d6165129f8037ac7b7b8362544",
+        "size": 3235,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/226822da7967a8d6165129f8037ac7b7b8362544"
+      },
+      {
+        "path": "formulas/columns/aggregations/sum.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e1fa8df9c63daaab3c66e1897b8137baebba7ebb",
+        "size": 2830,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e1fa8df9c63daaab3c66e1897b8137baebba7ebb"
+      },
+      {
+        "path": "formulas/columns/aggregations/var_pop.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "548fc632aef06f6610e91dde944075400e27b37c",
+        "size": 3178,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/548fc632aef06f6610e91dde944075400e27b37c"
+      },
+      {
+        "path": "formulas/columns/aggregations/var_samp.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a0c0bc29c1e1d667b0de00d2320b870eb2ed2e7f",
+        "size": 3201,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a0c0bc29c1e1d667b0de00d2320b870eb2ed2e7f"
+      },
+      {
+        "path": "formulas/columns/attribute.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1473a907c03d48f03057c8b993a240bc30a2555d",
+        "size": 4565,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1473a907c03d48f03057c8b993a240bc30a2555d"
+      },
+      {
+        "path": "formulas/columns/base_column.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f66a099060c83b375f48de001e8ff1bdc692ed02",
+        "size": 2018,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f66a099060c83b375f48de001e8ff1bdc692ed02"
+      },
+      {
+        "path": "formulas/expressions",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "195473006b9ae8d3a40c68d7ea06944737e5c802",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/195473006b9ae8d3a40c68d7ea06944737e5c802"
+      },
+      {
+        "path": "formulas/expressions/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b9dfc071d0f0386fbddec3b8eb79bfbb13ec420e",
+        "size": 1903,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/b9dfc071d0f0386fbddec3b8eb79bfbb13ec420e"
+      },
+      {
+        "path": "formulas/expressions/base_expression.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b2ae719ed75384253d9183573872923ad2e950a",
+        "size": 895,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6b2ae719ed75384253d9183573872923ad2e950a"
+      },
+      {
+        "path": "formulas/expressions/digits.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "79e00df704b08a95d9be3811d46244ba4f9bbf86",
+        "size": 3032,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/79e00df704b08a95d9be3811d46244ba4f9bbf86"
+      },
+      {
+        "path": "formulas/expressions/expression.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8ee5515e10d1160a758befd36b3f9bd73ba36cb",
+        "size": 2308,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e8ee5515e10d1160a758befd36b3f9bd73ba36cb"
+      },
+      {
+        "path": "formulas/expressions/expression_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e8b990fa3319f18abc0409e74ffb0317ac7cd100",
+        "size": 1105,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e8b990fa3319f18abc0409e74ffb0317ac7cd100"
+      },
+      {
+        "path": "formulas/expressions/null.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "42e9e5fec2c173d9f6441a832babe41c57238e9c",
+        "size": 1217,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/42e9e5fec2c173d9f6441a832babe41c57238e9c"
+      },
+      {
+        "path": "formulas/expressions/operator.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f58c79d09d0c467076756b2b58d760df32146b18",
+        "size": 4064,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f58c79d09d0c467076756b2b58d760df32146b18"
+      },
+      {
+        "path": "formulas/expressions/predicates",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "81a78e9d226f9dde2fc26426645af8c1c3d73a83",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/81a78e9d226f9dde2fc26426645af8c1c3d73a83"
+      },
+      {
+        "path": "formulas/expressions/predicates/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec445d1d209e6dd26e46d6d18f274c23a7b9a5db",
+        "size": 1995,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ec445d1d209e6dd26e46d6d18f274c23a7b9a5db"
+      },
+      {
+        "path": "formulas/expressions/predicates/abs_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "388b9271075bc216633954a78c62a42aa5361903",
+        "size": 511,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/388b9271075bc216633954a78c62a42aa5361903"
+      },
+      {
+        "path": "formulas/expressions/predicates/any_value_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a246d08c4a1773068f6b24f66d27138e8ac705d6",
+        "size": 533,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a246d08c4a1773068f6b24f66d27138e8ac705d6"
+      },
+      {
+        "path": "formulas/expressions/predicates/base_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a70c09cbad0d097a65bdf46a2c14ba3fbad576b7",
+        "size": 276,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a70c09cbad0d097a65bdf46a2c14ba3fbad576b7"
+      },
+      {
+        "path": "formulas/expressions/predicates/case_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "43e832014fdf0b76ffd4f93d6e090851d9f8e4d6",
+        "size": 2150,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/43e832014fdf0b76ffd4f93d6e090851d9f8e4d6"
+      },
+      {
+        "path": "formulas/expressions/predicates/coalesce_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6e4ce47833d8f05ef4ee5042909a395883d0a834",
+        "size": 680,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6e4ce47833d8f05ef4ee5042909a395883d0a834"
+      },
+      {
+        "path": "formulas/expressions/predicates/first_value_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec2fd656862f8435aabaa8a3b22ded7009dac6f2",
+        "size": 541,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ec2fd656862f8435aabaa8a3b22ded7009dac6f2"
+      },
+      {
+        "path": "formulas/expressions/predicates/if_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d2ce7cd4c374be2f37ef9284c7b7ea67f213e2c",
+        "size": 692,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/4d2ce7cd4c374be2f37ef9284c7b7ea67f213e2c"
+      },
+      {
+        "path": "formulas/expressions/predicates/in_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a473dc6e360d0aaf750e78a86f48b27c96b6ea4",
+        "size": 1794,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2a473dc6e360d0aaf750e78a86f48b27c96b6ea4"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_false_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "829d8c8d8c8ad333a2b54ce61089da0a7d539a21",
+        "size": 580,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/829d8c8d8c8ad333a2b54ce61089da0a7d539a21"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_not_false_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d5ce1898f32cd1fe47a446964ccde33b1924d860",
+        "size": 595,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d5ce1898f32cd1fe47a446964ccde33b1924d860"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_not_null_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "307c72a918792238cc45c299183614bde129d711",
+        "size": 655,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/307c72a918792238cc45c299183614bde129d711"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_not_true_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "37f2cd2a51d0e01dab46bbbd0c9937fe1cabbf09",
+        "size": 590,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/37f2cd2a51d0e01dab46bbbd0c9937fe1cabbf09"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_null_or_hold_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "def8fba899cf429bd835a8381bc8d8425e86097e",
+        "size": 726,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/def8fba899cf429bd835a8381bc8d8425e86097e"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_null_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d738ee3417b5f37332c652874b56552bf6fc3ddf",
+        "size": 639,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d738ee3417b5f37332c652874b56552bf6fc3ddf"
+      },
+      {
+        "path": "formulas/expressions/predicates/is_true_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a44711d3a29a2b1bfb5aedf19fe5bc2e636179ce",
+        "size": 576,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a44711d3a29a2b1bfb5aedf19fe5bc2e636179ce"
+      },
+      {
+        "path": "formulas/expressions/predicates/last_value_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "777cbc8edb0b3c9461b327bc3d2e4efb2e31c60b",
+        "size": 537,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/777cbc8edb0b3c9461b327bc3d2e4efb2e31c60b"
+      },
+      {
+        "path": "formulas/expressions/predicates/mod_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "88d578fcec5eb044e54ea0647de93fc8d0bd2ab3",
+        "size": 540,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/88d578fcec5eb044e54ea0647de93fc8d0bd2ab3"
+      },
+      {
+        "path": "formulas/expressions/predicates/not_in_condition.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "98f71b44f270bb112e2b645f58b04a5d5d5bfecc",
+        "size": 2281,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/98f71b44f270bb112e2b645f58b04a5d5d5bfecc"
+      },
+      {
+        "path": "formulas/expressions/predicates/nullif_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9735d9d5569ef0de159dad5e1eb10d2eabd126ec",
+        "size": 542,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9735d9d5569ef0de159dad5e1eb10d2eabd126ec"
+      },
+      {
+        "path": "formulas/expressions/predicates/power_predicate.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d2ef431e357ca4b0a1985cf2a46a577db1b1b514",
+        "size": 598,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d2ef431e357ca4b0a1985cf2a46a577db1b1b514"
+      },
+      {
+        "path": "formulas/expressions/sym_func.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ceda1267bec75a795d044b6618541af1d571f8ec",
+        "size": 536,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ceda1267bec75a795d044b6618541af1d571f8ec"
+      },
+      {
+        "path": "formulas/expressions/symbol.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc3b7536b1766809bed493989aaa505ec3c60093",
+        "size": 943,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/cc3b7536b1766809bed493989aaa505ec3c60093"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "947fe66e23d78c8b9a1cb9d3d274a724311e8dc8",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/947fe66e23d78c8b9a1cb9d3d274a724311e8dc8"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "249f669b4bdd0220147834c41090396cca78f583",
+        "size": 969,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/249f669b4bdd0220147834c41090396cca78f583"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/base_function.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7c539a4a2703a558d451a8b24233bbaab88e2707",
+        "size": 498,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7c539a4a2703a558d451a8b24233bbaab88e2707"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/boolean.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "befde6550e58afcf31820960b56f312c79ff8371",
+        "size": 306,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/befde6550e58afcf31820960b56f312c79ff8371"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/cast.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6bafe402d496b75a64eafd81c7f0309046c14ec1",
+        "size": 408,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6bafe402d496b75a64eafd81c7f0309046c14ec1"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/date.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9ceaeae89def8fb254a246b6a1ffb96a26be2483",
+        "size": 338,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9ceaeae89def8fb254a246b6a1ffb96a26be2483"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/decimal.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "071eaec1748a810655225f07a6f6711de8d84965",
+        "size": 363,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/071eaec1748a810655225f07a6f6711de8d84965"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/double.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8aa7cf015cb4cf9a81acc64388e2904ad1adf670",
+        "size": 302,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/8aa7cf015cb4cf9a81acc64388e2904ad1adf670"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/float.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "294bc0644e8d69daf54b5af310cd83b3d8174072",
+        "size": 298,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/294bc0644e8d69daf54b5af310cd83b3d8174072"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/integer.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "133b1eb6f7f43c6c695421265bfd1276f6d56567",
+        "size": 306,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/133b1eb6f7f43c6c695421265bfd1276f6d56567"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/lower.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c3c9576a1c991cd2962390ba1c3a060735d77cf",
+        "size": 387,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6c3c9576a1c991cd2962390ba1c3a060735d77cf"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/numeric.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "11dc9c855d8e8ce9c4510523d5378ee352c91ec5",
+        "size": 306,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/11dc9c855d8e8ce9c4510523d5378ee352c91ec5"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/round.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e666972faf6d9d9fd32c4999be2292885bfcf1df",
+        "size": 594,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e666972faf6d9d9fd32c4999be2292885bfcf1df"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/time.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "82ecd6323238a081d4e6a4f1b0f25617a14985a3",
+        "size": 338,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/82ecd6323238a081d4e6a4f1b0f25617a14985a3"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/timestamp.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ab594f1ecb40b988e5638f49941e424459d2c29",
+        "size": 422,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0ab594f1ecb40b988e5638f49941e424459d2c29"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/upper.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "3c4552acf42a335f560db22f25e0d8fc3c0508ad",
+        "size": 387,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/3c4552acf42a335f560db22f25e0d8fc3c0508ad"
+      },
+      {
+        "path": "formulas/expressions/uniter_functions/varchar.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1b02e962ba67009ee5460c66ceb00f1c7ad24e77",
+        "size": 414,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1b02e962ba67009ee5460c66ceb00f1c7ad24e77"
+      },
+      {
+        "path": "formulas/tables",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "eb2d88ab9f2b7a8bbdbf52a701d76b8980f73b22",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/eb2d88ab9f2b7a8bbdbf52a701d76b8980f73b22"
+      },
+      {
+        "path": "formulas/tables/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c4ed664cd6a8cfdf7bd54a2dcb09b7a81c0e672a",
+        "size": 2350,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c4ed664cd6a8cfdf7bd54a2dcb09b7a81c0e672a"
+      },
+      {
+        "path": "formulas/tables/alias_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d15a450ed0bea7e77346646caf8a234b8b90589a",
+        "size": 1704,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d15a450ed0bea7e77346646caf8a234b8b90589a"
+      },
+      {
+        "path": "formulas/tables/base_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d6c7e7bec177ff91ea64cee5fde8bc811f8325ec",
+        "size": 1509,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d6c7e7bec177ff91ea64cee5fde8bc811f8325ec"
+      },
+      {
+        "path": "formulas/tables/distinct_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a373849e3604731f4cb2c16160fc79734ea9e4c7",
+        "size": 1262,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a373849e3604731f4cb2c16160fc79734ea9e4c7"
+      },
+      {
+        "path": "formulas/tables/empty_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c1ecebcccf78651ace0d6c611bd377a7344bc0f",
+        "size": 1207,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9c1ecebcccf78651ace0d6c611bd377a7344bc0f"
+      },
+      {
+        "path": "formulas/tables/except_all_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0cc2578e56624ee6b18023e97c61fdc18ae38480",
+        "size": 1151,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0cc2578e56624ee6b18023e97c61fdc18ae38480"
+      },
+      {
+        "path": "formulas/tables/except_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6a4a5d8afc5d67254484d5284b07233d89c8cb11",
+        "size": 910,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6a4a5d8afc5d67254484d5284b07233d89c8cb11"
+      },
+      {
+        "path": "formulas/tables/fake_projection_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f07454c2304ae2e84b4d34a217fc7c6550d96c40",
+        "size": 1492,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f07454c2304ae2e84b4d34a217fc7c6550d96c40"
+      },
+      {
+        "path": "formulas/tables/fetch_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "11295bbf85a84f1c6b8c7a4cd79c76202dcad652",
+        "size": 785,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/11295bbf85a84f1c6b8c7a4cd79c76202dcad652"
+      },
+      {
+        "path": "formulas/tables/filter_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f86913662f2bb6686959dd60abc75be952e53fde",
+        "size": 2144,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f86913662f2bb6686959dd60abc75be952e53fde"
+      },
+      {
+        "path": "formulas/tables/groupby_tables",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e927bc3f6b1bee243b7610a885b236d3bec25be5",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/e927bc3f6b1bee243b7610a885b236d3bec25be5"
+      },
+      {
+        "path": "formulas/tables/groupby_tables/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "81ab75078d25625ed6cc395b244fa5e9c59f490d",
+        "size": 114,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/81ab75078d25625ed6cc395b244fa5e9c59f490d"
+      },
+      {
+        "path": "formulas/tables/groupby_tables/groupby_map_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7ddc3b827540a6837df7d2a1dad40998f17cf3ab",
+        "size": 2280,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7ddc3b827540a6837df7d2a1dad40998f17cf3ab"
+      },
+      {
+        "path": "formulas/tables/groupby_tables/groupby_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "69471cf5186d005153986a063ecb8fccc65bb555",
+        "size": 5841,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/69471cf5186d005153986a063ecb8fccc65bb555"
+      },
+      {
+        "path": "formulas/tables/intersect_all_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ede104a046effc95552bb2069fdcb1dd011acb51",
+        "size": 1324,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ede104a046effc95552bb2069fdcb1dd011acb51"
+      },
+      {
+        "path": "formulas/tables/intersect_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8981b3c259ee3e9a15ab468fd1aa047fd62ba59b",
+        "size": 934,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/8981b3c259ee3e9a15ab468fd1aa047fd62ba59b"
+      },
+      {
+        "path": "formulas/tables/join_tables",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "918bd4018a26f1b7fbd70a54abdef82a84b7cac6",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/918bd4018a26f1b7fbd70a54abdef82a84b7cac6"
+      },
+      {
+        "path": "formulas/tables/join_tables/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "012c7ca379325210db398024e04f1a5d34d32d59",
+        "size": 746,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/012c7ca379325210db398024e04f1a5d34d32d59"
+      },
+      {
+        "path": "formulas/tables/join_tables/_utils.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "09ed6b3ff408f43b90bf645c1bac1d95261ef38e",
+        "size": 3681,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/09ed6b3ff408f43b90bf645c1bac1d95261ef38e"
+      },
+      {
+        "path": "formulas/tables/join_tables/cross_join_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "62f823c7de7b32d937842893f8191c1b1240b1f9",
+        "size": 3547,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/62f823c7de7b32d937842893f8191c1b1240b1f9"
+      },
+      {
+        "path": "formulas/tables/join_tables/inner_join_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "78f71a1135141a913f8cb5021f6b536e6aa3542a",
+        "size": 4316,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/78f71a1135141a913f8cb5021f6b536e6aa3542a"
+      },
+      {
+        "path": "formulas/tables/join_tables/join_base_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "60eed3d3777de0c2236a508abe555b84f8337dd5",
+        "size": 475,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/60eed3d3777de0c2236a508abe555b84f8337dd5"
+      },
+      {
+        "path": "formulas/tables/join_tables/natural_join_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0bfafda463b7961e6ba0e84db04ddd3749a60e4e",
+        "size": 2678,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0bfafda463b7961e6ba0e84db04ddd3749a60e4e"
+      },
+      {
+        "path": "formulas/tables/join_tables/outer_join_tables",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bd3e9e3b9eea64eeb837cf1c590efa336828fc19",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/bd3e9e3b9eea64eeb837cf1c590efa336828fc19"
+      },
+      {
+        "path": "formulas/tables/join_tables/outer_join_tables/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "486517247c878069090a56d3e8dc19fb7d544027",
+        "size": 507,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/486517247c878069090a56d3e8dc19fb7d544027"
+      },
+      {
+        "path": "formulas/tables/join_tables/outer_join_tables/full_outer_join_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44dcc94e0ba5f3f145ec7c1dc6f96e4f89ee493a",
+        "size": 7687,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/44dcc94e0ba5f3f145ec7c1dc6f96e4f89ee493a"
+      },
+      {
+        "path": "formulas/tables/join_tables/outer_join_tables/left_outer_join_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d93795e8b0783c7d616a99f2ab803bd13c5397a3",
+        "size": 5708,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d93795e8b0783c7d616a99f2ab803bd13c5397a3"
+      },
+      {
+        "path": "formulas/tables/join_tables/outer_join_tables/outer_join_base_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a8d4efd6f7245d8261e2a9d57ccc5abd0b942e68",
+        "size": 318,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a8d4efd6f7245d8261e2a9d57ccc5abd0b942e68"
+      },
+      {
+        "path": "formulas/tables/join_tables/outer_join_tables/right_outer_join_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "67e5550077872443dee5243ac9f947fd88490e0a",
+        "size": 5835,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/67e5550077872443dee5243ac9f947fd88490e0a"
+      },
+      {
+        "path": "formulas/tables/limit_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0e81cc9c139fdec4f09926db1fdefb4a5e97b84a",
+        "size": 1975,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0e81cc9c139fdec4f09926db1fdefb4a5e97b84a"
+      },
+      {
+        "path": "formulas/tables/offset_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1705cf3f8825ca4c6a8ace217ca7586f47d91406",
+        "size": 774,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1705cf3f8825ca4c6a8ace217ca7586f47d91406"
+      },
+      {
+        "path": "formulas/tables/order_by_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bf4b36799f59b992bd635a04bd8f61eb86a4627f",
+        "size": 1605,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/bf4b36799f59b992bd635a04bd8f61eb86a4627f"
+      },
+      {
+        "path": "formulas/tables/product_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1cca6a89076dbe1f2005b443b81c9f25bbdf2df3",
+        "size": 1433,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1cca6a89076dbe1f2005b443b81c9f25bbdf2df3"
+      },
+      {
+        "path": "formulas/tables/projection_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7ac5727030002012a823af11d7295fde5e1e871a",
+        "size": 3048,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7ac5727030002012a823af11d7295fde5e1e871a"
+      },
+      {
+        "path": "formulas/tables/stack_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b283420fbb0b22640ccd1d0f7a0a5eb03eb1d747",
+        "size": 709,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/b283420fbb0b22640ccd1d0f7a0a5eb03eb1d747"
+      },
+      {
+        "path": "formulas/tables/union_all_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "724e46697ebb70aa41007a20b1b9ad83fb194716",
+        "size": 1468,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/724e46697ebb70aa41007a20b1b9ad83fb194716"
+      },
+      {
+        "path": "formulas/tables/union_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "774fbb5b80da6aa60a2723cfc1c4f8da1e6431b1",
+        "size": 903,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/774fbb5b80da6aa60a2723cfc1c4f8da1e6431b1"
+      },
+      {
+        "path": "formulas/tables/value_table.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "86b327d04ebecbe7c596f2e07041eaf007d473a8",
+        "size": 791,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/86b327d04ebecbe7c596f2e07041eaf007d473a8"
+      },
+      {
+        "path": "formulas/tuples",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "2badd3dd866694ab830bbb4a5d3bf356436b4f54",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/2badd3dd866694ab830bbb4a5d3bf356436b4f54"
+      },
+      {
+        "path": "formulas/tuples/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "08e68108c15579f31c7f1e26598dbc57674549fd",
+        "size": 1431,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/08e68108c15579f31c7f1e26598dbc57674549fd"
+      },
+      {
+        "path": "formulas/tuples/_field.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "377352a9d11c3224e004c2af01b322c720c222cc",
+        "size": 890,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/377352a9d11c3224e004c2af01b322c720c222cc"
+      },
+      {
+        "path": "formulas/tuples/alias_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fd5b64785d33aafeaa6bc57d3263593f3bba80e2",
+        "size": 941,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/fd5b64785d33aafeaa6bc57d3263593f3bba80e2"
+      },
+      {
+        "path": "formulas/tuples/base_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d8a995d58f2e818cb499e914fedb32dcf98ed53",
+        "size": 993,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/4d8a995d58f2e818cb499e914fedb32dcf98ed53"
+      },
+      {
+        "path": "formulas/tuples/concate_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "16e6998b6745cc6638aa67d5bcc71fdf8989fba0",
+        "size": 851,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/16e6998b6745cc6638aa67d5bcc71fdf8989fba0"
+      },
+      {
+        "path": "formulas/tuples/deleted_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "961e00e2d5ffe910bfdf0417eea1fdc335cf137a",
+        "size": 502,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/961e00e2d5ffe910bfdf0417eea1fdc335cf137a"
+      },
+      {
+        "path": "formulas/tuples/distinct_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "386d19a60e061a67797ff836213ea9071b407a48",
+        "size": 698,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/386d19a60e061a67797ff836213ea9071b407a48"
+      },
+      {
+        "path": "formulas/tuples/fake_projection_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "65fa97f113d29b67b7b7dec3ed3a129ede617c64",
+        "size": 804,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/65fa97f113d29b67b7b7dec3ed3a129ede617c64"
+      },
+      {
+        "path": "formulas/tuples/filter_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e95eed3ec99d3f776e202e2681082fcb54f8a879",
+        "size": 692,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e95eed3ec99d3f776e202e2681082fcb54f8a879"
+      },
+      {
+        "path": "formulas/tuples/group_by_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "018d8a44e5c7c89797ffbd18825c23a22a620ed8",
+        "size": 954,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/018d8a44e5c7c89797ffbd18825c23a22a620ed8"
+      },
+      {
+        "path": "formulas/tuples/inner_join_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "910806c52ebdd1d91f38da2e2949c7cafdd8dc46",
+        "size": 975,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/910806c52ebdd1d91f38da2e2949c7cafdd8dc46"
+      },
+      {
+        "path": "formulas/tuples/limit_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2cff52b48e57bd4e787336766267f5dbf1d33161",
+        "size": 606,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2cff52b48e57bd4e787336766267f5dbf1d33161"
+      },
+      {
+        "path": "formulas/tuples/natural_join_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "626118c07e32e15878c9b6cc652c5d933ce21577",
+        "size": 995,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/626118c07e32e15878c9b6cc652c5d933ce21577"
+      },
+      {
+        "path": "formulas/tuples/null_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72e16718d77e5f45b46734d319b74fb5292bbdef",
+        "size": 1077,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/72e16718d77e5f45b46734d319b74fb5292bbdef"
+      },
+      {
+        "path": "formulas/tuples/orderby_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "748ae23286bbaac4a799856be9cf6389db7a2b0a",
+        "size": 839,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/748ae23286bbaac4a799856be9cf6389db7a2b0a"
+      },
+      {
+        "path": "formulas/tuples/outer_join_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "86af081c9c1977f8d01f1d5d9be7d4c21e4788eb",
+        "size": 1204,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/86af081c9c1977f8d01f1d5d9be7d4c21e4788eb"
+      },
+      {
+        "path": "formulas/tuples/projection_pity_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "75174c412b04baa63af3b71d28428855dec9480f",
+        "size": 809,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/75174c412b04baa63af3b71d28428855dec9480f"
+      },
+      {
+        "path": "formulas/tuples/projection_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4d3202ca4cf2fd006adc444b9126ed6eb22e3ba5",
+        "size": 787,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/4d3202ca4cf2fd006adc444b9126ed6eb22e3ba5"
+      },
+      {
+        "path": "formulas/tuples/tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8fff7a295ef4df2db7040f750444e4716dd21105",
+        "size": 1365,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/8fff7a295ef4df2db7040f750444e4716dd21105"
+      },
+      {
+        "path": "license.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7cdbe0b482f604a06a0988dad8877ae8d9257f7d",
+        "size": 20850,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7cdbe0b482f604a06a0988dad8877ae8d9257f7d"
+      },
+      {
+        "path": "logger.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e95c81b7f2c4ef53886c5ede6e82f8738c215653",
+        "size": 409,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e95c81b7f2c4ef53886c5ede6e82f8738c215653"
+      },
+      {
+        "path": "paper",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "6a7c8196cf0a76b4c6b9c1a9e09c09aaeb686073",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/6a7c8196cf0a76b4c6b9c1a9e09c09aaeb686073"
+      },
+      {
+        "path": "paper/baselines",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "a95a6b6c6f030e0f7ec0286df3c299a12d5833e9",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/a95a6b6c6f030e0f7ec0286df3c299a12d5833e9"
+      },
+      {
+        "path": "paper/baselines/analyze_baselines_result.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6b27b787723f0b6503c4350cba0e071ea22ebf0b",
+        "size": 2683,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6b27b787723f0b6503c4350cba0e071ea22ebf0b"
+      },
+      {
+        "path": "paper/baselines/cosette_calcite.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b39af7f0e201b4e1e069ed5b8e917ba35086976b",
+        "size": 8006,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/b39af7f0e201b4e1e069ed5b8e917ba35086976b"
+      },
+      {
+        "path": "paper/baselines/cosette_leetcode.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f528058a069c020bf2839336f3329c013ff9d868",
+        "size": 1183,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f528058a069c020bf2839336f3329c013ff9d868"
+      },
+      {
+        "path": "paper/baselines/cosette_literature.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d1f7fe92087697eb43969f9f97e26473b1d92116",
+        "size": 3137,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d1f7fe92087697eb43969f9f97e26473b1d92116"
+      },
+      {
+        "path": "paper/baselines/hott_calcite.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bd2ead0326e2be255c3ff126cbda9c71204b66db",
+        "size": 6722,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/bd2ead0326e2be255c3ff126cbda9c71204b66db"
+      },
+      {
+        "path": "paper/baselines/hott_leetcode.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "568be2bb9cca9aead69fb0febaebc4d05c78119e",
+        "size": 1178,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/568be2bb9cca9aead69fb0febaebc4d05c78119e"
+      },
+      {
+        "path": "paper/baselines/hott_literature.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "6c6abc3924ba01935b71426763cd81b889da94fa",
+        "size": 2893,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/6c6abc3924ba01935b71426763cd81b889da94fa"
+      },
+      {
+        "path": "paper/baselines/qex_calcite.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ce9891e5bba4eeaa4de9c4b8ffa6e2cc4103090",
+        "size": 8041,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2ce9891e5bba4eeaa4de9c4b8ffa6e2cc4103090"
+      },
+      {
+        "path": "paper/baselines/qex_leetcode.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c62eb1e7a3daa623af2f655f58fa903e55a4866c",
+        "size": 1183,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c62eb1e7a3daa623af2f655f58fa903e55a4866c"
+      },
+      {
+        "path": "paper/baselines/qex_literature.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7dfc0833eb96841ee462e952a1563c73bb34ef2d",
+        "size": 3151,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7dfc0833eb96841ee462e952a1563c73bb34ef2d"
+      },
+      {
+        "path": "paper/counterexamples.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "96fe30fef111f764d959f2b0a3c90af3220a0b61",
+        "size": 840,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/96fe30fef111f764d959f2b0a3c90af3220a0b61"
+      },
+      {
+        "path": "paper/coverage.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8319ba32568adbf37ba41f1e0546abfde0dcd2a0",
+        "size": 614,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/8319ba32568adbf37ba41f1e0546abfde0dcd2a0"
+      },
+      {
+        "path": "paper/coverage_no_IC.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f111ec93b6fd94f049882b1df1ad68878d31b2b9",
+        "size": 930,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f111ec93b6fd94f049882b1df1ad68878d31b2b9"
+      },
+      {
+        "path": "paper/distribution.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2d5d99095c00817d00925619fb8f1af9f46c4d53",
+        "size": 297,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2d5d99095c00817d00925619fb8f1af9f46c4d53"
+      },
+      {
+        "path": "paper/figures",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b73336c07355324f8cbc3220bdfd9d43bd130498",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/b73336c07355324f8cbc3220bdfd9d43bd130498"
+      },
+      {
+        "path": "paper/figures/counterexamples_Calcite.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "44abfde2f123200054c548e7db4e68778b23c207",
+        "size": 25820,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/44abfde2f123200054c548e7db4e68778b23c207"
+      },
+      {
+        "path": "paper/figures/counterexamples_LeetCode.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9e800996982dccff1e619f21024f0fe46c683c6c",
+        "size": 25807,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9e800996982dccff1e619f21024f0fe46c683c6c"
+      },
+      {
+        "path": "paper/figures/counterexamples_Literature.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "93c7cb7ed8617a0aa80f4d898f1112e2e3785c8e",
+        "size": 25864,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/93c7cb7ed8617a0aa80f4d898f1112e2e3785c8e"
+      },
+      {
+        "path": "paper/figures/coverage_Calcite.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "14d4539435e191010d9d57432438bed0ae346eb6",
+        "size": 19045,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/14d4539435e191010d9d57432438bed0ae346eb6"
+      },
+      {
+        "path": "paper/figures/coverage_Literature.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "14f2b31bc7f27deae03864e73cd2adcddf347372",
+        "size": 19054,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/14f2b31bc7f27deae03864e73cd2adcddf347372"
+      },
+      {
+        "path": "paper/figures/coverage_no_IC_Calcite.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2cb20c9b282d2a404e48a846189c65bd9a37ef37",
+        "size": 27191,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2cb20c9b282d2a404e48a846189c65bd9a37ef37"
+      },
+      {
+        "path": "paper/figures/coverage_no_IC_LeetCode.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0ec5f04f069259c491afc2e50557691e788a981c",
+        "size": 27181,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0ec5f04f069259c491afc2e50557691e788a981c"
+      },
+      {
+        "path": "paper/figures/coverage_no_IC_Literature.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "892101268d01919161ba92265b487fdb502b91c8",
+        "size": 27181,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/892101268d01919161ba92265b487fdb502b91c8"
+      },
+      {
+        "path": "paper/figures/varying_timeout_Calcite.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1d775869c14ca72cf63ef5a272b9bef9f4c6a7e2",
+        "size": 70770,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1d775869c14ca72cf63ef5a272b9bef9f4c6a7e2"
+      },
+      {
+        "path": "paper/figures/varying_timeout_LeetCode.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b98ff637c89f486deaacc4aca648da3bef274f59",
+        "size": 36843,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/b98ff637c89f486deaacc4aca648da3bef274f59"
+      },
+      {
+        "path": "paper/figures/varying_timeout_Literature.pdf",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "21e2caffbde5ade0c26c7358301d24925cec3779",
+        "size": 36269,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/21e2caffbde5ade0c26c7358301d24925cec3779"
+      },
+      {
+        "path": "paper/plot.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "59fe77c977494cb8803b19179e1ed21fa7baf06a",
+        "size": 36804,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/59fe77c977494cb8803b19179e1ed21fa7baf06a"
+      },
+      {
+        "path": "paper/run.sh",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9fe3da74b00fb7e4705ae943996e2c17b8d73e4d",
+        "size": 31,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9fe3da74b00fb7e4705ae943996e2c17b8d73e4d"
+      },
+      {
+        "path": "paper/time_bound.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a87d929b9e675afddc7e2c24b90011fdab30995b",
+        "size": 798,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a87d929b9e675afddc7e2c24b90011fdab30995b"
+      },
+      {
+        "path": "paper/varying_bound_Calcite.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7fd80f591b885a5ea2fd70a434e2a31212c9f49c",
+        "size": 253,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7fd80f591b885a5ea2fd70a434e2a31212c9f49c"
+      },
+      {
+        "path": "paper/varying_bound_LeetCode.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e48209dbcdcdaf193dbed65a068d8739a4a9a076",
+        "size": 273,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e48209dbcdcdaf193dbed65a068d8739a4a9a076"
+      },
+      {
+        "path": "paper/varying_bound_Literature.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "d4e70dae4a92f9640778fe2d172ecf276eae062a",
+        "size": 248,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/d4e70dae4a92f9640778fe2d172ecf276eae062a"
+      },
+      {
+        "path": "paper/varying_timeout_Calcite.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "588129d17652b1437ee8048658e7a65785a4cc64",
+        "size": 97,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/588129d17652b1437ee8048658e7a65785a4cc64"
+      },
+      {
+        "path": "paper/varying_timeout_LeetCode.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e9ba0687c2d47d723d89794f039a1a6b9329ee2a",
+        "size": 78576,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/e9ba0687c2d47d723d89794f039a1a6b9329ee2a"
+      },
+      {
+        "path": "paper/varying_timeout_Literature.csv",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2ea82ceac9fc4c9dca91656ff9c40cbea81f93e6",
+        "size": 650,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2ea82ceac9fc4c9dca91656ff9c40cbea81f93e6"
+      },
+      {
+        "path": "parallel",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "bf02b505192eaced23a8f95afb3e64bdf58165f6",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/bf02b505192eaced23a8f95afb3e64bdf58165f6"
+      },
+      {
+        "path": "parallel/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "380474e035b5dc5ff9007e09287af401cac9e90b",
+        "size": 23,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/380474e035b5dc5ff9007e09287af401cac9e90b"
+      },
+      {
+        "path": "parallel/cli_within_bound.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbe9b8a935326340c1ebe22b9ecd06fbf9d8d8dd",
+        "size": 13388,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/dbe9b8a935326340c1ebe22b9ecd06fbf9d8d8dd"
+      },
+      {
+        "path": "parallel/cli_within_timeout.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "43792210bebcf481495fdab75e2e1a7a25ae8e57",
+        "size": 13601,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/43792210bebcf481495fdab75e2e1a7a25ae8e57"
+      },
+      {
+        "path": "parsers",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cd9f257af9b28dda7740771a798f41368aeaa152",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/cd9f257af9b28dda7740771a798f41368aeaa152"
+      },
+      {
+        "path": "parsers/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5a3e855adcd0aa708b049ce0e62b8e1110fe79cb",
+        "size": 106,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/5a3e855adcd0aa708b049ce0e62b8e1110fe79cb"
+      },
+      {
+        "path": "parsers/constraint_parser.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "b432e82e02a22e552020d22ad124c32db39303ae",
+        "size": 5486,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/b432e82e02a22e552020d22ad124c32db39303ae"
+      },
+      {
+        "path": "parsers/sql_parser.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "fa545ca556f61e84c08b0b42d8951f72051d86aa",
+        "size": 15045,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/fa545ca556f61e84c08b0b42d8951f72051d86aa"
+      },
+      {
+        "path": "requirements.txt",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c9cffeb1d8aef4f87f8bfafc3919d4ec9fe3735d",
+        "size": 149,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c9cffeb1d8aef4f87f8bfafc3919d4ec9fe3735d"
+      },
+      {
+        "path": "scope.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2955fc2572008e53bba34362e2e8d526428e8901",
+        "size": 5130,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2955fc2572008e53bba34362e2e8d526428e8901"
+      },
+      {
+        "path": "test",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "ae93c51277bbceb7d6d2f124b58d2b29ba8b86b4",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/ae93c51277bbceb7d6d2f124b58d2b29ba8b86b4"
+      },
+      {
+        "path": "test/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "380474e035b5dc5ff9007e09287af401cac9e90b",
+        "size": 23,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/380474e035b5dc5ff9007e09287af401cac9e90b"
+      },
+      {
+        "path": "test/bag_semantics",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e0651c1b7979d070989c0acec08687a8aa7f2fa8",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/e0651c1b7979d070989c0acec08687a8aa7f2fa8"
+      },
+      {
+        "path": "test/bag_semantics/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+        "size": 24,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/40a96afc6ff09d58a702b76e3f7dd412fe975e26"
+      },
+      {
+        "path": "test/bag_semantics/find_first_non_deleted_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2fff7af7dce0067bbba80b9d50e36719bdd125ae",
+        "size": 2157,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2fff7af7dce0067bbba80b9d50e36719bdd125ae"
+      },
+      {
+        "path": "test/bag_semantics/test_avg.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "0cd05d88b579f5ff6c9f942e994c7602daccc763",
+        "size": 5664,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/0cd05d88b579f5ff6c9f942e994c7602daccc763"
+      },
+      {
+        "path": "test/bag_semantics/test_count.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ec5e7ae7131e25137681f744241eacc6df401cfe",
+        "size": 4750,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ec5e7ae7131e25137681f744241eacc6df401cfe"
+      },
+      {
+        "path": "test/bag_semantics/test_distinct.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb0d5843e576aafed6c29b75d37ab79fb644c069",
+        "size": 25981,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/bb0d5843e576aafed6c29b75d37ab79fb644c069"
+      },
+      {
+        "path": "test/bag_semantics/test_equivalence.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5274e6673ddd299497deeefbce37a808863bf19e",
+        "size": 3427,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/5274e6673ddd299497deeefbce37a808863bf19e"
+      },
+      {
+        "path": "test/bag_semantics/test_filter_and_projection1.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "47bd2d4bf819b82cd72865bfec7e6a20b397b249",
+        "size": 5366,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/47bd2d4bf819b82cd72865bfec7e6a20b397b249"
+      },
+      {
+        "path": "test/bag_semantics/test_filter_and_projection2.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "799441168031cf3065fb12f6a6692fbd70abb47f",
+        "size": 8323,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/799441168031cf3065fb12f6a6692fbd70abb47f"
+      },
+      {
+        "path": "test/bag_semantics/test_group.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92a1962491c32a590979f1fce4985e5d4c70d1d9",
+        "size": 20163,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/92a1962491c32a590979f1fce4985e5d4c70d1d9"
+      },
+      {
+        "path": "test/bag_semantics/test_in.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "7f41384890ad7df3e3c0cfd485efcf5621ede2d3",
+        "size": 10023,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/7f41384890ad7df3e3c0cfd485efcf5621ede2d3"
+      },
+      {
+        "path": "test/bag_semantics/test_inner_join.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "acc19a55e14894922a764364b65a0e94e3ad3d8e",
+        "size": 14047,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/acc19a55e14894922a764364b65a0e94e3ad3d8e"
+      },
+      {
+        "path": "test/bag_semantics/test_is_null.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "206b3fb7bdd9970347de0bb2810a6204436ba1a0",
+        "size": 4626,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/206b3fb7bdd9970347de0bb2810a6204436ba1a0"
+      },
+      {
+        "path": "test/bag_semantics/test_left_outer_join.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "8729e6710fb2a97f722924be8bf4d2698272c9c2",
+        "size": 19055,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/8729e6710fb2a97f722924be8bf4d2698272c9c2"
+      },
+      {
+        "path": "test/bag_semantics/test_max.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "feed66a4b896be799a0c21e676998eea0a7aaff4",
+        "size": 6209,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/feed66a4b896be799a0c21e676998eea0a7aaff4"
+      },
+      {
+        "path": "test/bag_semantics/test_order_by.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5e243d18d32020cb1b13efb4a8924ca69ea4d749",
+        "size": 4693,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/5e243d18d32020cb1b13efb4a8924ca69ea4d749"
+      },
+      {
+        "path": "test/bag_semantics/test_order_by2.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "429199fcc44bd996923fe4ed2c1bc7528c0c64d7",
+        "size": 7119,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/429199fcc44bd996923fe4ed2c1bc7528c0c64d7"
+      },
+      {
+        "path": "test/bag_semantics/test_sum.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2dfb2fa915dadf3267d47c23d1508eb08275ff0b",
+        "size": 4880,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2dfb2fa915dadf3267d47c23d1508eb08275ff0b"
+      },
+      {
+        "path": "test/multiset_semantics",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "cdf14423eef51350e775b851ef3493f7816040ca",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/cdf14423eef51350e775b851ef3493f7816040ca"
+      },
+      {
+        "path": "test/multiset_semantics/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+        "size": 24,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/40a96afc6ff09d58a702b76e3f7dd412fe975e26"
+      },
+      {
+        "path": "test/multiset_semantics/test1.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cdbddd46a6b6f7b259a08a3fbb43b3847d75086b",
+        "size": 3253,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/cdbddd46a6b6f7b259a08a3fbb43b3847d75086b"
+      },
+      {
+        "path": "test/multiset_semantics/test2.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2fbb5a541393bb4198f03c59f5452ca9b7e40758",
+        "size": 6373,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2fbb5a541393bb4198f03c59f5452ca9b7e40758"
+      },
+      {
+        "path": "test/multiset_semantics/test3.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "68d69556940765d5e6c758a070e79ff98267fbe1",
+        "size": 17046,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/68d69556940765d5e6c758a070e79ff98267fbe1"
+      },
+      {
+        "path": "test/multiset_semantics/test_count.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "bb9d46322a29d2ff760240b9dbbc15a5209813da",
+        "size": 4587,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/bb9d46322a29d2ff760240b9dbbc15a5209813da"
+      },
+      {
+        "path": "test/multiset_semantics/test_parser.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "eee2f1671d24d01e772a5821b798a729bbfc7b0c",
+        "size": 826,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/eee2f1671d24d01e772a5821b798a729bbfc7b0c"
+      },
+      {
+        "path": "test/test_benchmark.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "5aae485c330a1557d9aad8ca4156cd5e8f568025",
+        "size": 2553,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/5aae485c330a1557d9aad8ca4156cd5e8f568025"
+      },
+      {
+        "path": "test/test_env.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "ff1c38d5b72f2366e8ea6af8eeb63011812d23bb",
+        "size": 2357,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/ff1c38d5b72f2366e8ea6af8eeb63011812d23bb"
+      },
+      {
+        "path": "test/test_integrity_constraints.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f58441a6b95da54a1196b69c96b5ecfe9aa3b540",
+        "size": 2083,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f58441a6b95da54a1196b69c96b5ecfe9aa3b540"
+      },
+      {
+        "path": "test/test_process.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "1c41b42ab68ba19867a39921469e92d745c5dd73",
+        "size": 3204,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/1c41b42ab68ba19867a39921469e92d745c5dd73"
+      },
+      {
+        "path": "test/test_spj.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "78965bfdc5c06f507b3f325f6a26d2268ddcd289",
+        "size": 55900,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/78965bfdc5c06f507b3f325f6a26d2268ddcd289"
+      },
+      {
+        "path": "test/z3_debug.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cbbd8ae714a1cc23558bc16fa216d0d5e7c15f65",
+        "size": 34811,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/cbbd8ae714a1cc23558bc16fa216d0d5e7c15f65"
+      },
+      {
+        "path": "utils.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "92c195cbedd5c37c880eaea58170b036d0a08159",
+        "size": 8556,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/92c195cbedd5c37c880eaea58170b036d0a08159"
+      },
+      {
+        "path": "verifiers",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "21ea6cb5046f066057e8c3ba3cd9deb340bcd3e3",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/21ea6cb5046f066057e8c3ba3cd9deb340bcd3e3"
+      },
+      {
+        "path": "verifiers/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "06a2b3c053af36a22044ec67a7fb03be10792965",
+        "size": 260,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/06a2b3c053af36a22044ec67a7fb03be10792965"
+      },
+      {
+        "path": "verifiers/bag_semantics_verifier.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9385587103641450325e5bf83a9ccb5fc7ffb08b",
+        "size": 6648,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9385587103641450325e5bf83a9ccb5fc7ffb08b"
+      },
+      {
+        "path": "verifiers/list_semantics_verifier.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9cb37d621a12b8e4ee820f8cb03d72d59529ffea",
+        "size": 3814,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9cb37d621a12b8e4ee820f8cb03d72d59529ffea"
+      },
+      {
+        "path": "verifiers/verifier.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "2a11b00dc0b271d4d8eb03b363eb99554c34e0db",
+        "size": 5732,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/2a11b00dc0b271d4d8eb03b363eb99554c34e0db"
+      },
+      {
+        "path": "visitors",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "e4b29671b5b5f483f53ee36e17643099ba687be5",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/e4b29671b5b5f483f53ee36e17643099ba687be5"
+      },
+      {
+        "path": "visitors/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "72a85c78a091a5d3e7e5fd5a1df0792fee719a83",
+        "size": 1256,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/72a85c78a091a5d3e7e5fd5a1df0792fee719a83"
+      },
+      {
+        "path": "visitors/dump_tuple.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "cc79e3c05b231d27e052622b9f742e8cdf36932c",
+        "size": 483,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/cc79e3c05b231d27e052622b9f742e8cdf36932c"
+      },
+      {
+        "path": "visitors/interm_function.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "07acadc5994c06323d8dc8ad2c5b4e68ea5b587f",
+        "size": 1176,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/07acadc5994c06323d8dc8ad2c5b4e68ea5b587f"
+      },
+      {
+        "path": "visitors/visitor.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "54b8aa7900c35f2f4eb4ddcd1c71c5247418e250",
+        "size": 111552,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/54b8aa7900c35f2f4eb4ddcd1c71c5247418e250"
+      },
+      {
+        "path": "writers",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b422f9cea4aabe47119c91b6e6bee2dc529ef49d",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/b422f9cea4aabe47119c91b6e6bee2dc529ef49d"
+      },
+      {
+        "path": "writers/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "40a96afc6ff09d58a702b76e3f7dd412fe975e26",
+        "size": 24,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/40a96afc6ff09d58a702b76e3f7dd412fe975e26"
+      },
+      {
+        "path": "writers/code_writer.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "aab3b74143adab132af928ed003f0677ee6f5fe5",
+        "size": 755,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/aab3b74143adab132af928ed003f0677ee6f5fe5"
+      },
+      {
+        "path": "writers/script.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a6f8e054b141d43ad6fd2d6b109a35b734c632cc",
+        "size": 9871,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/a6f8e054b141d43ad6fd2d6b109a35b734c632cc"
+      },
+      {
+        "path": "z3py_libs",
+        "mode": "040000",
+        "type": "tree",
+        "sha": "b9175ef30c446d9049e1155a6cf5658b7880f5c0",
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/trees/b9175ef30c446d9049e1155a6cf5658b7880f5c0"
+      },
+      {
+        "path": "z3py_libs/__init__.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "f7aa29ab120de8586c5712d5c67053ddce61fab7",
+        "size": 210,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/f7aa29ab120de8586c5712d5c67053ddce61fab7"
+      },
+      {
+        "path": "z3py_libs/z3.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "c64e6584ee24df2b83a701d2e6f017530162653f",
+        "size": 337840,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/c64e6584ee24df2b83a701d2e6f017530162653f"
+      },
+      {
+        "path": "z3py_libs/z3_copy.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "074570b035db162effdc41b24a6a876bb599ae10",
+        "size": 334372,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/074570b035db162effdc41b24a6a876bb599ae10"
+      },
+      {
+        "path": "z3py_libs/z3consts.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "56862ef6692ed6edc17cda65a3abebd385eccc1b",
+        "size": 7867,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/56862ef6692ed6edc17cda65a3abebd385eccc1b"
+      },
+      {
+        "path": "z3py_libs/z3core.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "067b64fe67e78c82126df9b2b1583419ca9b31bd",
+        "size": 190915,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/067b64fe67e78c82126df9b2b1583419ca9b31bd"
+      },
+      {
+        "path": "z3py_libs/z3num.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "09415d47444471d51e8e8cf7dc9d282906e944a3",
+        "size": 16090,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/09415d47444471d51e8e8cf7dc9d282906e944a3"
+      },
+      {
+        "path": "z3py_libs/z3poly.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9c6e217f8054a8bffa9d1deeaf182eee9b7e3707",
+        "size": 1113,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/9c6e217f8054a8bffa9d1deeaf182eee9b7e3707"
+      },
+      {
+        "path": "z3py_libs/z3printer.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "228f212d97be944294c5d89160ca43cfdc05128b",
+        "size": 45224,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/228f212d97be944294c5d89160ca43cfdc05128b"
+      },
+      {
+        "path": "z3py_libs/z3rcf.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "019e372e212036d45dc6a39b92507197510b9fb7",
+        "size": 5039,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/019e372e212036d45dc6a39b92507197510b9fb7"
+      },
+      {
+        "path": "z3py_libs/z3types.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dceef6b12bc52a8c5caa31883b0876be3c28bf2e",
+        "size": 4724,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/dceef6b12bc52a8c5caa31883b0876be3c28bf2e"
+      },
+      {
+        "path": "z3py_libs/z3util.py",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "071e2b60e05c3553166a5714a65623e01891c9cf",
+        "size": 11388,
+        "url": "https://api.github.com/repos/VeriEQL/VeriEQL/git/blobs/071e2b60e05c3553166a5714a65623e01891c9cf"
+      }
+    ],
+    "truncated": false
+  }
+}

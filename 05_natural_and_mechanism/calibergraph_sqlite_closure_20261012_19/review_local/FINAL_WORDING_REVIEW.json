@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "scope": "FINAL_WORDING_AND_FACT_CONSISTENCY",
+  "utc": "2026-10-12T11:37:02.283014+00:00",
+  "must_fix": [],
+  "reviewed_sha256": {
+    "RESULT.zh.md": "11acc13ce87e268e8cdbdcc201010a2d0b6efd24770ec8055f93616c96c7a3e9",
+    "FINAL_FACTS.json": "dbfc1feb0e2b4972d0bb76a5f3998635e360838ff562e8219cd0fdfd965daee6",
+    "RECOVERY.zh.md": "10a26e9ae048abcae85deb6d90ddf6b308ee3a4376d5e785296955e99b10358b",
+    "POST_EXECUTION_PRESERVATION.json": "c725f15c849b584860a642dda23ed912e8a46fecdf6daa6164f8c37c7ff7a25f",
+    "review_local/FINAL_REVIEW.json": "fcd3d1b96d7e09e40a42e55d67ab6cac02f601559bbee59d3e34489810c7eedc",
+    "review_local/FINAL_REVIEW.zh.md": "d55afdf8a62159e2493403b582bd4d2a28fda869fcc2746454f42e8901348187"
+  },
+  "checks": {
+    "eight_witness_outputs_N_total_rows_match_independent_review": true,
+    "three_natural_pairs_eight_synthetic_witnesses_distinguished": true,
+    "45_type_N1_and_group_bag_N2_distinguished": true,
+    "1526_N1_vs_auxiliary_N3_not_confused": true,
+    "1490_remains_static_not_newly_run": true,
+    "COUNT_four_numeric_and_twelve_type_errors_and_28_patched_pass_match": true,
+    "parser_and_end_to_end_still_unknown": true,
+    "patch_not_applied_to_baseline": true,
+    "first_FAILED_and_second_PASS_retained_separately": true,
+    "two_windows_0_149942291s_not_one_continuous_batch": true,
+    "blocked_thread_start_disclosed": true,
+    "old_marker_postcheck_not_claimed_prefrozen": true,
+    "369_and_378_hashes_still_match": true,
+    "source_epoch_3_53_3_matches": true,
+    "Polygon_coverage_4_of_8_unchanged": true,
+    "no_new_novelty_or_business_truth_claim": true,
+    "local_only_no_commit_push": true,
+    "existing_FINAL_REVIEW_unchanged": true
+  },
+  "reviewer_actions": {
+    "SQL_reruns": 0,
+    "target_imports": 0,
+    "solver_calls": 0,
+    "network_requests": 0,
+    "commit_push": 0
+  },
+  "reviewer_finished_writing": true
+}

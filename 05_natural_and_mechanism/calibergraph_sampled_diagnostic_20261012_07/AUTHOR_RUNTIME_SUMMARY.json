@@ -1,0 +1,235 @@
+{
+  "status": "ERROR_NOT_ALGORITHM_FAILURE",
+  "disprove_calls": 1,
+  "solver_check_calls": 4,
+  "generation_calls": 2,
+  "baseline_verdict": "EQ",
+  "baseline_reason": null,
+  "baseline_wall_s": 0.5150844589807093,
+  "versions": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "sqlite": "3.53.3",
+    "sqlglot": "23.12.1",
+    "z3": "4.16.0",
+    "sqlalchemy": "2.0.49"
+  },
+  "error": {
+    "type": "KeyError",
+    "message": "'Patient'",
+    "phase": "INDEPENDENT_CANDIDATE_REPLAY"
+  },
+  "candidates": 9,
+  "generations": [
+    {
+      "side": 0,
+      "reached": 18,
+      "covered": 17,
+      "attempts": 5,
+      "timed_out": false,
+      "unsupported": null,
+      "attempt_status": {
+        "Status.SAT": 2,
+        "Status.UNSAT": 3
+      }
+    },
+    {
+      "side": 1,
+      "reached": 15,
+      "covered": 14,
+      "attempts": 7,
+      "timed_out": false,
+      "unsupported": null,
+      "attempt_status": {
+        "Status.SAT": 4,
+        "Status.UNSAT": 3
+      }
+    }
+  ],
+  "solve_events": {
+    "Status.SAT": 6,
+    "Status.UNSAT": 6
+  },
+  "recorded_official_outputs": [
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            0
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            0
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            2
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            2
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            2
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            2
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "side": 0,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      },
+      {
+        "side": 1,
+        "rows": [
+          [
+            3
+          ]
+        ]
+      }
+    ]
+  ],
+  "telemetry": {
+    "mode": "science",
+    "wall_budget_s": 60,
+    "threshold_bytes": 1073741824,
+    "sampling_interval_s": 0.05,
+    "telemetry_silence_stop_s": 2,
+    "hard_RSS_limit": false,
+    "possible_overshoot": true,
+    "pid_for_logging_only": 27587,
+    "reaped": true,
+    "returncode": 0,
+    "elapsed_s": 1.170365042053163,
+    "stop_reason": null,
+    "observed_peak_RSS_bytes": 107397120,
+    "max_observed_sample_gap_s": 0.06315545784309506,
+    "samples": 21
+  },
+  "resource_stop_is_algorithm_failure": false,
+  "scientific_retry": false
+}

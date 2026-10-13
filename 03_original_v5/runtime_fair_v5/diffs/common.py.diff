@@ -1,0 +1,169 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/common.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py
+@@ -52,6 +52,13 @@
+             raise ValueError("runtime inventory mismatch: " + raw)
+     if lock["native_path"] not in lock["files"] or lock["kernel_path"] not in lock["files"]:
+         raise ValueError("native/kernel missing from lock")
++    required_programs = ("common.py", "worker.py", "supervisor.py", "query_differential.py", "contract_reference.py")
++    expected_program_paths = {str(Path(__file__).parent / name) for name in required_programs}
++    if set(lock.get("runtime_programs", {})) != expected_program_paths:
++        raise ValueError("v5 runtime program inventory missing or wrong")
++    for raw, expected in lock["runtime_programs"].items():
++        if lock["files"].get(raw) != expected or sha(raw) != expected:
++            raise ValueError("v5 program absent from unified source lock: " + raw)
+     return lock
+ 
+ 
+@@ -106,13 +113,138 @@
+             "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"}
+ 
+ 
++class ContractStop(ValueError):
++    """Typed no-pair outcome; the entire original contract is retained."""
++    def __init__(self, decision, reason):
++        super().__init__(reason)
++        self.decision = decision
++
++
+ def new_env(case, Environment, constants):
+-    env = Environment(timer=False, generate_code=False, show_counterexample=False, dialect=constants.DIALECT.MYSQL)
++    # Assign this object in the caller BEFORE any schema or IC work, so every
++    # subsequent exception can clean it up. No raw IC compilation is permitted.
++    return Environment(timer=False, generate_code=False, show_counterexample=False, dialect=constants.DIALECT.MYSQL)
++
++
++def formula_sha(items):
++    return hashlib.sha256("\n".join(item.sexpr() for item in items).encode()).hexdigest()
++
++
++def json_sha(value):
++    return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
++
++
++def apply_contract_bridge(env, case, z3, constants, start, checkpoint, record):
++    """Original AST -> normalized copy -> actual upstream C, checked on BASE only.
++
++    No original IC is ever passed to add_constraints. SAT/unknown XOR rejects the
++    whole input. This establishes this bounded AST mapping, not source-text
++    parser faithfulness or a general theorem about every upstream contract.
++    """
++    import contract_reference as reference
++    if Path(reference.__file__).resolve() != Path(__file__).parent / "contract_reference.py":
++        raise ValueError("contract reference module origin mismatch")
++    record.update(status="ATTEMPTED_EFFECT_UNKNOWN", original_ast=case["constraint"],
++                  original_ast_sha256=json_sha(case["constraint"]),
++                  scope="registered source AST faithfulness; no source-text parser completeness claim",
++                  base_only_sat={"status": "NOT_RUN"}, normalized_vs_reference={"status": "NOT_RUN"},
++                  compilation={"status": "NOT_RUN"})
++    checkpoint("CONTRACT_BRIDGE_PREPARE_ATTEMPT")
++    try:
++        prepared = reference.prepare(case["constraint"], case["schema"])
++    except reference.UnverifiedContract as exc:
++        record.update(status="UNVERIFIED_CONTRACT", reason=str(exc), unsupported_policy="WHOLE_CONTRACT_STOP_NO_DROP_NO_FALLBACK")
++        raise ContractStop("UNVERIFIED_CONTRACT", str(exc)) from exc
++    record.update(normalized_ast=prepared.normalized_ast, normalized_ast_sha256=json_sha(prepared.normalized_ast),
++                  ledger=prepared.ledger, schema_roundtrip="SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
++                  reference_source_sha256=sha(Path(__file__).parent / "contract_reference.py"))
++    checkpoint("CONTRACT_BRIDGE_PREPARED")
++    if env.base_databases or env.DBMS_facts:
++        raise ValueError("bridge requires a fresh empty Environment")
+     for name, fields in case["schema"].items():
+         env.create_database(attributes=fields, bound_size=case["exact_rows"][name], name=name)
+-    env.add_constraints(case["constraint"])
++    base_facts = list(env.DBMS_facts)
++    bounds = sorted(env.bound_constraints, key=lambda term: term.sexpr())
++    base = base_facts + bounds
++    record["base_only"] = {"facts": [term.sexpr() for term in base], "sha256": formula_sha(base),
++                           "tested_ic_included": False, "exact_rows": case["exact_rows"]}
++
++    def check(slot, assertions):
++        slot.update(status="ATTEMPTED_EFFECT_UNKNOWN", assertion_count=len(assertions), assertion_sha256=formula_sha(assertions))
++        checkpoint("CONTRACT_BRIDGE_SOLVER_ATTEMPT")
++        test = solver(z3, constants, start, maximum_ms=1000)
++        test.add(*assertions)
++        answer = str(test.check())
++        slot["status"] = answer
++        if answer == "unknown":
++            slot["reason_unknown"] = test.reason_unknown()
++        elif answer == "sat":
++            model = test.model()
++            if not all(z3.is_true(model.eval(term, model_completion=True)) for term in assertions):
++                raise ValueError("contract bridge model violates submitted assertions")
++        elif answer != "unsat":
++            raise ValueError("unrecognized bridge solver answer")
++        checkpoint("CONTRACT_BRIDGE_SOLVER_RETURNED")
++        return answer
++
++    if check(record["base_only_sat"], base) != "sat":
++        record["status"] = "BASE_CONTRACT_UNVERIFIED"
++        raise ContractStop("BASE_CONTRACT_UNVERIFIED", "base-only nonvacuity not established")
++    try:
++        intended = reference.emit_reference(prepared, env, constants)
++    except reference.UnverifiedContract as exc:
++        record.update(status="UNVERIFIED_CONTRACT", reason=str(exc))
++        raise ContractStop("UNVERIFIED_CONTRACT", str(exc)) from exc
++    record["compilation"]["status"] = "ATTEMPTED_EFFECT_UNKNOWN"
++    checkpoint("NORMALIZED_CONTRACT_COMPILATION_ATTEMPT")
++    env.add_constraints(prepared.normalized_ast)
++    if [term.sexpr() for term in env.DBMS_facts[:len(base_facts)]] != [term.sexpr() for term in base_facts]:
++        raise ValueError("upstream compilation altered base facts")
++    if [term.sexpr() for term in sorted(env.bound_constraints, key=lambda term: term.sexpr())] != [term.sexpr() for term in bounds]:
++        raise ValueError("upstream compilation altered base bounds")
++    delta = list(env.DBMS_facts[len(base_facts):])
++    actual = constants.And(*delta) if delta else constants.Z3_TRUE
++    record["compilation"].update(status="COMPILED_NORMALIZED_COPY", original_ast_passed_to_upstream=False,
++                                 delta_fact_count=len(delta), actual_formula=actual.sexpr(), reference_formula=intended.sexpr())
++    xor = constants.Or(constants.And(actual, constants.Not(intended)), constants.And(constants.Not(actual), intended))
++    answer = check(record["normalized_vs_reference"], base + [xor])
++    if answer != "unsat":
++        decision = "CONTRACT_BRIDGE_MISMATCH" if answer == "sat" else "CONTRACT_BRIDGE_UNVERIFIED"
++        record["status"] = decision
++        raise ContractStop(decision, "normalized upstream C versus original AST reference XOR: " + answer)
++    if json_sha(case["constraint"]) != record["original_ast_sha256"]:
++        raise ValueError("original contract input mutated")
+     env.save_checkpoints()
+-    return env
++    record.update(status="VERIFIED_BOUNDED_AST_BRIDGE", complete_facts_sha256=formula_sha(list(env.DBMS_facts) + bounds),
++                  actual_contract="upstream compiler of normalized copy; same verified C for all six arms and differential",
++                  no_pair_oracle_run=True)
++    # This is a local object binding, not a portable cryptographic certificate.
++    env._caliber_contract_bridge = {"record": record, "prepared": prepared, "schema": case["schema"]}
++    checkpoint("CONTRACT_BRIDGE_VERIFIED")
++    return record
++
++
++def require_contract_bridge(env, record=None):
++    attached = getattr(env, "_caliber_contract_bridge", None)
++    if not attached or (record is not None and attached["record"] is not record):
++        raise ContractStop("UNVERIFIED_CONTRACT", "same-Environment bridge record required")
++    audit = attached["record"]
++    current = list(env.DBMS_facts) + sorted(env.bound_constraints, key=lambda term: term.sexpr())
++    if audit.get("status") != "VERIFIED_BOUNDED_AST_BRIDGE" or audit.get("complete_facts_sha256") != formula_sha(current):
++        raise ContractStop("UNVERIFIED_CONTRACT", "audited complete contract facts changed or unavailable")
++    return attached
++
++
++def check_witness_contract(env, database):
++    import contract_reference as reference
++    if Path(reference.__file__).resolve() != Path(__file__).parent / "contract_reference.py":
++        raise ValueError("contract reference module origin mismatch")
++    attached = require_contract_bridge(env)
++    result = reference.evaluate_reference(attached["prepared"], database)
++    result["original_ast_sha256"] = attached["record"]["original_ast_sha256"]
++    if result["holds"] is not True:
++        raise ValueError("witness violates original source-AST contract reference")
++    return result
+ 
+ 
+ def cpu_seconds():
+@@ -252,6 +384,10 @@
+     """Common SAT oracle contract; unproved integer domains cannot pass replay."""
+     result = {"status": "ATTEMPTED_EFFECT_UNKNOWN", "domain_audits": [],
+               "queries": list(queries), "sqlite": {"status": "NOT_RUN"}}
++    result["original_ast_contract_validation"] = check_witness_contract(env, database)
++    attached = require_contract_bridge(env)
++    if attached["schema"] != case["schema"] or attached["record"]["original_ast_sha256"] != json_sha(case["constraint"]):
++        raise ContractStop("UNVERIFIED_CONTRACT", "oracle input differs from audited original contract")
+     if plans is not None and len(plans) != len(queries):
+         raise ValueError("oracle plans/queries count mismatch")
+     for index, sql in enumerate(queries):

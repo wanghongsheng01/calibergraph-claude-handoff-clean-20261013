@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "solver_calls": 0,
+  "independent_of_author_adapter": true,
+  "sqlite_version": "3.43.2",
+  "source_hashes": {
+    "gold.sql": "8ca50bee79653ca58e24c34a734ac718d0b09446486caadef8c513f64c638e82",
+    "predicted.sql": "c977e9d8fac35d63504c9cf9f2d84145a195974c58fde06640c4254b3c677028",
+    "full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+  },
+  "column_counts": {
+    "Patient": 7,
+    "Examination": 13,
+    "Laboratory": 44
+  },
+  "forward_storage_boundary_cases": 2500,
+  "valid_shape_cases": 11,
+  "reverse_unbounded_int_class_cases": 81,
+  "rf_lexical_examples": [
+    {
+      "input_rf": "19",
+      "stored": [
+        "19",
+        "text",
+        1
+      ],
+      "outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "input_rf": "2",
+      "stored": [
+        "2",
+        "text",
+        1
+      ],
+      "outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "input_rf": "20",
+      "stored": [
+        "20",
+        "text",
+        0
+      ],
+      "outputs": [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "input_rf": "020",
+      "stored": [
+        "020",
+        "text",
+        1
+      ],
+      "outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ]
+    },
+    {
+      "input_rf": "20.0",
+      "stored": [
+        "20.0",
+        "text",
+        0
+      ],
+      "outputs": [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "input_rf": "3",
+      "stored": [
+        "3",
+        "text",
+        0
+      ],
+      "outputs": [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    },
+    {
+      "input_rf": "100",
+      "stored": [
+        "100",
+        "text",
+        1
+      ],
+      "outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ]
+    }
+  ],
+  "scope": "N<=1 per source table; full C; original default SQLite comparison semantics; finite boundary testing supplements proof"
+}

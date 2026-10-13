@@ -1,0 +1,51 @@
+{
+  "schema": "calibergraph.round16.allowed_finalization.v1",
+  "decision": "PASS_STATIC_PREEXEC_WITH_ALLOWED_FINALIZATION",
+  "reviewer": "/root/round16_independent",
+  "created_utc": "2026-10-11T16:45:04.487007+00:00",
+  "author_disabled_manifest_sha256": "5cdb99e32522017e837e8b47925a6236c33e10236451102128c1a6dfd7a517a5",
+  "disabled_protocol_sha256": "64bf3f54077888baca66439f10c35b77c4853015a516732a57bb3d15c44ec0ce",
+  "permitted_source_change": {
+    "path": "implementation/generation_common.py",
+    "from": "EXECUTION_ENABLED = False",
+    "to": "EXECUTION_ENABLED = True",
+    "all_other_bytes_unchanged": true
+  },
+  "permitted_protocol_changes": {
+    "status": {
+      "from": "DRAFT_DISABLED",
+      "to": "REGISTERED"
+    },
+    "registered_utc": {
+      "from": null,
+      "to": "actual nonempty UTC registration timestamp"
+    },
+    "supervisor.prior_resource_observation_measured_cpu_seconds": "sum of all valid completed observation measured_cpu_sample_s",
+    "supervisor.prior_resource_observation_tail_reserve_seconds": "sum of all valid completed observation unmeasured_final_receipt_exit_tail_reserve_s",
+    "supervisor.prior_resource_observation_cpu_charge_seconds": "sum of all valid completed observation cpu_charge_s, equal measured plus tails within 1e-9"
+  },
+  "permitted_new_artifacts": [
+    "registered protocol",
+    "closed cumulative observer ledger and receipt hashes",
+    "runtime freeze preserving original 880 bindings plus round16 required bindings",
+    "finalization difference receipt",
+    "permanent fixed root EXECUTION_ONCE.lock",
+    "sole launch outer stdout stderr exit/time evidence",
+    "separate post-execution analysis and review"
+  ],
+  "necessary_prelaunch_conditions": [
+    "Latest observation valid ELIGIBLE and outer exit zero, complete receipt and source/schedule hashes verified",
+    "Request submitted within 60 seconds of latest eligible finished_unix",
+    "No prior EXECUTION_ONCE.lock or scientific launch; acquire O_EXCL permanent fixed lock before request",
+    "Observer ledger complete across all numbered observations without missing or failed predecessor",
+    "All final source differences exactly allowed and final freeze bindings verify",
+    "Same 24 slots/order/source/full operational C/exact2,3,4 and all science budgets unchanged",
+    "Use only one concrete supported require_escalated request; no alternate launch after rejection or failure"
+  ],
+  "request_shape": "/usr/bin/time -l /usr/bin/nice -n 15 FROZEN_PYTHON -B -I -S ROUND16/implementation/generation_supervisor.py --protocol REGISTERED --freeze FINAL --out ROUND16/runs/diagnostic_01, with fixed outer stdout and stderr files",
+  "attempt_consumed_at": "Permanent once lock plus first concrete scientific supervisor launch request, even if rejected or no worker/solver starts",
+  "after_attempt": "Never return to WAIT; retain all 24 slots and every failure/censored/unknown/not-run status; no resume, replacement or retry",
+  "accounting": "prep10 + cumulative measured observations + cumulative observation tail reserves + current scientific supervisor SELF/all reaped CHILDREN + batchtail0.2 <= parent60; live worker sampled additionally for active gate. Outer time verifies lifecycle and is never added again to overlapping internal SELF/CHILDREN.",
+  "runtime_limit_claim": "Static design only. Sampling and reserves are not kernel process-tree hard bounds. Resource/approval failure stops.",
+  "backup_owner": "root"
+}

@@ -1,0 +1,9 @@
+# 恢复与验证
+
+作者包备份到既有私有仓库wanghongsheng01/calibergraph-method-research-20261011的polygon_adapter_20261012_15/。只存适配器、diff生成器、准备worker、测试及作者/独审证据、原输入哈希；不存第三方SQL/DDL、源码、依赖或原生二进制。核对DELIVERY_MANIFEST后恢复09/13包所需固定来源（按各自RECOVERY），保持同级目录布局。
+
+原#1172输入在coverage_boundary_20261012_09/sources_local/thrombosis_prediction__1172，ParSEval源提交88cfe245bcf249a5b0df561a6b09c116ff2a2896；三文件精确SHA见case1172_adapter.SOURCE_SHA。固定Polygon为5e18237394d025dbb805cf833b4f54c321470774，13包runtime与隔离依赖按旧FREEZE恢复。本包不修改旧文件。
+
+`build_slot_adapter.py`只从13包哈希固定worker生成15准备worker和INTEGRATION.patch；不运行worker。`test_adapter.py`仅做SQLite语义单元测试和Polygon parse/encode，禁用两条solver入口并禁止原生子进程；旧control路径须按07包恢复。本机Python3.12.13/SQLite3.53.3，独审SQLite3.43.2。重测时复制本包到独立布局或修改新输出文件名，保留旧revision报告，不能覆盖首次TEMP漏洞记录。单元测试重测不是科学求解许可。
+
+FREEZE的solver_execution_authorized保持false。不要运行13/15 worker或controller作为恢复检查；后续明确批准后也必须在新批次独立冻结、创建唯一标记，不能改本冻结包为true。恢复的原查询/DDL/依赖不匹配时停止，不重新选择数据。原官方artifact可用期、历史DataHub专用研究源注册限制沿前包保留，不把作者私有备份当成第三方数据永久分发。

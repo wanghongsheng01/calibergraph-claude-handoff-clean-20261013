@@ -1,0 +1,44 @@
+{
+  "started_utc": "2026-10-11T20:47:10.910998+00:00",
+  "attempt": 1,
+  "kind": "EXPLICITLY_AUTHORIZED_REPLAY_SUPPLEMENT",
+  "protocol_sha256": "cd5726ae673fafcd89297267745a327c3496ed4c23a6fb82ab97e1f580f94c9d",
+  "freeze_sha256": "ed037e6a898bcae8eadcd564f5febb164581ba2f1b0e13fbc24282b7e73edd54",
+  "resource_before": {
+    "utc": "2026-10-11T20:47:10.909608+00:00",
+    "loadavg": [
+      2.919921875,
+      3.00439453125,
+      2.98876953125
+    ],
+    "free_percent": 34
+  },
+  "temporary_pgdata": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_04/runtime/replay_supplement_01/pgdata",
+  "temporary_socket": "/tmp/cg-pv04s-rmyh1d6l",
+  "tcp_listen": false,
+  "credential_files_used": false,
+  "old_project_read_only": true,
+  "bytecode_cache_read_from_old_project": false,
+  "limits": "One nice19 worker,CPU20/21s,wall35s,own RSS512MiB sampling at50ms; no RLIMIT_DATA. PG shared_buffers16MiB/work_mem1MiB/maxconn5. Whole PG RSS unmeasured.",
+  "worker_exit_code": 0,
+  "stop_attempts": [
+    {
+      "exit_code": 0
+    }
+  ],
+  "postgres_stop_exit_code": 0,
+  "cleanup_status": "STOPPED",
+  "elapsed_wall_s": 5.970048,
+  "resource_after": {
+    "loadavg": [
+      3.16650390625,
+      3.0537109375,
+      3.00634765625
+    ]
+  },
+  "child_usage": {
+    "cpu_user_s": 5.121289,
+    "cpu_system_s": 0.259911
+  },
+  "worker_counters_may_be_partial": false
+}

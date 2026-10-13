@@ -1,0 +1,40 @@
+{
+  "adapter_sha256": "33ee72718aab0772ac85b14bdd260961d8226ea9ce4b672549263d581de5a547",
+  "sqlite_version": "3.43.2",
+  "direct_adapter_cross_product_passes": 150,
+  "negative_cases_passed": [
+    "Examination dangling FK",
+    "Patient NULL primary key",
+    "Laboratory NULL ID",
+    "duplicate abstract column"
+  ],
+  "temp_shadow_regression": {
+    "original_outputs": [
+      [
+        [
+          0
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "rejected": false,
+    "replay_outputs": [
+      [
+        [
+          1
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ]
+  },
+  "solver_calls": 0,
+  "status": "FIX_REQUIRED_TEMP_SHADOW"
+}

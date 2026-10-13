@@ -1,0 +1,215 @@
+{
+  "case": "thrombosis_prediction__1261",
+  "mode": "UA",
+  "status": "BOUNDED_SYMBOLIC_UNSAT",
+  "stages_seconds": {
+    "imports": 0.12341749994084239,
+    "schema_C": 0.004054332617670298,
+    "parse": 0.1767680011689663,
+    "encode": 0.011331001296639442,
+    "search_including_solver": 0.5420532082207501,
+    "solver_calls": 0.5391908739693463,
+    "decode": null,
+    "replay": null
+  },
+  "schema_C": {
+    "tables": 3,
+    "columns": 64,
+    "constraints": 7,
+    "all_source_columns_kept": true,
+    "constraint_kinds": [
+      "eq",
+      "not_null",
+      "primary"
+    ],
+    "auxiliary_integrity_list_not_appended": true
+  },
+  "raw_return": [
+    true,
+    null,
+    null,
+    0.553702,
+    {
+      "iters": 2,
+      "backtracks": 1,
+      "type_2_backtracks": 1,
+      "unsat_core_sizes": [
+        7
+      ],
+      "M_sizes": [
+        7
+      ],
+      "solving_time_per_iter": [
+        0.485402
+      ],
+      "num_nodes_changed": [],
+      "ast_size": 7,
+      "complete_time": "2026-10-12 11:03:31.178827",
+      "total_time": 0.553468,
+      "status": "EQU"
+    }
+  ],
+  "interpretation": "Frozen #1261 N=1 observation quotient; original SQL/DDL retained; adapter is not generic REAL/DATE support or unmodified baseline",
+  "countermodel_lifting": "Validate abstract C first, apply frozen quotient lift, then original full-C replay; no repairs or retries",
+  "solver_calls": [
+    {
+      "index": 0,
+      "state": "SAT",
+      "elapsed_s": 0.48789691692218184
+    },
+    {
+      "index": 1,
+      "state": "UNSAT",
+      "elapsed_s": 0.025640042033046484
+    },
+    {
+      "index": 2,
+      "state": "UNSAT",
+      "elapsed_s": 0.02412133291363716
+    }
+  ],
+  "protocol_events": [],
+  "self_guard": {
+    "reason": null,
+    "elapsed_s": 0.8590212920680642,
+    "wall_seconds": 12,
+    "handle_count": 0,
+    "all_reaped": true,
+    "returncodes": [],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.540658583,
+        "bytes": 18808832
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.576920833,
+        "bytes": 28803072
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.604600083,
+        "bytes": 31588352
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.638373958,
+        "bytes": 32669696
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.67777025,
+        "bytes": 35864576
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.720299916,
+        "bytes": 36913152
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.762840291,
+        "bytes": 37732352
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.805369166,
+        "bytes": 38748160
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.840383375,
+        "bytes": 39550976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.875404208,
+        "bytes": 41222144
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.905483541,
+        "bytes": 41222144
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.940503291,
+        "bytes": 41222144
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339781.975579875,
+        "bytes": 41222144
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.00746025,
+        "bytes": 41238528
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.042555125,
+        "bytes": 41238528
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.075074458,
+        "bytes": 41254912
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.108763333,
+        "bytes": 41271296
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.143944541,
+        "bytes": 41287680
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.169697083,
+        "bytes": 41287680
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.197822166,
+        "bytes": 41287680
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.232494333,
+        "bytes": 41304064
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.260212375,
+        "bytes": 41304064
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.293273916,
+        "bytes": 41304064
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.327698458,
+        "bytes": 41304064
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.362058333,
+        "bytes": 41517056
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.397099125,
+        "bytes": 41680896
+      }
+    ]
+  }
+}

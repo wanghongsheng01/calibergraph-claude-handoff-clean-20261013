@@ -1,0 +1,1135 @@
+{
+  "protocol_id": "natural-replay-feasibility-v1",
+  "sqlite_version": "3.43.2",
+  "pair_denominator": 6,
+  "query_slots_per_fixture": 12,
+  "fixture_denominator": 12,
+  "query_attempt_denominator": 24,
+  "results": [
+    {
+      "id": "dev_01",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/182.csv",
+      "source_sql_unchanged": [
+        "ed5bae22a37a77d713878814041cb552425baa5fc6bebc4c4fd7c0a915551978",
+        "78adb202ca2fb2d8f005c4d9be21787ff6ceae4190f4581b7a791117ea52041d"
+      ],
+      "legacy_full_contract": {
+        "status": "REJECTED",
+        "reason": "bridge v1 physical schema is INT only"
+      },
+      "natural_defect_label": "UNKNOWN",
+      "fixtures": [
+        {
+          "fixture": "empty",
+          "rows": {
+            "PERSON": []
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "EMAIL"
+              ],
+              "seconds": 1.4917000000003178e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "EMAIL"
+              ],
+              "seconds": 2.1709000000008638e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "PERSON__ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        },
+        {
+          "fixture": "tiny_synthetic",
+          "rows": {
+            "PERSON": [
+              {
+                "ID": 1,
+                "EMAIL": "a@example.invalid"
+              },
+              {
+                "ID": 2,
+                "EMAIL": "a@example.invalid"
+              }
+            ]
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  "a@example.invalid"
+                ]
+              ],
+              "column_names": [
+                "EMAIL"
+              ],
+              "seconds": 1.2207999999999664e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  "a@example.invalid"
+                ]
+              ],
+              "column_names": [
+                "EMAIL"
+              ],
+              "seconds": 2.7208000000000787e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "PERSON__ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        }
+      ]
+    },
+    {
+      "id": "dev_02",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/614.csv",
+      "source_sql_unchanged": [
+        "996aab7968f8be1e6e0145370e3228eaf9f98ee57e28da03b57838eb19731a91",
+        "9bb6fc726f07650c400e89a1a692e3289a00cc921900be91cab9a515f6edbaa0"
+      ],
+      "legacy_full_contract": {
+        "status": "REJECTED",
+        "reason": "bridge v1 physical schema is INT only"
+      },
+      "natural_defect_label": "UNKNOWN",
+      "fixtures": [
+        {
+          "fixture": "empty",
+          "rows": {
+            "FOLLOW": []
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "FOLLOWER",
+                "NUM"
+              ],
+              "seconds": 1.358299999999757e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "FOLLOWER",
+                "NUM"
+              ],
+              "seconds": 2.0417000000008678e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "FOLLOW__FOLLOWEE"
+                  },
+                  {
+                    "value": "FOLLOW__FOLLOWER"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "neq": [
+                  {
+                    "value": "FOLLOW__FOLLOWEE"
+                  },
+                  {
+                    "value": "FOLLOW__FOLLOWER"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        },
+        {
+          "fixture": "tiny_synthetic",
+          "rows": {
+            "FOLLOW": [
+              {
+                "FOLLOWEE": "a",
+                "FOLLOWER": "b"
+              },
+              {
+                "FOLLOWEE": "b",
+                "FOLLOWER": "c"
+              },
+              {
+                "FOLLOWEE": "b",
+                "FOLLOWER": "d"
+              }
+            ]
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  "b",
+                  2
+                ]
+              ],
+              "column_names": [
+                "FOLLOWER",
+                "NUM"
+              ],
+              "seconds": 1.958300000000357e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  "b",
+                  2
+                ]
+              ],
+              "column_names": [
+                "FOLLOWER",
+                "NUM"
+              ],
+              "seconds": 2.99579999999966e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "FOLLOW__FOLLOWEE"
+                  },
+                  {
+                    "value": "FOLLOW__FOLLOWER"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "neq": [
+                  {
+                    "value": "FOLLOW__FOLLOWEE"
+                  },
+                  {
+                    "value": "FOLLOW__FOLLOWER"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        }
+      ]
+    },
+    {
+      "id": "dev_03",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1075.csv",
+      "source_sql_unchanged": [
+        "294782b91028c60c0ed8a8892f1af24d363c4c6d2c89493d46f62d417bbf4ab3",
+        "4296723511c12a7aa1a0324fec1bd03d455773f12700debccf1bf6dccb34dbf4"
+      ],
+      "legacy_full_contract": {
+        "status": "REJECTED",
+        "reason": "bridge v1 physical schema is INT only"
+      },
+      "natural_defect_label": "UNKNOWN",
+      "fixtures": [
+        {
+          "fixture": "empty",
+          "rows": {
+            "EMPLOYEE": [],
+            "PROJECT": []
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "PROJECT_ID",
+                "AVERAGE_YEARS"
+              ],
+              "seconds": 1.3583999999997043e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "PROJECT_ID",
+                "AVERAGE_YEARS"
+              ],
+              "seconds": 1.179099999999711e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "PROJECT__PROJECT_ID"
+                  },
+                  {
+                    "value": "PROJECT__EMPLOYEE_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "EMPLOYEE__EMPLOYEE_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "PROJECT__EMPLOYEE_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE__EMPLOYEE_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "EMPLOYEE__EXPERIENCE_YEARS"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        },
+        {
+          "fixture": "tiny_synthetic",
+          "rows": {
+            "EMPLOYEE": [
+              {
+                "EMPLOYEE_ID": 1,
+                "EXPERIENCE_YEARS": 1,
+                "NAME": "a"
+              },
+              {
+                "EMPLOYEE_ID": 2,
+                "EXPERIENCE_YEARS": 2,
+                "NAME": "b"
+              }
+            ],
+            "PROJECT": [
+              {
+                "EMPLOYEE_ID": 1,
+                "PROJECT_ID": 1
+              },
+              {
+                "EMPLOYEE_ID": 2,
+                "PROJECT_ID": 1
+              }
+            ]
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  1,
+                  1.5
+                ]
+              ],
+              "column_names": [
+                "PROJECT_ID",
+                "AVERAGE_YEARS"
+              ],
+              "seconds": 2.270899999999576e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  1,
+                  1.0
+                ]
+              ],
+              "column_names": [
+                "PROJECT_ID",
+                "AVERAGE_YEARS"
+              ],
+              "seconds": 1.9457999999999975e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "PROJECT__PROJECT_ID"
+                  },
+                  {
+                    "value": "PROJECT__EMPLOYEE_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "EMPLOYEE__EMPLOYEE_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "PROJECT__EMPLOYEE_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE__EMPLOYEE_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "EMPLOYEE__EXPERIENCE_YEARS"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": false,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        }
+      ]
+    },
+    {
+      "id": "dev_04",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1581.csv",
+      "source_sql_unchanged": [
+        "5b93146ad5c47f09f400958c0e70d25b1e25ab1a89139138163edb99d96aa00b",
+        "6b052acc9c498c2f258243645866ac84b823a5e03db764103c3f5b60276c777f"
+      ],
+      "legacy_full_contract": {
+        "status": "REJECTED",
+        "reason": "$/0: unsupported operator primary"
+      },
+      "natural_defect_label": "UNKNOWN",
+      "fixtures": [
+        {
+          "fixture": "empty",
+          "rows": {
+            "TRANSACTIONS": [],
+            "VISITS": []
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "CUSTOMER_ID",
+                "COUNT_NO_TRANS"
+              ],
+              "seconds": 1.1250000000004312e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "CUSTOMER_ID",
+                "COUNT_NO_TRANS"
+              ],
+              "seconds": 1.1958000000006352e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "VISITS__VISIT_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "TRANSACTIONS__TRANSACTION_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "TRANSACTIONS__VISIT_ID"
+                  },
+                  {
+                    "value": "VISITS__VISIT_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        },
+        {
+          "fixture": "tiny_synthetic",
+          "rows": {
+            "VISITS": [
+              {
+                "VISIT_ID": 1,
+                "CUSTOMER_ID": 1
+              },
+              {
+                "VISIT_ID": 2,
+                "CUSTOMER_ID": 1
+              }
+            ],
+            "TRANSACTIONS": [
+              {
+                "TRANSACTION_ID": 1,
+                "VISIT_ID": 1,
+                "AMOUNT": 2
+              }
+            ]
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "column_names": [
+                "CUSTOMER_ID",
+                "COUNT_NO_TRANS"
+              ],
+              "seconds": 2.362499999999934e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  1,
+                  1
+                ]
+              ],
+              "column_names": [
+                "CUSTOMER_ID",
+                "COUNT_NO_TRANS"
+              ],
+              "seconds": 1.7749999999996935e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "VISITS__VISIT_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "TRANSACTIONS__TRANSACTION_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "TRANSACTIONS__VISIT_ID"
+                  },
+                  {
+                    "value": "VISITS__VISIT_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        }
+      ]
+    },
+    {
+      "id": "dev_05",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1587.csv",
+      "source_sql_unchanged": [
+        "9cb094bbee5449bf6bd080b7cd54f2fac8ba3accb4d88c747bb3c8a3713dca55",
+        "dfdfee4373f38160b3ffe67973086f473f43bba27711a7d700fefdb79d51b125"
+      ],
+      "legacy_full_contract": {
+        "status": "REJECTED",
+        "reason": "bridge v1 physical schema is INT only"
+      },
+      "natural_defect_label": "UNKNOWN",
+      "fixtures": [
+        {
+          "fixture": "empty",
+          "rows": {
+            "TRANSACTIONS": [],
+            "USERS": []
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "NAME",
+                "BALANCE"
+              ],
+              "seconds": 1.2125000000001718e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [],
+              "column_names": [
+                "NAME",
+                "BALANCE"
+              ],
+              "seconds": 9.916999999998177e-06
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "USERS__ACCOUNT"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "USERS__NAME"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "TRANSACTIONS__TRANS_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "TRANSACTIONS__ACCOUNT"
+                  },
+                  {
+                    "value": "USERS__ACCOUNT"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        },
+        {
+          "fixture": "tiny_synthetic",
+          "rows": {
+            "USERS": [
+              {
+                "ACCOUNT": 1,
+                "NAME": "a"
+              }
+            ],
+            "TRANSACTIONS": [
+              {
+                "TRANS_ID": 1,
+                "ACCOUNT": 1,
+                "AMOUNT": 6000,
+                "TRANSACTED_ON": "2020-01-01"
+              },
+              {
+                "TRANS_ID": 2,
+                "ACCOUNT": 1,
+                "AMOUNT": 6001,
+                "TRANSACTED_ON": "2020-01-02"
+              }
+            ]
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  "a",
+                  12001
+                ]
+              ],
+              "column_names": [
+                "NAME",
+                "BALANCE"
+              ],
+              "seconds": 1.833299999999538e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  "a",
+                  12001
+                ]
+              ],
+              "column_names": [
+                "NAME",
+                "BALANCE"
+              ],
+              "seconds": 1.6834000000007232e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "USERS__ACCOUNT"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "USERS__NAME"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "TRANSACTIONS__TRANS_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "TRANSACTIONS__ACCOUNT"
+                  },
+                  {
+                    "value": "USERS__ACCOUNT"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        }
+      ]
+    },
+    {
+      "id": "dev_06",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1715.csv",
+      "source_sql_unchanged": [
+        "b1eb638585980563b8f52d129a476117d50af143b97749a4a84d18e24fe7e4c5",
+        "b6d8aed251d91785d075d2d71aa5a5b4df9a4be9c910b998b1c6edbe73c408ed"
+      ],
+      "legacy_full_contract": {
+        "status": "REJECTED",
+        "reason": "$/0: unsupported operator primary"
+      },
+      "natural_defect_label": "UNKNOWN",
+      "fixtures": [
+        {
+          "fixture": "empty",
+          "rows": {
+            "BOXES": [],
+            "CHESTS": []
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  null,
+                  null
+                ]
+              ],
+              "column_names": [
+                "APPLE_COUNT",
+                "ORANGE_COUNT"
+              ],
+              "seconds": 1.3292000000011961e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  null,
+                  null
+                ]
+              ],
+              "column_names": [
+                "APPLE_COUNT",
+                "ORANGE_COUNT"
+              ],
+              "seconds": 9.666000000005393e-06
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "BOXES__BOX_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "CHESTS__CHEST_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "BOXES__CHEST_ID"
+                  },
+                  {
+                    "value": "CHESTS__CHEST_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "BOXES__APPLE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "BOXES__ORANGE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "CHESTS__APPLE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "CHESTS__ORANGE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        },
+        {
+          "fixture": "tiny_synthetic",
+          "rows": {
+            "BOXES": [
+              {
+                "BOX_ID": 1,
+                "CHEST_ID": 1,
+                "APPLE_COUNT": 2,
+                "ORANGE_COUNT": 3
+              }
+            ],
+            "CHESTS": [
+              {
+                "CHEST_ID": 1,
+                "APPLE_COUNT": 4,
+                "ORANGE_COUNT": 5
+              }
+            ]
+          },
+          "constraint_status": "PASS_ON_THIS_NO_NULL_FIXTURE",
+          "queries": [
+            {
+              "query_index": 0,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  6,
+                  8
+                ]
+              ],
+              "column_names": [
+                "APPLE_COUNT",
+                "ORANGE_COUNT"
+              ],
+              "seconds": 1.8041999999995895e-05
+            },
+            {
+              "query_index": 1,
+              "status": "RETURNED",
+              "rows": [
+                [
+                  6,
+                  8
+                ]
+              ],
+              "column_names": [
+                "APPLE_COUNT",
+                "ORANGE_COUNT"
+              ],
+              "seconds": 1.545899999999545e-05
+            }
+          ],
+          "constraint_checks": [
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "BOXES__BOX_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "primary": [
+                  {
+                    "value": "CHESTS__CHEST_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "foreign": [
+                  {
+                    "value": "BOXES__CHEST_ID"
+                  },
+                  {
+                    "value": "CHESTS__CHEST_ID"
+                  }
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "BOXES__APPLE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "BOXES__ORANGE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "CHESTS__APPLE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            },
+            {
+              "constraint": {
+                "gte": [
+                  {
+                    "value": "CHESTS__ORANGE_COUNT"
+                  },
+                  0
+                ]
+              },
+              "status": "PASS_ON_THIS_FIXTURE_ONLY"
+            }
+          ],
+          "sqlite_bag_equal_on_this_fixture": true,
+          "comparison_scope": "SQLite bag comparison only; not upstream dialect truth, no equivalence conclusion"
+        }
+      ]
+    }
+  ],
+  "scope": "All original SQL and full source schema/constraints preserved. Separate literal constraint checker on fixed no-NULL fixtures. SQLite is a replay feasibility control, not a replacement verifier.",
+  "worker_usage": {
+    "wall_seconds": 0.03503150000000001,
+    "cpu_user_seconds": 0.107844,
+    "cpu_system_seconds": 0.011652,
+    "maxrss_bytes_macos": 28590080
+  }
+}

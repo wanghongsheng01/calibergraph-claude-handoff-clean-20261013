@@ -1,0 +1,66 @@
+--- a/polygon/environment.py
++++ b/polygon/environment.py
+@@ -181 +181,8 @@
+-    def check(self, q1, q2, use_precise_encoding=False):
++    def check(self, q1, q2, use_precise_encoding=False, *,
++              solver_timeout_seconds):
++        if type(solver_timeout_seconds) is not int or solver_timeout_seconds <= 0:
++            raise ValueError("solver_timeout_seconds must be a positive integer")
++        if getattr(self, "_serial_case_used", False):
++            raise RuntimeError("serial adapter requires a fresh Environment per case")
++        self._serial_case_used = True
++        self.formulas.timeout = solver_timeout_seconds
+@@ -274,29 +281,19 @@
+-        with multiprocess.Manager() as manager:
+-            ret = manager.dict()
+-
+-            process = multiprocess.Process(target=task, args=(ret,))
+-            process.start()
+-
+-            start = datetime.datetime.now()
+-            process.join(self.time_budget)
+-
+-            if process.is_alive():
+-                process.terminate()
+-                ret['status'] = 'TMO'
+-                ret['complete_time'] = datetime.datetime.now()
+-
+-            if ret['status'] == 'ERR':
+-                return None, None, None, None, dict(ret)
+-
+-            total_time = (ret['complete_time'] - start).total_seconds()
+-
+-            self.clear()
+-
+-            # print(ret)
+-
+-            if ret['status'] == 'NEQ':
+-                return False, ret['cex'], None, total_time, dict(ret)
+-            elif ret['status'] == 'TMO':
+-                return None, None, None, total_time, dict(ret)
+-            else:
+-                return True, None, None, total_time, dict(ret)
++        ret = {}
++        start = datetime.datetime.now()
++        task(ret)
++
++        if ret['status'] == 'ERR':
++            return None, None, None, None, dict(ret)
++
++        total_time = (ret['complete_time'] - start).total_seconds()
++
++        self.clear()
++
++        # print(ret)
++
++        if ret['status'] == 'NEQ':
++            return False, ret['cex'], None, total_time, dict(ret)
++        elif ret['status'] == 'TMO':
++            return None, None, None, total_time, dict(ret)
++        else:
++            return True, None, None, total_time, dict(ret)
+--- a/polygon/smt/formula.py
++++ b/polygon/smt/formula.py
+@@ -500 +500 @@
+-            executable_options=['--in', f'-T:300'],
++            executable_options=['--in', f'-T:{self.timeout}'],

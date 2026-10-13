@@ -1,0 +1,78 @@
+{
+  "polygon_commit": "5e18237394d025dbb805cf833b4f54c321470774",
+  "serial_overlay": "calibergraph_polygon_serial_adapter_20261012_11",
+  "verified_prior_freeze_files": 336,
+  "anchors": [
+    {
+      "topic": "existing_worker_type_map",
+      "file": "calibergraph_polygon_pilot_20261012_13/slot_worker.py",
+      "sha256": "5706d2a6e07c4abe452d76e8405158bb5586d598e84c523d9d3b00290fa62419",
+      "lines_1based": [
+        92
+      ],
+      "verified_source_not_dynamic_execution": true
+    },
+    {
+      "topic": "Int_cell",
+      "file": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/smt/provers/smtlibv2.py",
+      "sha256": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc",
+      "lines_1based": [
+        156
+      ],
+      "verified_source_not_dynamic_execution": true
+    },
+    {
+      "topic": "date_decoder_clamp",
+      "file": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/smt/provers/smtlibv2.py",
+      "sha256": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc",
+      "lines_1based": [
+        275,
+        285
+      ],
+      "verified_source_not_dynamic_execution": true
+    },
+    {
+      "topic": "cast_identity",
+      "file": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/visitors/expression_encoder.py",
+      "sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+      "lines_1based": [
+        611
+      ],
+      "verified_source_not_dynamic_execution": true
+    },
+    {
+      "topic": "float_literal_Int",
+      "file": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/visitors/expression_encoder.py",
+      "sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+      "lines_1based": [
+        658
+      ],
+      "verified_source_not_dynamic_execution": true
+    },
+    {
+      "topic": "like_branch_present",
+      "file": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/visitors/expression_encoder.py",
+      "sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+      "lines_1based": [
+        449
+      ],
+      "verified_source_not_dynamic_execution": true
+    },
+    {
+      "topic": "primary_nonnull",
+      "file": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/formulas/integrity_constraint.py",
+      "sha256": "41680a9100cf653feb05bc4d4ca174ccc7c5e8ac1c0dc6eba8737f4526bed871",
+      "lines_1based": [
+        41
+      ],
+      "verified_source_not_dynamic_execution": true
+    }
+  ],
+  "absence_check": {
+    "files": [
+      "polygon/sql_parser.py",
+      "polygon/visitors/expression_encoder.py"
+    ],
+    "substr_substring_strftime": "No explicit encoder branch, not proof no parser normalization; not a new dynamic unsupported result"
+  }
+}

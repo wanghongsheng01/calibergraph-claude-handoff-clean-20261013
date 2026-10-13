@@ -1,0 +1,51 @@
+{
+  "access_date": "2026-10-11",
+  "source_policy": "Primary papers/dissertation only; read-only web inspection; no third-party paper bytes vendored",
+  "references": [
+    {
+      "id": "BDFS1984",
+      "authors": ["Catriel Beeri", "Martin Dowd", "Ronald Fagin", "Richard Statman"],
+      "title": "On the Structure of Armstrong Relations for Functional Dependencies",
+      "venue": "Journal of the ACM 31(1):30-46, 1984",
+      "doi": "10.1145/2422.322414",
+      "url": "https://www.researchgate.net/publication/220431370_On_the_Structure_of_Armstrong_Relations_for_Functional_Dependencies",
+      "inspected_anchor": "Section 3, Lemma 3.1, printed pp.33-34, and immediately following constructive proof",
+      "supports": "Two-tuple FD nonimplication witness agrees on attribute closure and differs outside it",
+      "does_not_claim": "That this paper explicitly states the exact SQL/combined-query specialization in this report",
+      "novelty_effect": "Decisive prior art for the proposed constructor"
+    },
+    {
+      "id": "Cohen2026v1",
+      "authors": ["Sara Cohen"],
+      "title": "Few Rows Tell Them Apart: Equivalence of Queries Mixing Set and Bag Semantics",
+      "url": "https://arxiv.org/html/2609.09978v1",
+      "version": "arXiv v1, 2026-09-09; preprint",
+      "inspected_anchor": "Section 2 projected-assignment semantics; Section 3 Theorems 4/7; Section 4 Lemma 11, Theorems 13/15, and final residual-open-case paragraph",
+      "supports": "FD-determined counted-variable demotion; constrained witness theorem requires key-anchorability; general residual realizability problem remains",
+      "does_not_claim": "An unrestricted PK/FK bound or novelty of the same-body FD-closure specialization",
+      "novelty_effect": "Sufficiency is directly the known demotion/projection-bijection rule; simple hidden-key projection cases also reduce to its unconstrained scope"
+    },
+    {
+      "id": "DeHaan2009",
+      "authors": ["David E. DeHaan"],
+      "title": "Equivalence of Queries with Nested Aggregation",
+      "type": "University of Waterloo dissertation, 2009",
+      "url": "https://uwspace.uwaterloo.ca/bitstreams/75481061-96ae-4f14-89b7-44c6aab72683/download",
+      "inspected_anchor": "Appendix A.2, Definitions A.2.1-A.2.4; Theorem A.2.5; Corollaries A.2.6-A.2.8; printed pp.170-171 / PDF pages 190-191 in one-based viewer counting",
+      "supports": "Positive-integer diversification points and multiplicity-polynomial separation predate the proposed mechanism",
+      "does_not_claim": "Preservation of arbitrary PK/FK legality by every diversification",
+      "novelty_effect": "No new PIT or randomized polynomial mechanism is claimed"
+    },
+    {
+      "id": "ChirkovaGenesereth2009v3",
+      "authors": ["Rada Chirkova", "Michael R. Genesereth"],
+      "title": "Equivalence of SQL Queries In Presence of Embedded Dependencies",
+      "url": "https://arxiv.org/html/0812.2195v3",
+      "doi": "10.1145/1559795.1559829",
+      "inspected_anchor": "Section 2.1 classical set-containment homomorphisms; Section 2.4 Theorem 2.3; Section 6.1, Theorems 6.1 and 6.2; Section 6.2, Theorem 6.5",
+      "supports": "Classical set-containment homomorphisms and set-chase reduction; sound dependency-chase reductions for bag/bag-set CQ equivalence when set chase terminates",
+      "does_not_claim": "A direct general partial-counting theorem or the correctness of unrestricted ordinary set chase for bag semantics",
+      "novelty_effect": "Chase followed by existing equivalence methods is established architecture"
+    }
+  ]
+}

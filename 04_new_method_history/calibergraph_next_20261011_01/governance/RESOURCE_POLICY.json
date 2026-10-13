@@ -1,0 +1,25 @@
+{
+  "local_concurrency": 1,
+  "OMP_NUM_THREADS": 1,
+  "OPENBLAS_NUM_THREADS": 1,
+  "MKL_NUM_THREADS": 1,
+  "nice": 15,
+  "static_or_sqlite": {
+    "max_wall_seconds": 60,
+    "max_cpu_seconds": 30,
+    "max_rss_mib": 256,
+    "max_1min_load": 6.0
+  },
+  "solver": {
+    "status": "HOLD_RESOURCE_PRESSURE",
+    "max_compressor_gib_to_start": 6.0,
+    "max_wall_seconds_per_case": 5,
+    "max_total_wall_seconds": 60,
+    "max_rss_mib": 384,
+    "no_large_queue": true
+  },
+  "missing_resource_observation": "STOP_UNOBSERVABLE",
+  "other_processes": "never terminate or reprioritize unrelated_project/other tasks",
+  "gpu_api_budget": 0,
+  "scope": "first-round feasibility only"
+}

@@ -1,0 +1,9 @@
+# 保留导入失败后完成剩余单元测试
+
+首段run_once已关闭，连续耗时0.10004812525585294秒。8份原SQL候选作者回放全部通过，独立验证器已完成全部8份新库重建、完整C与bag核对并保存；其后COUNT段因作者未生成补丁而FileNotFound，整体independent_validation状态FAILED，不能覆盖或称整体首段通过。
+
+原因是作者额外加入SQLParser导入，mo_imports依赖请求启动监控线程，被Thread.start禁止门阻止；实际线程未启动。用户要求的是COUNT(*)最小编码边界单测，不需要完整parser。新count_star_ast_only.py仅移除parser导入/演示，不修改真实encoder或数据矩阵。保留parser路径未动态验收的限制；不得忽略此失败、允许后台线程或冒称完整pipeline测试通过。
+
+用户“总60秒、一线程”授权继续适用，未要求失败即停止；修复测试入口并完成同一目标无需另问。第二段仅运行COUNT作者真实AST测试及独立validate_count_ast，不重做已完成SQLite候选。共享累计执行时间上限60秒，剩余59.899951874744秒；仍共同锁、单线程、禁止native/network。这是两个执行时间窗口的累计预算，不能再写成所有工作一个连续批次。准备/审阅时间不计为计算执行时间。
+
+原19代码、FREEZE、ATTEMPT、BATCH结果/关闭标记及独审失败记录保持原字节；新入口、新冻结和新结果以COUNT_COMPLETION命名，失败保留。无新数据来源/Polygon求解/Z3/提交推送，基线不改。

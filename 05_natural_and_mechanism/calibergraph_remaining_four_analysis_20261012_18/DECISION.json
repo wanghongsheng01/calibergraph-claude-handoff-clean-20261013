@@ -1,0 +1,52 @@
+{
+  "status": "ANALYSIS_ONLY",
+  "cases": [
+    {
+      "case": "debit_card_specializing__1490",
+      "N_gt_1_required": false,
+      "minimum_witness": "NONE_IDENTIFIED; standard built-in equivalence reasoning",
+      "evidence": "STATIC_DERIVATION_NOT_MACHINE_PROOF",
+      "next_solver": false
+    },
+    {
+      "case": "european_football_2__1073",
+      "N_gt_1_required": false,
+      "minimum_N_candidate": 1,
+      "candidate_total_rows": 2,
+      "evidence": "STATIC_CANDIDATE_NOT_REPLAYED; official DB unavailable",
+      "next_solver": false
+    },
+    {
+      "case": "california_schools__45",
+      "N_gt_1_required": "ONLY_FOR_GROUP_MERGING_PHENOMENON",
+      "source_domain_minimum_N_candidate": 1,
+      "group_merging_minimum_N": 2,
+      "group_merging_total_rows": 4,
+      "evidence": "STATIC_CANDIDATE_NOT_REPLAYED; original official DB unavailable",
+      "next_solver": false
+    },
+    {
+      "case": "debit_card_specializing__1526",
+      "N_gt_1_required": false,
+      "minimum_N_candidate": 1,
+      "candidate_total_rows": 4,
+      "evidence": "STATIC_CANDIDATE_NOT_REPLAYED; official wasUNKNOWN notNEQ",
+      "source_text_conflict": "question2012/8/25 versus evidence2012/8/24",
+      "next_solver": false
+    }
+  ],
+  "new_mechanism_hypothesis": null,
+  "selected_next_solver_experiments": [],
+  "anti_masking": "CLOSED",
+  "proposed_direction": "Source-evidence qualification of governed-caliber errors; HOLD until source-supported target and independent task evidence; no revival of known conditional-verification mechanisms",
+  "coverage_unchanged": {
+    "development": 10,
+    "valid": 8,
+    "completed_bounded_runs": 4,
+    "unadmitted": 4,
+    "invalid": 2
+  },
+  "no_new_test_set": true,
+  "all_new_witnesses": "STATIC_NOT_EXECUTED",
+  "backup_status": "BACKUP_BLOCKED_BY_EXPLICIT_NO_PUSH"
+}

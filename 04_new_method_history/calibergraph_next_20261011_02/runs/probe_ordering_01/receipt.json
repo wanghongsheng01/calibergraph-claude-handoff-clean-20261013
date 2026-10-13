@@ -1,0 +1,37 @@
+{
+  "status": "NOT_RUN_RESOURCE_GATE",
+  "supervisor_sha256": "ce6f79756f114cc92a10e7886a791fce60db8a95dc8076ee00258e0bab946182",
+  "freeze_sha256": "47b8541b4f46ba31876952ea95232be64fd1f8869620ea05be1d7fe97cede959",
+  "protocol_sha256": "5e546b8d469928b82b397907bb991be0de3e8ff91f5a0a3a099b3f3e07ffc5a2",
+  "worker": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/code/probe_ordering.py",
+  "resource_policy": {
+    "scope": "Round 02, one serial tiny worker; no large queue or GPU/API",
+    "version": 2,
+    "maximum_active_workers": 1,
+    "nice": 15,
+    "max_1min_load": 4.0,
+    "min_memory_available_percentage": 25,
+    "max_cpu_seconds": 10,
+    "max_wall_seconds": 25,
+    "max_rss_bytes": 268435456,
+    "solver_timeout_ms": 500,
+    "z3_memory_max_mb": 128,
+    "thread_environment": 1,
+    "missing_observation": "STOP_UNOBSERVABLE",
+    "justification": "01 compressor<=6GiB was a conservative proxy and remains frozen. Round02 reads actual macOS memory_pressure -Q availability (observed 33%, load2.98 before registration), uses >=25% available (4GiB on this16GiB host), and tightens each worker to10CPU seconds/256MiB with serialnice15. This revised criterion is explicit and does not claim unrelated_project performance is unaffected.",
+    "forbidden": "No signals/reprioritization of other tasks; no installs, GPU/API, reserve/test access, or old-source writes."
+  },
+  "sampled_peak_rss_bytes": 0,
+  "observations": 0,
+  "preflight": {
+    "utc": "2026-10-11T12:01:10.934785+00:00",
+    "load": [
+      6.13232421875,
+      4.72021484375,
+      3.87353515625
+    ],
+    "memory_available_percentage": 36,
+    "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 36%\n",
+    "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                3457.\nPages active:                            184516.\nPages inactive:                          166861.\nPages speculative:                        16853.\nPages throttled:                              0.\nPages wired down:                        211029.\nPages purgeable:                              2.\n\"Translation faults\":               30516791815.\nPages copy-on-write:                  700321738.\nPages zero filled:                  13064065739.\nPages reactivated:                   5569046630.\nPages purged:                         298467513.\nFile-backed pages:                       116346.\nAnonymous pages:                         251884.\nPages stored in compressor:             3500867.\nPages occupied by compressor:            426152.\nDecompressions:                      7508017922.\nCompressions:                        7812364531.\nPageins:                             8233252865.\nPageouts:                              12424278.\nSwapins:                               67305003.\nSwapouts:                              75790890.\n"
+  }
+}

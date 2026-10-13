@@ -1,0 +1,240 @@
+{
+  "sqlite_version": "3.43.2",
+  "original_ddl": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_coverage_boundary_20261012_09/sources_local/thrombosis_prediction__1172/full-schema.sql",
+  "cross_product_cases": 7500,
+  "occupancy_cases": 11,
+  "fk_cases": [
+    {
+      "parent": "1",
+      "child": "'01'",
+      "outputs": [
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "1",
+      "child": "'1.0'",
+      "outputs": [
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "1",
+      "child": "'1e0'",
+      "outputs": [
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "1",
+      "child": "1.0",
+      "outputs": [
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "0",
+      "child": "-0.0",
+      "outputs": [
+        1,
+        0
+      ]
+    },
+    {
+      "parent": "-9223372036854775808",
+      "child": "-9.223372036854776e+18",
+      "source_rejected": "FOREIGN KEY constraint failed"
+    },
+    {
+      "parent": "9223372036854775807",
+      "child": "'9223372036854775807'",
+      "outputs": [
+        1,
+        0
+      ]
+    }
+  ],
+  "tbil_storage_truth_table": [
+    {
+      "input_repr": "None",
+      "storage": "null",
+      "ge": null,
+      "gt": null,
+      "isnull": 1
+    },
+    {
+      "input_repr": "-inf",
+      "storage": "real",
+      "ge": 0,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "-9223372036854775808",
+      "storage": "real",
+      "ge": 0,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "-0.0",
+      "storage": "real",
+      "ge": 0,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "0",
+      "storage": "real",
+      "ge": 0,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "1.9999999999999998",
+      "storage": "real",
+      "ge": 0,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "2",
+      "storage": "real",
+      "ge": 1,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "2.0",
+      "storage": "real",
+      "ge": 1,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "2.0000000000000004",
+      "storage": "real",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "9223372036854775807",
+      "storage": "real",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "inf",
+      "storage": "real",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "nan",
+      "storage": "null",
+      "ge": null,
+      "gt": null,
+      "isnull": 1
+    },
+    {
+      "input_repr": "''",
+      "storage": "text",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'2'",
+      "storage": "real",
+      "ge": 1,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'2.0'",
+      "storage": "real",
+      "ge": 1,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "' 2 '",
+      "storage": "real",
+      "ge": 1,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'2e0'",
+      "storage": "real",
+      "ge": 1,
+      "gt": 0,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'2x'",
+      "storage": "text",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'NaN'",
+      "storage": "text",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'Inf'",
+      "storage": "text",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'1e999'",
+      "storage": "real",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "'0x2'",
+      "storage": "text",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "b''",
+      "storage": "blob",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "b'2'",
+      "storage": "blob",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    },
+    {
+      "input_repr": "b'M'",
+      "storage": "blob",
+      "ge": 1,
+      "gt": 1,
+      "isnull": 0
+    }
+  ],
+  "result": "PASS",
+  "scope": "Independent SQLite unit checks only; no solver, scientific run, or benchmark result. Universal claim relies on the accompanying argument, not enumeration."
+}

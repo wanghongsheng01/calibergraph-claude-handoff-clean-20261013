@@ -1,0 +1,343 @@
+{
+  "verdict": "PASS_WITH_LIMITS",
+  "review_date_utc": "2026-10-12T09:03:55.644608+00:00",
+  "reviewer_task": "/root/polygon11_serial_independent_review",
+  "non_author_review": true,
+  "scope": "Offline static patch review and dependency-injected method tests only; no complete runtime or scientific equivalence claim.",
+  "upstream_commit_from_frozen_provenance": "5e18237394d025dbb805cf833b4f54c321470774",
+  "upstream_provenance_transport": "GitHub connector UTF-8 text snapshot; remote commit not revalidated by network during this review",
+  "reviewed_sha256": {
+    "RESULT.zh.md": "d6a66555f4e8ae3096d5273b25461e4b179730e9562a8741946a6f86f8ba3090",
+    "build_adapter.py": "506bac04b75de1f308f48d2655855016e23966d6a17c4f6ccdf318197d93f5ff",
+    "test_adapter.py": "81aa6621d8dcb0433a73ea24b0a5369a3ea81a5556503d51a64e20074df051db",
+    "isolated_local/serial.patch": "bc4f72b62875efaeb4ec04862f373489acd1790689f3c8ac0ba48c7eda52e9f8",
+    "BUILD.json": "6b99e928dc16ae1019e157783b546a14668b5e695e01544eb49a820b6ca64757",
+    "isolated_local/BUILD.json": "6b99e928dc16ae1019e157783b546a14668b5e695e01544eb49a820b6ca64757",
+    "TEST_RESULTS.json": "69af5ff80c0b36c139c6132825602d19fb270706b75b7aaf3b972927e4aa1060",
+    "ADAPTER_CONTRACT.json": "1bbb89c832c33c1faab897331fa5013445eace148c85ba010c206003849eae80",
+    "INVARIANTS.json": "74d16c7775be14a378ac70c2d44876239842096bac664f35f898682c940387e5",
+    "isolated_local/polygon/environment.py": "1356e2e688f268d69aee635df5b3f92864966f2c4b978b986635402682b3b65f",
+    "isolated_local/polygon/smt/formula.py": "6f65a9c6f251da5afb96604f1483ddb916d2111ef9c17ca7371016baff8a695d",
+    "isolated_local/polygon/smt/provers/smtlibv2.py": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc"
+  },
+  "upstream_sha256": {
+    "polygon/environment.py": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+    "polygon/smt/formula.py": "ecdc290227e8c717fa20065313331b605fd54566a844ec9ce88c6d99190207cc",
+    "polygon/smt/provers/smtlibv2.py": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc"
+  },
+  "author_reported_tests": {
+    "tests_run": 8,
+    "failures": 0,
+    "errors": 0,
+    "source": "TEST_RESULTS.json; not treated as independent proof"
+  },
+  "independent_validation": {
+    "interpreter": "/opt/homebrew/bin/python3.12",
+    "python_version": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "author_tests_replayed_without_main": {
+      "tests_run": 7,
+      "failures": 0,
+      "errors": 0,
+      "tests": [
+        "test_actual_cover_ua_generator_random_stream",
+        "test_precise_captures_same_timeout_and_unchanged_dump",
+        "test_results_order_queries_and_random_trace_at_task_seam",
+        "test_single_use_including_error_and_parse_failure",
+        "test_solver_logic_ast_identical_except_precise_timeout",
+        "test_task_body_byte_identical_and_other_methods_unchanged",
+        "test_timeout_required_and_invalid_values_fail_before_parse"
+      ]
+    },
+    "author_test_not_replayed": {
+      "name": "test_build_hash_gate_and_no_overwrite",
+      "reason": "Honor reviewer write scope: do not create temporary output trees. Builder reviewed statically; all three outputs and patch reconstructed in memory."
+    },
+    "in_memory_reconstruction": {
+      "overlay_files_byte_identical": 3,
+      "patch_byte_identical": true,
+      "top_and_overlay_build_json_byte_identical": true
+    },
+    "task_source_text_identical": true,
+    "other_environment_methods_ast_identical": [
+      "__init__",
+      "next_table_id",
+      "string_hash",
+      "lookup_string",
+      "load_schema",
+      "disambiguate",
+      "o1_eq_o2",
+      "copy_cell",
+      "clear"
+    ],
+    "formula_full_ast_equal_except_precise_timeout": true,
+    "smtlibv2_byte_identical": true,
+    "solver_constructor_seams": [
+      {
+        "method": "search",
+        "original_seconds_given_timeout_field_3": 3,
+        "adapted_seconds_given_timeout_field_3": 3
+      },
+      {
+        "method": "search_naive",
+        "original_seconds_given_timeout_field_3": 3,
+        "adapted_seconds_given_timeout_field_3": 3
+      },
+      {
+        "method": "backtrack",
+        "original_seconds_given_timeout_field_3": 3,
+        "adapted_seconds_given_timeout_field_3": 3
+      },
+      {
+        "method": "solve_precise",
+        "original_seconds_given_timeout_field_3": 300,
+        "adapted_seconds_given_timeout_field_3": 3
+      }
+    ],
+    "clear_with_inert_dependencies": {
+      "single_use_guard_persists": true,
+      "initialized_remains_true": true,
+      "curr_query_id_remains_1": true,
+      "real_constraint_encoding": false
+    },
+    "return_alias_probe": {
+      "original_copying_dict_shim_same_object": false,
+      "serial_same_object": true,
+      "mutation_of_result_1_also_changes_result_4_cex": {
+        "original_shim": false,
+        "serial": true
+      }
+    },
+    "unhandled_output_decode_probe": {
+      "old_child_failure_model_exception": "KeyError: status",
+      "serial_exception": "ValueError: debug output decode fixture",
+      "clear_called": false,
+      "real_process_semantics_tested": false
+    },
+    "frozen_invariants_rehashed": {
+      "frozen_inputs_and_old_marker": 9,
+      "upstream_content": 24
+    },
+    "forbidden_audit_events": [],
+    "polygon_modules_imported": [],
+    "test_created_child_processes": 0,
+    "real_solver_executions": 0,
+    "sql_executions": 0,
+    "real_polygon_encoding_executions": 0,
+    "audit_hook_limit": "Finite Python audit event denylist, not OS sandbox or proof about complete upstream runtime."
+  },
+  "resolved_review_findings": [
+    {
+      "id": "R1",
+      "topic": "Unhandled task exceptions",
+      "finding": "Output-table evaluate_table runs outside task try blocks; direct-call exception propagation differs from old child failure delivery.",
+      "resolution": "Final RESULT explicitly excludes unhandled exception type/stack and process isolation side effects from equivalence; task left unchanged."
+    },
+    {
+      "id": "R2",
+      "topic": "Return aliasing",
+      "finding": "Normal dict makes result[1] and result[4][cex] aliases; Manager values are copied.",
+      "resolution": "Final RESULT narrows the content contract to read-only consumption, excluding identity and mutation coupling."
+    },
+    {
+      "id": "R3",
+      "topic": "Shared module state",
+      "finding": "TableSchema.__getitem__ has class-level @cache; clear() does not clear module caches and does not reset initialized/curr_query_id. A new Environment alone is insufficient.",
+      "resolution": "Final RESULT and ADAPTER_CONTRACT require disposal of the exclusive process/module execution context; no long-lived shared-interpreter multi-case claim."
+    }
+  ],
+  "mandatory_code_fixes_remaining": [],
+  "conditions_and_limits": [
+    "Valid positive integer timeout required; frozen configuration is 3 seconds. The generic entrypoint accepts other positive integers, which are outside this frozen run contract.",
+    "One accepted check attempt per fresh exclusive Environment, including parse/encoding/solver errors; invalid timeout validation occurs before the guard is consumed.",
+    "Fresh Environment plus matching process/module/hash/RNG task-entry state; discard exclusive execution context after case, not only Environment.",
+    "No general Environment/disambiguate compatibility or concurrency equivalence.",
+    "RNG preservation means unchanged source calls under matching entry state and control flow; no evidence for past fork/spawn state. cover_ua tops_ratio RNG test is not a real check-path random-flow test.",
+    "Read-only plain-data return contents at tested seams only; no object identity, IPC, serialization, timing or unhandled-exception equivalence.",
+    "The 3-second flag is per external Z3 invocation and does not bound the entire case or Python response.",
+    "Original precise flag is 300 seconds; UA inherited time_budget. Changing these budgets can change outcomes and cannot establish official runtime/performance reproduction.",
+    "No real SQL, full C, encoder, solver, model, historical random trace or scientific conclusion verified."
+  ],
+  "future_runtime_prerequisites_not_research_no_go": [
+    "Complete the pinned upstream installation with currently missing modules.",
+    "Implement a whole-case deadline around the exclusive runtime.",
+    "Own and track every created Z3 handle, close/terminate/wait/reap on all exits, including prior handles replaced by repeated check calls.",
+    "Account for Python plus every live owned Z3 process in the pre-existing sampled 1 GiB memory policy; sampling is not a hard ceiling.",
+    "Address SMTLIBv2 EOF/unknown/timeout response loop before any claim of bounded Python return."
+  ],
+  "review_writes": [
+    "INDEPENDENT_REVIEW.zh.md",
+    "INDEPENDENT_REVIEW.json"
+  ],
+  "backup_scope": "This delegated reviewer did not alter Git, invoke network, or verify backup; parent owns delivery and backup reporting.",
+  "invariant_evidence": {
+    "frozen_inputs_and_old_marker": [
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/toxicology__319/gold.sql",
+        "sha256": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/toxicology__319/predicted.sql",
+        "sha256": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/toxicology__319/full-schema.sql",
+        "sha256": "33b439b05b6084604baa2b55dd02cc4f9452cc4910a186b58c6ecc4d0065874f",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/toxicology__319/official-record.json",
+        "sha256": "070750ad1d43039c3ed493663ee94ee4f5c932bdff69ddd7ee692a7930835ed5",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/gold.sql",
+        "sha256": "38c15c2084d1fc42087eb4f64f9119c6527043958aa5f0b2febd0601499e0513",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/predicted.sql",
+        "sha256": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/full-schema.sql",
+        "sha256": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/official-record.json",
+        "sha256": "efa79a00e13c4d1d0fdb1aa39dc7e52342387d07fd27dd9a86bf8a0b5d208a56",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_launch_protocol_v2_20261012_05/runtime/ATTEMPT_STARTED.json",
+        "sha256": "50772add0fadca6693cccd9620ddd30600be6eb742e9ffecbdf0d0576496e52a",
+        "matches": true
+      }
+    ],
+    "upstream_content": [
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/example.py.txt",
+        "sha256": "bf056857252fcd8a18ddc4a4873d0d70d654bb1be7653b27ddcbc05dcfcf8581",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/README.md.txt",
+        "sha256": "69daa2a2303e303039cb20562984932ce77a0e0a08e1affe156a5af15c5049d8",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/REUSABILITY-GUIDE.md.txt",
+        "sha256": "f6a90cae9b13f57285e26597bf13b43c5236a5cbd2bae3066fcc4fdc0e550cad",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/requirements.txt.txt",
+        "sha256": "a2fdd6e58c8e8c71635e0058bf90c29a5e1b8390c1121d96af65f5b77cf8b14a",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/Dockerfile.txt",
+        "sha256": "2a1d7386cb16e96e03389aaea93874f63ca04eddcdae20257c1def78240da4c2",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/environment.py.txt",
+        "sha256": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/formulas/integrity_constraint.py.txt",
+        "sha256": "6a81b8600cf781574b0e04e12979bd6155f6e7f78f3ef271f9fbc8e437512fa1",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/sql_parser.py.txt",
+        "sha256": "8f756d131348d32aa244070ebf51429363a68ad18a372bc0b572cec0ac053acc",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/expression_encoder.py.txt",
+        "sha256": "904e2654d2709a12f009d7ffa4fbbfebbb211dea665b29cf0bca548a77035c91",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/group_expression_encoder.py.txt",
+        "sha256": "d9e7cb67e2006921ea8e1b5fba2aa11c35c03cc2a46b2188889fe4d9e863fbf6",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/predicate_encoder.py.txt",
+        "sha256": "aa929889a34ce46cd797154caba8860ec4332cf42e41b12104c755ccec6ddf3b",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/query_encoder.py.txt",
+        "sha256": "fddd2e47d7c9dbb109ef3cb36ef8f246e3d78a5a8260d19f5a88ca966d230d37",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/formulas/order_by.py.txt",
+        "sha256": "c78e3875b29d7249ab5813c3d5fda9cc8240964573d0ae8f9ecb824ce43a3949",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/formulas/project.py.txt",
+        "sha256": "29ad790846939efd60c384f41771b497e1679370d18a3242c62ab95f9a17b2a3",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/schemas.py.txt",
+        "sha256": "3a1d9355c70434591c0b502a96a92ac49e66866f8b53ee3fdff700ba02574f5b",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/testers/mysql_tester.py.txt",
+        "sha256": "3325c842728bd2388603b55dfe9341f8edcf9bb568036172a6389ee723763df1",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/ast/expressions/expression.py.txt",
+        "sha256": "d01e529570f8e3c032556120ba8a645ce41c5ba158d4c62d7f60177520ebc81d",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/ast/query.py.txt",
+        "sha256": "49261790d235f173ee654a0e72795a3c6b31b48ba63ca10e4cb0a8997f57c38f",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/ast/order_by.py.txt",
+        "sha256": "f5e2995e0438e41af95d376379b761857de2e83971af76b811b62efb455a3e30",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/initializer.py.txt",
+        "sha256": "16de4d60c1abb739660ab868aac7d09e87d55c40d47c71806e6717b0e1daca54",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/smt/formula.py.txt",
+        "sha256": "ecdc290227e8c717fa20065313331b605fd54566a844ec9ce88c6d99190207cc",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/smt/provers/smtlibv2.py.txt",
+        "sha256": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/variables.py.txt",
+        "sha256": "68a30843d0a44cf3a34dcf8e0013597b4ec0123d951c3460d4668e82779b4582",
+        "matches": true
+      },
+      {
+        "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/formulas/filter.py.txt",
+        "sha256": "2b2327e5b7dc865f225290c270e889ee6345375de4cfa9082af5dcdf1983db95",
+        "matches": true
+      }
+    ]
+  }
+}

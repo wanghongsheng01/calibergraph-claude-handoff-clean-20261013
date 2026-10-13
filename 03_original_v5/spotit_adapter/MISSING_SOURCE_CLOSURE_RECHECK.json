@@ -1,0 +1,427 @@
+{
+  "status": "NO_MISSING_STATIC_REPO_MODULE_IMPORTS",
+  "created_utc": "2026-10-11T02:36:55.972015+00:00",
+  "source_commit": "fb1bdaae8f3e4a544d08feffa44bc14270d99329",
+  "previous_missing_report_sha256": "db9179abec306b45c76b0304fb3d92b9333d5476e72e2bdb7ba5ab2e56de1ea4",
+  "new_fetch_receipt_sha256": "32a1ffaeca968d3b4e07535b157115a3d57d28739293e3e77e051029d2f7337d",
+  "total_python_files": 165,
+  "new_source_sha256": {
+    "verifiers/set_semantics_verifier.py": "01d62298b1e2a4653ed2acbeb0c90150eb023dc4fa26ba63a4819ba091e83601",
+    "formulas/expressions/date.py": "04d392905830de4a9d9294cfc95a5c00d3cf7d4ff1d7c5d56670e529ca210bb2",
+    "formulas/columns/date_attr.py": "f294b92b08e1f6ca4e0baa19c4ab8e15b5e328f144dfbe148b7a6de0aa38bda3",
+    "formulas/expressions/predicates/like_predicate.py": "04cd26115d2fcfe6819e30b8b4e32d829f2fbcd293debeb5e14dbc36439836f2",
+    "formulas/expressions/predicates/strftime_predicate.py": "e20bb4fb921867084dde20951e25b3aa9557f94cb9d756424a85683298a71582",
+    "formulas/expressions/predicates/exists_predicate.py": "829732dcadfba931d7706f1af9066d2c1ffef754f5d1e82f83a94b697c9891da",
+    "formulas/expressions/predicates/to_real_predicate.py": "3cf5484ec8b496704e6998e6667460ad6884f75fbc37af9e909788f6a3f21603",
+    "formulas/expressions/predicates/substr_predicate.py": "cd5b3037fb0266f770a3016aa599f921b65fdd749154f489199e4036cd098068",
+    "formulas/expressions/predicates/to_juliandate_predicate.py": "0ecf70be7a8c12adb856a5e8b7536201ccdcf063f176c2efd5ba815f3e0bdeb0",
+    "formulas/expressions/predicates/date_like_predicate.py": "6dda71ea24b0a0029d14253f0e7b54ead12a457518cdde1cee6e449782d931d1",
+    "formulas/expressions/predicates/to_date_predicate.py": "02e79c2c6f262c91795dd16f28df6e152ae4118a7e29496ca2e2226a34d0090f"
+  },
+  "new_imports": {
+    "verifiers/set_semantics_verifier.py": [
+      {
+        "line": 3,
+        "statement": "from z3 import ArithRef",
+        "resolved_modules": [
+          "z3"
+        ]
+      },
+      {
+        "line": 7,
+        "statement": "from constants import NumericType, Or, And, Not, Implies, If, Sum, Z3_1, Z3_0, Z3_TRUE, Z3_FALSE",
+        "resolved_modules": [
+          "constants"
+        ]
+      },
+      {
+        "line": 20,
+        "statement": "from formulas.columns import *",
+        "resolved_modules": [
+          "formulas.columns"
+        ]
+      },
+      {
+        "line": 21,
+        "statement": "from formulas.expressions import *",
+        "resolved_modules": [
+          "formulas.expressions"
+        ]
+      },
+      {
+        "line": 22,
+        "statement": "from utils import encode_same, CodeSnippet, align_attrs",
+        "resolved_modules": [
+          "utils"
+        ]
+      },
+      {
+        "line": 27,
+        "statement": "from verifiers.verifier import Verifier",
+        "resolved_modules": [
+          "verifiers.verifier"
+        ]
+      }
+    ],
+    "formulas/expressions/date.py": [
+      {
+        "line": 3,
+        "statement": "import operator",
+        "resolved_modules": [
+          "operator"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from constants import IntVal, ToReal, Z3_FALSE, Z3_TRUE, ArithRef, Z3_100, Z3_10000",
+        "resolved_modules": [
+          "constants"
+        ]
+      },
+      {
+        "line": 10,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 11,
+        "statement": "from formulas.expressions import FDigits",
+        "resolved_modules": [
+          "formulas.expressions"
+        ]
+      },
+      {
+        "line": 12,
+        "statement": "from formulas.base_formula import BaseFormula",
+        "resolved_modules": [
+          "formulas.base_formula"
+        ]
+      },
+      {
+        "line": 13,
+        "statement": "from z3 import BoolRef, IntNumRef, RatNumRef",
+        "resolved_modules": [
+          "z3"
+        ]
+      }
+    ],
+    "formulas/columns/date_attr.py": [
+      {
+        "line": 3,
+        "statement": "from copy import copy",
+        "resolved_modules": [
+          "copy"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from typing import Callable",
+        "resolved_modules": [
+          "typing"
+        ]
+      },
+      {
+        "line": 7,
+        "statement": "from constants import NumericType, Z3_NULL_VALUE, Z3_FALSE, Z3_TRUE, DATE, ArithRef",
+        "resolved_modules": [
+          "constants"
+        ]
+      },
+      {
+        "line": 15,
+        "statement": "from .attribute import FAttribute",
+        "resolved_modules": [
+          "formulas.columns.attribute"
+        ]
+      },
+      {
+        "line": 16,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 17,
+        "statement": "from formulas.expressions.expression_tuple import FExpressionTuple",
+        "resolved_modules": [
+          "formulas.expressions.expression_tuple"
+        ]
+      },
+      {
+        "line": 18,
+        "statement": "from formulas.expressions.null import FNull",
+        "resolved_modules": [
+          "formulas.expressions.null"
+        ]
+      },
+      {
+        "line": 19,
+        "statement": "from formulas.expressions.date import FDate",
+        "resolved_modules": [
+          "formulas.expressions.date"
+        ]
+      },
+      {
+        "line": 68,
+        "statement": "from visitors.interm_function import IntermFunc",
+        "resolved_modules": [
+          "visitors.interm_function"
+        ]
+      },
+      {
+        "line": 87,
+        "statement": "from formulas.columns.aggregations import AggregationType",
+        "resolved_modules": [
+          "formulas.columns.aggregations"
+        ]
+      },
+      {
+        "line": 88,
+        "statement": "from formulas.expressions.expression import FExpression",
+        "resolved_modules": [
+          "formulas.expressions.expression"
+        ]
+      },
+      {
+        "line": 89,
+        "statement": "from formulas.expressions.predicates.case_predicate import FCasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.case_predicate"
+        ]
+      },
+      {
+        "line": 90,
+        "statement": "from formulas.expressions.predicates.last_value_predicate import FLastValuePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.last_value_predicate"
+        ]
+      },
+      {
+        "line": 91,
+        "statement": "from formulas.expressions.digits import FDigits",
+        "resolved_modules": [
+          "formulas.expressions.digits"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/like_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/strftime_predicate.py": [
+      {
+        "line": 4,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 6,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      },
+      {
+        "line": 7,
+        "statement": "from constants import VARCHAR",
+        "resolved_modules": [
+          "constants"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/exists_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.operator import FOperator",
+        "resolved_modules": [
+          "formulas.expressions.operator"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/to_real_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/substr_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      },
+      {
+        "line": 6,
+        "statement": "from constants import VARCHAR",
+        "resolved_modules": [
+          "constants"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/to_juliandate_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      },
+      {
+        "line": 6,
+        "statement": "from constants import DATE",
+        "resolved_modules": [
+          "constants"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/date_like_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      }
+    ],
+    "formulas/expressions/predicates/to_date_predicate.py": [
+      {
+        "line": 3,
+        "statement": "from formulas import register_formula",
+        "resolved_modules": [
+          "formulas"
+        ]
+      },
+      {
+        "line": 4,
+        "statement": "from formulas.expressions.base_expression import FBaseExpression",
+        "resolved_modules": [
+          "formulas.expressions.base_expression"
+        ]
+      },
+      {
+        "line": 5,
+        "statement": "from formulas.expressions.predicates.base_predicate import FBasePredicate",
+        "resolved_modules": [
+          "formulas.expressions.predicates.base_predicate"
+        ]
+      },
+      {
+        "line": 6,
+        "statement": "from constants import DATE",
+        "resolved_modules": [
+          "constants"
+        ]
+      }
+    ]
+  },
+  "missing_modules": {},
+  "limits": "AST module-level import resolution only; imported-symbol/runtime/dynamic behavior not certified; no target import or network.",
+  "target_executions": 0,
+  "network_requests": 0
+}

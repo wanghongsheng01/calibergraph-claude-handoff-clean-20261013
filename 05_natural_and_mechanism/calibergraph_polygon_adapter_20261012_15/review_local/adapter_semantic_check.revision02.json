@@ -1,0 +1,31 @@
+{
+  "adapter_sha256": "d0f13404622f8e78ea8c3549a6f19a65a403dafda6bc49fca8d7e7422ad3a06b",
+  "sqlite_version": "3.43.2",
+  "direct_adapter_cross_product_passes": 150,
+  "negative_cases_passed": [
+    "Examination dangling FK",
+    "Patient NULL primary key",
+    "Laboratory NULL ID",
+    "duplicate abstract column",
+    "CREATE TEMP VIEW laboratory AS SELECT * FROM main.Laboratory",
+    "ATTACH DATABASE ':memory:' AS extra"
+  ],
+  "temp_shadow_regression": {
+    "original_outputs": [
+      [
+        [
+          0
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "rejected": true,
+    "error": "TEMP objects may shadow original source"
+  },
+  "solver_calls": 0,
+  "status": "PASS"
+}

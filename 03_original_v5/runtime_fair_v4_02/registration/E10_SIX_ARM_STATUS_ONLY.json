@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "data_role": "EXPOSED_CONSTRUCTED_E10_CONTRACT_STATUS_REGRESSION_ONLY",
+  "source_provenance": {
+    "original_suite": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746",
+    "transformation": "Copy only E10 with schema, constraints, exact rows, pair and six-arm order unchanged; update typed status expectation only."
+  },
+  "cost_full_denominator": 6,
+  "differential_full_denominator": 6,
+  "cases": [
+    {
+      "id": "E10_inconsistent_contract_not_pair_unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": [
+        {
+          "gte": [
+            "F__V",
+            1
+          ]
+        },
+        {
+          "lte": [
+            "F__V",
+            0
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V+1) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Negative vacuity control: complete input contract is inconsistent; no pair-equivalence decision admissible."
+      },
+      "contract_expectation": {
+        "satisfiability": "unsat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": null,
+      "point_expected_relations": null,
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected_runtime_guard": {
+        "contract_guard.consistency": "unsat",
+        "final_decision": "CONTRACT_UNSAT_REJECTED",
+        "worker_status": "COMPLETE_CONTRACT_REJECTED",
+        "environment_cleanup": "COMPLETE",
+        "pair_parse_status": "NOT_RUN_CONTRACT_STOP",
+        "pair_solver_status": "NOT_RUN_CONTRACT_STOP",
+        "attempts": []
+      }
+    }
+  ],
+  "analysis_rules": [
+    "This is an input-contract rejection control, never a query equivalence result.",
+    "All six arms must stop before pair parse/solve, after guard evidence and cleanup; complete process/semantic costs retained.",
+    "Exit2 and supervisor failure summary remain expected for this intentional negative control; inspect typed worker status instead of classifying it as equivalence success.",
+    "No full cohort rerun and no old result/source modification."
+  ]
+}

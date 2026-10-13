@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_04/implementation/probe_worker_replay_supplement.py", line 150, in main
+    q=lower_query(queries['after'],catalog)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/compiler.py", line 476, in lower_query
+    relation = query.lower(tree)
+               ^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/compiler.py", line 87, in lower
+    return self._select(
+           ^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/compiler.py", line 138, in _select
+    source, environment = self._filter(where.this, environment)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/compiler.py", line 190, in _filter
+    term=self.context.builder.filter(
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/builder.py", line 524, in filter
+    function = self.row_lambda(schema, predicate)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/builder.py", line 385, in row_lambda
+    body_ref = body(variable)
+               ^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/compiler.py", line 192, in <lambda>
+    lambda row: self.expressions.lower_condition(condition, replace(environment, row=row)),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 1474, in lower_condition
+    return self.condition.emit(expression, environment)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 1004, in emit
+    self.emit(expression.this, environment),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 1004, in emit
+    self.emit(expression.this, environment),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 1024, in emit
+    return self._comparison(expression, environment, "eq")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 1223, in _comparison
+    left, right = self._operands(expression, environment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 1148, in _operands
+    plans = self.scalar.coercible_pair(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 145, in coercible_pair
+    return left_plan, self.plan(right, environment, left_plan.sort)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py", line 204, in plan
+    value = self.context.dialect.literal_value(expression, sql_type)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/dialect.py", line 187, in literal_value
+    else self.parse_string_cast_literal(text, sql_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/dialect.py", line 212, in parse_string_cast_literal
+    raise ValueError(f"Unsupported string cast to {sql_type!r}")
+ValueError: Unsupported string cast to ScalarType(kind=<TypeKind.BOOLEAN: 'boolean'>, precision=None, scale=None, max_length=None, integer_bits=None)

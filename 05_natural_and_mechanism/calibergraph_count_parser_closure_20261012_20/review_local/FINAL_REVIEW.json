@@ -1,0 +1,168 @@
+{
+  "status": "PASS_WITH_DISCLOSED_PRESERVATION_EXCEPTION",
+  "must_fix": [],
+  "science_status": "P3_COUNT_LOCAL_ENGINEERING_CLOSURE_PASS",
+  "freeze_checks": [
+    {
+      "attempt": "001",
+      "entries": 478,
+      "matched": 477,
+      "differences": [
+        {
+          "path": "review_local/verify_results.py",
+          "frozen_sha256": "1b1f64a3db415511a968467be2e9e1d917650e7a312290501f757d20851f63a4",
+          "current_sha256": "3c9b715ffc7a2d95a1f074e4198784c589a3c8152e3cc66e9d9f237529a31a93"
+        }
+      ],
+      "started_binding": true,
+      "executed_script_hashes_match": true,
+      "scripts": [
+        "parser_test.py"
+      ]
+    },
+    {
+      "attempt": "002",
+      "entries": 481,
+      "matched": 480,
+      "differences": [
+        {
+          "path": "review_local/verify_results.py",
+          "frozen_sha256": "1b1f64a3db415511a968467be2e9e1d917650e7a312290501f757d20851f63a4",
+          "current_sha256": "3c9b715ffc7a2d95a1f074e4198784c589a3c8152e3cc66e9d9f237529a31a93"
+        }
+      ],
+      "started_binding": true,
+      "executed_script_hashes_match": true,
+      "scripts": [
+        "parser_test.py"
+      ]
+    },
+    {
+      "attempt": "003",
+      "entries": 541,
+      "matched": 541,
+      "differences": [],
+      "started_binding": true,
+      "executed_script_hashes_match": true,
+      "scripts": [
+        "parser_test_v2.py",
+        "review_local/verify_results_v2.py"
+      ]
+    }
+  ],
+  "preservation_exception": {
+    "cause": "Early freezes captured the still-being-prepared unused verifier before its INTERRUPTED initialization line was added. Removing exactly that line reconstructs the original frozen hash. No executed script or scientific result is this exception.",
+    "reconstructed_early_hash": "1b1f64a3db415511a968467be2e9e1d917650e7a312290501f757d20851f63a4",
+    "old_files_rewritten_to_conceal": false
+  },
+  "results": {
+    "original": {
+      "matrix": {
+        "PASS": 12,
+        "MISMATCH": 4,
+        "ERROR": 12
+      },
+      "pipeline": {
+        "PASS": 7,
+        "MISMATCH": 6,
+        "ERROR": 1
+      }
+    },
+    "p1": {
+      "matrix": {
+        "PASS": 28
+      },
+      "pipeline": {
+        "PASS": 9,
+        "MISMATCH": 5
+      }
+    },
+    "p2": {
+      "matrix": {
+        "PASS": 28
+      },
+      "pipeline": {
+        "PASS": 11,
+        "MISMATCH": 3
+      }
+    },
+    "p3": {
+      "matrix": {
+        "PASS": 28
+      },
+      "pipeline": {
+        "PASS": 14
+      }
+    }
+  },
+  "independent_verification": {
+    "status": "PASS",
+    "records": 168,
+    "all_records_crosschecked_read_only": true,
+    "bound_result_hash_matches": true,
+    "scope": "Fresh SQLite and independent Python COUNT expectations executed centrally in003; this post-review only reads results, does not replay."
+  },
+  "resources": {
+    "attempts": 3,
+    "elapsed_s": [
+      0.09664837500000001,
+      0.3479476668871939,
+      0.4025717079639435
+    ],
+    "cumulative_s": 0.8471677498511374,
+    "budget_s": 60,
+    "max_RSS_bytes": 60489728,
+    "thread_count_each": 1,
+    "forbidden_events": [],
+    "solver_calls": 0,
+    "RSS_policy": "50ms virtual CPU timer sample, not an OS hard memory limit"
+  },
+  "historical_impact": {
+    "source_cases": 4,
+    "saved_formula_hashes_rechecked": 14,
+    "original_results_and_baseline_hashes_match": true,
+    "affected_by_P1_P2_P3": false,
+    "explanation": "750 uses AVG safe Count helper;319/1172/1261 use Count_Distinct; all lack GROUP BY/FILTER. P3 only changes aggregate FILTER entrances.",
+    "coverage": "Existing Polygon completed natural development pairs remains4/8; no new solver experiment."
+  },
+  "scope_limits": [
+    "Real SQLParser.parse/parse_query with disclosed synchronous mo_imports monitor replacement; real FGroupBy/FProject under concrete fixed assignments and every generated formula checked; not complete Environment.check/QueryEncoder or a general soundness/completeness proof.",
+    "28 expression cases plus14 operator chains per version; bound0 occurs in expression matrix, empty pipeline uses at least1 deleted slot.",
+    "P3 integer/NULL/constant COUNT(*) FILTER path only. Quoted literal preservation statically reviewed, not dynamically tested; other grouped aggregate FILTER not claimed repaired.",
+    "Original/P1/P2 failures and initial001 import failure/002 harness errors retained. Reviewer initial static omissions and wrong singleton prediction are corrected inSTATIC_ADMISSION_V2.",
+    "Full source-schemaC from natural cases is not a test claim of this synthetic t(x INTEGER,g INTEGER) suite; prior natural replayC evidence remains separate."
+  ],
+  "files_sha256": {
+    "calibergraph_count_parser_closure_20261012_20/FREEZE_001.json": "3bd8116c1bd210a3b79713b68868abdad4f98d396a9540f6b9e429c80180c919",
+    "calibergraph_count_parser_closure_20261012_20/STARTED_001.json": "a993ae81ede75477a8d0ca313c8538a2eea3d5eef7c5acbbf446f147949988bc",
+    "calibergraph_count_parser_closure_20261012_20/RECEIPT_001.json": "95a8eee5122bd0fe680dc6894676caf1fd15ddb79d1c78f66a1384be8ae5e896",
+    "calibergraph_count_parser_closure_20261012_20/FREEZE_002.json": "bd54568e86271cb56e0483326dc19cd915815673754c0e7bfa0e57c55b09e958",
+    "calibergraph_count_parser_closure_20261012_20/STARTED_002.json": "5f0a87c1abcdbc2b8cb2c98cc47aa27e8c6aa0e5754d20446a3f42d220b455a6",
+    "calibergraph_count_parser_closure_20261012_20/RECEIPT_002.json": "254e20845d060ac6281754432bda3a51378a2977c52c3fae41e601848fd6ad55",
+    "calibergraph_count_parser_closure_20261012_20/FREEZE_003.json": "d7daab23f1c6ef13767edce60e62ddaebfd41559c4a0f1d591e7e04d8a1d1987",
+    "calibergraph_count_parser_closure_20261012_20/STARTED_003.json": "240a4b5a0c9ec74c186929658fd75339fe7563d4a425c5cfc63d1a7d6dfe9a25",
+    "calibergraph_count_parser_closure_20261012_20/RECEIPT_003.json": "9c0c40a0ee64af1b94cd8800b0a59ca0a7f2d1072e38ac4e3fdeea6c95cf646e",
+    "calibergraph_count_parser_closure_20261012_20/PARSER_RESULTS.json": "71af83da19ece0fa43b5b41a1971efc7bfee96d365fef3f89731e876e2130288",
+    "calibergraph_count_parser_closure_20261012_20/PARSER_RESULTS_V2.json": "17d4a64cecd7dbf18ee464c25aff578164ed47cd20b8527bcc4e4c69956fabd7",
+    "calibergraph_count_parser_closure_20261012_20/parser_test.py": "e07db0c0bb6c0e8e3c41c7fa2c1ed5bbf14b1c1befc3f9adf8c4cdd91057d14b",
+    "calibergraph_count_parser_closure_20261012_20/parser_test_v2.py": "366a7bb62e6e59146c896da6f1b2898a2296627bd60378e7e44d693f7a0753a3",
+    "calibergraph_count_parser_closure_20261012_20/COUNT_P1.patch": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+    "calibergraph_count_parser_closure_20261012_20/COUNT_P2.patch": "39b8557fa0be71a64397b34ddd8a49680af9cf6a07ad2f34721b4ea40ff00e68",
+    "calibergraph_count_parser_closure_20261012_20/COUNT_P3.patch": "1e41bbdf6f66f9ce3d77343c4cfa259b13a3d777f69ab72a77b34dbe1634e4cf",
+    "calibergraph_count_parser_closure_20261012_20/run_budget.py": "64ba48e10aa48963b840745115cc7cd45298873291ea04e848b32af847bf1add",
+    "calibergraph_count_parser_closure_20261012_20/ATTEMPT_REVISION.zh.md": "0d4e825c11648b73b0b1312667ae1f88d9e93886f83bae85b7173b7dfb031242",
+    "calibergraph_count_parser_closure_20261012_20/review_local/VERIFY_RESULTS_V2.json": "27ff6db58cf302281185107362ebf3e88c00f283768c45223522d84aff92ea65",
+    "calibergraph_count_parser_closure_20261012_20/review_local/verify_results.py": "3c9b715ffc7a2d95a1f074e4198784c589a3c8152e3cc66e9d9f237529a31a93",
+    "calibergraph_count_parser_closure_20261012_20/review_local/verify_results_v2.py": "76887aa8bce669d32d49c70bce92536cfee0823f0db8d825e7130f92681d10f8",
+    "calibergraph_count_parser_closure_20261012_20/review_local/IMPACT_REVIEW.json": "ea13b2ff9d1ca54c279338b5a40ccd10539f783849c9e3ec10d88e7fe38ea650",
+    "calibergraph_count_parser_closure_20261012_20/review_local/STATIC_ADMISSION_V2.json": "bfc333ac78c5f08dcbc00514732af9d6efef0ac5dcae6c5adfe355beeaa34a4e"
+  },
+  "post_review_actions": {
+    "SQL": 0,
+    "target_imports": 0,
+    "parser": 0,
+    "solver": 0,
+    "network": 0,
+    "old_file_edits": 0
+  }
+}

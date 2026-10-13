@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-12",
+  "scope": "Focused static scientific decision; no experiment, build, installation, broad search or manuscript change",
+  "scientific_status": "NO_INNOVATION_EVIDENCE/HOLD",
+  "recommended_next_experiment_count": 0,
+  "conditional_learning_plan": "At most one later two-arm Discourse #3 on/off diagnostic, not implemented or executed; not a new-method gate",
+  "frozen_original_note_commit": "d9c7e7c0f01a95bd75dd99780347851782c8c56f",
+  "official_parseval_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "baseline_result_path": "calibergraph_real_task_screen_20261011_05/runs/baseline_01/RESULT.json",
+  "baseline_result_sha256": "3eb182fc6f21f82bc0326c2cabb8c78f5e556412b90442611502ec4562d7c340",
+  "static_comparison": {
+    "first_rows": 5,
+    "second_rows": 6,
+    "first_sequence_is_exact_prefix_of_second": true,
+    "first_full_C_pass": true,
+    "second_full_C_pass": true,
+    "first_D_sha256": "b4fbd2cbe990502ae5a0d4efd3e899b8ff16dae4c1e4d414898e897e2d919743",
+    "second_D_sha256": "e5d20256778905980ec24627061ba69351fc39cd833364990d5983a7c5ab00c5",
+    "new_candidate_or_solver_run": false,
+    "claim": "Existing successful witness extends saved seed; this case does not require seed deletion or modification"
+  },
+  "local_read_only_source_root": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval",
+  "read_only_code_sha256": {
+    "generator/generate.py": "2e9200c322868de266ffe9ac8768e0462720b26d07180884017f3f5e3dd7ee6d",
+    "smt/solve.py": "347f3bb4117f73a4611a056f93b8a491b84b42a9a2c3e20e90b06727247eb567",
+    "smt/csp.py": "0786cbe9d9d1498df09b5b9b54e866037849f49082b120710de665ce856b872d"
+  },
+  "code_references": [
+    "generator/generate.py: Session.__init__, speculate, requirements, attempt, _grow, run",
+    "speculate/speculate.py: Speculator.run, _evaluate, _satisfy, _solve",
+    "smt/solve.py: solve, _components, _z3, _check_minimal",
+    "smt/csp.py: BRANCHES, CASE_SPLITS, NORMALIZED, search",
+    "real_task_screen_05/implementation/baseline_worker.py: count_generate, count_check, checked_load, counted_execute"
+  ],
+  "denominators_unchanged": {"source_screen": 50, "executed": 1, "baseline_solved": 1, "not_run": 49, "observed_common_supported_mechanism_failures": 0, "new_independent_tests": 0},
+  "recovery": "Restore this authored decision and independent review from the established private repository. Read pinned old RESULT/code by the paths and hashes above; do not rerun to restore this static decision. This package intentionally contains no third-party code, raw SQL, dependencies or manuscript copies.",
+  "datahub_status": "Existing DATAHUB_REGISTRATION_BLOCKED remains: no matching public SQL research module; canonical registry lies in another isolated project. No new source or registry change this round."
+}

@@ -1,0 +1,85 @@
+{
+  "protocol_id": "CG-THEORY-ONE-WITNESS-01",
+  "version": "1.0",
+  "status_at_creation": "READY_FOR_PARENT_FREEZE_NOT_RUN",
+  "role": "AUTHOR_MECHANISM_EXPLORATION_NOT_INDEPENDENT_REVIEW",
+  "evidence_type": "ARTIFICIAL_MECHANISM_FIXTURE",
+  "claim_under_test": "Keeping one W witness per R key and synchronously cloning the root and witness keys preserves a separating family for Qexists versus Qjoin.",
+  "primary_falsifier": "At least one legal original instance separates the pair but its one-witness-pruned instance does not; the prescribed synchronous one-witness clone family also does not separate the pair.",
+  "schema": {
+    "R": {"columns": ["r"], "primary_key": ["r"], "semantics": "SET"},
+    "W": {"columns": ["w", "r"], "primary_key": ["w"], "semantics": "SET"},
+    "foreign_keys": [{"from": "W.r", "to": "R.r"}],
+    "foreign_key_graph": "W -> R; acyclic"
+  },
+  "queries": {
+    "Qexists": "SELECT COUNT(*) FROM R WHERE EXISTS (SELECT 1 FROM W WHERE W.r=R.r)",
+    "Qjoin": "SELECT COUNT(*) FROM R JOIN W ON W.r=R.r"
+  },
+  "tiny_domain_control": {
+    "r_domain": [0, 1],
+    "w_key_domain": [0, 1],
+    "enumeration": "For each R subset of {0,1}, independently assign each w key to ABSENT or an r in R.",
+    "coverage": "Every legal database over these fixed domains, including empty tables; no isomorphism pruning.",
+    "expected_legal_instances": 18,
+    "derivation": "1*(0+1)^2 + 2*(1+1)^2 + 1*(2+1)^2 = 18",
+    "expected_original_separators": 4,
+    "original_separation_characterization": "Both W keys exist and have the same r target.",
+    "interpretation_limit": "Exhaustive only over the declared tiny domains; absence of a separator would never establish unbounded equivalence."
+  },
+  "candidate_transform": {
+    "pruning": "Keep R unchanged. For each r with W witnesses, retain the lexicographically smallest W row by w key and delete the others.",
+    "expected_pruned_separators": 0,
+    "expected_erased_original_separators": 4,
+    "clone_seed": {"R": [0], "W": [[0, 0]]},
+    "clone_parameters": [1, 2],
+    "clone_rule": "For n, R={0,...,n-1}, W={(i,i): 0<=i<n}.",
+    "expected_clone_counts": [[1, 1], [2, 2]],
+    "clone_scope": "Clone only this fixed one-row seed, not each enumerated database; maximum remains two rows per table."
+  },
+  "fixed_fixtures": {
+    "smallest_branching_witness": {
+      "R": [0], "W": [[0, 0], [1, 0]], "expected_counts": [1, 2],
+      "pruned_W": [[0, 0]], "expected_pruned_counts": [1, 1]
+    },
+    "invalid_fixed_witness_key_clone": {
+      "R": [0, 1], "W": [[0, 0], [0, 1]],
+      "expected_legal": false, "reason": "Two different W rows share primary key w=0."
+    }
+  },
+  "validation": {
+    "primary_evaluator": "Pure Python loops on set-valued rows",
+    "cross_check": "SQLite in-memory, PRAGMA foreign_keys=ON, both primary keys declared; compare both query counts per legal input.",
+    "checks": ["18 distinct enumerated inputs", "all original/pruned/clone inputs legal", "Python/SQLite count parity", "4 original separators", "0 pruned separators", "4 differences erased", "EXISTS count unchanged by pruning", "clone counts 1/1 and 2/2", "fixed-key naive clone illegal"],
+    "primary_baseline_class": "SIMPLE_COMPLETE_TINY_DOMAIN_CONTROL",
+    "natural_data": false,
+    "promotion_evidence": false
+  },
+  "resources": {
+    "max_rows_per_table": 2,
+    "max_legal_enumerated_instances": 18,
+    "max_clone_instances": 2,
+    "max_worker_cpu_seconds": 1.0,
+    "max_worker_wall_seconds": 1.0,
+    "workers": 1,
+    "gpu": false,
+    "solver": false,
+    "network": false,
+    "external_api": false,
+    "credentials": false,
+    "child_processes": false
+  },
+  "stop_rules": [
+    "Parent hashes this protocol and code before the only guarded worker run.",
+    "Stop immediately on evaluator disagreement, illegal supposedly legal input, unexpected count, more than 18 enumerated inputs, or worker CPU/wall cap.",
+    "When the predefined falsifier is observed, record REJECT_ONE_WITNESS_SEED_CLONING; finish only this fixed 18-instance audit and two clone checks, with no adaptive search.",
+    "No retries, larger domains, alternative seeds, solver, GPU, API calls, or code changes after seeing outputs. A failed harness is a failed run, not scientific support.",
+    "No experimental result permits an unbounded equivalence declaration or a claim that all possible small-counterexample bounds fail."
+  ],
+  "worker": "code/theory_fixture.py",
+  "output_directory_environment_variable": "CALIBERGRAPH_RUN_OUT",
+  "output_files": ["results.json"],
+  "usage_receipt": "results.json includes resource.getrusage(RUSAGE_SELF), platform units, CPU elapsed, wall elapsed, and code SHA256.",
+  "literature_gate": "The minimal E(r)=exists w W(w,r) fragment admits a definitional-view reduction to terminating embedded-dependency CQ equivalence. Reject bare computable-bound existence as a novelty claim for that fragment; broader tree/FK coverage remains unproved.",
+  "not_a_second_mechanism": "The legality fixture and view reduction are checks of this same one-witness cloning proposal, not alternative research directions."
+}

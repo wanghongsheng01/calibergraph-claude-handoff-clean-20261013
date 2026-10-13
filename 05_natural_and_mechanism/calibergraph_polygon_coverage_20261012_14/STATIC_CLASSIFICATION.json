@@ -1,0 +1,7063 @@
+{
+  "sqlite_version": "3.53.3",
+  "elapsed_static_s": 0.01400954183191061,
+  "operation_scope": "In-memory original DDL, PRAGMA metadata and EXPLAIN; original query bodies never executed, no research package imports and no solver",
+  "rows": [
+    {
+      "case_id": "thrombosis_prediction__1172",
+      "development_only": true,
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_run": false,
+      "new_UA": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_precise": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "reasons": [
+        "Laboratory.T-BIL is REAL and used at the 2.0 boundary; source also contains DATE. Existing worker maps only INTEGER/TEXT. No silent REAL-to-int or DATE-to-text conversion admitted.",
+        "Historical ParSEval false EQ and independent legal witness remain prior development evidence, not a new Polygon result."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/thrombosis_prediction__1172/gold.sql",
+          "sha256": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/thrombosis_prediction__1172/predicted.sql",
+          "sha256": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/thrombosis_prediction__1172/full-schema.sql",
+          "sha256": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/thrombosis_prediction__1172/official-record.json",
+          "sha256": "22878c48d28f2c5b2934954ead8766d68df832d507ba80af1029984098fb831a"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 30,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 30,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "INTEGER": 26,
+        "DATE": 5,
+        "REAL": 13,
+        "TEXT": 20
+      },
+      "unsupported_by_existing_type_map": [
+        "DATE",
+        "REAL"
+      ],
+      "table_count": 3,
+      "column_count": 64,
+      "full_C_inventory": [
+        {
+          "table": "Examination",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 1,
+              "name": "Examination Date",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "aCL IgG",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "aCL IgM",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "ANA",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "ANA Pattern",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "aCL IgA",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "Diagnosis",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "KCT",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "RVVT",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "LAC",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "Symptoms",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "Thrombosis",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Patient",
+              "from": "ID",
+              "to": "ID",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": []
+        },
+        {
+          "table": "Laboratory",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": "0",
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Date",
+              "type": "DATE",
+              "notnull": 1,
+              "default": "'0000-00-00'",
+              "pk": 2
+            },
+            {
+              "cid": 2,
+              "name": "GOT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "GPT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "LDH",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "ALP",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "TP",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "ALB",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "UA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "UN",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "CRE",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "T-BIL",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "T-CHO",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "TG",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "CPK",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "GLU",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "WBC",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "RBC",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "HGB",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "HCT",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "PLT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "PT",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "APTT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "FG",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "PIC",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "TAT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "TAT2",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "U-PRO",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "IGG",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 29,
+              "name": "IGA",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 30,
+              "name": "IGM",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 31,
+              "name": "CRP",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 32,
+              "name": "RA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 33,
+              "name": "RF",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 34,
+              "name": "C3",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 35,
+              "name": "C4",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 36,
+              "name": "RNP",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 37,
+              "name": "SM",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 38,
+              "name": "SC170",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 39,
+              "name": "SSA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 40,
+              "name": "SSB",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 41,
+              "name": "CENTROMEA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 42,
+              "name": "DNA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 43,
+              "name": "DNA-II",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Patient",
+              "from": "ID",
+              "to": "ID",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Laboratory_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "ID"
+                ],
+                [
+                  1,
+                  1,
+                  "Date"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Patient",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": "0",
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "SEX",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Birthday",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "Description",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "First Date",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "Admission",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "Diagnosis",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "case_id": "toxicology__319",
+      "development_only": true,
+      "category": "PREVIOUSLY_EXECUTED",
+      "new_run": false,
+      "new_UA": "NOT_RERUN_PREVIOUS_EVIDENCE",
+      "new_precise": "NOT_RERUN_PREVIOUS_EVIDENCE",
+      "reasons": [
+        "Reuse pilot13 two bounded symbolic UNSAT results; original SQL bytes identical. No whole SQLite-domain proof and no rerun."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/toxicology__319/gold.sql",
+          "sha256": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/toxicology__319/predicted.sql",
+          "sha256": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/toxicology__319/full-schema.sql",
+          "sha256": "33b439b05b6084604baa2b55dd02cc4f9452cc4910a186b58c6ecc4d0065874f"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/toxicology__319/official-record.json",
+          "sha256": "070750ad1d43039c3ed493663ee94ee4f5c932bdff69ddd7ee692a7930835ed5"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 26,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 26,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "TEXT": 11
+      },
+      "unsupported_by_existing_type_map": [],
+      "table_count": 4,
+      "column_count": 11,
+      "full_C_inventory": [
+        {
+          "table": "atom",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "atom_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "molecule_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "element",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "molecule",
+              "from": "molecule_id",
+              "to": "molecule_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_atom_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "atom_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "bond",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "bond_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "molecule_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "bond_type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "molecule",
+              "from": "molecule_id",
+              "to": "molecule_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_bond_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "bond_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "connected",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "atom_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "atom_id2",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 2
+            },
+            {
+              "cid": 2,
+              "name": "bond_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "bond",
+              "from": "bond_id",
+              "to": "bond_id",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "atom",
+              "from": "atom_id2",
+              "to": "atom_id",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            },
+            {
+              "id": 2,
+              "seq": 0,
+              "table": "atom",
+              "from": "atom_id",
+              "to": "atom_id",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_connected_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "atom_id"
+                ],
+                [
+                  1,
+                  1,
+                  "atom_id2"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "molecule",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "molecule_id",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "label",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_molecule_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "molecule_id"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "full_C_mapping_admitted": true,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": []
+    },
+    {
+      "case_id": "thrombosis_prediction__1261",
+      "development_only": true,
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_run": false,
+      "new_UA": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_precise": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "reasons": [
+        "Laboratory.RF is TEXT compared to numeric 20: SQLite affinity/order is not numeric string-hash order. Complete DDL also contains REAL and DATE.",
+        "Earlier FK equivalence argument is separate static evidence, not a new solver result."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/thrombosis_prediction__1261/gold.sql",
+          "sha256": "8ca50bee79653ca58e24c34a734ac718d0b09446486caadef8c513f64c638e82"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/thrombosis_prediction__1261/predicted.sql",
+          "sha256": "c977e9d8fac35d63504c9cf9f2d84145a195974c58fde06640c4254b3c677028"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/thrombosis_prediction__1261/full-schema.sql",
+          "sha256": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/thrombosis_prediction__1261/official-record.json",
+          "sha256": "1eedf4a64615fcc5d30ad54863bbc7d1f91273fe6a44314ad50c64b092d4f09a"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 32,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 39,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "INTEGER": 26,
+        "DATE": 5,
+        "REAL": 13,
+        "TEXT": 20
+      },
+      "unsupported_by_existing_type_map": [
+        "DATE",
+        "REAL"
+      ],
+      "table_count": 3,
+      "column_count": 64,
+      "full_C_inventory": [
+        {
+          "table": "Examination",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 1,
+              "name": "Examination Date",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "aCL IgG",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "aCL IgM",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "ANA",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "ANA Pattern",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "aCL IgA",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "Diagnosis",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "KCT",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "RVVT",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "LAC",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "Symptoms",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "Thrombosis",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Patient",
+              "from": "ID",
+              "to": "ID",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": []
+        },
+        {
+          "table": "Laboratory",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": "0",
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Date",
+              "type": "DATE",
+              "notnull": 1,
+              "default": "'0000-00-00'",
+              "pk": 2
+            },
+            {
+              "cid": 2,
+              "name": "GOT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "GPT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "LDH",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "ALP",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "TP",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "ALB",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "UA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "UN",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "CRE",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "T-BIL",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "T-CHO",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "TG",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "CPK",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "GLU",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "WBC",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "RBC",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "HGB",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "HCT",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "PLT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "PT",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "APTT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "FG",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "PIC",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "TAT",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "TAT2",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "U-PRO",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "IGG",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 29,
+              "name": "IGA",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 30,
+              "name": "IGM",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 31,
+              "name": "CRP",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 32,
+              "name": "RA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 33,
+              "name": "RF",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 34,
+              "name": "C3",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 35,
+              "name": "C4",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 36,
+              "name": "RNP",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 37,
+              "name": "SM",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 38,
+              "name": "SC170",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 39,
+              "name": "SSA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 40,
+              "name": "SSB",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 41,
+              "name": "CENTROMEA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 42,
+              "name": "DNA",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 43,
+              "name": "DNA-II",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Patient",
+              "from": "ID",
+              "to": "ID",
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Laboratory_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "ID"
+                ],
+                [
+                  1,
+                  1,
+                  "Date"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Patient",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": "0",
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "SEX",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Birthday",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "Description",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "First Date",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "Admission",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "Diagnosis",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "case_id": "debit_card_specializing__1490",
+      "development_only": true,
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_run": false,
+      "new_UA": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_precise": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "reasons": [
+        "Consumption is REAL, comparison literal is 46.73, queries use FLOAT/REAL CAST and division. Fixed encoder makes CAST an identity and cell is Int; SQLite floating semantics not admitted.",
+        "DDL has two REFERENCES declarations on yearmonth.CustomerID with implicit target PK, UNIQUE, AUTOINCREMENT and DATE; existing restricted full-C mapper is not complete for this schema."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/debit_card_specializing__1490/gold.sql",
+          "sha256": "88dd42ee66e3878ee6e3655925f8c94a9dfd330391e07171c9542ac2baa53d14"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/debit_card_specializing__1490/predicted.sql",
+          "sha256": "63df01f90b8071a98654991d9113699d66e44a973be10f5139f61e5557993a55"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/debit_card_specializing__1490/full-schema.sql",
+          "sha256": "a786ad4828fd2218105fd1e543891fcee4668482657e0627bd6f9a43767ed59f"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/debit_card_specializing__1490/official-record.json",
+          "sha256": "cee5bf48ca1647208fb195f84cb2f648d7878ef44d92abf321937efbfa456fb1"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 32,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 31,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "INTEGER": 11,
+        "TEXT": 7,
+        "DATE": 1,
+        "REAL": 2
+      },
+      "unsupported_by_existing_type_map": [
+        "DATE",
+        "REAL"
+      ],
+      "table_count": 5,
+      "column_count": 21,
+      "full_C_inventory": [
+        {
+          "table": "customers",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CustomerID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Segment",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Currency",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_customers_1",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "CustomerID"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "gasstations",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "GasStationID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "ChainID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Country",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "Segment",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_gasstations_1",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "GasStationID"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "products",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ProductID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Description",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_products_1",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "ProductID"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "transactions_1k",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "TransactionID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Date",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Time",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "CustomerID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "CardID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "GasStationID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "ProductID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "Amount",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "Price",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "yearmonth",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CustomerID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 2
+            },
+            {
+              "cid": 1,
+              "name": "Date",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 2,
+              "name": "Consumption",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "customers",
+              "from": "CustomerID",
+              "to": null,
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "customers",
+              "from": "CustomerID",
+              "to": null,
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_yearmonth_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  1,
+                  "Date"
+                ],
+                [
+                  1,
+                  0,
+                  "CustomerID"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED",
+        "ENCODER_SEMANTIC_GAP_OR_NO_EXPLICIT_OPERATOR_BRANCH_NOT_DYNAMICALLY_TESTED"
+      ]
+    },
+    {
+      "case_id": "superhero__750",
+      "development_only": true,
+      "category": "PREVIOUSLY_EXECUTED",
+      "new_run": false,
+      "new_UA": "NOT_RERUN_PREVIOUS_EVIDENCE",
+      "new_precise": "NOT_RERUN_PREVIOUS_EVIDENCE",
+      "reasons": [
+        "Reuse pilot13 two independently replayed full-C witnesses; no rerun. Negative weights are DDL-legal synthetic values, not real records."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/superhero__750/gold.sql",
+          "sha256": "38c15c2084d1fc42087eb4f64f9119c6527043958aa5f0b2febd0601499e0513"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/superhero__750/predicted.sql",
+          "sha256": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/superhero__750/full-schema.sql",
+          "sha256": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/superhero__750/official-record.json",
+          "sha256": "efa79a00e13c4d1d0fdb1aa39dc7e52342387d07fd27dd9a86bf8a0b5d208a56"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 19,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 16,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "INTEGER": 22,
+        "TEXT": 9
+      },
+      "unsupported_by_existing_type_map": [],
+      "table_count": 10,
+      "column_count": 31,
+      "full_C_inventory": [
+        {
+          "table": "alignment",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "alignment",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "attribute",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "attribute_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "colour",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "colour",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "gender",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "gender",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "hero_attribute",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "hero_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 1,
+              "name": "attribute_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "attribute_value",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "superhero",
+              "from": "hero_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "attribute",
+              "from": "attribute_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": []
+        },
+        {
+          "table": "hero_power",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "hero_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 1,
+              "name": "power_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "superpower",
+              "from": "power_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "superhero",
+              "from": "hero_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": []
+        },
+        {
+          "table": "publisher",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "publisher_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "race",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "race",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "superhero",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "superhero_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "full_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "gender_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "eye_colour_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "hair_colour_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "skin_colour_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "race_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "publisher_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "alignment_id",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "height_cm",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "weight_kg",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "colour",
+              "from": "skin_colour_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "race",
+              "from": "race_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 2,
+              "seq": 0,
+              "table": "publisher",
+              "from": "publisher_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 3,
+              "seq": 0,
+              "table": "colour",
+              "from": "hair_colour_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 4,
+              "seq": 0,
+              "table": "gender",
+              "from": "gender_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 5,
+              "seq": 0,
+              "table": "colour",
+              "from": "eye_colour_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 6,
+              "seq": 0,
+              "table": "alignment",
+              "from": "alignment_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": []
+        },
+        {
+          "table": "superpower",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "power_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": "NULL",
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        }
+      ],
+      "full_C_mapping_admitted": true,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": []
+    },
+    {
+      "case_id": "european_football_2__1073",
+      "development_only": true,
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_run": false,
+      "new_UA": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_precise": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "reasons": [
+        "Original pair uses SUBSTR versus strftime on date strings. No explicit substr/substring/strftime encoder branch in fixed complete source; parser normalization was not executed and is not assumed absent.",
+        "Full schema has additional types and UNIQUE constraints outside the old mapper. Date decoder clamps overflowing integers; do not claim exact source-domain mapping."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/european_football_2__1073/gold.sql",
+          "sha256": "9879bcce9e7e5f2884da0496e70f215e38a6fe38140167c4988c95a1619e659f"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/european_football_2__1073/predicted.sql",
+          "sha256": "b5e94651d309eb33c372acf50d0c2d8bf49d9ba2112b149788c260147a24130a"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/european_football_2__1073/full-schema.sql",
+          "sha256": "193112d7a1e9afde965dc6084b23e82d7c318a2543c3b894feab70d651b05bb4"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/european_football_2__1073/official-record.json",
+          "sha256": "874443f231bbb33744b7a37976c1d65c8e621c727f29c3cffabdd7c5f9a4adf5"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 32,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 30,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "INT": 136,
+        "VARCHAR": 33,
+        "REAL": 30
+      },
+      "unsupported_by_existing_type_map": [
+        "INT",
+        "REAL",
+        "VARCHAR"
+      ],
+      "table_count": 7,
+      "column_count": 199,
+      "full_C_inventory": [
+        {
+          "table": "Country",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "name",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Country_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "League",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "country_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "name",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Country",
+              "from": "country_id",
+              "to": "id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_League_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Match",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "country_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "league_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "season",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "stage",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "date",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "match_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "home_team_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "away_team_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "home_team_goal",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "away_team_goal",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "home_player_X1",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "home_player_X2",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "home_player_X3",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "home_player_X4",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "home_player_X5",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "home_player_X6",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "home_player_X7",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "home_player_X8",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "home_player_X9",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "home_player_X10",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "home_player_X11",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "away_player_X1",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "away_player_X2",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "away_player_X3",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "away_player_X4",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "away_player_X5",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "away_player_X6",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "away_player_X7",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 29,
+              "name": "away_player_X8",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 30,
+              "name": "away_player_X9",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 31,
+              "name": "away_player_X10",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 32,
+              "name": "away_player_X11",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 33,
+              "name": "home_player_Y1",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 34,
+              "name": "home_player_Y2",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 35,
+              "name": "home_player_Y3",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 36,
+              "name": "home_player_Y4",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 37,
+              "name": "home_player_Y5",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 38,
+              "name": "home_player_Y6",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 39,
+              "name": "home_player_Y7",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 40,
+              "name": "home_player_Y8",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 41,
+              "name": "home_player_Y9",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 42,
+              "name": "home_player_Y10",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 43,
+              "name": "home_player_Y11",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 44,
+              "name": "away_player_Y1",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 45,
+              "name": "away_player_Y2",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 46,
+              "name": "away_player_Y3",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 47,
+              "name": "away_player_Y4",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 48,
+              "name": "away_player_Y5",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 49,
+              "name": "away_player_Y6",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 50,
+              "name": "away_player_Y7",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 51,
+              "name": "away_player_Y8",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 52,
+              "name": "away_player_Y9",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 53,
+              "name": "away_player_Y10",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 54,
+              "name": "away_player_Y11",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 55,
+              "name": "home_player_1",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 56,
+              "name": "home_player_2",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 57,
+              "name": "home_player_3",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 58,
+              "name": "home_player_4",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 59,
+              "name": "home_player_5",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 60,
+              "name": "home_player_6",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 61,
+              "name": "home_player_7",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 62,
+              "name": "home_player_8",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 63,
+              "name": "home_player_9",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 64,
+              "name": "home_player_10",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 65,
+              "name": "home_player_11",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 66,
+              "name": "away_player_1",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 67,
+              "name": "away_player_2",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 68,
+              "name": "away_player_3",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 69,
+              "name": "away_player_4",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 70,
+              "name": "away_player_5",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 71,
+              "name": "away_player_6",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 72,
+              "name": "away_player_7",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 73,
+              "name": "away_player_8",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 74,
+              "name": "away_player_9",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 75,
+              "name": "away_player_10",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 76,
+              "name": "away_player_11",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 77,
+              "name": "goal",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 78,
+              "name": "shoton",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 79,
+              "name": "shotoff",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 80,
+              "name": "foulcommit",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 81,
+              "name": "card",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 82,
+              "name": "cross",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 83,
+              "name": "corner",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 84,
+              "name": "possession",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 85,
+              "name": "B365H",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 86,
+              "name": "B365D",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 87,
+              "name": "B365A",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 88,
+              "name": "BWH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 89,
+              "name": "BWD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 90,
+              "name": "BWA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 91,
+              "name": "IWH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 92,
+              "name": "IWD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 93,
+              "name": "IWA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 94,
+              "name": "LBH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 95,
+              "name": "LBD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 96,
+              "name": "LBA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 97,
+              "name": "PSH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 98,
+              "name": "PSD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 99,
+              "name": "PSA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 100,
+              "name": "WHH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 101,
+              "name": "WHD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 102,
+              "name": "WHA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 103,
+              "name": "SJH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 104,
+              "name": "SJD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 105,
+              "name": "SJA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 106,
+              "name": "VCH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 107,
+              "name": "VCD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 108,
+              "name": "VCA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 109,
+              "name": "GBH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 110,
+              "name": "GBD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 111,
+              "name": "GBA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 112,
+              "name": "BSH",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 113,
+              "name": "BSD",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 114,
+              "name": "BSA",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Team",
+              "from": "home_team_api_id",
+              "to": "team_api_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Match_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Player",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "player_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "player_name",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "player_fifa_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "birthday",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "height",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "weight",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Player_2",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  3,
+                  "player_fifa_api_id"
+                ]
+              ]
+            },
+            {
+              "name": "sqlite_autoindex_Player_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Player_Attributes",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "player_fifa_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "player_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "date",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "overall_rating",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "potential",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "preferred_foot",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "attacking_work_rate",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "defensive_work_rate",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "crossing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "finishing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "heading_accuracy",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "short_passing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "volleys",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "dribbling",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "curve",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "free_kick_accuracy",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "long_passing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "ball_control",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "acceleration",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "sprint_speed",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "agility",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "reactions",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "balance",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "shot_power",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "jumping",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "stamina",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "strength",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "long_shots",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 29,
+              "name": "aggression",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 30,
+              "name": "interceptions",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 31,
+              "name": "positioning",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 32,
+              "name": "vision",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 33,
+              "name": "penalties",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 34,
+              "name": "marking",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 35,
+              "name": "standing_tackle",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 36,
+              "name": "sliding_tackle",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 37,
+              "name": "gk_diving",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 38,
+              "name": "gk_handling",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 39,
+              "name": "gk_kicking",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 40,
+              "name": "gk_positioning",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 41,
+              "name": "gk_reflexes",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Player",
+              "from": "player_fifa_api_id",
+              "to": "player_fifa_api_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Player_Attributes_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Team",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "team_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "team_fifa_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "team_long_name",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "team_short_name",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Team_3",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  2,
+                  "team_fifa_api_id"
+                ]
+              ]
+            },
+            {
+              "name": "sqlite_autoindex_Team_2",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  1,
+                  "team_api_id"
+                ]
+              ]
+            },
+            {
+              "name": "sqlite_autoindex_Team_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "Team_Attributes",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "team_fifa_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "team_api_id",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "date",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "buildUpPlaySpeed",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "buildUpPlaySpeedClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "buildUpPlayDribbling",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "buildUpPlayDribblingClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "buildUpPlayPassing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "buildUpPlayPassingClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "buildUpPlayPositioningClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "chanceCreationPassing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "chanceCreationPassingClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "chanceCreationCrossing",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "chanceCreationCrossingClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "chanceCreationShooting",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "chanceCreationShootingClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "chanceCreationPositioningClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "defencePressure",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "defencePressureClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "defenceAggression",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "defenceAggressionClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "defenceTeamWidth",
+              "type": "INT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "defenceTeamWidthClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "defenceDefenderLineClass",
+              "type": "varchar",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "Team",
+              "from": "team_fifa_api_id",
+              "to": "team_fifa_api_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_Team_Attributes_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "id"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED",
+        "ENCODER_SEMANTIC_GAP_OR_NO_EXPLICIT_OPERATOR_BRANCH_NOT_DYNAMICALLY_TESTED"
+      ]
+    },
+    {
+      "case_id": "california_schools__45",
+      "development_only": true,
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_run": false,
+      "new_UA": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_precise": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "reasons": [
+        "Complete schema includes REAL and DATE (including NOT NULL schools.LastUpdate), plus quoted column names. Cannot drop unreferenced frpm or coerce all source types into existing map.",
+        "N=1 is insufficient for the existing two-school group-merging countermodel; this limits interpretation but is NOT an independent reason to reject admission."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/california_schools__45/gold.sql",
+          "sha256": "5bb822f092e03d289233e8a8301e73eea1bc2b6d08299a07410b19ac62d2f0aa"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/california_schools__45/predicted.sql",
+          "sha256": "76389a944ca6d229cccd5aa63f4600e1492677e5598c6d728e5947d5a6e9ae46"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/california_schools__45/full-schema.sql",
+          "sha256": "d8ddb1095d4b86278e960f5b992a6d506811a6aede94999e82a05caff5bcda7e"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/california_schools__45/official-record.json",
+          "sha256": "c67202ff40daf8a77029bdb6afaecd80fd5cdcee64df850152c0d1245e863334"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 22,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 58,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "TEXT": 62,
+        "INTEGER": 12,
+        "REAL": 12,
+        "DATE": 3
+      },
+      "unsupported_by_existing_type_map": [
+        "DATE",
+        "REAL"
+      ],
+      "table_count": 3,
+      "column_count": 89,
+      "full_C_inventory": [
+        {
+          "table": "frpm",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CDSCode",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Academic Year",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "County Code",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "District Code",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "School Code",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "County Name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "District Name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "School Name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "District Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "School Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "Educational Option Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "NSLP Provision Status",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "Charter School (Y/N)",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "Charter School Number",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "Charter Funding Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "IRC",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "Low Grade",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "High Grade",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "Enrollment (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "Free Meal Count (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "Percent (%) Eligible Free (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "FRPM Count (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "Percent (%) Eligible FRPM (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "Enrollment (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "Free Meal Count (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "Percent (%) Eligible Free (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "FRPM Count (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "Percent (%) Eligible FRPM (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "2013-14 CALPADS Fall 1 Certification Status",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "schools",
+              "from": "CDSCode",
+              "to": "CDSCode",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_frpm_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "CDSCode"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "satscores",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "cds",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "rtype",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "sname",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "dname",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "cname",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "enroll12",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "NumTstTakr",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "AvgScrRead",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "AvgScrMath",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "AvgScrWrite",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "NumGE1500",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "schools",
+              "from": "cds",
+              "to": "CDSCode",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_satscores_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "cds"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "schools",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CDSCode",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "NCESDist",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "NCESSchool",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "StatusType",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "County",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "District",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "School",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "Street",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "StreetAbr",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "City",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "Zip",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "State",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "MailStreet",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "MailStrAbr",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "MailCity",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "MailZip",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "MailState",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "Phone",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "Ext",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "Website",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "OpenDate",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "ClosedDate",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "Charter",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "CharterNum",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "FundingType",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "DOC",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "DOCType",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "SOC",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "SOCType",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 29,
+              "name": "EdOpsCode",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 30,
+              "name": "EdOpsName",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 31,
+              "name": "EILCode",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 32,
+              "name": "EILName",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 33,
+              "name": "GSoffered",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 34,
+              "name": "GSserved",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 35,
+              "name": "Virtual",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 36,
+              "name": "Magnet",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 37,
+              "name": "Latitude",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 38,
+              "name": "Longitude",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 39,
+              "name": "AdmFName1",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 40,
+              "name": "AdmLName1",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 41,
+              "name": "AdmEmail1",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 42,
+              "name": "AdmFName2",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 43,
+              "name": "AdmLName2",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 44,
+              "name": "AdmEmail2",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 45,
+              "name": "AdmFName3",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 46,
+              "name": "AdmLName3",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 47,
+              "name": "AdmEmail3",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 48,
+              "name": "LastUpdate",
+              "type": "DATE",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_schools_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "CDSCode"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "case_id": "debit_card_specializing__1526",
+      "development_only": true,
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_run": false,
+      "new_UA": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "new_precise": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+      "reasons": [
+        "REAL/DATE, CAST/division, scalar subqueries and SUBSTRING/IIF/LIKE need source-dialect semantics. LIKE has an implementation branch, so it is not categorically labelled absent.",
+        "Complete DDL has the same duplicate/implicit-target REFERENCES, UNIQUE, AUTOINCREMENT mapping obligations as #1490."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/debit_card_specializing__1526/gold.sql",
+          "sha256": "53708e84296810891d34decb0e3ae99d112c06e6ed1a287a67e40783c8e9b92a"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/debit_card_specializing__1526/predicted.sql",
+          "sha256": "5d6099a7351c3129e61810695e1e1265c00ee39e706b83e7af29306a6a2a6491"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/debit_card_specializing__1526/full-schema.sql",
+          "sha256": "a786ad4828fd2218105fd1e543891fcee4668482657e0627bd6f9a43767ed59f"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/debit_card_specializing__1526/official-record.json",
+          "sha256": "274fd52ddb1896a0bc1f3e3c726928763b8eeda5fda86af834ae75c52a10356c"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 63,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "COMPILES",
+          "opcode_count": 113,
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "INTEGER": 11,
+        "TEXT": 7,
+        "DATE": 1,
+        "REAL": 2
+      },
+      "unsupported_by_existing_type_map": [
+        "DATE",
+        "REAL"
+      ],
+      "table_count": 5,
+      "column_count": 21,
+      "full_C_inventory": [
+        {
+          "table": "customers",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CustomerID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Segment",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Currency",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_customers_1",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "CustomerID"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "gasstations",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "GasStationID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "ChainID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Country",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "Segment",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_gasstations_1",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "GasStationID"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "products",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "ProductID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Description",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_products_1",
+              "unique": 1,
+              "origin": "u",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "ProductID"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "transactions_1k",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "TransactionID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Date",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "Time",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "CustomerID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "CardID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "GasStationID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "ProductID",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "Amount",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "Price",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        },
+        {
+          "table": "yearmonth",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CustomerID",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 2
+            },
+            {
+              "cid": 1,
+              "name": "Date",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 2,
+              "name": "Consumption",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "customers",
+              "from": "CustomerID",
+              "to": null,
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "customers",
+              "from": "CustomerID",
+              "to": null,
+              "on_update": "CASCADE",
+              "on_delete": "CASCADE",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_yearmonth_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  1,
+                  "Date"
+                ],
+                [
+                  1,
+                  0,
+                  "CustomerID"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED",
+        "ENCODER_SEMANTIC_GAP_OR_NO_EXPLICIT_OPERATOR_BRANCH_NOT_DYNAMICALLY_TESTED"
+      ]
+    },
+    {
+      "case_id": "california_schools__26",
+      "development_only": true,
+      "category": "INVALID_INPUT",
+      "new_run": false,
+      "new_UA": "NOT_RUN_INVALID_INPUT",
+      "new_precise": "NOT_RUN_INVALID_INPUT",
+      "reasons": [
+        "Predicted query refers to frpm.Street (also City/Zip/State); those columns are absent. Keep malformed pair in denominator, do not repair aliases or replace case."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/california_schools__26/gold.sql",
+          "sha256": "1d27f205d17954b2d8b73583631f8f381863969f9160f898eed91c33d3e8e056"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/california_schools__26/predicted.sql",
+          "sha256": "f54aae445bb2b52ad42dedeae0fc6c6ab17dc854215c65f1ecdb7212de047277"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/california_schools__26/full-schema.sql",
+          "sha256": "d8ddb1095d4b86278e960f5b992a6d506811a6aede94999e82a05caff5bcda7e"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/california_schools__26/official-record.json",
+          "sha256": "965bed0afe8c618a50d8c4b04c1b152203082d6fc0499080f3c7344da88b5bab"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 29,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "INVALID_INPUT",
+          "error": "no such column: T1.Street",
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "TEXT": 62,
+        "INTEGER": 12,
+        "REAL": 12,
+        "DATE": 3
+      },
+      "unsupported_by_existing_type_map": [
+        "DATE",
+        "REAL"
+      ],
+      "table_count": 3,
+      "column_count": 89,
+      "full_C_inventory": [
+        {
+          "table": "frpm",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CDSCode",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "Academic Year",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "County Code",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "District Code",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "School Code",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "County Name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "District Name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "School Name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "District Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "School Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "Educational Option Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "NSLP Provision Status",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "Charter School (Y/N)",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "Charter School Number",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "Charter Funding Type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "IRC",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "Low Grade",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "High Grade",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "Enrollment (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "Free Meal Count (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "Percent (%) Eligible Free (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "FRPM Count (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "Percent (%) Eligible FRPM (K-12)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "Enrollment (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "Free Meal Count (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "Percent (%) Eligible Free (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "FRPM Count (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "Percent (%) Eligible FRPM (Ages 5-17)",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "2013-14 CALPADS Fall 1 Certification Status",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "schools",
+              "from": "CDSCode",
+              "to": "CDSCode",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_frpm_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "CDSCode"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "satscores",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "cds",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "rtype",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "sname",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "dname",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "cname",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "enroll12",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "NumTstTakr",
+              "type": "INTEGER",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "AvgScrRead",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "AvgScrMath",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "AvgScrWrite",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "NumGE1500",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "schools",
+              "from": "cds",
+              "to": "CDSCode",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_satscores_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "cds"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "schools",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "CDSCode",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "NCESDist",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "NCESSchool",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "StatusType",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "County",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "District",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "School",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "Street",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "StreetAbr",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 9,
+              "name": "City",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 10,
+              "name": "Zip",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 11,
+              "name": "State",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 12,
+              "name": "MailStreet",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 13,
+              "name": "MailStrAbr",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 14,
+              "name": "MailCity",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 15,
+              "name": "MailZip",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 16,
+              "name": "MailState",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 17,
+              "name": "Phone",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 18,
+              "name": "Ext",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 19,
+              "name": "Website",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 20,
+              "name": "OpenDate",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 21,
+              "name": "ClosedDate",
+              "type": "DATE",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 22,
+              "name": "Charter",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 23,
+              "name": "CharterNum",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 24,
+              "name": "FundingType",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 25,
+              "name": "DOC",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 26,
+              "name": "DOCType",
+              "type": "TEXT",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 27,
+              "name": "SOC",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 28,
+              "name": "SOCType",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 29,
+              "name": "EdOpsCode",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 30,
+              "name": "EdOpsName",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 31,
+              "name": "EILCode",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 32,
+              "name": "EILName",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 33,
+              "name": "GSoffered",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 34,
+              "name": "GSserved",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 35,
+              "name": "Virtual",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 36,
+              "name": "Magnet",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 37,
+              "name": "Latitude",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 38,
+              "name": "Longitude",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 39,
+              "name": "AdmFName1",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 40,
+              "name": "AdmLName1",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 41,
+              "name": "AdmEmail1",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 42,
+              "name": "AdmFName2",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 43,
+              "name": "AdmLName2",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 44,
+              "name": "AdmEmail2",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 45,
+              "name": "AdmFName3",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 46,
+              "name": "AdmLName3",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 47,
+              "name": "AdmEmail3",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 48,
+              "name": "LastUpdate",
+              "type": "DATE",
+              "notnull": 1,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_schools_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "CDSCode"
+                ]
+              ]
+            }
+          ]
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "ORIGINAL_QUERY_MISSING_COLUMN"
+      ]
+    },
+    {
+      "case_id": "student_club__1390",
+      "development_only": true,
+      "category": "INVALID_INPUT",
+      "new_run": false,
+      "new_UA": "NOT_RUN_INVALID_INPUT",
+      "new_precise": "NOT_RUN_INVALID_INPUT",
+      "reasons": [
+        "Predicted query refers to expense.link_to_event, absent from original expense DDL. Keep malformed pair in denominator.",
+        "Nullable non-integer SQLite PRIMARY KEY columns add a separate semantic issue: Polygon primary encoder forces non-NULL; no mapping admission asserted."
+      ],
+      "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "source_files": {
+        "gold.sql": {
+          "local_path": "sources_local/student_club__1390/gold.sql",
+          "sha256": "8b040f1bdfbb4d2f32d8e3201b41d79951867aef3152fd2ac79e45aaf9f76be3"
+        },
+        "predicted.sql": {
+          "local_path": "sources_local/student_club__1390/predicted.sql",
+          "sha256": "9ce57302465702bda5254e6676ba9b8df3236a395fc3d8ab45c9459dac52fe24"
+        },
+        "full-schema.sql": {
+          "local_path": "sources_local/student_club__1390/full-schema.sql",
+          "sha256": "c4d2456393e89bd173a0067c3ac742686d6383a98b2d740807c853c7427606a8"
+        },
+        "official-record.json": {
+          "local_path": "sources_local/student_club__1390/official-record.json",
+          "sha256": "3a66be408ac47e7a549256404b7dc4d6fb74bac58e34fd2c8a891396933f68f6"
+        }
+      },
+      "compile_only": {
+        "gold.sql": {
+          "status": "COMPILES",
+          "opcode_count": 42,
+          "query_executed": false
+        },
+        "predicted.sql": {
+          "status": "INVALID_INPUT",
+          "error": "no such column: T2.link_to_event",
+          "query_executed": false
+        }
+      },
+      "type_counts": {
+        "TEXT": 41,
+        "REAL": 3,
+        "INTEGER": 4
+      },
+      "unsupported_by_existing_type_map": [
+        "REAL"
+      ],
+      "table_count": 8,
+      "column_count": 48,
+      "full_C_inventory": [
+        {
+          "table": "attendance",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "link_to_event",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "link_to_member",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 2
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "member",
+              "from": "link_to_member",
+              "to": "member_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "event",
+              "from": "link_to_event",
+              "to": "event_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_attendance_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "link_to_event"
+                ],
+                [
+                  1,
+                  1,
+                  "link_to_member"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "budget",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "budget_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "category",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "spent",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "remaining",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "amount",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "event_status",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "link_to_event",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "event",
+              "from": "link_to_event",
+              "to": "event_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_budget_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "budget_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "event",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "event_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "event_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "event_date",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "notes",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "location",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "status",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_event_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "event_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "expense",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "expense_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "expense_description",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "expense_date",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "cost",
+              "type": "REAL",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "approved",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "link_to_member",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "link_to_budget",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "member",
+              "from": "link_to_member",
+              "to": "member_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "budget",
+              "from": "link_to_budget",
+              "to": "budget_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_expense_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "expense_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "income",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "income_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "date_received",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "amount",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "source",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "notes",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "link_to_member",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "member",
+              "from": "link_to_member",
+              "to": "member_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_income_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "income_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "major",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "major_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "major_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "department",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "college",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_major_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "major_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "member",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "member_id",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "first_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "last_name",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "email",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "position",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "t_shirt_size",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 6,
+              "name": "phone",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 7,
+              "name": "zip",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 8,
+              "name": "link_to_major",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            {
+              "id": 0,
+              "seq": 0,
+              "table": "zip_code",
+              "from": "zip",
+              "to": "zip_code",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            },
+            {
+              "id": 1,
+              "seq": 0,
+              "table": "major",
+              "from": "link_to_major",
+              "to": "major_id",
+              "on_update": "NO ACTION",
+              "on_delete": "NO ACTION",
+              "match": "NONE"
+            }
+          ],
+          "indexes": [
+            {
+              "name": "sqlite_autoindex_member_1",
+              "unique": 1,
+              "origin": "pk",
+              "partial": 0,
+              "columns": [
+                [
+                  0,
+                  0,
+                  "member_id"
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "table": "zip_code",
+          "columns": [
+            {
+              "cid": 0,
+              "name": "zip_code",
+              "type": "INTEGER",
+              "notnull": 0,
+              "default": null,
+              "pk": 1
+            },
+            {
+              "cid": 1,
+              "name": "type",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 2,
+              "name": "city",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 3,
+              "name": "county",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 4,
+              "name": "state",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            },
+            {
+              "cid": 5,
+              "name": "short_state",
+              "type": "TEXT",
+              "notnull": 0,
+              "default": null,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [],
+          "indexes": []
+        }
+      ],
+      "full_C_mapping_admitted": false,
+      "no_source_query_or_DDL_rewrite": true,
+      "new_solver_calls": 0,
+      "new_query_data_executions": 0,
+      "new_stage_seconds": null,
+      "secondary_static_tags": [
+        "ORIGINAL_QUERY_MISSING_COLUMN"
+      ]
+    }
+  ]
+}

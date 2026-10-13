@@ -1,0 +1,1741 @@
+{
+  "schema_version": 1,
+  "case": "gitlab#47",
+  "status": "FULL_DECLARED_C_MAPPED_FOR_NEW_POSTGRESQL_PENDING_REVIEW_AND_EXECUTION",
+  "created_utc_date": "2026-10-11",
+  "fullC_definition": "All columns of three query relations plus users declared-FK closure; all source NOT NULL, PK, UNIQUE and FK, native type value domains, complete projects.* output. No inherited SQLite boolean encoding.",
+  "source_commit": "d29347220c07ab0191cf208d3775475c7b5d71ca",
+  "source_parent": "2b34f3f20d5a5c8ecdf6e8842892cb2b4ed3c89a",
+  "source_schema_version": "20170607121233",
+  "engine_provenance": {
+    "source_application_version": "9.3.0-pre",
+    "source_schema_family": "POSTGRESQL (enable_extension plpgsql/pg_trgm at schema lines 17-18 and PostgreSQL index opclasses)",
+    "source_query_execution_engine": "NOT_IDENTIFIED_DIRECTLY; source SQL f literal is compatible with PostgreSQL",
+    "requirements": "Parent requirements lines 142-144 state PostgreSQL >=9.2 and recommend9.6; not proof of actual server version",
+    "historical_server_version": null,
+    "historical_server_session": null,
+    "historical_collation": null,
+    "historical_data": null,
+    "historical_engine_replay": false,
+    "new_engine_profile": "Parent runner plans PostgreSQL16.14, C locale, UTF8, task-private Unix socket and no TCP; runtime acceptance recorded separately",
+    "database_yml": "Exact parent PostgreSQL template declares adapter postgresql and encoding unicode; template is not deployment evidence"
+  },
+  "rails_resolution": {
+    "activerecord_version": "4.2.8",
+    "rails_version": "4.2.8",
+    "gemfile_lines": [
+      31,
+      630
+    ],
+    "exact_parent_lock": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/g47_parent_Gemfile.lock",
+    "adapter_ref": "rails/rails@v4.2.8",
+    "native_types_lines": [
+      79,
+      98
+    ],
+    "abstract_type_to_sql_lines": [
+      865,
+      889
+    ],
+    "postgres_type_to_sql_lines": [
+      543,
+      578
+    ],
+    "string_limit_result": "No source limit on all40 string columns; PG adapter string has no native limit; type_to_sql appends a width only when explicit/native limit exists. Correct new-PG schema-load mapping is VARCHAR with no typmod, not VARCHAR(255).",
+    "implicit_id": "create_table default id -> primary_key native serial primary key (abstract205-214, adapter80). Catalog INTEGER carries same int32 values; DB DDL preserves sequence default."
+  },
+  "type_summary": {
+    "INTEGER": 26,
+    "VARCHAR": 40,
+    "TEXT": 4,
+    "TIMESTAMP WITHOUT TIME ZONE": 19,
+    "BOOLEAN": 27,
+    "DATE": 1
+  },
+  "table_count": 4,
+  "column_count": 117,
+  "constraint_counts": {
+    "NotNullDecl": 32,
+    "PrimaryKeyDecl": 3,
+    "UniqueDecl": 6,
+    "ForeignKeyDecl": 2
+  },
+  "expected_catalog_constraint_count": 43,
+  "nullable_unique_semantics": {
+    "project_authorizations": [
+      "user_id",
+      "project_id",
+      "access_level"
+    ],
+    "all_authorization_columns_nullable": true,
+    "authorization_primary_key": null,
+    "all_six_unique_keys_null_policy": "NULLS_DISTINCT",
+    "nullable_user_singleton_keys": [
+      "authentication_token",
+      "confirmation_token",
+      "reset_password_token"
+    ],
+    "not_null_unique_user_key": "email",
+    "repeated_NULL_key_allowed": true,
+    "duplicate_fully_nonnull_key_forbidden": true
+  },
+  "collation_policy": {
+    "source_declaration": "UNSPECIFIED (no explicit collation in selected source declarations)",
+    "postgres_ddl": "Inherit replay database default; no source collation is guessed or added",
+    "catalog": "ColumnDecl.collation remains None as in source declaration; native PostgreSQL equality; selected C-locale calibration must be attested by runner",
+    "historical_unknown_is_not_a_new_engine_blocker": true,
+    "explicit_collation_support_limit": "ParSEval Catalog _key_inactive_reason lines555-559 marks any explicit collated key inactive. Do not add a guessed CollationId or suppress an actual explicit one. A changed source requiring explicit collation needs new audit.",
+    "scope": "No all-locale equivalence or historical server reproduction claimed. Conservative text-key values and PostgreSQL constraint acceptance are required for retained generated instances."
+  },
+  "source_C_preservation": {
+    "constraints_added": [],
+    "constraints_removed": [],
+    "all_source_defaults_retained_in_backend": true,
+    "catalog_implicit_sequence_allocation": "not modeled; every generated row must supply every column, including IDs",
+    "on_delete_cascade": "retained in backend DDL; Catalog query-time FK is MATCH SIMPLE; no mutation/cascade behavior claim",
+    "nonunique_indexes": "Source nonunique performance indexes/pg_trgm extension not required for static relational C and not reproduced. This is not a performance or physical-plan experiment.",
+    "forbidden_changes": [
+      "no stars foreign key",
+      "no authorization two-column UNIQUE",
+      "no pending_delete NOT NULL",
+      "no visibility enumeration CHECK",
+      "no id-only projection",
+      "no invented255 varchar length"
+    ]
+  },
+  "adapter": {
+    "path": "calibergraph_parseval_admission_20261011_03/implementation/gitlab_schema.py",
+    "load_schema": "stdlib source check, returns ordered table metadata",
+    "make_ddl": "returns SERIAL-preserving PostgreSQL DDL string; no execution",
+    "build_catalog": "lazy target import; real Catalog APIs; native DATE/TIMESTAMP/BOOLEAN; INTEGER int32; audit required before returning",
+    "audit_catalog": "asserts exact per-table constraint signature/nullability/types, all43 proof_active and no additional/unsupported declarations",
+    "ddl_sha256": "c5d4304aa8b0719e998c0f424bec0c91344b933dcb1ac47b827bd3005dcd0dac",
+    "ddl_bytes": 5076,
+    "ddl_stored_in_report": false,
+    "source_queries_stored_in_report": false
+  },
+  "static_validation": {
+    "source_hashes": "PASS",
+    "117_column_names_order_types_nullability_defaults": "PASS_against_original_Ruby_lines",
+    "exact_source_unique_and_foreign_key_declarations": "PASS",
+    "new_source_git_blob_identity": "all5_saved_files_match_official_blob_sha1",
+    "target_import": "NOT_RUN",
+    "SQL_parser": "NOT_RUN",
+    "SMT": "NOT_RUN",
+    "database": "NOT_RUN",
+    "data_generation": "NOT_RUN",
+    "module_syntax": "PASS_standard_library_execution_only"
+  },
+  "remaining_runtime_gates": [
+    "Independent review before target imports or execution",
+    "Catalog43 active assertions must pass at runtime",
+    "Keep original query hashes; original f literal compatibility owned by parent",
+    "Verify target database locale/encoding and source C negative/nullable tests",
+    "Reject generated rows failing real PostgreSQL type/domain/constraint checks; do not count backend errors as output differences"
+  ],
+  "remaining_historical_gaps": [
+    "Actual historical server/version/session/collation/data unknown; not required to claim only new-engine calibration"
+  ],
+  "tables": {
+    "projects": {
+      "column_count": 42,
+      "not_null_columns": [
+        "id",
+        "visibility_level",
+        "archived",
+        "star_count",
+        "shared_runners_enabled",
+        "build_allow_git_fetch",
+        "build_timeout",
+        "public_builds",
+        "only_allow_merge_if_pipeline_succeeds",
+        "repository_storage",
+        "request_access_enabled",
+        "printing_merge_request_link_enabled",
+        "auto_cancel_pending_pipelines"
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "unique_keys": [],
+      "foreign_keys": [],
+      "column_source_lines": [
+        1030,
+        1071
+      ]
+    },
+    "users": {
+      "column_count": 67,
+      "not_null_columns": [
+        "id",
+        "email",
+        "encrypted_password",
+        "admin",
+        "skype",
+        "linkedin",
+        "twitter",
+        "can_create_group",
+        "can_create_team",
+        "color_scheme_id",
+        "website_url",
+        "otp_required_for_login",
+        "public_email",
+        "require_two_factor_authentication_from_group",
+        "two_factor_grace_period",
+        "external_email"
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "unique_keys": [
+        {
+          "columns": [
+            "authentication_token"
+          ],
+          "null_policy": "NULLS_DISTINCT"
+        },
+        {
+          "columns": [
+            "confirmation_token"
+          ],
+          "null_policy": "NULLS_DISTINCT"
+        },
+        {
+          "columns": [
+            "email"
+          ],
+          "null_policy": "NULLS_DISTINCT"
+        },
+        {
+          "columns": [
+            "reset_password_token"
+          ],
+          "null_policy": "NULLS_DISTINCT"
+        }
+      ],
+      "foreign_keys": [],
+      "column_source_lines": [
+        1377,
+        1443
+      ]
+    },
+    "users_star_projects": {
+      "column_count": 5,
+      "not_null_columns": [
+        "id",
+        "project_id",
+        "user_id"
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "unique_keys": [
+        {
+          "columns": [
+            "user_id",
+            "project_id"
+          ],
+          "null_policy": "NULLS_DISTINCT"
+        }
+      ],
+      "foreign_keys": [],
+      "column_source_lines": [
+        1462,
+        1466
+      ]
+    },
+    "project_authorizations": {
+      "column_count": 3,
+      "not_null_columns": [],
+      "primary_key": [],
+      "unique_keys": [
+        {
+          "columns": [
+            "user_id",
+            "project_id",
+            "access_level"
+          ],
+          "null_policy": "NULLS_DISTINCT"
+        }
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "project_id"
+          ],
+          "ref_table": "projects",
+          "ref_columns": [
+            "id"
+          ],
+          "on_delete": "cascade",
+          "source_line": 1541
+        },
+        {
+          "columns": [
+            "user_id"
+          ],
+          "ref_table": "users",
+          "ref_columns": [
+            "id"
+          ],
+          "on_delete": "cascade",
+          "source_line": 1542
+        }
+      ],
+      "column_source_lines": [
+        973,
+        976
+      ]
+    }
+  },
+  "columns": [
+    {
+      "table": "projects",
+      "position": 1,
+      "name": "id",
+      "source_type": "integer",
+      "source_line": 1030,
+      "postgres_type": "SERIAL",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default_mapping": "Backend SERIAL sequence default; Catalog INTEGER int32; generator supplies every cell explicitly"
+    },
+    {
+      "table": "projects",
+      "position": 2,
+      "name": "name",
+      "source_type": "string",
+      "source_line": 1031,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 3,
+      "name": "path",
+      "source_type": "string",
+      "source_line": 1032,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 4,
+      "name": "description",
+      "source_type": "text",
+      "source_line": 1033,
+      "postgres_type": "TEXT",
+      "catalog_declared_type": "TEXT",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 5,
+      "name": "created_at",
+      "source_type": "datetime",
+      "source_line": 1034,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 6,
+      "name": "updated_at",
+      "source_type": "datetime",
+      "source_line": 1035,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 7,
+      "name": "creator_id",
+      "source_type": "integer",
+      "source_line": 1036,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 8,
+      "name": "namespace_id",
+      "source_type": "integer",
+      "source_line": 1037,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 9,
+      "name": "last_activity_at",
+      "source_type": "datetime",
+      "source_line": 1038,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 10,
+      "name": "import_url",
+      "source_type": "string",
+      "source_line": 1039,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 11,
+      "name": "visibility_level",
+      "source_type": "integer",
+      "source_line": 1040,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "projects",
+      "position": 12,
+      "name": "archived",
+      "source_type": "boolean",
+      "source_line": 1041,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "projects",
+      "position": 13,
+      "name": "avatar",
+      "source_type": "string",
+      "source_line": 1042,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 14,
+      "name": "import_status",
+      "source_type": "string",
+      "source_line": 1043,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 15,
+      "name": "star_count",
+      "source_type": "integer",
+      "source_line": 1044,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "projects",
+      "position": 16,
+      "name": "import_type",
+      "source_type": "string",
+      "source_line": 1045,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 17,
+      "name": "import_source",
+      "source_type": "string",
+      "source_line": 1046,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 18,
+      "name": "import_error",
+      "source_type": "text",
+      "source_line": 1047,
+      "postgres_type": "TEXT",
+      "catalog_declared_type": "TEXT",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 19,
+      "name": "ci_id",
+      "source_type": "integer",
+      "source_line": 1048,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 20,
+      "name": "shared_runners_enabled",
+      "source_type": "boolean",
+      "source_line": 1049,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": true
+    },
+    {
+      "table": "projects",
+      "position": 21,
+      "name": "runners_token",
+      "source_type": "string",
+      "source_line": 1050,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 22,
+      "name": "build_coverage_regex",
+      "source_type": "string",
+      "source_line": 1051,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 23,
+      "name": "build_allow_git_fetch",
+      "source_type": "boolean",
+      "source_line": 1052,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": true
+    },
+    {
+      "table": "projects",
+      "position": 24,
+      "name": "build_timeout",
+      "source_type": "integer",
+      "source_line": 1053,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": 3600
+    },
+    {
+      "table": "projects",
+      "position": 25,
+      "name": "pending_delete",
+      "source_type": "boolean",
+      "source_line": 1054,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "projects",
+      "position": 26,
+      "name": "public_builds",
+      "source_type": "boolean",
+      "source_line": 1055,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": true
+    },
+    {
+      "table": "projects",
+      "position": 27,
+      "name": "last_repository_check_failed",
+      "source_type": "boolean",
+      "source_line": 1056,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 28,
+      "name": "last_repository_check_at",
+      "source_type": "datetime",
+      "source_line": 1057,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 29,
+      "name": "container_registry_enabled",
+      "source_type": "boolean",
+      "source_line": 1058,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 30,
+      "name": "only_allow_merge_if_pipeline_succeeds",
+      "source_type": "boolean",
+      "source_line": 1059,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "projects",
+      "position": 31,
+      "name": "has_external_issue_tracker",
+      "source_type": "boolean",
+      "source_line": 1060,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 32,
+      "name": "repository_storage",
+      "source_type": "string",
+      "source_line": 1061,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": "default"
+    },
+    {
+      "table": "projects",
+      "position": 33,
+      "name": "request_access_enabled",
+      "source_type": "boolean",
+      "source_line": 1062,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "projects",
+      "position": 34,
+      "name": "has_external_wiki",
+      "source_type": "boolean",
+      "source_line": 1063,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 35,
+      "name": "lfs_enabled",
+      "source_type": "boolean",
+      "source_line": 1064,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 36,
+      "name": "description_html",
+      "source_type": "text",
+      "source_line": 1065,
+      "postgres_type": "TEXT",
+      "catalog_declared_type": "TEXT",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 37,
+      "name": "only_allow_merge_if_all_discussions_are_resolved",
+      "source_type": "boolean",
+      "source_line": 1066,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 38,
+      "name": "printing_merge_request_link_enabled",
+      "source_type": "boolean",
+      "source_line": 1067,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": true
+    },
+    {
+      "table": "projects",
+      "position": 39,
+      "name": "auto_cancel_pending_pipelines",
+      "source_type": "integer",
+      "source_line": 1068,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": 1
+    },
+    {
+      "table": "projects",
+      "position": 40,
+      "name": "import_jid",
+      "source_type": "string",
+      "source_line": 1069,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 41,
+      "name": "cached_markdown_version",
+      "source_type": "integer",
+      "source_line": 1070,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "projects",
+      "position": 42,
+      "name": "last_repository_updated_at",
+      "source_type": "datetime",
+      "source_line": 1071,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 1,
+      "name": "id",
+      "source_type": "integer",
+      "source_line": 1377,
+      "postgres_type": "SERIAL",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default_mapping": "Backend SERIAL sequence default; Catalog INTEGER int32; generator supplies every cell explicitly"
+    },
+    {
+      "table": "users",
+      "position": 2,
+      "name": "email",
+      "source_type": "string",
+      "source_line": 1378,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 3,
+      "name": "encrypted_password",
+      "source_type": "string",
+      "source_line": 1379,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 4,
+      "name": "reset_password_token",
+      "source_type": "string",
+      "source_line": 1380,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 5,
+      "name": "reset_password_sent_at",
+      "source_type": "datetime",
+      "source_line": 1381,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 6,
+      "name": "remember_created_at",
+      "source_type": "datetime",
+      "source_line": 1382,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 7,
+      "name": "sign_in_count",
+      "source_type": "integer",
+      "source_line": 1383,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "users",
+      "position": 8,
+      "name": "current_sign_in_at",
+      "source_type": "datetime",
+      "source_line": 1384,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 9,
+      "name": "last_sign_in_at",
+      "source_type": "datetime",
+      "source_line": 1385,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 10,
+      "name": "current_sign_in_ip",
+      "source_type": "string",
+      "source_line": 1386,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 11,
+      "name": "last_sign_in_ip",
+      "source_type": "string",
+      "source_line": 1387,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 12,
+      "name": "created_at",
+      "source_type": "datetime",
+      "source_line": 1388,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 13,
+      "name": "updated_at",
+      "source_type": "datetime",
+      "source_line": 1389,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 14,
+      "name": "name",
+      "source_type": "string",
+      "source_line": 1390,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 15,
+      "name": "admin",
+      "source_type": "boolean",
+      "source_line": 1391,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 16,
+      "name": "projects_limit",
+      "source_type": "integer",
+      "source_line": 1392,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": 10
+    },
+    {
+      "table": "users",
+      "position": 17,
+      "name": "skype",
+      "source_type": "string",
+      "source_line": 1393,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 18,
+      "name": "linkedin",
+      "source_type": "string",
+      "source_line": 1394,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 19,
+      "name": "twitter",
+      "source_type": "string",
+      "source_line": 1395,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 20,
+      "name": "authentication_token",
+      "source_type": "string",
+      "source_line": 1396,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 21,
+      "name": "bio",
+      "source_type": "string",
+      "source_line": 1397,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 22,
+      "name": "failed_attempts",
+      "source_type": "integer",
+      "source_line": 1398,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "users",
+      "position": 23,
+      "name": "locked_at",
+      "source_type": "datetime",
+      "source_line": 1399,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 24,
+      "name": "username",
+      "source_type": "string",
+      "source_line": 1400,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 25,
+      "name": "can_create_group",
+      "source_type": "boolean",
+      "source_line": 1401,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": true
+    },
+    {
+      "table": "users",
+      "position": 26,
+      "name": "can_create_team",
+      "source_type": "boolean",
+      "source_line": 1402,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": true
+    },
+    {
+      "table": "users",
+      "position": 27,
+      "name": "state",
+      "source_type": "string",
+      "source_line": 1403,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 28,
+      "name": "color_scheme_id",
+      "source_type": "integer",
+      "source_line": 1404,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": 1
+    },
+    {
+      "table": "users",
+      "position": 29,
+      "name": "password_expires_at",
+      "source_type": "datetime",
+      "source_line": 1405,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 30,
+      "name": "created_by_id",
+      "source_type": "integer",
+      "source_line": 1406,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 31,
+      "name": "last_credential_check_at",
+      "source_type": "datetime",
+      "source_line": 1407,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 32,
+      "name": "avatar",
+      "source_type": "string",
+      "source_line": 1408,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 33,
+      "name": "confirmation_token",
+      "source_type": "string",
+      "source_line": 1409,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 34,
+      "name": "confirmed_at",
+      "source_type": "datetime",
+      "source_line": 1410,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 35,
+      "name": "confirmation_sent_at",
+      "source_type": "datetime",
+      "source_line": 1411,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 36,
+      "name": "unconfirmed_email",
+      "source_type": "string",
+      "source_line": 1412,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 37,
+      "name": "hide_no_ssh_key",
+      "source_type": "boolean",
+      "source_line": 1413,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 38,
+      "name": "website_url",
+      "source_type": "string",
+      "source_line": 1414,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 39,
+      "name": "notification_email",
+      "source_type": "string",
+      "source_line": 1415,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 40,
+      "name": "hide_no_password",
+      "source_type": "boolean",
+      "source_line": 1416,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 41,
+      "name": "password_automatically_set",
+      "source_type": "boolean",
+      "source_line": 1417,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 42,
+      "name": "location",
+      "source_type": "string",
+      "source_line": 1418,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 43,
+      "name": "encrypted_otp_secret",
+      "source_type": "string",
+      "source_line": 1419,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 44,
+      "name": "encrypted_otp_secret_iv",
+      "source_type": "string",
+      "source_line": 1420,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 45,
+      "name": "encrypted_otp_secret_salt",
+      "source_type": "string",
+      "source_line": 1421,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 46,
+      "name": "otp_required_for_login",
+      "source_type": "boolean",
+      "source_line": 1422,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 47,
+      "name": "otp_backup_codes",
+      "source_type": "text",
+      "source_line": 1423,
+      "postgres_type": "TEXT",
+      "catalog_declared_type": "TEXT",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 48,
+      "name": "public_email",
+      "source_type": "string",
+      "source_line": 1424,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": ""
+    },
+    {
+      "table": "users",
+      "position": 49,
+      "name": "dashboard",
+      "source_type": "integer",
+      "source_line": 1425,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "users",
+      "position": 50,
+      "name": "project_view",
+      "source_type": "integer",
+      "source_line": 1426,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "users",
+      "position": 51,
+      "name": "consumed_timestep",
+      "source_type": "integer",
+      "source_line": 1427,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 52,
+      "name": "layout",
+      "source_type": "integer",
+      "source_line": 1428,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": 0
+    },
+    {
+      "table": "users",
+      "position": 53,
+      "name": "hide_project_limit",
+      "source_type": "boolean",
+      "source_line": 1429,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 54,
+      "name": "unlock_token",
+      "source_type": "string",
+      "source_line": 1430,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 55,
+      "name": "otp_grace_period_started_at",
+      "source_type": "datetime",
+      "source_line": 1431,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 56,
+      "name": "external",
+      "source_type": "boolean",
+      "source_line": 1432,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 57,
+      "name": "incoming_email_token",
+      "source_type": "string",
+      "source_line": 1433,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 58,
+      "name": "organization",
+      "source_type": "string",
+      "source_line": 1434,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 59,
+      "name": "require_two_factor_authentication_from_group",
+      "source_type": "boolean",
+      "source_line": 1435,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 60,
+      "name": "two_factor_grace_period",
+      "source_type": "integer",
+      "source_line": 1436,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": 48
+    },
+    {
+      "table": "users",
+      "position": 61,
+      "name": "ghost",
+      "source_type": "boolean",
+      "source_line": 1437,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 62,
+      "name": "last_activity_on",
+      "source_type": "date",
+      "source_line": 1438,
+      "postgres_type": "DATE",
+      "catalog_declared_type": "DATE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 63,
+      "name": "notified_of_own_activity",
+      "source_type": "boolean",
+      "source_line": 1439,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 64,
+      "name": "preferred_language",
+      "source_type": "string",
+      "source_line": 1440,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 65,
+      "name": "rss_token",
+      "source_type": "string",
+      "source_line": 1441,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users",
+      "position": 66,
+      "name": "external_email",
+      "source_type": "boolean",
+      "source_line": 1442,
+      "postgres_type": "BOOLEAN",
+      "catalog_declared_type": "BOOLEAN",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default": false
+    },
+    {
+      "table": "users",
+      "position": 67,
+      "name": "email_provider",
+      "source_type": "string",
+      "source_line": 1443,
+      "postgres_type": "VARCHAR",
+      "catalog_declared_type": "VARCHAR",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users_star_projects",
+      "position": 1,
+      "name": "id",
+      "source_type": "integer",
+      "source_line": 1462,
+      "postgres_type": "SERIAL",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null,
+      "default_mapping": "Backend SERIAL sequence default; Catalog INTEGER int32; generator supplies every cell explicitly"
+    },
+    {
+      "table": "users_star_projects",
+      "position": 2,
+      "name": "project_id",
+      "source_type": "integer",
+      "source_line": 1463,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users_star_projects",
+      "position": 3,
+      "name": "user_id",
+      "source_type": "integer",
+      "source_line": 1464,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": false,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users_star_projects",
+      "position": 4,
+      "name": "created_at",
+      "source_type": "datetime",
+      "source_line": 1465,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "users_star_projects",
+      "position": 5,
+      "name": "updated_at",
+      "source_type": "datetime",
+      "source_line": 1466,
+      "postgres_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "catalog_declared_type": "TIMESTAMP WITHOUT TIME ZONE",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "project_authorizations",
+      "position": 1,
+      "name": "user_id",
+      "source_type": "integer",
+      "source_line": 974,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "project_authorizations",
+      "position": 2,
+      "name": "project_id",
+      "source_type": "integer",
+      "source_line": 975,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    },
+    {
+      "table": "project_authorizations",
+      "position": 3,
+      "name": "access_level",
+      "source_type": "integer",
+      "source_line": 976,
+      "postgres_type": "INTEGER",
+      "catalog_declared_type": "INTEGER",
+      "nullable": true,
+      "source_explicit_collation": null
+    }
+  ],
+  "frozen_input_hashes": [
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/data/SOURCE_INPUTS.json",
+      "sha256": "9f35e5b1b293455f21e4d4427d6df72f08d397dc2ba97da6cde31c8942ad9d92",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/data/REPLAY_SCHEMA.json",
+      "sha256": "fdd8b509e0321dfe98d598ccc02caa50c9c686e2443482ff201f7e7203e55132",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/sources_local/selection/gitlab/47_parent_db__schema.rb",
+      "sha256": "988b32f89adb6c93c74bf9a3c077807faa05b6fadeb402d85d8fa0b5d18c750e",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/sources_local/selection/gitlab/g47_original_before.sql",
+      "sha256": "36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/sources_local/selection/gitlab/g47_original_after.sql",
+      "sha256": "1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/g47_parent_Gemfile.lock",
+      "sha256": "52e68c71ebfa857bd1706563157d961a76d3728594eb6976d28e2fc2b788e1b4",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/g47_parent_database.yml.postgresql",
+      "sha256": "b94ef6809ac5ac6d357803fff9598fe1067af8c16804611b8c6af19c878d1a99",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/rails_4_2_8_postgresql_adapter.rb",
+      "sha256": "8e0bd59434d11a15d8ce8c51c4df8de92067c712c5beb6d0fdc65ed2cfc40704",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/rails_4_2_8_abstract_schema_statements.rb",
+      "sha256": "da538327481faa2862a49e6216a5cdc946ade5bf21248c4f8bfe99f4494592df",
+      "verified": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/rails_4_2_8_postgresql_schema_statements.rb",
+      "sha256": "944439b6347892c237757f1f30e9a74d39f1b1f83fdace93c91bf72bd9ebb224",
+      "verified": true
+    }
+  ],
+  "new_official_sources": [
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/g47_parent_Gemfile.lock",
+      "repository": "gitlabhq/gitlabhq",
+      "ref": "2b34f3f20d5a5c8ecdf6e8842892cb2b4ed3c89a",
+      "repository_path": "Gemfile.lock",
+      "github_blob_sha1": "6755c75e33167b47b197691ca9b97da563c5bd8a",
+      "url": "https://github.com/gitlabhq/gitlabhq/blob/2b34f3f20d5a5c8ecdf6e8842892cb2b4ed3c89a/Gemfile.lock",
+      "representation": "connector UTF-8 content; final newline normalized",
+      "sha256": "52e68c71ebfa857bd1706563157d961a76d3728594eb6976d28e2fc2b788e1b4",
+      "bytes": 28003,
+      "saved_bytes_git_blob_sha1": "6755c75e33167b47b197691ca9b97da563c5bd8a",
+      "raw_blob_identity_matches": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/g47_parent_database.yml.postgresql",
+      "repository": "gitlabhq/gitlabhq",
+      "ref": "2b34f3f20d5a5c8ecdf6e8842892cb2b4ed3c89a",
+      "repository_path": "config/database.yml.postgresql",
+      "github_blob_sha1": "c517a4c0cb8b2338a7913fb143522d5d9d730030",
+      "url": "https://github.com/gitlabhq/gitlabhq/blob/2b34f3f20d5a5c8ecdf6e8842892cb2b4ed3c89a/config/database.yml.postgresql",
+      "representation": "connector UTF-8 content; final newline normalized",
+      "sha256": "b94ef6809ac5ac6d357803fff9598fe1067af8c16804611b8c6af19c878d1a99",
+      "bytes": 862,
+      "saved_bytes_git_blob_sha1": "c517a4c0cb8b2338a7913fb143522d5d9d730030",
+      "raw_blob_identity_matches": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/rails_4_2_8_postgresql_adapter.rb",
+      "repository": "rails/rails",
+      "ref": "v4.2.8",
+      "repository_path": "activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb",
+      "github_blob_sha1": "051cda68917dadbee01670f98c3cfdf911e79ebf",
+      "url": "https://github.com/rails/rails/blob/v4.2.8/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb",
+      "representation": "connector UTF-8 content; final newline normalized",
+      "sha256": "8e0bd59434d11a15d8ce8c51c4df8de92067c712c5beb6d0fdc65ed2cfc40704",
+      "bytes": 26553,
+      "saved_bytes_git_blob_sha1": "051cda68917dadbee01670f98c3cfdf911e79ebf",
+      "raw_blob_identity_matches": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/rails_4_2_8_abstract_schema_statements.rb",
+      "repository": "rails/rails",
+      "ref": "v4.2.8",
+      "repository_path": "activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb",
+      "github_blob_sha1": "167683c7c56404d0e390d88d977325c1fd20811f",
+      "url": "https://github.com/rails/rails/blob/v4.2.8/activerecord/lib/active_record/connection_adapters/abstract/schema_statements.rb",
+      "representation": "connector UTF-8 content; final newline normalized",
+      "sha256": "da538327481faa2862a49e6216a5cdc946ade5bf21248c4f8bfe99f4494592df",
+      "bytes": 40894,
+      "saved_bytes_git_blob_sha1": "167683c7c56404d0e390d88d977325c1fd20811f",
+      "raw_blob_identity_matches": true
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/gitlab_mapping/rails_4_2_8_postgresql_schema_statements.rb",
+      "repository": "rails/rails",
+      "ref": "v4.2.8",
+      "repository_path": "activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb",
+      "github_blob_sha1": "1f53fb417c20016ec00377b464a840c5034e40c3",
+      "url": "https://github.com/rails/rails/blob/v4.2.8/activerecord/lib/active_record/connection_adapters/postgresql/schema_statements.rb",
+      "representation": "connector UTF-8 content; final newline normalized",
+      "sha256": "944439b6347892c237757f1f30e9a74d39f1b1f83fdace93c91bf72bd9ebb224",
+      "bytes": 24175,
+      "saved_bytes_git_blob_sha1": "1f53fb417c20016ec00377b464a840c5034e40c3",
+      "raw_blob_identity_matches": true
+    }
+  ]
+}

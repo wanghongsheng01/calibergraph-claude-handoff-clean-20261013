@@ -1,0 +1,94 @@
+V4 CONDITIONAL SEMANTIC DERIVATION AND IMPLEMENTATION MAP
+Status: mathematical derivation + source inspection only; no native/target execution.
+
+Input domain
+The existing raw frontend gate remains byte-for-byte unchanged. The query is one
+scalar SUM(e) or COUNT(e)/COUNT(*) over the admitted inner star. e is built only
+from integer constants, root-table integer columns, +, -, *, unary +/-; no
+GROUP BY, DISTINCT, outer joins, OR, casts, division, decimal/date/string values.
+BETWEEN takes exactly three existing column/integer operands. A predicate may
+mention the root and at most one leaf; no predicate joins two different leaves.
+Every leaf still requires a root/leaf column equality. Complete DBMS facts and
+ICs remain untouched. Harness guarantees are positive EXACT N slots, not <= N.
+
+Expression induction (IntegerExpression, recognize.expression, encode.value)
+Represent each expression as (null, value) with arbitrary payload if null.
+An integer literal has null=false; a column uses its existing attribute pair.
+For +, -, *, unary +/- the null bit is the disjunction of operand null bits,
+and the payload is the corresponding total mathematical integer operation.
+This proves strict NULL propagation by structural induction. In particular,
+0*NULL remains NULL, and COUNT(e) counts a non-null zero just like any value.
+Variable products are allowed: they are explicitly reported as nonlinear.
+
+BETWEEN (recognize predicate branch, encode.true_predicate)
+BETWEEN(a,b,c) is TRUE iff a,b,c are all non-NULL and b<=a and a<=c.
+SQL UNKNOWN and FALSE are both rejected by WHERE/inner-join selection. Reversed
+bounds yield no TRUE row. NULL literals remain outside the parser fragment;
+nullable column operands are supported. Routing still forbids cross-leaf terms.
+
+Factorization (unchanged encode root and leaf loops)
+For fixed root row f, let r(f) indicate alive root and TRUE root predicates.
+For each leaf j, let c_j(f) count alive leaf rows satisfying its predicates
+with f, including its root join. c_j is the sum of Boolean 0/1 indicators,
+so 0<=c_j<=N_j. Leaf predicates depend only on f and that one leaf; therefore
+the number of admissible joined tuples for f is M(f)=product_j c_j(f).
+Write e(f)=(null_e(f),value_e(f)) and h(f)=r(f) AND NOT null_e(f).
+Then non-null joined count C=sum_f [h(f)] M(f).
+COUNT(e) returns (false,C); COUNT(*) uses non-null literal one as e.
+SUM(e) returns (C=0, sum_f [h(f)] value_e(f) M(f)).
+If every join is empty, every input expression is NULL, or root filters reject
+all rows, C=0 and SUM is NULL. Its computed zero payload is ignored. No claim
+that positive physical row counts imply a nonempty join is used.
+This identity depends only on e being root-only and total over mathematical
+integers; e need not be linear. Flat enumerates this Cartesian sum. Product is
+the classic multiplicity-product control, not a newly claimed method.
+
+Selector identity (unchanged encode.multiply)
+For integer c with the exact definition c=sum of N indicators,
+sum_{k=0..N} ITE(c=k,k*a,0)=c*a, since precisely one branch is active.
+Fresh acyclic integer definitions are total conservative extensions. The same
+identity applies to count and sum accumulators, including negative values.
+Selectors replace multiplicity products with constant-coefficient branches.
+They DO NOT remove variable products inside e(f) or nonlinear constraints in
+unchanged ICs/official premises. Even a syntactically linear measure does not
+prove that the COMPLETE formula is LIA. No whole-formula LIA label is inferred.
+
+SQLite boundary (sqlite_integer_domain_audit)
+The encoder uses mathematical integers; SQLite can convert overflowing +/* to
+REAL and SUM can raise overflow. INT32 physical inputs alone are insufficient.
+The concrete-witness guard checks every base integer and expression intermediate.
+Because the parser flattens associative operations and loses some parentheses,
+addition checks separate positive/negative totals and multiplication checks the
+product of absolute nonzero operands. These conservative subset bounds cover
+any original parenthesization, including 0*(large*large). SUM separately checks
+total positive and total negative weighted contributions, covering any row order.
+This may reject a witness whose actual evaluation order would have been safe;
+that is UNKNOWN_ORACLE_DOMAIN, not a failed algorithm nor a successful replay.
+No clipping, float tolerance, rounding, removal of hard data, or adjusted IC is
+allowed. ERROR_ORACLE_INPUT and UNKNOWN_ORACLE_DOMAIN retain the whole witness,
+full denominator, timing and issue reasons. This helper is ONLY a domain guard,
+shares the candidate plan, and cannot replace independent original-SQL replay.
+
+Required harness integration before a v4 result can be accepted
+For each SAT witness, recognize both original queries under the same v4 kernel,
+then call sqlite_integer_domain_audit(plan,schema,witness) for both. Only two
+SAFE_FOR_SQLITE_INT64 results authorize accepting subsequent raw-SQL SQLite
+replay as an integer-domain witness. Any unsupported query in this audit is an
+unknown oracle domain, not permission to silently trust a fallback replay.
+Still reject/report SQLite exceptions or non-int/non-NULL scalar results. Apply
+this same check to official and candidate SAT witnesses. For per-query symbolic
+differential witnesses apply the corresponding single-query guard. Keep cost of
+these audits and replays in the shared resource budget. The frozen runtime_fair
+has NOT been changed and must not be reused as-is to accept v4 arithmetic SAT.
+
+Evidence and remaining work
+Pinned mo_sql_parsing/utils.py:138-217 establishes operator naming and associative
+flattening; utils.py:76-105 establishes unary list scrubbing; keywords.py supplies
+BETWEEN and unary op spellings. Runtime observation is still required.
+The derivation proves candidate transformations within the stated mathematical
+fragment; it does not establish official-parser/encoder totality or SQL semantics
+for all raw SQL. Separate official-output differential plus original-SQL replay
+remain required. No SSB schema/ranges/constraints were invented here; the parent's
+registered source-backed original 13-query denominator governs coverage. Root
+arithmetic alone did not admit Q1.1-Q1.3 because BETWEEN was also required. No
+new held-out status, empirical coverage number, speedup, or novelty is claimed.

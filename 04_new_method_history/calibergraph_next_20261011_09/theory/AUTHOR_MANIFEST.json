@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "round": "09",
+  "date": "2026-10-11",
+  "write_scope": "calibergraph_next_20261011_09/theory only",
+  "decision": {"mechanism": "NULL", "general_theory_gate": "HOLD", "independent_review": "PENDING"},
+  "inputs": [
+    {"path": "calibergraph_next_20261011_07/revision_02/constraint_polynomial_opportunity.md", "sha256": "ecb164ef4767403c32bfe439a9ec315dd99d3eee4fa20a34233b578611a47498", "role": "prior reviewed theory boundary"},
+    {"path": "calibergraph_next_20261011_08/theory/THEORY.zh.md", "sha256": "a29b74cea37477e64addd3c5b5107e4ec7cbf7c31e83a7f633222712094508ed", "role": "final author-frozen predecessor; not treated as independently validated"},
+    {"path": "calibergraph_next_20261011_08/EIGHTH_ROUND_AUTHOR_MANIFEST.json", "sha256": "68caf1ade4c4d98cff5ae86e6f5f8ff3ce140392d4cb46d2b832297df9268033", "role": "predecessor freeze metadata, SHA checked without treating as mathematical evidence"},
+    {"path": "/Users/loctek/AGENTS.md", "sha256": "dc921d7cccc6e5f2776dd5bab0e66f3ffe33ccbc950406a10cb3a46bd32980b9", "role": "applicable workspace instruction, parent owns unified backup"}
+  ],
+  "outputs": ["THEORY.zh.md", "theory_result.json", "references.json", "hand_cases.json", "AUTHOR_MANIFEST.json"],
+  "integrity": {
+    "output_hash_file": "SHA256SUMS.outputs",
+    "hash_file_base_directory": "workspace root /Users/loctek/Documents/Codex/2026-10-11/task-3",
+    "self_reference_rule": "SHA256SUMS.outputs lists the five content files including this manifest; the checksum file itself is excluded to avoid a self-hash cycle",
+    "metadata_only": true
+  },
+  "validation": {"JSON_syntax": "jq empty passed", "mathematical_verification": "hand proofs only", "SQL_SMT_scientific_execution": "NONE", "natural_or_protected_data": "NONE"},
+  "recovery": "Restore this directory and the two predecessor files from the parent-approved private backup, run LC_ALL=C shasum -a 256 -c calibergraph_next_20261011_09/theory/SHA256SUMS.outputs at workspace root, then read THEORY.zh.md. No experimental environment is required.",
+  "backup_status_at_author_delivery": "PARENT_UNIFIED_BACKUP_PENDING"
+}

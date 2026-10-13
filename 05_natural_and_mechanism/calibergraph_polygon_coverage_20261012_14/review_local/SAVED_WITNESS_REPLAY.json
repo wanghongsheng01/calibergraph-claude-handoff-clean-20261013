@@ -1,0 +1,120 @@
+{
+  "reviewer": "independent polygon14 coverage reviewer",
+  "sqlite_version": "3.43.2",
+  "candidate_manifest_sha256": "312230e4c4181acbe8b8f34a7e61ceb5b71936772db665635d6e9e500b2d7053",
+  "pilot_freeze_sha256": "17891be1561c99d3d774bf02eb5050237f670398099573e035dea62cf9bf2330",
+  "pilot_frozen_file_hashes_verified": 336,
+  "source_commit_record_sha256": "93af693f0b5aa5d38d4ffe051887e7d0c1a34010f73cc2447eb64cce43dc44d0",
+  "fixed_polygon_commit": "5e18237394d025dbb805cf833b4f54c321470774",
+  "source_bindings": {
+    "gold.sql": {
+      "frozen_candidate_sha256": "38c15c2084d1fc42087eb4f64f9119c6527043958aa5f0b2febd0601499e0513",
+      "pilot_freeze_sha256": "38c15c2084d1fc42087eb4f64f9119c6527043958aa5f0b2febd0601499e0513",
+      "source_path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/gold.sql",
+      "pilot_input_path": "calibergraph_polygon_pilot_20261012_13/inputs_local/superhero__750/gold.sql"
+    },
+    "predicted.sql": {
+      "frozen_candidate_sha256": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32",
+      "pilot_freeze_sha256": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32",
+      "source_path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/predicted.sql",
+      "pilot_input_path": "calibergraph_polygon_pilot_20261012_13/inputs_local/superhero__750/predicted.sql"
+    },
+    "full-schema.sql": {
+      "frozen_candidate_sha256": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae",
+      "pilot_freeze_sha256": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae",
+      "source_path": "calibergraph_coverage_boundary_20261012_09/sources_local/superhero__750/full-schema.sql",
+      "pilot_input_path": "calibergraph_polygon_pilot_20261012_13/inputs_local/superhero__750/full-schema.sql"
+    }
+  },
+  "slots": [
+    {
+      "case": "superhero__750",
+      "mode": "UA",
+      "witness_sha256": "3a704deb6e4144ba3d32a793d6e2ebb949bfe1e0ad5371f407630ebe48b7971a",
+      "result_sha256": "563a41e6ce5b37826138cc38f8fc576fb732e1b514393967412418bc0e410031",
+      "witness_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_UA/witness.json",
+      "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_UA/RESULT.json",
+      "witness_equals_saved_raw_return": true,
+      "row_counts": {
+        "alignment": 1,
+        "attribute": 1,
+        "colour": 1,
+        "gender": 1,
+        "publisher": 1,
+        "race": 1,
+        "superhero": 1,
+        "hero_attribute": 1,
+        "superpower": 1,
+        "hero_power": 1
+      },
+      "full_original_DDL_executed": true,
+      "full_original_columns_kept": true,
+      "foreign_keys_enabled": true,
+      "foreign_key_check": [],
+      "transaction_committed": true,
+      "integrity_check": "ok",
+      "gold": [
+        [
+          null
+        ]
+      ],
+      "predicted": [
+        [
+          -54.0
+        ]
+      ],
+      "different": true,
+      "matches_pilot_saved_replay": true,
+      "new_solver_calls": 0,
+      "new_witnesses_generated": 0,
+      "original_query_replay_executions": 2
+    },
+    {
+      "case": "superhero__750",
+      "mode": "precise",
+      "witness_sha256": "c5f0e88854890aad85fe483c739f3bac31315a5d4bd50a94230982219f6c0a9b",
+      "result_sha256": "f695aadd548b8edd8003193c589248612c4f934852f37f2c1f4dd9820c2562aa",
+      "witness_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_precise/witness.json",
+      "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_precise/RESULT.json",
+      "witness_equals_saved_raw_return": true,
+      "row_counts": {
+        "alignment": 1,
+        "attribute": 1,
+        "colour": 1,
+        "gender": 1,
+        "publisher": 1,
+        "race": 1,
+        "superhero": 1,
+        "hero_attribute": 1,
+        "superpower": 1,
+        "hero_power": 1
+      },
+      "full_original_DDL_executed": true,
+      "full_original_columns_kept": true,
+      "foreign_keys_enabled": true,
+      "foreign_key_check": [],
+      "transaction_committed": true,
+      "integrity_check": "ok",
+      "gold": [
+        [
+          -55.0
+        ]
+      ],
+      "predicted": [
+        [
+          null
+        ]
+      ],
+      "different": true,
+      "matches_pilot_saved_replay": true,
+      "new_solver_calls": 0,
+      "new_witnesses_generated": 0,
+      "original_query_replay_executions": 2
+    }
+  ],
+  "total_original_query_replay_executions": 4,
+  "new_solver_calls": 0,
+  "new_witnesses_generated": 0,
+  "reviewer_script_sha256": "66718b40c48b393861df7dc55b931002bae63f68322c8df18e2eb9f076715339",
+  "interpretation": "Two historical synthetic full-DDL-valid counterexamples independently replayed; no new Polygon scientific attempts and no method superiority evidence."
+}

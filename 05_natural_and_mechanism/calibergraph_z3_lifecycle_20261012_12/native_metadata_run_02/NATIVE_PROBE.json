@@ -1,0 +1,266 @@
+{
+  "binary_sha256": "edae32f9e37ea4b5bb35310d72f0e352d0dc07626cac4e9e30bc1ea9a5bc8efb",
+  "records": [
+    {
+      "reason": null,
+      "elapsed_s": 0.5676203328184783,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        0
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.115484,
+          "bytes": 42942464
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333187.117418833,
+          "index": 0,
+          "pid_for_logging_only": 40641
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.143973333,
+          "bytes": 42975232
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.174027083,
+          "bytes": 42975232
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.204056125,
+          "bytes": 42975232
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.234074958,
+          "bytes": 42975232
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.260692125,
+          "bytes": 42975232
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.29074825,
+          "bytes": 42975232
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.316063208,
+          "bytes": 43008000
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.346111791,
+          "bytes": 43040768
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.371498166,
+          "bytes": 43073536
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.400164333,
+          "bytes": 43073536
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.4296095,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.459377125,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.488686958,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.518318208,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.547842083,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.577959666,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.605400708,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.635520041,
+          "bytes": 43106304
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.665096916,
+          "bytes": 43106304
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333187.682893041,
+          "pid_for_logging_only": 40641,
+          "returncode": 0
+        }
+      ],
+      "name": "version",
+      "args": [
+        "-version"
+      ],
+      "stdin": null,
+      "stdout": "Z3 version 4.16.0 - 64 bit\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.004292541183531284,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        0
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.68427425,
+          "bytes": 43204608
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333187.68672475,
+          "index": 0,
+          "pid_for_logging_only": 40645
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333187.688415625,
+          "pid_for_logging_only": 40645,
+          "returncode": 0
+        }
+      ],
+      "name": "help",
+      "args": [
+        "-h"
+      ],
+      "stdin": null,
+      "stdout": "Z3 [version 4.16.0 - 64 bit]. (C) Copyright 2006-2016 Microsoft Corp.\nUsage: z3 [options] [-file:]file\n\nInput format:\n  -smt2       use parser for SMT 2 input format.\n  -dl         use parser for Datalog input format.\n  -dimacs     use parser for DIMACS input format.\n  -wcnf       use parser for Weighted CNF DIMACS input format.\n  -opb        use parser for PB optimization input format.\n  -lp         use parser for a modest subset of CPLEX LP input format.\n  -log        use parser for Z3 log input format.\n  -in         read formula from standard input.\n  -model      display model for satisfiable SMT.\n\nMiscellaneous:\n  -h, -?      prints this message.\n  -version    prints version number of Z3.\n  -v:level    be verbose, where <level> is the verbosity level.\n  -nw         disable warning messages.\n  -p          display Z3 global (and module) parameters.\n  -pd         display Z3 global (and module) parameter descriptions.\n  -pm:name    display Z3 module ('name') parameters.\n  -pmmd:name  display Z3 module ('name') parameters in Markdown format.\n  -pp:name    display Z3 parameter description, if 'name' is not provided, then all module names are listed.\n  -tactics[:name]  display built-in tactics or if argument is given, display detailed information on tactic.\n  -simplifiers[:name]  display built-in simplifiers or if argument is given, display detailed information on simplifier.\n  -probes     display avilable probes.\n  --          all remaining arguments are assumed to be part of the input file name. This option allows Z3 to read files with strange names such as: -foo.smt2.\n\nResources:\n  -T:timeout  set the timeout (in seconds).\n  -t:timeout  set the soft timeout (in milli seconds). It only kills the current query.\n  -memory:Megabytes  set a limit for virtual memory consumption.\n\nOutput:\n  -st         display statistics.\n\nParameter setting:\nGlobal and module parameters can be set in the command line.\n  param_name=value              for setting global parameters.\n  module_name.param_name=value  for setting module parameters.\nUse 'z3 -p' for the complete list of global and module parameters.\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.0023720841854810715,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        0
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.689138083,
+          "bytes": 43270144
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333187.690146833,
+          "index": 0,
+          "pid_for_logging_only": 40646
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333187.691417041,
+          "pid_for_logging_only": 40646,
+          "returncode": 0
+        }
+      ],
+      "name": "memory_description",
+      "args": [
+        "-pp:memory_max_size"
+      ],
+      "stdin": null,
+      "stdout": "memory_max_size  memory_max_size\n  name:           memory_max_size\n  type:           unsigned int\n  description:    set hard upper limit for memory consumption (in megabytes), if 0 then there is no limit\n  default value:  0\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.0035176249220967293,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        0
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333187.691704291,
+          "bytes": 43270144
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333187.69321225,
+          "index": 0,
+          "pid_for_logging_only": 40647
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333187.695166958,
+          "pid_for_logging_only": 40647,
+          "returncode": 0
+        }
+      ],
+      "name": "startup_internal_limit",
+      "args": [
+        "-memory:1",
+        "-T:1",
+        "-in"
+      ],
+      "stdin": "(exit)\n",
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    }
+  ],
+  "scientific_calls": 0,
+  "check_sat_commands": 0,
+  "external_z3_rss_measured": false,
+  "scope": "metadata and startup-only; deadline/handle lifecycle, not child RSS guarantee"
+}

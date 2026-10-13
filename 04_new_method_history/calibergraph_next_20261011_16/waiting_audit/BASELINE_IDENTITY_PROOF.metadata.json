@@ -1,0 +1,80 @@
+{
+  "created_date": "2026-10-11",
+  "kind": "AUTHOR_HAND_DERIVATION_OF_EXISTING_BASELINE_IDENTITIES",
+  "status": "DERIVATION_COMPLETE_UNDER_EXPLICIT_SQL_PROFILE_PENDING_INDEPENDENT_REVIEW",
+  "scope": "Only original exposed INT pairs dev03_10 and dev03_15; no new method",
+  "execution": {
+    "scientific_runs": 0,
+    "SQL_or_SQLite_calls": 0,
+    "SMT_calls": 0,
+    "target_import_or_compile": 0,
+    "test_database_generation_or_enumeration": 0,
+    "full_corpus_rescan": false,
+    "literature_search_expansion": false,
+    "changed_original_SQL": false,
+    "changed_frozen_old_root": false,
+    "changed_stage16_semantics": false,
+    "read_only_source_and_hash_operations": true
+  },
+  "source_registry": {
+    "path": "calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb",
+    "indices": [9,14],
+    "exposure": "PREVIOUSLY_EXPOSED_DEVELOPMENT_NOT_HELDOUT"
+  },
+  "semantic_profile": {
+    "schema": "Original all-INT schema",
+    "value_domain": "INT and NULL; source INT32 subdomain included",
+    "input": "Any finite bags including duplicates, empty tables and unequal cardinalities",
+    "equality": "Ordinary symmetric INT/NULL SQL equality, not NULL-safe equality",
+    "logic": "SQL 3VL; ON and WHERE retain only TRUE",
+    "CASE": "First TRUE branch in source order; missing ELSE is NULL",
+    "NOT_IN": "Same original uncorrelated subquery and same SQL NOT IN on both sides; no rewrite to NOT EXISTS or anti-join",
+    "row_equality": "Componentwise ordinary equality joined by 3VL AND; equal two-field row lengths",
+    "null_fill": "Builtin IFNULL(x,0) and two-argument COALESCE(x,0) select first non-NULL over pure INT column and literal 0",
+    "output": "Unordered bag values and multiplicities; metadata/physical row order not certified",
+    "snapshot": "Same database snapshot and schema/name binding; no volatile or side-effect expressions"
+  },
+  "pairs": [
+    {
+      "id": "dev03_10",
+      "source_registry_index": 9,
+      "source_record_index": 25,
+      "source_group": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "sql_sha256": ["d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26","c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"],
+      "proof_steps": ["Original column binding and alias correspondence","Same CASE value and NULL status for every FRIENDSHIP occurrence","Occurrence bijection of reversed inner joins using symmetric equality","Same PAGE_ID and identical NOT IN subquery/filter for each paired occurrence","Same pre-DISTINCT multiplicity then same DISTINCT support"],
+      "explicit_C_required": [],
+      "original_C_not_needed_for_proof": ["FRIENDSHIP composite primary","LIKES composite primary","FRIENDSHIP all-column-pairs operational neq"],
+      "C_removed_from_experiment": false,
+      "cardinality_bound_required": false,
+      "NULL_or_duplicate_exclusion_required": false,
+      "unresolved_source_level_algebraic_gap_under_profile": "NONE_IDENTIFIED_BY_AUTHOR; not a machine-checked certificate"
+    },
+    {
+      "id": "dev03_15",
+      "source_registry_index": 14,
+      "source_record_index": 21,
+      "source_group": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "sql_sha256": ["f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39","e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"],
+      "proof_steps": ["Two-field row equality equals componentwise 3VL AND with symmetric comparisons","LEFT/RIGHT reversal preserves QUERIES in both original queries","Identical matching NPV occurrence bags and one null-extension per unmatched QUERIES occurrence","IFNULL and two-argument COALESCE agree for INT/NULL payloads","All projection collisions and duplicate multiplicities add identically"],
+      "explicit_C_required": [],
+      "original_C_not_needed_for_proof": ["NPV composite primary","QUERIES composite primary","QUERIES.ID to NPV.ID foreign","NPV payload >=0"],
+      "C_removed_from_experiment": false,
+      "cardinality_bound_required": false,
+      "NULL_or_duplicate_exclusion_required": false,
+      "unresolved_source_level_algebraic_gap_under_profile": "NONE_IDENTIFIED_BY_AUTHOR; not a machine-checked certificate",
+      "delegated_internal_hand_proof": "pair1421_proof; independent derivation within author team, not final independent review"
+    }
+  ],
+  "primary_code": {
+    "commit": "3b99928bf976c11cb59c9db6a177adba21f75798",
+    "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+    "anchors": ["encoder.py:943-963", "visitors/visitor.py:2281-2325", "encoder.py:1291-1298", "encoder.py:898-910,967-979", "visitors/visitor.py:1877-1945", "encoder.py:1096-1112", "formulas/tables/join_tables/outer_join_tables/right_outer_join_table.py:30-64"],
+    "code_claim_limit": "Local static branches only; full parser/encoding/SMT/model/replay correctness UNKNOWN",
+    "empty_input_bridge": "Right-join helper has empty-input early returns; upstream handling unproved here; no runtime bug claim and no exact-positive plan change"
+  },
+  "not_claimed": ["new mechanism","implemented timed baseline","zero-second baseline","runtime speed superiority","solver unbounded-EQ result","frozen encoder up-to or mixed-cardinality completeness","padding theorem","natural-business contract certification","C-model sanity as query counterexample","any theorem for dev03_07 or dev03_04"],
+  "experiment_interpretation": "The two source-SQL equivalence problems admit direct mature analytic controls. Remaining measured slow/UNKNOWN behavior can concern implementation cost; timing causes and rule-based runtime superiority remain unestablished.",
+  "backup": "PARENT_COORDINATED_PENDING",
+  "artifact_policy": "Author proof and metadata/hash only; no third-party raw SQL data copied; restore with original registry/source pin and hashes"
+}

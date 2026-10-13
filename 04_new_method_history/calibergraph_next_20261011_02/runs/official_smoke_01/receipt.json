@@ -1,0 +1,54 @@
+{
+  "status": "WORKER_FAILED",
+  "supervisor_sha256": "d15b9513e34ae8f7321cc3cb3e1617d6c55464082b43a57efa363922b698aa3c",
+  "freeze_sha256": "4bf14b803eceb36cec1eb9d7be06fa41617cd6c027daf95630e827eb5a51db84",
+  "protocol_sha256": "8f43a0053aeec5d3a9430232883f3b7a533fa5f4bb3ec4fae275660b213b0c59",
+  "worker": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/code/official_smoke_worker.py",
+  "resource_policy": {
+    "scope": "Round 02, one serial tiny worker; no large queue or GPU/API",
+    "version": 2,
+    "maximum_active_workers": 1,
+    "nice": 15,
+    "max_1min_load": 4.0,
+    "min_memory_available_percentage": 25,
+    "max_cpu_seconds": 10,
+    "max_wall_seconds": 25,
+    "max_rss_bytes": 268435456,
+    "solver_timeout_ms": 500,
+    "z3_memory_max_mb": 128,
+    "thread_environment": 1,
+    "missing_observation": "STOP_UNOBSERVABLE",
+    "justification": "01 compressor<=6GiB was a conservative proxy and remains frozen. Round02 reads actual macOS memory_pressure -Q availability (observed 33%, load2.98 before registration), uses >=25% available (4GiB on this16GiB host), and tightens each worker to10CPU seconds/256MiB with serialnice15. This revised criterion is explicit and does not claim unrelated_project performance is unaffected.",
+    "forbidden": "No signals/reprioritization of other tasks; no installs, GPU/API, reserve/test access, or old-source writes."
+  },
+  "sampled_peak_rss_bytes": 61046784,
+  "observations": 10,
+  "preflight": {
+    "utc": "2026-10-11T11:52:36.982814+00:00",
+    "load": [
+      2.994140625,
+      3.29248046875,
+      3.32080078125
+    ],
+    "memory_available_percentage": 33,
+    "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 33%\n",
+    "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                               10287.\nPages active:                            166834.\nPages inactive:                          149635.\nPages speculative:                        16054.\nPages throttled:                              0.\nPages wired down:                        196094.\nPages purgeable:                              2.\n\"Translation faults\":               30501007254.\nPages copy-on-write:                  700201489.\nPages zero filled:                  13055519006.\nPages reactivated:                   5565632275.\nPages purged:                         298414314.\nFile-backed pages:                       121474.\nAnonymous pages:                         211049.\nPages stored in compressor:             3520119.\nPages occupied by compressor:            469879.\nDecompressions:                      7503801655.\nCompressions:                        7808126991.\nPageins:                             8231370161.\nPageouts:                              12420681.\nSwapins:                               67256442.\nSwapouts:                              75730118.\n"
+  },
+  "pid": 40121,
+  "worker_exit_code": 2,
+  "wall_seconds": 0.6133104580000001,
+  "child_cpu_user_seconds_including_ps": 0.37633599999999995,
+  "child_cpu_system_seconds_including_ps": 0.079476,
+  "monitor_note": "RSS sampled every 50ms, not a hard allocation cap. CPU accounting includes ps. No other process modified.",
+  "postflight": {
+    "utc": "2026-10-11T11:52:37.600980+00:00",
+    "load": [
+      2.994140625,
+      3.29248046875,
+      3.32080078125
+    ],
+    "memory_available_percentage": 33,
+    "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 33%\n",
+    "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                               12496.\nPages active:                            162762.\nPages inactive:                          145751.\nPages speculative:                        16766.\nPages throttled:                              0.\nPages wired down:                        196154.\nPages purgeable:                             18.\n\"Translation faults\":               30501034411.\nPages copy-on-write:                  700203735.\nPages zero filled:                  13055535598.\nPages reactivated:                   5565645498.\nPages purged:                         298414398.\nFile-backed pages:                       123837.\nAnonymous pages:                         201442.\nPages stored in compressor:             3528793.\nPages occupied by compressor:            474908.\nDecompressions:                      7503804618.\nCompressions:                        7808138628.\nPageins:                             8231373206.\nPageouts:                              12420683.\nSwapins:                               67256454.\nSwapouts:                              75730118.\n"
+  }
+}

@@ -1,0 +1,1472 @@
+{
+  "created_utc": "2026-10-11T11:23:50.808893+00:00",
+  "role": "RESEARCH_AUTHOR_DIAGNOSIS_NOT_INDEPENDENT_REVIEW",
+  "scientific_decision": "SCIENCE_HOLD_PREVIOUS_NO_GO_NOT_CLOSED",
+  "confirmed_new_mechanism_candidates": 0,
+  "execution_scope": {
+    "target_parser_runs": 0,
+    "target_recognizer_runs": 0,
+    "solver_runs": 0,
+    "SQL_runs": 0,
+    "load_experiments": 0,
+    "network_or_API_calls": 0,
+    "GPU_calls": 0,
+    "old_source_mutations": 0,
+    "method": "Static source reading, streamed existing log aggregation, existing small JSON evidence extraction"
+  },
+  "important_findings": [
+    "Public no-JOIN eligibility is frontend/fragment applicability evidence, not solver failure evidence.",
+    "Every one of 6889 v4 unsupported_identifier slots contains a top FROM derived table value=dict; label hides structural cause.",
+    "1441 of 1453 unknown_table_or_repeated_relation slots contain repeated top base tables; remaining 12 not individually attributed.",
+    "Only 12 cached AST slots have one top SUM/COUNT, join-or-comma FROM and no extra top clause; they have additional semantic/structural obstacles.",
+    "Four of six public eligible slots statically fail v5 complete schema INT-only contract gate; two literature slots merely avoid that static rejection.",
+    "Original complete IC includes primary/foreign beyond v5 reference grammar; dropping them is not lossless adaptation.",
+    "Single cold observations and mixed outcomes do not demonstrate selector speed or isolate solver cost."
+  ],
+  "public_frozen_denominators": {
+    "leetcode_pairs": 23994,
+    "leetcode_query_slots": 47988,
+    "dev_pairs": 461,
+    "dev_query_slots": 922,
+    "combined_pairs": 24455,
+    "combined_query_slots": 48910
+  },
+  "fresh_log_aggregate": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/audits/code_diagnosis_log_aggregate.json",
+    "sha256": "5abea613ee84bd9901eb477e29dfcb0d78cb3df3dd3b2a151384c99dd5449b85",
+    "query_slots": 48910,
+    "status_counts": {
+      "INELIGIBLE": 47431,
+      "UNKNOWN": 38,
+      "FRONTEND_UNSUPPORTED": 189,
+      "PARSE_OR_AST_RECORD_ERROR": 1246,
+      "ELIGIBLE": 6
+    },
+    "resource": {
+      "wall_seconds": 1.3994800410000001,
+      "peak_rss_bytes_darwin": 20692992
+    }
+  },
+  "public_eligible_original_contexts": [
+    {
+      "row_id": "calcite:142",
+      "eligible_query_indices": [
+        0,
+        1
+      ],
+      "original_sql": [
+        "SELECT SUM(SAL) FROM EMP",
+        "SELECT SUM(SAL) FROM EMP"
+      ],
+      "schema": {
+        "EMP": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "DEPT": {
+          "DEPTNO": "INT",
+          "NAME": "VARCHAR"
+        },
+        "BONUS": {
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "SAL": "INT",
+          "COMM": "INT"
+        },
+        "EMPNULLABLES": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "EMPNULLABLES_20": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "EMP_B": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN",
+          "BIRTHDATE": "DATE"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "EMP__EMPNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__HIREDATE"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__SLACKER"
+          }
+        },
+        {
+          "not_null": {
+            "value": "DEPT__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "DEPT__NAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__EMPNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__HIREDATE"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__SLACKER"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__BIRTHDATE"
+          }
+        },
+        {
+          "primary": [
+            {
+              "value": "EMP__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMP__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPNULLABLES__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMPNULLABLES__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPNULLABLES_20__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMPNULLABLES_20__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMP_B__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMP_B__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        }
+      ],
+      "physical_type_counts": {
+        "INT": 23,
+        "VARCHAR": 11,
+        "DATE": 5,
+        "BOOLEAN": 4
+      },
+      "contract_top_operator_counts": {
+        "not_null": 23,
+        "primary": 5,
+        "foreign": 4
+      },
+      "v5_schema_all_fields_exact_INT_static_condition": false,
+      "original_source_line_sha256": "b69f4b8785c981891a6759045a875107f98e99f40c2f060ce30f06f860609da8",
+      "inference": "At least one non-INT field forces v5 contract_reference._schema rejection before solver; not experimentally executed."
+    },
+    {
+      "row_id": "calcite:266",
+      "eligible_query_indices": [
+        1
+      ],
+      "original_sql": [
+        "SELECT COUNT(*) FROM EMP WHERE DEPTNO = 10"
+      ],
+      "schema": {
+        "EMP": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "DEPT": {
+          "DEPTNO": "INT",
+          "NAME": "VARCHAR"
+        },
+        "BONUS": {
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "SAL": "INT",
+          "COMM": "INT"
+        },
+        "EMPNULLABLES": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "EMPNULLABLES_20": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "EMP_B": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN",
+          "BIRTHDATE": "DATE"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "EMP__EMPNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__HIREDATE"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__SLACKER"
+          }
+        },
+        {
+          "not_null": {
+            "value": "DEPT__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "DEPT__NAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__EMPNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__HIREDATE"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__SLACKER"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__BIRTHDATE"
+          }
+        },
+        {
+          "primary": [
+            {
+              "value": "EMP__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMP__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPNULLABLES__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMPNULLABLES__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPNULLABLES_20__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMPNULLABLES_20__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMP_B__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMP_B__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        }
+      ],
+      "physical_type_counts": {
+        "INT": 23,
+        "VARCHAR": 11,
+        "DATE": 5,
+        "BOOLEAN": 4
+      },
+      "contract_top_operator_counts": {
+        "not_null": 23,
+        "primary": 5,
+        "foreign": 4
+      },
+      "v5_schema_all_fields_exact_INT_static_condition": false,
+      "original_source_line_sha256": "9a041d4c0c2f9cb88c148c1b375a9699efbb2b49c1db839a7169c81c7792102c",
+      "inference": "At least one non-INT field forces v5 contract_reference._schema rejection before solver; not experimentally executed."
+    },
+    {
+      "row_id": "calcite:335",
+      "eligible_query_indices": [
+        1
+      ],
+      "original_sql": [
+        "SELECT COUNT(*) FROM EMP WHERE DEPTNO = 10"
+      ],
+      "schema": {
+        "EMP": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "DEPT": {
+          "DEPTNO": "INT",
+          "NAME": "VARCHAR"
+        },
+        "BONUS": {
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "SAL": "INT",
+          "COMM": "INT"
+        },
+        "EMPNULLABLES": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "EMPNULLABLES_20": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN"
+        },
+        "EMP_B": {
+          "EMPNO": "INT",
+          "DEPTNO": "INT",
+          "ENAME": "VARCHAR",
+          "JOB": "VARCHAR",
+          "MGR": "INT",
+          "HIREDATE": "DATE",
+          "SAL": "INT",
+          "COMM": "INT",
+          "SLACKER": "BOOLEAN",
+          "BIRTHDATE": "DATE"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "EMP__EMPNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__HIREDATE"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP__SLACKER"
+          }
+        },
+        {
+          "not_null": {
+            "value": "DEPT__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "DEPT__NAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "BONUS__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__EMPNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__ENAME"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__JOB"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__HIREDATE"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__SAL"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__COMM"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__DEPTNO"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__SLACKER"
+          }
+        },
+        {
+          "not_null": {
+            "value": "EMP_B__BIRTHDATE"
+          }
+        },
+        {
+          "primary": [
+            {
+              "value": "EMP__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMP__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPNULLABLES__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMPNULLABLES__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPNULLABLES_20__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMPNULLABLES_20__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMP_B__EMPNO"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "EMP_B__DEPTNO"
+            },
+            {
+              "value": "DEPT__DEPTNO"
+            }
+          ]
+        }
+      ],
+      "physical_type_counts": {
+        "INT": 23,
+        "VARCHAR": 11,
+        "DATE": 5,
+        "BOOLEAN": 4
+      },
+      "contract_top_operator_counts": {
+        "not_null": 23,
+        "primary": 5,
+        "foreign": 4
+      },
+      "v5_schema_all_fields_exact_INT_static_condition": false,
+      "original_source_line_sha256": "cdfdc00a42767596a0555176d26bb358ec849ef2eb7db001464503de598bda44",
+      "inference": "At least one non-INT field forces v5 contract_reference._schema rejection before solver; not experimentally executed."
+    },
+    {
+      "row_id": "literature:25",
+      "eligible_query_indices": [
+        0,
+        1
+      ],
+      "original_sql": [
+        "SELECT COUNT(*) AS A FROM R X",
+        "SELECT COUNT(Y.B) FROM R Y"
+      ],
+      "schema": {
+        "R": {
+          "A": "INT",
+          "B": "INT"
+        }
+      },
+      "constraint": null,
+      "physical_type_counts": {
+        "INT": 2
+      },
+      "contract_top_operator_counts": {},
+      "v5_schema_all_fields_exact_INT_static_condition": true,
+      "original_source_line_sha256": "09aac3977dcca14f606a70fa997bdab3c4613038fe375f1f8c5ddf4795f712cf",
+      "inference": "Avoids static all-INT schema rejection; no new runtime admission or solver decision asserted."
+    }
+  ],
+  "existing_main_cost_by_arm": {
+    "official": {
+      "selected_denominator": 28,
+      "strict_valid_query_results": 20,
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 20,
+        "SOLVER_UNKNOWN": 2,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 4
+      },
+      "started_attempt_denominator": 29,
+      "cold_cpu": {
+        "observed_count": 28,
+        "sum": 62.61220000000001,
+        "min": 1.102356,
+        "median": 1.3153644999999998,
+        "max": 13.87424,
+        "missing_count": 1
+      },
+      "semantic_e2e_cpu": {
+        "observed_count": 28,
+        "sum": 30.018551000000002,
+        "min": 0.012021000000000281,
+        "median": 0.1573724999999998,
+        "max": 12.772666,
+        "missing_count": 1
+      },
+      "cold_wall": {
+        "observed_count": 28,
+        "sum": 64.97600554302335,
+        "min": 1.1837479998357594,
+        "median": 1.3925407705828547,
+        "max": 14.041994708124548,
+        "missing_count": 1
+      },
+      "scope": "Existing selected returned observations, failures/refusals included; official interrupted attempt remains missing, not zero."
+    },
+    "official_generic_smt": {
+      "selected_denominator": 28,
+      "strict_valid_query_results": 21,
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 21,
+        "SOLVER_UNKNOWN": 2,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 4
+      },
+      "started_attempt_denominator": 28,
+      "cold_cpu": {
+        "observed_count": 28,
+        "sum": 63.179959,
+        "min": 1.196772,
+        "median": 1.3539735000000002,
+        "max": 13.860778,
+        "missing_count": 0
+      },
+      "semantic_e2e_cpu": {
+        "observed_count": 28,
+        "sum": 29.601379999999995,
+        "min": 0.01175999999999977,
+        "median": 0.14666749999999995,
+        "max": 12.666865000000001,
+        "missing_count": 0
+      },
+      "cold_wall": {
+        "observed_count": 28,
+        "sum": 65.12155512487516,
+        "min": 1.2820429592393339,
+        "median": 1.4004783749114722,
+        "max": 14.073429625015706,
+        "missing_count": 0
+      },
+      "scope": "Existing selected returned observations, failures/refusals included; official interrupted attempt remains missing, not zero."
+    },
+    "flat": {
+      "selected_denominator": 28,
+      "strict_valid_query_results": 23,
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 23,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 4
+      },
+      "started_attempt_denominator": 28,
+      "cold_cpu": {
+        "observed_count": 28,
+        "sum": 37.110296,
+        "min": 1.1633,
+        "median": 1.3144379999999998,
+        "max": 1.913893,
+        "missing_count": 0
+      },
+      "semantic_e2e_cpu": {
+        "observed_count": 28,
+        "sum": 4.204929,
+        "min": 0.013519999999999976,
+        "median": 0.137424,
+        "max": 0.8056209999999999,
+        "missing_count": 0
+      },
+      "cold_wall": {
+        "observed_count": 28,
+        "sum": 39.155800751876086,
+        "min": 1.1770918751135468,
+        "median": 1.3926159164402634,
+        "max": 1.9394270828925073,
+        "missing_count": 0
+      },
+      "scope": "Existing selected returned observations, failures/refusals included; official interrupted attempt remains missing, not zero."
+    },
+    "product": {
+      "selected_denominator": 28,
+      "strict_valid_query_results": 19,
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 19,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "SOLVER_UNKNOWN": 3,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 4
+      },
+      "started_attempt_denominator": 28,
+      "cold_cpu": {
+        "observed_count": 28,
+        "sum": 73.66113899999998,
+        "min": 1.165611,
+        "median": 1.336471,
+        "max": 13.648136,
+        "missing_count": 0
+      },
+      "semantic_e2e_cpu": {
+        "observed_count": 28,
+        "sum": 40.45425499999999,
+        "min": 0.01174799999999987,
+        "median": 0.137787,
+        "max": 12.50912,
+        "missing_count": 0
+      },
+      "cold_wall": {
+        "observed_count": 28,
+        "sum": 75.38666433561593,
+        "min": 1.1986270840279758,
+        "median": 1.3899682920891792,
+        "max": 13.738007083069533,
+        "missing_count": 0
+      },
+      "scope": "Existing selected returned observations, failures/refusals included; official interrupted attempt remains missing, not zero."
+    },
+    "selector": {
+      "selected_denominator": 28,
+      "strict_valid_query_results": 22,
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 22,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 4
+      },
+      "started_attempt_denominator": 28,
+      "cold_cpu": {
+        "observed_count": 28,
+        "sum": 36.79320400000001,
+        "min": 1.170095,
+        "median": 1.333098,
+        "max": 1.4193909999999998,
+        "missing_count": 0
+      },
+      "semantic_e2e_cpu": {
+        "observed_count": 28,
+        "sum": 3.641322,
+        "min": 0.011554999999999982,
+        "median": 0.13946950000000014,
+        "max": 0.19274700000000022,
+        "missing_count": 0
+      },
+      "cold_wall": {
+        "observed_count": 28,
+        "sum": 38.57568749971688,
+        "min": 1.2769342917017639,
+        "median": 1.3965431042015553,
+        "max": 1.5101047088392079,
+        "missing_count": 0
+      },
+      "scope": "Existing selected returned observations, failures/refusals included; official interrupted attempt remains missing, not zero."
+    },
+    "official_canonical_sql": {
+      "selected_denominator": 28,
+      "strict_valid_query_results": 22,
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 22,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 4
+      },
+      "started_attempt_denominator": 28,
+      "cold_cpu": {
+        "observed_count": 28,
+        "sum": 50.48538800000001,
+        "min": 1.197733,
+        "median": 1.331988,
+        "max": 13.802138000000001,
+        "missing_count": 0
+      },
+      "semantic_e2e_cpu": {
+        "observed_count": 28,
+        "sum": 17.247449,
+        "min": 0.011275000000000146,
+        "median": 0.1640395,
+        "max": 12.560458,
+        "missing_count": 0
+      },
+      "cold_wall": {
+        "observed_count": 28,
+        "sum": 52.643021249212325,
+        "min": 1.270006291102618,
+        "median": 1.3993760833982378,
+        "max": 13.85352608282119,
+        "missing_count": 0
+      },
+      "scope": "Existing selected returned observations, failures/refusals included; official interrupted attempt remains missing, not zero."
+    }
+  },
+  "code_regions": {
+    "public_leetcode/scan_chunk.py": {
+      "pre_solver_scope": [
+        [
+          1,
+          8
+        ],
+        [
+          298,
+          314
+        ]
+      ],
+      "query_entry_and_status_order": [
+        [
+          378,
+          407
+        ]
+      ]
+    },
+    "public_v4_cached/scanner.py": {
+      "cache_gate_order": [
+        [
+          346,
+          405
+        ]
+      ],
+      "serialized_special_node_rejection": [
+        [
+          334,
+          343
+        ],
+        [
+          389,
+          391
+        ]
+      ]
+    },
+    "runtime_v4/aggregate_kernel.py": {
+      "raw_identifier_gate": [
+        [
+          24,
+          51
+        ]
+      ],
+      "ast_from_output_and_predicates": [
+        [
+          113,
+          268
+        ]
+      ],
+      "encoding_and_NULL_semantics": [
+        [
+          271,
+          400
+        ]
+      ],
+      "sqlite_domain_boundary": [
+        [
+          403,
+          455
+        ]
+      ]
+    },
+    "runtime_fair_v5/worker.py": {
+      "contract_before_query": [
+        [
+          93,
+          128
+        ]
+      ],
+      "candidate_and_fallback": [
+        [
+          262,
+          323
+        ]
+      ]
+    },
+    "runtime_fair_v5/common.py": {
+      "contract_reference_XOR": [
+        [
+          137,
+          224
+        ]
+      ],
+      "shared_budget": [
+        [
+          255,
+          279
+        ]
+      ],
+      "positive_exact_rows": [
+        [
+          319,
+          322
+        ]
+      ]
+    },
+    "runtime_fair_v5/contract_reference.py": {
+      "complete_schema_INT_only": [
+        [
+          42,
+          54
+        ]
+      ],
+      "narrow_whole_contract": [
+        [
+          57,
+          133
+        ]
+      ],
+      "strict_true_all_rows": [
+        [
+          153,
+          188
+        ]
+      ]
+    },
+    "sources/verieql_v1/parsers/sql_parser.py": {
+      "global_rewrites": [
+        [
+          85,
+          92
+        ],
+        [
+          166,
+          168
+        ]
+      ],
+      "typed_literal_loss": [
+        [
+          100,
+          164
+        ]
+      ],
+      "NULL_workaround": [
+        [
+          265,
+          318
+        ]
+      ]
+    },
+    "sources/verieql_v1/environment.py": {
+      "parser_forward": [
+        [
+          834,
+          835
+        ]
+      ]
+    }
+  },
+  "sources": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/FINAL_CALIBERGRAPH_HANDOFF.zh.md",
+      "relative_to_old": "FINAL_CALIBERGRAPH_HANDOFF.zh.md",
+      "bytes": 11086,
+      "sha256": "4c4fb4566d8a3cbe158e5e9afef2bd898f4c80598497bed1230588b45b41ec6e",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/wording_revision_20261011_01/README.zh.md",
+      "relative_to_old": "wording_revision_20261011_01/README.zh.md",
+      "bytes": 3272,
+      "sha256": "6f45fa952aac97c1c96badaab1dbe5f6257a9990da7d2060166a6b55a1dfa6dc",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/PUBLIC_APPLICABILITY_FINAL_CUT.json",
+      "relative_to_old": "experiments/PUBLIC_APPLICABILITY_FINAL_CUT.json",
+      "bytes": 1947011,
+      "sha256": "0e8535436be62cc08bc545391e64eec4e64ce4a05aa48e40b3c09dab14b38764",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/PUBLIC_APPLICABILITY_FINAL_CUT.zh.md",
+      "relative_to_old": "experiments/PUBLIC_APPLICABILITY_FINAL_CUT.zh.md",
+      "bytes": 3613,
+      "sha256": "967896dd6ef891fb0486f8fda87f2aa5bb3697711077c7d098c934d527da645d",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/BUILD_PUBLIC_APPLICABILITY_FINAL_CUT.py",
+      "relative_to_old": "experiments/BUILD_PUBLIC_APPLICABILITY_FINAL_CUT.py",
+      "bytes": 21694,
+      "sha256": "c118d1681e31ec929e1ccbfcc6c8aaaaeefbcc8f76d01ce0c57430a5ca13146f",
+      "frozen_expected_sha256": "c118d1681e31ec929e1ccbfcc6c8aaaaeefbcc8f76d01ce0c57430a5ca13146f",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/FINAL_V5_EXECUTION_CUT.json",
+      "relative_to_old": "experiments/FINAL_V5_EXECUTION_CUT.json",
+      "bytes": 11189714,
+      "sha256": "1d6d0291fda36937a26da6b46c9d07b18899a21686708fa4279c7a814e48b95c",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/FINAL_V5_EXECUTION_CUT.zh.md",
+      "relative_to_old": "experiments/FINAL_V5_EXECUTION_CUT.zh.md",
+      "bytes": 5272,
+      "sha256": "58fca896cd3bd2cc8ea3c54bab774eb9cc9d29380eb29a4c0d32199ff26f9ed7",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/scan_chunk.py",
+      "relative_to_old": "public_leetcode/scan_chunk.py",
+      "bytes": 26217,
+      "sha256": "36da89a361e3cb8eacc482d3fd851b884e756fc8d3a817d3fefaed1a6fd8e774",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/scan_eligibility_v3_all.py",
+      "relative_to_old": "public_dev/scan_eligibility_v3_all.py",
+      "bytes": 22190,
+      "sha256": "17c1cc81aeb3d6c8cdb807b01d61a4dc7014ef3a0624006d9f484b1aecf408a9",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_v4_cached/scanner.py",
+      "relative_to_old": "public_v4_cached/scanner.py",
+      "bytes": 31778,
+      "sha256": "95e642d0b0f367748d47aa3a4d303484d28e0b444717056a9e418e1ddf74fa83",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json",
+      "relative_to_old": "public_dev/runs/full_scan_v3_all_01/scan_report.json",
+      "bytes": 5070968,
+      "sha256": "9664af9dfee2654d111cd38a55d093598360a006cc514d1643589b26162198e5",
+      "frozen_expected_sha256": "9664af9dfee2654d111cd38a55d093598360a006cc514d1643589b26162198e5",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+      "relative_to_old": "runtime_v3/runtime_paths.json",
+      "bytes": 198715,
+      "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+      "frozen_expected_sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/aggregate_kernel.py",
+      "relative_to_old": "runtime_v3/aggregate_kernel.py",
+      "bytes": 13954,
+      "sha256": "defa1812ec36c91a23d428f8d71d2070f808eddeb5f473748d3e7ac09fdfe5f3",
+      "frozen_expected_sha256": "defa1812ec36c91a23d428f8d71d2070f808eddeb5f473748d3e7ac09fdfe5f3",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+      "relative_to_old": "runtime_v4/aggregate_kernel.py",
+      "bytes": 25468,
+      "sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+      "frozen_expected_sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py",
+      "relative_to_old": "runtime_fair_v5/worker.py",
+      "bytes": 23192,
+      "sha256": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+      "frozen_expected_sha256": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py",
+      "relative_to_old": "runtime_fair_v5/common.py",
+      "bytes": 24157,
+      "sha256": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+      "frozen_expected_sha256": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py",
+      "relative_to_old": "runtime_fair_v5/contract_reference.py",
+      "bytes": 10137,
+      "sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+      "frozen_expected_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+      "relative_to_old": "sources/verieql_v1/environment.py",
+      "bytes": 46813,
+      "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+      "frozen_expected_sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py",
+      "relative_to_old": "sources/verieql_v1/parsers/sql_parser.py",
+      "bytes": 15045,
+      "sha256": "21867cb828df1ab5aa5b360874f93768e5fcfb7a902b1989b16ddd8fa6fd3200",
+      "frozen_expected_sha256": "21867cb828df1ab5aa5b360874f93768e5fcfb7a902b1989b16ddd8fa6fd3200",
+      "matches_prior_frozen_identity": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/manuscript_v2/results_current.tex",
+      "relative_to_old": "manuscript_v2/results_current.tex",
+      "bytes": 10119,
+      "sha256": "31531f61e45d8a258c7bf87e6cff5b922df1419161fe2926badccf03758dd7e5",
+      "frozen_expected_sha256": null,
+      "matches_prior_frozen_identity": null
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_v4_cached/runs/run_001/slots.jsonl",
+      "bytes": 91706069,
+      "sha256": "9050dd8aa3f828d800bcdc99beac2de56f28b1dbe242456e77ac4d7659eb573e",
+      "relative_to_old": "public_v4_cached/runs/run_001/slots.jsonl",
+      "frozen_expected_sha256": "9050dd8aa3f828d800bcdc99beac2de56f28b1dbe242456e77ac4d7659eb573e",
+      "matches_prior_frozen_identity": true,
+      "hash_method": "streamed during fresh log aggregation; not re-read by this builder"
+    }
+  ],
+  "outputs_excluding_self": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/audits/code_diagnosis.zh.md",
+      "sha256": "a4bf6ca3b4cc566d82eda4a8576459e7bf7f1a305e241192e3f558b025f6bea5",
+      "bytes": 16464
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/audits/code_diagnosis_log_aggregate.py",
+      "sha256": "2fbaabc45a9808ec6f3a4aacc79580ec37267e189a1adfbae21de2ab3c952123",
+      "bytes": 7224
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/audits/code_diagnosis_log_aggregate.json",
+      "sha256": "5abea613ee84bd9901eb477e29dfcb0d78cb3df3dd3b2a151384c99dd5449b85",
+      "bytes": 63781
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/audits/code_diagnosis_build.py",
+      "sha256": "c93b8c9110d9d9cb529151cc48236d5655859eba6a1d26181da374415124635a",
+      "bytes": 8950
+    }
+  ],
+  "identity_audit": {
+    "comparisons": 11,
+    "mismatches": [],
+    "scope": "Comparison to stored prior provenance where available; null means no prior digest in the read manifests, not a verification pass."
+  },
+  "limitations": [
+    "No independent review performed by this author agent.",
+    "No parser repair, eligibility re-run, target execution or new scientific evidence.",
+    "Prior-art threats relayed by parent task; this code-only task did not independently verify papers.",
+    "No old full-package rehash or remote backup performed."
+  ],
+  "resource": {
+    "wall_seconds": 0.08789033300000001,
+    "peak_rss_bytes_darwin": 95223808
+  }
+}

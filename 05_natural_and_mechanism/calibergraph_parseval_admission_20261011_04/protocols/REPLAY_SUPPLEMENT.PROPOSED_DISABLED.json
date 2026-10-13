@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "PROPOSED_DISABLED_PENDING_EXPLICIT_USER_BUDGET_APPROVAL",
+  "execution_enabled": false,
+  "amends_old_frozen_protocol": false,
+  "requires_explicit_user_budget_approval": true,
+  "prior_facts": "New04 v3 called generation once; first seed instance45rows exceeded fixed32row replay limit. No D materialized,fullC check or original replay for candidate. Preserve this run,do not call it empty or failure.",
+  "separate_supplement": "Exact same officialcode/originalSQL/fullC/seed0/speculateTrue,one additional generate call solely to capture and replay first instance. No parameter search.",
+  "proposed_limits": {
+    "additional_launches": 1,
+    "additional_generation_calls": 1,
+    "solver_checks": 0,
+    "candidate_callbacks": 1,
+    "candidate_rows_for_replay": 64,
+    "main_original_replays": 2,
+    "confirmation_replays": 2,
+    "worker_cpu_soft_s": 20,
+    "worker_cpu_hard_s": 21,
+    "worker_wall_s": 35,
+    "own_worker_RSS_sampled_MiB": 512,
+    "worker_concurrency": 1,
+    "gpu": 0,
+    "maximum_load_1m_and_5m": 5.5,
+    "minimum_memory_free_percent": 25
+  },
+  "total_denominator_if_approved": {
+    "old03_launches": 2,
+    "new04_v3_launches": 1,
+    "proposed_supplement_launches": 1,
+    "new04_and_supplement_generation_calls": 2,
+    "must_preserve_all_preceding_errors_and_row_cap_stop": true
+  },
+  "stopping": "First candidate regardless of nonempty; rejectoversizeorinvalidC and stop;recordbackendtruth;confirmnonemptyordifferenceinnewdatabase;noSMTorfallback;noautorerun.",
+  "proposed_worker_sha256": "b113f1991e7efe5ea8ae0264ad94442857673996172ff6a210dc4f07922b79cb",
+  "user_question": "A separate explicit approval is pending; original frozen max1generation/max32replayrows remains unchanged."
+}

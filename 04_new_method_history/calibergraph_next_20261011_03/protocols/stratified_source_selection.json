@@ -1,0 +1,204 @@
+{
+  "id": "calibergraph-03-stratified-source-selection-v1",
+  "status": "PREPARED_NOT_EXECUTED_REQUIRES_PARENT_FREEZE_AND_RESOURCE_GUARD",
+  "scanner_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/code/register_stratified_sources.py",
+  "scanner_sha256": "1f751f177780a2e323d41ef94819b4b21dc0423adf01e10d7ac959cca8c13daa",
+  "source_inventory_binding": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/governance/registry_source_inventory.json",
+    "sha256": "100eeb2d9cdf72fda20449dc082d66190f658eb7b51f6046c0eb80b7c8f58f88"
+  },
+  "sources": [
+    {
+      "dataset": "calcite",
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/benchmarks/calcite/calcite2.jsonlines",
+      "bytes": 1060379,
+      "sha256": "5fc6e0740134220856e93743147038cacaf22cb9d9823e7d6b8da2b461939ac4",
+      "previous_frozen_pairs": 397,
+      "previous_query_slots": 794,
+      "historical_prior_inventory_scan_flag": false,
+      "round03_scope": "Full source byte/hash and JSON metadata/C denominator inventory. Original full JSON records decoded for source labels and C state; no token stratification or primary selection for this nonprimary source."
+    },
+    {
+      "dataset": "literature",
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/benchmarks/literature/literature-rewrite.jsonlines",
+      "bytes": 42046,
+      "sha256": "4c5e2661797177fd865a3f57c887376cb01bcbeec57ec77a032124e04c77f42f",
+      "previous_frozen_pairs": 64,
+      "previous_query_slots": 128,
+      "historical_prior_inventory_scan_flag": false,
+      "round03_scope": "Full source byte/hash and JSON metadata/C denominator inventory. Original full JSON records decoded for source labels and C state; no token stratification or primary selection for this nonprimary source."
+    },
+    {
+      "dataset": "leetcode",
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "bytes": 22995478,
+      "sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "previous_frozen_pairs": 23994,
+      "previous_query_slots": 47988,
+      "historical_prior_inventory_scan_flag": true,
+      "round03_scope": "Full source byte/hash and JSON metadata/C denominator inventory. Non-reserve LeetCode records decoded; nonexcluded candidate SQL tokenized. Known reserve records decode metadata prefix only, no pair SQL decode/tokenization."
+    }
+  ],
+  "source_denominators": {
+    "calcite_pairs": 397,
+    "literature_pairs": 64,
+    "leetcode_pairs": 23994,
+    "all_pairs": 24455,
+    "all_query_slots": 48910,
+    "expected_previously_reported_LeetCode_null_contract_rows": 957
+  },
+  "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798",
+  "seed": "calibergraph-03-source-strata-v1-20261011",
+  "stratum_priority": [
+    "S1_SET_OPERATION",
+    "S2_DERIVED_TABLE_AGGREGATE",
+    "S3_IN_EXISTS_OR_CORRELATED_HINT",
+    "S4_OUTER_JOIN",
+    "S5_SELF_OR_REPEATED_RELATION",
+    "S6_MULTI_JOIN_3_TABLES",
+    "S7_JOIN_AGGREGATE",
+    "S8_PURE_JOIN_NONAGGREGATE"
+  ],
+  "source_group_definition": {
+    "primary": "LeetCode original file field, namespaced as leetcode:<exact file value>; a source-problem label, not proof of statistical or semantic independence",
+    "calcite": "All397 pairs inventoried; benchmark/index is not independent rule/test provenance. Exclude primary selection with SOURCE_GROUP_NOT_ESTABLISHED.",
+    "literature": "All64 pairs inventoried; name groups aggregate related variants only. Mark upstream-rewritten non-natural engineering controls, not primary source groups. Do not use to fill shortages."
+  },
+  "excluded_previous_development_group_ids": [
+    "leetcode:benchmark/leetcode/raw_data/182.csv",
+    "leetcode:benchmark/leetcode/raw_data/614.csv",
+    "leetcode:benchmark/leetcode/raw_data/1075.csv",
+    "leetcode:benchmark/leetcode/raw_data/1581.csv",
+    "leetcode:benchmark/leetcode/raw_data/1587.csv",
+    "leetcode:benchmark/leetcode/raw_data/1715.csv"
+  ],
+  "excluded_known_reserve_group_sha256": [
+    "4b381d97e56f9aa6fc18fa1edbc9a89ebfaa21ad4947e0a73362a0f1f32a6f66",
+    "684a5c8b82369de3b9cb6f7a259b9bf1112535c17d9c6c88be046c0f1dc78371",
+    "8c8a7bcc9025f9fe6fb93a35c7e64263e4996a26c516a40a1cc9d910e2300fd7",
+    "fee84b63f12abcf3b482723ef2f477924f1ccbd226475cd0bfd73ac7950a63a5"
+  ],
+  "reserve_exclusion": {
+    "count": 4,
+    "hash_scheme": "SHA256 UTF8 canonical source_group_id",
+    "origin": "Four identities already known from this data-registration agent historical context; no reserve file reread",
+    "procedure": "Stream each original source line as bytes and hash it; decode only JSON metadata prefix before top-level pair, obtain file label and C classification, compare group SHA. On reserve match do not decode pair SQL or tokenize it; expose only opaque group hash and counts. Prefix insufficiency remains a recorded failure/uninspected state.",
+    "privacy_limit": "Workflow exclusion, not cryptographic confidentiality or OS isolation. Whole frozen source bytes necessarily pass through file/line hasher; reserve SQL values are not decoded/tokenized/displayed.",
+    "no_reserve_files_opened": true
+  },
+  "lexical_rules": {
+    "scope": "Mutually exclusive first matching stratum per original pair, matching if either original query satisfies the rule. JSON decoding and tokenization only, not an SQL parser, AST, binding or semantic validation.",
+    "tokenization": "Ignore comments/whitespace; quoted strings are literal tokens, quoted identifiers are never keywords. Count balanced parentheses only. Unrecognized characters/unbalanced lexical parentheses retained as inventory failures, not repaired.",
+    "aggregate_tokens": [
+      "COUNT",
+      "SUM",
+      "AVG",
+      "MIN",
+      "MAX",
+      "GROUP_CONCAT",
+      "STRING_AGG"
+    ],
+    "relation_hints": "Original-schema table names lexically after FROM, JOIN, or comma at tracked FROM depth; optional schema.table suffix. Not verified aliases/scopes. Derived/CTE table aliases not assumed to be physical tables.",
+    "S1_SET_OPERATION": "Any unquoted UNION/INTERSECT/EXCEPT keyword.",
+    "S2_DERIVED_TABLE_AGGREGATE": "FROM or JOIN immediately followed by ( SELECT; an aggregate-call token exists before its matching parenthesis.",
+    "S3_IN_EXISTS_OR_CORRELATED_HINT": "IN/EXISTS immediately followed by ( SELECT, or multiple SELECT tokens plus same qualified-name prefix observed both at depth0 and deeper. The latter is only a possible correlation hint, not verified correlation.",
+    "S4_OUTER_JOIN": "LEFT/RIGHT/FULL [OUTER] JOIN tokens.",
+    "S5_SELF_OR_REPEATED_RELATION": "A declared base-table name appears more than once among lexical relation references.",
+    "S6_MULTI_JOIN_3_TABLES": "At least3 distinct declared base-table names among lexical relation references within one query.",
+    "S7_JOIN_AGGREGATE": "JOIN keyword or at least2 lexical relation occurrences, plus an aggregate-call token.",
+    "S8_PURE_JOIN_NONAGGREGATE": "JOIN keyword or at least2 lexical relation occurrences, and no aggregate-call token in that query.",
+    "no_match": "NO_REGISTERED_LEXICAL_STRATUM remains in denominator.",
+    "known_biases": "First-match gives complex shapes precedence. Some nested/quoted/dialect constructs may be unrecognized; tokenization failures and shortages are reported. No support/eligibility/meaning inference follows."
+  },
+  "selection": {
+    "maximum_groups": 32,
+    "maximum_per_stratum": 4,
+    "pair_preservation": "Keep original source_record values, both SQL, all schema, original C including absent field, original source labels, raw line hash/locator. No SQL simplification, mutation, inferred labels or C repair.",
+    "exclusions_before_shape_selection": [
+      "previous6 development source groups",
+      "four opaque known reserve source groups",
+      "nonprimary Calcite and Literature",
+      "invalid record/pair/schema structures",
+      "byte-identical original pair strings"
+    ],
+    "complexity": "Per pair sum over both queries: token_count +8*max(0,SELECT_count-1)+4*JOIN_keyword_count+4*aggregate_call_count+4*set_operation_count.",
+    "within_group_stratum": "Sort original candidate pairs by (token_complexity, SHA256(seed+NUL+PAIR+NUL+source_group+NUL+sql0hash+NUL+sql1hash+NUL+rawlinehash), rawlinehash); choose lower median at floor((n-1)/2), not shortest.",
+    "within_stratum": "Visit group representatives ordered by SHA256(seed+NUL+GROUP+NUL+stratum+NUL+source_group), tie exact group ID.",
+    "cross_stratum": "Visit8 strata in fixed priority. A group selected in an earlier stratum cannot be selected again; unselected groups may compete in another stratum via that stratum median.",
+    "cross_group_SQL_dedup": "If either representative raw SQL SHA matches an already selected group SQL, reject that representative and continue stable group order. Do not choose another pair from the rejected group×stratum. Within-pair byte identity already excluded.",
+    "cap": "Accept first4 eligible unique groups per stratum; log all later representatives as cap-not-selected. Never fill an empty stratum from other datasets or a second group variant.",
+    "not_outcome_conditioned": "No solver/test labels, SQL outputs, applicability statuses, prior case verdicts, or semantic results inspected or used. Failure after selecting/rereading an exact representative invalidates it or whole scan, never triggers replacement."
+  },
+  "contract_source_axis": {
+    "PRESENT_JSON": "nonempty list of nonempty clause objects; their semantics/provenance remain unverified",
+    "EXPLICIT_EMPTY_OPERATIONAL": "literal []; benchmark explicitly provides an empty operational C list, not evidence of absent business rules",
+    "NULL_UNSPECIFIED": "literal null; extra operational C unspecified, never automatically treated as validated no-business-constraints",
+    "MISSING": "constraint key absent; preserve source_record without adding key; constraint_sha256=null",
+    "INSUFFICIENT": "other malformed/unsupported source JSON shape",
+    "RESERVED_METADATA_UNINSPECTED": "reserve metadata prefix does not establish C field; do not decode SQL to infer it"
+  },
+  "selected_record_interface": {
+    "required": [
+      "id",
+      "case_index_0based",
+      "source_group_id",
+      "source_record",
+      "source",
+      "original_sql_sha256",
+      "schema_sha256",
+      "constraint_sha256",
+      "provenance_eligibility"
+    ],
+    "provenance_eligibility": {
+      "contract_source": "one of exact source-state classes",
+      "business_contract_truth": "UNVERIFIED",
+      "pair_label_truth": "UNVERIFIED",
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "natural_business_origin": "UNKNOWN"
+    },
+    "downstream": "worker consumes --case-index into immutable selected.jsonl; never resamples or guesses missing C. Null/missing slots retain contract-source-insufficient status rather than replacement."
+  },
+  "outputs": [
+    "inventory.jsonl (every source row, reserve SQL excluded)",
+    "source_groups.json (all established labels and opaque excluded group counts)",
+    "selection_attempts.jsonl (all group×stratum representatives/rejections/caps)",
+    "selected.jsonl (at most32 unchanged original pairs)",
+    "report.json (all denominators, constraints classes, source identity, shortages, failures and resources)"
+  ],
+  "resource_envelope": {
+    "requires_parent_prelaunch_resource_guard": true,
+    "maximum_active_workers": 1,
+    "maximum_streamed_pairs": 24455,
+    "source_bytes_total": 24097903,
+    "maximum_selected_rereads": 32,
+    "hard_wall_alarm_seconds": 24,
+    "cooperative_wall_seconds": 22,
+    "cpu_soft_hard_seconds": [
+      9,
+      10
+    ],
+    "observed_peak_RSS_limit_bytes": 268435456,
+    "no_AST_cache_read": true,
+    "no_SQL_parser_solver_network_credentials": true,
+    "cooperative_worker_CPU_seconds": 8,
+    "parent_guard_max_wall_seconds": 25,
+    "parent_guard_CPU_seconds": 10
+  },
+  "exposure": "Entire source family already exposed by older48910-slot applicability scans. Selected data are current development/probing material, not hidden or unseen tests. Labels do not certify natural origin or statistical independence.",
+  "business_scope": "Benchmark-declared C can support explicit official operational-encoding diagnostics; C provenance/business truth remains unknown and cannot establish a real business bottleneck.",
+  "authoring_validation": "Only stdlib metadata reading, file writing and Python ast.parse syntax check. Scanner main has not run and source data have not been newly scanned under this protocol.",
+  "science_status": "HOLD_NO_AUTOMATIC_PROMOTION",
+  "resource_guard_interface": "Parent static_guard.py creates fresh03/runs/RUNOUT and supervisor receipt/stdout/stderr; worker accepts that directory only if its own output files are absent, never overwrites supervisor files.",
+  "selected_output_binding": {
+    "canonical_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "run_copy": "RUNOUT/selected.jsonl",
+    "write_mode": "Both exclusive-create; same unchanged case bytes. Refuse launch if canonical output already exists.",
+    "downstream": "--case-index selects exact line in canonical frozen JSONL; no sampling."
+  },
+  "inventory_integrity_gates": [
+    "All3 actual source SHA/bytes/rows equal old frozen identities",
+    "LeetCode C-axis classes sum23994 and NULL_UNSPECIFIED count957, else no validated selection",
+    "Exactly4 known opaque reserve source-group hashes encountered and excluded, else no validated selection",
+    "All selected SQL/schema/C/raw-line identities match exact original records"
+  ]
+}

@@ -1,0 +1,43 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/worker.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/worker.py
+@@ -92,8 +92,38 @@
+         facts, contract = guard(env, z3, constants, START)
+         report["contract_guard"] = contract
+         checkpoint("CONTRACT_GUARD_RETURNED")
+-        if contract["consistency"] != "sat" or contract["any_base_row_deleted"] != "unsat":
+-            raise ValueError("complete input contract/exact rows not established")
++        contract_stop = None
++        if contract["consistency"] == "unsat":
++            contract_stop = ("COMPLETE_CONTRACT_REJECTED", "CONTRACT_UNSAT_REJECTED")
++        elif contract["consistency"] == "unknown":
++            contract_stop = ("COMPLETE_CONTRACT_UNVERIFIED", "CONTRACT_SATISFIABILITY_UNKNOWN")
++        elif contract["consistency"] != "sat":
++            raise ValueError("unrecognized contract consistency result")
++        elif contract["any_base_row_deleted"] != "unsat":
++            contract_stop = ("COMPLETE_CONTRACT_UNVERIFIED", "EXACT_ROW_CONTRACT_UNVERIFIED")
++        if contract_stop is not None:
++            # Guard work happened, but no query-pair analysis may start. Keep the
++            # raw guard evidence and distinguish rejection from an unrun job.
++            report.update(final_decision=contract_stop[1],
++                          scientific_result="NO_PAIR_EQUIVALENCE_RESULT_CONTRACT_NOT_ESTABLISHED",
++                          pair_parse_status="NOT_RUN_CONTRACT_STOP",
++                          pair_solver_status="NOT_RUN_CONTRACT_STOP",
++                          environment_cleanup="ATTEMPTED_EFFECT_UNKNOWN")
++            checkpoint("CONTRACT_STOP_CLEANUP_ATTEMPT")
++            try:
++                env.__exit__(None, None, None)
++                env = None
++                report["environment_cleanup"] = "COMPLETE"
++            finally:
++                # Preserve charged semantic work even if cleanup itself fails;
++                # the existing error handler will retain the attempted effect.
++                report.update(semantic_e2e_wall_seconds=time.monotonic() - semantic_start,
++                              semantic_e2e_cpu_seconds=cpu_seconds() - semantic_cpu_start,
++                              cost_scope="common raw frontend gate/fresh Environment/schema/IC/contract guard/cleanup; cold process startup/import/hash cost additionally captured by supervisor")
++            report["status"] = contract_stop[0]
++            checkpoint("FINAL_CONTRACT_STOP")
++            sys.stdout.flush(); sys.stderr.flush()
++            os._exit(2)
+ 
+         def official(generic=False, reason=None):
+             attempt = {"route": "official_generic_smt" if generic else "official", "reason": reason,

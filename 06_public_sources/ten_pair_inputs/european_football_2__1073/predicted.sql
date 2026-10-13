@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM Match AS M INNER JOIN League AS L ON M.league_id = L.id WHERE L.name = 'Germany 1. Bundesliga' AND strftime('%Y-%m', M.date) BETWEEN '2008-08' AND '2008-10'

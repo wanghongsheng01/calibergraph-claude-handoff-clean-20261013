@@ -1,0 +1,34 @@
+{
+  "id": "ROUND03_BOOTSTRAP_AMENDMENT_01",
+  "created_utc": "2026-10-11T12:37:02.277110+00:00",
+  "status": "PROSPECTIVE_BEFORE_RECOVERY",
+  "prior_single_batch_precommit": "Explicitly superseded for one engineering bootstrap recovery only; not claimed unchanged",
+  "observed_failure": "First fork/preexec child failed before worker exec; no worker results, events, progress, SQL or solver. Original first-slot supervisor placeholder and20 NOT_RUN remain frozen.",
+  "root_cause_evidence": "Same execution environment own-process stdlib steps: nice15 CPU4 CORE0 return; RLIMIT_RSS256MiB raises ValueError current limit exceeds maximum limit. This is a launcher failure, not scientific evidence.",
+  "change": "New supervisor_v2 removes unavailable advisory RLIMIT_RSS set; retains256MiB external sampling and explicit non-hard memory limitation. No solver/frontend code changes.",
+  "invariants": [
+    "Identical21 source-label groups and original pair/schema/C",
+    "Identical registration order and input SHA",
+    "Identical4s workerCPU/5s wall,≤2s cumulative solver target,120s totalCPU",
+    "Same resource load≤4 and memoryavailable≥25 gate, single active worker",
+    "No SQL outcome has been observed; no new selection or threshold tuning",
+    "No further recovery after this one, whether bootstrap failure or midbatch stop"
+  ],
+  "prior_batch": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/batch_01/batch_receipt.json",
+    "sha256": "e35ec10ed4aa6f438a5d52f3cbe3cec61eee3a16d942b39551cd0432e8b30c81",
+    "conservative_charged_total_seconds": 6.876721999999999
+  },
+  "failed_launch": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/batch_01/case_00/supervisor_receipt.json",
+    "sha256": "8101c41c49c8db33a5596260fe88c0829596218b2a611cbfa6c589f4b5b8408b"
+  },
+  "diagnostic_accounting": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/audits/bootstrap_diagnostic_accounting.json",
+    "sha256": "e119e3b1725765c056351f6c31478364bb7ef7100951618d64ddb6cca70cb06f",
+    "reserved_extra_seconds": 1.0
+  },
+  "effective_prior_cost_before_recovery_seconds": 7.876721999999999,
+  "double_counting_rule": "The prior6.876722 already includes scan6.708655; add diagnostic allowance1.0 only. Never count scan twice.",
+  "independent_review": "Independent reviewer approved methodological validity conditional on prospective binding, complete debt, unchanged scientific design and no third attempt; final implementation review remains required."
+}

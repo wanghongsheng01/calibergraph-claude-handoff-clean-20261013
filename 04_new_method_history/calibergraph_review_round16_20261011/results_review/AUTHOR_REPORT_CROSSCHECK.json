@@ -1,0 +1,164 @@
+{
+  "schema": "calibergraph.round16.final_author_crosscheck.v1",
+  "reviewer": "/root/round16_independent",
+  "decision": "ACCEPT_FINAL_AUTHOR_READOUT_WITH_STATED_SCOPE",
+  "issues": [],
+  "author_manifest": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/analysis/AUTHOR_RESULTS_MANIFEST.json",
+    "sha256": "76be43aff6f662cf913f9a4695ba36ad0d0fa43ceb5dcda0db8a341756726107",
+    "verified_files": 7,
+    "mismatches": []
+  },
+  "author_report_sha256": "d2609b50971c9237eb00fd8c07ecd2f0c8bed82d09942419c6adfbbdcd5728f8",
+  "local_raw_provenance": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/analysis/RAW_EVIDENCE_PROVENANCE.json",
+    "sha256": "3a6047eb4cab4470c7e95eb671f716e8adb5c3719b791a9cf1d96f083e373b32",
+    "verified_files": 170,
+    "mismatches": []
+  },
+  "raw_directory_membership_exact": true,
+  "runtime_freeze": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/generation_replay.freeze.json",
+    "sha256": "d4ceea578897f81d0a7043040216965698ce19c0c16d422321259d7c76ea2388",
+    "verified_files": 909,
+    "mismatches": []
+  },
+  "allowed_finalization": {
+    "allowed_source_differences": [
+      {
+        "file": "generation_common.py",
+        "before_sha256": "8a3ec2eefeb08d978ab7e11224ae33a30e768b4c41883220e2df7e1c13aeca44",
+        "after_sha256": "2fd58f41e25c59d0842bfecaa90edd5f62162a8e3b7d86ff8b117646f6492d6b",
+        "allowed": true
+      },
+      {
+        "file": "generation_supervisor.py",
+        "before_sha256": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+        "after_sha256": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+        "allowed": true
+      },
+      {
+        "file": "official_generation_worker.py",
+        "before_sha256": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+        "after_sha256": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+        "allowed": true
+      },
+      {
+        "file": "official_generation_backend.py",
+        "before_sha256": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+        "after_sha256": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+        "allowed": true
+      },
+      {
+        "file": "official_contract_admission.py",
+        "before_sha256": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+        "after_sha256": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+        "allowed": true
+      },
+      {
+        "file": "safe_sqlite_replay.py",
+        "before_sha256": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+        "after_sha256": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+        "allowed": true
+      }
+    ],
+    "only_protocol_fields_changed": [
+      "status",
+      "registered_utc",
+      "supervisor.prior_resource_observation_cpu_charge_seconds",
+      "supervisor.prior_resource_observation_measured_cpu_seconds",
+      "supervisor.prior_resource_observation_tail_reserve_seconds"
+    ],
+    "observation_fees_match_complete_ledger": true,
+    "round06_bindings_retained": 880,
+    "new_bindings": 29
+  },
+  "old15": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_15/ROUND15_RESOURCE_STOP_MANIFEST.json",
+    "sha256": "a73a7c9aea510e4b687bcc5b2dd0669c6d11a16079e0fd7a520e5202b24c1bb2",
+    "verified_files": 37,
+    "mismatches": []
+  },
+  "old13": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_13/ROUND13_FAILED_LAUNCH_MANIFEST.json",
+    "sha256": "a3071c1913136bee4017cb73db4971947dfeba505a71e9a3451dadcd96606fb8",
+    "verified_files": 30,
+    "mismatches": []
+  },
+  "prior_review_seals": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/SHA256SUMS.preexec_outputs",
+      "sha256": "dfb2126c4022c8895517bba1ccd51d1ff2146e6ffad55ce1a4e5c0b80c4f0568",
+      "files_unchanged": 9
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/waiting_followup/SHA256SUMS.outputs",
+      "sha256": "454f3d55fbf816ead8ea2f2d56cd37bd9486edf1843439fec5bd0f5dbd6768ff",
+      "files_unchanged": 3
+    }
+  ],
+  "physical_rows_in_existing_C_sanity_models": 72,
+  "old06_unknown_reasons": {
+    "timeout": 2,
+    "out of memory": 2
+  },
+  "manual_readout_review": {
+    "all24_and_old12_denominators_preserved": true,
+    "valid_prequery_error_receipts_not_dropped": true,
+    "null_not_reached_costs_not_zero": true,
+    "700ms_parameter_distinguished_from_actual_wall": true,
+    "cost_reserves_overlap_and_postanalysis_exclusion_explicit": true,
+    "mature_source_SQL_identity_proof_not_timed_baseline_or_encoder_certification": true,
+    "exact_not_up_to_and_exposed_dev_not_independent_test": true,
+    "NONE_NO_GO_no_paper_method_promotion": true,
+    "clean_restore_and_DataHub_blocks_remain": true
+  },
+  "evidence_limits": [
+    "Local receipts/hash association does not by itself independently establish syscall O_EXCL or absence of all other tool calls; root retains original request/completion chunks d74bf2/93b879.",
+    "Earlier literature/public corpus statements are carried with prior review provenance; no new literature retrieval or full corpus reexecution was performed.",
+    "Raw payload upload status is the author declaration and local provenance policy; this review does not inspect remote Git contents or certify clean restore.",
+    "No scientific code, SQL, SMT, new model, target import/compile or resource probe was executed."
+  ],
+  "input_hashes": {
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/analysis/AUTHOR_RESULTS_MANIFEST.json": "76be43aff6f662cf913f9a4695ba36ad0d0fa43ceb5dcda0db8a341756726107",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/analysis/RESULTS.zh.md": "d2609b50971c9237eb00fd8c07ecd2f0c8bed82d09942419c6adfbbdcd5728f8",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/analysis/RAW_EVIDENCE_PROVENANCE.json": "3a6047eb4cab4470c7e95eb671f716e8adb5c3719b791a9cf1d96f083e373b32",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/generation_replay.freeze.json": "d4ceea578897f81d0a7043040216965698ce19c0c16d422321259d7c76ea2388",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_15/ROUND15_RESOURCE_STOP_MANIFEST.json": "a73a7c9aea510e4b687bcc5b2dd0669c6d11a16079e0fd7a520e5202b24c1bb2",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_13/ROUND13_FAILED_LAUNCH_MANIFEST.json": "a3071c1913136bee4017cb73db4971947dfeba505a71e9a3451dadcd96606fb8",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/allowed_finalization_changes.json": "bc1ffa9801ff6e9239e757277865e6c177ab92325f86b421193aa2a4cf9328f3",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/AUTHOR_DISABLED_MANIFEST.json": "5cdb99e32522017e837e8b47925a6236c33e10236451102128c1a6dfd7a517a5",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/implementation/generation_common.py": "8a3ec2eefeb08d978ab7e11224ae33a30e768b4c41883220e2df7e1c13aeca44",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/generation_common.py": "2fd58f41e25c59d0842bfecaa90edd5f62162a8e3b7d86ff8b117646f6492d6b",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/implementation/generation_supervisor.py": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/generation_supervisor.py": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/implementation/official_generation_worker.py": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_worker.py": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/implementation/official_generation_backend.py": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_backend.py": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/implementation/official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/implementation/safe_sqlite_replay.py": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/safe_sqlite_replay.py": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/author_snapshot_disabled/generation_replay.draft.json": "64bf3f54077888baca66439f10c35b77c4853015a516732a57bb3d15c44ec0ce",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/generation_replay.registered.json": "6d4f9bfb6939bf4af5f94b0813c303f9aaa30617cb197b16605b7683b6d0ff87",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/scheduling/CLOSED_OBSERVATION_LEDGER.json": "1090a0c310e65687602e343c8abef876a1eaa0495864352ba3802b7bd1e1fd45",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/protocols/generation_replay.freeze.json": "124434da8e12c466c7e7138f8cbfcd4eb06f5443419274b6cf99f1f31a5bfde7",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/SHA256SUMS.preexec_outputs": "dfb2126c4022c8895517bba1ccd51d1ff2146e6ffad55ce1a4e5c0b80c4f0568",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/waiting_followup/SHA256SUMS.outputs": "454f3d55fbf816ead8ea2f2d56cd37bd9486edf1843439fec5bd0f5dbd6768ff",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/results_review/INDEPENDENT_RAW_RESULTS.json": "8f31ca9daf0fbc46c1e68d63e00badb63547433c38deaf5b8742de2e15ce1479",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_review_round16_20261011/results_review/COST_BOUNDARY_EVIDENCE.json": "280dbfc2af5315d30670ab8334d8daedf6dcf21f44b72ce8a5f1edf0807b32a5",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_03/results.json": "b841bca21052b44461e91b3a75bb193b2b972ded8540f12b77ae28b7fd69f5ab",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_04/results.json": "2bcc12a80a4453f57c310695ad22f8a91bbae8359b399c35f56f785c413ee2dd",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_05/results.json": "6adb5ae09c77fcdc7a94ca4ee994967dcbc2536d28ef6c558fe9c1a21c9f49ed",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_06/results.json": "d7d200805aed6781a3dcf1504dceca299fc2fa052dda012f78f10a2fad93683b",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_07/results.json": "c9905e8d7687ba5ed311f8e386a538487371105ff0ab6265e71ad9c5cdf3e751",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_08/results.json": "5840f61c3f6efbd31544776594ed5f34b1b0943b8b1517f90e84803cc719b5c4",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_15/results.json": "4b783010c2183a02da8609da4b10e29875efa741ac722bff5da230bf896192b0",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_16/results.json": "f81026297be4eea057c585e1888e8e2b153c5e1b31be19da9588d50ab451907c",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_17/results.json": "e1323dba2a66280855683ff15c72f71c4c3826cb7ccb7665e6ca97f11d29adb5",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_18/results.json": "4584ff0f74f8b96bb60a79d5d414e517ec1ffd949dd504938b8f8e8480f7ae7c",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_19/results.json": "f54e1e97a9b8ed34ed883f5015a5287617ab89f6ad65c0e1c75e0ecfefafd7b6",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/runs/diagnostic_01/case_20/results.json": "933c5aa0919dd33de9074bf278fccb4077c8a3bd4cbe92451ef76ba956848c54"
+  }
+}

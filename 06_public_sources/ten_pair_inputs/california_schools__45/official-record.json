@@ -1,0 +1,14 @@
+{
+  "dbid": "california_schools",
+  "index": "45",
+  "difficulty": "moderate",
+  "verdict": "NEQ",
+  "reason": "q1's database tells them apart",
+  "results": [
+    "[('l', 5), ('cw', 13), ('de', 15), ('de', 15), (None, 13), ('l', None)]",
+    "[(None, 13.0), ('cw', 13.0), ('de', 15.0), ('l', 5.0)]"
+  ],
+  "end_to_end_s": 0.866,
+  "gold": "SELECT T2.School, T1.AvgScrWrite FROM satscores AS T1 INNER JOIN schools AS T2 ON T1.cds = T2.CDSCode WHERE T2.AdmFName1 = 'Ricci' AND T2.AdmLName1 = 'Ulrich'",
+  "predicted": "SELECT T1.School, AVG(T2.AvgScrWrite) AS Average_Writing_Score FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T1.AdmFName1 = 'Ricci' AND T1.AdmLName1 = 'Ulrich' GROUP BY T1.School"
+}

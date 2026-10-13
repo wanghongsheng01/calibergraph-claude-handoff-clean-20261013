@@ -1,0 +1,43 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/worker.py
+@@ -21,6 +21,7 @@
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+ from common import sha, save, verify_lock, load_runtime, new_env, cpu_seconds, budget_ms, solver, guard, decode, replay, jobs_for, ensure_raw_frontend, guarded_replay, canonicalize_conjunctions, verifier_semantics, apply_contract_bridge, require_contract_bridge, ContractStop
++from pair_status import record_pair_receipt
+ 
+ 
+ def main():
+@@ -100,6 +101,7 @@
+                           semantic_e2e_wall_seconds=time.monotonic() - semantic_start,
+                           semantic_e2e_cpu_seconds=cpu_seconds() - semantic_cpu_start,
+                           cost_scope="raw frontend gate; process startup/import/hash included in supervisor cost")
++            record_pair_receipt(report, "FRONTEND_STOP")
+             checkpoint("FINAL_FRONTEND_UNSUPPORTED")
+             sys.stdout.flush(); sys.stderr.flush()
+             os._exit(2)
+@@ -321,6 +323,8 @@
+                         report["final_decision"] = result["status"]
+                     else:
+                         report["fallback"] = {"status": "NOT_RUN_BUDGET_EXHAUSTED", "reason": "candidate_unknown"}
++        record_pair_receipt(report, "DISPATCH_RETURNED")
++        checkpoint("QUERY_WORK_RETURNED")
+         cleanup_environment()
+         if args.kind == "cost":
+             report["scientific_result"] = "COST_RECORDED_REQUIRES_SEPARATE_SEMANTIC_VALIDATION_AND_PAIRED_ANALYSIS"
+@@ -339,6 +343,7 @@
+             report.update(pair_work_status="NOT_RUN_CONTRACT_STOP", pair_parse_status="NOT_RUN_CONTRACT_STOP", pair_solver_status="NOT_RUN_CONTRACT_STOP")
+         else:
+             report["pair_work_status"] = "ATTEMPTED_EFFECTS_RETAINED_SEE_LEDGER"
++        record_pair_receipt(report, "CONTRACT_STOP")
+         try:
+             cleanup_environment()
+         except BaseException as cleanup_error:
+@@ -348,6 +353,7 @@
+         os._exit(2)
+     except BaseException as exc:
+         report.update(status="BLOCKED_OR_ERROR", error_type=type(exc).__name__, reason=str(exc), traceback=traceback.format_exc())
++        record_pair_receipt(report, "ERROR")
+         try:
+             cleanup_environment()
+         except BaseException as cleanup_error:

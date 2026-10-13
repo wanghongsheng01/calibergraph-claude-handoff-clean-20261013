@@ -1,0 +1,37 @@
+{
+  "id": "round03-stdlib-bootstrap-diagnosis",
+  "recorded_from": "Three direct stdlib-only tool executions after batch_01; no SQL/target import/solver",
+  "invocations": [
+    {
+      "purpose": "API existence and inherited RLIMIT read",
+      "CPU_at_print_seconds": 0.047686,
+      "os_setpriority": true,
+      "RLIMIT_CPU": [
+        9223372036854775807,
+        9223372036854775807
+      ],
+      "RLIMIT_CORE": [
+        0,
+        9223372036854775807
+      ],
+      "RLIMIT_RSS": [
+        9223372036854775807,
+        9223372036854775807
+      ]
+    },
+    {
+      "purpose": "inherited nice read",
+      "inherited_nice": 0,
+      "CPU_at_print_seconds": 0.050529
+    },
+    {
+      "purpose": "same-environment own-process restriction steps",
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/audits/launcher_self_diagnostic.json",
+      "sha256": "5a4e6ad7ce1dd853b63a514ac8063d315e4511094f86753d323d3b1e9c99a84e",
+      "CPU_at_report_seconds": 0.049991
+    }
+  ],
+  "observed_CPU_sum_seconds": 0.148206,
+  "additional_conservative_charge_seconds": 1.0,
+  "charge_scope": "Allowance includes these three observations and their unmeasured startup/serialization tails; 1s is a reserve, not measured CPU."
+}

@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-10-12",
+  "decision": "REJECT_GENERIC_BATCH_REUSE_NOVELTY",
+  "candidate_boundary_status": "HOLD_NOT_NOVELTY_CLEARED; reject if only product-polynomial/root-avoidance on a supplied legal grid",
+  "execution": {
+    "sql": false,
+    "solver": false,
+    "experiments": false,
+    "manuscript_edits": false
+  },
+  "scope": "Targeted primary-paper and eight pinned source-file inspection; absence claims limited to inspected scope",
+  "source_manifest": "SOURCE_MANIFEST.json",
+  "matrix": [
+    {
+      "method": "VeriEQL",
+      "commit": "493cbb81000205e33b0623cfd1c39106fa035fae",
+      "anchors": [
+        "environment.py:117-135",
+        "environment.py:811-830",
+        "environment.py:859-898",
+        "environment.py:942-952"
+      ],
+      "existing": [
+        "schema checkpoints across comparisons",
+        "solver reset on checkpoint reload"
+      ],
+      "not_found_scoped": [
+        "cross-pair semantic result cache",
+        "replay-all witness service"
+      ],
+      "paper": "https://arxiv.org/abs/2403.03193v2"
+    },
+    {
+      "method": "Polygon",
+      "commit": "5e18237394d025dbb805cf833b4f54c321470774",
+      "anchors": [
+        "polygon/environment.py:25-66",
+        "polygon/environment.py:304-389",
+        "polygon/environment.py:527-536",
+        "polygon/smt/formula.py:526-544",
+        "polygon/smt/provers/smtlibv2.py:146-184"
+      ],
+      "existing": [
+        "shared schema and IC for multiple queries",
+        "multiquery disambiguation",
+        "operator/IC/mismatch encoding cache",
+        "learned conflicts within search"
+      ],
+      "not_found_scoped": [
+        "persistent push-pop solver across calls",
+        "cross-run witness/result store"
+      ],
+      "paper": "https://arxiv.org/html/2504.06542v1",
+      "paper_anchor": "abstract; section1; section4; AppendixD",
+      "consequence": "joint conjunction of pair mismatches is covered by n-query arbitrary-output-SMT problem formulation; stock API groups outputs, adaptation required for arbitrary conjunction"
+    },
+    {
+      "method": "SpotIt+",
+      "commit": "abee2baa26b2b50398c1807a46b2db126d2dda97",
+      "anchors": [
+        "run_rule_based.py:119-148",
+        "run_rule_based.py:160-163"
+      ],
+      "existing": [
+        "VeriEQL with extracted constraints",
+        "writes current counterexample"
+      ],
+      "not_found_scoped": [
+        "cross-pair witness replay",
+        "semantic answer cache"
+      ],
+      "paper": "https://arxiv.org/html/2603.04334v3"
+    },
+    {
+      "method": "ParSEval_current_official",
+      "commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+      "anchors": [
+        "src/parseval/main.py:68-95",
+        "src/parseval/main.py:108-148",
+        "src/parseval/generator/generate.py:56-58",
+        "src/parseval/generator/generate.py:131-142",
+        "src/parseval/smt/solve.py:155-186"
+      ],
+      "existing": [
+        "shared Catalog",
+        "both queries on each generated instance",
+        "database-version outcome progress",
+        "solver assumption checks within restart"
+      ],
+      "not_found_scoped": [
+        "persistent cross-pair store",
+        "query-version proof cache"
+      ],
+      "caution": "Current repository postdates 2025 paper; database version is not query version; EQ is test agreement not proof",
+      "paper": "https://dbgroup.cs.tsinghua.edu.cn/jnwang/papers/vldb2025-parseval.pdf",
+      "paper_anchor": "section4.1 Algorithm1 pp4756-4757"
+    },
+    {
+      "method": "TestSuiteDistillation",
+      "paper": "https://aclanthology.org/2020.emnlp-main.29.pdf",
+      "anchor": "section3; section4.2 p399",
+      "existing": [
+        "greedy previously-undistinguished-neighbor coverage",
+        "reusable suite for future model predictions"
+      ]
+    },
+    {
+      "method": "XData",
+      "paper": "https://arxiv.org/pdf/1411.6704",
+      "anchor": "section11 author-preprint pp16-18",
+      "existing": [
+        "mutant-killing datasets",
+        "reuse for many student submissions",
+        "multiple-correct-query suite pooling",
+        "bulk grading"
+      ]
+    },
+    {
+      "method": "GreenTrie",
+      "paper": "https://arxiv.org/abs/1501.07174",
+      "anchor": "abstract; official README https://github.com/jiaxy/GreenTrie",
+      "existing": [
+        "normalized-equivalence cache inherited from Green",
+        "implication subset/superset solution reuse"
+      ]
+    },
+    {
+      "method": "Z3",
+      "paper": "https://z3prover.github.io/papers/programmingz3.html",
+      "anchor": "sections4.1-4.4 and5.3",
+      "existing": [
+        "incrementality",
+        "scopes",
+        "assumptions",
+        "cores",
+        "maximizing satisfiable goals"
+      ]
+    }
+  ],
+  "mandatory_controls": [
+    "persistent process + shared schema/IC + incremental push/pop or activation assumptions",
+    "exact and sound canonical/semantic-result caching",
+    "fair replay-all legal historical witnesses with per-query/database result caching",
+    "reusable mutation and query-coverage test suites",
+    "Polygon joint objective / documented disambiguation and goal-selection control",
+    "matched budgets, warmup, scheduling orders, and all certification/replay costs"
+  ],
+  "one_boundary": {
+    "mechanism": "new simultaneous witness algebraic construction within independently certified full-C legal Cartesian region",
+    "status": "not cleared",
+    "threats": [
+      "Polygon n-query arbitrary SMT output condition",
+      "ordinary random legal-grid testing/PIT",
+      "product polynomial nonvanishing is routine",
+      "Few Rows multiplicity polynomial/grid arguments have narrower relational/dense-order scope, not generic aggregate SQL batch reuse"
+    ],
+    "needs": "Nontrivial inexpensive full-C and SQL-piecewise-region certification plus advantage over all controls"
+  },
+  "blockers": [
+    "No performance evidence in this audit",
+    "No exhaustive code/literature absence conclusion",
+    "Exact algebraic-boundary novelty unresolved"
+  ],
+  "workload_caution": "Parent reports 87 VeriEQL contexts (61 multi) and 11 ParSEval contexts; no production query-version lineage. Not independently recomputed here."
+}

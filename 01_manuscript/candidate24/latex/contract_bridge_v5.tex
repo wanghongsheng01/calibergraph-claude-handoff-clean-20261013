@@ -1,0 +1,15 @@
+% Method statements; measured outcomes are separately reported in results_current.tex.
+\subsection{A common source-AST contract bridge}\label{sec:bridge}
+The direction failure in Section~\ref{sec:icdiagnostic} motivates a common adapter before any comparison arm. Its accepted IC AST is absent or a conjunction list, allowing nested AND, non-NULL tests, one column compared with one integer literal in either order using six comparison operators, and inclusive column BETWEEN integer bounds. Every clause must be TRUE on every physical row of its referenced table; NULL fails. This explicit contract is narrower than the upstream interface and does not infer SQL CHECK semantics. One unsupported node refuses the whole contract without fallback.
+
+Let $B$ be the fresh Environment's schema, exact-row facts and bounds before adding the tested IC. A separate reference emits $C_r$ from the original AST on the same base symbols. A normalized copy reverses literal-left ordered comparisons and expands BETWEEN into inclusive column-left bounds; only this copy enters the actual upstream compiler, whose added facts form $C_u$. Original AST and per-leaf transformations are retained. Admission requires
+\begin{equation}
+\operatorname{SAT}(B),\qquad
+\operatorname{UNSAT}\bigl(B\land(C_u\mathbin{\oplus}C_r)\bigr).
+\label{eq:bridge}
+\end{equation}
+Neither tested interpretation is asserted in the XOR premises, where it could hide mapping counterexamples. For the XOR audit, SAT or unknown refuses admission. Base SAT prevents a vacuous audit; a separate later guard requires $B\land C_u$ satisfiable and excludes deleted rows. Contradictory ICs are not query-equivalence successes.
+
+Every arm audits the same registered IC in a fresh Environment. Fallback and differentials require its attached bridge record and unchanged complete-fact digest. These local identity checks are not portable certificates, and the official arm uses an explicitly controlled IC adapter. A concrete evaluator checks every SAT witness against the original AST before the integer-domain audit and unchanged SQL replay. All checks count toward the process budget.
+
+Equation~\ref{eq:bridge} establishes bounded equality of the two interpretations, conditional on the base representation and reference implementation. The reference shares base variables and solver primitives but not the upstream IC compiler. This does not certify text parsing, arbitrary ICs, business truth or query translation. Executed audits are input-specific; old v4 runs inherit no bridge guarantee.

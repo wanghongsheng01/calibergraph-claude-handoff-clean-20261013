@@ -1,0 +1,43 @@
+{
+  "created_utc": "2026-10-12T14:55:57.771735+00:00",
+  "reviewer_role": "independent_static_final_reviewer_not_author",
+  "decision": "ACCEPT_STOP_WITH_LIMITATIONS",
+  "author_decision": "REJECT_AVAILABLE_WORKLOAD",
+  "accept_stop": true,
+  "must_fix_for_stop": [],
+  "conditional_future_must_fix": [
+    "Make identifier normalization dialect-aware and preserve/refuse quoted-identifier cases per contract.",
+    "Implement or narrow claims about comparison typing and totality certification."
+  ],
+  "counts_independently_checked": {
+    "records": 25528,
+    "unique_ids": 25528,
+    "exclusions": 10568,
+    "ast_scanned": 14960,
+    "admitted": 315,
+    "identical": 132,
+    "nontrivial": 183,
+    "nontrivial_with_join": 138,
+    "strict_U_J_events": 0,
+    "eligible": 0,
+    "TokenError_raw_scanner_errors": 11,
+    "verbatim_hash_first_representative_entries": 12
+  },
+  "verification": {
+    "code_freeze_files_matching": 6,
+    "source_files_matching": 3,
+    "parser_wheel_hash_matching": true,
+    "final_decision_evidence_hashes_matching": true,
+    "polygon_files_matching": 4,
+    "hash_first_three_each_category": true
+  },
+  "new_parser_runs": 0,
+  "new_sql_executions": 0,
+  "new_solver_calls": 0,
+  "author_files_modified": 0,
+  "new_candidates": 0,
+  "performance_claim_supported": false,
+  "general_impossibility_claim_supported": false,
+  "recommended_new_solver_cpu_seconds": 0,
+  "remaining_blockers": []
+}

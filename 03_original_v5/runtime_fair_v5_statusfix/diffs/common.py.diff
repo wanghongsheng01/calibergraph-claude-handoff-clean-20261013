@@ -1,0 +1,11 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/common.py
+@@ -52,7 +52,7 @@
+             raise ValueError("runtime inventory mismatch: " + raw)
+     if lock["native_path"] not in lock["files"] or lock["kernel_path"] not in lock["files"]:
+         raise ValueError("native/kernel missing from lock")
+-    required_programs = ("common.py", "worker.py", "supervisor.py", "query_differential.py", "contract_reference.py")
++    required_programs = ("common.py", "worker.py", "supervisor.py", "query_differential.py", "contract_reference.py", "pair_status.py")
+     expected_program_paths = {str(Path(__file__).parent / name) for name in required_programs}
+     if set(lock.get("runtime_programs", {})) != expected_program_paths:
+         raise ValueError("v5 runtime program inventory missing or wrong")

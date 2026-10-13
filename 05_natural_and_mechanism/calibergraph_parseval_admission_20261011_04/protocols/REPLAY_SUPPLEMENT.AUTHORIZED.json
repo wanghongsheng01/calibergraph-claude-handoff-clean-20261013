@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "status": "EXPLICITLY_AUTHORIZED_SEPARATE_SUPPLEMENT",
+  "execution_enabled": true,
+  "authorized_utc": "2026-10-11T20:46:56.426957+00:00",
+  "authorization_source": "User delegation from parent thread01a11884-8204-7174-8521-ff9334eec0fe explicitly approves same originalSQL/fullC/seed,one generate,firstcandidateonly,64rows,noSMT,resourcegate,timecaps; no further question required.",
+  "prior_32_row_budget_unchanged": true,
+  "prior_result_sha256": "be28f9df99224520a687abb70b1a5643893db11b84c77ce9cecd3edceb576b43",
+  "limits": {
+    "additional_launches": 1,
+    "additional_generation_calls": 1,
+    "solver_checks": 0,
+    "candidate_callbacks": 1,
+    "candidate_rows_for_replay": 64,
+    "main_original_replays": 2,
+    "confirmation_replays": 2,
+    "worker_cpu_soft_s": 20,
+    "worker_cpu_hard_s": 21,
+    "worker_wall_s": 35,
+    "own_worker_RSS_sampled_MiB": 512,
+    "worker_concurrency": 1,
+    "gpu": 0,
+    "maximum_load_1m_and_5m": 5.5,
+    "minimum_memory_free_percent": 25
+  },
+  "scope": "Exact same officialcode/originalSQL/fullC/seed0/speculateTrue,one additional generate call solely to capture and replay first instance. No parameter search.",
+  "stopping": "First candidate regardless of nonempty; rejectoversizeorinvalidC and stop;recordbackendtruth;confirmnonemptyordifferenceinnewdatabase;noSMTorfallback;noautorerun.",
+  "count_all_runs": {
+    "old03_launches": 2,
+    "new04_v3_launches": 1,
+    "proposed_supplement_launches": 1,
+    "new04_and_supplement_generation_calls": 2,
+    "must_preserve_all_preceding_errors_and_row_cap_stop": true
+  },
+  "observations": "Preserve nonempty,empty,error or cap outcomes without selecting a second candidate. Confirm nonempty/difference in freshPG database; complete input SQL42projection/order unchanged.",
+  "source_C": "117columns,32NN,3PK,6UNIQUE(NULLS_DISTINCT),2FK;43active;no added or dropped constraint",
+  "variant": "Original stock ParSEval rejection remains recorded separately; contextual BOOLEAN literal adapter checked with PostgreSQL complete nullable BOOLEAN domain.",
+  "implementation": "Same existing official source and locked dependencies; no new download,credentials,other-project edits,or proposal/submission.",
+  "review_and_backup": "One consolidated terminal independent audit and author-only private backup."
+}

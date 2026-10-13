@@ -1,0 +1,88 @@
+{
+  "scope": "STATIC_SOURCE_AND_SAVED_DATA_ONLY",
+  "new_solver_calls": 0,
+  "new_sql_calls": 0,
+  "new_baseline_calls": 0,
+  "new_test_cases": 0,
+  "prior_manifest_files_checked": 46,
+  "prior_manifest_all_match": true,
+  "prior_freeze_files_checked": 588,
+  "prior_freeze_all_match": true,
+  "saved_evidence": {
+    "calibergraph_sampled_diagnostic_20261012_07/MANIFEST.json": "8440fe6b77999555ff38a286d5ec934662a66fe0377b180da639707329fc5616",
+    "calibergraph_sampled_diagnostic_20261012_07/FREEZE.json": "aff584bff4c18e0741575ce20ee92feb8db7abe82e0ace2a0b387cbca5b4f6e6",
+    "calibergraph_sampled_diagnostic_20261012_07/science/RESULT.json": "93e361d5955fe1b659e97d913c653b7b7f7b562df8dccffc458fb406f25a6e29",
+    "calibergraph_sampled_diagnostic_20261012_07/science/error.txt": "9dccced6431192359e745bdf646b263c91a89dbcfb04ea5c02b413717c3ad547",
+    "calibergraph_sampled_diagnostic_20261012_07/independent_review/INDEPENDENT_REVIEW.json": "93089e6756d9cbd314d74992da2e1ea88563a8f9ed0c10ac55aa33d1fef813af",
+    "calibergraph_sampled_diagnostic_20261012_07/independent_review/run/AUDIT_RESULT.json": "56193cfdc6defb1a4a648b4a87d146e6d26904c6c046ac322769dc2027d0b664",
+    "calibergraph_mechanism_synthesis_20261012_02/XDATA_EVIDENCE.json": "f82e86c87490fd6f590123c68b55aee4518ab877bb4231935addcf4c3c5cab20"
+  },
+  "source_code": [
+    {
+      "id": "polygon_count_distinct",
+      "local_path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/expression_encoder.py.txt",
+      "sha256": "904e2654d2709a12f009d7ffa4fbbfebbb211dea665b29cf0bca548a77035c91",
+      "url": "https://github.com/polygon-sql/polygon/blob/5e18237394d025dbb805cf833b4f54c321470774/polygon/visitors/expression_encoder.py#L99"
+    },
+    {
+      "id": "polygon_final_neq",
+      "local_path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/environment.py.txt",
+      "sha256": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+      "url": "https://github.com/polygon-sql/polygon/blob/5e18237394d025dbb805cf833b4f54c321470774/polygon/environment.py#L220"
+    },
+    {
+      "id": "parseval_comparison",
+      "local_path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/main.py",
+      "sha256": "771c58bb1acee1cf00075e56308167cea711e3e799bed262c8eb5e519697957e",
+      "url": "https://github.com/sfu-db/ParSEval/blob/88cfe245bcf249a5b0df561a6b09c116ff2a2896/src/parseval/main.py#L111"
+    },
+    {
+      "id": "parseval_generator",
+      "local_path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/generator/generate.py",
+      "sha256": "2e9200c322868de266ffe9ac8768e0462720b26d07180884017f3f5e3dd7ee6d",
+      "url": "https://github.com/sfu-db/ParSEval/blob/88cfe245bcf249a5b0df561a6b09c116ff2a2896/src/parseval/generator/generate.py#L246"
+    }
+  ],
+  "papers": [
+    {
+      "url": "https://arxiv.org/html/2409.18821v1",
+      "sections": [
+        "2",
+        "3.5",
+        "4.3",
+        "5.2",
+        "7"
+      ],
+      "limits": "No core Java verification, no claim native pair was evaluated in v1."
+    },
+    {
+      "url": "https://arxiv.org/html/2504.06542v1",
+      "sections": [
+        "3",
+        "6"
+      ],
+      "limits": "Static semantic target; no full-C runtime admission or measured success."
+    },
+    {
+      "url": "https://dbgroup.cs.tsinghua.edu.cn/jnwang/papers/vldb2025-parseval.pdf",
+      "sections": [
+        "Table 1"
+      ],
+      "limits": "Paper operator coverage is not the complete version identity of the pinned code."
+    }
+  ],
+  "xdata_core_access_this_turn": {
+    "fixed_commit": "a86031197fd1b572bd7782431331e8cb15554f88",
+    "tree_browser_result": "Internal Error",
+    "api_browser_result": "No readable body recovered",
+    "core_java_verified": false,
+    "jar_downloaded_or_executed": false
+  },
+  "boundary_error_preserved": {
+    "status": "ERROR_NOT_ALGORITHM_FAILURE",
+    "error": "KeyError('Patient')",
+    "stage": "author replay after baseline EQ",
+    "cause": "case-sensitive Python dictionary lookup of normalized lowercase table names"
+  },
+  "backup_parent_commit": "bef42b3e17bdc7b5f9148f1edde6c9de892a7a40"
+}

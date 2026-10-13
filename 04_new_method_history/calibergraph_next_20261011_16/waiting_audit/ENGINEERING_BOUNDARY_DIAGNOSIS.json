@@ -1,0 +1,740 @@
+{
+  "schema": "calibergraph.round16.waiting_engineering_boundary_diagnosis.v1",
+  "created_utc": "2026-10-11T16:51:40.445710+00:00",
+  "status": "READ_ONLY_OLD_EVIDENCE_AND_PINNED_SOURCE_DIAGNOSIS",
+  "author": "/root/round16_writer",
+  "read_only_helper": "/root/round16_writer/replay_boundary_readonly",
+  "scope": {
+    "historical_round06_planned_denominator": 12,
+    "historical_slots_inspected": [
+      0,
+      1,
+      2,
+      9,
+      10,
+      11
+    ],
+    "round16_planned_denominator": 24,
+    "round16_sources_or_order_changed": false,
+    "round16_implementation_changed": false,
+    "old_round15_permanently_stopped": true,
+    "scientific_execution_in_this_audit": false,
+    "scientific_import_compile_sql_smt_enumeration": false,
+    "parser_or_source_edits": false,
+    "capability_probe_or_priority_change": false
+  },
+  "observed_slots": [
+    {
+      "evidence_class": "OLD_ACTUAL",
+      "slot_index": 0,
+      "id": "dev03_07_exact2",
+      "source_case_id": "dev03_07",
+      "exact_rows": {
+        "DELIVERY": 2
+      },
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_solver_called": true,
+      "query_call_count": 1,
+      "raw_query_verdict": "unsat",
+      "error_type": null,
+      "failure_stage": null,
+      "error": null,
+      "traceback": null,
+      "parse_statuses": {
+        "OFFICIAL_PARSE_QUERY_0": "RETURNED",
+        "OFFICIAL_PARSE_QUERY_1": "RETURNED"
+      },
+      "analyze_status": "RETURNED",
+      "formula_counts": [
+        2,
+        14
+      ],
+      "symbolic_output_tuple_counts": [
+        2,
+        4
+      ],
+      "contract_model_sanity_status": "NOT_ADMITTED",
+      "replay_record_present": false,
+      "replay_stage_present": false,
+      "comparison_encoding_start_event_present": true,
+      "query_timing_overlay": {
+        "cpu_seconds": 0.00895899999999994,
+        "status": "MEASURED",
+        "legacy_raw_field": 0.00895899999999994,
+        "does_not_modify_original_receipt": true
+      },
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11415,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "result_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_00/results.json",
+      "result_sha256": "94d2f084484c84fef93d147fc0ad01e32f738656f3fe674c11b8921bc6ee25c3",
+      "events_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_00/events.jsonl",
+      "events_sha256": "d2c31541070d5620e7a2f546f21a761850bca089320ac31c28e701c496e53bfd"
+    },
+    {
+      "evidence_class": "OLD_ACTUAL",
+      "slot_index": 1,
+      "id": "dev03_07_exact4",
+      "source_case_id": "dev03_07",
+      "exact_rows": {
+        "DELIVERY": 4
+      },
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_solver_called": true,
+      "query_call_count": 1,
+      "raw_query_verdict": "unsat",
+      "error_type": null,
+      "failure_stage": null,
+      "error": null,
+      "traceback": null,
+      "parse_statuses": {
+        "OFFICIAL_PARSE_QUERY_0": "RETURNED",
+        "OFFICIAL_PARSE_QUERY_1": "RETURNED"
+      },
+      "analyze_status": "RETURNED",
+      "formula_counts": [
+        2,
+        16
+      ],
+      "symbolic_output_tuple_counts": [
+        2,
+        4
+      ],
+      "contract_model_sanity_status": "NOT_ADMITTED",
+      "replay_record_present": false,
+      "replay_stage_present": false,
+      "comparison_encoding_start_event_present": true,
+      "query_timing_overlay": {
+        "cpu_seconds": 0.015482000000000107,
+        "status": "MEASURED",
+        "legacy_raw_field": 0.015482000000000107,
+        "does_not_modify_original_receipt": true
+      },
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11415,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "result_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_01/results.json",
+      "result_sha256": "40260738efc996023bcf3f8387cce43857e8d0e7a442f0fc6495ecb7644713e5",
+      "events_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_01/events.jsonl",
+      "events_sha256": "3263458d22869398438c0b6a0cd6b1a5609efcf8da26ba57f0c0a87e09cb97c0"
+    },
+    {
+      "evidence_class": "OLD_ACTUAL",
+      "slot_index": 2,
+      "id": "dev03_07_exact8",
+      "source_case_id": "dev03_07",
+      "exact_rows": {
+        "DELIVERY": 8
+      },
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_solver_called": true,
+      "query_call_count": 1,
+      "raw_query_verdict": "unsat",
+      "error_type": null,
+      "failure_stage": null,
+      "error": null,
+      "traceback": null,
+      "parse_statuses": {
+        "OFFICIAL_PARSE_QUERY_0": "RETURNED",
+        "OFFICIAL_PARSE_QUERY_1": "RETURNED"
+      },
+      "analyze_status": "RETURNED",
+      "formula_counts": [
+        2,
+        20
+      ],
+      "symbolic_output_tuple_counts": [
+        2,
+        4
+      ],
+      "contract_model_sanity_status": "NOT_ADMITTED",
+      "replay_record_present": false,
+      "replay_stage_present": false,
+      "comparison_encoding_start_event_present": true,
+      "query_timing_overlay": {
+        "cpu_seconds": 0.08585299999999996,
+        "status": "MEASURED",
+        "legacy_raw_field": 0.08585299999999996,
+        "does_not_modify_original_receipt": true
+      },
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11415,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "result_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_02/results.json",
+      "result_sha256": "e4495ad268cd328d0612532f3f7191ba9e85fa4a5f30b178ce33697d816fd73d",
+      "events_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_02/events.jsonl",
+      "events_sha256": "51a072c79cd46c5b28802912c9ec40cd3fd61b8d0d9ea5023fd136fde760e2d7"
+    },
+    {
+      "evidence_class": "OLD_ACTUAL",
+      "slot_index": 9,
+      "id": "dev03_04_exact2",
+      "source_case_id": "dev03_04",
+      "exact_rows": {
+        "SALARIES": 2
+      },
+      "record_status": "STAGE_ERROR",
+      "engineering_class": "INCONCLUSIVE",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_solver_called": false,
+      "query_call_count": 0,
+      "raw_query_verdict": null,
+      "error_type": "NotEquivalenceError",
+      "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+      "error": "Symbolic reasoning: NOT EQUIVALENT.",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py\", line 354, in run_attempt\n    rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 942, in compare\n    equivalence_formulas = self.verifier.run(\n                           ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 103, in run\n    conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/bag_semantics_verifier.py\", line 116, in table_equivalence\n    cmp_funcs = self.cmp_funcs(left_attributes, right_attributes)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 53, in cmp_funcs\n    raise NotEquivalenceError\nerrors.NotEquivalenceError: Symbolic reasoning: NOT EQUIVALENT.\n",
+      "parse_statuses": {
+        "OFFICIAL_PARSE_QUERY_0": "RETURNED",
+        "OFFICIAL_PARSE_QUERY_1": "RETURNED"
+      },
+      "analyze_status": "RETURNED",
+      "formula_counts": [
+        19,
+        36
+      ],
+      "symbolic_output_tuple_counts": [
+        4,
+        6
+      ],
+      "contract_model_sanity_status": "NOT_ADMITTED",
+      "replay_record_present": false,
+      "replay_stage_present": false,
+      "comparison_encoding_start_event_present": true,
+      "query_timing_overlay": {
+        "cpu_seconds": null,
+        "status": "NOT_REACHED",
+        "legacy_raw_field": 0,
+        "does_not_modify_original_receipt": true
+      },
+      "original_sql_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 17255,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "result_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_09/results.json",
+      "result_sha256": "06e22fe62cc239a46046a81dec9f7fd3e586c14d983568771c77ac01c33118e6",
+      "events_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_09/events.jsonl",
+      "events_sha256": "db48ea3fcb48cd7c6980d0067d96adb56d7215829002e595e632a3bdd42fd9ef"
+    },
+    {
+      "evidence_class": "OLD_ACTUAL",
+      "slot_index": 10,
+      "id": "dev03_04_exact4",
+      "source_case_id": "dev03_04",
+      "exact_rows": {
+        "SALARIES": 4
+      },
+      "record_status": "STAGE_ERROR",
+      "engineering_class": "INCONCLUSIVE",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_solver_called": false,
+      "query_call_count": 0,
+      "raw_query_verdict": null,
+      "error_type": "NotEquivalenceError",
+      "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+      "error": "Symbolic reasoning: NOT EQUIVALENT.",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py\", line 354, in run_attempt\n    rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 942, in compare\n    equivalence_formulas = self.verifier.run(\n                           ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 103, in run\n    conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/bag_semantics_verifier.py\", line 116, in table_equivalence\n    cmp_funcs = self.cmp_funcs(left_attributes, right_attributes)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 53, in cmp_funcs\n    raise NotEquivalenceError\nerrors.NotEquivalenceError: Symbolic reasoning: NOT EQUIVALENT.\n",
+      "parse_statuses": {
+        "OFFICIAL_PARSE_QUERY_0": "RETURNED",
+        "OFFICIAL_PARSE_QUERY_1": "RETURNED"
+      },
+      "analyze_status": "RETURNED",
+      "formula_counts": [
+        61,
+        72
+      ],
+      "symbolic_output_tuple_counts": [
+        16,
+        12
+      ],
+      "contract_model_sanity_status": "NOT_ADMITTED",
+      "replay_record_present": false,
+      "replay_stage_present": false,
+      "comparison_encoding_start_event_present": true,
+      "query_timing_overlay": {
+        "cpu_seconds": null,
+        "status": "NOT_REACHED",
+        "legacy_raw_field": 0,
+        "does_not_modify_original_receipt": true
+      },
+      "original_sql_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 17255,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "result_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_10/results.json",
+      "result_sha256": "02369b88b867d136cbacf425935dab80e92fe8816ac67d633e252dea4ec7406a",
+      "events_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_10/events.jsonl",
+      "events_sha256": "4d3462edbb683f3c15e5be9a6657a39e7a2a0464ca1237de331d50c5fa508055"
+    },
+    {
+      "evidence_class": "OLD_ACTUAL",
+      "slot_index": 11,
+      "id": "dev03_04_exact8",
+      "source_case_id": "dev03_04",
+      "exact_rows": {
+        "SALARIES": 8
+      },
+      "record_status": "STAGE_ERROR",
+      "engineering_class": "INCONCLUSIVE",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_solver_called": false,
+      "query_call_count": 0,
+      "raw_query_verdict": null,
+      "error_type": "NotEquivalenceError",
+      "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+      "error": "Symbolic reasoning: NOT EQUIVALENT.",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py\", line 354, in run_attempt\n    rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 942, in compare\n    equivalence_formulas = self.verifier.run(\n                           ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 103, in run\n    conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/bag_semantics_verifier.py\", line 116, in table_equivalence\n    cmp_funcs = self.cmp_funcs(left_attributes, right_attributes)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 53, in cmp_funcs\n    raise NotEquivalenceError\nerrors.NotEquivalenceError: Symbolic reasoning: NOT EQUIVALENT.\n",
+      "parse_statuses": {
+        "OFFICIAL_PARSE_QUERY_0": "RETURNED",
+        "OFFICIAL_PARSE_QUERY_1": "RETURNED"
+      },
+      "analyze_status": "RETURNED",
+      "formula_counts": [
+        217,
+        144
+      ],
+      "symbolic_output_tuple_counts": [
+        64,
+        24
+      ],
+      "contract_model_sanity_status": "NOT_ADMITTED",
+      "replay_record_present": false,
+      "replay_stage_present": false,
+      "comparison_encoding_start_event_present": true,
+      "query_timing_overlay": {
+        "cpu_seconds": null,
+        "status": "NOT_REACHED",
+        "legacy_raw_field": 0,
+        "does_not_modify_original_receipt": true
+      },
+      "original_sql_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 17255,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "result_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_11/results.json",
+      "result_sha256": "49bb3b8ae9ad34b4f832904e9adb6fd7b923a0cd3f4b252e4c3c39394bfc84b2",
+      "events_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_11/events.jsonl",
+      "events_sha256": "883fe519f2f08a1123d5729c78585f3d6d339279494b8489f3a87b6751d53f0d"
+    }
+  ],
+  "dev03_04": {
+    "exact_trigger": {
+      "evidence_class": "OLD_ACTUAL_TRACE_PLUS_PINNED_SOURCE",
+      "file": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+      "lines": [
+        49,
+        53
+      ],
+      "condition": "getattr(lattr, 'is_uninterpreted_func', False) ^ getattr(rattr, 'is_uninterpreted_func', False)",
+      "raise_line": 53,
+      "all_three_tracebacks_same_raise": true,
+      "before_query_solver_add_and_check": {
+        "file": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+        "lines": [
+          942,
+          952
+        ]
+      }
+    },
+    "boundary_classification": {
+      "parse": "Both saved ASTs and parse stages returned in all three historical slots.",
+      "scope_encoding": "Historical analyze stage returned in all three slots; symbolic output tuples are not output-column counts.",
+      "arity": "The actual trace proceeded beyond environment.compare column-count return at lines922-924; this exception is not the arity return.",
+      "type": "Observed trigger is internal uninterpreted-function metadata mismatch, not a demonstrated SQL column type error, unsupported CAST branch or mismatch of two FRound parameters.",
+      "comparison": "Bag comparison formula construction stopped at its metadata admission guard before query-check.",
+      "legacy_engineering_class_preserved": "INCONCLUSIVE; no rewrite of original receipts."
+    },
+    "fourth_output_explanation": {
+      "evidence_class": "STATIC_INFERENCE",
+      "confidence": "PINNED_SOURCE_SUPPORTED_NOT_RUNTIME_ATTRIBUTE_CAPTURED",
+      "left": "The fourth SELECT output is outer ROUND(CASE...,0) AS SALARY; encoder.py:911-916 attaches FRound to the expression and expression.py:54-63 transfers its metadata into the aliased output attribute.",
+      "right": "The first UNION branch fourth output is bare SALARY; union_all_table.py:15-26 aligns following attributes to the first branch, union_table.py:18-25 takes those attributes through DISTINCT, base_table.py:47-49 exposes first-tuple attributes.",
+      "limitation": "Old receipts do not serialize the offending zip index or lattr/rattr objects. Exact throw condition is observed; identification of fourth output is static reconstruction, not a newly measured local variable."
+    },
+    "other_sql_text_boundary": {
+      "evidence_class": "STATIC_TEXT_ONLY",
+      "detail": "Original left CASE uses MAX_SAL > 10000 for the last arm; original right UNION uses MAXIMUM >=10000 while its preceding branch includes <=10000. This visible boundary overlap is not evaluated by the observed metadata guard. No concrete database was enumerated, SQL run, counterexample generated or semantic inequivalence certified."
+    },
+    "replay_separate_boundary": "Static REJECTIONS entry remains DECIMAL_MULTIPLICATION_ROUND_DIALECT_SEMANTICS_UNPROVEN; VARCHAR_EQUALITY_DECODER_NOT_CERTIFIED. It is separate from the observed comparison exception."
+  },
+  "dev03_07": {
+    "old_actual": "At exact2/4/8 full-C SAT and query UNSAT; no replay record or replay stage. NOT_ADMITTED is initialized for sources outside the two INT sanity profiles.",
+    "static_profile_rejection": {
+      "file": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/safe_sqlite_replay.py",
+      "lines": [
+        25,
+        44,
+        144,
+        146
+      ],
+      "reason": "DATE_SCHEMA_AND_DIVISION_ROUND_SEMANTICS_UNPROVEN",
+      "was_observed_replay_failure": false
+    },
+    "structural_limitations": [
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/safe_sqlite_replay.py",
+        "lines": [
+          66,
+          68
+        ],
+        "finding": "Independent full-C checker only accepts INT schema columns and bounded INT/NULL values."
+      },
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/safe_sqlite_replay.py",
+        "lines": [
+          151,
+          174
+        ],
+        "finding": "Replay consumes all_physical_raw_values and creates INTEGER columns; it does not use decoded_values DATE strings."
+      },
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/safe_sqlite_replay.py",
+        "lines": [
+          206,
+          212
+        ],
+        "finding": "Output admission and bag comparison are exact INT/NULL only."
+      },
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py",
+        "lines": [
+          215,
+          225
+        ],
+        "finding": "A DATE ordinal-to-ISO export branch already exists. The unresolved issue is end-to-end semantic certification, not absence of every DATE decoder."
+      },
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/visitors/visitor.py",
+        "lines": [
+          165,
+          179
+        ],
+        "finding": "Pinned official division converts integer symbolic terms to real terms and includes denominator-zero/NULL conditions; unchanged-SQL DBMS correspondence is not certified here."
+      },
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py",
+        "lines": [
+          911,
+          916
+        ],
+        "finding": "ROUND is attached as FRound uninterpreted-function metadata; this is not evidence of a DBMS rounding implementation."
+      },
+      {
+        "file": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+        "lines": [
+          695,
+          730
+        ],
+        "finding": "Full operational column-to-column lte constraints cover a Cartesian product and enforce non-NULL in this branch; replay must preserve that exact admitted C, not substitute a conventional rowwise check."
+      }
+    ],
+    "not_claimed": [
+      "SQLite cannot handle dates",
+      "Date decoding is wholly absent",
+      "A runtime SQLite failure was observed",
+      "The UNSAT results certify original-DBMS or unbounded equivalence",
+      "Adding a replay profile or parser repair constitutes a research contribution"
+    ]
+  },
+  "remaining_unknowns": [
+    "The concrete offending attribute object and position were not captured by old runtime receipts.",
+    "No actual query-SAT model or original-SQL replay exists for dev03_04.",
+    "No end-to-end DATE/division/ROUND replay certification exists for dev03_07 in the fixed INT-only profile.",
+    "Business truth/completeness of operational C remains UNKNOWN.",
+    "No new scientific result or forecast for Round16 is produced by this audit."
+  ],
+  "provenance": {
+    "round06_reviewed_manifest": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/SIXTH_ROUND_REVIEWED_MANIFEST.json",
+      "sha256": "a425a9dd38877f2e6a41e55be16a3ba810a5ffba0a37e7112504c97bce7ea0c4"
+    },
+    "runtime_lock": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+      "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+      "matches_registered_protocol": true
+    },
+    "historical_files_verified": [
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_00/results.json",
+        "sha256": "94d2f084484c84fef93d147fc0ad01e32f738656f3fe674c11b8921bc6ee25c3",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_00/events.jsonl",
+        "sha256": "d2c31541070d5620e7a2f546f21a761850bca089320ac31c28e701c496e53bfd",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_01/results.json",
+        "sha256": "40260738efc996023bcf3f8387cce43857e8d0e7a442f0fc6495ecb7644713e5",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_01/events.jsonl",
+        "sha256": "3263458d22869398438c0b6a0cd6b1a5609efcf8da26ba57f0c0a87e09cb97c0",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_02/results.json",
+        "sha256": "e4495ad268cd328d0612532f3f7191ba9e85fa4a5f30b178ce33697d816fd73d",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_02/events.jsonl",
+        "sha256": "51a072c79cd46c5b28802912c9ec40cd3fd61b8d0d9ea5023fd136fde760e2d7",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_09/results.json",
+        "sha256": "06e22fe62cc239a46046a81dec9f7fd3e586c14d983568771c77ac01c33118e6",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_09/events.jsonl",
+        "sha256": "db48ea3fcb48cd7c6980d0067d96adb56d7215829002e595e632a3bdd42fd9ef",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_10/results.json",
+        "sha256": "02369b88b867d136cbacf425935dab80e92fe8816ac67d633e252dea4ec7406a",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_10/events.jsonl",
+        "sha256": "4d3462edbb683f3c15e5be9a6657a39e7a2a0464ca1237de331d50c5fa508055",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_11/results.json",
+        "sha256": "49bb3b8ae9ad34b4f832904e9adb6fd7b923a0cd3f4b252e4c3c39394bfc84b2",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_11/events.jsonl",
+        "sha256": "883fe519f2f08a1123d5729c78585f3d6d339279494b8489f3a87b6751d53f0d",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py",
+        "sha256": "5fcb3935218d954f728607c0da44617f5f5bec26c4f6e331baf738a106bbfc18",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/safe_sqlite_replay.py",
+        "sha256": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+        "matches_round06_reviewed_manifest": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/protocols/generation_replay.registered.json",
+        "sha256": "7a5c6fd9a38f59529031d8c6f475e9b2dacebb274474e8993f1d8dd188421f36",
+        "matches_round06_reviewed_manifest": true
+      }
+    ],
+    "pinned_official_files_verified": [
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+        "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/errors.py",
+        "sha256": "b1347a211d3dba4499a0b7dfb09d05f6f2fad5b1b2281e48a3b74d51bf2c9404",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/bag_semantics_verifier.py",
+        "sha256": "8bc31e4b3aa4bec5e5fc2a82ffaf3e29607bb0497ebfa93938cb8dde43dc804d",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py",
+        "sha256": "ad9558583ad88f62c8dce7630bd4b09dc794d174083a3b3209c958d73786e614",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/visitors/visitor.py",
+        "sha256": "4a63b5f826f263db6a0cb201e4fa2fe4f7157e15cdc8cae18fe0386a5a5783b3",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/expressions/base_expression.py",
+        "sha256": "fe93c96adf83dfe361d9d57e02ba5d711fd5c11f8fdb518ef8c5ac8937b48c38",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/expressions/expression.py",
+        "sha256": "c1ed5e7992550521752910200dda50ada4821a4d96abab85f988292bfd8fee74",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/expressions/uniter_functions/round.py",
+        "sha256": "5d3e255d39f72ee9601a86a541c091a8542b74144613caa1c26968250b57ce01",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/tables/union_all_table.py",
+        "sha256": "cc160ea5b134a7c33ef90863a028d68d48eb1ecaec7a0713da5feeb33e6f1588",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/tables/union_table.py",
+        "sha256": "819c353593ea3a7a25fdf13320ae5c87d80e1a3f1586b851973d6dd54ab3d5fd",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/tables/base_table.py",
+        "sha256": "20e57aff81699c64d45de8a97c2956629f804eaa293ad0e33cf7d3060d6531ee",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/formulas/tables/distinct_table.py",
+        "sha256": "90a9fce2867cd3e79375fa85971f9d6d05579aa57c45960bb8470f41bf079d28",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/constants.py",
+        "sha256": "c7c9f759d33a1b96d8cfefa9407effb26edffddb1799d2259939d98f1fe22fa5",
+        "matches_runtime_lock": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/utils.py",
+        "sha256": "d21e805fc1194565908359b33ad275939f4336ee568edd330b5ded3eb1ec0829",
+        "matches_runtime_lock": true
+      }
+    ],
+    "round16_disabled_freeze": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/AUTHOR_DISABLED_MANIFEST.json",
+      "sha256": "5cdb99e32522017e837e8b47925a6236c33e10236451102128c1a6dfd7a517a5"
+    },
+    "round16_frozen_files_unchanged": [
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/generation_common.py",
+        "sha256": "8a3ec2eefeb08d978ab7e11224ae33a30e768b4c41883220e2df7e1c13aeca44",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/generation_supervisor.py",
+        "sha256": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_worker.py",
+        "sha256": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_backend.py",
+        "sha256": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_contract_admission.py",
+        "sha256": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/safe_sqlite_replay.py",
+        "sha256": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/README.zh.md",
+        "sha256": "00b4c257deebf8ac31d88bfc6effd2ef4be7c0fbf66c54832dbc5c38b7a09adc",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/round15_to_round16.diff",
+        "sha256": "4dcee4dc5c44927d36dad7a0a4513bfb6935a26778c3118efd3b49e1f738c0eb",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/STATIC_VALIDATION.json",
+        "sha256": "7b624de08c6c7b2a7fbd9a11291153fdec64fc67a96ff27698eaa6316e511a8b",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/generation_replay.draft.json",
+        "sha256": "64bf3f54077888baca66439f10c35b77c4853015a516732a57bb3d15c44ec0ce",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/ANALYTIC_CONTROLS.zh.md",
+        "sha256": "019243f8ff1d66ef3e670ad04a50c4cf32c12ce8a56cce3e3d5d96b44238019e",
+        "unchanged_against_author_disabled_freeze": true
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/protocols/ANALYTIC_CONTROLS.round06_verbatim.zh.md",
+        "sha256": "5e17ccc2ba68eda7797dca2aa93072a46a3ae1af5a753fb392ca12a97ca31f8c",
+        "unchanged_against_author_disabled_freeze": true
+      }
+    ]
+  },
+  "backup_owner": "root"
+}

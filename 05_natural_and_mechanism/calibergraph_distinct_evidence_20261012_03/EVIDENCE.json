@@ -1,0 +1,201 @@
+{
+  "date": "2026-10-12",
+  "scope": "PUBLIC_ORIGINAL_EVIDENCE_ONLY_NO_SQL_OR_SOLVER_EXECUTION",
+  "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "readme_claim_introducing_commit": "36cee4744f3eada41365a18c7ed63d84e7ebca77",
+  "readme_claim_parent_without_text": "a48892ca9bb5ad7aaf3bf0a2f798a88a3fdc8777",
+  "official_run": {
+    "id": 37547685455,
+    "job_id": 112555512740,
+    "branch": "dev",
+    "head_matches_frozen_commit": true,
+    "url": "https://github.com/sfu-db/ParSEval/actions/runs/37547685455",
+    "case_log_line": "2026-10-07T00:19:26.1370986Z thrombosis_prediction/1172: EQ (2.727s)"
+  },
+  "artifact": {
+    "id": 11452059162,
+    "name": "sqlite-experiment-results",
+    "bytes": 87085,
+    "sha256": "dc967b50b776d01faf4177f406fb25618218ed0d36bd893ef64797008010c5cf",
+    "api_digest_matches_download": true,
+    "url": "https://api.github.com/repos/sfu-db/ParSEval/actions/artifacts/11452059162",
+    "expired_at_lookup": false
+  },
+  "source_schema": {
+    "path": "data/sqlite/schema.json",
+    "git_blob": "92a9750d0dab4c2e89a4f2cab81ee5f292063e75",
+    "url": "https://github.com/sfu-db/ParSEval/blob/88cfe245bcf249a5b0df561a6b09c116ff2a2896/data/sqlite/schema.json",
+    "selected_key": "thrombosis_prediction",
+    "full_table_count": 3,
+    "assembly": "Exact official script assembly: semicolon plus newline joining all DDL strings for database key",
+    "downloaded_bytes_match_git_blob": true
+  },
+  "case": {
+    "dbid": "thrombosis_prediction",
+    "index": "1172",
+    "artifact_line_1based": 1173,
+    "author_verdict": "EQ",
+    "author_end_to_end_s": 2.727,
+    "author_reason": null,
+    "author_results": null,
+    "author_witness_saved": false,
+    "author_stage_trace_saved": false,
+    "semantic_difference": "Greater-or-equal 2.0 versus greater-than 2.0 under COUNT DISTINCT of patient ID; predicates reordered",
+    "SQL_mutated_by_us": false
+  },
+  "selection_scope": {
+    "official_records": 1534,
+    "regex_aggregate_distinct_records": 138,
+    "verdict_counts": {
+      "EQ": 26,
+      "NEQ": 101,
+      "SYNTAX_ERROR": 11
+    },
+    "EQ_cases_are_not_all_false_positives": true,
+    "selection_reason": "Source-provided EQ pair with directly inspectable boundary difference; no selection on new runtime outcome",
+    "not_a_natural_production_bug": true,
+    "new_independent_test": false
+  },
+  "non_equivalence_evidence": {
+    "kind": "Our static mathematical countermodel for the exact original SQL and official DDL, not an author-provided or executed witness",
+    "construction": "One Patient with ID=1 and SEX=M; one Laboratory row with ID=1, a valid nonnull Date, T-BIL=2.0; every remaining nullable column NULL; Examination empty",
+    "constraint_check": "Patient primary key/non-null and Laboratory composite primary key/non-null hold; both declared FKs hold; empty Examination satisfies its FK; original schema contains no added CHECK/UNIQUE beyond listed keys",
+    "predicted_outputs": {
+      "gold": [
+        [
+          1
+        ]
+      ],
+      "predicted": [
+        [
+          0
+        ]
+      ]
+    },
+    "executed": false,
+    "does_not_establish_failure_cause": true
+  },
+  "failure_stage": {
+    "observed": "Official benchmark completes with EQ",
+    "inferred_from_fixed_main": "No public result distinguished queries; successful final branch is not a bounded-equivalence proof",
+    "unknown": [
+      "Accepted candidate contents",
+      "Per-query reached/covered/failed targets",
+      "CSP versus Z3 requests and outcomes",
+      "Which lowering/aggregate/coverage/value-selection step caused miss"
+    ]
+  },
+  "previous_work_match": {
+    "Polygon": "Fixed source Count_Distinct plus explicit shared output NEQ target; no exact full-schema execution established",
+    "XData": "Paper v1 supports duplicate-removing projection before aggregation and targeted selection mutation constraints; core artifact execution for this pair unverified",
+    "novel_failure_class_established": false
+  },
+  "official_locations_checked": [
+    {
+      "location": "GitHub issues all states per_page=100",
+      "scope": "All 12 returned issues/PRs, fewer than page limit; no issue specifically identifies DISTINCT pair"
+    },
+    {
+      "location": "Issue #9 comments",
+      "scope": "All 3 returned; public manual-label mapping not recovered; final author response says emailed"
+    },
+    {
+      "location": "Commits latest 30 and README path history latest 20",
+      "scope": "README introduction pinned by direct parent diff; no later DISTINCT fix before current main"
+    },
+    {
+      "location": "Pinned repository complete Git tree",
+      "scope": "Not truncated; data/test/docs/workflow paths located"
+    },
+    {
+      "location": "tests/instance/test_machine.py and tests/test_main.py; tests/docs keyword search",
+      "scope": "Concrete DISTINCT evaluation fixture exists, but no linked known false-EQ regression identified"
+    },
+    {
+      "location": "2025 official paper artifact availability and failure discussion",
+      "scope": "Points to GitHub, no separate supplement link identified; NULL-count discussion is not version-exact DISTINCT regression"
+    },
+    {
+      "location": "Releases first 10",
+      "scope": "Distribution archives, no dedicated case supplement identified"
+    },
+    {
+      "location": "Pinned SQLite run results and job log; MySQL artifact metadata first page only",
+      "scope": "One SQLite 87KB archive downloaded; no MySQL archive downloaded"
+    }
+  ],
+  "public_runtime_versions_from_log": {
+    "sqlglot": "23.12.1",
+    "z3-solver": "4.16.0.0",
+    "sqlalchemy": "2.0.49"
+  },
+  "official_config_from_script": {
+    "solver_timeout_ms": 5000,
+    "generation_time_limit_s_per_query": 360,
+    "query_timeout_s": 15,
+    "workers_in_author_CI": 8
+  },
+  "new_experiments": 0,
+  "installations": 0,
+  "authors_contacted": false,
+  "credentials_read": false,
+  "old_files_modified": false,
+  "sources_local_excluded_from_private_backup": true,
+  "local_sources": [
+    {
+      "path": "sources_local/case1172.full-schema.sql",
+      "sha256": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4",
+      "bytes": 3006,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/case1172.gold.sql",
+      "sha256": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb",
+      "bytes": 133,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/case1172.original-record.json",
+      "sha256": "97c93f48aed564d1986514e8b8913de0135180ca5fdd15cb5cce9f5e5c5e9322",
+      "bytes": 442,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/case1172.predicted.sql",
+      "sha256": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545",
+      "bytes": 132,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/disprove-bird.jsonl",
+      "sha256": "0eda3e2f9c3ce04b373fe61e5943681fac3a5234a6a1e05e1d8b800e1ad4fc3e",
+      "bytes": 819967,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/disprove-bird.summary.json",
+      "sha256": "86fc740ef9e2cd779df75dd9543a05f082f9444a2e696d9a290addbea0164292",
+      "bytes": 184,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/official-bird-results.zip",
+      "sha256": "dc967b50b776d01faf4177f406fb25618218ed0d36bd893ef64797008010c5cf",
+      "bytes": 87085,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/official-job-selected-lines.txt",
+      "sha256": "bc40ab2880852a94e038baa27b1890a4f4ae8f1179cbc70363004a33887917d7",
+      "bytes": 318,
+      "redistribute": false
+    },
+    {
+      "path": "sources_local/schema.json",
+      "sha256": "5379f02bc4100f9521f442c132a37da40d4ebb532c32ec319f68ecb95c80ba2b",
+      "bytes": 37456,
+      "redistribute": false
+    }
+  ],
+  "independent_review": "Not performed this evidence-only pass; prior review PASS is not reused for these new findings"
+}

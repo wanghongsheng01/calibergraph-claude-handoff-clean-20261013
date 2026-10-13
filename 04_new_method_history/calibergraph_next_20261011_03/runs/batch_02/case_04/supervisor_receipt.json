@@ -1,0 +1,199 @@
+{
+  "case_index": 4,
+  "case_id": "dev03_05",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:20.196314+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 376832,
+  "sampled_peak_group_cpu_seconds": 0.0,
+  "sample_count": 1,
+  "stop_remainder": null,
+  "pid": 43553,
+  "owned_pgid": 43553,
+  "worker_wait4_usage": {
+    "pid": 43553,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.028600999999999998,
+    "system_cpu_seconds": 0.008654,
+    "cpu_seconds": 0.037254999999999996,
+    "maxrss_bytes_darwin": 20774912
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.05177208315581083,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "latest_stage": null,
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.0,
+    "check_count": 0,
+    "case_index": 4,
+    "id": "dev03_05",
+    "updated_monotonic": 2259251.578263291,
+    "observed_monotonic": 2259251.590926791,
+    "solver_watchdog_estimated_seconds": 0.0,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "12cd0da9e717262741a9c05d0bcbfd32357632e54f76b86f04d60baea48854af",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_05",
+    "case_index": 4,
+    "status": "RETURNED",
+    "engineering_class": "SCHEMA_UNSUPPORTED",
+    "strict_class": "SCHEMA_UNSUPPORTED",
+    "attempts": [],
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 10021,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "8a168706ea27e0cc41fa411ec5bd4d777cbe39503454fe178e949d0666494381",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "REMOVALS__POST_ID"
+            }
+          ]
+        },
+        {
+          "in": [
+            {
+              "value": "ACTIONS__ACTION"
+            },
+            [
+              {
+                "literal": "VIEW"
+              },
+              {
+                "literal": "LIKE"
+              },
+              {
+                "literal": "REACTION"
+              },
+              {
+                "literal": "COMMENT"
+              },
+              {
+                "literal": "REPORT"
+              },
+              {
+                "literal": "SHARE"
+              }
+            ]
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "REMOVALS__POST_ID"
+            },
+            {
+              "value": "ACTIONS__POST_ID"
+            }
+          ]
+        },
+        {
+          "imply": [
+            {
+              "eq": [
+                {
+                  "value": "ACTIONS__ACTION"
+                },
+                "REPORT"
+              ]
+            },
+            {
+              "neq": [
+                "ACTIONS__EXTRA",
+                "NULL"
+              ]
+            }
+          ]
+        },
+        {
+          "imply": [
+            {
+              "eq": [
+                {
+                  "value": "REMOVALS__POST_ID"
+                },
+                {
+                  "value": "ACTIONS__POST_ID"
+                }
+              ]
+            },
+            {
+              "neq": [
+                {
+                  "value": "ACTIONS__ACTION"
+                },
+                "REPORT"
+              ]
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1132.csv",
+      "index": 292,
+      "pair": [
+        "FROM (SELECT (COUNT(DISTINCT R.POST_ID) / COUNT(DISTINCT A.POST_ID)) * 100 AS REMOVAL_PERCENT, A.ACTION_DATE FROM ACTIONS A LEFT JOIN REMOVALS R ON A.POST_ID = R.POST_ID WHERE A.EXTRA = 'SPAM' GROUP BY A.ACTION_DATE ) X",
+        "WITH CTE AS(SELECT * FROM ACTIONS WHERE EXTRA='SPAM'), CTE1 AS(SELECT COUNT(DISTINCT R.POST_ID)/ COUNT(DISTINCT C.POST_ID) AS DAILY_PERCENT FROM CTE C LEFT JOIN REMOVALS R ON C.POST_ID=R.POST_ID GROUP BY ACTION_DATE) SELECT ROUND(AVG(DAILY_PERCENT)*100,2) AS AVERAGE_DAILY_PERCENT FROM CTE1"
+      ],
+      "schema": {
+        "ACTIONS": {
+          "ACTION": "ENUM,VIEW,LIKE,REACTION,COMMENT,REPORT,SHARE",
+          "ACTION_DATE": "DATE",
+          "EXTRA": "ENUM,SPAM,RACISM,NULL",
+          "POST_ID": "INT",
+          "USER_ID": "INT"
+        },
+        "REMOVALS": {
+          "POST_ID": "INT",
+          "REMOVE_DATE": "DATE"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+      "71edda688f50325688171de2489d473d742dd33ea626082b6b7e6d82821bbf83"
+    ],
+    "schema_sha256": "c67daa15c7f3b2b0a28a0bc9b3d3e8f31a16af90e04a08988cb8e95b0cffc0f8",
+    "constraint_sha256": "561da2a4582eae44870e212a6e7c58aee0d710b321cde24b3623f5006c76800c",
+    "failure_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "reason": "schema.ACTIONS.ACTION: official create_database does not encode this type: 'ENUM,VIEW,LIKE,REACTION,COMMENT,REPORT,SHARE'",
+    "solver_calls": [],
+    "solver_cumulative_wall_seconds": 0.0,
+    "solver_cumulative_cpu_seconds": 0.0
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.077904,
+    "parent_system_cpu_seconds": 0.08470799999999999,
+    "all_reaped_children_user_cpu_seconds": 2.434348,
+    "all_reaped_children_system_cpu_seconds": 1.235862,
+    "supervisor_plus_reaped_cpu_seconds": 3.832822,
+    "observed_total_cpu_seconds": 11.709544,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

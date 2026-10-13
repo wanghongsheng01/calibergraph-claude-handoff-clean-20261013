@@ -1,0 +1,1486 @@
+{
+  "protocol_id": "calibergraph-02-official-smoke-v1",
+  "protocol_sha256": "8f43a0053aeec5d3a9430232883f3b7a533fa5f4bb3ec4fae275660b213b0c59",
+  "worker_sha256": "15993cfcca91142691074799e94cef205d60c6664b6e86b40309868384019b97",
+  "backend_sha256": "1ecf4a7bdd199913ee79f2efec6cc21c9904fd75a6cf36d7a2f1f10cc06b880c",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/data/development.jsonl",
+    "sha256": "a51307167fb80e5caaf83b18fcd929e8781183fd7130821134eae18782e32430"
+  },
+  "status": "ALL_SIX_ATTEMPTS_RETURNED",
+  "denominator": {
+    "pairs": 6,
+    "query_slots": 12
+  },
+  "scope": "Engineering dependency gate on six exposed original development pairs. Full official query encoder and full original operational contract; no novelty, natural-defect gold, speedup or up-to-bound equivalence claim.",
+  "records": [
+    {
+      "id": "dev_01",
+      "status": "RETURNED",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/182.csv",
+      "original_sql_sha256": [
+        "ed5bae22a37a77d713878814041cb552425baa5fc6bebc4c4fd7c0a915551978",
+        "78adb202ca2fb2d8f005c4d9be21787ff6ceae4190f4581b7a791117ea52041d"
+      ],
+      "schema_sha256": "8a2b95a5cfad1e48db94ec559c96f803053f6bbde71008da61937e43f979db36",
+      "constraint_sha256": "71fe1d70252511f2b22ba4410ad27f8fd0ffa05bd683c241e71a50367f7a077d",
+      "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+      "exact_rows": {
+        "PERSON": 2
+      },
+      "row_bound_semantics": "EXACT_POSITIVE_SHAPE_NOT_UP_TO_N",
+      "raw_solver_verdict": "sat",
+      "effective_verdict": "DIALECT_UNKNOWN",
+      "stages": [
+        {
+          "status": "RETURNED",
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "wall_seconds": 0.000735000241547823,
+          "cpu_seconds": 0.0007360000000000699
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "original_clause_count": 1,
+          "base_fact_count": 12,
+          "admitted_delta_facts": 1,
+          "wall_seconds": 0.0006949580274522305,
+          "cpu_seconds": 0.0006940000000000834
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "assertion_count": 13,
+          "wall_seconds": 0.011792124714702368,
+          "cpu_seconds": 0.011813999999999991
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "formula_counts": [
+            5,
+            13
+          ],
+          "output_table_tuple_counts": [
+            2,
+            4
+          ],
+          "wall_seconds": 0.0661340830847621,
+          "cpu_seconds": 0.06580399999999997
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "ast_sha256": "091dbc9755ea84fcaa5480fb860f38cbed238a6408b347dc0d2a9b9f6f0fb7a5",
+          "wall_seconds": 0.05764391692355275,
+          "cpu_seconds": 0.05764400000000003
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "ast_sha256": "25df08ed0d754ed172045a8ef248dfbebefe9d21347bd90b0e22ddfc154428a3",
+          "wall_seconds": 0.002468582708388567,
+          "cpu_seconds": 0.0024680000000000257
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "wall_seconds": 0.008024874608963728,
+          "cpu_seconds": 0.00804500000000008
+        },
+        {
+          "status": "RETURNED",
+          "name": "SAT_MODEL_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+          "wall_seconds": 0.0028913747519254684,
+          "cpu_seconds": 0.0014070000000001581
+        }
+      ],
+      "full_schema": {
+        "PERSON": {
+          "EMAIL": "VARCHAR",
+          "ID": "INT"
+        }
+      },
+      "full_constraint": [
+        {
+          "primary": [
+            {
+              "value": "PERSON__ID"
+            }
+          ]
+        }
+      ],
+      "original_sql": [
+        "SELECT EMAIL AS EMAIL FROM PERSON GROUP BY EMAIL HAVING COUNT(EMAIL) >1",
+        "SELECT A.EMAIL FROM PERSON A INNER JOIN(SELECT * FROM PERSON GROUP BY EMAIL HAVING COUNT(*) > 1) B ON A.ID = B.ID"
+      ],
+      "active_stage": "SAT_MODEL_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+      "full_contract_fact_sha256": "cb5b59feb81bf97893ec7b09c0bb9d39b181efaec8a31f6849d385e7ddc87dd7",
+      "full_C_nonempty": "sat",
+      "parsed_asts": [
+        {
+          "select": {
+            "value": "EMAIL",
+            "name": "EMAIL"
+          },
+          "from": "PERSON",
+          "groupby": {
+            "value": "EMAIL"
+          },
+          "having": {
+            "gt": [
+              {
+                "count": "EMAIL"
+              },
+              1
+            ]
+          }
+        },
+        {
+          "select": {
+            "value": "A__EMAIL"
+          },
+          "from": [
+            {
+              "value": "PERSON",
+              "name": "A"
+            },
+            {
+              "inner join": {
+                "value": {
+                  "select": "*",
+                  "from": "PERSON",
+                  "groupby": {
+                    "value": "EMAIL"
+                  },
+                  "having": {
+                    "gt": [
+                      {
+                        "count": "*"
+                      },
+                      1
+                    ]
+                  }
+                },
+                "name": "B"
+              },
+              "on": {
+                "eq": [
+                  "A__ID",
+                  "B__ID"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.00433091726154089,
+        "cpu_seconds": 0.0043119999999998715
+      },
+      "official_compare_return": false,
+      "SAT_all_submitted_assertions_true": true,
+      "witness": {
+        "raw_official_values": {
+          "PERSON": [
+            {
+              "EMAIL": null,
+              "ID": -1
+            },
+            {
+              "EMAIL": null,
+              "ID": 0
+            }
+          ]
+        },
+        "database": {
+          "PERSON": [
+            {
+              "EMAIL": null,
+              "ID": -1
+            },
+            {
+              "EMAIL": null,
+              "ID": 0
+            }
+          ]
+        },
+        "string_value_map": {},
+        "string_mapping_scope": "injective shared symbols; registered SQL has no string literals or string arithmetic"
+      },
+      "concrete_full_original_C_validation": {
+        "profile": "OFFICIAL_OPERATIONAL_IC_V1",
+        "holds": true,
+        "clauses": [
+          {
+            "clause": {
+              "primary": [
+                {
+                  "value": "PERSON__ID"
+                }
+              ]
+            },
+            "holds": true
+          }
+        ],
+        "scope": "locked official operational clauses; not inferred natural/SQL-DDL truth"
+      },
+      "sqlite_replay": {
+        "status": "DIALECT_UNKNOWN",
+        "sqlite_version": "3.53.3",
+        "original_sql_sha256": [
+          "ed5bae22a37a77d713878814041cb552425baa5fc6bebc4c4fd7c0a915551978",
+          "78adb202ca2fb2d8f005c4d9be21787ff6ceae4190f4581b7a791117ea52041d"
+        ],
+        "relations": [
+          [],
+          [
+            [
+              null
+            ]
+          ]
+        ],
+        "unequal_as_bags": true,
+        "intersection": {
+          "eligible": false,
+          "reason": "Bare columns/SELECT * under GROUP BY have implementation-dependent representative semantics; keep SQLite replay and reverse insertion control, mark DIALECT_UNKNOWN."
+        },
+        "reverse_insertion_relations": [
+          [],
+          [
+            [
+              null
+            ]
+          ]
+        ],
+        "scope": "original SQLite bag outputs for this concrete full-C database only; no cross-dialect gold"
+      },
+      "cleanup": "COMPLETE",
+      "cleanup_cost": {
+        "wall_seconds": 0.006801125127822161,
+        "cpu_seconds": 0.006802000000000086
+      },
+      "case_cost": {
+        "wall_seconds": 0.10263666696846485,
+        "cpu_seconds": 0.10048699999999999,
+        "worker_cumulative_cpu_seconds": 0.7940159999999999,
+        "worker_peak_rss_bytes_macos": 108593152
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.060112000000000054,
+        "scope_encode": 0.005691999999999919,
+        "comparison_formula_encode": 0.0043119999999998715,
+        "query_check": 0.00804500000000008
+      }
+    },
+    {
+      "id": "dev_02",
+      "status": "RETURNED",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/614.csv",
+      "original_sql_sha256": [
+        "996aab7968f8be1e6e0145370e3228eaf9f98ee57e28da03b57838eb19731a91",
+        "9bb6fc726f07650c400e89a1a692e3289a00cc921900be91cab9a515f6edbaa0"
+      ],
+      "schema_sha256": "05cd79affc253a1cd196d7aa3d49e62792ebe8d6e43446326c0b2a29450a380d",
+      "constraint_sha256": "913d3972012212354f670bd6cc7f38d0e3aae812b518a8b8675e2f76fe6d2f60",
+      "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+      "exact_rows": {
+        "FOLLOW": 2
+      },
+      "row_bound_semantics": "EXACT_POSITIVE_SHAPE_NOT_UP_TO_N",
+      "raw_solver_verdict": "unsat",
+      "effective_verdict": "UNSAT_EXACT_SHAPE_OFFICIAL_SEMANTICS",
+      "stages": [
+        {
+          "status": "RETURNED",
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "wall_seconds": 0.0005957079119980335,
+          "cpu_seconds": 0.0005959999999999299
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "original_clause_count": 2,
+          "base_fact_count": 10,
+          "admitted_delta_facts": 2,
+          "wall_seconds": 0.000844042282551527,
+          "cpu_seconds": 0.0008449999999999847
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "assertion_count": 12,
+          "wall_seconds": 0.008604957722127438,
+          "cpu_seconds": 0.008623000000000047
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "formula_counts": [
+            10,
+            19
+          ],
+          "output_table_tuple_counts": [
+            2,
+            4
+          ],
+          "wall_seconds": 0.015449791215360165,
+          "cpu_seconds": 0.01538000000000006
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "ast_sha256": "4b1d76a1837c5c676173d88262bcdc4ea10e766b66fb9d1095b1dafa414b8c06",
+          "wall_seconds": 0.002449125051498413,
+          "cpu_seconds": 0.0024489999999999235
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "ast_sha256": "54977743f5200b98251481be6a9f1ee60b6297af48183a72496c18df36fc8019",
+          "wall_seconds": 0.0021641673520207405,
+          "cpu_seconds": 0.0021639999999999437
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "timeout_ms": 500,
+          "answer": "unsat",
+          "wall_seconds": 0.011449000332504511,
+          "cpu_seconds": 0.01146299999999989
+        }
+      ],
+      "full_schema": {
+        "FOLLOW": {
+          "FOLLOWEE": "VARCHAR",
+          "FOLLOWER": "VARCHAR"
+        }
+      },
+      "full_constraint": [
+        {
+          "primary": [
+            {
+              "value": "FOLLOW__FOLLOWEE"
+            },
+            {
+              "value": "FOLLOW__FOLLOWER"
+            }
+          ]
+        },
+        {
+          "neq": [
+            {
+              "value": "FOLLOW__FOLLOWEE"
+            },
+            {
+              "value": "FOLLOW__FOLLOWER"
+            }
+          ]
+        }
+      ],
+      "original_sql": [
+        "SELECT FOLLOWEE AS FOLLOWER, COUNT(FOLLOWEE) AS NUM FROM FOLLOW WHERE FOLLOWEE IN (SELECT FOLLOWER FROM FOLLOW) GROUP BY 1 ORDER BY 1",
+        "SELECT A.FOLLOWER, COUNT(DISTINCT B.FOLLOWER) NUM FROM FOLLOW A JOIN FOLLOW B ON A.FOLLOWER = B.FOLLOWEE GROUP BY 1"
+      ],
+      "active_stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+      "full_contract_fact_sha256": "6bad049c93218180c6dd12758aa3e622c6701c6611eaf415efe97d7fb822531f",
+      "full_C_nonempty": "sat",
+      "parsed_asts": [
+        {
+          "select": [
+            {
+              "value": "FOLLOWEE",
+              "name": "FOLLOWER"
+            },
+            {
+              "value": {
+                "count": "FOLLOWEE"
+              },
+              "name": "NUM"
+            }
+          ],
+          "from": "FOLLOW",
+          "where": {
+            "in": [
+              "FOLLOWEE",
+              {
+                "select": {
+                  "value": "FOLLOWER"
+                },
+                "from": "FOLLOW"
+              }
+            ]
+          },
+          "groupby": {
+            "value": 1
+          },
+          "orderby": {
+            "value": 1
+          }
+        },
+        {
+          "select": [
+            {
+              "value": "A__FOLLOWER"
+            },
+            {
+              "value": {
+                "count": {
+                  "distinct": "B__FOLLOWER"
+                }
+              },
+              "name": "NUM"
+            }
+          ],
+          "from": [
+            {
+              "value": "FOLLOW",
+              "name": "A"
+            },
+            {
+              "join": {
+                "value": "FOLLOW",
+                "name": "B"
+              },
+              "on": {
+                "eq": [
+                  "A__FOLLOWER",
+                  "B__FOLLOWEE"
+                ]
+              }
+            }
+          ],
+          "groupby": {
+            "value": 1
+          }
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.004448459018021822,
+        "cpu_seconds": 0.00443300000000002
+      },
+      "official_compare_return": true,
+      "cleanup": "COMPLETE",
+      "cleanup_cost": {
+        "wall_seconds": 0.006370458286255598,
+        "cpu_seconds": 0.006370000000000098
+      },
+      "case_cost": {
+        "wall_seconds": 0.048569291830062866,
+        "cpu_seconds": 0.04834499999999997,
+        "worker_cumulative_cpu_seconds": 0.8487009999999999,
+        "worker_peak_rss_bytes_macos": 109182976
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.004612999999999867,
+        "scope_encode": 0.010767000000000193,
+        "comparison_formula_encode": 0.00443300000000002,
+        "query_check": 0.01146299999999989
+      }
+    },
+    {
+      "id": "dev_03",
+      "status": "RETURNED",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1075.csv",
+      "original_sql_sha256": [
+        "294782b91028c60c0ed8a8892f1af24d363c4c6d2c89493d46f62d417bbf4ab3",
+        "4296723511c12a7aa1a0324fec1bd03d455773f12700debccf1bf6dccb34dbf4"
+      ],
+      "schema_sha256": "b5d63e2382809f1c00dc5fd77b9414aaa757652953d4c88e174f23e214ed6dd8",
+      "constraint_sha256": "2e33ff09533fb3a155674d96a45f51b12382f6c9f802ab76755a78fde8c489fd",
+      "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+      "exact_rows": {
+        "EMPLOYEE": 2,
+        "PROJECT": 2
+      },
+      "row_bound_semantics": "EXACT_POSITIVE_SHAPE_NOT_UP_TO_N",
+      "raw_solver_verdict": "unsat",
+      "effective_verdict": "UNSAT_EXACT_SHAPE_OFFICIAL_SEMANTICS",
+      "stages": [
+        {
+          "status": "RETURNED",
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "wall_seconds": 0.0013876669108867645,
+          "cpu_seconds": 0.0013880000000000559
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "original_clause_count": 4,
+          "base_fact_count": 32,
+          "admitted_delta_facts": 4,
+          "wall_seconds": 0.0016715419478714466,
+          "cpu_seconds": 0.0016730000000000356
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "assertion_count": 36,
+          "wall_seconds": 0.009145707823336124,
+          "cpu_seconds": 0.009158
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "formula_counts": [
+            17,
+            17
+          ],
+          "output_table_tuple_counts": [
+            4,
+            4
+          ],
+          "wall_seconds": 0.02141858311370015,
+          "cpu_seconds": 0.021360999999999963
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "ast_sha256": "88823a5d9621d512af4d735f3e7fdb591ed8b5b32da9780a93db811f9b6b306f",
+          "wall_seconds": 0.0025561251677572727,
+          "cpu_seconds": 0.0025570000000000315
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "ast_sha256": "1e6ed38835bc823839b9bfa141209ba6a97d87e2b5f07c3c5bc8a99fc38e24d4",
+          "wall_seconds": 0.0025223339907824993,
+          "cpu_seconds": 0.0025220000000000242
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "timeout_ms": 500,
+          "answer": "unsat",
+          "wall_seconds": 0.06989649962633848,
+          "cpu_seconds": 0.06991399999999992
+        }
+      ],
+      "full_schema": {
+        "EMPLOYEE": {
+          "EMPLOYEE_ID": "INT",
+          "EXPERIENCE_YEARS": "INT",
+          "NAME": "VARCHAR"
+        },
+        "PROJECT": {
+          "EMPLOYEE_ID": "INT",
+          "PROJECT_ID": "INT"
+        }
+      },
+      "full_constraint": [
+        {
+          "primary": [
+            {
+              "value": "PROJECT__PROJECT_ID"
+            },
+            {
+              "value": "PROJECT__EMPLOYEE_ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "EMPLOYEE__EMPLOYEE_ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "PROJECT__EMPLOYEE_ID"
+            },
+            {
+              "value": "EMPLOYEE__EMPLOYEE_ID"
+            }
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "EMPLOYEE__EXPERIENCE_YEARS"
+            },
+            0
+          ]
+        }
+      ],
+      "original_sql": [
+        "SELECT A.PROJECT_ID, ROUND(AVG(B.EXPERIENCE_YEARS), 2) AS AVERAGE_YEARS FROM PROJECT AS A INNER JOIN EMPLOYEE AS B ON A.EMPLOYEE_ID = B.EMPLOYEE_ID GROUP BY A.PROJECT_ID",
+        "SELECT PROJECT_ID,ROUND(SUM(EXPERIENCE_YEARS)/COUNT(*),2) AVERAGE_YEARS FROM PROJECT P JOIN EMPLOYEE E USING(EMPLOYEE_ID) GROUP BY PROJECT_ID"
+      ],
+      "active_stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+      "full_contract_fact_sha256": "660db3091cb96e56a52d4c3a4a1799bc5324eca423628dbf4643661e8f9b4f7a",
+      "full_C_nonempty": "sat",
+      "parsed_asts": [
+        {
+          "select": [
+            {
+              "value": "A__PROJECT_ID"
+            },
+            {
+              "value": {
+                "round": [
+                  {
+                    "avg": "B__EXPERIENCE_YEARS"
+                  },
+                  2
+                ]
+              },
+              "name": "AVERAGE_YEARS"
+            }
+          ],
+          "from": [
+            {
+              "value": "PROJECT",
+              "name": "A"
+            },
+            {
+              "inner join": {
+                "value": "EMPLOYEE",
+                "name": "B"
+              },
+              "on": {
+                "eq": [
+                  "A__EMPLOYEE_ID",
+                  "B__EMPLOYEE_ID"
+                ]
+              }
+            }
+          ],
+          "groupby": {
+            "value": "A__PROJECT_ID"
+          }
+        },
+        {
+          "select": [
+            {
+              "value": "PROJECT_ID"
+            },
+            {
+              "value": {
+                "round": [
+                  {
+                    "div": [
+                      {
+                        "sum": "EXPERIENCE_YEARS"
+                      },
+                      {
+                        "count": "*"
+                      }
+                    ]
+                  },
+                  2
+                ]
+              },
+              "name": "AVERAGE_YEARS"
+            }
+          ],
+          "from": [
+            {
+              "value": "PROJECT",
+              "name": "P"
+            },
+            {
+              "join": {
+                "value": "EMPLOYEE",
+                "name": "E"
+              },
+              "using": "EMPLOYEE_ID"
+            }
+          ],
+          "groupby": {
+            "value": "PROJECT_ID"
+          }
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.005435708910226822,
+        "cpu_seconds": 0.005410999999999944
+      },
+      "official_compare_return": true,
+      "cleanup": "COMPLETE",
+      "cleanup_cost": {
+        "wall_seconds": 0.008998917415738106,
+        "cpu_seconds": 0.00899899999999998
+      },
+      "case_cost": {
+        "wall_seconds": 0.11889149993658066,
+        "cpu_seconds": 0.11860199999999999,
+        "worker_cumulative_cpu_seconds": 0.973594,
+        "worker_peak_rss_bytes_macos": 113721344
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.005079000000000056,
+        "scope_encode": 0.016281999999999908,
+        "comparison_formula_encode": 0.005410999999999944,
+        "query_check": 0.06991399999999992
+      }
+    },
+    {
+      "id": "dev_04",
+      "status": "RETURNED",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1581.csv",
+      "original_sql_sha256": [
+        "5b93146ad5c47f09f400958c0e70d25b1e25ab1a89139138163edb99d96aa00b",
+        "6b052acc9c498c2f258243645866ac84b823a5e03db764103c3f5b60276c777f"
+      ],
+      "schema_sha256": "28516bd32928b62ce8da85c92abc20ca637b4c07505a223d980bbcabfd178aa1",
+      "constraint_sha256": "908e1ed27ae78c0357cd14f8ada767ccae23c277ff1fd5fd58e6df8697381bb3",
+      "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+      "exact_rows": {
+        "TRANSACTIONS": 2,
+        "VISITS": 2
+      },
+      "row_bound_semantics": "EXACT_POSITIVE_SHAPE_NOT_UP_TO_N",
+      "raw_solver_verdict": "unsat",
+      "effective_verdict": "UNSAT_EXACT_SHAPE_OFFICIAL_SEMANTICS",
+      "stages": [
+        {
+          "status": "RETURNED",
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "wall_seconds": 0.001479041762650013,
+          "cpu_seconds": 0.001479000000000008
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "original_clause_count": 3,
+          "base_fact_count": 34,
+          "admitted_delta_facts": 3,
+          "wall_seconds": 0.00138383312150836,
+          "cpu_seconds": 0.001383000000000023
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "assertion_count": 37,
+          "wall_seconds": 0.009549249894917011,
+          "cpu_seconds": 0.009559000000000095
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "formula_counts": [
+            9,
+            32
+          ],
+          "output_table_tuple_counts": [
+            2,
+            6
+          ],
+          "wall_seconds": 0.022502124775201082,
+          "cpu_seconds": 0.022447000000000106
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "ast_sha256": "d063ef1b706a8c0e526f80063dce12b5ae01c73e44596ed7e2b7ae7a3a07a480",
+          "wall_seconds": 0.002324084285646677,
+          "cpu_seconds": 0.0023239999999999927
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "ast_sha256": "fe9418762e0b75c007607e5d73437195a94de115208a7ba1fc154623d91586ae",
+          "wall_seconds": 0.0014657913707196712,
+          "cpu_seconds": 0.0014659999999998563
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "timeout_ms": 500,
+          "answer": "unsat",
+          "wall_seconds": 0.019740083254873753,
+          "cpu_seconds": 0.019743999999999984
+        }
+      ],
+      "full_schema": {
+        "TRANSACTIONS": {
+          "AMOUNT": "INT",
+          "TRANSACTION_ID": "INT",
+          "VISIT_ID": "INT"
+        },
+        "VISITS": {
+          "CUSTOMER_ID": "INT",
+          "VISIT_ID": "INT"
+        }
+      },
+      "full_constraint": [
+        {
+          "primary": [
+            {
+              "value": "VISITS__VISIT_ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "TRANSACTIONS__TRANSACTION_ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "TRANSACTIONS__VISIT_ID"
+            },
+            {
+              "value": "VISITS__VISIT_ID"
+            }
+          ]
+        }
+      ],
+      "original_sql": [
+        "SELECT CUSTOMER_ID, COUNT(*) AS COUNT_NO_TRANS FROM VISITS WHERE VISIT_ID NOT IN (SELECT DISTINCT VISIT_ID FROM TRANSACTIONS) GROUP BY CUSTOMER_ID",
+        "SELECT CUSTOMER_ID, COUNT(1) COUNT_NO_TRANS FROM VISITS NATURAL LEFT JOIN TRANSACTIONS WHERE TRANSACTION_ID IS NULL GROUP BY CUSTOMER_ID"
+      ],
+      "active_stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+      "full_contract_fact_sha256": "120b908d50f377f3aa334c2c6078d424d2fb1d17a201e56638af1fca20163fe1",
+      "full_C_nonempty": "sat",
+      "parsed_asts": [
+        {
+          "select": [
+            {
+              "value": "CUSTOMER_ID"
+            },
+            {
+              "value": {
+                "count": "*"
+              },
+              "name": "COUNT_NO_TRANS"
+            }
+          ],
+          "from": "VISITS",
+          "where": {
+            "nin": [
+              "VISIT_ID",
+              {
+                "select_distinct": {
+                  "value": "VISIT_ID"
+                },
+                "from": "TRANSACTIONS"
+              }
+            ]
+          },
+          "groupby": {
+            "value": "CUSTOMER_ID"
+          }
+        },
+        {
+          "select": [
+            {
+              "value": "CUSTOMER_ID"
+            },
+            {
+              "value": {
+                "count": 1
+              },
+              "name": "COUNT_NO_TRANS"
+            }
+          ],
+          "from": [
+            {
+              "value": "VISITS",
+              "name": "NATURAL"
+            },
+            {
+              "left join": "TRANSACTIONS"
+            }
+          ],
+          "where": {
+            "missing": "TRANSACTION_ID"
+          },
+          "groupby": {
+            "value": "CUSTOMER_ID"
+          }
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.005391708109527826,
+        "cpu_seconds": 0.005373000000000072
+      },
+      "official_compare_return": true,
+      "cleanup": "COMPLETE",
+      "cleanup_cost": {
+        "wall_seconds": 0.006726791150867939,
+        "cpu_seconds": 0.0067270000000001495
+      },
+      "case_cost": {
+        "wall_seconds": 0.06757804192602634,
+        "cpu_seconds": 0.06732499999999997,
+        "worker_cumulative_cpu_seconds": 1.047933,
+        "worker_peak_rss_bytes_macos": 116736000
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.003789999999999849,
+        "scope_encode": 0.018657000000000257,
+        "comparison_formula_encode": 0.005373000000000072,
+        "query_check": 0.019743999999999984
+      }
+    },
+    {
+      "id": "dev_05",
+      "status": "RETURNED",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1587.csv",
+      "original_sql_sha256": [
+        "9cb094bbee5449bf6bd080b7cd54f2fac8ba3accb4d88c747bb3c8a3713dca55",
+        "dfdfee4373f38160b3ffe67973086f473f43bba27711a7d700fefdb79d51b125"
+      ],
+      "schema_sha256": "1193b5470f45987a381192db2ee597ff46bacf5af97748ac7d340f9fdace752f",
+      "constraint_sha256": "734ca7eba09822c59e8e524f9cef6cff0295a6109e538f4d729738695ff30efd",
+      "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+      "exact_rows": {
+        "TRANSACTIONS": 2,
+        "USERS": 2
+      },
+      "row_bound_semantics": "EXACT_POSITIVE_SHAPE_NOT_UP_TO_N",
+      "raw_solver_verdict": "unsat",
+      "effective_verdict": "UNSAT_EXACT_SHAPE_OFFICIAL_SEMANTICS",
+      "stages": [
+        {
+          "status": "RETURNED",
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "wall_seconds": 0.0018330002203583717,
+          "cpu_seconds": 0.0018329999999999735
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "original_clause_count": 4,
+          "base_fact_count": 38,
+          "admitted_delta_facts": 4,
+          "wall_seconds": 0.0015119588933885098,
+          "cpu_seconds": 0.0015120000000001799
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "assertion_count": 42,
+          "wall_seconds": 0.009388958103954792,
+          "cpu_seconds": 0.0093970000000001
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "formula_counts": [
+            17,
+            17
+          ],
+          "output_table_tuple_counts": [
+            4,
+            4
+          ],
+          "wall_seconds": 0.02574583375826478,
+          "cpu_seconds": 0.025702000000000114
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "ast_sha256": "2c72a64d9fe2fca72a31a6a630869fa65eba9029b94a4cba0e6a0e21c47584a5",
+          "wall_seconds": 0.002626124769449234,
+          "cpu_seconds": 0.002626000000000017
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "ast_sha256": "0871fe0add493be8bdbb1db68689964b4f82e0afb297337eeba7b625a9c376c9",
+          "wall_seconds": 0.002018250059336424,
+          "cpu_seconds": 0.002018999999999993
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "timeout_ms": 500,
+          "answer": "unsat",
+          "wall_seconds": 0.031475457828491926,
+          "cpu_seconds": 0.031257999999999786
+        }
+      ],
+      "full_schema": {
+        "TRANSACTIONS": {
+          "ACCOUNT": "INT",
+          "AMOUNT": "INT",
+          "TRANSACTED_ON": "DATE",
+          "TRANS_ID": "INT"
+        },
+        "USERS": {
+          "ACCOUNT": "INT",
+          "NAME": "VARCHAR"
+        }
+      },
+      "full_constraint": [
+        {
+          "primary": [
+            {
+              "value": "USERS__ACCOUNT"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "USERS__NAME"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "TRANSACTIONS__TRANS_ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "TRANSACTIONS__ACCOUNT"
+            },
+            {
+              "value": "USERS__ACCOUNT"
+            }
+          ]
+        }
+      ],
+      "original_sql": [
+        "SELECT U.NAME,SUM(T.AMOUNT) AS BALANCE FROM USERS U,TRANSACTIONS T WHERE U.ACCOUNT = T.ACCOUNT GROUP BY T.ACCOUNT HAVING SUM(T.AMOUNT) > 10000",
+        "SELECT NAME,SUM(AMOUNT) BALANCE FROM USERS JOIN TRANSACTIONS USING(ACCOUNT) GROUP BY NAME HAVING BALANCE > 10000"
+      ],
+      "active_stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+      "full_contract_fact_sha256": "0e2798f23f1be5329468f75b00e7d44421c972107d6135b31b25687300725b04",
+      "full_C_nonempty": "sat",
+      "parsed_asts": [
+        {
+          "select": [
+            {
+              "value": "U__NAME"
+            },
+            {
+              "value": {
+                "sum": "T__AMOUNT"
+              },
+              "name": "BALANCE"
+            }
+          ],
+          "from": [
+            {
+              "value": "USERS",
+              "name": "U"
+            },
+            {
+              "value": "TRANSACTIONS",
+              "name": "T"
+            }
+          ],
+          "where": {
+            "eq": [
+              "U__ACCOUNT",
+              "T__ACCOUNT"
+            ]
+          },
+          "groupby": {
+            "value": "T__ACCOUNT"
+          },
+          "having": {
+            "gt": [
+              {
+                "sum": "T__AMOUNT"
+              },
+              10000
+            ]
+          }
+        },
+        {
+          "select": [
+            {
+              "value": "NAME"
+            },
+            {
+              "value": {
+                "sum": "AMOUNT"
+              },
+              "name": "BALANCE"
+            }
+          ],
+          "from": [
+            "USERS",
+            {
+              "join": "TRANSACTIONS",
+              "using": "ACCOUNT"
+            }
+          ],
+          "groupby": {
+            "value": "NAME"
+          },
+          "having": {
+            "gt": [
+              "BALANCE",
+              10000
+            ]
+          }
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.005832958035171032,
+        "cpu_seconds": 0.005809000000000175
+      },
+      "official_compare_return": true,
+      "cleanup": "COMPLETE",
+      "cleanup_cost": {
+        "wall_seconds": 0.007786042056977749,
+        "cpu_seconds": 0.007785999999999849
+      },
+      "case_cost": {
+        "wall_seconds": 0.08438758412376046,
+        "cpu_seconds": 0.0839430000000001,
+        "worker_cumulative_cpu_seconds": 1.138787,
+        "worker_peak_rss_bytes_macos": 118013952
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.00464500000000001,
+        "scope_encode": 0.021057000000000103,
+        "comparison_formula_encode": 0.005809000000000175,
+        "query_check": 0.031257999999999786
+      }
+    },
+    {
+      "id": "dev_06",
+      "status": "RETURNED",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1715.csv",
+      "original_sql_sha256": [
+        "b1eb638585980563b8f52d129a476117d50af143b97749a4a84d18e24fe7e4c5",
+        "b6d8aed251d91785d075d2d71aa5a5b4df9a4be9c910b998b1c6edbe73c408ed"
+      ],
+      "schema_sha256": "4a088aed7a3dfc24496cdeb142a721e5c49c0012cb1054d811f3668184024f3b",
+      "constraint_sha256": "045ea01e5d1a49da9e55d473b73622f00972879e8c4b120cd5446b851899695b",
+      "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+      "exact_rows": {
+        "BOXES": 2,
+        "CHESTS": 2
+      },
+      "row_bound_semantics": "EXACT_POSITIVE_SHAPE_NOT_UP_TO_N",
+      "raw_solver_verdict": "unsat",
+      "effective_verdict": "UNSAT_EXACT_SHAPE_OFFICIAL_SEMANTICS",
+      "stages": [
+        {
+          "status": "RETURNED",
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "wall_seconds": 0.0018409579060971737,
+          "cpu_seconds": 0.0018410000000002036
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "original_clause_count": 7,
+          "base_fact_count": 46,
+          "admitted_delta_facts": 7,
+          "wall_seconds": 0.002051082905381918,
+          "cpu_seconds": 0.002051000000000025
+        },
+        {
+          "status": "RETURNED",
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "timeout_ms": 500,
+          "answer": "sat",
+          "assertion_count": 53,
+          "wall_seconds": 0.009619415737688541,
+          "cpu_seconds": 0.009626000000000134
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "formula_counts": [
+            15,
+            15
+          ],
+          "output_table_tuple_counts": [
+            2,
+            2
+          ],
+          "wall_seconds": 0.027520541101694107,
+          "cpu_seconds": 0.02746499999999985
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "ast_sha256": "8666526cfcf7d0c9f46f5b2cea4b49da9fc4cbc8c6efbecd210caa98a9427ff9",
+          "wall_seconds": 0.003152250312268734,
+          "cpu_seconds": 0.0031529999999999614
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "ast_sha256": "868a2e1e5baf21334a1bac5229b9cd43870fec04a52d4eba18cf51669891628f",
+          "wall_seconds": 0.0031298338435590267,
+          "cpu_seconds": 0.003130000000000077
+        },
+        {
+          "status": "RETURNED",
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "timeout_ms": 500,
+          "answer": "unsat",
+          "wall_seconds": 0.01439558295533061,
+          "cpu_seconds": 0.014403000000000166
+        }
+      ],
+      "full_schema": {
+        "BOXES": {
+          "APPLE_COUNT": "INT",
+          "BOX_ID": "INT",
+          "CHEST_ID": "INT",
+          "ORANGE_COUNT": "INT"
+        },
+        "CHESTS": {
+          "APPLE_COUNT": "INT",
+          "CHEST_ID": "INT",
+          "ORANGE_COUNT": "INT"
+        }
+      },
+      "full_constraint": [
+        {
+          "primary": [
+            {
+              "value": "BOXES__BOX_ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "CHESTS__CHEST_ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "BOXES__CHEST_ID"
+            },
+            {
+              "value": "CHESTS__CHEST_ID"
+            }
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "BOXES__APPLE_COUNT"
+            },
+            0
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "BOXES__ORANGE_COUNT"
+            },
+            0
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "CHESTS__APPLE_COUNT"
+            },
+            0
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "CHESTS__ORANGE_COUNT"
+            },
+            0
+          ]
+        }
+      ],
+      "original_sql": [
+        "SELECT SUM(B.APPLE_COUNT + IFNULL(C.APPLE_COUNT, 0)) AS APPLE_COUNT , SUM(B.ORANGE_COUNT + IFNULL(C.ORANGE_COUNT,0)) AS ORANGE_COUNT FROM BOXES B LEFT JOIN CHESTS C ON B.CHEST_ID = C.CHEST_ID",
+        "SELECT SUM(B.APPLE_COUNT+ IFNULL(C.APPLE_COUNT,0)) APPLE_COUNT, SUM(B.ORANGE_COUNT+ IFNULL(C.ORANGE_COUNT,0)) ORANGE_COUNT FROM BOXES B LEFT JOIN CHESTS C USING (CHEST_ID)"
+      ],
+      "active_stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+      "full_contract_fact_sha256": "f83f7390f19827888f1911e1c65c5d2fef4d68033c911c4c74c76b48d79ad495",
+      "full_C_nonempty": "sat",
+      "parsed_asts": [
+        {
+          "select": [
+            {
+              "value": {
+                "sum": {
+                  "add": [
+                    "B__APPLE_COUNT",
+                    {
+                      "ifnull": [
+                        "C__APPLE_COUNT",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "name": "APPLE_COUNT"
+            },
+            {
+              "value": {
+                "sum": {
+                  "add": [
+                    "B__ORANGE_COUNT",
+                    {
+                      "ifnull": [
+                        "C__ORANGE_COUNT",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "name": "ORANGE_COUNT"
+            }
+          ],
+          "from": [
+            {
+              "value": "BOXES",
+              "name": "B"
+            },
+            {
+              "left join": {
+                "value": "CHESTS",
+                "name": "C"
+              },
+              "on": {
+                "eq": [
+                  "B__CHEST_ID",
+                  "C__CHEST_ID"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "select": [
+            {
+              "value": {
+                "sum": {
+                  "add": [
+                    "B__APPLE_COUNT",
+                    {
+                      "ifnull": [
+                        "C__APPLE_COUNT",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "name": "APPLE_COUNT"
+            },
+            {
+              "value": {
+                "sum": {
+                  "add": [
+                    "B__ORANGE_COUNT",
+                    {
+                      "ifnull": [
+                        "C__ORANGE_COUNT",
+                        0
+                      ]
+                    }
+                  ]
+                }
+              },
+              "name": "ORANGE_COUNT"
+            }
+          ],
+          "from": [
+            {
+              "value": "BOXES",
+              "name": "B"
+            },
+            {
+              "left join": {
+                "value": "CHESTS",
+                "name": "C"
+              },
+              "using": "CHEST_ID"
+            }
+          ]
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.004095082636922598,
+        "cpu_seconds": 0.004078000000000026
+      },
+      "official_compare_return": true,
+      "cleanup": "COMPLETE",
+      "cleanup_cost": {
+        "wall_seconds": 0.008001292124390602,
+        "cpu_seconds": 0.008001000000000147
+      },
+      "case_cost": {
+        "wall_seconds": 0.06823641620576382,
+        "cpu_seconds": 0.06804199999999994,
+        "worker_cumulative_cpu_seconds": 1.213896,
+        "worker_peak_rss_bytes_macos": 118849536
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.0062830000000000386,
+        "scope_encode": 0.021181999999999812,
+        "comparison_formula_encode": 0.004078000000000026,
+        "query_check": 0.014403000000000166
+      }
+    }
+  ],
+  "runtime": {
+    "id": "runtime",
+    "stages": [
+      {
+        "status": "RETURNED",
+        "name": "LOCK_AND_DEPENDENCY_HASH",
+        "checked_files": 848,
+        "wall_seconds": 0.12775191711261868,
+        "cpu_seconds": 0.05577800000000001
+      },
+      {
+        "status": "RETURNED",
+        "name": "NATIVE_AND_OFFICIAL_IMPORT",
+        "version": [
+          4,
+          12,
+          0,
+          0
+        ],
+        "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+        "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+        "solver_memory_parameter_mb": 128,
+        "wall_seconds": 0.6297959578223526,
+        "cpu_seconds": 0.59936
+      }
+    ],
+    "active_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 1.133081,
+    "cpu_system_seconds": 0.087627,
+    "peak_rss_bytes_macos": 118849536,
+    "wall_seconds": 1.2890325840562582
+  },
+  "status_counts": {
+    "RETURNED": 6
+  },
+  "effective_verdict_counts": {
+    "DIALECT_UNKNOWN": 1,
+    "UNSAT_EXACT_SHAPE_OFFICIAL_SEMANTICS": 5
+  }
+}

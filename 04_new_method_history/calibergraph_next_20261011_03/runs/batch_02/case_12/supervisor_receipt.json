@@ -1,0 +1,519 @@
+{
+  "case_index": 12,
+  "case_id": "dev03_13",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:25.555072+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 116490240,
+  "sampled_peak_group_cpu_seconds": 0.89,
+  "sample_count": 17,
+  "stop_remainder": null,
+  "pid": 43672,
+  "owned_pgid": 43672,
+  "worker_wait4_usage": {
+    "pid": 43672,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.8672179999999999,
+    "system_cpu_seconds": 0.071439,
+    "cpu_seconds": 0.938657,
+    "maxrss_bytes_darwin": 118259712
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.9532803329639137,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.06361674889922142,
+    "check_count": 2,
+    "case_index": 12,
+    "id": "dev03_13",
+    "updated_monotonic": 2259257.842329416,
+    "observed_monotonic": 2259257.85117825,
+    "solver_watchdog_estimated_seconds": 0.06361674889922142,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "efa771bbca8f0de16a14d3727fb11eac716da4969b9c7b32a2a20e3b749c5050",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_13",
+    "case_index": 12,
+    "status": "RETURNED",
+    "engineering_class": "SUPPORTED_FAST",
+    "strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_13",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0023865001276135445,
+            "cpu_seconds": 0.002387000000000028
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 8,
+            "base_fact_count": 50,
+            "admitted_delta_facts": 8,
+            "full_fact_count": 58,
+            "wall_seconds": 0.002553042024374008,
+            "cpu_seconds": 0.0025540000000000562
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.0034800409339368343,
+            "cpu_seconds": 0.003479000000000121
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004634290933609009,
+            "actual_check_cpu_seconds": 0.004643000000000064,
+            "answer": "sat",
+            "wall_seconds": 0.007014541886746883,
+            "cpu_seconds": 0.006873999999999936
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.000552792102098465,
+            "cpu_seconds": 0.000552000000000108
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              33,
+              33
+            ],
+            "output_tuple_counts": [
+              6,
+              6
+            ],
+            "wall_seconds": 0.13734587468206882,
+            "cpu_seconds": 0.13683900000000015
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "48ea09f7dfe30a32d07a774d8b00c3cbe906b432288976e26b04030599bebfab",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.06146995862945914,
+            "cpu_seconds": 0.06146700000000016
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "c2ab021862beffce860a55678aafdb676d4e6bee7571d38793dbefa3450dab4a",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0052642920054495335,
+            "cpu_seconds": 0.005247000000000002
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 800,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.05898245796561241,
+            "actual_check_cpu_seconds": 0.058423,
+            "answer": "unsat",
+            "wall_seconds": 0.062203457579016685,
+            "cpu_seconds": 0.06147699999999989
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "INVOICE": 2,
+          "PRODUCT": 2
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "858d647a2ead9927a0fce16bbdcd90b299cd207e8c10e706103e427b3244c8b9",
+        "solver_cumulative_wall_seconds": 0.06361674889922142,
+        "solver_cumulative_cpu_seconds": 0.06306600000000007,
+        "parsed_asts": [
+          {
+            "select": [
+              {
+                "value": "P__NAME",
+                "name": "NAME"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "REST"
+                    },
+                    0
+                  ]
+                },
+                "name": "REST"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "PAID"
+                    },
+                    0
+                  ]
+                },
+                "name": "PAID"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "CANCELED"
+                    },
+                    0
+                  ]
+                },
+                "name": "CANCELED"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "REFUNDED"
+                    },
+                    0
+                  ]
+                },
+                "name": "REFUNDED"
+              }
+            ],
+            "from": [
+              {
+                "value": "INVOICE",
+                "name": "I"
+              },
+              {
+                "right join": {
+                  "value": "PRODUCT",
+                  "name": "P"
+                },
+                "on": {
+                  "eq": [
+                    "P__PRODUCT_ID",
+                    "I__PRODUCT_ID"
+                  ]
+                }
+              }
+            ],
+            "groupby": {
+              "value": "P__NAME"
+            },
+            "orderby": {
+              "value": "P__NAME"
+            }
+          },
+          {
+            "select": [
+              {
+                "value": "NAME"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "REST"
+                    },
+                    0
+                  ]
+                },
+                "name": "REST"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "PAID"
+                    },
+                    0
+                  ]
+                },
+                "name": "PAID"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "CANCELED"
+                    },
+                    0
+                  ]
+                },
+                "name": "CANCELED"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    {
+                      "sum": "REFUNDED"
+                    },
+                    0
+                  ]
+                },
+                "name": "REFUNDED"
+              }
+            ],
+            "from": [
+              {
+                "value": "PRODUCT",
+                "name": "P"
+              },
+              {
+                "left outer join": {
+                  "value": "INVOICE",
+                  "name": "I"
+                },
+                "on": {
+                  "eq": [
+                    "P__PRODUCT_ID",
+                    "I__PRODUCT_ID"
+                  ]
+                }
+              }
+            ],
+            "groupby": {
+              "value": "NAME"
+            },
+            "orderby": {
+              "value": "NAME",
+              "sort": "asc"
+            }
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.006267332937568426,
+          "cpu_seconds": 0.006032999999999955
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.012656624894589186,
+          "cpu_seconds": 0.012638999999999956
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06671400000000016,
+          "scope_encode": 0.07012499999999999,
+          "compare_encode": 0.006032999999999955,
+          "query_check": 0.058423
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.2450810000000001,
+          "wall_seconds": 0.24793587531894445,
+          "worker_peak_rss_bytes_macos": 118210560
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1677.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 19915,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "3c10936a9ace16d97a74fb1b755dacbcb620c092303435dd6e47ba4cc76c0459",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "PRODUCT__PRODUCT_ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "PRODUCT__NAME"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "INVOICE__INVOICE_ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "INVOICE__PRODUCT_ID"
+            },
+            {
+              "value": "PRODUCT__PRODUCT_ID"
+            }
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "INVOICE__REST"
+            },
+            0
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "INVOICE__PAID"
+            },
+            0
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "INVOICE__CANCELED"
+            },
+            0
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "INVOICE__REFUNDED"
+            },
+            0
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1677.csv",
+      "index": 344,
+      "pair": [
+        "SELECT P.NAME AS NAME, IFNULL(SUM(REST), 0) AS REST, IFNULL(SUM(PAID), 0) AS PAID, IFNULL(SUM(CANCELED),0) AS CANCELED, IFNULL(SUM(REFUNDED),0) AS REFUNDED FROM INVOICE I RIGHT JOIN PRODUCT P ON P.PRODUCT_ID = I.PRODUCT_ID GROUP BY P.NAME ORDER BY P.NAME",
+        "SELECT NAME, IFNULL(SUM(REST), 0) AS REST, IFNULL(SUM(PAID), 0) AS PAID, IFNULL(SUM(CANCELED), 0) AS CANCELED, IFNULL(SUM(REFUNDED), 0) AS REFUNDED FROM PRODUCT AS P LEFT OUTER JOIN INVOICE AS I ON P.PRODUCT_ID = I.PRODUCT_ID GROUP BY NAME ORDER BY NAME ASC"
+      ],
+      "schema": {
+        "INVOICE": {
+          "CANCELED": "INT",
+          "INVOICE_ID": "INT",
+          "PAID": "INT",
+          "PRODUCT_ID": "INT",
+          "REFUNDED": "INT",
+          "REST": "INT"
+        },
+        "PRODUCT": {
+          "NAME": "VARCHAR",
+          "PRODUCT_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "736171b3b2b779b54c3db66e67103a090cb1a0ac0b9b01eb61de6c98570f81dc",
+      "d1002ce35fa0017f17b6a61422147b2d5fb9e644c0f6fb540dcd519e1d6ba48c"
+    ],
+    "schema_sha256": "6132679fc718e3c83bd63706b565350f418162239710b7b45da7ecfacb346c21",
+    "constraint_sha256": "a219ca9ec6b3bf14cfb4088801a5dcde679318546f2355188ab5344bbc307fbc",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "6132679fc718e3c83bd63706b565350f418162239710b7b45da7ecfacb346c21",
+      "constraint_sha256": "a219ca9ec6b3bf14cfb4088801a5dcde679318546f2355188ab5344bbc307fbc",
+      "table_count": 2,
+      "column_count": 8,
+      "schema_type_counts": {
+        "INT": 7,
+        "VARCHAR": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 8,
+      "operator_counts": {
+        "foreign": 1,
+        "gte": 4,
+        "primary": 3,
+        "value": 9
+      },
+      "reference_counts": {
+        "INVOICE__CANCELED": 1,
+        "INVOICE__INVOICE_ID": 1,
+        "INVOICE__PAID": 1,
+        "INVOICE__PRODUCT_ID": 1,
+        "INVOICE__REFUNDED": 1,
+        "INVOICE__REST": 1,
+        "PRODUCT__NAME": 1,
+        "PRODUCT__PRODUCT_ID": 2
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_FOREIGN_REQUIRES_NON_NULL_SOURCE_AND_TARGET_MATCH"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "fast_scope": "query check CPU below 250ms only; import/parse/encode/whole process costs remain separately reported",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004634290933609009,
+        "actual_check_cpu_seconds": 0.004643000000000064,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.05898245796561241,
+        "actual_check_cpu_seconds": 0.058423,
+        "timeout_ms": 800
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.06361674889922142,
+    "solver_cumulative_cpu_seconds": 0.06306600000000007,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.190859,
+    "parent_system_cpu_seconds": 0.201252,
+    "all_reaped_children_user_cpu_seconds": 8.420341,
+    "all_reaped_children_system_cpu_seconds": 3.975969,
+    "supervisor_plus_reaped_cpu_seconds": 12.788421,
+    "observed_total_cpu_seconds": 20.665143,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

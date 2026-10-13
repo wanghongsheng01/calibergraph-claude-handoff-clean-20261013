@@ -1,0 +1,81 @@
+% Frozen final v5 cut: 1d6d0291fda36937a26da6b46c9d07b18899a21686708fa4279c7a814e48b95c.
+\subsection{Complete v5 outcomes}
+Table~\ref{tab:v5outcomes} accounts for every selected slot. A strict query result requires the recorded bridge and full-contract gates, complete worker/cleanup receipts, acceptable process supervision and, for SAT, original-AST validation and safe original-SQL replay. Typed refusals remain separate from query decisions. These counts describe exposed development configurations, not independent benchmark accuracy.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrrrr}
+\toprule
+Run & Slots & Strict & Unknown & Domain & Typed & Monitor\\
+\midrule
+Six-arm cost & 168 & 127 & 7 & 6 & 24 & 4\\
+Query differential & 168 & 115 & 23 & 0 & 24 & 6\\
+SpotIt engine & 28 & 21 & 2 & 1 & 3 & 1\\
+\bottomrule
+\end{tabular}
+\caption{Mutually exclusive v5 categories. Strict means a valid pair decision for cost/SpotIt, or bounded encoder agreement for differential. Domain denotes an unproved replay domain; Typed is a verified expected no-query refusal; Monitor is unavailable RSS observation, not established memory exhaustion. No failed category is an equivalence success.}\label{tab:v5outcomes}
+\end{table}
+
+The cost records contain 78 raw UNSAT, 52 SAT, eight unknown, six oracle-domain unknowns, eighteen refusals for inconsistent contracts and six for unsupported contracts. Four monitoring stops override raw outcomes: two SAT, one UNSAT and one unknown. Thus strict decisions are 77 UNSAT and 50 SAT, not all 130 raw decisions. All 52 stored SAT witnesses pass original-contract and SQL replay checks; the two monitored attempts remain excluded from strict results. Across the prior twelve configurations, ten arithmetic controls and six adapter controls, strict pair counts are respectively 62/72, 47/60 and 18/36; the last group also has eighteen valid typed refusals.
+
+Recovery retains 169 cost attempts for 168 slots: terminal slot 51 comes from the old batch, resumed 52--53 from the new one. Interrupted 52 and the earlier not-run 53 remain recorded. Interrupted 52 lacks full cost; its 1.234-second CPU checkpoint is only a lower bound. Stale raw pair-work fields are preserved; separate start, final-phase, cleanup and reaped-process receipts derive execution state without turning unknown/monitored outcomes into success.
+
+\subsection{Contract controls and differentials}
+For each cost and differential campaign, 162 inputs record base-only SAT and contract-XOR UNSAT; the six unsupported-contract controls stop before either check. Eighteen admitted contracts are contradictory and stop before query work. These input-specific checks do not certify arbitrary contract translation. In D01, $5<T.A$ together with $T.A\le6$ forces the integer value 6: all six arms produce a strict SAT witness, validate the original AST and replay NULL versus 6. D02 yields six UNSAT decisions for an identical query; D03 yields six SAT decisions without explicit ICs. D04/D05 reject twelve inconsistent contracts, and D06 refuses six whole contracts containing an unsupported disjunction. All are constructed repair controls, not naturally collected defects.
+
+Individual-query records contain 120 raw UNSAT differentials, 24 unknown and 24 typed refusals. Five raw UNSAT and one unknown coincide with monitoring stops, leaving 115 strict agreements. Flat, product and selector have respectively 39, 37 and 39 strict agreements out of 56 registered slots each. No validated differential counterexample is recorded, but the unknowns and refusals prevent a complete mapping result. These checks remain relative to shared query encoding and cannot replace the abstract premises with a general compiler theorem.
+
+\subsection{Costs and comparison boundary}
+Table~\ref{tab:v5cost} reports complete process costs for the 168 selected returned slots, including failures and refusals. The official arm also has an interrupted attempt whose full cost is unknown and is not included in these totals. Selector and flat totals are close, their strict counts differ, and each arm contributes one selected returned observation per configuration. No speedup, stability or selector-specific advantage follows.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{lrrrrr}
+\toprule
+Arm & Strict/28 & Unknown & Monitor & CPU sum (s) & Median (s)\\
+\midrule
+Official + IC adapter & 20 & 2 & 1 & 62.612 & 1.315\\
+Official + generic SMT & 21 & 2 & 0 & 63.180 & 1.354\\
+Local flat & 23 & 0 & 0 & 37.110 & 1.314\\
+Known product & 19 & 3 & 1 & 73.661 & 1.336\\
+Local selector & 22 & 0 & 1 & 36.793 & 1.333\\
+Official + cheap AND & 22 & 0 & 1 & 50.485 & 1.332\\
+\bottomrule
+\end{tabular}
+\caption{V5 cold-process CPU, 28 observed returns per arm. Each arm additionally has one domain refusal and four valid typed refusals. Official has a 29th, interrupted attempt with unrecorded full cost; its sum is incomplete campaign cost. Medians are across different outcome mixtures, not repeated trials.}\label{tab:v5cost}
+\end{table}
+
+For S01 at N4, official and generic-SMT return unknown; flat, selector and cheap AND return strict UNSAT at 1.314, 1.312 and 1.298 seconds CPU. Product records UNSAT at 1.361 seconds but has a monitoring stop and is not strict. Standard conjunction normalization therefore explains a success that cannot be uniquely attributed to selectors.
+
+The controlled SpotIt engine selects 28 slots from its 168-slot enclosing manifest; 140 other-arm slots are unselected, not failures. Its 21 strict results comprise twelve UNSAT and nine replayed SAT. One raw inconsistent-contract refusal has a monitoring stop, leaving three valid typed refusals. CPU sums to 63.881 seconds. All 28 source-backed dispatch records identify AUTO\_SET with all-null deletion disabled. This uses reconstructed native Z3 4.12 despite outer requirements specifying 4.15 and does not reproduce the full SpotIt+ mining pipeline. Scalar one-row set/bag coincidence does not change the engine implementation. Polygon's search and precise modes remain unbenchmarked under a matched domain.
+
+\subsection{Historical v4 and fixed-point evidence}
+V4 separately records 72 UNSAT, 41 SAT, seven unknown and twelve refusals across 132 cost slots. Six contract refusals retain raw NOT\_RUN/BLOCKED\_OR\_ERROR. E01--E08's 48 decisions match expectations; eighteen SAT witnesses replay. Their 48 raw UNSAT differentials have three RSS-observation anomalies, versus one among 36 earlier v3 checks. These inherit no v5 bridge or strict-acceptance guarantee.
+
+On twelve v4 configurations, flat/selector CPU was already close at 16.862/16.725 seconds with no unknowns. Product, official, generic and cheap AND took 52.130, 42.439, 42.410 and 30.133 seconds with 2, 2, 2 and 1 unknowns. Earlier N2 totals of 7.444--7.750 seconds also establish no selector advantage. Twelve fixed-point controls yield eighteen safe replays and three domain unknowns among 21 queries, not equivalence proofs. Historical SpotIt's 22 slots retain eleven UNSAT, seven SAT, two unknown, two refusals and an RSS anomaly. Full versioned records remain in the evidence package; they are not pooled replicates.
+
+\subsection{Complete public applicability}
+Table~\ref{tab:versionedcoverage} includes all 24,455 public pairs. The six eligible slots correspond to four exact SQL strings or five SQL/full-context combinations, all with zero leaves. The two both-eligible pairs are an identical Calcite SUM pair and a literature COUNT comparison over one relation. Eligible public JOIN coverage is therefore zero, and LeetCode has no eligible slot. Its 23,994 pairs span only 56 source problem labels and 24,050 distinct SQL strings, not 23,994 independent tasks.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+Source & Slots & Eligible & Ineligible & Refused & Unknown & Errors\\
+\midrule
+Calcite & 794 & 4 & 548 & 188 & 38 & 16\\
+Literature & 128 & 2 & 125 & 0 & 0 & 1\\
+LeetCode & 47,988 & 0 & 46,758 & 1 & 0 & 1,229\\
+\midrule
+Total & 48,910 & 6 & 47,431 & 189 & 38 & 1,246\\
+\bottomrule
+\end{tabular}
+\caption{Full cached official ALL-AST scan using the v4 recognizer retained by v5. Refusals are raw frontend rejections; errors preserve original parse/AST-record failures. No slot is unprocessed. The scan does not execute the v5 IC bridge, reparse SQL or run a solver.}\label{tab:versionedcoverage}
+\end{table}
+
+No eligibility filter or deduplication reduces the denominator. Two LeetCode blocks stopped after 1,973 and 1,978 recorded slots; resumes processed only the remaining 27 and 22, preserving earlier hashes and resource stops. Thirty-eight Calcite slots become UNKNOWN because cached AST objects cannot be safely reconstructed. The v4 extension adds no eligible query over v3. At pair level, two are both eligible, 24,412 definitively ineligible and 41 unresolved. This is applicability, not public equivalence accuracy.
+
+Earlier 922-slot scans admit seven queries under v2/MYSQL and v2/ALL, versus six under guarded v3; these configuration changes are not independent tests. Static inventories found no original-fragment member among TPC-H's 22, SSB's thirteen or DuckDB TPC-DS's 99 definitions; official TPC-DS SQL was unavailable. Three SSB definitions became structural candidates only under combined arithmetic/BETWEEN/domain changes, each with one leaf. These static checks are not solver runs and provide no executed public join case.
+
+\subsection{Constraint-direction counterexample}\label{sec:icdiagnostic}
+A constructed diagnostic evaluates six literal-left operators at four values, including NULL: eight of its 24 cells disagree with the emitted official constraint. In particular, $5<T.A$ is emitted in the opposite direction. With one exact row, the official checker reports UNSAT for \texttt{SUM(T.A) WHERE T.A<5} versus unfiltered \texttt{SUM(T.A)}. Yet the original contract admits $T.A=6$, for which unchanged SQL returns NULL versus 6 in SQLite. This is an observed false-equivalence result under the original contract. The cells include fixed-model and substitution controls, not 24 independent verification problems or a defect-frequency estimate. V5's narrow AST adapter and D01 address this constructed direction error; they do not retroactively certify v4, arbitrary ICs or business truth.

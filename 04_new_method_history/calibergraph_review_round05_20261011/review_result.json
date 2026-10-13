@@ -1,0 +1,95 @@
+{
+  "review_round": "05",
+  "review_date": "2026-10-11",
+  "role": "INDEPENDENT_REVIEWER_NOT_AUTHOR",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning": "ultra",
+  "runtime_configuration_independently_attested": false,
+  "decision": "LIMITED_THEORY_AND_METADATA_DISPOSITION_SUPPORTED",
+  "scientific_promotion": false,
+  "new_method_supported": false,
+  "retained_hypothesis_count": 0,
+  "no_new_method_reasonable": true,
+  "overall_research_should_stop": false,
+  "independent_experimental_rerun": false,
+  "independence_scope": "未参与作者文件写作或修改；读取已完成作者材料后裁决。共享父任务给出了反例模式，本审核独立重算其逻辑，不声称独立发现反例。补充子审仅重新读取三个公开metadata URL，无作者工作。",
+  "summary_zh": "存在性构造在明确S0下成立；相同局部摘要不保持forest连接计数的4/0反例成立。既有精确bag边际定理阻止将普通flow和join-tree拼接注册为新机制。故本轮hypothesis=null合理。公开资产接入仅为metadata，部署及正式artifact身份门禁未通过，但不证明系统不可用，也不阻止其他理论研究。",
+  "unresolved_severity_counts": {"P0":0,"P1":0,"P2":1},
+  "findings": [
+    {
+      "id":"F1", "severity":"P1", "status":"CONTAINED_BY_AUTHOR_DISPOSITION", "kind":"candidate_claim_falsified_not_report_defect",
+      "anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:37–51",
+      "claim_layer":"作者明确判P_preserve为假",
+      "independent_evidence":"两合法实例各有A/B/C两行；fBA=fCA=2；单边父度数多重集均为{2,0}。共同父分配时2*2+0*0=4；分离父分配时2*0+0*2=0。FK表图与该查询均为树。",
+      "judgment":"局部flow不能确定该COUNT；这不反驳合法lift存在性，亦不否定所有更丰富表示。"
+    },
+    {
+      "id":"F2", "severity":"P1", "status":"CONTAINED_BY_AUTHOR_DISPOSITION", "kind":"novelty_claim_blocked_not_report_defect",
+      "anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:60,65,71,75; PRIMARY_ANCHOR_CHECK.json",
+      "claim_layer":"作者不把完整bag边际的flow/join-tree构造当新增机制",
+      "independent_evidence":"已独立读取arXiv:2012.12126v1 Lemma 2、Theorem 2和Theorem 6及相应构造论证；精确锚点见独立记录。",
+      "judgment":"该kill判据有一手支持，但只覆盖同一数学任务。不能扩成任意PK/FK/NULL或SQL片段已由先例解决。"
+    },
+    {
+      "id":"F3", "severity":"P2", "status":"OPEN_EVIDENCE_LIMIT_NOT_SCIENTIFIC_BLOCKER", "kind":"review_coverage_limit",
+      "anchor":"sources/PUBLIC_ASSET_INTAKE.zh.md:19–46; sources/ARTIFACT_GATE_FOLLOWUP.zh.md:9–35",
+      "claim_layer":"作者报告固定refs、HTTP字节hash、访问失败、CLI结果等",
+      "independent_evidence":"本审核未重取所有原始响应、未重跑git/CLI、未核所有引用全文；只补查官网指向、project license=null、release=[]，并独立核主要bag定理。",
+      "judgment":"未重核的操作与hash只能称作者报告，不能宣传为独审已复现完整资产证据链。报告已保留unknown，不影响限定数学反例。",
+      "minimum_resolution":"后续若宣称独立资产复现，应在授权范围内固定并核对对应原始响应；本次无需新增科学执行。"
+    }
+  ],
+  "claim_checks": [
+    {"id":"P_exist","anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:9–21","verdict":"SUPPORTED_BY_INDEPENDENT_HAND_REASONING","reason":"足够新键与非重叠独立FK列下，先建立所有行，再逐FK按各f分组并选择非空目标块；无父容量限制，故满足PK/FK并恢复摘要。此构造不使用无环性。"},
+    {"id":"P_preserve","anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:23,37–51","verdict":"FALSE_AS_AUTHOR_CONCLUDES","reason":"共享父引用关系被摘要擦除，合法反例同摘要而COUNT分别4/0。"},
+    {"id":"P_edge_local","anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:25","verdict":"SUPPORTED_UNDER_STATED_RESTRICTIONS","reason":"单表payload bag由n确定，单条全函数FK连接的payload bag由f确定；后续只依赖该bag的操作因而确定。"},
+    {"id":"micro_1_and_micro_2","anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:29–35","verdict":"HAND_COUNTS_AGREE","reason":"分别为2以及分组[(x,2)]对[(x,1),(y,1)]；未执行SQL。"},
+    {"id":"compression","anchor":"literature/COUPLED_LIFTING_FALSIFICATION.zh.md:73","verdict":"NO_GENERAL_GUARANTEE_JUSTIFIED","reason":"所有payload互异时support即行数；保留全incidence仅去除键字面标签，不自动降低结构规模。"},
+    {"id":"metadata_unknown_boundaries","anchor":"sources/ARTIFACT_GATE_FOLLOWUP.zh.md:5,13,17–21,35,41","verdict":"APPROPRIATELY_LIMITED","reason":"未将访问失败/null/空release列表写成不存在或系统不可用；正式pin/许可/生产接口仍unknown。"},
+    {"id":"datahub_source_scope","anchor":"sources/PUBLIC_ASSET_INTAKE.zh.md:62; governance/stage_start.json; governance/canonical_source_note.json","verdict":"SOURCE_SCOPE_DIFFERENCE_EXPLAINED","reason":"CLI未给canonical root与父任务从适用指令获得路径并不矛盾；本审核只读取治理说明，不独立读取外部AGENTS或注册。"}
+  ],
+  "allowed_claims": [
+    "在明确S0中，局部摘要存在合法lift；这是存在性，不是原实例恢复。",
+    "同一局部摘要在合法树形PK/FK实例上可对应COUNT 4和0。",
+    "完整整数bag边际的一般flow/join-tree构造已有直接先例；本轮不保留新机制假说。",
+    "本次为独立文档与理论审核，包含手算和主要一手定理核查。",
+    "当前GitLab公开release端点返回空数组，license字段未报告许可。",
+    "正式artifact身份、版本匹配许可、生产编码接口尚未证实。",
+    "本轮暂停部署；仍可继续适当限定的理论研究。"
+  ],
+  "prohibited_claims": [
+    "局部FK边流对所有forest join/aggregate保真。",
+    "合法重构存在等于查询保真或恢复原始incidence。",
+    "逐边FK流自动就是bag-consistency定理要求的完整separator边际。",
+    "普通FK要求目标列边流总和等于父行数。",
+    "整数flow/max-flow/join-tree本身是本轮新方法。",
+    "该反例或引用已解决或否定所有PK/FK/NULL SQL理论。",
+    "当前未知正式pin或代码license证明XData不存在、无许可或不可用。",
+    "本次独审已经运行XData、复现VeriEQL、执行benchmark或性能实验。",
+    "metadata-only门禁要求停止整个CaliberGraph理论研究。",
+    "本审核独立核实了作者所有网络、CLI操作或全部引用。"
+  ],
+  "red_flags": [
+    {"ids":[1,2,4,5,7,8,9,10],"status":"无法判断","reason":"本轮无实验表、对比指标或模型贡献声称；不得按实验论文评分。"},
+    {"ids":[3],"status":"未命中","anchor":"理论稿§4–5","reason":"强先例及简单控制已用于否定新机制；未声称完成基线性能比较。"},
+    {"ids":[6],"status":"未命中","anchor":"governance/stage_start.json; 理论稿§6","reason":"明确无注册或运行实验，未把未交付实验当作已完成。"},
+    {"ids":[11],"status":"未命中","anchor":"理论稿§3","reason":"给出明确失败实例；未将手例当经验失败分布。"},
+    {"ids":[12],"status":"未命中","anchor":"理论稿§1、§4、§6; 接入补充§1–4","reason":"明示片段和unknown边界，没有把限定否定结论外推。"}
+  ],
+  "reviewer_operations": {
+    "scientific_execution": false,
+    "sql_parser_solver_java_experiment_runs": 0,
+    "new_benchmark_ddl_test_reserve_result_content_reads": 0,
+    "author_or_frozen_file_modifications": 0,
+    "credentials_read": false,
+    "external_messages_sent": false,
+    "numeric_verification": "hand arithmetic only",
+    "machine_validation": "standard-library JSON parsing and SHA-256 integrity only",
+    "write_scope":"calibergraph_review_round05_20261011 only"
+  },
+  "remaining_blockers": [
+    "新方法晋级：本轮候选已被否定且未出现证明过的新增机制。",
+    "正式XData artifact接入：官方不可变版本绑定、对应许可及接口未核实。",
+    "DataHub注册和完整原始证据清洁机恢复属于父任务治理事项，本独审未完成或独立验证。"
+  ]
+}

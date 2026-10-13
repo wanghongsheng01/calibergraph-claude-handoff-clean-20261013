@@ -1,0 +1,2041 @@
+{
+  "role": "RESEARCH_AUTHOR_DIAGNOSIS_NOT_INDEPENDENT_REVIEW",
+  "method": "Stream-only stdlib aggregation of existing logs and cached AST structure; no SQL parsing, no recognizer invocation, no schema/IC inference, no solver, no eligibility repair or claim",
+  "source": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_v4_cached/runs/run_001/slots.jsonl",
+    "bytes": 91706069,
+    "sha256": "9050dd8aa3f828d800bcdc99beac2de56f28b1dbe242456e77ac4d7659eb573e"
+  },
+  "query_slots": 48910,
+  "status_counts": {
+    "INELIGIBLE": 47431,
+    "UNKNOWN": 38,
+    "FRONTEND_UNSUPPORTED": 189,
+    "PARSE_OR_AST_RECORD_ERROR": 1246,
+    "ELIGIBLE": 6
+  },
+  "first_reason_counts": {
+    "multiple_output_columns": 1754,
+    "unsupported_identifier": 6889,
+    "CACHED_AST_HAS_SERIALIZED_NON_JSON_NODE": 38,
+    "not_simple_select": 7498,
+    "ORIGINAL_FRONTEND_UNSUPPORTED_WITHOUT_AST: dollar_rewrite_not_in_fragment": 189,
+    "not_single_aggregate": 2698,
+    "extra_select_clause": 21894,
+    "unsupported_aggregate": 1095,
+    "subquery_or_non_inner_join": 4006,
+    "PARSE_OR_AST_RECORD_ERROR": 1246,
+    "unknown_table_or_repeated_relation": 1453,
+    "non_column_expression": 4,
+    "V4_RECOGNIZED_CACHED_OFFICIAL_ALL_AST": 6,
+    "non_integer_column": 90,
+    "unsupported_predicate_operator": 2,
+    "unsupported_join": 48
+  },
+  "structural_feature_counts_overlapping_not_additive": {
+    "multiple_top_select_outputs": 27569,
+    "derived_top_from_value": 11554,
+    "explicit_join_top_from": 23054,
+    "explicit_join_anywhere": 28448,
+    "multiple_top_from_items": 24966,
+    "set_operator_anywhere": 3584,
+    "extra_top_clause": 29362,
+    "top_groupby_or_having": 17692,
+    "top_single_sum_or_count": 211,
+    "repeated_top_base_table": 4955,
+    "top_scalar_sum_or_count_shape": 204,
+    "top_single_sum_count_with_join_or_comma": 23,
+    "no_extra_clause_single_sum_count_with_join_or_comma": 12
+  },
+  "features_by_first_reason": {
+    "multiple_output_columns": {
+      "multiple_top_select_outputs": 1754,
+      "multiple_top_from_items": 17,
+      "explicit_join_top_from": 12,
+      "explicit_join_anywhere": 63
+    },
+    "unsupported_identifier": {
+      "multiple_top_select_outputs": 2857,
+      "derived_top_from_value": 6889,
+      "explicit_join_top_from": 3009,
+      "explicit_join_anywhere": 4769,
+      "multiple_top_from_items": 3132,
+      "set_operator_anywhere": 415,
+      "top_single_sum_or_count": 37,
+      "top_scalar_sum_or_count_shape": 37,
+      "top_single_sum_count_with_join_or_comma": 9,
+      "no_extra_clause_single_sum_count_with_join_or_comma": 9,
+      "repeated_top_base_table": 6
+    },
+    "CACHED_AST_HAS_SERIALIZED_NON_JSON_NODE": {
+      "multiple_top_select_outputs": 14,
+      "derived_top_from_value": 10,
+      "explicit_join_top_from": 7,
+      "explicit_join_anywhere": 7,
+      "multiple_top_from_items": 13,
+      "top_scalar_sum_or_count_shape": 1,
+      "top_single_sum_or_count": 1,
+      "set_operator_anywhere": 1,
+      "extra_top_clause": 5,
+      "top_groupby_or_having": 5
+    },
+    "not_simple_select": {
+      "set_operator_anywhere": 1694,
+      "extra_top_clause": 7463,
+      "multiple_top_from_items": 4005,
+      "repeated_top_base_table": 1272,
+      "derived_top_from_value": 1119,
+      "explicit_join_anywhere": 4262,
+      "explicit_join_top_from": 3720,
+      "top_groupby_or_having": 813,
+      "multiple_top_select_outputs": 1
+    },
+    "extra_select_clause": {
+      "multiple_top_select_outputs": 18768,
+      "extra_top_clause": 21894,
+      "set_operator_anywhere": 1466,
+      "derived_top_from_value": 3331,
+      "top_groupby_or_having": 16874,
+      "top_single_sum_or_count": 69,
+      "explicit_join_top_from": 11118,
+      "explicit_join_anywhere": 12707,
+      "multiple_top_from_items": 12284,
+      "repeated_top_base_table": 1988,
+      "top_scalar_sum_or_count_shape": 62,
+      "top_single_sum_count_with_join_or_comma": 11
+    },
+    "subquery_or_non_inner_join": {
+      "multiple_top_from_items": 4006,
+      "explicit_join_top_from": 4006,
+      "explicit_join_anywhere": 4006,
+      "derived_top_from_value": 175,
+      "multiple_top_select_outputs": 3059,
+      "repeated_top_base_table": 226,
+      "top_scalar_sum_or_count_shape": 1,
+      "top_single_sum_count_with_join_or_comma": 1,
+      "top_single_sum_or_count": 1,
+      "no_extra_clause_single_sum_count_with_join_or_comma": 1,
+      "set_operator_anywhere": 6
+    },
+    "not_single_aggregate": {
+      "multiple_top_from_items": 16,
+      "explicit_join_top_from": 6,
+      "explicit_join_anywhere": 1449
+    },
+    "unknown_table_or_repeated_relation": {
+      "repeated_top_base_table": 1441,
+      "multiple_top_from_items": 1443,
+      "explicit_join_top_from": 1126,
+      "explicit_join_anywhere": 1126,
+      "multiple_top_select_outputs": 1084,
+      "derived_top_from_value": 3
+    },
+    "non_column_expression": {
+      "top_scalar_sum_or_count_shape": 4,
+      "top_single_sum_or_count": 4
+    },
+    "V4_RECOGNIZED_CACHED_OFFICIAL_ALL_AST": {
+      "top_scalar_sum_or_count_shape": 6,
+      "top_single_sum_or_count": 6
+    },
+    "non_integer_column": {
+      "top_scalar_sum_or_count_shape": 90,
+      "top_single_sum_count_with_join_or_comma": 1,
+      "top_single_sum_or_count": 90,
+      "no_extra_clause_single_sum_count_with_join_or_comma": 1,
+      "explicit_join_top_from": 1,
+      "explicit_join_anywhere": 3,
+      "multiple_top_from_items": 1
+    },
+    "unsupported_aggregate": {
+      "multiple_top_from_items": 1,
+      "explicit_join_top_from": 1,
+      "explicit_join_anywhere": 8,
+      "set_operator_anywhere": 1
+    },
+    "unsupported_predicate_operator": {
+      "top_scalar_sum_or_count_shape": 2,
+      "top_single_sum_or_count": 2
+    },
+    "unsupported_join": {
+      "multiple_top_select_outputs": 32,
+      "derived_top_from_value": 27,
+      "explicit_join_top_from": 48,
+      "explicit_join_anywhere": 48,
+      "multiple_top_from_items": 48,
+      "repeated_top_base_table": 22,
+      "top_scalar_sum_or_count_shape": 1,
+      "top_single_sum_count_with_join_or_comma": 1,
+      "top_single_sum_or_count": 1,
+      "no_extra_clause_single_sum_count_with_join_or_comma": 1,
+      "set_operator_anywhere": 1
+    }
+  },
+  "unsupported_identifier_from_shapes": {
+    "derived_value_dict,derived_value_dict": 146,
+    "derived_value_dict,base_string": 36,
+    "derived_value_dict": 3757,
+    "base_alias,derived_value_dict": 1873,
+    "base_string,derived_value_dict": 40,
+    "derived_value_dict,base_alias": 1013,
+    "derived_value_dict,derived_value_dict,derived_value_dict": 1,
+    "base_alias,derived_value_dict,derived_value_dict": 6,
+    "base_alias,derived_value_dict,base_alias": 2,
+    "derived_value_dict,base_alias,base_alias": 4,
+    "derived_value_dict,derived_value_dict,base_alias": 1,
+    "base_alias,derived_value_dict,derived_value_dict,derived_value_dict": 1,
+    "derived_value_dict,derived_value_dict,base_string": 1,
+    "derived_value_dict,derived_value_dict,derived_value_dict,base_alias": 1,
+    "derived_value_dict,derived_value_dict,derived_value_dict,derived_value_dict": 6,
+    "derived_value_dict,base_alias,base_alias,base_alias": 1
+  },
+  "examples": {
+    "unsupported_identifier": [
+      {
+        "row_id": "calcite:2",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "unsupported_identifier",
+        "original_sql": "SELECT COUNT(*) AS VOLUME, SUM(t0.SAL) AS C1_SUM_SAL FROM (SELECT SAL, ENAME FROM EMP WHERE 1 = 2) AS t0 INNER JOIN (SELECT ENAME FROM EMP) AS t1 ON t0.ENAME = t1.ENAME",
+        "ast": {
+          "select": [
+            {
+              "value": {
+                "count": "*"
+              },
+              "name": "VOLUME"
+            },
+            {
+              "value": {
+                "sum": "T0__SAL"
+              },
+              "name": "C1_SUM_SAL"
+            }
+          ],
+          "from": [
+            {
+              "value": {
+                "select": [
+                  {
+                    "value": "SAL"
+                  },
+                  {
+                    "value": "ENAME"
+                  }
+                ],
+                "from": "EMP",
+                "where": {
+                  "eq": [
+                    1,
+                    2
+                  ]
+                }
+              },
+              "name": "T0"
+            },
+            {
+              "inner join": {
+                "value": {
+                  "select": {
+                    "value": "ENAME"
+                  },
+                  "from": "EMP"
+                },
+                "name": "T1"
+              },
+              "on": {
+                "eq": [
+                  "T0__ENAME",
+                  "T1__ENAME"
+                ]
+              }
+            }
+          ]
+        },
+        "sql_sha256": "e36ff135108d74f05611710b9e35c20807dbccef8932f71a347cd2111501100a",
+        "ast_sha256": "af44cfe6453837a9b1056068a9567f3ccd40e4b7321d8ab4af7fcbe6ff6457ec",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "calcite:10",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "unsupported_identifier",
+        "original_sql": "SELECT * FROM (SELECT * FROM EMP WHERE FALSE) AS t0 LEFT JOIN DEPT ON t0.DEPTNO = DEPT.DEPTNO",
+        "ast": {
+          "select": "*",
+          "from": [
+            {
+              "value": {
+                "select": "*",
+                "from": "EMP",
+                "where": false
+              },
+              "name": "T0"
+            },
+            {
+              "left join": "DEPT",
+              "on": {
+                "eq": [
+                  "T0__DEPTNO",
+                  "DEPT__DEPTNO"
+                ]
+              }
+            }
+          ]
+        },
+        "sql_sha256": "c46a27a2d35df83acf7bf69a2a112fbb0cdd29598953edc8adbaea4d29db91cc",
+        "ast_sha256": "fd554b35d54dced6ca4fd5bcb9b7c33e0c49593ca24218e302a5082fbe9e737c",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "calcite:17",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "unsupported_identifier",
+        "original_sql": "SELECT t.DEPTNO AS DEPARTMENT_ID, t.SAL AS SALARY FROM (SELECT SAL, DEPTNO FROM EMP) AS t INNER JOIN (SELECT DEPTNO FROM DEPT) AS t0 ON t.DEPTNO = t0.DEPTNO",
+        "ast": {
+          "select": [
+            {
+              "value": "T__DEPTNO",
+              "name": "DEPARTMENT_ID"
+            },
+            {
+              "value": "T__SAL",
+              "name": "SALARY"
+            }
+          ],
+          "from": [
+            {
+              "value": {
+                "select": [
+                  {
+                    "value": "SAL"
+                  },
+                  {
+                    "value": "DEPTNO"
+                  }
+                ],
+                "from": "EMP"
+              },
+              "name": "T"
+            },
+            {
+              "inner join": {
+                "value": {
+                  "select": {
+                    "value": "DEPTNO"
+                  },
+                  "from": "DEPT"
+                },
+                "name": "T0"
+              },
+              "on": {
+                "eq": [
+                  "T__DEPTNO",
+                  "T0__DEPTNO"
+                ]
+              }
+            }
+          ]
+        },
+        "sql_sha256": "bc4214c4c50fe1c3d6cc91e87e12ed21b02ec9b2baf5d31f188f16426c3af363",
+        "ast_sha256": "af9c142efd782a24314ffc135c94e7c8cff1f1376ea9a2529cb48855891f0609",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      }
+    ],
+    "extra_select_clause": [
+      {
+        "row_id": "calcite:8",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "extra_select_clause",
+        "original_sql": "SELECT DEPTNO, DEPTNO FROM DEPT ORDER BY 2 OFFSET 1 ROWS",
+        "ast": {
+          "select": [
+            {
+              "value": "DEPTNO"
+            },
+            {
+              "value": "DEPTNO"
+            }
+          ],
+          "from": "DEPT",
+          "orderby": {
+            "value": 2
+          },
+          "offset": 1
+        },
+        "sql_sha256": "cf52b559325f9199aab983ab63582b880f4cdc5fa63ce07fb03141099b9480a5",
+        "ast_sha256": "ba63b2d0492f684cbe483765a22417e01cbb0e0be826b539c77d0c8d9976c0a1",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "calcite:8",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "extra_select_clause",
+        "original_sql": "SELECT DEPTNO, DEPTNO FROM DEPT ORDER BY DEPTNO OFFSET 1 ROWS",
+        "ast": {
+          "select": [
+            {
+              "value": "DEPTNO"
+            },
+            {
+              "value": "DEPTNO"
+            }
+          ],
+          "from": "DEPT",
+          "orderby": {
+            "value": "DEPTNO"
+          },
+          "offset": 1
+        },
+        "sql_sha256": "f64cda69dbdeed20803f2e93470ad7b8013ae44b3a4e1ba7cf02d64ca6c29396",
+        "ast_sha256": "6e38eefbd1eb107f96121a220b719a514b617a3a91e77042eb4e2b2f2015c74f",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "calcite:9",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "extra_select_clause",
+        "original_sql": "SELECT DEPTNO, CAST(DEPTNO AS DOUBLE PRECISION) FROM DEPT ORDER BY CAST(DEPTNO AS DOUBLE PRECISION) OFFSET 1 ROWS",
+        "ast": {
+          "select": [
+            {
+              "value": "DEPTNO"
+            },
+            {
+              "value": {
+                "cast": [
+                  "DEPTNO",
+                  {
+                    "double_precision": {}
+                  }
+                ]
+              }
+            }
+          ],
+          "from": "DEPT",
+          "orderby": {
+            "value": {
+              "cast": [
+                "DEPTNO",
+                {
+                  "double_precision": {}
+                }
+              ]
+            }
+          },
+          "offset": 1
+        },
+        "sql_sha256": "99389daa5760fce46ea1aa1f887b3a25c3fe1ea451fc8fdf69088191efccd5ae",
+        "ast_sha256": "1127fabb3388c3ee6b88822fe93c2f8a0f835b15be068cb4681125d76d778500",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      }
+    ],
+    "unknown_table_or_repeated_relation": [
+      {
+        "row_id": "calcite:49",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "unknown_table_or_repeated_relation",
+        "original_sql": "SELECT * FROM EMP, EMP AS EMP0 WHERE CASE WHEN EMP.MGR IS NOT NULL THEN CAST(EMP.MGR AS INTEGER) ELSE -1 END = CASE WHEN EMP0.MGR IS NOT NULL THEN CAST(EMP0.MGR AS INTEGER) ELSE -1 END",
+        "ast": {
+          "select": "*",
+          "from": [
+            "EMP",
+            {
+              "value": "EMP",
+              "name": "EMP0"
+            }
+          ],
+          "where": {
+            "eq": [
+              {
+                "case": [
+                  {
+                    "then": {
+                      "cast": [
+                        "EMP__MGR",
+                        {
+                          "integer": {}
+                        }
+                      ]
+                    },
+                    "when": {
+                      "exists": "EMP__MGR"
+                    }
+                  },
+                  -1
+                ]
+              },
+              {
+                "case": [
+                  {
+                    "then": {
+                      "cast": [
+                        "EMP0__MGR",
+                        {
+                          "integer": {}
+                        }
+                      ]
+                    },
+                    "when": {
+                      "exists": "EMP0__MGR"
+                    }
+                  },
+                  -1
+                ]
+              }
+            ]
+          }
+        },
+        "sql_sha256": "dfefc12358cd60140bdf5cbf43330e8cd1b83e043f3f293744995c4e0894b238",
+        "ast_sha256": "6832dfbc3bbeccdbd52ffe4369ba242c08ca46e51945167a0add92570b172458",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "calcite:49",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "unknown_table_or_repeated_relation",
+        "original_sql": "SELECT * FROM EMP AS EMP1 INNER JOIN EMP AS EMP2 ON CASE WHEN EMP1.MGR IS NOT NULL THEN CAST(EMP1.MGR AS INTEGER) ELSE -1 END = CASE WHEN EMP2.MGR IS NOT NULL THEN CAST(EMP2.MGR AS INTEGER) ELSE -1 END",
+        "ast": {
+          "select": "*",
+          "from": [
+            {
+              "value": "EMP",
+              "name": "EMP1"
+            },
+            {
+              "inner join": {
+                "value": "EMP",
+                "name": "EMP2"
+              },
+              "on": {
+                "eq": [
+                  {
+                    "case": [
+                      {
+                        "then": {
+                          "cast": [
+                            "EMP1__MGR",
+                            {
+                              "integer": {}
+                            }
+                          ]
+                        },
+                        "when": {
+                          "exists": "EMP1__MGR"
+                        }
+                      },
+                      -1
+                    ]
+                  },
+                  {
+                    "case": [
+                      {
+                        "then": {
+                          "cast": [
+                            "EMP2__MGR",
+                            {
+                              "integer": {}
+                            }
+                          ]
+                        },
+                        "when": {
+                          "exists": "EMP2__MGR"
+                        }
+                      },
+                      -1
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sql_sha256": "8b6d598c933f510db777300420296bfbd6cee133fda9880aac227a8f81749a40",
+        "ast_sha256": "d465324fe2210b4d424e2fbe0ce3391c4b37a41b76d234df477725b9627baee2",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "calcite:56",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "unknown_table_or_repeated_relation",
+        "original_sql": "SELECT * FROM EMP, EMP AS EMP0, DEPT WHERE EMP.DEPTNO = DEPT.DEPTNO AND EMP0.DEPTNO = DEPT.DEPTNO",
+        "ast": {
+          "select": "*",
+          "from": [
+            "EMP",
+            {
+              "value": "EMP",
+              "name": "EMP0"
+            },
+            "DEPT"
+          ],
+          "where": {
+            "and": [
+              {
+                "eq": [
+                  "EMP__DEPTNO",
+                  "DEPT__DEPTNO"
+                ]
+              },
+              {
+                "eq": [
+                  "EMP0__DEPTNO",
+                  "DEPT__DEPTNO"
+                ]
+              }
+            ]
+          }
+        },
+        "sql_sha256": "23a361644e0ea36df9065f14bf44234b43b9503074f0fde2f7a65a36192c4637",
+        "ast_sha256": "90c0866384288866f8ce165b05e17c01e4e24ce245ca2447cc5951aad3210a94",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      }
+    ],
+    "non_integer_column": [
+      {
+        "row_id": "calcite:149",
+        "query_index": 0,
+        "status": "INELIGIBLE",
+        "reason": "non_integer_column",
+        "original_sql": "SELECT COUNT(*) FROM EMP INNER JOIN DEPT ON EMP.JOB = DEPT.NAME",
+        "ast": {
+          "select": {
+            "value": {
+              "count": "*"
+            }
+          },
+          "from": [
+            "EMP",
+            {
+              "inner join": "DEPT",
+              "on": {
+                "eq": [
+                  "EMP__JOB",
+                  "DEPT__NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "sql_sha256": "d3c577e62b0f72c7376d669f17251b6c05be1f80f5a69ea7db7d0c8dcb896ecb",
+        "ast_sha256": "8bcbaaed673e82ad222b12634eb575bb135defdf3ba4ebd26bc6ff9bff34e794",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json"
+      },
+      {
+        "row_id": "leetcode:2497",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "non_integer_column",
+        "original_sql": "SELECT SUM(TIV_2016) AS TIV_2016 FROM INSURANCE WHERE CONCAT(LAT, LON) IN ( SELECT CONCAT(LAT, LON) FROM INSURANCE GROUP BY LAT, LON HAVING COUNT(*) = 1) AND TIV_2015 IN ( SELECT TIV_2015 FROM INSURANCE GROUP BY TIV_2015 HAVING COUNT(*) > 1 )",
+        "ast": {
+          "select": {
+            "value": {
+              "sum": "TIV_2016"
+            },
+            "name": "TIV_2016"
+          },
+          "from": "INSURANCE",
+          "where": {
+            "and": [
+              {
+                "in": [
+                  {
+                    "concat": [
+                      "LAT",
+                      "LON"
+                    ]
+                  },
+                  {
+                    "select": {
+                      "value": {
+                        "concat": [
+                          "LAT",
+                          "LON"
+                        ]
+                      }
+                    },
+                    "from": "INSURANCE",
+                    "groupby": [
+                      {
+                        "value": "LAT"
+                      },
+                      {
+                        "value": "LON"
+                      }
+                    ],
+                    "having": {
+                      "eq": [
+                        {
+                          "count": "*"
+                        },
+                        1
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "in": [
+                  "TIV_2015",
+                  {
+                    "select": {
+                      "value": "TIV_2015"
+                    },
+                    "from": "INSURANCE",
+                    "groupby": {
+                      "value": "TIV_2015"
+                    },
+                    "having": {
+                      "gt": [
+                        {
+                          "count": "*"
+                        },
+                        1
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "sql_sha256": "8e9dbe785875ed4b990a5b9de4c1ee6bdd109297b8d06f79ead1fbd30ec97b68",
+        "ast_sha256": "f19edebae78173ed6dec7879246a7b59fd2b066ab335d39653b00be365cc1044",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json"
+      },
+      {
+        "row_id": "leetcode:2498",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "non_integer_column",
+        "original_sql": "SELECT SUM(TIV_2016) AS TIV_2016 FROM INSURANCE WHERE TIV_2015 NOT IN (SELECT TIV_2015 FROM INSURANCE GROUP BY TIV_2015 HAVING COUNT(*)=1) AND (LAT,LON) NOT IN (SELECT LAT,LON FROM INSURANCE GROUP BY LAT,LON HAVING COUNT(*)>1)",
+        "ast": {
+          "select": {
+            "value": {
+              "sum": "TIV_2016"
+            },
+            "name": "TIV_2016"
+          },
+          "from": "INSURANCE",
+          "where": {
+            "and": [
+              {
+                "nin": [
+                  "TIV_2015",
+                  {
+                    "select": {
+                      "value": "TIV_2015"
+                    },
+                    "from": "INSURANCE",
+                    "groupby": {
+                      "value": "TIV_2015"
+                    },
+                    "having": {
+                      "eq": [
+                        {
+                          "count": "*"
+                        },
+                        1
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "nin": [
+                  [
+                    "LAT",
+                    "LON"
+                  ],
+                  {
+                    "select": [
+                      {
+                        "value": "LAT"
+                      },
+                      {
+                        "value": "LON"
+                      }
+                    ],
+                    "from": "INSURANCE",
+                    "groupby": [
+                      {
+                        "value": "LAT"
+                      },
+                      {
+                        "value": "LON"
+                      }
+                    ],
+                    "having": {
+                      "gt": [
+                        {
+                          "count": "*"
+                        },
+                        1
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "sql_sha256": "7694a35e366fdb3f90c849b2c48c47338923bcd17acb089684628362c12bd8ba",
+        "ast_sha256": "1983b3cff0f46930868fd73b4fe2526bad1633943bc3b34fa04f3851a78c9cf4",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json"
+      }
+    ],
+    "unsupported_join": [
+      {
+        "row_id": "leetcode:1145",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "unsupported_join",
+        "original_sql": "SELECT A1.PLAYER_ID, A1.DEVICE_ID FROM ACTIVITY A1 JOIN (SELECT PLAYER_ID, MIN(EVENT_DATE) AS DATE FROM ACTIVITY GROUP BY 1) A2 WHERE A1.PLAYER_ID = A2.PLAYER_ID AND A1.EVENT_DATE = A2.DATE",
+        "ast": {
+          "select": [
+            {
+              "value": "A1__PLAYER_ID"
+            },
+            {
+              "value": "A1__DEVICE_ID"
+            }
+          ],
+          "from": [
+            {
+              "value": "ACTIVITY",
+              "name": "A1"
+            },
+            {
+              "join": {
+                "value": {
+                  "select": [
+                    {
+                      "value": "PLAYER_ID"
+                    },
+                    {
+                      "value": {
+                        "min": "EVENT_DATE"
+                      },
+                      "name": "DATE"
+                    }
+                  ],
+                  "from": "ACTIVITY",
+                  "groupby": {
+                    "value": 1
+                  }
+                },
+                "name": "A2"
+              }
+            }
+          ],
+          "where": {
+            "and": [
+              {
+                "eq": [
+                  "A1__PLAYER_ID",
+                  "A2__PLAYER_ID"
+                ]
+              },
+              {
+                "eq": [
+                  "A1__EVENT_DATE",
+                  "A2__DATE"
+                ]
+              }
+            ]
+          }
+        },
+        "sql_sha256": "427b5d282628f153544f79d43c46aa00c3ddb5723f2e1361cfb92c735831b7b8",
+        "ast_sha256": "5e8c3a7752a2c78285d357b1039433259a18709d46150672ed6dd710eebbdd3b",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_001/attempt_001/scan_report.json"
+      },
+      {
+        "row_id": "leetcode:1252",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "unsupported_join",
+        "original_sql": "SELECT A.PLAYER_ID, A.DEVICE_ID FROM ACTIVITY A JOIN (SELECT PLAYER_ID, MIN(EVENT_DATE) AS EVENT_DATE FROM ACTIVITY GROUP BY PLAYER_ID) B WHERE A.PLAYER_ID=B.PLAYER_ID AND A.EVENT_DATE = B.EVENT_DATE",
+        "ast": {
+          "select": [
+            {
+              "value": "A__PLAYER_ID"
+            },
+            {
+              "value": "A__DEVICE_ID"
+            }
+          ],
+          "from": [
+            {
+              "value": "ACTIVITY",
+              "name": "A"
+            },
+            {
+              "join": {
+                "value": {
+                  "select": [
+                    {
+                      "value": "PLAYER_ID"
+                    },
+                    {
+                      "value": {
+                        "min": "EVENT_DATE"
+                      },
+                      "name": "EVENT_DATE"
+                    }
+                  ],
+                  "from": "ACTIVITY",
+                  "groupby": {
+                    "value": "PLAYER_ID"
+                  }
+                },
+                "name": "B"
+              }
+            }
+          ],
+          "where": {
+            "and": [
+              {
+                "eq": [
+                  "A__PLAYER_ID",
+                  "B__PLAYER_ID"
+                ]
+              },
+              {
+                "eq": [
+                  "A__EVENT_DATE",
+                  "B__EVENT_DATE"
+                ]
+              }
+            ]
+          }
+        },
+        "sql_sha256": "c794d46d5c31332ef515c7750edde0a3aa16806c312e1e7e015934eb19c56b25",
+        "ast_sha256": "695a5bb9e42eef3013c17d3bd65b4bef46ff30935888ca618c8f686c629908fe",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_001/attempt_001/scan_report.json"
+      },
+      {
+        "row_id": "leetcode:1999",
+        "query_index": 1,
+        "status": "INELIGIBLE",
+        "reason": "unsupported_join",
+        "original_sql": "SELECT ROUND(COUNT(DISTINCT(A.PLAYER_ID))/(SELECT COUNT(DISTINCT(PLAYER_ID)) FROM ACTIVITY),2) AS FRACTION FROM ACTIVITY AS A INNER JOIN ACTIVITY AS B INNER JOIN (SELECT PLAYER_ID,MIN(EVENT_DATE) AS MINDATE FROM ACTIVITY GROUP BY PLAYER_ID) AS C ON DATE(A.EVENT_DATE)+1=DATE(B.EVENT_DATE) AND A.PLAYER_ID=B.PLAYER_ID AND A.PLAYER_ID=C.PLAYER_ID AND A.EVENT_DATE=C.MINDATE",
+        "ast": {
+          "select": {
+            "value": {
+              "round": [
+                {
+                  "div": [
+                    {
+                      "count": {
+                        "distinct": "A__PLAYER_ID"
+                      }
+                    },
+                    {
+                      "select": {
+                        "value": {
+                          "count": {
+                            "distinct": "PLAYER_ID"
+                          }
+                        }
+                      },
+                      "from": "ACTIVITY"
+                    }
+                  ]
+                },
+                2
+              ]
+            },
+            "name": "FRACTION"
+          },
+          "from": [
+            {
+              "value": "ACTIVITY",
+              "name": "A"
+            },
+            {
+              "inner join": {
+                "value": "ACTIVITY",
+                "name": "B"
+              }
+            },
+            {
+              "inner join": {
+                "value": {
+                  "select": [
+                    {
+                      "value": "PLAYER_ID"
+                    },
+                    {
+                      "value": {
+                        "min": "EVENT_DATE"
+                      },
+                      "name": "MINDATE"
+                    }
+                  ],
+                  "from": "ACTIVITY",
+                  "groupby": {
+                    "value": "PLAYER_ID"
+                  }
+                },
+                "name": "C"
+              },
+              "on": {
+                "and": [
+                  {
+                    "eq": [
+                      {
+                        "add": [
+                          {
+                            "date": "A__EVENT_DATE"
+                          },
+                          1
+                        ]
+                      },
+                      {
+                        "date": "B__EVENT_DATE"
+                      }
+                    ]
+                  },
+                  {
+                    "eq": [
+                      "A__PLAYER_ID",
+                      "B__PLAYER_ID"
+                    ]
+                  },
+                  {
+                    "eq": [
+                      "A__PLAYER_ID",
+                      "C__PLAYER_ID"
+                    ]
+                  },
+                  {
+                    "eq": [
+                      "A__EVENT_DATE",
+                      "C__MINDATE"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "sql_sha256": "0898bc050cbd8cc776e178d7370cc2ffe35b07c050f8fc56a1332b9ef7e64fe9",
+        "ast_sha256": "4b5c19c75a101471eba84649801c86fba41576d5e1e96fe53443a4d6f5ce4b3f",
+        "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_001/attempt_001/scan_report.json"
+      }
+    ]
+  },
+  "scalar_sum_count_join_shape_candidates": [
+    {
+      "slot_ordinal": 296,
+      "row_id": "calcite:149",
+      "query_index": 0,
+      "dataset": "calcite",
+      "status": "INELIGIBLE",
+      "reason": "non_integer_column",
+      "original_sql": "SELECT COUNT(*) FROM EMP INNER JOIN DEPT ON EMP.JOB = DEPT.NAME",
+      "sql_sha256": "d3c577e62b0f72c7376d669f17251b6c05be1f80f5a69ea7db7d0c8dcb896ecb",
+      "ast_sha256": "8bcbaaed673e82ad222b12634eb575bb135defdf3ba4ebd26bc6ff9bff34e794",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "count": "*"
+          }
+        },
+        "from": [
+          "EMP",
+          {
+            "inner join": "DEPT",
+            "on": {
+              "eq": [
+                "EMP__JOB",
+                "DEPT__NAME"
+              ]
+            }
+          }
+        ]
+      },
+      "from_shapes": [
+        "base_string",
+        "base_string"
+      ]
+    },
+    {
+      "slot_ordinal": 486,
+      "row_id": "calcite:244",
+      "query_index": 0,
+      "dataset": "calcite",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(t0.SAL) FROM EMP INNER JOIN (SELECT SAL FROM EMP GROUP BY SAL) AS t0 ON EMP.SAL = t0.SAL",
+      "sql_sha256": "bd32abd4d482953bc137ae39e0554ac46cca16a80670aee51ddfd3323750cd51",
+      "ast_sha256": "0e9ca176c206f0867fd3e23402ac2abcedb40629db9fa0e87231d542d9bb839f",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "T0__SAL"
+          }
+        },
+        "from": [
+          "EMP",
+          {
+            "inner join": {
+              "value": {
+                "select": {
+                  "value": "SAL"
+                },
+                "from": "EMP",
+                "groupby": {
+                  "value": "SAL"
+                }
+              },
+              "name": "T0"
+            },
+            "on": {
+              "eq": [
+                "EMP__SAL",
+                "T0__SAL"
+              ]
+            }
+          }
+        ]
+      },
+      "from_shapes": [
+        "base_string",
+        "derived_value_dict"
+      ]
+    },
+    {
+      "slot_ordinal": 526,
+      "row_id": "calcite:264",
+      "query_index": 0,
+      "dataset": "calcite",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(t0.SAL) FROM (SELECT * FROM EMP WHERE ENAME = 'A') AS t0 INNER JOIN DEPT ON t0.JOB = DEPT.NAME",
+      "sql_sha256": "e7d640779c1663448467ea42490eaea475d2879b2b08194fac2b3d34322c9690",
+      "ast_sha256": "b72508f0a4b7b52ab6b05831f65da26978abf206393f77308a98244785c8da0f",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "T0__SAL"
+          }
+        },
+        "from": [
+          {
+            "value": {
+              "select": "*",
+              "from": "EMP",
+              "where": {
+                "eq": [
+                  "ENAME",
+                  {
+                    "literal": "A"
+                  }
+                ]
+              }
+            },
+            "name": "T0"
+          },
+          {
+            "inner join": "DEPT",
+            "on": {
+              "eq": [
+                "T0__JOB",
+                "DEPT__NAME"
+              ]
+            }
+          }
+        ]
+      },
+      "from_shapes": [
+        "derived_value_dict",
+        "base_string"
+      ]
+    },
+    {
+      "slot_ordinal": 560,
+      "row_id": "calcite:281",
+      "query_index": 0,
+      "dataset": "calcite",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(t0.SAL) FROM (SELECT * FROM EMP WHERE ENAME = 'A') AS t0 INNER JOIN DEPT ON t0.JOB = DEPT.NAME",
+      "sql_sha256": "e7d640779c1663448467ea42490eaea475d2879b2b08194fac2b3d34322c9690",
+      "ast_sha256": "b72508f0a4b7b52ab6b05831f65da26978abf206393f77308a98244785c8da0f",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_v3_all_01/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "T0__SAL"
+          }
+        },
+        "from": [
+          {
+            "value": {
+              "select": "*",
+              "from": "EMP",
+              "where": {
+                "eq": [
+                  "ENAME",
+                  {
+                    "literal": "A"
+                  }
+                ]
+              }
+            },
+            "name": "T0"
+          },
+          {
+            "inner join": "DEPT",
+            "on": {
+              "eq": [
+                "T0__JOB",
+                "DEPT__NAME"
+              ]
+            }
+          }
+        ]
+      },
+      "from_shapes": [
+        "derived_value_dict",
+        "base_string"
+      ]
+    },
+    {
+      "slot_ordinal": 5903,
+      "row_id": "leetcode:2491",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "subquery_or_non_inner_join",
+      "original_sql": "SELECT SUM( I1.TIV_2016 ) AS TIV_2016 FROM INSURANCE AS I1 LEFT JOIN ( SELECT PID, COUNT( * ) OVER( PARTITION BY CONCAT( LAT, ' ', LON ) ) AS COUNT_LAT_LON, COUNT( * ) OVER( PARTITION BY TIV_2015 ) AS COUNT_2015 FROM INSURANCE ) AS I2 ON I1.PID = I2.PID WHERE I2.COUNT_LAT_LON = 1 AND I2.COUNT_2015 >1",
+      "sql_sha256": "a5bf9db11824a7ed72306d6bc5ea04be8be9d19c05d2535b901b4bb929edd365",
+      "ast_sha256": "243ae63bc05bd95fe01660a3a389a19d68679fa800dea97563c8e466c05b8f63",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "I1__TIV_2016"
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": "INSURANCE",
+            "name": "I1"
+          },
+          {
+            "left join": {
+              "value": {
+                "select": [
+                  {
+                    "value": "PID"
+                  },
+                  {
+                    "name": "COUNT_LAT_LON",
+                    "value": {
+                      "count": "*"
+                    },
+                    "over": {
+                      "partitionby": {
+                        "concat": [
+                          "LAT",
+                          {
+                            "literal": " "
+                          },
+                          "LON"
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "name": "COUNT_2015",
+                    "value": {
+                      "count": "*"
+                    },
+                    "over": {
+                      "partitionby": "TIV_2015"
+                    }
+                  }
+                ],
+                "from": "INSURANCE"
+              },
+              "name": "I2"
+            },
+            "on": {
+              "eq": [
+                "I1__PID",
+                "I2__PID"
+              ]
+            }
+          }
+        ],
+        "where": {
+          "and": [
+            {
+              "eq": [
+                "I2__COUNT_LAT_LON",
+                1
+              ]
+            },
+            {
+              "gt": [
+                "I2__COUNT_2015",
+                1
+              ]
+            }
+          ]
+        }
+      },
+      "from_shapes": [
+        "base_alias",
+        "derived_value_dict"
+      ]
+    },
+    {
+      "slot_ordinal": 6147,
+      "row_id": "leetcode:2613",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(A.TIV_2016) TIV_2016 FROM ( SELECT A.TIV_2016, A.LAT, A.LON, COUNT(*) OVER (PARTITION BY A.TIV_2015) ROW_NUMBER FROM INSURANCE A ) A INNER JOIN ( SELECT LAT,LON,COUNT(*) FROM INSURANCE GROUP BY LAT,LON HAVING COUNT(*) = 1 ) B ON A.LAT = B.LAT AND A.LON = B.LON WHERE A.ROW_NUMBER > 1",
+      "sql_sha256": "888c4375d34f2d98e26d960dcfd8236588dfeec0194021b7d659f11a21ff1d91",
+      "ast_sha256": "157bf1df2ab8f54e5dca24da19efbb383c954b4fcfb9d4b8a56269ff521e3ff3",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "A__TIV_2016"
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": {
+              "select": [
+                {
+                  "value": "A__TIV_2016"
+                },
+                {
+                  "value": "A__LAT"
+                },
+                {
+                  "value": "A__LON"
+                },
+                {
+                  "name": "ROW_NUMBER",
+                  "value": {
+                    "count": "*"
+                  },
+                  "over": {
+                    "partitionby": "A__TIV_2015"
+                  }
+                }
+              ],
+              "from": {
+                "value": "INSURANCE",
+                "name": "A"
+              }
+            },
+            "name": "A"
+          },
+          {
+            "inner join": {
+              "value": {
+                "select": [
+                  {
+                    "value": "LAT"
+                  },
+                  {
+                    "value": "LON"
+                  },
+                  {
+                    "value": {
+                      "count": "*"
+                    }
+                  }
+                ],
+                "from": "INSURANCE",
+                "groupby": [
+                  {
+                    "value": "LAT"
+                  },
+                  {
+                    "value": "LON"
+                  }
+                ],
+                "having": {
+                  "eq": [
+                    {
+                      "count": "*"
+                    },
+                    1
+                  ]
+                }
+              },
+              "name": "B"
+            },
+            "on": {
+              "and": [
+                {
+                  "eq": [
+                    "A__LAT",
+                    "B__LAT"
+                  ]
+                },
+                {
+                  "eq": [
+                    "A__LON",
+                    "B__LON"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "where": {
+          "gt": [
+            "A__ROW_NUMBER",
+            1
+          ]
+        }
+      },
+      "from_shapes": [
+        "derived_value_dict",
+        "derived_value_dict"
+      ]
+    },
+    {
+      "slot_ordinal": 6159,
+      "row_id": "leetcode:2619",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(TIV_2016) TIV_2016 FROM INSURANCE I JOIN (SELECT PID FROM INSURANCE WHERE CONCAT(LAT,LON) IN (SELECT CONCAT(LAT,LON) FROM INSURANCE GROUP BY CONCAT(LAT,LON) HAVING COUNT(*) = 1))P ON I.PID = P.PID JOIN ( SELECT PID FROM INSURANCE WHERE TIV_2015 IN ( (SELECT TIV_2015 FROM INSURANCE GROUP BY 1 HAVING COUNT(*)>1)))Q ON I.PID = Q.PID",
+      "sql_sha256": "e836ac09145c724ae42c4d6461b69bf1ad1f73f7d64dca1410986ecd7649631a",
+      "ast_sha256": "3aa49f44e4fc8dab9d6e6fab8d504cd9e4444395af5cf496fa50ba758dd6c2b3",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "TIV_2016"
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": "INSURANCE",
+            "name": "I"
+          },
+          {
+            "join": {
+              "value": {
+                "select": {
+                  "value": "PID"
+                },
+                "from": "INSURANCE",
+                "where": {
+                  "in": [
+                    {
+                      "concat": [
+                        "LAT",
+                        "LON"
+                      ]
+                    },
+                    {
+                      "select": {
+                        "value": {
+                          "concat": [
+                            "LAT",
+                            "LON"
+                          ]
+                        }
+                      },
+                      "from": "INSURANCE",
+                      "groupby": {
+                        "value": {
+                          "concat": [
+                            "LAT",
+                            "LON"
+                          ]
+                        }
+                      },
+                      "having": {
+                        "eq": [
+                          {
+                            "count": "*"
+                          },
+                          1
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "name": "P"
+            },
+            "on": {
+              "eq": [
+                "I__PID",
+                "P__PID"
+              ]
+            }
+          },
+          {
+            "join": {
+              "value": {
+                "select": {
+                  "value": "PID"
+                },
+                "from": "INSURANCE",
+                "where": {
+                  "in": [
+                    "TIV_2015",
+                    {
+                      "select": {
+                        "value": "TIV_2015"
+                      },
+                      "from": "INSURANCE",
+                      "groupby": {
+                        "value": 1
+                      },
+                      "having": {
+                        "gt": [
+                          {
+                            "count": "*"
+                          },
+                          1
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              "name": "Q"
+            },
+            "on": {
+              "eq": [
+                "I__PID",
+                "Q__PID"
+              ]
+            }
+          }
+        ]
+      },
+      "from_shapes": [
+        "base_alias",
+        "derived_value_dict",
+        "derived_value_dict"
+      ]
+    },
+    {
+      "slot_ordinal": 6183,
+      "row_id": "leetcode:2631",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(TIV_2016) AS TIV_2016 FROM (SELECT TIV_2015,TIV_2016,CONCAT(LAT,',',LON) AS LOCATION FROM INSURANCE GROUP BY LOCATION HAVING COUNT(*) = 1) Q JOIN (SELECT TIV_2015 FROM INSURANCE GROUP BY TIV_2015 HAVING COUNT(*) > 1) W USING(TIV_2015)",
+      "sql_sha256": "6db4fc357789d34b6d3a2bb2c8ee115c579216553dc87b393b1a06d1645d2096",
+      "ast_sha256": "596aa7859fb021a7bd65cd9374e27c22cb125c982eaca2fa405d7704cb18bb68",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "TIV_2016"
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": {
+              "select": [
+                {
+                  "value": "TIV_2015"
+                },
+                {
+                  "value": "TIV_2016"
+                },
+                {
+                  "value": {
+                    "concat": [
+                      "LAT",
+                      {
+                        "literal": ","
+                      },
+                      "LON"
+                    ]
+                  },
+                  "name": "LOCATION"
+                }
+              ],
+              "from": "INSURANCE",
+              "groupby": {
+                "value": "LOCATION"
+              },
+              "having": {
+                "eq": [
+                  {
+                    "count": "*"
+                  },
+                  1
+                ]
+              }
+            },
+            "name": "Q"
+          },
+          {
+            "join": {
+              "value": {
+                "select": {
+                  "value": "TIV_2015"
+                },
+                "from": "INSURANCE",
+                "groupby": {
+                  "value": "TIV_2015"
+                },
+                "having": {
+                  "gt": [
+                    {
+                      "count": "*"
+                    },
+                    1
+                  ]
+                }
+              },
+              "name": "W"
+            },
+            "using": "TIV_2015"
+          }
+        ]
+      },
+      "from_shapes": [
+        "derived_value_dict",
+        "derived_value_dict"
+      ]
+    },
+    {
+      "slot_ordinal": 6197,
+      "row_id": "leetcode:2638",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(TIV_2016) AS TIV_2016 FROM INSURANCE I INNER JOIN (SELECT DISTINCT TIV_2015 FROM INSURANCE GROUP BY TIV_2015 HAVING COUNT(*) >1) A ON I.TIV_2015 = A.TIV_2015 INNER JOIN (SELECT LAT, LON FROM INSURANCE GROUP BY LAT,LON HAVING COUNT(*) =1) B ON I.LAT = B.LAT AND I.LON = B.LON",
+      "sql_sha256": "e95cc0d04cc17729f71a6cfe32102663009c70385445abe2a3c1639c0fa2d16f",
+      "ast_sha256": "8a1eec0045febe11997a2826a236749c4c58fa945198a5e8f6d90ce3c12f2ecd",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "TIV_2016"
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": "INSURANCE",
+            "name": "I"
+          },
+          {
+            "inner join": {
+              "value": {
+                "select_distinct": {
+                  "value": "TIV_2015"
+                },
+                "from": "INSURANCE",
+                "groupby": {
+                  "value": "TIV_2015"
+                },
+                "having": {
+                  "gt": [
+                    {
+                      "count": "*"
+                    },
+                    1
+                  ]
+                }
+              },
+              "name": "A"
+            },
+            "on": {
+              "eq": [
+                "I__TIV_2015",
+                "A__TIV_2015"
+              ]
+            }
+          },
+          {
+            "inner join": {
+              "value": {
+                "select": [
+                  {
+                    "value": "LAT"
+                  },
+                  {
+                    "value": "LON"
+                  }
+                ],
+                "from": "INSURANCE",
+                "groupby": [
+                  {
+                    "value": "LAT"
+                  },
+                  {
+                    "value": "LON"
+                  }
+                ],
+                "having": {
+                  "eq": [
+                    {
+                      "count": "*"
+                    },
+                    1
+                  ]
+                }
+              },
+              "name": "B"
+            },
+            "on": {
+              "and": [
+                {
+                  "eq": [
+                    "I__LAT",
+                    "B__LAT"
+                  ]
+                },
+                {
+                  "eq": [
+                    "I__LON",
+                    "B__LON"
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "from_shapes": [
+        "base_alias",
+        "derived_value_dict",
+        "derived_value_dict"
+      ]
+    },
+    {
+      "slot_ordinal": 6223,
+      "row_id": "leetcode:2651",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(C.TIV_2016) AS TIV_2016 FROM ( SELECT A.PID, A.TIV_2015,A.TIV_2016,A.LAT,A.LON FROM INSURANCE A INNER JOIN INSURANCE B ON A.TIV_2015 = B.TIV_2015 AND A.PID != B.PID GROUP BY A.PID, A.TIV_2015,A.TIV_2016,A.LAT,A.LON )C LEFT JOIN INSURANCE D ON (C.LAT = D.LAT) AND (C.LON = D.LON) AND C.PID != D.PID WHERE D.PID IS NULL",
+      "sql_sha256": "d4badf0c94f17ecb63cfac46b2ce2d5bece7b0344a3b79b4fcc01985fd2b9fc4",
+      "ast_sha256": "829c43fa4b36db1b2d9cb4e3b3d135273f8cc01bf49cc0d493f485b050b7c6c8",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": "C__TIV_2016"
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": {
+              "select": [
+                {
+                  "value": "A__PID"
+                },
+                {
+                  "value": "A__TIV_2015"
+                },
+                {
+                  "value": "A__TIV_2016"
+                },
+                {
+                  "value": "A__LAT"
+                },
+                {
+                  "value": "A__LON"
+                }
+              ],
+              "from": [
+                {
+                  "value": "INSURANCE",
+                  "name": "A"
+                },
+                {
+                  "inner join": {
+                    "value": "INSURANCE",
+                    "name": "B"
+                  },
+                  "on": {
+                    "and": [
+                      {
+                        "eq": [
+                          "A__TIV_2015",
+                          "B__TIV_2015"
+                        ]
+                      },
+                      {
+                        "neq": [
+                          "A__PID",
+                          "B__PID"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "groupby": [
+                {
+                  "value": "A__PID"
+                },
+                {
+                  "value": "A__TIV_2015"
+                },
+                {
+                  "value": "A__TIV_2016"
+                },
+                {
+                  "value": "A__LAT"
+                },
+                {
+                  "value": "A__LON"
+                }
+              ]
+            },
+            "name": "C"
+          },
+          {
+            "left join": {
+              "value": "INSURANCE",
+              "name": "D"
+            },
+            "on": {
+              "and": [
+                {
+                  "eq": [
+                    "C__LAT",
+                    "D__LAT"
+                  ]
+                },
+                {
+                  "eq": [
+                    "C__LON",
+                    "D__LON"
+                  ]
+                },
+                {
+                  "neq": [
+                    "C__PID",
+                    "D__PID"
+                  ]
+                }
+              ]
+            }
+          }
+        ],
+        "where": {
+          "missing": "D__PID"
+        }
+      },
+      "from_shapes": [
+        "derived_value_dict",
+        "base_alias"
+      ]
+    },
+    {
+      "slot_ordinal": 6225,
+      "row_id": "leetcode:2652",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_identifier",
+      "original_sql": "SELECT SUM(DISTINCT A.TIV_2016) AS TIV_2016 FROM (SELECT * FROM INSURANCE GROUP BY LAT, LON HAVING COUNT(*) = 1) AS A, INSURANCE AS B WHERE A.PID != B.PID AND A.TIV_2015 = B.TIV_2015",
+      "sql_sha256": "2c5f2b69c528e5ddad308bf1bfd152fc7e15a1098e6cf6297971f4ba1bb6f953",
+      "ast_sha256": "30ad3b60e54c3b692352e615ec178ec7612abbabf4a7ea29d4f417aa9479df4a",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": {
+              "distinct": "A__TIV_2016"
+            }
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": {
+              "select": "*",
+              "from": "INSURANCE",
+              "groupby": [
+                {
+                  "value": "LAT"
+                },
+                {
+                  "value": "LON"
+                }
+              ],
+              "having": {
+                "eq": [
+                  {
+                    "count": "*"
+                  },
+                  1
+                ]
+              }
+            },
+            "name": "A"
+          },
+          {
+            "value": "INSURANCE",
+            "name": "B"
+          }
+        ],
+        "where": {
+          "and": [
+            {
+              "neq": [
+                "A__PID",
+                "B__PID"
+              ]
+            },
+            {
+              "eq": [
+                "A__TIV_2015",
+                "B__TIV_2015"
+              ]
+            }
+          ]
+        }
+      },
+      "from_shapes": [
+        "derived_value_dict",
+        "base_alias"
+      ]
+    },
+    {
+      "slot_ordinal": 6227,
+      "row_id": "leetcode:2653",
+      "query_index": 1,
+      "dataset": "leetcode",
+      "status": "INELIGIBLE",
+      "reason": "unsupported_join",
+      "original_sql": "SELECT SUM(DISTINCT I.TIV_2016) AS TIV_2016 FROM INSURANCE I JOIN INSURANCE I1 WHERE I.PID <> I1.PID AND I.TIV_2015 = I1.TIV_2015 AND I.PID NOT IN (SELECT I.PID FROM INSURANCE I JOIN INSURANCE I1 WHERE I.PID <> I1.PID AND I.LAT = I1.LAT AND I.LON = I1.LON)",
+      "sql_sha256": "252f849f7bca29acdc0d5c540e5eaa7465a00fed020347956ecf9ecd85da0026",
+      "ast_sha256": "245fcb65c9aab4b0f27ee6f3233650ebb64cb8f662d145590a0f6135b774219f",
+      "cached_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/runs/chunk_002/attempt_001/scan_report.json",
+      "ast": {
+        "select": {
+          "value": {
+            "sum": {
+              "distinct": "I__TIV_2016"
+            }
+          },
+          "name": "TIV_2016"
+        },
+        "from": [
+          {
+            "value": "INSURANCE",
+            "name": "I"
+          },
+          {
+            "join": {
+              "value": "INSURANCE",
+              "name": "I1"
+            }
+          }
+        ],
+        "where": {
+          "and": [
+            {
+              "neq": [
+                "I__PID",
+                "I1__PID"
+              ]
+            },
+            {
+              "eq": [
+                "I__TIV_2015",
+                "I1__TIV_2015"
+              ]
+            },
+            {
+              "nin": [
+                "I__PID",
+                {
+                  "select": {
+                    "value": "I__PID"
+                  },
+                  "from": [
+                    {
+                      "value": "INSURANCE",
+                      "name": "I"
+                    },
+                    {
+                      "join": {
+                        "value": "INSURANCE",
+                        "name": "I1"
+                      }
+                    }
+                  ],
+                  "where": {
+                    "and": [
+                      {
+                        "neq": [
+                          "I__PID",
+                          "I1__PID"
+                        ]
+                      },
+                      {
+                        "eq": [
+                          "I__LAT",
+                          "I1__LAT"
+                        ]
+                      },
+                      {
+                        "eq": [
+                          "I__LON",
+                          "I1__LON"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "from_shapes": [
+        "base_alias",
+        "base_alias"
+      ]
+    }
+  ],
+  "cautions": [
+    "FIRST_REASON counts do not measure all causes. AST features overlap and are not repair yield.",
+    "Non-null cached AST is official parser output, not proof of original SQL semantics.",
+    "JOIN-or-comma selection is structural; may include subqueries, unsupported types, DISTINCT, multiple roots or self joins."
+  ],
+  "resource": {
+    "wall_seconds": 1.3994800410000001,
+    "peak_rss_bytes_darwin": 20692992
+  }
+}

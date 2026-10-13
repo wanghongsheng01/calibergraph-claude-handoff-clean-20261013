@@ -1,0 +1,43 @@
+{
+  "status": "PROPOSED_NOT_IMPLEMENTED_NOT_EXECUTED",
+  "execution_authorized_this_turn": false,
+  "purpose": "One version-pinned baseline false-EQ diagnostic, not a new-mechanism experiment or fair speed ranking",
+  "case": "thrombosis_prediction/1172",
+  "input_source": "EVIDENCE.json plus exact hashes in local_sources; full three-table DDL",
+  "baseline": "sfu-db/ParSEval@88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "calls": {
+    "official_disprove": 1,
+    "may_generate_for_each_query": true,
+    "other_baseline_runs": 0,
+    "new_method_runs": 0,
+    "retries": 0
+  },
+  "official_parameters_unchanged": {
+    "solver_timeout_ms": 5000,
+    "generation_time_limit_s_per_query": 360,
+    "query_timeout_s": 15,
+    "set_semantics": false
+  },
+  "outer_resource_cap": {
+    "whole_diagnostic_wall_s": 60,
+    "total_cpu_s": 60,
+    "max_rss_bytes": 1073741824,
+    "workers": 1,
+    "cap_hit_verdict": "RESOURCE_STOP_CENSORED, never reproduced EQ"
+  },
+  "prelaunch_gate": {
+    "one_minute_load_max": 2,
+    "available_memory_gib_min": 3,
+    "on_failure": "Do not launch, queue, or retry; leave unrelated_project untouched"
+  },
+  "observation": "Passive stage/callback/cost logging only; no added callbacks or modified targets/scheduler; track lowering, CSP, Z3, SQLite, CPU and memory separately",
+  "control": "Static countermodel only in independent backend validation, never supplied to generator; include all source constraints",
+  "stop_rules": [
+    "NEQ: record non-reproduction and close this fixed attempt",
+    "EQ with valid independently checked non-equivalence: retain miss, localize implementation versus search cause, no novelty promotion",
+    "Unsupported, error, failed control, budget or resource stop: end attribution; no seed/budget expansion"
+  ],
+  "future_implementation_owner": "Parent task, high, only if it elects to proceed after reviewing this evidence",
+  "new_final_test": false,
+  "predicate_boundary_is_prior_art": true
+}

@@ -1,0 +1,266 @@
+{
+  "schema_version": 1,
+  "status": "REGISTERED_NOT_RUN",
+  "id": "LITERAL_LEFT_ORDERED_IC_DIAGNOSTIC",
+  "data_role": "CONSTRUCTED_ADVERSARIAL_CONTRACT_DIAGNOSTIC_NOT_NATURAL_BENCHMARK_OR_NEW_CONTRIBUTION",
+  "independent_fixture": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/IC_LITERAL_LEFT_STATIC_CASE.json",
+    "sha256": "3d770c63ce27d34707898da05317614c96df900bef9dfeda111a6892765a0d3c"
+  },
+  "schema": {
+    "T": {
+      "A": "INT"
+    }
+  },
+  "exact_rows": {
+    "T": 1
+  },
+  "pair": [
+    "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+    "SELECT SUM(T.A) FROM T"
+  ],
+  "primary_constraint": [
+    {
+      "lt": [
+        5,
+        {
+          "value": "T__A"
+        }
+      ]
+    }
+  ],
+  "original_constraint_text": "5 < T.A",
+  "comparisons": [
+    {
+      "id": "lt",
+      "operator": "lt",
+      "original_text": "5 < T.A",
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "direction_role": "ORDERED_COMPARISON"
+    },
+    {
+      "id": "lte",
+      "operator": "lte",
+      "original_text": "5 <= T.A",
+      "constraint": [
+        {
+          "lte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "direction_role": "ORDERED_COMPARISON"
+    },
+    {
+      "id": "gt",
+      "operator": "gt",
+      "original_text": "5 > T.A",
+      "constraint": [
+        {
+          "gt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "direction_role": "ORDERED_COMPARISON"
+    },
+    {
+      "id": "gte",
+      "operator": "gte",
+      "original_text": "5 >= T.A",
+      "constraint": [
+        {
+          "gte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "direction_role": "ORDERED_COMPARISON"
+    },
+    {
+      "id": "eq",
+      "operator": "eq",
+      "original_text": "5 = T.A",
+      "constraint": [
+        {
+          "eq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "input_origin": "EXPLICIT_EMITTER_ONLY_CONTROL_GRAMMAR_HAS_NO_EQUALITY",
+      "direction_role": "SYMMETRIC_CONTROL"
+    },
+    {
+      "id": "neq",
+      "operator": "neq",
+      "original_text": "5 != T.A",
+      "constraint": [
+        {
+          "neq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "input_origin": "OFFICIAL_CONSTRAINT_PARSER_TEXT",
+      "direction_role": "SYMMETRIC_CONTROL"
+    }
+  ],
+  "fixed_databases": [
+    {
+      "id": "intended_contract_true",
+      "database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "expected_original_contract_holds": true,
+      "expected_existing_emitted_contract_holds": false,
+      "expected_original_sql_results": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            6
+          ]
+        ]
+      ],
+      "reason": "5<6 is true; emitted 6<5 is false; WHERE 6<5 filters row only from first query."
+    },
+    {
+      "id": "wrong_contract_true",
+      "database": {
+        "T": [
+          [
+            4
+          ]
+        ]
+      },
+      "expected_original_contract_holds": false,
+      "expected_existing_emitted_contract_holds": true,
+      "expected_original_sql_results": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "reason": "5<4 is false; emitted 4<5 is true."
+    },
+    {
+      "id": "null_control",
+      "database": {
+        "T": [
+          [
+            null
+          ]
+        ]
+      },
+      "expected_original_contract_holds": false,
+      "expected_existing_emitted_contract_holds": false,
+      "expected_original_sql_results": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ],
+      "reason": "This strict comparison contract requires nonnull attribute; SQL WHERE UNKNOWN does not select."
+    }
+  ],
+  "boundary_control": {
+    "value": 5,
+    "scope": "EXACT_SUBSTITUTION_ONLY_NO_ADDITIONAL_FIXED_MODEL_SOLVE"
+  },
+  "cell_denominator": 24,
+  "cell_definition": "6 comparison operators x 4 point values (6,4,NULL,5); actual fixed SMT checks only for 6 and 4, NULL/5 are labeled formula substitution controls.",
+  "original_truth_contract": "Evaluate original binary AST operands in source order; NULL -> UNKNOWN and satisfies_strict_contract=False. This is not SQL CHECK acceptance of UNKNOWN.",
+  "emission_method": "Use actual ConstraintParser.parse output except explicitly labeled eq emitter control. One no-IC environment supplies full baseline facts and row symbols. Capture each add_constraints delta; do not solve cumulative conjunction of unrelated operator controls. A separate fresh environment runs the single original lt constraint with the original SQL pair.",
+  "limits": {
+    "cpu_soft_seconds": 14,
+    "cpu_hard_seconds": 15,
+    "wall_hard_seconds": 24,
+    "rss_sampled_soft_bytes": 1073741824,
+    "solver_threads": 1,
+    "maximum_solver_check_calls": 19,
+    "solver_call_breakdown": {
+      "baseline_common_guard": 2,
+      "two_fixed_base_models": 2,
+      "six_operators_times_two_fixed_points": 12,
+      "original_pair_common_guard": 2,
+      "original_pair_analyze": 1
+    }
+  },
+  "expectations_are_predictions_not_results": {
+    "under_intended_5_lt_A": "sat / not equivalent; fixed A=6 is a mathematical witness",
+    "under_existing_A_lt_5": "unsat / equivalent at exact1; every allowed nonnull A is selected by first WHERE"
+  },
+  "not_claimed": [
+    "natural defect incidence",
+    "new scientific contribution from constructed examples",
+    "benchmark accuracy or performance",
+    "general official-verifier unsoundness",
+    "execution before root actually launches supervisor"
+  ],
+  "expected_runtime_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+    "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+  },
+  "reused_common": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/common.py",
+    "sha256": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8"
+  },
+  "unchanged_source_evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/constraint_parser.py",
+      "sha256": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+      "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8"
+    }
+  ]
+}

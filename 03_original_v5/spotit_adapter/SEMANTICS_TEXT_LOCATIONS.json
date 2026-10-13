@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-11T03:27:42.283042+00:00",
+  "mode": "STATIC_TEXT_AND_JSON_ONLY_NO_TARGET_IMPORT_NO_NATIVE_NO_NETWORK",
+  "source_commit": "fb1bdaae8f3e4a544d08feffa44bc14270d99329",
+  "verdict": "DIRECT_ENGINE_AUTO_USES_SET_NOT_GENERAL_BAG",
+  "backup": "BACKUP_BLOCKED_BY_USER_NO_UPLOAD_NO_PUSH",
+  "originals_modified": false,
+  "scan_scope": {
+    "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011",
+    "command": [
+      "rg",
+      "-n",
+      "-i",
+      "strict bag|bag.semantic baseline|bag semantic baseline",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011",
+      "-g",
+      "*.json",
+      "-g",
+      "*.md",
+      "-g",
+      "*.py",
+      "-g",
+      "*.tex",
+      "-g",
+      "!**/dependencies/**",
+      "-g",
+      "!**/prepared/**",
+      "-g",
+      "!**/source/**",
+      "-g",
+      "!**/sources/**",
+      "-g",
+      "!**/MISSING_SOURCE_CLOSURE.json",
+      "-g",
+      "!**/SEMANTICS_TEXT_LOCATIONS.json",
+      "-g",
+      "!**/CORRECTION.md"
+    ],
+    "note": "Targeted bag-claim lexical scan excludes vendored dependency/source trees; primary source is separately inspected by exact line ranges. Historical SpotIt reports including frozen copies are enumerated. No claim of full semantic proof."
+  },
+  "source_lock_checks": [
+    {
+      "path": "spotit_adapter/source/environment.py",
+      "sha256": "082b6c22c108295023201e099e32fea88b249c0b850f014ba21fe10a9e455816",
+      "matches_historical_lock_02": true
+    },
+    {
+      "path": "spotit_adapter/source/verifiers/verifier.py",
+      "sha256": "3cd1f29dd5c7820936c901f47e504bb4b21ecf92f9618da6e9f7d0b24552746b",
+      "matches_historical_lock_02": true
+    },
+    {
+      "path": "spotit_adapter/source/verifiers/set_semantics_verifier.py",
+      "sha256": "01d62298b1e2a4653ed2acbeb0c90150eb023dc4fa26ba63a4819ba091e83601",
+      "matches_historical_lock_02": true
+    }
+  ],
+  "locations": [
+    {
+      "path": "spotit_adapter/source/environment.py",
+      "sha256": "082b6c22c108295023201e099e32fea88b249c0b850f014ba21fe10a9e455816",
+      "line_start": 94,
+      "line_end": 114,
+      "snippet": "    def __init__(self, generate_code=False, semantics=None, timer=False, show_counterexample=False,\n                 dialect=DIALECT.ALL, encode_string=False, ascii_only=False, encode_date=False,\n                 all_null_is_deleted=False,\n                 **kwargs):\n        if generate_code:\n            self._script_writer = Script()\n            self.sql_code = {'tables': {}, 'sql1': None, 'sql2': None}\n        else:\n            self._script_writer = self.sql_code = None\n        self.show_counterexample = show_counterexample\n        self.counterexample = None\n        self.counterexample_dict = defaultdict(list)  # for Demo frontend\n        if semantics == 'bag':\n            self.verifier = BagSemanticsVerifier(self)\n            LOGGER.debug(\"Semantics: bag\")\n        elif semantics == 'list':\n            self.verifier = ListSemanticsVerifier(self)\n            LOGGER.debug(\"Semantics: list\")\n        else:\n            self.verifier = Verifier(self)\n            LOGGER.debug(\"Semantics: auto\")",
+      "classification": "PRIMARY_ROUTING_EVIDENCE",
+      "meaning": "Default semantics=None chooses Verifier; this alone does not identify the comparison used in run."
+    },
+    {
+      "path": "spotit_adapter/source/environment.py",
+      "sha256": "082b6c22c108295023201e099e32fea88b249c0b850f014ba21fe10a9e455816",
+      "line_start": 124,
+      "line_end": 124,
+      "snippet": "        self.all_null_is_deleted = all_null_is_deleted",
+      "classification": "NULL_ROW_SETTING",
+      "meaning": "all_null_is_deleted affects row handling, not set-versus-bag selection."
+    },
+    {
+      "path": "spotit_adapter/source/environment.py",
+      "sha256": "082b6c22c108295023201e099e32fea88b249c0b850f014ba21fe10a9e455816",
+      "line_start": 1164,
+      "line_end": 1173,
+      "snippet": "        equivalence_formulas = self.verifier.run(\n            *tables, *result_formulas,\n            lhs_tuple.attributes, rhs_tuple.attributes,\n            orderby_constraints=self.orderby_constraints,\n            bound_constraints=self.bound_constraints,\n        )\n        if self.traversing_time is not None:\n            self.solving_time = time()\n            self.traversing_time = round(self.solving_time - self.traversing_time, 6)\n        self.solver.add(Not(equivalence_formulas))  # Not means cannot find a satisfying solution",
+      "classification": "PRIMARY_CALL_EVIDENCE",
+      "meaning": "Environment delegates equivalence to self.verifier.run."
+    },
+    {
+      "path": "spotit_adapter/source/verifiers/verifier.py",
+      "sha256": "3cd1f29dd5c7820936c901f47e504bb4b21ecf92f9618da6e9f7d0b24552746b",
+      "line_start": 92,
+      "line_end": 109,
+      "snippet": "\n        if kwargs['orderby_constraints'][0] is not None and \\\n                kwargs['orderby_constraints'][1] is not None:\n            # only two outermost queries have orderby claues\n            #from .list_semantics_verifier import ListSemanticsVerifier\n            #semantics_verifier = ListSemanticsVerifier(self._env)\n            #semantics_verifier.additional_conclusion = self.additional_conclusion\n            from .set_semantics_verifier import SetSemanticsVerifier\n            semantics_verifier = SetSemanticsVerifier(self._env)\n        else:\n            #from .bag_semantics_verifier import BagSemanticsVerifier\n            #semantics_verifier = BagSemanticsVerifier(self._env)\n\n            from .set_semantics_verifier import SetSemanticsVerifier\n            semantics_verifier = SetSemanticsVerifier(self._env)\n\n        conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n        if self._env._script_writer is not None:",
+      "classification": "PRIMARY_SET_SELECTION",
+      "meaning": "Both auto branches instantiate SetSemanticsVerifier and call its table_equivalence; former list/bag code is commented."
+    },
+    {
+      "path": "spotit_adapter/source/verifiers/set_semantics_verifier.py",
+      "sha256": "01d62298b1e2a4653ed2acbeb0c90150eb023dc4fa26ba63a4819ba091e83601",
+      "line_start": 111,
+      "line_end": 129,
+      "snippet": "        return CodeSnippet(code)\n\n    def table_equivalence(self, ltable, rtable, left_attributes, right_attributes, **kwargs):\n        formulas = []\n        cmp_funcs = self.cmp_funcs(left_attributes, right_attributes)\n        lhs_tuple_values = self.tuple_values(ltable.values(), left_attributes, cmp_funcs)\n        rhs_tuple_values = self.tuple_values(rtable.values(), right_attributes, cmp_funcs)\n\n        # treat all NULL row as deleted by updating delete value with all null constraint\n        if self._env.all_null_is_deleted:\n            for idx, tuple_values in enumerate(lhs_tuple_values):\n                if all(isinstance(attr_value, list) for attr_value in tuple_values[1:]):\n                    lhs_tuple_values[idx][0] = Or(tuple_values[0],\n                                                  And(*[attr_value[0] for attr_value in tuple_values[1:]]))\n            for idx, tuple_values in enumerate(rhs_tuple_values):\n                if all(isinstance(attr_value, list) for attr_value in tuple_values[1:]):\n                    rhs_tuple_values[idx][0] = Or(tuple_values[0],\n                                                  And(*[attr_value[0] for attr_value in tuple_values[1:]]))\n",
+      "classification": "NULL_ROW_HANDLING",
+      "meaning": "Records all-NULL handling; old direct worker retains default false."
+    },
+    {
+      "path": "spotit_adapter/source/verifiers/set_semantics_verifier.py",
+      "sha256": "01d62298b1e2a4653ed2acbeb0c90150eb023dc4fa26ba63a4819ba091e83601",
+      "line_start": 153,
+      "line_end": 172,
+      "snippet": "        for idx, tuple in enumerate(ltable.values()):\n            exists_in_rtuples = Or(*[cmp_formulas[idx, j] for j in range(lhs_table_num, lhs_table_num + rhs_table_num)])\n            formulas.append(\n                Implies(\n                    Not(self._env.DELETED_FUNCTION(tuple.SORT)),\n                    exists_in_rtuples,\n                )\n            )\n        for idx, tuple in enumerate(rtable.values(), start=lhs_table_num):\n            exists_in_ltuples = Or(*[cmp_formulas[idx, j] for j in range(lhs_table_num)])\n            formulas.append(\n                Implies(\n                    Not(self._env.DELETED_FUNCTION(tuple.SORT)),\n                    exists_in_ltuples,\n                )\n            )\n\n        formulas = And(*formulas)\n        return formulas",
+      "classification": "PRIMARY_SET_FORMULA",
+      "meaning": "Bidirectional existential membership, not multiplicity equality."
+    },
+    {
+      "path": "spotit_adapter/source/verifiers/set_semantics_verifier.py",
+      "sha256": "01d62298b1e2a4653ed2acbeb0c90150eb023dc4fa26ba63a4819ba091e83601",
+      "line_start": 78,
+      "line_end": 114,
+      "snippet": "        code = f\"\"\"\ndef equals(ltuples, rtuples):\n    left_left_function = lambda {self._env.Tuple1}, {self._env.Tuple2}: {_tuple_equals(left_attributes, left_attributes)}\n    left_right_function = lambda {self._env.Tuple1}, {self._env.Tuple2}: {_tuple_equals(left_attributes, right_attributes)}\n    right_left_function = lambda {self._env.Tuple1}, {self._env.Tuple2}: {_tuple_equals(right_attributes, left_attributes)}\n    right_right_function = lambda {self._env.Tuple1}, {self._env.Tuple2}: {_tuple_equals(right_attributes, right_attributes)}\n\n    formulas = [\n        Sum([If({DELETED_func_str}(tuple_sort), 0, 1) for tuple_sort in ltuples]) == \\\n        Sum([If({DELETED_func_str}(tuple_sort), 0, 1) for tuple_sort in rtuples])\n    ]\n    for tuple_sort in ltuples:\n        count_in_ltuples = Sum([If(left_left_function(tuple_sort, t), 1, 0) for t in ltuples])\n        count_in_rtuples = Sum([If(left_right_function(tuple_sort, t), 1, 0) for t in rtuples])\n        formulas.append(\n            Implies(\n                Not({DELETED_func_str}(tuple_sort)),\n                count_in_ltuples == count_in_rtuples,\n            )\n        )\n    for tuple_sort in rtuples:\n        count_in_ltuples = Sum([If(right_left_function(tuple_sort, t), 1, 0) for t in ltuples])\n        count_in_rtuples = Sum([If(right_right_function(tuple_sort, t), 1, 0) for t in rtuples])\n        formulas.append(\n            Implies(\n                Not({DELETED_func_str}(tuple_sort)),\n                count_in_ltuples == count_in_rtuples,\n            )\n        )\n{additional_conclusions}\n    formulas = And(formulas)\n    return formulas\n    \"\"\".strip()\n        return CodeSnippet(code)\n\n    def table_equivalence(self, ltable, rtable, left_attributes, right_attributes, **kwargs):\n        formulas = []",
+      "classification": "UNUSED_CODEGEN_CAVEAT",
+      "meaning": "The z3 code-generation string contains count equality, but direct worker generate_code=False uses table_equivalence; do not infer actual direct semantics from this string."
+    },
+    {
+      "path": "runtime_v2/case_worker.py",
+      "sha256": "45eb4f5207a86660dacc2e22198c1dca8cdaace73821a54474c4bd138e50991e",
+      "line_start": 187,
+      "line_end": 193,
+      "snippet": "                    conn.executemany('INSERT INTO \"' + name + '\" VALUES (' + ','.join('?' for _ in fields) + ')', database[name])\n                relations = [conn.execute(sql).fetchall() for sql in case[\"pair\"]]\n            return {\"relations\": relations, \"unequal_as_bags\": Counter(relations[0]) != Counter(relations[1]),\n                    \"sqlite_version\": sqlite3.sqlite_version, \"scope\": \"fixed scalar INT32 constructed DEV\"}\n\n        with Environment(timer=True, generate_code=False, show_counterexample=False, dialect=DIALECT.MYSQL) as env:\n            for name, fields in fixture[\"schema\"].items():",
+      "classification": "DIRECT_RUNNER_DEFAULT_AUTO",
+      "meaning": "Environment is constructed without semantics or all_null_is_deleted, generate_code=False. Counter is a separate SQLite replay check."
+    },
+    {
+      "path": "runtime_v2/case_worker.py",
+      "sha256": "45eb4f5207a86660dacc2e22198c1dca8cdaace73821a54474c4bd138e50991e",
+      "line_start": 213,
+      "line_end": 231,
+      "snippet": "            def official():\n                try:\n                    answer = env.analyze(*case[\"pair\"])\n                except Exception as exc:\n                    if type(exc).__name__ == \"UnknownError\":\n                        return {\"status\": \"unknown\", \"reason\": env.solver.reason_unknown()}\n                    if type(exc).__name__ in {\"NotSupportedError\", \"NotImplementedError\", \"ParserSyntaxError\"}:\n                        return {\"status\": \"unsupported\", \"reason\": str(exc)}\n                    raise\n                if type(answer) is not bool:\n                    raise ValueError(\"nonboolean official analyze result: \" + repr(answer))\n                result = {\"status\": \"unsat\" if answer else \"sat\"}\n                if not answer:\n                    result[\"witness\"] = decode(env, env.solver.model())\n                    result[\"sqlite\"] = replay(result[\"witness\"])\n                    if not result[\"sqlite\"][\"unequal_as_bags\"]:\n                        result[\"status\"] = \"COUNTEREXAMPLE_REPLAY_MISMATCH\"\n                return result\n            operation(report[\"arms\"][\"official\"], \"OFFICIAL_ANALYZE\", official)",
+      "classification": "DIRECT_OFFICIAL_ARM",
+      "meaning": "official invokes env.analyze and may replay a witness using Counter. Counter does not change engine semantics."
+    },
+    {
+      "path": "runtime_v2/spotit_paths.json",
+      "sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "line_start": 880,
+      "line_end": 886,
+      "snippet": "  \"source_label\": \"SpotIt+ pinned VeriEQL engine, direct SQL path, NOT full LLM pipeline\",\n  \"source_scope_note\": \"Fetched exact same Python path inventory as v1;156 files available, LICENSE path404 retained. Actual direct import still to verify; no source file splicing.\",\n  \"spotit_settings\": {\n    \"all_null_is_deleted\": false,\n    \"note\": \"Engine default strict bag semantic setting; outerSpotIt+ runnerTrue changes task and is not silently inherited.\"\n  },\n  \"native_reconstruction_note\": \"All11 bundled engine binding sources byte equal previously verified4.12 binding. OuterSpotIt+requirements says4.15; this is controlled same-native engine comparison, not exact author environment recovery.\"",
+      "classification": "MISLABEL_CONFIRMED",
+      "meaning": "Replace interpretation of strict bag with default auto set and all_null_is_deleted=False; historical lock bytes stay unchanged."
+    },
+    {
+      "path": "runtime_v2/spotit_paths_02.json",
+      "sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "line_start": 891,
+      "line_end": 898,
+      "snippet": "  \"source_label\": \"SpotIt+ pinned VeriEQL engine, direct SQL path, NOT full LLM pipeline\",\n  \"source_scope_note\": \"Fetched exact same Python path inventory as v1;156 files available, LICENSE path404 retained. Actual direct import still to verify; no source file splicing.\",\n  \"spotit_settings\": {\n    \"all_null_is_deleted\": false,\n    \"note\": \"Engine default strict bag semantic setting; outerSpotIt+ runnerTrue changes task and is not silently inherited.\"\n  },\n  \"native_reconstruction_note\": \"All11 bundled engine binding sources byte equal previously verified4.12 binding. OuterSpotIt+requirements says4.15; this is controlled same-native engine comparison, not exact author environment recovery.\",\n  \"closure_update\": \"11 same fixed-commit modules fetched and recursively statically inspected; default auto set semantics retained; scalar one-row scope only\"",
+      "classification": "MISLABEL_AND_INTERNAL_CONTRADICTION",
+      "meaning": "note says strict bag but closure_update correctly says auto set. Historical lock bytes stay unchanged."
+    },
+    {
+      "path": "sources/verieql_v1/verifiers/verifier.py",
+      "sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+      "line_start": 92,
+      "line_end": 105,
+      "snippet": "\n        if kwargs['orderby_constraints'][0] is not None and \\\n                kwargs['orderby_constraints'][1] is not None:\n            # only two outermost queries have orderby claues\n            from .list_semantics_verifier import ListSemanticsVerifier\n            semantics_verifier = ListSemanticsVerifier(self._env)\n            semantics_verifier.additional_conclusion = self.additional_conclusion\n        else:\n            from .bag_semantics_verifier import BagSemanticsVerifier\n            semantics_verifier = BagSemanticsVerifier(self._env)\n\n        conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n        if self._env._script_writer is not None:\n            self._env._script_writer.DBMS_facts = CodeWriter(",
+      "classification": "OTHER_ENGINE_VALID_BAG_PATH",
+      "meaning": "Distinct official VeriEQL v1 auto chooses BagSemanticsVerifier without both ORDER BY; do not globally replace bag labels."
+    },
+    {
+      "path": "runtime_v3/runtime_paths.json",
+      "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+      "line_start": 1,
+      "line_end": 5,
+      "snippet": "{\n  \"schema_version\": 1,\n  \"status\": \"STATIC_REVIEWED_READY_FOR_LOCAL_RUN\",\n  \"source_root\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1\",\n  \"binding_root\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official\",",
+      "classification": "OTHER_ENGINE_SOURCE_IDENTITY",
+      "meaning": "v3 lock source is VeriEQL v1, not the SpotIt engine fork."
+    },
+    {
+      "path": "runtime_fair/common.py",
+      "sha256": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a",
+      "line_start": 107,
+      "line_end": 113,
+      "snippet": "\n\ndef new_env(case, Environment, constants):\n    env = Environment(timer=False, generate_code=False, show_counterexample=False, dialect=constants.DIALECT.MYSQL)\n    for name, fields in case[\"schema\"].items():\n        env.create_database(attributes=fields, bound_size=case[\"exact_rows\"][name], name=name)\n    env.add_constraints(case[\"constraint\"])",
+      "classification": "OTHER_ENGINE_RUNNER",
+      "meaning": "Fair runner uses its locked source and default Environment; v3 lock resolves to official VeriEQL v1."
+    },
+    {
+      "path": "runtime_fair/common.py",
+      "sha256": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a",
+      "line_start": 173,
+      "line_end": 176,
+      "snippet": "              \"scope\": \"current scalar INT32 diagnostic domain, complete relation and duplicate rows retained\"}\n    if len(queries) == 2:\n        result[\"unequal_as_bags\"] = Counter(relations[0]) != Counter(relations[1])\n    return result",
+      "classification": "VALID_SQLITE_BAG_CHECK",
+      "meaning": "Counter compares replay result multiplicities; legitimate bag check independent of engine selection."
+    },
+    {
+      "path": "manuscript_v1/main.tex",
+      "sha256": "4fb61680c70dd62a53418ec99e07794c299d725a44f80a7ef89a858364ac0259",
+      "line_start": 54,
+      "line_end": 54,
+      "snippet": "SpotIt+ searches for distinguishing databases and uses a best-effort pipeline to mine constraints for text-to-SQL evaluation \\citep{tremante2026spotit}. Our current inputs contain fixed constraints, and the study neither reproduces that complete mining pipeline nor calls language-model APIs. An imported verification submodule alone is not a full SpotIt+ reproduction. The inspected adapter uses a set-semantics verifier: for two scalar one-row outputs this can coincide with bag comparison if NULL and row preservation are handled consistently, but it cannot be labeled a general bag-semantics baseline.",
+      "classification": "ALREADY_CORRECT_SCOPE",
+      "meaning": "Already distinguishes set engine and scalar one-row conditional agreement; not a bag mislabel."
+    },
+    {
+      "path": "stage1_frozen/main.tex",
+      "sha256": "4fb61680c70dd62a53418ec99e07794c299d725a44f80a7ef89a858364ac0259",
+      "line_start": 54,
+      "line_end": 54,
+      "snippet": "SpotIt+ searches for distinguishing databases and uses a best-effort pipeline to mine constraints for text-to-SQL evaluation \\citep{tremante2026spotit}. Our current inputs contain fixed constraints, and the study neither reproduces that complete mining pipeline nor calls language-model APIs. An imported verification submodule alone is not a full SpotIt+ reproduction. The inspected adapter uses a set-semantics verifier: for two scalar one-row outputs this can coincide with bag comparison if NULL and row preservation are handled consistently, but it cannot be labeled a general bag-semantics baseline.",
+      "classification": "ALREADY_CORRECT_SCOPE",
+      "meaning": "Already distinguishes set engine and scalar one-row conditional agreement; not a bag mislabel."
+    },
+    {
+      "path": "manuscript_v1/evidence/results_snapshot.json",
+      "sha256": "a36c8246ff58bfe1c6b38e9a26af84d8cacc69a7f559385214867e401cc6b9fe",
+      "line_start": 298,
+      "line_end": 303,
+      "snippet": "  \"spotit_fixed_engine_dev\": {\n    \"cases\": 6,\n    \"verdict_slots\": 24,\n    \"expected_matches\": 24,\n    \"full_pipeline\": false\n  },",
+      "classification": "AGGREGATE_COUNT_SCOPE",
+      "meaning": "24 verdict slots comprise 6 cases x 4 arms; not 24 independent SpotIt cases and not full pipeline."
+    }
+  ],
+  "bag_claim_search_hits": [
+    {
+      "path": "runtime_v2/spotit_paths_02.json",
+      "sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "line": 895,
+      "snippet": "    \"note\": \"Engine default strict bag semantic setting; outerSpotIt+ runnerTrue changes task and is not silently inherited.\"",
+      "classification": "MISLABEL_CONFIRMED"
+    },
+    {
+      "path": "runtime_v2/spotit_paths.json",
+      "sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "line": 884,
+      "snippet": "    \"note\": \"Engine default strict bag semantic setting; outerSpotIt+ runnerTrue changes task and is not silently inherited.\"",
+      "classification": "MISLABEL_CONFIRMED"
+    }
+  ],
+  "affected_historical_reports": [
+    {
+      "path": "frozen_checkpoint_01/runs/spotit_engine_first2_01/case_00/worker_report.json",
+      "sha256": "119fc032c1146dfbb65708f14d699155361a57d78e25f5c47216c391f3cd639b",
+      "status": "BLOCKED_OR_ERROR",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "frozen_checkpoint_01/runs/spotit_engine_first2_01/case_01/worker_report.json",
+      "sha256": "38c5f628f8f27bf8605d30dab4f492f99c082e96b58d389cbc1dc5030cbd3a9b",
+      "status": "BLOCKED_OR_ERROR",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S02_nullable_count",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "frozen_checkpoint_01/runs/spotit_engine_first2_01/initial_not_run.json",
+      "sha256": "1fac23006544cbb12dc092b06ed109830aa66179b6bc7fd139426c210fec9bec",
+      "status": "RUNNING",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "frozen_checkpoint_01/runs/spotit_engine_first2_01/supervisor_report.json",
+      "sha256": "c1a78238d6dd4a2be08d9720ec21ea8afd9b57dfdf0f1de9b2d74e1831e20405",
+      "status": "COMPLETE_WITH_FAILURES_OR_NOT_RUN",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_first2_01/case_00/worker_report.json",
+      "sha256": "119fc032c1146dfbb65708f14d699155361a57d78e25f5c47216c391f3cd639b",
+      "status": "BLOCKED_OR_ERROR",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_first2_01/case_01/worker_report.json",
+      "sha256": "38c5f628f8f27bf8605d30dab4f492f99c082e96b58d389cbc1dc5030cbd3a9b",
+      "status": "BLOCKED_OR_ERROR",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S02_nullable_count",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_first2_01/initial_not_run.json",
+      "sha256": "1fac23006544cbb12dc092b06ed109830aa66179b6bc7fd139426c210fec9bec",
+      "status": "RUNNING",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_first2_01/supervisor_report.json",
+      "sha256": "c1a78238d6dd4a2be08d9720ec21ea8afd9b57dfdf0f1de9b2d74e1831e20405",
+      "status": "COMPLETE_WITH_FAILURES_OR_NOT_RUN",
+      "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+      "resolved_lock": "spotit_paths.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": "BLOCKED_OR_ERROR",
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "NO_EXECUTED_ENGINE_VERDICT",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_00/worker_report.json",
+      "sha256": "b5b1d8662ee7c52ddb2644d58f16dbe6d9a428ff82416aaba629ada5468f1430",
+      "status": "COMPLETE_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        403
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_01/worker_report.json",
+      "sha256": "005c9d4f3fbac706955829bc744a14ee7e2a2edf36a7fcb8ababde20698b21c7",
+      "status": "COMPLETE_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S02_nullable_count",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "sat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        95,
+        162,
+        229,
+        296,
+        575
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/initial_not_run.json",
+      "sha256": "84d67b7a3dfa70f44d6c093bc7c4051d53ab72fb290fe832a5e5b4e3272c609a",
+      "status": "RUNNING",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/supervisor_report.json",
+      "sha256": "4d59bf79bfe99219934f7c2bbbd8c239f26fc5a69f7a3d00d368c9ecbda03ba1",
+      "status": "COMPLETE_SELECTED_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "sat"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        233,
+        300,
+        367,
+        434
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_02/worker_report.json",
+      "sha256": "c3e50de0ba221d604efed3c3ca76a7e58c438d5a460f1030b475096aad0dc95c",
+      "status": "COMPLETE_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        375
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_03/worker_report.json",
+      "sha256": "9a9deb98d57ead31066c856dcab3831c40c2b0eb27f1360fd31313faf1576c61",
+      "status": "COMPLETE_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "sat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        95,
+        162,
+        229,
+        296,
+        575
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_04/worker_report.json",
+      "sha256": "28c4dc55a7a81b2bc8a7e1fa0da3fdfd97da7c7ef78b64f5663a6dc33e964688",
+      "status": "COMPLETE_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        403
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_05/worker_report.json",
+      "sha256": "8372c68a863f7d6c235644e0249f10b3adeb29a09039ef64dd71a551a5045660",
+      "status": "COMPLETE_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        387
+      ]
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/initial_not_run.json",
+      "sha256": "14a4b9a41a4e2a057dd499166444562839288ee6c1269474c9ff786eda75d017",
+      "status": "RUNNING",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": []
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/supervisor_report.json",
+      "sha256": "7374503413884c629f1d8c8f101e64c47ae1b2b703f4d99cfa2b7b5cf17368ea",
+      "status": "COMPLETE_SELECTED_DEV_AGREEMENT",
+      "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+      "resolved_lock": "spotit_paths_02.json",
+      "states": [
+        {
+          "id": "S01_reordered_conjunction",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S02_nullable_count",
+          "worker_status": null,
+          "official_status": "NOT_RUN"
+        },
+        {
+          "id": "S03_full_not_null_IC",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        },
+        {
+          "id": "S04_sum_vs_count",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "sat"
+        },
+        {
+          "id": "S05_empty_SUM_NULL",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        },
+        {
+          "id": "S06_all_NULL_SUM",
+          "worker_status": "COMPLETE_DEV_AGREEMENT",
+          "official_status": "unsat"
+        }
+      ],
+      "direct_engine_interpretation": "DEFAULT_AUTO_SET_SCALAR_DEV_ONLY",
+      "bag_wording_lines": [
+        271,
+        338,
+        405,
+        472
+      ]
+    }
+  ],
+  "valid_replay_bag_locations": [
+    {
+      "path": "runs/spotit_engine_first2_02/case_00/worker_report.json",
+      "sha256": "b5b1d8662ee7c52ddb2644d58f16dbe6d9a428ff82416aaba629ada5468f1430",
+      "line": 403,
+      "snippet": "    \"unequal_as_bags\": false,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_01/worker_report.json",
+      "sha256": "005c9d4f3fbac706955829bc744a14ee7e2a2edf36a7fcb8ababde20698b21c7",
+      "line": 95,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_01/worker_report.json",
+      "sha256": "005c9d4f3fbac706955829bc744a14ee7e2a2edf36a7fcb8ababde20698b21c7",
+      "line": 162,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_01/worker_report.json",
+      "sha256": "005c9d4f3fbac706955829bc744a14ee7e2a2edf36a7fcb8ababde20698b21c7",
+      "line": 229,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_01/worker_report.json",
+      "sha256": "005c9d4f3fbac706955829bc744a14ee7e2a2edf36a7fcb8ababde20698b21c7",
+      "line": 296,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/case_01/worker_report.json",
+      "sha256": "005c9d4f3fbac706955829bc744a14ee7e2a2edf36a7fcb8ababde20698b21c7",
+      "line": 575,
+      "snippet": "    \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/supervisor_report.json",
+      "sha256": "4d59bf79bfe99219934f7c2bbbd8c239f26fc5a69f7a3d00d368c9ecbda03ba1",
+      "line": 233,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/supervisor_report.json",
+      "sha256": "4d59bf79bfe99219934f7c2bbbd8c239f26fc5a69f7a3d00d368c9ecbda03ba1",
+      "line": 300,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/supervisor_report.json",
+      "sha256": "4d59bf79bfe99219934f7c2bbbd8c239f26fc5a69f7a3d00d368c9ecbda03ba1",
+      "line": 367,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_first2_02/supervisor_report.json",
+      "sha256": "4d59bf79bfe99219934f7c2bbbd8c239f26fc5a69f7a3d00d368c9ecbda03ba1",
+      "line": 434,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_02/worker_report.json",
+      "sha256": "c3e50de0ba221d604efed3c3ca76a7e58c438d5a460f1030b475096aad0dc95c",
+      "line": 375,
+      "snippet": "    \"unequal_as_bags\": false,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_03/worker_report.json",
+      "sha256": "9a9deb98d57ead31066c856dcab3831c40c2b0eb27f1360fd31313faf1576c61",
+      "line": 95,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_03/worker_report.json",
+      "sha256": "9a9deb98d57ead31066c856dcab3831c40c2b0eb27f1360fd31313faf1576c61",
+      "line": 162,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_03/worker_report.json",
+      "sha256": "9a9deb98d57ead31066c856dcab3831c40c2b0eb27f1360fd31313faf1576c61",
+      "line": 229,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_03/worker_report.json",
+      "sha256": "9a9deb98d57ead31066c856dcab3831c40c2b0eb27f1360fd31313faf1576c61",
+      "line": 296,
+      "snippet": "        \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_03/worker_report.json",
+      "sha256": "9a9deb98d57ead31066c856dcab3831c40c2b0eb27f1360fd31313faf1576c61",
+      "line": 575,
+      "snippet": "    \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_04/worker_report.json",
+      "sha256": "28c4dc55a7a81b2bc8a7e1fa0da3fdfd97da7c7ef78b64f5663a6dc33e964688",
+      "line": 403,
+      "snippet": "    \"unequal_as_bags\": false,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/case_05/worker_report.json",
+      "sha256": "8372c68a863f7d6c235644e0249f10b3adeb29a09039ef64dd71a551a5045660",
+      "line": 387,
+      "snippet": "    \"unequal_as_bags\": false,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/supervisor_report.json",
+      "sha256": "7374503413884c629f1d8c8f101e64c47ae1b2b703f4d99cfa2b7b5cf17368ea",
+      "line": 271,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/supervisor_report.json",
+      "sha256": "7374503413884c629f1d8c8f101e64c47ae1b2b703f4d99cfa2b7b5cf17368ea",
+      "line": 338,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/supervisor_report.json",
+      "sha256": "7374503413884c629f1d8c8f101e64c47ae1b2b703f4d99cfa2b7b5cf17368ea",
+      "line": 405,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    },
+    {
+      "path": "runs/spotit_engine_remaining4_02/supervisor_report.json",
+      "sha256": "7374503413884c629f1d8c8f101e64c47ae1b2b703f4d99cfa2b7b5cf17368ea",
+      "line": 472,
+      "snippet": "            \"unequal_as_bags\": true,",
+      "classification": "VALID_SQLITE_COUNTER_REPLAY_NOT_ENGINE_SEMANTICS"
+    }
+  ],
+  "counts": {
+    "confirmed_mislabel_search_hits": 2,
+    "report_files": 18,
+    "replay_bag_field_locations": 22
+  },
+  "scientific_limits": [
+    "Only scalar aggregate queries returning one preserved row per input database can make set and bag output equality coincide, with consistent NULL equality.",
+    "No extension to general multirow, duplicate-sensitive or ORDER BY semantics.",
+    "Recorded DEV verdict agreement is not new gold or a performance claim; no rerun was performed.",
+    "Imported fixed engine does not reproduce the SpotIt+ LLM/constraint-mining pipeline.",
+    "Do not silently change engine source or semantics to turn this historical run into a bag baseline."
+  ]
+}

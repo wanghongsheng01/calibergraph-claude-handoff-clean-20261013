@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "status": "STATIC_API_REVIEW_ONLY",
+  "case": "gitlab#47",
+  "reviewed_worker": "calibergraph_parseval_admission_20261011_03/implementation/probe_worker_v2.py",
+  "official_source_root": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval",
+  "official_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "scope": "Metadata repair assumed; calibration, adapted lowering, generation, candidate replay and confirmation API usage only.",
+  "executed_postgresql": false,
+  "executed_parseval": false,
+  "modified_03": false,
+  "definite_additional_api_signature_blocker_found": false,
+  "api_checks": [
+    {
+      "worker_lines": [199, 205],
+      "call": "lower_query(sql, catalog); lowered.columns; column.name.text",
+      "finding": "Matches LoweredQuery.columns containing QueryColumn(name: Identifier, sort: ScalarSort).",
+      "official_evidence": "parser/query/compiler.py:406-422, 478-481"
+    },
+    {
+      "worker_lines": [233, 237],
+      "call": "instance.row_count; instance.rows(table.relation)",
+      "finding": "row_count is an integer property. rows(RelationId) returns tuple rows expanded by multiplicity, so list(...) preserves the full finite bag and all columns.",
+      "official_evidence": "instance/model.py:126-136"
+    },
+    {
+      "worker_lines": [178, 185],
+      "call": "parse_string_cast_literal(value, BOOLEAN) inside postgres_tf_literal_aliases(catalog.dialect, TypeKind.BOOLEAN)",
+      "finding": "Adapter receives the real TypeKind enum and installs the expected two-argument callable on the same Catalog dialect used by lowering and generation; context spans both. Original f incompatibility remains recorded separately.",
+      "official_evidence": "parser/dialect.py:181-212; author boolean_adapter.py:19-55"
+    },
+    {
+      "worker_lines": [270, 271],
+      "call": "Attempt.label, status.value, accepted, reason",
+      "finding": "All fields exist; Status is a string Enum with sat/unsat/unknown/unsupported values.",
+      "official_evidence": "generator/generate.py:71-79; smt/solve.py:22-26"
+    },
+    {
+      "worker_lines": [275, 279],
+      "call": "GenerationConfig(timeout_ms, time_limit_s, seed, speculate, set_semantics); generate(sql, catalog, config=..., on_attempt=..., on_instance=...)",
+      "finding": "Constructor keywords and callback signatures match. GenerationResult has instance, nonempty, reached, covered, unsupported, timed_out and failed property. Optional instance is guarded before rows extraction.",
+      "official_evidence": "generator/generate.py:42-103, 114-115, 517-529"
+    },
+    {
+      "worker_lines": [88, 100],
+      "call": "Independent native Python value checks before psycopg2 insertion",
+      "finding": "Default official provider uses Python bool/int/str/date/naive datetime for these selected native types; Instance extraction preserves the carriers. No static DATE/TIMESTAMP-to-string mismatch identified.",
+      "official_evidence": "instance/domain.py:28-49, 69-96, 172-175"
+    }
+  ],
+  "author_logic_corrections_for_v3": [
+    {
+      "priority": "P1",
+      "worker_lines": [242, 247],
+      "issue": "on_instance returning False means continue generation, not reject or roll back an already accepted upstream instance. Invalid candidate or backend error currently returns False.",
+      "candidate_fix": "Record the failed candidate and terminate this bounded admission attempt using a distinct exception/outcome; preserve INVALID_CANDIDATE or BACKEND_REPLAY_ERROR as final status. Do not treat False as generator pruning. Do not return True and then interpret upstream nonempty as successful admission.",
+      "official_evidence": "generator/generate.py:409-445",
+      "validation": "STATIC_ONLY_NOT_APPLIED_HERE"
+    },
+    {
+      "priority": "P1",
+      "worker_lines": [251, 269, 282, 283],
+      "issue": "A confirmed difference with empty AFTER results is recorded on the candidate but final status falls through to NO_NONEMPTY.",
+      "candidate_fix": "Classify confirmed result difference first, confirmed nonempty AFTER second, then explicit invalid/error/unsupported/budget outcomes, and only then ordinary no-nonempty observation. A difference requires successful fullC acceptance and both original queries succeeding in both databases.",
+      "validation": "STATIC_ONLY_NOT_APPLIED_HERE"
+    },
+    {
+      "priority": "P2",
+      "worker_lines": [277, 283],
+      "issue": "The speculative seed callback can stop before query execution/coverage, returning GenerationResult(seed, True) with empty reached/covered. A time limit before execution can likewise report bool(seed.row_count).",
+      "candidate_fix": "Keep using actual PostgreSQL AFTER result nonemptiness and independent confirmation as admission evidence. Label generator.nonempty as upstream telemetry; empty coverage on callback early stop is not a mechanism failure. Preserve result.unsupported as an explicit unsupported outcome.",
+      "official_evidence": "generator/generate.py:422-423, 449-460, 527-529",
+      "validation": "STATIC_ONLY_NOT_APPLIED_HERE"
+    }
+  ],
+  "confirmation_review": {
+    "worker_lines": [219, 229, 254, 267],
+    "finding": "Replays explicitly insert all source columns in parent-before-child table order, then execute both original SQL strings. A new database and connection receive the same DDL and data, and the result dictionaries are compared. This confirmation logic does not call a nonexistent ParSEval API.",
+    "limits": "Backend permissions, timeout sufficiency, DDL acceptance and actual query results require the separately authorized execution; none were tested here. Full117-column/43-C scope and original query bytes must remain unchanged."
+  },
+  "conclusion": "Static API alignment supports preparing v3 without further speculative signature changes. The identified callback/result-classification fixes should prevent misleading outcomes. No successful admission, generation, replay, equivalence or novelty result is claimed."
+}

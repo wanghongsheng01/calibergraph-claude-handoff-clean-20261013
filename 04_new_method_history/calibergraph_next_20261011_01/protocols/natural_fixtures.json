@@ -1,0 +1,112 @@
+{
+  "dev_01": {
+    "PERSON": [
+      {
+        "ID": 1,
+        "EMAIL": "a@example.invalid"
+      },
+      {
+        "ID": 2,
+        "EMAIL": "a@example.invalid"
+      }
+    ]
+  },
+  "dev_02": {
+    "FOLLOW": [
+      {
+        "FOLLOWEE": "a",
+        "FOLLOWER": "b"
+      },
+      {
+        "FOLLOWEE": "b",
+        "FOLLOWER": "c"
+      },
+      {
+        "FOLLOWEE": "b",
+        "FOLLOWER": "d"
+      }
+    ]
+  },
+  "dev_03": {
+    "EMPLOYEE": [
+      {
+        "EMPLOYEE_ID": 1,
+        "EXPERIENCE_YEARS": 1,
+        "NAME": "a"
+      },
+      {
+        "EMPLOYEE_ID": 2,
+        "EXPERIENCE_YEARS": 2,
+        "NAME": "b"
+      }
+    ],
+    "PROJECT": [
+      {
+        "EMPLOYEE_ID": 1,
+        "PROJECT_ID": 1
+      },
+      {
+        "EMPLOYEE_ID": 2,
+        "PROJECT_ID": 1
+      }
+    ]
+  },
+  "dev_04": {
+    "VISITS": [
+      {
+        "VISIT_ID": 1,
+        "CUSTOMER_ID": 1
+      },
+      {
+        "VISIT_ID": 2,
+        "CUSTOMER_ID": 1
+      }
+    ],
+    "TRANSACTIONS": [
+      {
+        "TRANSACTION_ID": 1,
+        "VISIT_ID": 1,
+        "AMOUNT": 2
+      }
+    ]
+  },
+  "dev_05": {
+    "USERS": [
+      {
+        "ACCOUNT": 1,
+        "NAME": "a"
+      }
+    ],
+    "TRANSACTIONS": [
+      {
+        "TRANS_ID": 1,
+        "ACCOUNT": 1,
+        "AMOUNT": 6000,
+        "TRANSACTED_ON": "2020-01-01"
+      },
+      {
+        "TRANS_ID": 2,
+        "ACCOUNT": 1,
+        "AMOUNT": 6001,
+        "TRANSACTED_ON": "2020-01-02"
+      }
+    ]
+  },
+  "dev_06": {
+    "BOXES": [
+      {
+        "BOX_ID": 1,
+        "CHEST_ID": 1,
+        "APPLE_COUNT": 2,
+        "ORANGE_COUNT": 3
+      }
+    ],
+    "CHESTS": [
+      {
+        "CHEST_ID": 1,
+        "APPLE_COUNT": 4,
+        "ORANGE_COUNT": 5
+      }
+    ]
+  }
+}

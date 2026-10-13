@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-11T20:15:26.805614+00:00",
+  "reviewer_role": "INDEPENDENT_STATIC_REVIEWER_NOT_AUTHOR_IMPLEMENTER",
+  "verdict": "PASS_ONE_ENGINEERING_REPAIR_PROBE_AFTER_PRE_IMPORT_ABORT",
+  "execution_approved": true,
+  "freeze_sha256": "6a795c4d77d01d067ec0f34e30094a9ba0524140a699b3e0f42e64c8fd605180",
+  "max_v2_launches": 1,
+  "max_generation_calls_across_v1_v2": 1,
+  "automatic_retries": 0,
+  "additional_invocations_after_v2_authorized": 0,
+  "must_fix_count": 0,
+  "prior_result": "RUN01_ABORT_REVIEW.json independently verifies v1 top-level RLIMIT_DATA abort before target imports; isolated PG stop confirmed. This is an author-platform admission error, not a ParSEval failure.",
+  "unchanged_guards": [
+    "Original SQL hashes and full117-column/43-constraint mapping",
+    "One original AFTER-guided generation, seed0/speculateTrue,5s,4solver checks at500ms",
+    "At most3 candidate callbacks/32 replay rows, fullC validation and both original42-column ordered replays",
+    "Fresh confirmation database for first nonempty/difference",
+    "CPU20/21s, wall35s,FSIZE8MiB, one worker, load<=5.5/free>=25% resource gate",
+    "Private Unix socket/noTCP/no credentials, task-specific pgdata, bounded shutdown and guaranteed receipt",
+    "No-new-method conclusion; noNEQ/both-empty never mechanism failure"
+  ],
+  "reviewed_delta": [
+    "V1 source/protocol/freeze/receipt/log remain unchanged;11/11 prior freeze hashes verified",
+    "New v2 paths/lock/output cluster and12/12 frozen inputs verified",
+    "Removed unsupported RLIMIT_DATA only; own RUSAGE_SELF peak RSS sampled in stdlib daemon thread every nominal50ms, threshold512MiB recordsmemory_guard.json and exits86",
+    "Watcher is started before target imports, platform asserted darwin for byte units, event stops watcher on finalization",
+    "Same source/dependency hashes and launcher verification retained"
+  ],
+  "limitations": [
+    "RSS guard is sampled and may overshoot; Python GIL/scheduling/native-code delays can postpone the nominal50ms observation. It is not an OS hard cap.",
+    "Worker peak RSS only; complete PostgreSQL cluster RSS unmeasured. CPU/wall limits and tiny backend settings remain primary bounded-execution controls.",
+    "Guard/error hard exit leaves counters partial and cannot justify exact unrecorded counts; preserve launcher receipt plus latest checkpoint.",
+    "Only new PostgreSQL16.14/C/UTF8/UTC profile; historical engine/session/collation remains unknown.",
+    "ParSEval BEFORE frontend support is not certified.",
+    "v2 remains subject to runtime resource gates and may fail before science; no subsequent retries allowed by this approval."
+  ],
+  "scientific_decision": "NO_GO_NEW_MECHANISM_CLAIM",
+  "method": "NONE",
+  "topic": "UNCOMMITTED",
+  "reviewer_execution_counts": {
+    "target_import": 0,
+    "SQL": 0,
+    "parser": 0,
+    "SMT": 0,
+    "DB_startup": 0,
+    "generation": 0,
+    "author_script": 0
+  },
+  "reviewer_changed_author_files": false,
+  "supporting_files": [
+    "PRE_EXEC_REVIEW.json",
+    "RUN01_ABORT_REVIEW.json",
+    "PRE_EXEC_HASH_CHECKS_v2.json"
+  ]
+}

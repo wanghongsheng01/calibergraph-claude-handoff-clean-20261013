@@ -1,0 +1,55 @@
+{
+  "status": "OBSERVED_RAW_STATUS_LIMITATION_NOT_SOURCE_PATCH",
+  "cases": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_126/job_0126/worker_report.json",
+      "sha256": "e2dea707e4916f9fe88ad53378e2c6c594bd0cc62181ca13998e38ddc14f7cec",
+      "worker_status": "BLOCKED_OR_ERROR",
+      "raw_final_decision": "NOT_RUN",
+      "guard_consistency": "unsat",
+      "derived_classification": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_126/job_0127/worker_report.json",
+      "sha256": "b5982062bc295094fa3593ab46c3602ab782a56505e8266df3f15838b4a6ec77",
+      "worker_status": "BLOCKED_OR_ERROR",
+      "raw_final_decision": "NOT_RUN",
+      "guard_consistency": "unsat",
+      "derived_classification": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_126/job_0128/worker_report.json",
+      "sha256": "8bdd4291679f1c2dccc247025a9aef45b10ea92c36c283a3d930011c9bd25f3a",
+      "worker_status": "BLOCKED_OR_ERROR",
+      "raw_final_decision": "NOT_RUN",
+      "guard_consistency": "unsat",
+      "derived_classification": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_129/job_0129/worker_report.json",
+      "sha256": "b5db87c26885b03ee5cea88bb311ecc03a5a5bf23ea85075c4b8039296cf7bb6",
+      "worker_status": "BLOCKED_OR_ERROR",
+      "raw_final_decision": "NOT_RUN",
+      "guard_consistency": "unsat",
+      "derived_classification": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_129/job_0130/worker_report.json",
+      "sha256": "f7839e1514a67ea52dbcb196dd3226c4a69d7b4964cddbc710fc35bad0d6e26a",
+      "worker_status": "BLOCKED_OR_ERROR",
+      "raw_final_decision": "NOT_RUN",
+      "guard_consistency": "unsat",
+      "derived_classification": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_129/job_0131/worker_report.json",
+      "sha256": "e14a09cfccca16b2a043872dea8b4cda5ab490f3767efb29595ba15823e92263",
+      "worker_status": "BLOCKED_OR_ERROR",
+      "raw_final_decision": "NOT_RUN",
+      "guard_consistency": "unsat",
+      "derived_classification": "CONTRACT_UNSAT_REJECTED"
+    }
+  ],
+  "interpretation": "The native import/Environment/contract checks DID run. Raw final_decision NOT_RUN means the pair decision was never attempted; it does not mean this whole job was unexecuted. Contract UNSAT is a deliberate rejection control and cannot become pair UNSAT/equivalence success. Derive CONTRACT_UNSAT_REJECTED only with the cited raw guard/status evidence; preserve all original fields.",
+  "repair_policy": "No runtime_fair_v4 change during or after this cohort. A future status repair requires a new isolated runner/version and new registration."
+}

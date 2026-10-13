@@ -1,0 +1,44 @@
+{
+  "status": "IMPLEMENTED_AST_CHECKED_NOT_EXECUTED",
+  "created_utc": "2026-10-11T03:53:55.250868+00:00",
+  "source_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4",
+  "new_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02",
+  "old_program_sha256": {
+    "common.py": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8",
+    "worker.py": "5baf3d5719db583abfc58553392ab4e711ee1c37ca8e0bdc1217dabd8f52efc1",
+    "supervisor.py": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+  },
+  "new_program_sha256": {
+    "common.py": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8",
+    "worker.py": "6d964f580caef5130e25900cdb98fb2af77a98510a4748972c13d336884fa777",
+    "supervisor.py": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+  },
+  "old_sources_unchanged_verified": true,
+  "only_behavioral_change": "Typed contract stop after guard returns, with durable cleanup attempt, cleanup completion, semantic time and no pair check. Common/supervisor/differential byte-identical.",
+  "status_contract": [
+    {
+      "guard": "consistency == unsat",
+      "status": "COMPLETE_CONTRACT_REJECTED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "guard": "consistency == unknown",
+      "status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "final_decision": "CONTRACT_SATISFIABILITY_UNKNOWN"
+    },
+    {
+      "guard": "consistency == sat and any_base_row_deleted != unsat",
+      "status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "final_decision": "EXACT_ROW_CONTRACT_UNVERIFIED"
+    }
+  ],
+  "failure_boundary": "An unexpected guard result or cleanup exception remains BLOCKED_OR_ERROR with raw evidence; no claimed successful cleanup. Every typed contract stop exits2, retaining non-success semantics.",
+  "files": {
+    "worker_contract_stop.diff": "1ca98215781265f6b6533a23ed1fec7790b861ab2128987e91d01716a10483a2",
+    "registration/E10_SIX_ARM_STATUS_ONLY.json": "c50628e04e6f68980acd229f9258a77ba51b6e3e54243455c9f9248cee6cbbbc",
+    "registration/INITIAL_NOT_RUN.json": "a9c358d49351f7e84f1f415d0a7e4f1bbb6c6732172f325a488edc629bc358b6",
+    "registration/RUN_COMMAND.txt": "822993eba7fce17dddb3bf78fdbc1aa5e851bb8968794a3e0e28ec663da14038"
+  }
+}

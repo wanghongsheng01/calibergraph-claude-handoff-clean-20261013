@@ -1,0 +1,43 @@
+{
+  "status": "STATIC_REVIEW_PASS_TARGET_NOT_EXECUTED",
+  "target_imported": false,
+  "native_loaded": false,
+  "solver_called": false,
+  "reviewer": "/root/support_closure/spotit_semantics_correction",
+  "independent_scope": "Read-only review of current registered input path, original parser wrappers, append-delta isolation, fixed models, NULL/boundary labels, original SQLite strings, fresh pair env, and resource supervision. This is not a target execution or complete proof.",
+  "findings_resolved_before_freeze": [
+    {
+      "finding": "Pre-added guard/analyze counters can overcount actual checks on failure.",
+      "resolution": "Renamed reserved_or_attempted_check_slots and added scope note."
+    },
+    {
+      "finding": "COMPLETE_DIAGNOSTIC means complete observation, not prediction success.",
+      "resolution": "Original pair stores matches_registered_emitted_contract_prediction separately."
+    },
+    {
+      "finder": "root, followed by supporting binding inspection",
+      "finding": "Pinned fast IntVal passes raw val to Z3_mk_numeral; Python int is not normalized. Not/And require ctx.",
+      "evidence": "prepared/official/z3/z3.py:3264-3266,1857,1891; sources/verieql_v1/constants.py:24-35",
+      "resolution": "Both fixed/substitution integer constants use constants.IntVal(str(point)); Boolean/connective wrappers carry fixed context."
+    }
+  ],
+  "checks": {
+    "ast_parse_and_compile_without_execution": true,
+    "both_intval_calls_receive_decimal_string": true,
+    "no_direct_z3_missing_context_constructors": true,
+    "registered_24_cell_denominator": true,
+    "registered_19_maximum_reserved_check_slots": true,
+    "protected_source_common_fixture_lock_hashes_match": true
+  },
+  "program_sha256": {
+    "worker.py": "aae79f56b1bb0487ffb360aef1c3338837203f4338e6925dfe4705e8ba6ac7be",
+    "supervisor.py": "f2cbff5332080be17cb24856ad83ef46fc2c9f1e20b0bc4e9c4ced64fb05efe8"
+  },
+  "source_common_fixture_lock_hashes": {
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/constraint_parser.py": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/common.py": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/IC_LITERAL_LEFT_STATIC_CASE.json": "3d770c63ce27d34707898da05317614c96df900bef9dfeda111a6892765a0d3c"
+  }
+}

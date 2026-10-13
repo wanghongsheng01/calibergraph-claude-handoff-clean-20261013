@@ -1,0 +1,47 @@
+{
+  "status": "INDEPENDENT_AI_CHECKER_REVIEW_PASS",
+  "reviewer_task": "/root/natural_dataset/probe_checker_review",
+  "review_scope": "Read-only official-source semantics review and imported pure-stdlib check_contract controls; main not called. This is AI review, not a human blind review or hidden gold.",
+  "reviewed_code_sha256": "04169f5ad218487885e3f56569a91eb3461247a4df41c13bcb8767bfcf7d29cc",
+  "reviewer_report": {
+    "controls": 12,
+    "all_matched_expected": true,
+    "covered": [
+      "cross-row neq collision despite same-row inequality",
+      "NULL foreign source",
+      "NULL gte operand",
+      "NULL neq operand",
+      "NULL primary member",
+      "primary tuple collision",
+      "missing schema table",
+      "row count not2",
+      "INT value substituted for VARCHAR",
+      "INT value substituted for DATE",
+      "legal full-schema instance",
+      "legal nullable unconstrained VARCHAR/DATE"
+    ],
+    "total_import_and_control_seconds": 0.031195,
+    "aggregate_checker_seconds": 0.000185544,
+    "wall_alarm_seconds": 1,
+    "sql_parser_solver_called": false,
+    "reserve_read": false,
+    "files_written_by_reviewer": false
+  },
+  "official_source_evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+      "lines": "627-645 primary;701-750 Cartesian comparisons"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/utils.py",
+      "lines": "42-46 equality/inequality both operands nonNULL"
+    }
+  ],
+  "author_post_review_identity_checks": {
+    "original_development_still_matches": true,
+    "copy_still_byte_identical": true,
+    "frozen_pool_sha_matches": true,
+    "generator_sha_matches": true
+  },
+  "science_status": "HOLD"
+}

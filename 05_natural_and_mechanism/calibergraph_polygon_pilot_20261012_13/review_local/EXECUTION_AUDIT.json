@@ -1,0 +1,91 @@
+{
+  "batch_sha256": "ebc7a1e6501d1b7b8671db1ec5bb2ba25ece326a9369558077070433e5adece2",
+  "attempt_freeze_digest_verified": true,
+  "elapsed_s": 2.249685457907617,
+  "owned_handle_count": 11,
+  "worker_count": 4,
+  "z3_count": 7,
+  "all_reaped": true,
+  "cleanup_errors": [],
+  "worker_returncodes": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "z3_returncodes": [
+    -15,
+    -15,
+    -15,
+    -15,
+    -15,
+    -15,
+    -15
+  ],
+  "z3_exit_interpretation": "Parent terminated/reaped retained interactive processes after completed slot; no solver error in recorded results/stderr.",
+  "stderr_files_empty": true,
+  "unknown_unsupported_timeout_observed": false,
+  "stages": [
+    {
+      "case": "superhero__750",
+      "mode": "UA",
+      "wall_elapsed_s": 0.8162775002419949,
+      "stages_seconds": {
+        "imports": 0.3557822504080832,
+        "schema_C": 0.0007947920821607113,
+        "parse": 0.2592797498218715,
+        "encode": 0.006659707985818386,
+        "search_including_solver": 0.05505733285099268,
+        "solver_calls": 0.03794854134321213,
+        "decode": 0.008757333736866713,
+        "replay": 0.0074119591154158115
+      }
+    },
+    {
+      "case": "superhero__750",
+      "mode": "precise",
+      "wall_elapsed_s": 0.5875289998948574,
+      "stages_seconds": {
+        "imports": 0.20968687487766147,
+        "schema_C": 0.0008868328295648098,
+        "parse": 0.20709512569010258,
+        "encode": 0.00236837612465024,
+        "search_including_solver": 0.017338292207568884,
+        "solver_calls": 0.009068208280950785,
+        "decode": 0.0016714995726943016,
+        "replay": 0.0009085419587790966
+      }
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "UA",
+      "wall_elapsed_s": 0.43461791705340147,
+      "stages_seconds": {
+        "imports": 0.12781249964609742,
+        "schema_C": 0.003075624816119671,
+        "parse": 0.205676581710577,
+        "encode": 0.0018004989251494408,
+        "search_including_solver": 0.02829704200848937,
+        "solver_calls": 0.02714487537741661,
+        "decode": null,
+        "replay": null
+      }
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "precise",
+      "wall_elapsed_s": 0.4091591672040522,
+      "stages_seconds": {
+        "imports": 0.10714354226365685,
+        "schema_C": 0.0006840000860393047,
+        "parse": 0.2066626250743866,
+        "encode": 0.005563667509704828,
+        "search_including_solver": 0.00887629110366106,
+        "solver_calls": 0.008526583202183247,
+        "decode": null,
+        "replay": null
+      }
+    }
+  ],
+  "stage_times_additive": false
+}

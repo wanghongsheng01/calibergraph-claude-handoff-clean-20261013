@@ -1,0 +1,5706 @@
+{
+  "status": "PASS",
+  "sqlite_version": "3.53.3",
+  "case": "1261",
+  "boundary_combinations": 544,
+  "checks": [
+    {
+      "rf_input": "None",
+      "thrombosis_input": "None",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "0",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "1",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "''",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "None",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-inf",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1e+300",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-9223372036854775808",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "-1",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "0",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "2",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "3",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "19",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "20.0",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "21",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "100",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "9223372036854775807",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "inf",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "None",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "0",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "1",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "''",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "nan",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "null",
+      "predicates": [
+        null,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "''",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "' '",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'-1'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'0'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'2'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'19'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20.0'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'020'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'20x'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        1
+      ],
+      "output": 1
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'100'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        1,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'3'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "'z'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "text",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'0'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'20'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "None",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "-9223372036854775808",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "-1",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "0",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "-0.0",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "1",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "5e-324",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "9223372036854775807",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "inf",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "nan",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        null
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "'0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "'0.0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "'0e0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "' 0 '",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        1
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "'0x'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "''",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    },
+    {
+      "rf_input": "b'\\xff'",
+      "thrombosis_input": "b'0'",
+      "stored_rf_type": "blob",
+      "predicates": [
+        0,
+        0
+      ],
+      "output": 0
+    }
+  ],
+  "presence_cases": [
+    [
+      false,
+      false,
+      false,
+      false,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      false,
+      false,
+      false,
+      true,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      false,
+      false,
+      true,
+      true,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      false,
+      false,
+      false,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      false,
+      false,
+      true,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      false,
+      true,
+      false,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      false,
+      true,
+      true,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      true,
+      false,
+      false,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      true,
+      false,
+      true,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      true,
+      true,
+      false,
+      [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ]
+    ],
+    [
+      true,
+      true,
+      true,
+      true,
+      [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ]
+    ]
+  ],
+  "negative_cases_rejected": [
+    "invalid FK",
+    "NULL date PK",
+    "NULL parent PK",
+    "string is not abstract Int",
+    "N2 abstract",
+    "missing table",
+    "bound2 not proved",
+    "1172 query hash refused",
+    "TEMP shadow",
+    "ATTACH"
+  ],
+  "invalid_utf8_text_pass": true,
+  "numeric_RF_shortcut_disproved": [
+    "stored TEXT 3 <20 is false",
+    "stored TEXT 100 <20 is true"
+  ],
+  "parse_encode_modes": [
+    "ENCODE_COMPLETE_SOLVER_NOT_RUN",
+    "ENCODE_COMPLETE_SOLVER_NOT_RUN"
+  ],
+  "native_events": [],
+  "scientific_solver_calls": 0,
+  "elapsed_s": 0.8061962076462805,
+  "constraints": [
+    {
+      "eq": [
+        "Examination.ID",
+        "Patient.ID"
+      ]
+    },
+    {
+      "primary": [
+        "Patient.ID"
+      ]
+    },
+    {
+      "not_null": "Patient.ID"
+    },
+    {
+      "primary": [
+        "Laboratory.ID",
+        "Laboratory.Date"
+      ]
+    },
+    {
+      "not_null": "Laboratory.ID"
+    },
+    {
+      "not_null": "Laboratory.Date"
+    },
+    {
+      "eq": [
+        "Laboratory.ID",
+        "Patient.ID"
+      ]
+    }
+  ]
+}

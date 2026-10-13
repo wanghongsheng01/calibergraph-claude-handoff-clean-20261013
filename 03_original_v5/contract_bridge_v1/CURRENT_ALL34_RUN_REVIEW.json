@@ -1,0 +1,2509 @@
+{
+  "review_utc": "2026-10-11T04:09:05.418946+00:00",
+  "status": "FULL_34_RECEIPTS_AUDITED_WITH_TWO_OBSERVER_ANOMALIES",
+  "reviewer_role": "Implementation agent read-only receipt/mathematical audit, not independent target rerun or human review",
+  "method": "JSON/hash + independently written scalar AST arithmetic over recorded fixed databases; no importing target/reference, no SQLite/native/solver execution",
+  "manifest": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/MANIFEST.json",
+    "sha256": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd"
+  },
+  "queue": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/QUEUE_CONTRACT_BRIDGE_REMAINING_32.json",
+    "sha256": "f4978ff5be3bd2f3b5755e02fae4292fa6d5ec4626717bac0ce65fe35dcf39c6"
+  },
+  "full_denominator": 34,
+  "receipts_present": 34,
+  "dispositions": {
+    "STRICT_NORMAL_DIAGNOSTIC": 28,
+    "SEMANTIC_RECEIPT_WITH_OBSERVER_ANOMALY": 2,
+    "EXPECTED_WHOLE_CONTRACT_REJECTION": 4
+  },
+  "remaining_without_receipts": 0,
+  "strict_all_pass_claim": false,
+  "normalized_xor": {
+    "observed_unsat": 30,
+    "strict_normal_unsat": 28,
+    "observer_anomaly_unsat": 2,
+    "unsupported_not_run": 4
+  },
+  "original_xor": {
+    "sat": 8,
+    "unsat": 22,
+    "NOT_RUN": 4
+  },
+  "fixed_database_slots": {
+    "registered": 170,
+    "evaluated_in_supported_receipts": 150,
+    "strict_normal_evaluated": 140,
+    "observer_anomaly_evaluated": 10,
+    "unsupported_not_run": 20,
+    "unexpected_disagreements": 0
+  },
+  "solver_slot_status_counts": {
+    "sat": 218,
+    "unsat": 82,
+    "NOT_RUN": 40
+  },
+  "additional_actual_pair_checks": 2,
+  "distinct_admission_controls": 3,
+  "admission_control_repetitions": 34,
+  "anomalies": [
+    {
+      "case_id": "and_N1",
+      "stop_reason": "RSS_OBSERVATION_UNAVAILABLE",
+      "exit_code": 0,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/and_N1_01/supervision.json",
+        "sha256": "54b6aab953e8a587cc28d1068a88281be78e82d43384213bb8850e9240f3157d"
+      }
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "stop_reason": "RSS_OBSERVATION_UNAVAILABLE",
+      "exit_code": 0,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_column_left_N2_01/supervision.json",
+        "sha256": "69ece4fb5bbad312749baf6f0ed594879cc72b7b32b9e96cfc4f1a175fc498d2"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "case_id": "lt_literal_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N1_01/report.json",
+        "sha256": "c1ea1409977aeeae8332180000b83779f860b479155b8b9675be9f9e8512d877"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N1_01/supervision.json",
+        "sha256": "88af62978142f13dc4d14604f5e767a00db814ba743dd904c1f57f6d69b5532b"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.56710104085505,
+          "cpu_seconds": 1.48213,
+          "peak_rss_bytes_darwin": 108986368,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 107806720,
+        "child_wall": 1.6186198750510812,
+        "child_cpu": 1.483474
+      }
+    },
+    {
+      "case_id": "lt_column_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_column_left_N1_01/report.json",
+        "sha256": "4213d519da22a28949814a06398e17fc7881cd62217136803409dffe232a8c1f"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_column_left_N1_01/supervision.json",
+        "sha256": "ea92b217ac4a3a1a158f2e874e0dfbc2597aaa8dde451f98bd5224f33c162bb9"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.430110708810389,
+          "cpu_seconds": 1.314463,
+          "peak_rss_bytes_darwin": 109068288,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 109068288,
+        "child_wall": 1.4899114998988807,
+        "child_cpu": 1.315572
+      }
+    },
+    {
+      "case_id": "lte_literal_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_literal_left_N1_01/report.json",
+        "sha256": "fdc3aa22fa5adc30fbe3174bd54d41edd0c566ec118875fc2445ad41c7902d5f"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_literal_left_N1_01/supervision.json",
+        "sha256": "c19234879564cca75ddf2d1e1980fa062a695dab9c6a6b61154014990f022f9c"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.1537527088075876,
+          "cpu_seconds": 1.1624340000000002,
+          "peak_rss_bytes_darwin": 111820800,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 111820800,
+        "child_wall": 1.2094250000081956,
+        "child_cpu": 1.163469
+      }
+    },
+    {
+      "case_id": "lte_column_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_column_left_N1_01/report.json",
+        "sha256": "2e820953655a8d15e63382954d1dbae472904c2808f191e537e11261933f4d42"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_column_left_N1_01/supervision.json",
+        "sha256": "63b326cddf4cc6befe2add9b498347ba0083942aae2290ab313da1f0930928aa"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.199851875193417,
+          "cpu_seconds": 1.2076930000000001,
+          "peak_rss_bytes_darwin": 96272384,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 95780864,
+        "child_wall": 1.2207077909260988,
+        "child_cpu": 1.2086999999999999
+      }
+    },
+    {
+      "case_id": "gt_literal_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_literal_left_N1_01/report.json",
+        "sha256": "ae9df2b0476bff964832b92952ba379e5c100635f4d2d153b2169fa221031f82"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_literal_left_N1_01/supervision.json",
+        "sha256": "1c09e64c353c948d46a11229d538d15997ba7ac2cb4e703e0a2f39ef95a38b66"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.333931792061776,
+          "cpu_seconds": 1.163974,
+          "peak_rss_bytes_darwin": 105742336,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 105512960,
+        "child_wall": 1.3960259170271456,
+        "child_cpu": 1.166453
+      }
+    },
+    {
+      "case_id": "gt_column_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_column_left_N1_01/report.json",
+        "sha256": "c918c034a4594f26f597054cdd73f204520547c2751ce8342641a7947ef3eb84"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_column_left_N1_01/supervision.json",
+        "sha256": "20a13773c6bbdf7115af14c857a4e9a825674f9e3e9a6e3162da236fbe1ca645"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2702590418048203,
+          "cpu_seconds": 1.277826,
+          "peak_rss_bytes_darwin": 110428160,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 110231552,
+        "child_wall": 1.3261255002580583,
+        "child_cpu": 1.27881
+      }
+    },
+    {
+      "case_id": "gte_literal_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_literal_left_N1_01/report.json",
+        "sha256": "117baf53fb2a84d3ba8bf6e05281131fe9c383422342ecf2db2e56dfd0d24fdb"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_literal_left_N1_01/supervision.json",
+        "sha256": "958eac26db74097f7daa1d9d3a7e33a77efbc180ac5aa5f8f65f40046c539409"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.256925332825631,
+          "cpu_seconds": 1.259048,
+          "peak_rss_bytes_darwin": 113229824,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 113229824,
+        "child_wall": 1.3235349170863628,
+        "child_cpu": 1.260085
+      }
+    },
+    {
+      "case_id": "gte_column_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_column_left_N1_01/report.json",
+        "sha256": "50e1cb07c3744df7f549b352d3b7137b889c91ec1f49f4dfc4530fa1eba19a55"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_column_left_N1_01/supervision.json",
+        "sha256": "08f381408c68c787f4f635daf0d05516e1290d46ff24bfece37fc60459136a36"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2253038752824068,
+          "cpu_seconds": 1.233422,
+          "peak_rss_bytes_darwin": 107184128,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 107184128,
+        "child_wall": 1.2756219576112926,
+        "child_cpu": 1.2344650000000001
+      }
+    },
+    {
+      "case_id": "eq_literal_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_literal_left_N1_01/report.json",
+        "sha256": "ea1963b4c97f302be9ebe1ed8872ac8429c64e8dff1d22fbcdfc31a813f5c702"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_literal_left_N1_01/supervision.json",
+        "sha256": "4294a48ac998b1dfe0e6a049eb6acfe7e77f75d091439ace67c1e9838a60c821"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.423771624919027,
+          "cpu_seconds": 1.35332,
+          "peak_rss_bytes_darwin": 109608960,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 109608960,
+        "child_wall": 1.492714749649167,
+        "child_cpu": 1.355839
+      }
+    },
+    {
+      "case_id": "eq_column_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_column_left_N1_01/report.json",
+        "sha256": "7e6c9d0b1cf06d711178a4d5009961a0b756dbf03682e2bd0b4a2cc4a132bec7"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_column_left_N1_01/supervision.json",
+        "sha256": "cf06a6ee5ffd7debf9863d3c2536fb5ac270ae4ec98778025cd4a96ca6580f84"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2317461669445038,
+          "cpu_seconds": 1.236601,
+          "peak_rss_bytes_darwin": 115671040,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 115490816,
+        "child_wall": 1.2686512917280197,
+        "child_cpu": 1.2375450000000001
+      }
+    },
+    {
+      "case_id": "neq_literal_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_literal_left_N1_01/report.json",
+        "sha256": "bbb77bb64817ea76aa997447e8d456e9f3bac6884495e45fbf251264242524d6"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_literal_left_N1_01/supervision.json",
+        "sha256": "61a3e123f1a653a920657b1e21e84584ebcd8ebba1ec218fe20f51d9d250a905"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.3449654579162598,
+          "cpu_seconds": 1.345184,
+          "peak_rss_bytes_darwin": 105185280,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 104759296,
+        "child_wall": 1.3789218752644956,
+        "child_cpu": 1.346182
+      }
+    },
+    {
+      "case_id": "neq_column_left_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_column_left_N1_01/report.json",
+        "sha256": "1bb48f65b79dfef838e2f0d03f3896c98943fb210c63d20fc05a62ec94189c8d"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_column_left_N1_01/supervision.json",
+        "sha256": "e7e4f0e486bf55974dff96097af049d2e469bda51a6b0b73cfb7d6ff241cacc6"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2968067498877645,
+          "cpu_seconds": 1.2867060000000001,
+          "peak_rss_bytes_darwin": 106135552,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 105644032,
+        "child_wall": 1.3205285840667784,
+        "child_cpu": 1.287652
+      }
+    },
+    {
+      "case_id": "none_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/none_N1_01/report.json",
+        "sha256": "04fe26ec998b85e1e3d94995a490ed6d113560f01cc9456d6f8a3bd8d118d639"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/none_N1_01/supervision.json",
+        "sha256": "c6c571a10a0718d5e1cd3506717e1419ba50566e22ba75e6b5dba08667430bbe"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2086315406486392,
+          "cpu_seconds": 1.217088,
+          "peak_rss_bytes_darwin": 104759296,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 104759296,
+        "child_wall": 1.2787321656942368,
+        "child_cpu": 1.219277
+      }
+    },
+    {
+      "case_id": "not_null_N1",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/not_null_N1_01/report.json",
+        "sha256": "9c046788bbc7723a3c1458b4c040a682c56b5399b9b4fa76b5e886d6f59bd441"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/not_null_N1_01/supervision.json",
+        "sha256": "d7161b7bb40b16de241339e19819ef574668bfea87e49be448513ac4ac509664"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.1672392087057233,
+          "cpu_seconds": 1.174901,
+          "peak_rss_bytes_darwin": 109461504,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 109346816,
+        "child_wall": 1.190605124924332,
+        "child_cpu": 1.175921
+      }
+    },
+    {
+      "case_id": "and_N1",
+      "disposition": "SEMANTIC_RECEIPT_WITH_OBSERVER_ANOMALY",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/and_N1_01/report.json",
+        "sha256": "a43576c24a0e1423434fec2a206116966fb6a91a24d0446c1f4596e2cfcf2f4c"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/and_N1_01/supervision.json",
+        "sha256": "54b6aab953e8a587cc28d1068a88281be78e82d43384213bb8850e9240f3157d"
+      },
+      "exit_code": 0,
+      "stop_reason": "RSS_OBSERVATION_UNAVAILABLE",
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 4,
+      "fixed_evaluated": 4,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2282038750126958,
+          "cpu_seconds": 1.204767,
+          "peak_rss_bytes_darwin": 102137856,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 100581376,
+        "child_wall": 1.2467924170196056,
+        "child_cpu": 1.205762
+      }
+    },
+    {
+      "case_id": "unverified_or_N1",
+      "disposition": "EXPECTED_WHOLE_CONTRACT_REJECTION",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_or_N1_01/report.json",
+        "sha256": "99b1959e58f86ed8ca70bab42111ea55c8a29d78979a04f1ba7c0cec15a3798a"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_or_N1_01/supervision.json",
+        "sha256": "74bf109e0c3bfb59fc1e747aa59947d6995324ed5ff54825b0b2247c1001c80c"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "UNVERIFIED_CONTRACT",
+      "original_xor": "NOT_RUN",
+      "normalized_xor": "NOT_RUN",
+      "fixed_count": 4,
+      "fixed_evaluated": 0,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 0.026296207681298256,
+          "cpu_seconds": 0.037994,
+          "peak_rss_bytes_darwin": 21037056,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 1,
+        "sampled_rss": 229376,
+        "child_wall": 0.054923417046666145,
+        "child_cpu": 0.038819
+      }
+    },
+    {
+      "case_id": "unverified_primary_N1",
+      "disposition": "EXPECTED_WHOLE_CONTRACT_REJECTION",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_primary_N1_01/report.json",
+        "sha256": "eafd105597aeaae125f7245e39a92de8a495dafdb44ea59a1f4c3e3a232e2bc7"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_primary_N1_01/supervision.json",
+        "sha256": "875ccad7c5aea60131db997f987fbdc1361852fe3ae61789f7fb06fc65e3f883"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "UNVERIFIED_CONTRACT",
+      "original_xor": "NOT_RUN",
+      "normalized_xor": "NOT_RUN",
+      "fixed_count": 4,
+      "fixed_evaluated": 0,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 0.026330665685236454,
+          "cpu_seconds": 0.037889,
+          "peak_rss_bytes_darwin": 21135360,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 1,
+        "sampled_rss": 229376,
+        "child_wall": 0.05655895918607712,
+        "child_cpu": 0.038366
+      }
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N2_01/report.json",
+        "sha256": "ddea7122f23c18bc00e75300ed4dce7345d1344b03ef72eefd4fd56c1b48b6fa"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_literal_left_N2_01/supervision.json",
+        "sha256": "9baceb861d845f3524dde7925b6eb49136a613320b4d1fda9f5e154b3473f21b"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.474860291928053,
+          "cpu_seconds": 1.384501,
+          "peak_rss_bytes_darwin": 112214016,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 111525888,
+        "child_wall": 1.5325909587554634,
+        "child_cpu": 1.385889
+      }
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_column_left_N2_01/report.json",
+        "sha256": "f84748ca7fd76913cd6fd497cec6e3ce51c95d953509608c0d2e2811e52474b4"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lt_column_left_N2_01/supervision.json",
+        "sha256": "b54d9fa1be7670008fbbf9318ed46ea02ff69eeb5c339079f015405393d9b2ce"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.3560394579544663,
+          "cpu_seconds": 1.3458599999999998,
+          "peak_rss_bytes_darwin": 102498304,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 101269504,
+        "child_wall": 1.394239041954279,
+        "child_cpu": 1.348751
+      }
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_literal_left_N2_01/report.json",
+        "sha256": "4ca977da7c5188117a61c1e0836b22beb1cc65a2028fefe3fcba34c3aec11854"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_literal_left_N2_01/supervision.json",
+        "sha256": "116b000889741d8dfc407801d2798758f71a3bc334765a9e8034ed1c5f79259c"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.3139602500014007,
+          "cpu_seconds": 1.3121749999999999,
+          "peak_rss_bytes_darwin": 117506048,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 116948992,
+        "child_wall": 1.339683458674699,
+        "child_cpu": 1.313222
+      }
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "disposition": "SEMANTIC_RECEIPT_WITH_OBSERVER_ANOMALY",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_column_left_N2_01/report.json",
+        "sha256": "62a96bcc1848fce17fd78f7382a9ae4ec80e562fd92398c2d1ceb0d0a38a9598"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/lte_column_left_N2_01/supervision.json",
+        "sha256": "69ece4fb5bbad312749baf6f0ed594879cc72b7b32b9e96cfc4f1a175fc498d2"
+      },
+      "exit_code": 0,
+      "stop_reason": "RSS_OBSERVATION_UNAVAILABLE",
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.22727841604501,
+          "cpu_seconds": 1.2343709999999999,
+          "peak_rss_bytes_darwin": 114049024,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 113442816,
+        "child_wall": 1.2457657922059298,
+        "child_cpu": 1.2371320000000001
+      }
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_literal_left_N2_01/report.json",
+        "sha256": "040232683b6da9c03c1aad20de3adc93172ccf81f327ca9afb7556e2d13c384f"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_literal_left_N2_01/supervision.json",
+        "sha256": "bb754160f33b20874b7a70e6865e496fbe8aadac9ce9051d9ddc2c626cd1a2ca"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.216323584318161,
+          "cpu_seconds": 1.22532,
+          "peak_rss_bytes_darwin": 110018560,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 109969408,
+        "child_wall": 1.2432510410435498,
+        "child_cpu": 1.226347
+      }
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_column_left_N2_01/report.json",
+        "sha256": "5a25281e61283eb72b6d03a2c08de88381f382ef5e2f1f5b75a48cf078668d10"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gt_column_left_N2_01/supervision.json",
+        "sha256": "3fc2fd24e5179988e7db1efa7bd1e1f962af2eea39806f448a6713eed9f91764"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.298177415970713,
+          "cpu_seconds": 1.3022719999999999,
+          "peak_rss_bytes_darwin": 106725376,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 106708992,
+        "child_wall": 1.3440055842511356,
+        "child_cpu": 1.303401
+      }
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_literal_left_N2_01/report.json",
+        "sha256": "e141e9fef7ede6cc1d63c01c3bdad005af695866ff1572b3a53f10873d749c8c"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_literal_left_N2_01/supervision.json",
+        "sha256": "1fbae57bec02e790e593e70ef8e52a3a5b1d534df36c5c07d0875af047f9064c"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "sat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.3426358341239393,
+          "cpu_seconds": 1.3453979999999999,
+          "peak_rss_bytes_darwin": 110133248,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 109658112,
+        "child_wall": 1.3955935421399772,
+        "child_cpu": 1.346985
+      }
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_column_left_N2_01/report.json",
+        "sha256": "9ddb7c24489b38f6efc4a1c8170aeb33e798561c07b2c89c386a9cb71c5a5c5c"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/gte_column_left_N2_01/supervision.json",
+        "sha256": "7ddef4a114d2bd1c02487d64f269927631bcda87e2ad92d8133b9878d1975578"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.335086832754314,
+          "cpu_seconds": 1.334062,
+          "peak_rss_bytes_darwin": 114081792,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 114081792,
+        "child_wall": 1.4050429170019925,
+        "child_cpu": 1.337113
+      }
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_literal_left_N2_01/report.json",
+        "sha256": "eef6c13284b5af5863b924111930d722b193a856854f2acd9759615d0c856b5f"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_literal_left_N2_01/supervision.json",
+        "sha256": "3b54d4f6bedd533f27bab64a8566b33c4f3db4cb0a70e62484d37d6e1ac0ea23"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.5010642078705132,
+          "cpu_seconds": 1.4264899999999998,
+          "peak_rss_bytes_darwin": 102350848,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 102350848,
+        "child_wall": 1.5463396250270307,
+        "child_cpu": 1.427991
+      }
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_column_left_N2_01/report.json",
+        "sha256": "52e291f221cc793436ad756bab14036692658a854c5a0f1248e6d4c2d14ee4c6"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/eq_column_left_N2_01/supervision.json",
+        "sha256": "1192aa973c2c5a96a38c38b6b6140121daa0bbf0c0c5cc2cf09bff72c08359e0"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.8299609157256782,
+          "cpu_seconds": 1.304955,
+          "peak_rss_bytes_darwin": 92078080,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 91258880,
+        "child_wall": 1.8804820841178298,
+        "child_cpu": 1.307348
+      }
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_literal_left_N2_01/report.json",
+        "sha256": "3a664e8ecd3ebae812ddac6c0f843134a9d99b2a90484f175b5c341fcf53ac7e"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_literal_left_N2_01/supervision.json",
+        "sha256": "91670ab19cb07006d32a9bce6dc735a60c77b89780081ed788b5a87598b4164a"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 3.008241083007306,
+          "cpu_seconds": 1.7377789999999997,
+          "peak_rss_bytes_darwin": 89833472,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 89587712,
+        "child_wall": 3.0659960000775754,
+        "child_cpu": 1.7395369999999999
+      }
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_column_left_N2_01/report.json",
+        "sha256": "820d2a8ce834d7b0d9265471fa3a610a18f50e5e96625c225be8303abf762401"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/neq_column_left_N2_01/supervision.json",
+        "sha256": "ca07d3bd14546d1be79ecada01934327ad1352504a292e7abb8bb3f454a28557"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.3570308326743543,
+          "cpu_seconds": 1.35509,
+          "peak_rss_bytes_darwin": 105627648,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 105398272,
+        "child_wall": 1.403081291820854,
+        "child_cpu": 1.3561809999999999
+      }
+    },
+    {
+      "case_id": "none_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/none_N2_01/report.json",
+        "sha256": "42f0bddbe05bf94d15e38b8f1eb97c2486f807b038fd1ae561d79c33efcd9dfc"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/none_N2_01/supervision.json",
+        "sha256": "d04ed8f078f6ab614221adf88b197212a80824118ead4c4d22605a4460d53c68"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.341186875011772,
+          "cpu_seconds": 1.326809,
+          "peak_rss_bytes_darwin": 99401728,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 98942976,
+        "child_wall": 1.397681999951601,
+        "child_cpu": 1.327831
+      }
+    },
+    {
+      "case_id": "not_null_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/not_null_N2_01/report.json",
+        "sha256": "7e8985b2d7a6b725493981dbddd16b9d570e577c25555787b1b420f42fe83258"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/not_null_N2_01/supervision.json",
+        "sha256": "87c4c1e01727dd81df0c833c3c581a27391177a1f907aad2168551cdbb2f8994"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2392647499218583,
+          "cpu_seconds": 1.235831,
+          "peak_rss_bytes_darwin": 107167744,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 107134976,
+        "child_wall": 1.2944329995661974,
+        "child_cpu": 1.2390029999999999
+      }
+    },
+    {
+      "case_id": "and_N2",
+      "disposition": "STRICT_NORMAL_DIAGNOSTIC",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/and_N2_01/report.json",
+        "sha256": "257e10b2f223f0563a5e28a5ab6a3e4a9059b9b82ac3830d5a1e4a6577c75344"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/and_N2_01/supervision.json",
+        "sha256": "8422afb9a3c819f22cf03c7e7e139092a89a9caee15c05f73d9bb7a73987b1e6"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+      "original_xor": "unsat",
+      "normalized_xor": "unsat",
+      "fixed_count": 6,
+      "fixed_evaluated": 6,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 1.2956155422143638,
+          "cpu_seconds": 1.298567,
+          "peak_rss_bytes_darwin": 117260288,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 2,
+        "sampled_rss": 117260288,
+        "child_wall": 1.3567897910252213,
+        "child_cpu": 1.300944
+      }
+    },
+    {
+      "case_id": "unverified_or_N2",
+      "disposition": "EXPECTED_WHOLE_CONTRACT_REJECTION",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_or_N2_01/report.json",
+        "sha256": "275868e780c0618f0dbab535556c4b4c60cd3d21bcd9a23ec83844093d329c16"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_or_N2_01/supervision.json",
+        "sha256": "55fe0eb7badb23fc27d4441121a5795f32f2cf1e9db004461b1c469ca3782a2c"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "UNVERIFIED_CONTRACT",
+      "original_xor": "NOT_RUN",
+      "normalized_xor": "NOT_RUN",
+      "fixed_count": 6,
+      "fixed_evaluated": 0,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 0.028054166119545698,
+          "cpu_seconds": 0.04063699999999999,
+          "peak_rss_bytes_darwin": 21364736,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 1,
+        "sampled_rss": 245760,
+        "child_wall": 0.05540191615000367,
+        "child_cpu": 0.041255
+      }
+    },
+    {
+      "case_id": "unverified_primary_N2",
+      "disposition": "EXPECTED_WHOLE_CONTRACT_REJECTION",
+      "report": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_primary_N2_01/report.json",
+        "sha256": "fb657ad74fadd85a46b99d3cd34c421ae0065c482af150379b379408339fc12c"
+      },
+      "supervision": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/runs/unverified_primary_N2_01/supervision.json",
+        "sha256": "76f82ef23c32e8469d743dfe302037b7228d56694a3ba691c91fa0e4bc926c25"
+      },
+      "exit_code": 0,
+      "stop_reason": null,
+      "worker_status": "UNVERIFIED_CONTRACT",
+      "original_xor": "NOT_RUN",
+      "normalized_xor": "NOT_RUN",
+      "fixed_count": 6,
+      "fixed_evaluated": 0,
+      "resources": {
+        "checkpoint": {
+          "wall_seconds": 0.027171750087291002,
+          "cpu_seconds": 0.039214,
+          "peak_rss_bytes_darwin": 21397504,
+          "python_threads": [
+            {
+              "name": "MainThread",
+              "daemon": false
+            }
+          ]
+        },
+        "observed_threads": 1,
+        "sampled_rss": 262144,
+        "child_wall": 0.054363165982067585,
+        "child_cpu": 0.039833999999999994
+      }
+    }
+  ],
+  "fixed_truth_audit": [
+    {
+      "case_id": "lt_literal_left_N1",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N1",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N1",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N1",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N1",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_column_left_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_column_left_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_column_left_N1",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_column_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N1",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N1",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N1",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N1",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N1",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N1",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N1",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N1",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N1",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N1",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N1",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N1",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N1",
+      "fixed_id": "NULL",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N1",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "and_N1",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "and_N1",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "and_N1",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_literal_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lt_column_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_literal_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "lte_column_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": true
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_literal_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gt_column_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_literal_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "gte_column_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_literal_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "fixed_id": "4",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "fixed_id": "6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "eq_column_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_literal_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "fixed_id": "5",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "neq_column_left_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N2",
+      "fixed_id": "NULL",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "none_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "not_null_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N2",
+      "fixed_id": "4",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N2",
+      "fixed_id": "5",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N2",
+      "fixed_id": "6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N2",
+      "fixed_id": "NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N2",
+      "fixed_id": "mixed_4_6",
+      "expected_reference": true,
+      "expected_original_emission": true,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    },
+    {
+      "case_id": "and_N2",
+      "fixed_id": "mixed_6_NULL",
+      "expected_reference": false,
+      "expected_original_emission": false,
+      "recorded_all_match": true,
+      "observer_anomaly": false
+    }
+  ],
+  "limitations": [
+    "Two observer failures are retained even though worker COMPLETE and exit zero; neither is strict normal completion.",
+    "Four explicit unsupported controls are whole-contract rejections, not SQL equivalence successes.",
+    "Completed worker numerical statements under observer anomalies remain visible separately; not erased or promoted.",
+    "Current source-level slot execution differs from older external 240-cell version; results are not pooled.",
+    "Formal six-arm v5 integration requires separate source-lock and actual-entry evidence.",
+    "Prior CURRENT_N1_N2_RUN_REVIEW files remain the earlier 2/34 time cut.",
+    "This is a registered constructed diagnostic, not natural-defect prevalence, general certificate or novel-method evidence."
+  ]
+}

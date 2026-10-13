@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-10-11",
+  "review_kind": "INDEPENDENT_REVISION_FOLLOWUP",
+  "revision": "revision_02 plus provenance_correction.json",
+  "decision": "REPAIRS_ACCEPTED_NULL_HOLD_RETAINED",
+  "initial_findings_resolved": 5,
+  "initial_findings_remaining": 0,
+  "followup_provenance_resolved": true,
+  "remaining_findings": [],
+  "new_validated_mechanism": null,
+  "retained_precise_question": null,
+  "theory_gate_passed": false,
+  "method_promotion_approved": false,
+  "random_experiments_authorized": false,
+  "scientific_experiments": 0,
+  "checks": [
+    {
+      "id": "P1-01",
+      "priority_at_initial_review": "P1",
+      "status": "resolved",
+      "anchors": [
+        "constraint_polynomial_opportunity.md:63"
+      ],
+      "reason": "T/q, query-independent/pair-driven, one-row type slice and equality-only C are separated explicitly."
+    },
+    {
+      "id": "P1-02",
+      "priority_at_initial_review": "P1",
+      "status": "resolved",
+      "anchors": [
+        "constraint_polynomial_opportunity.md:49",
+        "constraint_polynomial_opportunity.md:51",
+        "constraint_polynomial_opportunity.md:53"
+      ],
+      "reason": "Constant-template enumeration degeneracy is acknowledged; no new mechanism is claimed. A new small-model theorem and a faster atlas are distinct possible future contributions.",
+      "boundary": "An independently new small-model result can reopen theoretical review; it does not make its enumerated constant-template atlas a new nontrivial algorithmic mechanism."
+    },
+    {
+      "id": "P2-01",
+      "priority_at_initial_review": "P2",
+      "status": "resolved",
+      "anchors": [
+        "constraint_polynomial_opportunity.md:31"
+      ],
+      "reason": "Prime-power q/F_q assumptions and weak 1/q success bound are explicit."
+    },
+    {
+      "id": "P2-02",
+      "priority_at_initial_review": "P2",
+      "status": "resolved",
+      "anchors": [
+        "constraint_polynomial_opportunity.md:41",
+        "hand_witnesses.sql:25",
+        "hand_witnesses.json:143"
+      ],
+      "reason": "Constant-head bag cores are in C; COUNT is an observer only."
+    },
+    {
+      "id": "P2-03",
+      "priority_at_initial_review": "P2",
+      "status": "resolved",
+      "anchors": [
+        "neighbor_audit.md:75"
+      ],
+      "reason": "Printed, one-based PDF, and zero-based PDF indices are distinguished."
+    },
+    {
+      "id": "ADDITIONAL_PRECEDENT_ATTRIBUTION",
+      "status": "resolved",
+      "anchors": [
+        "constraint_polynomial_opportunity.md:37"
+      ],
+      "reason": "Customer/Orders residual and dependency of existential values on counted values explicitly credited as already public."
+    },
+    {
+      "id": "FOLLOWUP_PROVENANCE_HASH",
+      "priority_at_followup": "P2",
+      "status": "resolved",
+      "anchors": [
+        "REVISION_MANIFEST.json:30",
+        "provenance_correction.json"
+      ],
+      "reason": "Historical intermediate reference is preserved and superseded by an append-only correction; five final original-review hashes checked directly.",
+      "recorded_intermediate_sha256": "3c9b8709b9b0b657a699bf13f650c8e319fbfb01d144d3803a89bfe4058e4763",
+      "correct_final_sha256": "c17a03589f7c6900c54286a8cb03241c997143e775b0e84e63026c57d219ef97"
+    }
+  ],
+  "independent_cross_check": {
+    "agent": "fewrows_anchor_read",
+    "files_read": [
+      "constraint_polynomial_opportunity.md",
+      "hand_witnesses.json"
+    ],
+    "p1_01": "resolved",
+    "p1_02_conditional_observation": "If a non-enumerative cost bound is made mandatory for every kind of reopening, the new-small-model alternative would not meet that stronger rule.",
+    "lead_resolution": "The original finding concerns falsely treating constant-template enumeration as a new mechanism. A genuinely new small-model theorem is a separate legitimate theoretical contribution. Current text claims neither and retains HOLD; the present repair is resolved. Mechanism promotion still requires distinct nontrivial evidence."
+  },
+  "validation": {
+    "revision_manifest_matches_given_sha256": true,
+    "correction_matches_given_sha256": true,
+    "four_revision_files_match_manifest": true,
+    "five_original_review_hash_only_checks_match": true,
+    "author_inputs_unchanged_during_followup": true,
+    "original_review_files_modified": false,
+    "old_frozen_or_final_test_accessed": false,
+    "sql_executed": false,
+    "solver_executed": false,
+    "public_sources_reopened": false
+  },
+  "input_sha256": [
+    {
+      "path": "calibergraph_next_20261011_07/revision_02/constraint_polynomial_opportunity.md",
+      "sha256": "ecb164ef4767403c32bfe439a9ec315dd99d3eee4fa20a34233b578611a47498",
+      "bytes": 16890
+    },
+    {
+      "path": "calibergraph_next_20261011_07/revision_02/neighbor_audit.md",
+      "sha256": "3c0c38e96009fd131fa59178f091d65239bf2c43f423160c12d5a5339f98a185",
+      "bytes": 10324
+    },
+    {
+      "path": "calibergraph_next_20261011_07/revision_02/hand_witnesses.sql",
+      "sha256": "b916859dc2b1278d4ccb0aaba849a83927996dd0fb9250d529c7a2d04a698137",
+      "bytes": 1422
+    },
+    {
+      "path": "calibergraph_next_20261011_07/revision_02/hand_witnesses.json",
+      "sha256": "a5bcc0ee4bdddccfef2a3d6457817ab0cbd8cc37a4ea8adc6a06c97d54d05ad2",
+      "bytes": 2771
+    },
+    {
+      "path": "calibergraph_next_20261011_07/revision_02/REVISION_MANIFEST.json",
+      "sha256": "b9387d11889e26dac0662458dcc9a2decc10a99ce0a647175b7b74e0ee79406d",
+      "bytes": 2144
+    },
+    {
+      "path": "calibergraph_next_20261011_07/revision_02/provenance_correction.json",
+      "sha256": "a8d043ecab34065b264352a945cf0af306ab73a49ec435f9250b39282b2c4ec7",
+      "bytes": 1747
+    }
+  ],
+  "backup_status": "PENDING_PARENT_BACKUP",
+  "report": "REVIEW.zh.md"
+}

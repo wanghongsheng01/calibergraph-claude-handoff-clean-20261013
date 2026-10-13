@@ -1,0 +1,34 @@
+{
+  "reason": null,
+  "elapsed_s": 0.020846374798566103,
+  "wall_seconds": 2,
+  "handle_count": 1,
+  "all_reaped": true,
+  "returncodes": [
+    0
+  ],
+  "cleanup_errors": [],
+  "self_rss_stop_bytes": 1073741824,
+  "rss_scope": "own Python high-water RSS only; excludes all children",
+  "events": [
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.290290916,
+      "bytes": 16596992
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2333144.291233583,
+      "index": 0,
+      "pid_for_logging_only": 40463
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2333144.310989166,
+      "pid_for_logging_only": 40463,
+      "returncode": 0
+    }
+  ],
+  "test": "normal",
+  "expected": "normal return + wait"
+}

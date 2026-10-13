@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "role": "INDEPENDENT_REVIEWER_NOT_AUTHOR_IMPLEMENTER",
+  "state": "AWAITING_HASHED_PREEXECUTION_DELIVERABLES",
+  "created_utc": "2026-10-11T19:59:04.224151+00:00",
+  "read_evidence": [
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/analysis/PREPARATION_RESULT.zh.md",
+      "bytes": 8487,
+      "sha256": "54384b10797c0df10148ccb71e8a3fc0956e6526ec3295b15f37eeedbab6ea87"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/data/BASELINE_ADMISSION_MATRIX.json",
+      "bytes": 10514,
+      "sha256": "9bcd7695fd9a8a684acd01eff0486db2f5c01c3a9538ef7269e63ccb88536406"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_review_20261011_02/REVIEW_RESULT.json",
+      "bytes": 7625,
+      "sha256": "ea3494d1e3a86f5dec3b9666bc186467d8060eca5c5b3c5d7c1e0163498471f4"
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/sources_local/selection/gitlab/g47_original_before.sql",
+      "bytes": 873,
+      "sha256": "36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7"
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/sources_local/selection/gitlab/g47_original_after.sql",
+      "bytes": 489,
+      "sha256": "1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2"
+    },
+    {
+      "path": "calibergraph_source_qualification_20261011/sources_local/gitlab_other_apps/47_parent_db__schema.rb",
+      "bytes": 68810,
+      "sha256": "988b32f89adb6c93c74bf9a3c077807faa05b6fadeb402d85d8fa0b5d18c750e"
+    }
+  ],
+  "reviewer_executions": {
+    "SQL": 0,
+    "parser": 0,
+    "SMT": 0,
+    "target_import": 0,
+    "DB_startup": 0,
+    "install": 0,
+    "author_scripts": 0
+  },
+  "criteria": [
+    "Preserve both frozen original SQL byte hashes including f literal, projects.* and ORDER BY projects.id DESC; do not use simplified pairs.",
+    "Map all columns of projects/users_star_projects/project_authorizations/users and original outgoing FK closure; absence of unused full historical tables must be justified as empty extension rather than unqualified entire-database restoration.",
+    "Preserve nullable BOOLEAN and all original nullable/NN fields, integer domains, string lengths, datetime/date types; defaults are default behavior, not CHECKs.",
+    "Authorization has no PK, nullable UNIQUE(user_id,project_id,access_level), two actual FKs; star has PK and NN pair UNIQUE, no outgoing source FK. Never strengthen to authorization pair unique or invent star FK.",
+    "Inspect every inactive proof constraint; distinguish generation limitations from fullC acceptance. Every candidate must pass independent fullC typed validation before replay.",
+    "Unmodified and ordinary-adapter results must remain distinct. If original boolean conversion needs adjustment, adapt implementation and preserve original SQL.",
+    "Pin source/dependency/backend/session identities; fresh isolated database/cluster paths must belong solely to this run. No credential access or unrelated service/project modification.",
+    "New engine calibration is not historical exact-engine reproduction; exact historical server/session is unknown.",
+    "Freeze finite wall/CPU/RSS/solver-call/candidate/replay/row limits, enforce hard exits and same-host unrelated_project resource gates before science.",
+    "Keep complete typed ordered 42-column results and duplicates/NULL; confirmation replay for any difference. One empty side can be valid NEQ; both empty does not imply algorithm failure.",
+    "Save all attempts/errors/timeouts/unsupported/NOT_RUN and solver/candidate/replay counters. Admission failure is not scientific failure; no counterexample is not failure of this positive-control pair.",
+    "Maintain NO_GO_NEW_MECHANISM_CLAIM / NONE / UNCOMMITTED unless independently warranted; no novelty claim from normal literal/schema adapter."
+  ]
+}

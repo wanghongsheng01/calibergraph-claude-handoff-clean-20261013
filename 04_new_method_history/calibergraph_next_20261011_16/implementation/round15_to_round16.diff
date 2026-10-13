@@ -1,0 +1,283 @@
+--- round15/implementation/generation_common.py
++++ round16/implementation/generation_common.py
+@@ -1,4 +1,4 @@
+-"""Round 15 frozen input admission and stdlib guards; no SQL/target imports."""
++"""Round 16 frozen input admission and stdlib guards; no SQL/target imports."""
+ from pathlib import Path
+ import hashlib
+ import json
+@@ -9,7 +9,7 @@
+ import time
+ 
+ 
+-PROTOCOL_ID = 'calibergraph-15-generation-replay-v1'
++PROTOCOL_ID = 'calibergraph-16-generation-replay-v1'
+ # Root must independently review, amend, and freeze before enabling execution.
+ EXECUTION_ENABLED = False
+ REGISTRY_SHA256 = 'ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb'
+--- round15/implementation/generation_supervisor.py
++++ round16/implementation/generation_supervisor.py
+@@ -1,7 +1,7 @@
+-"""Frozen round15 single-worker supervisor; importing this file runs no work.
++"""Frozen round16 single-worker supervisor; importing this file runs no work.
+ 
+ CLI: frozen-python3.12 -B -I -S generation_supervisor.py --protocol FILE
+-     --freeze FILE --out NEW_DIRECTORY_UNDER_ROUND15_RUNS
++     --freeze FILE --out NEW_DIRECTORY_UNDER_ROUND16_RUNS
+ All resource probes and workers run only inside main(). No automatic retries.
+ """
+ from __future__ import annotations
+@@ -26,7 +26,10 @@
+ POLICY = {
+     "worker_cpu_hard_seconds": 3, "worker_wall_seconds": 4.0,
+     "worker_rss_bytes": 268435456, "batch_cpu_seconds": 60.0,
+-    "prior_preflight_cpu_charge_seconds": 0.0,
++    "prior_preflight_cpu_charge_seconds": 10.0,
++    "prior_resource_observation_cpu_charge_seconds": None,
++    "prior_resource_observation_measured_cpu_seconds": None,
++    "prior_resource_observation_tail_reserve_seconds": None,
+     "final_report_exit_tail_reserve_seconds": 0.2,
+     "start_new_slot_max_charged_cpu_seconds": 50.0,
+     "active_parent_and_reaped_stop_seconds": 56.0,
+@@ -94,24 +97,33 @@
+     own = resource.getrusage(resource.RUSAGE_SELF)
+     children = resource.getrusage(resource.RUSAGE_CHILDREN)
+     subtotal = own.ru_utime + own.ru_stime + children.ru_utime + children.ru_stime
+-    observed = POLICY["prior_preflight_cpu_charge_seconds"] + subtotal
++    known_minimum = POLICY["prior_preflight_cpu_charge_seconds"] + subtotal
++    observation_charge = POLICY["prior_resource_observation_cpu_charge_seconds"]
++    observed = None if observation_charge is None else known_minimum + observation_charge
+     return {
+         "pre_registered_prior_cpu_seconds": POLICY["prior_preflight_cpu_charge_seconds"],
+         "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
++        "prior_resource_observation_cpu_charge_seconds": observation_charge,
++        "prior_resource_observation_measured_cpu_seconds": POLICY["prior_resource_observation_measured_cpu_seconds"],
++        "prior_resource_observation_tail_reserve_seconds": POLICY["prior_resource_observation_tail_reserve_seconds"],
++        "prior_observation_accounting_status": "INCOMPLETE_OUTER_LEDGER_REQUIRED" if observation_charge is None else "REGISTERED_CHARGE",
+         "parent_user_cpu_seconds": own.ru_utime, "parent_system_cpu_seconds": own.ru_stime,
+         "all_reaped_children_user_cpu_seconds": children.ru_utime,
+         "all_reaped_children_system_cpu_seconds": children.ru_stime,
+         "supervisor_plus_reaped_cpu_seconds": subtotal,
+         "observed_total_cpu_seconds": observed,
+         "reserved_final_report_exit_tail_seconds": POLICY["final_report_exit_tail_reserve_seconds"],
+-        "conservative_charged_total_seconds": observed + POLICY["final_report_exit_tail_reserve_seconds"],
+-        "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice.",
++        "conservative_charged_total_seconds": None if observed is None else observed + POLICY["final_report_exit_tail_reserve_seconds"],
++        "known_minimum_charged_seconds_excluding_prior_observation": known_minimum + POLICY["final_report_exit_tail_reserve_seconds"],
++        "scope": "Preparation10s plus separately registered prior observation charge, absolute current parent SELF and all reaped CHILDREN including memory_pressure, ps, failed preexec children and workers, plus batch tail0.2s. Live worker CPU separately sampled. No child or observation CPU is added twice. A missing prior ledger makes the full total unknown, not zero.",
+     }
+ 
+ 
+ def precheck_guard():
+     require(STOP_REQUESTED is None, STOP_REQUESTED or "EXTERNAL_STOP")
+-    require(accounting()["conservative_charged_total_seconds"] <=
++    charged = accounting()["conservative_charged_total_seconds"]
++    require(charged is not None, "PRIOR_RESOURCE_OBSERVATION_LEDGER_REQUIRED")
++    require(charged <=
+             POLICY["start_new_slot_max_charged_cpu_seconds"], "PRECHECK_CPU_RESERVE_STOP")
+ 
+ 
+@@ -138,8 +150,19 @@
+     require(sys.flags.isolated and sys.flags.no_site and sys.dont_write_bytecode,
+             "REQUIRES_-B_-I_-S")
+     protocol = read_json(args.protocol)
++    supervisor = protocol['supervisor']
++    observation_charge = number(supervisor['prior_resource_observation_cpu_charge_seconds'], 'PRIOR_OBSERVATION_CHARGE')
++    observation_measured = number(supervisor['prior_resource_observation_measured_cpu_seconds'], 'PRIOR_OBSERVATION_MEASURED')
++    observation_tail = number(supervisor['prior_resource_observation_tail_reserve_seconds'], 'PRIOR_OBSERVATION_TAIL')
++    require(abs(observation_charge - (observation_measured + observation_tail)) <= 1e-9,
++            'PRIOR_RESOURCE_OBSERVATION_ACCOUNTING_MISMATCH')
++    POLICY.update(prior_resource_observation_cpu_charge_seconds=observation_charge,
++                  prior_resource_observation_measured_cpu_seconds=observation_measured,
++                  prior_resource_observation_tail_reserve_seconds=observation_tail)
++    prior_charge = number(supervisor['prior_preparation_cpu_charge_seconds'], 'PRIOR_CPU')
++    require(prior_charge == 10.0, 'PREPARATION_CPU_RESERVE_MUST_REMAIN_10_SECONDS')
+     freeze = read_json(args.freeze)
+-    require(protocol.get("id") == "calibergraph-15-generation-replay-v1", "PROTOCOL_ID_MISMATCH")
++    require(protocol.get("id") == "calibergraph-16-generation-replay-v1", "PROTOCOL_ID_MISMATCH")
+     require(isinstance(protocol.get("status"), str) and protocol["status"].startswith("REGISTERED")
+             and isinstance(protocol.get("registered_utc"), str) and protocol["registered_utc"],
+             "EXECUTION_REQUIRES_REGISTERED_PROTOCOL_NOT_TEMPLATE")
+@@ -159,9 +182,6 @@
+     from generation_common import load_registered
+     # This also denies execution while PREPARATION_ONLY remains enabled.
+     _, _, _ = load_registered(args.protocol, 0)
+-    prior_charge = number(protocol['supervisor']['prior_preparation_cpu_charge_seconds'], 'PRIOR_CPU')
+-    require(prior_charge > 0, 'PREPARATION_AND_SOURCE_SCAN_CPU_MUST_BE_CHARGED')
+-    POLICY['prior_preflight_cpu_charge_seconds'] = prior_charge
+     slots = protocol['registered_cases']
+     report['registered_denominator'] = len(slots)
+     report['registered_case_ids'] = [slot['id'] for slot in slots]
+@@ -354,7 +374,7 @@
+                 if STOP_REQUESTED:
+                     stop = STOP_REQUESTED
+                     break
+-                if accounting()["observed_total_cpu_seconds"] >= 56.0:
++                if accounting()["conservative_charged_total_seconds"] >= 56.0:
+                     stop = "BATCH_ACTIVE_CPU_RESERVE_STOP"
+                     break
+                 remaining = 4.0 - (tick - start)
+@@ -390,7 +410,7 @@
+                     stop = "WORKER_RSS_STOP"
+                 elif sample["cpu_seconds"] >= 3.0:
+                     stop = "WORKER_CPU_STOP"
+-                if accounting()["observed_total_cpu_seconds"] >= 56.0:
++                if accounting()["conservative_charged_total_seconds"] >= 56.0:
+                     stop = stop or "BATCH_ACTIVE_CPU_RESERVE_STOP"
+                 if accounting()["conservative_charged_total_seconds"] + sample["cpu_seconds"] >= 60.0:
+                     stop = stop or "BATCH_LIVE_CPU_STOP"
+@@ -514,10 +534,10 @@
+     args.freeze = args.freeze.resolve()
+     output = args.out.resolve()
+     runs = ROOT / "runs"
+-    require(output.parent == runs.resolve() and not output.exists(), "OUTPUT_MUST_BE_FRESH_DIRECT_CHILD_OF_ROUND15_RUNS")
++    require(output.parent == runs.resolve() and not output.exists(), "OUTPUT_MUST_BE_FRESH_DIRECT_CHILD_OF_ROUND16_RUNS")
+     runs.mkdir(exist_ok=True)
+     output.mkdir()
+-    report = {"id": "calibergraph-15-generation-supervisor-receipt-v1", "status": "REGISTERING",
++    report = {"id": "calibergraph-16-generation-supervisor-receipt-v1", "status": "REGISTERING",
+               "created_utc": utc(), "registered_denominator": None,
+               "planned_denominator": 24, "registration_validated": False,
+               "slots": [{"slot": position, "case_id": f'dev03_{source_index + 1:02d}_exact{exact_rows}_rep{repeat_id}', "status": "NOT_RUN",
+@@ -598,10 +618,14 @@
+                     slot["not_run_reason"] = halt or "NOT_ATTEMPTED"
+             report["registered_attempts"] = sum(s["status"] != "NOT_RUN" for s in report["slots"])
+             report["cpu_accounting"] = accounting()
+-            if report["cpu_accounting"]["conservative_charged_total_seconds"] > 60.0:
++            charged = report["cpu_accounting"]["conservative_charged_total_seconds"]
++            if charged is None:
++                report["violations"].append("INCOMPLETE_PRIOR_OBSERVATION_ACCOUNTING")
++                exit_code = 2
++            elif charged > 60.0:
+                 report["violations"].append("BATCH_CONSERVATIVE_CHARGE_EXCEEDED_60S")
+                 exit_code = 2
+-            report["measurement_note"] = "RSS, solver and wall checks are sampled and can overshoot; actual wait4 usage, all violations and censored timings are preserved. The registered preparation CPU charge and 0.2s exit tail are preserved separately from measured parent/child CPU."
++            report["measurement_note"] = "RSS, solver and wall checks are sampled and can overshoot; actual wait4 usage, all violations and censored timings are preserved. Preparation10s, prior observation measured CPU, prior observation tail reserves, current measured parent/child CPU and batch tail0.2s remain separate. Missing prior observation accounting requires the root outer ledger; the known minimum is not a complete total."
+             try:
+                 event(events, "BATCH_FINISHED", status=report["status"], accounting=report["cpu_accounting"])
+                 atomic_json(output / "batch_receipt.json", report)
+--- round15/implementation/official_generation_backend.py
++++ round16/implementation/official_generation_backend.py
+@@ -1,4 +1,4 @@
+-"""Round 15 official generation preparation; no target imports at module import.
++"""Round 16 official generation preparation; no target imports at module import.
+ 
+ One registered pair per process, complete input, one independent Environment only.
+ The caller must enforce external process wall/RSS and global CPU accounting.
+@@ -251,6 +251,15 @@
+             self.protocol['query_check_timeout_ms'], self.budget, self.emit)
+         self.rec['raw_query_verdict'] = str(self.answer)
+         return self.answer
++
++
++def measured_stage_cpu(stages, field='cpu_seconds'):
++    """Read timing evidence only; an absent stage is never a measured zero."""
++    if not stages:
++        return None, 'NOT_REACHED'
++    if any(s.get(field) is None for s in stages):
++        return None, 'UNMEASURED_OR_CENSORED'
++    return sum(s[field] for s in stages), 'MEASURED'
+ 
+ 
+ def run_attempt(rt, case, protocol, budget, emit, number):
+@@ -430,11 +439,21 @@
+             rec['cleanup_cost'] = {'wall_seconds':time.monotonic()-cw,'cpu_seconds':cpu()-cc}
+             rec['active_stage'] = None
+             rec['latest_stage'] = 'CLEANUP'
+-        parse_cpu = sum(s.get('cpu_seconds',0) for s in rec['stages'] if s['name'].startswith('OFFICIAL_PARSE_QUERY_'))
+-        analyze_cpu = sum(s.get('cpu_seconds',0) for s in rec['stages'] if s['name']=='OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE')
+-        rec['exclusive_phase_cpu'] = {'parse':parse_cpu,'scope_encode':max(0,analyze_cpu-parse_cpu),
++        parse_cpu, parse_status = measured_stage_cpu(
++            [s for s in rec['stages'] if s['name'].startswith('OFFICIAL_PARSE_QUERY_')])
++        analyze_cpu, analyze_status = measured_stage_cpu(
++            [s for s in rec['stages'] if s['name']=='OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE'])
++        query_cpu, query_status = measured_stage_cpu(
++            [s for s in rec['stages'] if s['name']=='OFFICIAL_QUERY_SOLVER_CHECK'],
++            'actual_check_cpu_seconds')
++        scope_cpu = None if analyze_cpu is None or parse_cpu is None else max(0,analyze_cpu-parse_cpu)
++        scope_status = (analyze_status if analyze_cpu is None else
++            ('UNMEASURED_PARSE_DEPENDENCY' if parse_cpu is None else 'DERIVED_ANALYZE_MINUS_PARSE'))
++        rec['exclusive_phase_cpu'] = {'parse':parse_cpu,'scope_encode':scope_cpu,
+             'compare_encode':(rec.get('comparison_formula_encode') or {}).get('cpu_seconds'),
+-            'query_check':sum(s.get('actual_check_cpu_seconds',0) for s in rec['stages'] if s['name']=='OFFICIAL_QUERY_SOLVER_CHECK')}
++            'query_check':query_cpu}
++        rec['exclusive_phase_cpu_status'] = {'parse':parse_status,'scope_encode':scope_status,
++            'compare_encode':rec['comparison_formula_encode_status'],'query_check':query_status}
+         rec['attempt_cost'] = {'cpu_seconds':cpu()-c, 'wall_seconds':time.monotonic()-w,
+             'worker_peak_rss_bytes_macos':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}
+         emit('ATTEMPT_END', rec)
+--- round15/protocols/generation_replay.draft.json
++++ round16/protocols/generation_replay.draft.json
+@@ -16,7 +16,7 @@
+     "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+     "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+   },
+-  "id": "calibergraph-15-generation-replay-v1",
++  "id": "calibergraph-16-generation-replay-v1",
+   "status": "DRAFT_DISABLED",
+   "registered_utc": null,
+   "input": {
+@@ -224,7 +224,7 @@
+     }
+   ],
+   "worker_paths": {
+-    "official": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_15/implementation/official_generation_worker.py"
++    "official": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_worker.py"
+   },
+   "supervisor": {
+     "python_executable": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+@@ -233,7 +233,10 @@
+       "-I",
+       "-S"
+     ],
+-    "prior_preparation_cpu_charge_seconds": 10.0
++    "prior_preparation_cpu_charge_seconds": 10.0,
++    "prior_resource_observation_cpu_charge_seconds": null,
++    "prior_resource_observation_measured_cpu_seconds": null,
++    "prior_resource_observation_tail_reserve_seconds": null
+   },
+   "artifacts": {
+     "result": "results.json",
+@@ -242,7 +245,7 @@
+   },
+   "purpose": "Prespecified exposed-development exact-bound diagnostic only: same four original source pairs/schema/full operational C at exact N=2/3/4 with two predeclared ordered repetitions. No new mechanism, fixed-witness baseline, superiority or independent-test claim.",
+   "semantics": "Exactly N live rows per original table; unchanged original SQL and complete operational C. Not at-most-N or business-complete semantics.",
+-  "preparation_charge_note": "10 seconds conservative reserve for author-side source/AST/hash/preparation commands, not measured CPU. Measured parent and every reaped child/probe charged separately from supervisor start.",
++  "preparation_charge_note": "10 seconds conservative reserve for author-side source/AST/hash/preparation commands, fixed from supervisor entry, not measured CPU. Separately charge prior resource-observation measured SELF plus all reaped CHILDREN and their per-observation tail reserves; root closes this ledger before the sole scientific launch. Measured current parent and every reaped child/probe are charged from supervisor start without double counting.",
+   "selection": "Same four already exposed Round06 source groups, selected after seeing Round06 outcomes. This is explicitly an adaptive development diagnostic, not blind preregistration or independent test. All 24 slots retained; no replacements.",
+   "failure_denominator": "24 planned cells, including both predeclared repetitions. All front-end/refused/unknown/timeout/not-run/invalid or missing receipts retained; no outcome-conditioned retry, replacement, budget extension or enlargement.",
+   "promotion": "This experiment cannot promote a new method; actual SAT export+full independent C+original-query replay is required for generated-witness claim. UNSAT is exact-N official encoding only.",
+@@ -287,8 +290,17 @@
+     },
+     "meaning": "Predeclared separate slots; one Environment attempt per slot. A failed slot is never retried. Resource/monitor/integrity failure stops remaining slots."
+   },
+-  "execution_boundary": "Disabled source and draft only. Root must report sources/literature/scope, obtain independent static preexec review, own a permanent exclusive batch-once lock, finalize and freeze source/protocol and use a supported explicitly reviewed execution request. Round13 is immutable and may not be retried.",
+-  "whole_launch_accounting": "Root outer time/exit evidence covers interpreter startup and final shutdown. Preserve all supervisor/worker/probe costs, preparation10s and tail0.2s reserves separately; invalid final/outer receipt means NOTCOMPLETED.",
++  "execution_boundary": "Disabled source and draft only. Root must report sources/literature/scope, obtain independent static preexec review, own a permanent exclusive batch-once lock, finalize and freeze source/protocol and use a supported explicitly reviewed execution request. Rounds13 and15 are immutable and may not be retried. Resource waiting is allowed only before the scientific batch launch. No scheduler, pause/resume or retry exists inside this supervisor; after the first scientific worker launch every resource/monitor/integrity failure retains the old stop-and-censor policy. Previously executed scientific slots may never be rerun under a waiting version.",
++  "whole_launch_accounting": "Root outer time/exit evidence covers interpreter startup and final shutdown and supplies the closed prior observation ledger. Preserve observation measured CPU and observation tail reserves separately, then preparation10s, current supervisor/worker/probe SELF+all reaped CHILDREN, and batch tail0.2s. All fixed CPU gates include the observation charge. Missing prior observation fields make the internal total null/incomplete, with a known minimum reported separately; root outer accounting must cover early failures before protocol admission. Invalid final/outer receipt means NOTCOMPLETED.",
+   "missing_receipt_disposition": "Keep all24 planned slots. Known unlaunched slots may be NOT_RUN only with reliable supervisor evidence; other actual statuses and counts remain UNKNOWN, not inferred zero. Preserve partial snapshots separately.",
+-  "business_contract_truth_completeness": "UNKNOWN"
++  "business_contract_truth_completeness": "UNKNOWN",
++  "prelaunch_waiting_boundary": {
++    "owner": "root",
++    "cadence_seconds": 900,
++    "scope": "Resource-only observations before the sole scientific batch launch; never execute SQL, SMT, scientific imports or scientific slots while waiting.",
++    "prior_observation_charge": "Sum of each closed observation measured SELF+all reaped CHILDREN plus 0.2 seconds tail reserve per observation; excludes preparation10s and is never added twice.",
++    "batch_attempts": 1,
++    "after_scientific_worker_launch": "No pause, resume, retry or replacement; the unchanged stop-and-censor policy applies to all remaining planned slots.",
++    "old_round15": "STOP_RESOURCE_GATE / SCIENTIFIC_NOT_LAUNCHED is permanently closed; this new stage is not a retry of Round15."
++  }
+ }
+--- round15/protocols/ANALYTIC_CONTROLS.zh.md
++++ round16/protocols/ANALYTIC_CONTROLS.zh.md
+@@ -1,7 +1,7 @@
+-# 第15阶段沿用第06轮语义控制
++# 第16阶段沿用第06轮语义控制
+ 
+-本阶段未增加方法、fixed-witness comparator或计时基线。原4来源SQL/schema/full operational C与两个INT回放profile不变，因此完整沿用 [第06轮控制原字节](ANALYTIC_CONTROLS.round06_verbatim.zh.md)；副本中“第六轮/12单元/本轮实际读取”只指其历史来源，不是第15阶段新增读取或执行声称。
++本阶段未增加方法、fixed-witness comparator或计时基线。原4来源SQL/schema/full operational C与两个INT回放profile不变，因此完整沿用 [第06轮控制原字节](ANALYTIC_CONTROLS.round06_verbatim.zh.md)；副本中“第六轮/12单元/本轮实际读取”只指其历史来源，不是第16阶段新增读取或执行声称。
+ 
+-第15阶段计划分母是24槽：rep1按来源6/9/14/3、bound2/3/4；rep2按来源3/14/9/6、bound4/3/2。每槽一次Environment。CASE默认NULL、内连接换序、LEFT/RIGHT保留侧反转、行相等与IFNULL/COALESCE恒等式仍是两个INT来源的强语义解释；没有给这些静态规则虚构0秒费用。
++第16阶段计划分母是24槽：rep1按来源6/9/14/3、bound2/3/4；rep2按来源3/14/9/6、bound4/3/2。每槽一次Environment。CASE默认NULL、内连接换序、LEFT/RIGHT保留侧反转、行相等与IFNULL/COALESCE恒等式仍是两个INT来源的强语义解释；没有给这些静态规则虚构0秒费用。
+ 
+ DATE/ROUND/除法、decimal/VARCHAR与比较编码提前退出的边界原样保留。UNKNOWN、异常、零query-check、C sanity不区分、资源失败、NOT_RUN均留在24槽分母。整个计划仍为已暴露开发诊断，business C真实/完备性UNKNOWN，不是独立最终测试或新机制证据。

@@ -1,0 +1,915 @@
+{
+  "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev03_04_exact4",
+    "source_case_id": "dev03_04",
+    "case_index": 10,
+    "status": "STAGE_ERROR",
+    "engineering_class": "INCONCLUSIVE",
+    "strict_class": "INCONCLUSIVE",
+    "attempts": [
+      {
+        "id": "dev03_04",
+        "attempt": 1,
+        "status": "STAGE_ERROR",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.001650125253945589,
+            "cpu_seconds": 0.0016500000000000403
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 2,
+            "base_fact_count": 48,
+            "admitted_delta_facts": 2,
+            "full_fact_count": 50,
+            "wall_seconds": 0.0022215410135686398,
+            "cpu_seconds": 0.0022220000000000573
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.003301500342786312,
+            "cpu_seconds": 0.0033009999999998874
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.00440945802256465,
+            "actual_check_cpu_seconds": 0.004417000000000004,
+            "answer": "sat",
+            "wall_seconds": 0.006564166862517595,
+            "cpu_seconds": 0.0065389999999999615
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.000512292142957449,
+            "cpu_seconds": 0.0005119999999999569
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              61,
+              72
+            ],
+            "output_tuple_counts": [
+              16,
+              12
+            ],
+            "wall_seconds": 0.13537166686728597,
+            "cpu_seconds": 0.13522999999999996
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "3a84e3b08233f229ef0375b602ce8e6d606935566f71931007fcc88db5db840b",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.06147083314135671,
+            "cpu_seconds": 0.06143200000000015
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "92d07cfb52eb90f73b128cebfa463b72f4088dc20d3d1daa7f7e43c09c9e1138",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.00944550009444356,
+            "cpu_seconds": 0.009444000000000008
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "SALARIES": 4
+        },
+        "raw_query_verdict": null,
+        "full_C_nonempty": "sat",
+        "contract_model_sanity": {
+          "status": "NOT_ADMITTED",
+          "model_origin": "FULL_C_NONEMPTY_CHECK",
+          "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+          "query_sat_witness": false,
+          "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY"
+        },
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "118d2e2204011ee4e6fd1786e119cf9e8f50beb38c4f7981794afb35eba3c244",
+        "solver_cumulative_wall_seconds": 0.00440945802256465,
+        "solver_cumulative_cpu_seconds": 0.004417000000000004,
+        "parsed_asts": [
+          {
+            "select": [
+              {
+                "value": "S__COMPANY_ID"
+              },
+              {
+                "value": "S__EMPLOYEE_ID"
+              },
+              {
+                "value": "S__EMPLOYEE_NAME"
+              },
+              {
+                "value": {
+                  "round": [
+                    {
+                      "case": [
+                        {
+                          "then": {
+                            "mul": [
+                              "SALARY",
+                              0.76
+                            ]
+                          },
+                          "when": {
+                            "between": [
+                              "X__MAX_SAL",
+                              1000,
+                              10000
+                            ]
+                          }
+                        },
+                        {
+                          "then": {
+                            "mul": [
+                              "SALARY",
+                              0.51
+                            ]
+                          },
+                          "when": {
+                            "gt": [
+                              "X__MAX_SAL",
+                              10000
+                            ]
+                          }
+                        },
+                        "SALARY"
+                      ]
+                    },
+                    0
+                  ]
+                },
+                "name": "SALARY"
+              }
+            ],
+            "from": [
+              {
+                "value": "SALARIES",
+                "name": "S"
+              },
+              {
+                "inner join": {
+                  "value": {
+                    "select": [
+                      {
+                        "value": "COMPANY_ID"
+                      },
+                      {
+                        "value": {
+                          "max": "SALARY"
+                        },
+                        "name": "MAX_SAL"
+                      }
+                    ],
+                    "from": "SALARIES",
+                    "groupby": {
+                      "value": "COMPANY_ID"
+                    }
+                  },
+                  "name": "X"
+                },
+                "on": {
+                  "eq": [
+                    "S__COMPANY_ID",
+                    "X__COMPANY_ID"
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "union": [
+              {
+                "select": [
+                  {
+                    "value": "COMPANY_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE_NAME"
+                  },
+                  {
+                    "value": "SALARY"
+                  }
+                ],
+                "from": "SALARIES",
+                "where": {
+                  "in": [
+                    "COMPANY_ID",
+                    {
+                      "select": {
+                        "value": "COMPANY_ID"
+                      },
+                      "from": "CTE",
+                      "where": {
+                        "lt": [
+                          "MAXIMUM",
+                          1000
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "select": [
+                  {
+                    "value": "COMPANY_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE_NAME"
+                  },
+                  {
+                    "value": {
+                      "round": [
+                        {
+                          "mul": [
+                            "SALARY",
+                            0.76
+                          ]
+                        },
+                        0
+                      ]
+                    }
+                  }
+                ],
+                "from": "SALARIES",
+                "where": {
+                  "in": [
+                    "COMPANY_ID",
+                    {
+                      "select": {
+                        "value": "COMPANY_ID"
+                      },
+                      "from": "CTE",
+                      "where": {
+                        "and": [
+                          {
+                            "gte": [
+                              "MAXIMUM",
+                              1000
+                            ]
+                          },
+                          {
+                            "lte": [
+                              "MAXIMUM",
+                              10000
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "select": [
+                  {
+                    "value": "COMPANY_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE_ID"
+                  },
+                  {
+                    "value": "EMPLOYEE_NAME"
+                  },
+                  {
+                    "value": {
+                      "round": [
+                        {
+                          "mul": [
+                            "SALARY",
+                            0.51
+                          ]
+                        },
+                        0
+                      ]
+                    }
+                  }
+                ],
+                "from": "SALARIES",
+                "where": {
+                  "in": [
+                    "COMPANY_ID",
+                    {
+                      "select": {
+                        "value": "COMPANY_ID"
+                      },
+                      "from": "CTE",
+                      "where": {
+                        "gte": [
+                          "MAXIMUM",
+                          10000
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ],
+            "with": {
+              "name": "CTE",
+              "value": {
+                "select": [
+                  {
+                    "value": "COMPANY_ID"
+                  },
+                  {
+                    "value": {
+                      "max": "SALARY"
+                    },
+                    "name": "MAXIMUM"
+                  }
+                ],
+                "from": "SALARIES",
+                "groupby": {
+                  "value": "COMPANY_ID"
+                }
+              }
+            }
+          }
+        ],
+        "engineering_class": "INCONCLUSIVE",
+        "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+        "error_type": "NotEquivalenceError",
+        "error": "Symbolic reasoning: NOT EQUIVALENT.",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py\", line 354, in run_attempt\n    rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 942, in compare\n    equivalence_formulas = self.verifier.run(\n                           ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 103, in run\n    conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/bag_semantics_verifier.py\", line 116, in table_equivalence\n    cmp_funcs = self.cmp_funcs(left_attributes, right_attributes)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 53, in cmp_funcs\n    raise NotEquivalenceError\nerrors.NotEquivalenceError: Symbolic reasoning: NOT EQUIVALENT.\n",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.012562583200633526,
+          "cpu_seconds": 0.01256299999999999
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.07087600000000016,
+          "scope_encode": 0.0643539999999998,
+          "compare_encode": null,
+          "query_check": 0
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.172018,
+          "wall_seconds": 0.17240462498739362,
+          "worker_peak_rss_bytes_macos": 108838912
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 17255,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "SALARIES__COMPANY_ID"
+            },
+            {
+              "value": "SALARIES__EMPLOYEE_ID"
+            }
+          ]
+        },
+        {
+          "gt": [
+            {
+              "value": "SALARIES__SALARY"
+            },
+            0
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1468.csv",
+      "index": 250,
+      "pair": [
+        "SELECT S.COMPANY_ID, S.EMPLOYEE_ID, S.EMPLOYEE_NAME, ROUND(CASE WHEN X.MAX_SAL BETWEEN 1000 AND 10000 THEN SALARY * 0.76 WHEN X.MAX_SAL > 10000 THEN SALARY * 0.51 ELSE SALARY END, 0) AS SALARY FROM SALARIES S INNER JOIN (SELECT COMPANY_ID, MAX(SALARY) MAX_SAL FROM SALARIES GROUP BY COMPANY_ID) X ON S.COMPANY_ID = X.COMPANY_ID",
+        "WITH CTE AS (SELECT COMPANY_ID, MAX(SALARY) AS MAXIMUM FROM SALARIES GROUP BY COMPANY_ID) SELECT COMPANY_ID, EMPLOYEE_ID, EMPLOYEE_NAME, SALARY FROM SALARIES WHERE COMPANY_ID IN (SELECT COMPANY_ID FROM CTE WHERE MAXIMUM <1000) UNION SELECT COMPANY_ID, EMPLOYEE_ID, EMPLOYEE_NAME, ROUND(SALARY*0.76,0) FROM SALARIES WHERE COMPANY_ID IN (SELECT COMPANY_ID FROM CTE WHERE MAXIMUM >= 1000 AND MAXIMUM <=10000) UNION SELECT COMPANY_ID, EMPLOYEE_ID, EMPLOYEE_NAME, ROUND(SALARY*0.51,0) FROM SALARIES WHERE COMPANY_ID IN (SELECT COMPANY_ID FROM CTE WHERE MAXIMUM >=10000)"
+      ],
+      "schema": {
+        "SALARIES": {
+          "COMPANY_ID": "INT",
+          "EMPLOYEE_ID": "INT",
+          "EMPLOYEE_NAME": "VARCHAR",
+          "SALARY": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+      "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+    ],
+    "schema_sha256": "ffc10e15b114fe0550dc29ee4a3c314f84c1fdc91a5cbaa2710122d720729d48",
+    "constraint_sha256": "7649cf2fdfb924e153454d6b2af32580a7dc9852473ae7c0a81cca115c108850",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "ffc10e15b114fe0550dc29ee4a3c314f84c1fdc91a5cbaa2710122d720729d48",
+      "constraint_sha256": "7649cf2fdfb924e153454d6b2af32580a7dc9852473ae7c0a81cca115c108850",
+      "table_count": 1,
+      "column_count": 4,
+      "schema_type_counts": {
+        "INT": 3,
+        "VARCHAR": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 2,
+      "operator_counts": {
+        "gt": 1,
+        "primary": 1,
+        "value": 3
+      },
+      "reference_counts": {
+        "SALARIES__COMPANY_ID": 1,
+        "SALARIES__EMPLOYEE_ID": 1,
+        "SALARIES__SALARY": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.00440945802256465,
+        "actual_check_cpu_seconds": 0.004417000000000004,
+        "timeout_ms": 100
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.00440945802256465,
+    "solver_cumulative_cpu_seconds": 0.004417000000000004,
+    "query_solver_called": false,
+    "hardness_claim": "NOT_APPLICABLE_QUERY_SOLVER_ZERO_CALLS",
+    "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+  },
+  "scope": "Registered input only; registered exact N official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "7a5c6fd9a38f59529031d8c6f475e9b2dacebb274474e8993f1d8dd188421f36",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_generation_worker.py": "001ad93abc7d06313faf7267a47ca928f4e213a7733a75de8692bd1f3f66ec7b",
+    "official_generation_backend.py": "5fcb3935218d954f728607c0da44617f5f5bec26c4f6e331baf738a106bbfc18",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+    "generation_common.py": "74df9d61a87be8fabe311e96d8418e9704baa8e1292ff97a1a5ccf9334265863",
+    "safe_sqlite_replay.py": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5"
+  },
+  "registered_group_count": 4,
+  "registered_slot": {
+    "id": "dev03_04_exact4",
+    "kind": "official",
+    "source_case_index": 3,
+    "source_case_id": "dev03_04",
+    "exact_rows": 4
+  },
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "SINGLE_ATTEMPT_COMPLETE",
+    "id": "dev03_04_exact4",
+    "attempt": null,
+    "active_stage": null
+  },
+  "runtime": {
+    "id": "runtime",
+    "stages": [
+      {
+        "name": "LOCK_AND_DEPENDENCY_HASH",
+        "status": "RETURNED",
+        "checked_files": 848,
+        "wall_seconds": 0.039723374880850315,
+        "cpu_seconds": 0.03971500000000001
+      },
+      {
+        "name": "NATIVE_AND_OFFICIAL_IMPORT",
+        "status": "RETURNED",
+        "version": [
+          4,
+          12,
+          0,
+          0
+        ],
+        "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+        "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+        "wall_seconds": 0.6150484997779131,
+        "cpu_seconds": 0.614441
+      }
+    ],
+    "active_stage": null,
+    "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  },
+  "latest_attempt_snapshot": {
+    "id": "dev03_04",
+    "attempt": 1,
+    "status": "STAGE_ERROR",
+    "stages": [
+      {
+        "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+        "status": "RETURNED",
+        "wall_seconds": 0.001650125253945589,
+        "cpu_seconds": 0.0016500000000000403
+      },
+      {
+        "name": "FULL_ORIGINAL_IC_ADMISSION",
+        "status": "RETURNED",
+        "original_clause_count": 2,
+        "base_fact_count": 48,
+        "admitted_delta_facts": 2,
+        "full_fact_count": 50,
+        "wall_seconds": 0.0022215410135686398,
+        "cpu_seconds": 0.0022220000000000573
+      },
+      {
+        "name": "FULL_C_SOLVER_SETUP",
+        "status": "RETURNED",
+        "wall_seconds": 0.003301500342786312,
+        "cpu_seconds": 0.0033009999999998874
+      },
+      {
+        "name": "FULL_C_NONEMPTY_CHECK",
+        "status": "RETURNED",
+        "timeout_ms": 100,
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.00440945802256465,
+        "actual_check_cpu_seconds": 0.004417000000000004,
+        "answer": "sat",
+        "wall_seconds": 0.006564166862517595,
+        "cpu_seconds": 0.0065389999999999615
+      },
+      {
+        "name": "FULL_C_SAT_MODEL_VALIDATION",
+        "status": "RETURNED",
+        "wall_seconds": 0.000512292142957449,
+        "cpu_seconds": 0.0005119999999999569
+      },
+      {
+        "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+        "status": "RETURNED",
+        "formula_counts": [
+          61,
+          72
+        ],
+        "output_tuple_counts": [
+          16,
+          12
+        ],
+        "wall_seconds": 0.13537166686728597,
+        "cpu_seconds": 0.13522999999999996
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_0",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "3a84e3b08233f229ef0375b602ce8e6d606935566f71931007fcc88db5db840b",
+        "ast_hash_scope": "lossless canonical JSON",
+        "wall_seconds": 0.06147083314135671,
+        "cpu_seconds": 0.06143200000000015
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_1",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "92d07cfb52eb90f73b128cebfa463b72f4088dc20d3d1daa7f7e43c09c9e1138",
+        "ast_hash_scope": "lossless canonical JSON",
+        "wall_seconds": 0.00944550009444356,
+        "cpu_seconds": 0.009444000000000008
+      }
+    ],
+    "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+    "exact_rows": {
+      "SALARIES": 4
+    },
+    "raw_query_verdict": null,
+    "full_C_nonempty": "sat",
+    "contract_model_sanity": {
+      "status": "NOT_ADMITTED",
+      "model_origin": "FULL_C_NONEMPTY_CHECK",
+      "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+      "query_sat_witness": false,
+      "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY"
+    },
+    "active_stage": null,
+    "latest_stage": "CLEANUP",
+    "full_contract_fact_sha256": "118d2e2204011ee4e6fd1786e119cf9e8f50beb38c4f7981794afb35eba3c244",
+    "solver_cumulative_wall_seconds": 0.00440945802256465,
+    "solver_cumulative_cpu_seconds": 0.004417000000000004,
+    "parsed_asts": [
+      {
+        "select": [
+          {
+            "value": "S__COMPANY_ID"
+          },
+          {
+            "value": "S__EMPLOYEE_ID"
+          },
+          {
+            "value": "S__EMPLOYEE_NAME"
+          },
+          {
+            "value": {
+              "round": [
+                {
+                  "case": [
+                    {
+                      "then": {
+                        "mul": [
+                          "SALARY",
+                          0.76
+                        ]
+                      },
+                      "when": {
+                        "between": [
+                          "X__MAX_SAL",
+                          1000,
+                          10000
+                        ]
+                      }
+                    },
+                    {
+                      "then": {
+                        "mul": [
+                          "SALARY",
+                          0.51
+                        ]
+                      },
+                      "when": {
+                        "gt": [
+                          "X__MAX_SAL",
+                          10000
+                        ]
+                      }
+                    },
+                    "SALARY"
+                  ]
+                },
+                0
+              ]
+            },
+            "name": "SALARY"
+          }
+        ],
+        "from": [
+          {
+            "value": "SALARIES",
+            "name": "S"
+          },
+          {
+            "inner join": {
+              "value": {
+                "select": [
+                  {
+                    "value": "COMPANY_ID"
+                  },
+                  {
+                    "value": {
+                      "max": "SALARY"
+                    },
+                    "name": "MAX_SAL"
+                  }
+                ],
+                "from": "SALARIES",
+                "groupby": {
+                  "value": "COMPANY_ID"
+                }
+              },
+              "name": "X"
+            },
+            "on": {
+              "eq": [
+                "S__COMPANY_ID",
+                "X__COMPANY_ID"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "union": [
+          {
+            "select": [
+              {
+                "value": "COMPANY_ID"
+              },
+              {
+                "value": "EMPLOYEE_ID"
+              },
+              {
+                "value": "EMPLOYEE_NAME"
+              },
+              {
+                "value": "SALARY"
+              }
+            ],
+            "from": "SALARIES",
+            "where": {
+              "in": [
+                "COMPANY_ID",
+                {
+                  "select": {
+                    "value": "COMPANY_ID"
+                  },
+                  "from": "CTE",
+                  "where": {
+                    "lt": [
+                      "MAXIMUM",
+                      1000
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "select": [
+              {
+                "value": "COMPANY_ID"
+              },
+              {
+                "value": "EMPLOYEE_ID"
+              },
+              {
+                "value": "EMPLOYEE_NAME"
+              },
+              {
+                "value": {
+                  "round": [
+                    {
+                      "mul": [
+                        "SALARY",
+                        0.76
+                      ]
+                    },
+                    0
+                  ]
+                }
+              }
+            ],
+            "from": "SALARIES",
+            "where": {
+              "in": [
+                "COMPANY_ID",
+                {
+                  "select": {
+                    "value": "COMPANY_ID"
+                  },
+                  "from": "CTE",
+                  "where": {
+                    "and": [
+                      {
+                        "gte": [
+                          "MAXIMUM",
+                          1000
+                        ]
+                      },
+                      {
+                        "lte": [
+                          "MAXIMUM",
+                          10000
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "select": [
+              {
+                "value": "COMPANY_ID"
+              },
+              {
+                "value": "EMPLOYEE_ID"
+              },
+              {
+                "value": "EMPLOYEE_NAME"
+              },
+              {
+                "value": {
+                  "round": [
+                    {
+                      "mul": [
+                        "SALARY",
+                        0.51
+                      ]
+                    },
+                    0
+                  ]
+                }
+              }
+            ],
+            "from": "SALARIES",
+            "where": {
+              "in": [
+                "COMPANY_ID",
+                {
+                  "select": {
+                    "value": "COMPANY_ID"
+                  },
+                  "from": "CTE",
+                  "where": {
+                    "gte": [
+                      "MAXIMUM",
+                      10000
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "with": {
+          "name": "CTE",
+          "value": {
+            "select": [
+              {
+                "value": "COMPANY_ID"
+              },
+              {
+                "value": {
+                  "max": "SALARY"
+                },
+                "name": "MAXIMUM"
+              }
+            ],
+            "from": "SALARIES",
+            "groupby": {
+              "value": "COMPANY_ID"
+            }
+          }
+        }
+      }
+    ],
+    "engineering_class": "INCONCLUSIVE",
+    "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+    "error_type": "NotEquivalenceError",
+    "error": "Symbolic reasoning: NOT EQUIVALENT.",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_backend.py\", line 354, in run_attempt\n    rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 942, in compare\n    equivalence_formulas = self.verifier.run(\n                           ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 103, in run\n    conclusion = semantics_verifier.table_equivalence(ltable, rtable, left_attributes, right_attributes, **kwargs)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/bag_semantics_verifier.py\", line 116, in table_equivalence\n    cmp_funcs = self.cmp_funcs(left_attributes, right_attributes)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py\", line 53, in cmp_funcs\n    raise NotEquivalenceError\nerrors.NotEquivalenceError: Symbolic reasoning: NOT EQUIVALENT.\n",
+    "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+    "cleanup_cost": {
+      "wall_seconds": 0.012562583200633526,
+      "cpu_seconds": 0.01256299999999999
+    },
+    "exclusive_phase_cpu": {
+      "parse": 0.07087600000000016,
+      "scope_encode": 0.0643539999999998,
+      "compare_encode": null,
+      "query_check": 0
+    },
+    "attempt_cost": {
+      "cpu_seconds": 0.172018,
+      "wall_seconds": 0.17240462498739362,
+      "worker_peak_rss_bytes_macos": 108838912
+    }
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.80597,
+    "cpu_system_seconds": 0.062721,
+    "peak_rss_bytes_macos": 108888064,
+    "wall_from_main_seconds": 0.8499587499536574
+  }
+}

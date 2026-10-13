@@ -1,0 +1,75 @@
+{
+  "utc": "2026-10-12T10:55:53.339596+00:00",
+  "frozen_order": [
+    "thrombosis_prediction__1261",
+    "debit_card_specializing__1490",
+    "european_football_2__1073",
+    "california_schools__45",
+    "debit_card_specializing__1526"
+  ],
+  "selected_first_case": "thrombosis_prediction__1261",
+  "selection_condition": "Independent proof and minimal adapter tests must pass before any scientific run; no fallback/replacement after scientific outcome.",
+  "rows": [
+    {
+      "case_id": "thrombosis_prediction__1261",
+      "development_only": true,
+      "static_screen": "SELECTED_CONDITIONALLY: same frozen full-C schema; only RF<20 and Thrombosis=0 observations need new independent proof. Existing JOIN/COUNT DISTINCT operators unchanged.",
+      "source_hashes": {
+        "gold.sql": "8ca50bee79653ca58e24c34a734ac718d0b09446486caadef8c513f64c638e82",
+        "predicted.sql": "c977e9d8fac35d63504c9cf9f2d84145a195974c58fde06640c4254b3c677028",
+        "full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4",
+        "official-record.json": "1eedf4a64615fcc5d30ad54863bbc7d1f91273fe6a44314ad50c64b092d4f09a"
+      },
+      "new_science_attempts_at_screen": 0
+    },
+    {
+      "case_id": "debit_card_specializing__1490",
+      "development_only": true,
+      "static_screen": "DEFERRED: source REAL/CAST/division and IIF-versus-CASE need new arithmetic/function semantics proof; not covered by 1172 predicate quotient. No claim that general implementation is impossible.",
+      "source_hashes": {
+        "gold.sql": "88dd42ee66e3878ee6e3655925f8c94a9dfd330391e07171c9542ac2baa53d14",
+        "predicted.sql": "63df01f90b8071a98654991d9113699d66e44a973be10f5139f61e5557993a55",
+        "full-schema.sql": "a786ad4828fd2218105fd1e543891fcee4668482657e0627bd6f9a43767ed59f",
+        "official-record.json": "cee5bf48ca1647208fb195f84cb2f648d7878ef44d92abf321937efbfa456fb1"
+      },
+      "new_science_attempts_at_screen": 0
+    },
+    {
+      "case_id": "european_football_2__1073",
+      "development_only": true,
+      "static_screen": "DEFERRED: SUBSTR/strftime calendar-string behavior, malformed dates and string ordering need new observation proof and operator path; not simple numeric threshold mapping.",
+      "source_hashes": {
+        "gold.sql": "9879bcce9e7e5f2884da0496e70f215e38a6fe38140167c4988c95a1619e659f",
+        "predicted.sql": "b5e94651d309eb33c372acf50d0c2d8bf49d9ba2112b149788c260147a24130a",
+        "full-schema.sql": "193112d7a1e9afde965dc6084b23e82d7c318a2543c3b894feab70d651b05bb4",
+        "official-record.json": "874443f231bbb33744b7a37976c1d65c8e621c727f29c3cffabdd7c5f9a4adf5"
+      },
+      "new_science_attempts_at_screen": 0
+    },
+    {
+      "case_id": "california_schools__45",
+      "development_only": true,
+      "static_screen": "DEFERRED: original output values and AVG numeric rounding/bag behavior cannot be replaced by count-predicate classes; old two-row grouping witness exceeds N1, but N1 can have other numeric issues.",
+      "source_hashes": {
+        "gold.sql": "5bb822f092e03d289233e8a8301e73eea1bc2b6d08299a07410b19ac62d2f0aa",
+        "predicted.sql": "76389a944ca6d229cccd5aa63f4600e1492677e5598c6d728e5947d5a6e9ae46",
+        "full-schema.sql": "d8ddb1095d4b86278e960f5b992a6d506811a6aede94999e82a05caff5bcda7e",
+        "official-record.json": "c67202ff40daf8a77029bdb6afaecd80fd5cdcee64df850152c0d1245e863334"
+      },
+      "new_science_attempts_at_screen": 0
+    },
+    {
+      "case_id": "debit_card_specializing__1526",
+      "development_only": true,
+      "static_screen": "DEFERRED: multiple scalar subqueries, date/string predicates, REAL arithmetic and division by zero need separate proof and operator handling.",
+      "source_hashes": {
+        "gold.sql": "53708e84296810891d34decb0e3ae99d112c06e6ed1a287a67e40783c8e9b92a",
+        "predicted.sql": "5d6099a7351c3129e61810695e1e1265c00ee39e706b83e7af29306a6a2a6491",
+        "full-schema.sql": "a786ad4828fd2218105fd1e543891fcee4668482657e0627bd6f9a43767ed59f",
+        "official-record.json": "274fd52ddb1896a0bc1f3e3c726928763b8eeda5fda86af834ae75c52a10356c"
+      },
+      "new_science_attempts_at_screen": 0
+    }
+  ],
+  "scope": "Only selected case implementation; others stay explicitly deferred, not baseline failures."
+}

@@ -1,0 +1,14 @@
+{
+  "status": "AST_CHECKED_NOT_EXECUTED_PENDING_PARENT_REVIEW",
+  "files_sha256": {
+    "aggregate_kernel.py": "c5ef813532ad190c5af82e2255da973fe8bc469ab24aed7da304678edcd46c35",
+    "case_worker.py": "45eb4f5207a86660dacc2e22198c1dca8cdaace73821a54474c4bd138e50991e",
+    "supervisor.py": "2b2e7df5c84512d54de2a82564d199d9fed343d3289aab1a878a8ab8aee63a72"
+  },
+  "runtime_lock_sha256": "541963cea9df597f2ef1f0f0bb32f3832af5650118818999886484af3bd6beac",
+  "original_kernel_sha256": "a044cfdf839a2f9ed8ec2c198627d238139cabb3e754155ef0c0d57ea3486593",
+  "source_evidence": "verieql_v1/parsers/sql_parser.py:150 obj.replace(\".\",\"__\")",
+  "change": "Recognize explicit upstream encoding via exact qualified/unqualified schema candidate union; require exactly one interpretation. Retain unknown/ambiguous/type rejection; default dot mode unchanged. Save real parsed AST before candidate recognition.",
+  "target_executed": false,
+  "original_run_unchanged": true
+}

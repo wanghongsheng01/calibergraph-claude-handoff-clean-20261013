@@ -1,0 +1,305 @@
+{
+  "review_utc": "2026-10-11T04:05:50.120190+00:00",
+  "status": "READ_ONLY_IDENTITY_CONFIRMED_DISTINCT_CODE_VERSIONS",
+  "method": "Read text, JSON and SHA256 only; no target/module/native/SQLite/solver execution",
+  "external_directory": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01",
+  "external_evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/FREEZE_MANIFEST.json",
+      "sha256": "2b184507d3cf935e0e28664df91b5b0c51478d7ae5aa6df9a6c5ec227b5b9b9d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/CONTRACT_PATCH_REVIEW.zh.md",
+      "sha256": "9556acf8913a609452f18bac9a286cfb4c528282f2cbd1fdb6d9bf960909f278"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/CONTRACT_PATCH_REVIEW_STATUS.json",
+      "sha256": "8ca1dfed463b5716da89697ef222b020e5c1c3cd1c914050aad716d3ca874a16"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/INDEPENDENT_ORACLE_ATTEMPT_01.json",
+      "sha256": "57c9c584dfa86f26e8b20f61316c4b045aa06af72a931f3f7e39955d8ca71528"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/independent_contract_oracle.py",
+      "sha256": "8edbca437e45e4815470befdcd5cd3640497d2796536cfc456e1151baea74c0e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/ORACLE_REGISTRATION.json",
+      "sha256": "f3ed07f0bf4160f1c664249ac1916198a480264e4cf0b358d1231941ff983adb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/UPSTREAM_DRIFT.json",
+      "sha256": "809a4f41238b9d72561cfb14e609d3d3e429b21c05986bff2934245e9a4d38eb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/UPSTREAM_DRIFT.patch",
+      "sha256": "d2473616edcc1139105186648f0168cd95631799baeea0b8572dc1ef0306a495"
+    }
+  ],
+  "tested_reference": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/frozen/contract_bridge_v1/contract_reference.py",
+    "sha256": "e57496ec0b1d1198370c0d96cb8891fad31a34ebfed4dd162c9738920cb9bdd1"
+  },
+  "current_reference": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py",
+    "sha256": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c"
+  },
+  "current_runner": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/run_diagnostic.py",
+    "sha256": "67c08263166637b1381929b0fe47d7bc26eb7ac3884a011587ac55cc2489fdae"
+  },
+  "current_manifest": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/MANIFEST.json",
+    "sha256": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd"
+  },
+  "same_reference_version": false,
+  "frozen_integrity": {
+    "files_checked": 29,
+    "matches": 29,
+    "mismatches": 0,
+    "files": [
+      {
+        "path": "contract_bridge_v1/contract_reference.py",
+        "recorded_sha256": "e57496ec0b1d1198370c0d96cb8891fad31a34ebfed4dd162c9738920cb9bdd1",
+        "actual_sha256": "e57496ec0b1d1198370c0d96cb8891fad31a34ebfed4dd162c9738920cb9bdd1"
+      },
+      {
+        "path": "contract_bridge_v1/fixtures.json",
+        "recorded_sha256": "7f7341d0c8495e67532e5d3780da11e8a48f3f024e9b06fd98adaaf43d324eab",
+        "actual_sha256": "7f7341d0c8495e67532e5d3780da11e8a48f3f024e9b06fd98adaaf43d324eab"
+      },
+      {
+        "path": "contract_bridge_v1/run_diagnostic.py",
+        "recorded_sha256": "6d0061a67286db4ae7780033f0562da7421ce752e39a902be606c944532c4af5",
+        "actual_sha256": "6d0061a67286db4ae7780033f0562da7421ce752e39a902be606c944532c4af5"
+      },
+      {
+        "path": "contract_bridge_v1/supervise.py",
+        "recorded_sha256": "ed8e31ce2997fae1f21d1632ec6b96887342c3d22737121e69350a8fd5eea978",
+        "actual_sha256": "ed8e31ce2997fae1f21d1632ec6b96887342c3d22737121e69350a8fd5eea978"
+      },
+      {
+        "path": "contract_diagnostic/COMMAND.json",
+        "recorded_sha256": "2fccab61544ff8ebfd30ff66b926c001fb4d254d7c1f8d967b64bba0b17eb9c2",
+        "actual_sha256": "2fccab61544ff8ebfd30ff66b926c001fb4d254d7c1f8d967b64bba0b17eb9c2"
+      },
+      {
+        "path": "contract_diagnostic/INPUT_REGISTRATION.json",
+        "recorded_sha256": "15c0641b7d672e698dca5423347b11629c55e7b7dbc17c650ba00e1328ce44eb",
+        "actual_sha256": "15c0641b7d672e698dca5423347b11629c55e7b7dbc17c650ba00e1328ce44eb"
+      },
+      {
+        "path": "contract_diagnostic/NOT_RUN_REPORT.json",
+        "recorded_sha256": "459e711242c5047168dd3f74c05d84ca5cfe2381100db41b1d7eac9afcd75114",
+        "actual_sha256": "459e711242c5047168dd3f74c05d84ca5cfe2381100db41b1d7eac9afcd75114"
+      },
+      {
+        "path": "contract_diagnostic/PREPARED_MANIFEST.json",
+        "recorded_sha256": "f0f102f46ff8e2c4e5f3e567ffbf3e0612e9f26ed1624ef3dff8dcf8fe792feb",
+        "actual_sha256": "f0f102f46ff8e2c4e5f3e567ffbf3e0612e9f26ed1624ef3dff8dcf8fe792feb"
+      },
+      {
+        "path": "contract_diagnostic/README.zh.md",
+        "recorded_sha256": "703ac513a6227a2fbe57c0e1560396613659de27f2799e374fa06be113ee5026",
+        "actual_sha256": "703ac513a6227a2fbe57c0e1560396613659de27f2799e374fa06be113ee5026"
+      },
+      {
+        "path": "contract_diagnostic/STATIC_REVIEW.json",
+        "recorded_sha256": "5ca0051a3dfe32982eabfe4ecc4cb10771fa5e24e597e42b79ac833a1ace4b76",
+        "actual_sha256": "5ca0051a3dfe32982eabfe4ecc4cb10771fa5e24e597e42b79ac833a1ace4b76"
+      },
+      {
+        "path": "contract_diagnostic/runs/literal_left_01/emergency.jsonl",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "contract_diagnostic/runs/literal_left_01/initial_not_run.json",
+        "recorded_sha256": "1da9df4369ece1b7b976e09ba8e82fc46e3306d8a6b2c3433e1dca3201b3e4ae",
+        "actual_sha256": "1da9df4369ece1b7b976e09ba8e82fc46e3306d8a6b2c3433e1dca3201b3e4ae"
+      },
+      {
+        "path": "contract_diagnostic/runs/literal_left_01/stderr.log",
+        "recorded_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actual_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "contract_diagnostic/runs/literal_left_01/stdout.log",
+        "recorded_sha256": "9c7ad1540c0ed8d7523513046786e8e10c3d0600851ae91f6a66fb9bec94f700",
+        "actual_sha256": "9c7ad1540c0ed8d7523513046786e8e10c3d0600851ae91f6a66fb9bec94f700"
+      },
+      {
+        "path": "contract_diagnostic/runs/literal_left_01/supervisor_report.json",
+        "recorded_sha256": "371eddb530c420215f85319175037f8ddf1929f8e46d68e4a3aa23e0aba73afe",
+        "actual_sha256": "371eddb530c420215f85319175037f8ddf1929f8e46d68e4a3aa23e0aba73afe"
+      },
+      {
+        "path": "contract_diagnostic/runs/literal_left_01/worker_report.json",
+        "recorded_sha256": "3e9b60677c12bd2087b7360de190bb065915c81d196e6a8d2d227ccbfa5f998d",
+        "actual_sha256": "3e9b60677c12bd2087b7360de190bb065915c81d196e6a8d2d227ccbfa5f998d"
+      },
+      {
+        "path": "contract_diagnostic/supervisor.py",
+        "recorded_sha256": "f2cbff5332080be17cb24856ad83ef46fc2c9f1e20b0bc4e9c4ced64fb05efe8",
+        "actual_sha256": "f2cbff5332080be17cb24856ad83ef46fc2c9f1e20b0bc4e9c4ced64fb05efe8"
+      },
+      {
+        "path": "contract_diagnostic/worker.py",
+        "recorded_sha256": "aae79f56b1bb0487ffb360aef1c3338837203f4338e6925dfe4705e8ba6ac7be",
+        "actual_sha256": "aae79f56b1bb0487ffb360aef1c3338837203f4338e6925dfe4705e8ba6ac7be"
+      },
+      {
+        "path": "runtime_fair_v4/CONTRACT.json",
+        "recorded_sha256": "fee0dc67cb13f0d27e8766e20af794abd32bafd55c871b50aef51aaa571afbf7",
+        "actual_sha256": "fee0dc67cb13f0d27e8766e20af794abd32bafd55c871b50aef51aaa571afbf7"
+      },
+      {
+        "path": "runtime_fair_v4/common.py",
+        "recorded_sha256": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8",
+        "actual_sha256": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8"
+      },
+      {
+        "path": "runtime_fair_v4/query_differential.py",
+        "recorded_sha256": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e",
+        "actual_sha256": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+      },
+      {
+        "path": "runtime_fair_v4/supervisor.py",
+        "recorded_sha256": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479",
+        "actual_sha256": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479"
+      },
+      {
+        "path": "runtime_fair_v4/worker.py",
+        "recorded_sha256": "5baf3d5719db583abfc58553392ab4e711ee1c37ca8e0bdc1217dabd8f52efc1",
+        "actual_sha256": "5baf3d5719db583abfc58553392ab4e711ee1c37ca8e0bdc1217dabd8f52efc1"
+      },
+      {
+        "path": "runtime_v3/runtime_paths.json",
+        "recorded_sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+        "actual_sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+      },
+      {
+        "path": "runtime_v4/aggregate_kernel.py",
+        "recorded_sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+        "actual_sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78"
+      },
+      {
+        "path": "science_review/IC_LITERAL_LEFT_STATIC_CASE.json",
+        "recorded_sha256": "3d770c63ce27d34707898da05317614c96df900bef9dfeda111a6892765a0d3c",
+        "actual_sha256": "3d770c63ce27d34707898da05317614c96df900bef9dfeda111a6892765a0d3c"
+      },
+      {
+        "path": "sources/verieql_v1/constants.py",
+        "recorded_sha256": "c7c9f759d33a1b96d8cfefa9407effb26edffddb1799d2259939d98f1fe22fa5",
+        "actual_sha256": "c7c9f759d33a1b96d8cfefa9407effb26edffddb1799d2259939d98f1fe22fa5"
+      },
+      {
+        "path": "sources/verieql_v1/environment.py",
+        "recorded_sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+        "actual_sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8"
+      },
+      {
+        "path": "sources/verieql_v1/parsers/constraint_parser.py",
+        "recorded_sha256": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0",
+        "actual_sha256": "7af2e9d83d219d677da37d251de7a93b1221ec976bda4b8070934f87066733c0"
+      }
+    ]
+  },
+  "reported_external_result": {
+    "status": "PASS_LIMITED_PATCH_ORACLE",
+    "summary": {
+      "cells": 240,
+      "repaired_agreements": 240,
+      "original_disagreements": 24,
+      "symbolic_unsat": 24,
+      "actual_pair_checks": 2,
+      "parser_checks": 20
+    },
+    "pairs": [
+      {
+        "route": "original_bad_emission",
+        "equivalence_boolean": true,
+        "queries": [
+          "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+          "SELECT SUM(T.A) FROM T"
+        ]
+      },
+      {
+        "route": "normalized_patch",
+        "equivalence_boolean": false,
+        "queries": [
+          "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+          "SELECT SUM(T.A) FROM T"
+        ],
+        "witness": {
+          "T": [
+            [
+              6
+            ]
+          ]
+        },
+        "source_contract_raw": [
+          [
+            1
+          ]
+        ],
+        "source_contract_holds": true,
+        "sqlite_results": [
+          [
+            [
+              null
+            ]
+          ],
+          [
+            [
+              6
+            ]
+          ]
+        ]
+      }
+    ],
+    "explicit_A6": {
+      "source_contract_raw": [
+        [
+          1
+        ]
+      ],
+      "sql_results": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            6
+          ]
+        ]
+      ]
+    },
+    "resources": {
+      "cpu_seconds": 1.903335,
+      "wall_seconds": 2.0101261250674725,
+      "peak_rss_bytes": 117145600,
+      "python_threads": 1
+    }
+  },
+  "execution_boundary": {
+    "target_receipt_status": "PASS_LIMITED_PATCH_ORACLE",
+    "external_time_wrapper_exit": 1,
+    "wrapper_error": "sysctl kern.clockrate denied; not target numerical failure and not whole-command exit 0",
+    "external_runner_used_ours_run_diagnostic": false,
+    "tested_runtime_lock": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-10/task-3/calibergraph_audit_20261011/contract_patch_review_01/frozen/runtime_v3/runtime_paths.json",
+      "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+    },
+    "current_runtime_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f"
+  },
+  "limitations": [
+    "External run uses earlier development reference e57496ec, not current 781ce147 or current diagnostic runner.",
+    "Later identifier encoding gate and slot registration changes are logged in UPSTREAM_DRIFT; static formula sameness cannot be promoted to execution coverage.",
+    "External report does not establish six-arm integration, general raw-contract completeness, natural-defect incidence, novelty or submission readiness.",
+    "Current N1/N2 evidence is separately audited in CURRENT_N1_N2_RUN_REVIEW.json."
+  ]
+}

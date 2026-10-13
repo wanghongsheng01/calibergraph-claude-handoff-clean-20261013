@@ -1,0 +1,3323 @@
+{
+  "schema_version": 1,
+  "data_role": "CONSTRUCTED_EXPOSED_DIAGNOSTIC_NOT_NATURAL_DEFECT_OR_HELDOUT",
+  "status": "REGISTERED_NOT_EXECUTED",
+  "cases": [
+    {
+      "id": "lt_literal_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 < T.A",
+      "expected_parser_ast": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": true,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ]
+    },
+    {
+      "id": "lt_column_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A < 5",
+      "expected_parser_ast": [
+        {
+          "lt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lte_literal_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 <= T.A",
+      "expected_parser_ast": [
+        {
+          "lte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lte_column_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A <= 5",
+      "expected_parser_ast": [
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gt_literal_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "gt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 > T.A",
+      "expected_parser_ast": [
+        {
+          "gt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gt_column_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "gt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A > 5",
+      "expected_parser_ast": [
+        {
+          "gt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gte_literal_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "gte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 >= T.A",
+      "expected_parser_ast": [
+        {
+          "gte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gte_column_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "gte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A >= 5",
+      "expected_parser_ast": [
+        {
+          "gte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eq_literal_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "eq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "JSON_API_ONLY_EQUALITY_TEXT_NOT_SUPPORTED",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eq_column_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "eq": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "JSON_API_ONLY_EQUALITY_TEXT_NOT_SUPPORTED",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "neq_literal_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "neq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 != T.A",
+      "expected_parser_ast": [
+        {
+          "neq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "neq_column_left_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "neq": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A != 5",
+      "expected_parser_ast": [
+        {
+          "neq": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "none_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": null,
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "not_null_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "T__A"
+          }
+        }
+      ],
+      "source_contract_text": "T.A != NULL",
+      "expected_parser_ast": [
+        {
+          "not_null": {
+            "value": "T__A"
+          }
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "and_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "and": [
+            {
+              "gte": [
+                {
+                  "value": "T__A"
+                },
+                4
+              ]
+            },
+            {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            {
+              "not_null": {
+                "value": "T__A"
+              }
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unverified_or_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "or": [
+            {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "expected_original_xor": "NOT_RUN",
+      "expected_normalized_xor": "NOT_RUN",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unverified_primary_N1",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "expected_original_xor": "NOT_RUN",
+      "expected_normalized_xor": "NOT_RUN",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lt_literal_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 < T.A",
+      "expected_parser_ast": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": true,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ]
+    },
+    {
+      "id": "lt_column_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "lt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A < 5",
+      "expected_parser_ast": [
+        {
+          "lt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lte_literal_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "lte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 <= T.A",
+      "expected_parser_ast": [
+        {
+          "lte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lte_column_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A <= 5",
+      "expected_parser_ast": [
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gt_literal_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "gt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 > T.A",
+      "expected_parser_ast": [
+        {
+          "gt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gt_column_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "gt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A > 5",
+      "expected_parser_ast": [
+        {
+          "gt": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gte_literal_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "gte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 >= T.A",
+      "expected_parser_ast": [
+        {
+          "gte": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "sat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "gte_column_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "gte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A >= 5",
+      "expected_parser_ast": [
+        {
+          "gte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eq_literal_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "eq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "JSON_API_ONLY_EQUALITY_TEXT_NOT_SUPPORTED",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "eq_column_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "eq": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "JSON_API_ONLY_EQUALITY_TEXT_NOT_SUPPORTED",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "neq_literal_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "neq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": "5 != T.A",
+      "expected_parser_ast": [
+        {
+          "neq": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "neq_column_left_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "neq": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "source_contract_text": "T.A != 5",
+      "expected_parser_ast": [
+        {
+          "neq": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "none_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": null,
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "not_null_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "T__A"
+          }
+        }
+      ],
+      "source_contract_text": "T.A != NULL",
+      "expected_parser_ast": [
+        {
+          "not_null": {
+            "value": "T__A"
+          }
+        }
+      ],
+      "parser_scope": "REAL_PINNED_CONSTRAINT_PARSER_TEXT",
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "and_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "and": [
+            {
+              "gte": [
+                {
+                  "value": "T__A"
+                },
+                4
+              ]
+            },
+            {
+              "lte": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            {
+              "not_null": {
+                "value": "T__A"
+              }
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "expected_original_xor": "unsat",
+      "expected_normalized_xor": "unsat",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unverified_or_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "or": [
+            {
+              "lt": [
+                5,
+                {
+                  "value": "T__A"
+                }
+              ]
+            },
+            {
+              "gt": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "expected_original_xor": "NOT_RUN",
+      "expected_normalized_xor": "NOT_RUN",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "unverified_primary_N2",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 2
+      },
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "T__A"
+            }
+          ]
+        }
+      ],
+      "source_contract_text": null,
+      "expected_parser_ast": null,
+      "parser_scope": "REGISTERED_JSON_API_INPUT",
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "expected_original_xor": "NOT_RUN",
+      "expected_normalized_xor": "NOT_RUN",
+      "pair_check": false,
+      "fixed_databases": [
+        {
+          "id": "4",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                4
+              ]
+            ]
+          }
+        },
+        {
+          "id": "5",
+          "database": {
+            "T": [
+              [
+                5
+              ],
+              [
+                5
+              ]
+            ]
+          }
+        },
+        {
+          "id": "6",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "NULL",
+          "database": {
+            "T": [
+              [
+                null
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_4_6",
+          "database": {
+            "T": [
+              [
+                4
+              ],
+              [
+                6
+              ]
+            ]
+          }
+        },
+        {
+          "id": "mixed_6_NULL",
+          "database": {
+            "T": [
+              [
+                6
+              ],
+              [
+                null
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "full_case_denominator": 34,
+  "reference_scope": "None/root-list conjunction/not_null/int-literal-vs-single-column six comparisons/and only; strict TRUE (NULL fails), not SQL CHECK semantics",
+  "intentional_unverified_controls": "or and primary do not pass even though upstream supports them",
+  "expected_numbers_are": "mathematically/source-derived controls, not measured results",
+  "execution_selection": "one required --case-id per supervised invocation; all remaining cases stay NOT_RUN",
+  "admission_regressions": [
+    {
+      "id": "cross_table_encoding_collision",
+      "schema": {
+        "A_": {
+          "B": "INT"
+        },
+        "A": {
+          "_B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "UNVERIFIED_CONTRACT"
+    },
+    {
+      "id": "single_table_noninvertible_encoding",
+      "schema": {
+        "A_": {
+          "B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "UNVERIFIED_CONTRACT"
+    },
+    {
+      "id": "leading_column_underscore_unambiguous",
+      "schema": {
+        "A": {
+          "_B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "SUPPORTED_REFERENCE"
+    }
+  ]
+}

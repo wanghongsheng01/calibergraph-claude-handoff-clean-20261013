@@ -1,0 +1,306 @@
+{
+  "worker_cpu_limit_seconds": 3,
+  "worker_wall_limit_seconds": 4,
+  "external_rss_limit_bytes": 268435456,
+  "contract_check_timeout_ms": 100,
+  "query_check_timeout_ms": 700,
+  "maximum_independent_environment_attempts": 1,
+  "maximum_active_workers": 1,
+  "nice": 15,
+  "total_parent_cpu_limit_seconds": 60,
+  "solver_cumulative_wall_limit_seconds": 2.0,
+  "solver_timeout_reserve_seconds": 0.1,
+  "supervisor_solver_stop_seconds": 1.5,
+  "internal_z3_memory_parameter_mb": 128,
+  "runtime_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+    "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+  },
+  "id": "calibergraph-16-generation-replay-v1",
+  "status": "DRAFT_DISABLED",
+  "registered_utc": null,
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "source_case_indices": [
+    6,
+    9,
+    14,
+    3
+  ],
+  "registered_cases": [
+    {
+      "id": "dev03_07_exact2_rep1",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 2,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_07_exact3_rep1",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 3,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_07_exact4_rep1",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 4,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_10_exact2_rep1",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 2,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_10_exact3_rep1",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 3,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_10_exact4_rep1",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 4,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_15_exact2_rep1",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 2,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_15_exact3_rep1",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 3,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_15_exact4_rep1",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 4,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_04_exact2_rep1",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 2,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_04_exact3_rep1",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 3,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_04_exact4_rep1",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 4,
+      "repeat_id": 1
+    },
+    {
+      "id": "dev03_04_exact4_rep2",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 4,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_04_exact3_rep2",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 3,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_04_exact2_rep2",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 2,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_15_exact4_rep2",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 4,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_15_exact3_rep2",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 3,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_15_exact2_rep2",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 2,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_10_exact4_rep2",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 4,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_10_exact3_rep2",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 3,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_10_exact2_rep2",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 2,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_07_exact4_rep2",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 4,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_07_exact3_rep2",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 3,
+      "repeat_id": 2
+    },
+    {
+      "id": "dev03_07_exact2_rep2",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 2,
+      "repeat_id": 2
+    }
+  ],
+  "worker_paths": {
+    "official": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_16/implementation/official_generation_worker.py"
+  },
+  "supervisor": {
+    "python_executable": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+    "required_flags": [
+      "-B",
+      "-I",
+      "-S"
+    ],
+    "prior_preparation_cpu_charge_seconds": 10.0,
+    "prior_resource_observation_cpu_charge_seconds": null,
+    "prior_resource_observation_measured_cpu_seconds": null,
+    "prior_resource_observation_tail_reserve_seconds": null
+  },
+  "artifacts": {
+    "result": "results.json",
+    "events": "events.jsonl",
+    "progress": "progress.json"
+  },
+  "purpose": "Prespecified exposed-development exact-bound diagnostic only: same four original source pairs/schema/full operational C at exact N=2/3/4 with two predeclared ordered repetitions. No new mechanism, fixed-witness baseline, superiority or independent-test claim.",
+  "semantics": "Exactly N live rows per original table; unchanged original SQL and complete operational C. Not at-most-N or business-complete semantics.",
+  "preparation_charge_note": "10 seconds conservative reserve for author-side source/AST/hash/preparation commands, fixed from supervisor entry, not measured CPU. Separately charge prior resource-observation measured SELF plus all reaped CHILDREN and their per-observation tail reserves; root closes this ledger before the sole scientific launch. Measured current parent and every reaped child/probe are charged from supervisor start without double counting.",
+  "selection": "Same four already exposed Round06 source groups, selected after seeing Round06 outcomes. This is explicitly an adaptive development diagnostic, not blind preregistration or independent test. All 24 slots retained; no replacements.",
+  "failure_denominator": "24 planned cells, including both predeclared repetitions. All front-end/refused/unknown/timeout/not-run/invalid or missing receipts retained; no outcome-conditioned retry, replacement, budget extension or enlargement.",
+  "promotion": "This experiment cannot promote a new method; actual SAT export+full independent C+original-query replay is required for generated-witness claim. UNSAT is exact-N official encoding only.",
+  "known_replay_profiles": [
+    "dev03_10",
+    "dev03_15"
+  ],
+  "stopping": "Any supervisor resource/probe/integrity failure stops remainder. Query UNKNOWN retained. No increase in bounds/time budget after outcomes.",
+  "independent_final_test": "Never read or used.",
+  "contract_model_sanity_control": true,
+  "control_scope": "For dev03_10 and dev03_15 at each exact bound, export the same validated C-check model, independently verify full operational C and execute identical original SQL. Always label C_MODEL_SANITY_ONLY_NOT_QUERY_SAT; no influence on official later query-SAT classification. All costs charged.",
+  "analytic_strong_controls": "protocols/ANALYTIC_CONTROLS.zh.md; known CASE default-NULL/inner-join commutation and outer-join reversal/IFNULL-COALESCE identities may already discharge the two INT pairs. Not an implemented timed baseline, so no runtime superiority claim.",
+  "maximum_batch_attempts": 1,
+  "repeat_policy": {
+    "repetitions": 2,
+    "identity_field": "repeat_id",
+    "repeat_1": {
+      "source_case_indices": [
+        6,
+        9,
+        14,
+        3
+      ],
+      "exact_bounds": [
+        2,
+        3,
+        4
+      ]
+    },
+    "repeat_2": {
+      "source_case_indices": [
+        3,
+        14,
+        9,
+        6
+      ],
+      "exact_bounds": [
+        4,
+        3,
+        2
+      ]
+    },
+    "meaning": "Predeclared separate slots; one Environment attempt per slot. A failed slot is never retried. Resource/monitor/integrity failure stops remaining slots."
+  },
+  "execution_boundary": "Disabled source and draft only. Root must report sources/literature/scope, obtain independent static preexec review, own a permanent exclusive batch-once lock, finalize and freeze source/protocol and use a supported explicitly reviewed execution request. Rounds13 and15 are immutable and may not be retried. Resource waiting is allowed only before the scientific batch launch. No scheduler, pause/resume or retry exists inside this supervisor; after the first scientific worker launch every resource/monitor/integrity failure retains the old stop-and-censor policy. Previously executed scientific slots may never be rerun under a waiting version.",
+  "whole_launch_accounting": "Root outer time/exit evidence covers interpreter startup and final shutdown and supplies the closed prior observation ledger. Preserve observation measured CPU and observation tail reserves separately, then preparation10s, current supervisor/worker/probe SELF+all reaped CHILDREN, and batch tail0.2s. All fixed CPU gates include the observation charge. Missing prior observation fields make the internal total null/incomplete, with a known minimum reported separately; root outer accounting must cover early failures before protocol admission. Invalid final/outer receipt means NOTCOMPLETED.",
+  "missing_receipt_disposition": "Keep all24 planned slots. Known unlaunched slots may be NOT_RUN only with reliable supervisor evidence; other actual statuses and counts remain UNKNOWN, not inferred zero. Preserve partial snapshots separately.",
+  "business_contract_truth_completeness": "UNKNOWN",
+  "prelaunch_waiting_boundary": {
+    "owner": "root",
+    "cadence_seconds": 900,
+    "scope": "Resource-only observations before the sole scientific batch launch; never execute SQL, SMT, scientific imports or scientific slots while waiting.",
+    "prior_observation_charge": "Sum of each closed observation measured SELF+all reaped CHILDREN plus 0.2 seconds tail reserve per observation; excludes preparation10s and is never added twice.",
+    "batch_attempts": 1,
+    "after_scientific_worker_launch": "No pause, resume, retry or replacement; the unchanged stop-and-censor policy applies to all remaining planned slots.",
+    "old_round15": "STOP_RESOURCE_GATE / SCIENTIFIC_NOT_LAUNCHED is permanently closed; this new stage is not a retry of Round15."
+  }
+}

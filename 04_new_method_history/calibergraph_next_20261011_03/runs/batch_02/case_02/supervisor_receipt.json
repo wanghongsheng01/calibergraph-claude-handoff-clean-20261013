@@ -1,0 +1,510 @@
+{
+  "case_index": 2,
+  "case_id": "dev03_03",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:18.508800+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 113213440,
+  "sampled_peak_group_cpu_seconds": 0.79,
+  "sample_count": 15,
+  "stop_remainder": null,
+  "pid": 43517,
+  "owned_pgid": 43517,
+  "worker_wait4_usage": {
+    "pid": 43517,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.752154,
+    "system_cpu_seconds": 0.071085,
+    "cpu_seconds": 0.8232389999999999,
+    "maxrss_bytes_darwin": 113901568
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.8551073330454528,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.022013541776686907,
+    "check_count": 2,
+    "case_index": 2,
+    "id": "dev03_03",
+    "updated_monotonic": 2259250.682110375,
+    "observed_monotonic": 2259250.706756041,
+    "solver_watchdog_estimated_seconds": 0.022013541776686907,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "2b78aeec42d6d181d10b37688923c697f852cae024a0fb7a5cdc23c274c23bb8",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_03",
+    "case_index": 2,
+    "status": "RETURNED",
+    "engineering_class": "SUPPORTED_FAST",
+    "strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_03",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.001080916728824377,
+            "cpu_seconds": 0.0010809999999999986
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 1,
+            "base_fact_count": 24,
+            "admitted_delta_facts": 1,
+            "full_fact_count": 25,
+            "wall_seconds": 0.0012285825796425343,
+            "cpu_seconds": 0.0012010000000000076
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.003273916896432638,
+            "cpu_seconds": 0.003273999999999999
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.005344749893993139,
+            "actual_check_cpu_seconds": 0.005344999999999933,
+            "answer": "sat",
+            "wall_seconds": 0.007578125223517418,
+            "cpu_seconds": 0.007544999999999913
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0003341659903526306,
+            "cpu_seconds": 0.00033399999999994545
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              5,
+              21
+            ],
+            "output_tuple_counts": [
+              2,
+              4
+            ],
+            "wall_seconds": 0.08416170906275511,
+            "cpu_seconds": 0.084032
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "59204ca91e668805ed31d95ee23236506e65f3e8bfdceabeafd01b5a9feb906d",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.05891604209318757,
+            "cpu_seconds": 0.05889299999999986
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "46551b5db8ce929edc845974c823485ff8eef03188e4360b67b34c99ed31e75b",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0070062498562037945,
+            "cpu_seconds": 0.006996000000000002
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 800,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.016668791882693768,
+            "actual_check_cpu_seconds": 0.016657000000000033,
+            "answer": "sat",
+            "wall_seconds": 0.019486041273921728,
+            "cpu_seconds": 0.019407000000000063
+          },
+          {
+            "name": "RAW_SAT_MODEL_VALIDATION_AND_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.001114207785576582,
+            "cpu_seconds": 0.0011060000000000514
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "DAILYSALES": 2
+        },
+        "raw_query_verdict": "sat",
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "a46e650635ab72473089e24b0ca5ca08c5fc2ce9a1356bc4a74c5c4133753a5c",
+        "solver_cumulative_wall_seconds": 0.022013541776686907,
+        "solver_cumulative_cpu_seconds": 0.022001999999999966,
+        "parsed_asts": [
+          {
+            "select": [
+              {
+                "value": "DATE_ID"
+              },
+              {
+                "value": "MAKE_NAME"
+              },
+              {
+                "value": {
+                  "count": {
+                    "distinct": "LEAD_ID"
+                  }
+                },
+                "name": "UNIQUE_LEADS"
+              },
+              {
+                "value": {
+                  "count": {
+                    "distinct": "PARTNER_ID"
+                  }
+                },
+                "name": "UNIQUE_PARTNERS"
+              }
+            ],
+            "from": "DAILYSALES",
+            "groupby": [
+              {
+                "value": "DATE_ID"
+              },
+              {
+                "value": "MAKE_NAME"
+              }
+            ]
+          },
+          {
+            "select": [
+              {
+                "value": "DATE_ID"
+              },
+              {
+                "value": "MAKE_NAME"
+              },
+              {
+                "value": {
+                  "sum": {
+                    "case": {
+                      "then": 1,
+                      "when": {
+                        "nin": [
+                          "LEAD_ID",
+                          0
+                        ]
+                      }
+                    }
+                  }
+                },
+                "name": "UNIQUE_LEADS"
+              },
+              {
+                "value": {
+                  "sum": {
+                    "case": {
+                      "then": 1,
+                      "when": {
+                        "nin": [
+                          "PARTNER_ID",
+                          0
+                        ]
+                      }
+                    }
+                  }
+                },
+                "name": "UNIQUE_PARTNERS"
+              }
+            ],
+            "from": {
+              "value": {
+                "union_all": [
+                  {
+                    "select": [
+                      {
+                        "value": "DATE_ID"
+                      },
+                      {
+                        "value": "MAKE_NAME"
+                      },
+                      {
+                        "value": {
+                          "add": [
+                            "LEAD_ID",
+                            1
+                          ]
+                        },
+                        "name": "LEAD_ID"
+                      },
+                      {
+                        "value": 0,
+                        "name": "PARTNER_ID"
+                      }
+                    ],
+                    "from": "DAILYSALES",
+                    "groupby": [
+                      {
+                        "value": 1
+                      },
+                      {
+                        "value": 2
+                      },
+                      {
+                        "value": 3
+                      }
+                    ]
+                  },
+                  {
+                    "select": [
+                      {
+                        "value": "DATE_ID"
+                      },
+                      {
+                        "value": "MAKE_NAME"
+                      },
+                      {
+                        "value": 0,
+                        "name": "LEAD_ID"
+                      },
+                      {
+                        "value": {
+                          "add": [
+                            "PARTNER_ID",
+                            1
+                          ]
+                        },
+                        "name": "PARTNER_ID"
+                      }
+                    ],
+                    "from": "DAILYSALES",
+                    "groupby": [
+                      {
+                        "value": 1
+                      },
+                      {
+                        "value": 2
+                      },
+                      {
+                        "value": 4
+                      }
+                    ]
+                  }
+                ]
+              },
+              "name": "A"
+            },
+            "groupby": [
+              {
+                "value": 1
+              },
+              {
+                "value": 2
+              }
+            ]
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.0059202080592513084,
+          "cpu_seconds": 0.005911999999999917
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": false,
+        "SAT_all_original_facts_and_actual_assertions_true": true,
+        "witness": {
+          "all_physical_raw_values": {
+            "DAILYSALES": [
+              {
+                "DATE_ID": 2,
+                "LEAD_ID": -3,
+                "MAKE_NAME": 2147483648,
+                "PARTNER_ID": -1
+              },
+              {
+                "DATE_ID": 1,
+                "LEAD_ID": -2,
+                "MAKE_NAME": 2147483649,
+                "PARTNER_ID": -1
+              }
+            ]
+          },
+          "decoded_values": {
+            "DAILYSALES": [
+              {
+                "DATE_ID": "1970-01-02",
+                "LEAD_ID": -3,
+                "MAKE_NAME": {
+                  "official_encoded_string_symbol": 2147483648
+                },
+                "PARTNER_ID": -1
+              },
+              {
+                "DATE_ID": "1970-01-01",
+                "LEAD_ID": -2,
+                "MAKE_NAME": {
+                  "official_encoded_string_symbol": 2147483649
+                },
+                "PARTNER_ID": -1
+              }
+            ]
+          },
+          "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+        },
+        "complete_operational_C_check": "ALL_ORIGINAL_SUBMITTED_FACTS_MODEL_TRUE",
+        "independent_concrete_C_checker": "NOT_IMPLEMENTED_FOR_GENERAL_OFFICIAL_C",
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.0119268330745399,
+          "cpu_seconds": 0.011923000000000017
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06588899999999986,
+          "scope_encode": 0.01814300000000013,
+          "compare_encode": 0.005911999999999917,
+          "query_check": 0.016657000000000033
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.14803100000000013,
+          "wall_seconds": 0.14872445818036795,
+          "worker_peak_rss_bytes_macos": 113836032
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 20110,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "f69a9ad4bdd9e7d6ad758d49a7b4df270890225769fea205081ef7411c2d3b6e",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "neq": [
+            {
+              "value": "DAILYSALES__LEAD_ID"
+            },
+            {
+              "value": "DAILYSALES__PARTNER_ID"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1693.csv",
+      "index": 64,
+      "pair": [
+        "SELECT DATE_ID, MAKE_NAME, COUNT(DISTINCT LEAD_ID) AS UNIQUE_LEADS, COUNT(DISTINCT PARTNER_ID) AS UNIQUE_PARTNERS FROM DAILYSALES GROUP BY DATE_ID, MAKE_NAME",
+        "SELECT DATE_ID, MAKE_NAME, SUM(CASE WHEN LEAD_ID NOT IN (0) THEN 1 END) UNIQUE_LEADS, SUM(CASE WHEN PARTNER_ID NOT IN (0) THEN 1 END) UNIQUE_PARTNERS FROM ( (SELECT DATE_ID,MAKE_NAME, LEAD_ID+1 AS LEAD_ID, 0 AS PARTNER_ID FROM DAILYSALES GROUP BY 1,2,3 ) UNION ALL (SELECT DATE_ID,MAKE_NAME, 0 AS LEAD_ID, PARTNER_ID+1 AS PARTNER_ID FROM DAILYSALES GROUP BY 1,2,4 )) AS A GROUP BY 1,2"
+      ],
+      "schema": {
+        "DAILYSALES": {
+          "DATE_ID": "DATE",
+          "LEAD_ID": "INT",
+          "MAKE_NAME": "VARCHAR",
+          "PARTNER_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "378117929088bd0c082838758804d2c88beacc5ff435cd237b845143ae2aeea7",
+      "606e5b40b18575253eaa035d37a28f9ddafece41b0e49da495d1952fc9db1266"
+    ],
+    "schema_sha256": "e4b9fe65ad755094147fb2df581a11aa29e84ea0d4953325f1b2bf2e779ec999",
+    "constraint_sha256": "40938c14c002183689969499a12c9ba16ea13f792896c07e84ad001488174750",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "e4b9fe65ad755094147fb2df581a11aa29e84ea0d4953325f1b2bf2e779ec999",
+      "constraint_sha256": "40938c14c002183689969499a12c9ba16ea13f792896c07e84ad001488174750",
+      "table_count": 1,
+      "column_count": 4,
+      "schema_type_counts": {
+        "DATE": 1,
+        "INT": 2,
+        "VARCHAR": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 1,
+      "operator_counts": {
+        "neq": 1,
+        "value": 2
+      },
+      "reference_counts": {
+        "DAILYSALES__LEAD_ID": 1,
+        "DAILYSALES__PARTNER_ID": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "fast_scope": "query check CPU below 250ms only; import/parse/encode/whole process costs remain separately reported",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.005344749893993139,
+        "actual_check_cpu_seconds": 0.005344999999999933,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.016668791882693768,
+        "actual_check_cpu_seconds": 0.016657000000000033,
+        "timeout_ms": 800
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.022013541776686907,
+    "solver_cumulative_cpu_seconds": 0.022001999999999966,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.061326,
+    "parent_system_cpu_seconds": 0.066268,
+    "all_reaped_children_user_cpu_seconds": 1.61897,
+    "all_reaped_children_system_cpu_seconds": 0.8238869999999999,
+    "supervisor_plus_reaped_cpu_seconds": 2.570451,
+    "observed_total_cpu_seconds": 10.447173,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

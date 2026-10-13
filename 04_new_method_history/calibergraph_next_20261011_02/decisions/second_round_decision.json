@@ -1,0 +1,41 @@
+{
+  "status": "HOLD_NO_PROMOTABLE_SCIENTIFIC_INCREMENT",
+  "created_utc": "2026-10-11T12:06:14.442866+00:00",
+  "engineering_gate": "6of6 reached official query solver after1retained runtime import failure; exact2rows complete operationalC only",
+  "hypotheses": [
+    {
+      "id": "weighted_independent_leaf_COUNT",
+      "status": "NOT_APPLICABLE_ON_FROZEN_DEVELOPMENT",
+      "eligible_SQL": 0,
+      "SQL_denominator": 12,
+      "novelty": "basic formula already eager aggregation/FAQ; no synthetic star replacement"
+    },
+    {
+      "id": "query_aware_ordering_same_pool_avoids_fallback",
+      "status": "REJECT_ON_THIS_FIXED_POOL",
+      "eligible_groups": 4,
+      "arms": 2,
+      "candidates_per_arm": 23,
+      "validated_witnesses_per_arm": 0,
+      "unknown_or_failed_eligible_arms": 0,
+      "generalization": "does not reject other pools/generators/SQL or general prefilter architectures"
+    }
+  ],
+  "failure_denominator": {
+    "runtime_import_failed_attempts": 1,
+    "resource_gate_blocked_attempts": 1,
+    "completed_official_pairs": 6,
+    "completed_probe_case_arm_slots": 12,
+    "probe_C_attempts": 64,
+    "probe_SQL_returned": 132
+  },
+  "no_claims": [
+    "unbounded or up-to2equivalence",
+    "new natural-defect gold",
+    "independent final test",
+    "end-to-end speedup",
+    "unrelated_project zero performance impact"
+  ],
+  "further_execution": "STOP; no additional tuning/seeds/queue/reserve access",
+  "review_status": "SECOND_ROUND_INDEPENDENT_REVIEW_PENDING_AT_AUTHOR_DECISION"
+}

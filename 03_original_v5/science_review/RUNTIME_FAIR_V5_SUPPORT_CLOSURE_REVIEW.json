@@ -1,0 +1,356 @@
+{
+  "schema_version": 1,
+  "reviewer": "/root/support_closure",
+  "reviewed_utc": "2026-10-11T04:13:43.139066+00:00",
+  "status": "STATIC_REVIEW_COMPLETE_NO_REMAINING_P0_P1_FOR_REGISTERED_MAIN_ENTRY_TARGET_NOT_RUN",
+  "method": "Read source and local data; stdlib AST parse/hash/inventory checks only; no target/reference import, native load, solver execution, network or source edits.",
+  "program_sha256": {
+    "common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+    "worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+  },
+  "locks_reviewed": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "sha256_at_review": "99e3e167b0c719c519dfb7131d1f29befb36a5592326ee02f885cc36991f4c77",
+      "status_at_review": "PENDING_INDEPENDENT_STATIC_REVIEW",
+      "files": 853,
+      "all_hashes_and_absolute_paths_verified": true,
+      "root_inventory": [
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+          "files": 159,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+          "files": 11,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+          "files": 503,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260",
+          "files": 18,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252",
+          "files": 24,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201",
+          "files": 17,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201",
+          "files": 11,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303",
+          "files": 11,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0",
+          "files": 5,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9",
+          "files": 46,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0",
+          "files": 6,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2",
+          "files": 24,
+          "exact_match": true
+        }
+      ],
+      "inherited_files_unchanged": true,
+      "only_added_files": [
+        "common.py",
+        "worker.py",
+        "query_differential.py",
+        "supervisor.py",
+        "contract_reference.py"
+      ]
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+      "sha256_at_review": "5cdd4008c8fc2ae606e7570c210f53fa5cde6d9d42d76cf5735d2f5dd22848a4",
+      "status_at_review": "PENDING_INDEPENDENT_STATIC_REVIEW",
+      "files": 861,
+      "all_hashes_and_absolute_paths_verified": true,
+      "root_inventory": [
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source",
+          "files": 167,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+          "files": 11,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+          "files": 503,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260",
+          "files": 18,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252",
+          "files": 24,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201",
+          "files": 17,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201",
+          "files": 11,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303",
+          "files": 11,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0",
+          "files": 5,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9",
+          "files": 46,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0",
+          "files": 6,
+          "exact_match": true
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2",
+          "files": 24,
+          "exact_match": true
+        }
+      ],
+      "inherited_files_unchanged": true,
+      "only_added_files": [
+        "common.py",
+        "worker.py",
+        "query_differential.py",
+        "supervisor.py",
+        "contract_reference.py"
+      ]
+    }
+  ],
+  "remaining_release_step": "Author/root may finalize reviewed pending locks after both reviewers; record final READY hashes and source/diff manifest. This review does not itself mutate approval state.",
+  "suite": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "cases": 28,
+    "inherited_22_dictionaries_exactly_unchanged": true,
+    "cost_jobs": 168,
+    "differential_jobs": 168,
+    "spotit_full_slots": 168,
+    "all_initial_slots_not_run": true,
+    "new_control_indices": [
+      132,
+      133,
+      134,
+      135,
+      136,
+      137,
+      138,
+      139,
+      140,
+      141,
+      142,
+      143,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150,
+      151,
+      152,
+      153,
+      154,
+      155,
+      156,
+      157,
+      158,
+      159,
+      160,
+      161,
+      162,
+      163,
+      164,
+      165,
+      166,
+      167
+    ],
+    "controls": [
+      {
+        "id": "D01_literal_left_forced_A6",
+        "expected_analytical_only": "sat"
+      },
+      {
+        "id": "D02_same_SQL_same_C",
+        "expected_analytical_only": "unsat"
+      },
+      {
+        "id": "D03_no_C_same_pair",
+        "expected_analytical_only": "sat"
+      },
+      {
+        "id": "D04_contradictory_literal_left",
+        "expected_analytical_only": "CONTRACT_UNSAT_REJECTED"
+      },
+      {
+        "id": "D05_inverted_BETWEEN_contract",
+        "expected_analytical_only": "CONTRACT_UNSAT_REJECTED"
+      },
+      {
+        "id": "D06_unsupported_whole_C",
+        "expected_analytical_only": "UNVERIFIED_CONTRACT"
+      }
+    ]
+  },
+  "blocking_findings": [],
+  "checks": [
+    {
+      "topic": "Original IC and fail-closed ledger",
+      "evidence": [
+        "common.py:147-161",
+        "contract_reference.py:57-133",
+        "worker.py:333-348"
+      ],
+      "finding": "Original source AST plus digest retained before prepare; copied normalized AST and original-leaf mapping retained. Unsupported anywhere rejects whole C, no partial compilation or fallback."
+    },
+    {
+      "topic": "Comparison/BETWEEN semantics",
+      "evidence": [
+        "contract_reference.py:38-39",
+        "contract_reference.py:96-122",
+        "contract_reference.py:153-188",
+        "contract_reference.py:191-230"
+      ],
+      "finding": "Six integer comparisons preserve original operand order in reference; only normalized copy reverses lt/lte/gt/gte, eq/neq unchanged. BETWEEN inclusive original bounds, strict NULL false, no swapping inverted range. Bool/float and unsupported operators rejected. Decimal string IntVal and constants-context helpers match fixed binding."
+    },
+    {
+      "topic": "Base-only nonvacuous bridge",
+      "evidence": [
+        "common.py:162-220"
+      ],
+      "finding": "Capture full base facts/bounds before any IC. Base SAT first; independent original-order reference then actual upstream normalized delta. XOR is solved on saved BASE+[XOR], never on C+[XOR]. Full actual C consistency/exact-row guard follows; inconsistent C does not count as pair UNSAT."
+    },
+    {
+      "topic": "Single corrected C across all routes",
+      "evidence": [
+        "common.py:123-126",
+        "common.py:200",
+        "common.py:227-247",
+        "worker.py:107-183",
+        "worker.py:203-323",
+        "query_differential.py:169-226",
+        "query_differential.py:285-330"
+      ],
+      "finding": "AST enumeration finds one add_constraints call, argument prepared.normalized_ast. All six arms and fallbacks use same Environment; require_contract_bridge binds record identity and complete facts digest. Differential requires explicit same attached bridge and checks facts/base mapping unchanged."
+    },
+    {
+      "topic": "Checkpoint/official implementation trace",
+      "evidence": [
+        "common.py:217-222",
+        "sources/verieql_v1/environment.py:813-830",
+        "sources/verieql_v1/scope.py:110-114",
+        "sources/verieql_v1/verifiers/verifier.py:79-83"
+      ],
+      "finding": "Checkpoint saved only after bridge admits. Scope cleanup restores symbol dictionaries and resets query solver/verifier; it does not remove DBMS_facts. Official verifier premise includes env DBMS facts."
+    },
+    {
+      "topic": "SAT witness original C and SQL replay",
+      "evidence": [
+        "worker.py:159-172",
+        "worker.py:185-200",
+        "worker.py:291-307",
+        "common.py:238-247",
+        "common.py:383-437"
+      ],
+      "finding": "Decoded full database checked against original-order concrete reference before replay. Full integer-domain audit precedes original SQL SQLite; unknown/unsafe domain, bad shape, noninteger result, or mismatch cannot become replay success."
+    },
+    {
+      "topic": "Resource, complete cold cost and cleanup",
+      "evidence": [
+        "worker.py:2-11",
+        "worker.py:56-69",
+        "worker.py:324-357",
+        "supervisor.py:63-79",
+        "supervisor.py:99-154"
+      ],
+      "finding": "CPU14/15, childwall24/parent25, sampled RSS1GiB; process cost spawn-through-reap includes hash/import/bridge/guard/cleanup. Typed contract rejection and other exceptions attempt cleanup. Resource stops and all failure/unknown/NOT_RUN slots retained."
+    },
+    {
+      "topic": "Registered controls and boundary",
+      "evidence": [
+        "REGISTERED_SIX_ARM_SUITE.json",
+        "INITIAL_NOT_RUN.json",
+        "SPOTIT_INITIAL_NOT_RUN.json",
+        "CONTRACT_V5.txt"
+      ],
+      "finding": "D01 forces integer A=6 and NULL-versus6 negative pair; D02 sameSQL sameC; D03 noC; D04 contradictory literal-left; D05 inverted BETWEEN; D06 supported leaf plus unsupported OR. All 22 inherited dictionaries unchanged. 28 cases/168cost/168diff remain constructed/exposed DEV, not natural benchmark defects or holdout."
+    }
+  ],
+  "review_round_repairs": [
+    {
+      "severity": "P2",
+      "issue": "Supervisor could accept exit0/COMPLETE despite recorded resource stop in a process-exit race.",
+      "resolution": "supervisor.py:151 now requires stop_reason absent."
+    },
+    {
+      "severity": "P2",
+      "issue": "Late ContractStop could overwrite already attempted query work with NOT_RUN metadata.",
+      "resolution": "worker.py tracks pair_work_started before query routes; catch distinguishes NOT_RUN from attempted ledger preserved."
+    }
+  ],
+  "secondary_review": {
+    "reviewer": "/root/support_closure/spotit_semantics_correction",
+    "scope": "contract_reference.py only",
+    "sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "result": "No P0/P1 by static read and stdlib AST parse; no target execution."
+  },
+  "limitations": [
+    "No runtime result obtained by this reviewer. Root must execute exact final frozen main entry and retain failures.",
+    "Bridge is bounded source-AST faithfulness, not proof that upstream text parser preserved every clause, and not SQL CHECK NULL semantics.",
+    "Reference itself relies on caller exact positive rows/liveness/INT32 facts; evaluator alone is not a portable complete database certificate.",
+    "Query differential remains official-encoder-relative; it does not establish official auxiliary totality or universal SQL correctness.",
+    "Controlled corrected-contract adapter and pinned direct SpotIt engine are not unmodified upstream defaults or full SpotIt+ pipeline. Scalar set/bag coincidence does not make engine bag semantics.",
+    "RSS is sampled, hard resource death may preclude cleanup; last checkpoint is authoritative about attempted work."
+  ],
+  "backup_status": "BACKUP_BLOCKED_BY_USER_NO_UPLOAD_NO_PUSH"
+}

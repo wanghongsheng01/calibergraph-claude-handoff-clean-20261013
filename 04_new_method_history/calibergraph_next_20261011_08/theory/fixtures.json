@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "provenance": "Original hand-written fixtures; not extracted from any benchmark, reserve, finaltest, solver result, or natural bug",
+  "execution": "NOT_EXECUTED",
+  "semantics": "Set base tables; all columns NOT NULL unless explicitly marked otherwise; per-head answer multiplicity is number of DISTINCT head-plus-counted assignments; all remaining variables existential",
+  "denominator": 7,
+  "fixtures": [
+    {
+      "id": "F1_shared_parent_collision",
+      "schema": {
+        "P": {"columns": ["p"], "pk": ["p"]},
+        "C": {"columns": ["c", "p", "x"], "pk": ["c"], "fks": [{"columns": ["p"], "references": "P", "target": ["p"]}]},
+        "D": {"columns": ["d", "p", "y"], "pk": ["d"], "fks": [{"columns": ["p"], "references": "P", "target": ["p"]}]},
+        "E": {"columns": ["e", "p", "x"], "pk": ["e"], "fks": [{"columns": ["p"], "references": "P", "target": ["p"]}]}
+      },
+      "body": [["P", ["p"]], ["C", ["c", "p", "x"]], ["D", ["d", "p", "y"]], ["E", ["e", "p", "x"]]],
+      "head": [], "counted_left": ["x", "y"], "counted_right": ["x"],
+      "closure_left": ["x", "y"], "closure_right": ["x"],
+      "selected_m": "y", "frozen_closure": ["x"], "varying_component": ["p", "c", "d", "e", "y"],
+      "rows": {"P": [[11], [12]], "C": [[21, 11, 7], [22, 12, 7]], "D": [[31, 11, 8], [32, 12, 9]], "E": [[41, 11, 7], [42, 12, 7]]},
+      "expected_class": "INEQUIVALENT", "expected_multiplicity_left": 2, "expected_multiplicity_right": 1,
+      "both_key_anchorable": false,
+      "manual_legality": "All four table keys unique; every C/D/E parent exists; all values nonnull; shared x=7 retained in both parent groups"
+    },
+    {
+      "id": "F2_equal_closure_nonanchored",
+      "schema": {
+        "X": {"columns": ["x", "y"], "pk": ["x"]},
+        "C": {"columns": ["c", "x"], "pk": ["c"], "fks": [{"columns": ["x"], "references": "X", "target": ["x"]}]}
+      },
+      "body": [["X", ["x", "y"]], ["C", ["c", "x"]]],
+      "head": [], "counted_left": ["x"], "counted_right": ["x", "y"],
+      "closure_left": ["x", "y"], "closure_right": ["x", "y"],
+      "rows": {"X": [[11, 7], [12, 7]], "C": [[21, 11], [22, 12], [23, 11]]},
+      "expected_class": "EQUIVALENT", "expected_multiplicity_left": 2, "expected_multiplicity_right": 2,
+      "both_key_anchorable": false,
+      "scope_of_expectation": "Equivalence for every legal database follows from closure proof; displayed data only checks fixture evaluator"
+    },
+    {
+      "id": "F3_composite_pk_fk_head",
+      "schema": {
+        "P": {"columns": ["a", "b", "z"], "pk": ["a", "b"]},
+        "C": {"columns": ["c", "d", "a", "b", "x"], "pk": ["c", "d"], "fks": [{"columns": ["a", "b"], "references": "P", "target": ["a", "b"]}]}
+      },
+      "body": [["P", ["a", "b", "z"]], ["C", ["c", "d", "a", "b", "x"]]],
+      "head": ["a"], "counted_left": ["x", "z"], "counted_right": ["z"],
+      "closure_left": ["a", "x", "z"], "closure_right": ["a", "z"],
+      "selected_m": "x", "frozen_closure": ["a", "z"], "varying_component": ["b", "c", "d", "x"],
+      "rows": {"P": [[1, 11, 7], [1, 12, 7]], "C": [[21, 31, 1, 11, 8], [22, 32, 1, 12, 9]]},
+      "expected_class": "INEQUIVALENT", "expected_head": [1], "expected_multiplicity_left": 2, "expected_multiplicity_right": 1,
+      "both_key_anchorable": false
+    },
+    {
+      "id": "F4_reject_self_join",
+      "schema": {"R": {"columns": ["a", "b"], "pk": ["a", "b"]}},
+      "body": [["R", ["x", "y"]], ["R", ["y", "x"]]],
+      "head": [], "counted_left": ["x"], "counted_right": ["y"],
+      "expected_class": "OUT_OF_FRAGMENT", "reject_reason": "same predicate R appears twice",
+      "rows": {"R": [[11, 7], [12, 7], [7, 11], [7, 12]]},
+      "independent_manual_outputs": {"left": 3, "right": 3},
+      "counterexample_role": "Without guard closures differ although the two queries are equivalent on every database by swapping x and y"
+    },
+    {
+      "id": "F5_reject_missing_fk_target",
+      "schema": {
+        "P": {"columns": ["p"], "pk": ["p"]},
+        "C": {"columns": ["c", "p", "x"], "pk": ["c"], "fks": [{"columns": ["p"], "references": "P", "target": ["p"]}]}
+      },
+      "body": [["C", ["c", "p", "x"]]],
+      "head": [], "counted_left": ["x"], "counted_right": [],
+      "expected_class": "OUT_OF_FRAGMENT", "reject_reason": "referenced P(p) atom is not explicitly in body; no automatic chase in this fixture"
+    },
+    {
+      "id": "F6_reject_unaligned_body",
+      "schema": {"R": {"columns": ["k", "a", "b"], "pk": ["k"]}},
+      "body_left": [["R", ["k", "x", "y"]]], "body_right": [["R", ["k", "y", "x"]]],
+      "head": [], "counted_left": ["x"], "counted_right": ["x"],
+      "expected_class": "OUT_OF_FRAGMENT", "reject_reason": "bodies are not identical under the supplied common variable naming; count transport is not authorized implicitly",
+      "rows": {"R": [[1, 7, 8], [2, 7, 9]]},
+      "independent_manual_outputs": {"left": 1, "right": 2},
+      "counterexample_role": "Same variable FD system and same counted closure do not suffice across unaligned bodies; Boolean support still identical"
+    },
+    {
+      "id": "F7_reject_nullable",
+      "schema": {"R": {"columns": ["k", "x"], "pk": ["k"], "nullable": ["x"]}},
+      "body": [["R", ["k", "x"]]],
+      "head": [], "counted_left": ["x"], "counted_right": [],
+      "expected_class": "OUT_OF_FRAGMENT", "reject_reason": "nullable x violates declared all-NOT-NULL fragment; no implicit SQL NULL theorem"
+    }
+  ],
+  "fixed_ablations": [
+    {"id": "A1_frozen_hidden_keys", "fixture": "F1_shared_parent_collision", "change": "Keep all hidden key variables fixed while varying y", "expected": "PK violation in D; reject before query comparison"},
+    {"id": "A2_remove_useful_collision", "fixture": "F1_shared_parent_collision", "change": "Also change x from shared 7 to distinct 7 and 10 in matching C/E rows", "expected": "Legal but both query multiplicities become 2; original separation erased"},
+    {"id": "A3_remove_self_join_guard", "fixture": "F4_reject_self_join", "change": "Use closure criterion despite repeated predicate", "expected": "False INEQUIVALENT, detected by independent 3-versus-3 calculation and symmetry proof"}
+  ]
+}

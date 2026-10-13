@@ -1,0 +1,24 @@
+# Static adaptation evidence — no scientific execution
+
+Read sources: only requested Round 03 backend/worker/contract admission/protocol, Round 04 recovery supervisor/common, the original locked runtime manifest and relevant official source text, and the four newly fixed source records from the selection agent. No Round 03/04 experiment results were used for selection or adaptation. No original files were changed.
+
+Official source root: `/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1` (runtime manifest source commit `3b99928bf976c11cb59c9db6a177adba21f75798`). The following are static source observations, not recomputed scientific results.
+
+| Mechanism | Static evidence |
+|---|---|
+| Physical values are integers; NULL separate | `environment.py:78,82,437-453`; value functions return IntSort, NULL is a Boolean predicate. |
+| INT range | `constants.py:50-51` is −2147483648 to 2147483647; replay checker enforces this complete schema range, narrower than SQLite int64. |
+| String integer encoding | `formulas/expressions/symbol.py:17-19,35-36`, `environment.py:280-293`, `utils.py:249-254`: `String_` prefix and hash-backed integer constant. VARCHAR schema constrains code >2147483647 (`environment.py:574-575`). |
+| NULL sentinel danger | `visitors/visitor.py:1966-1969`, `constants.py:43`: NULL expression has true flag and −10 value. −10 alone does not mean NULL. Official output also treats 99999 as NULL (`environment.py:961-971`), so the adapted chain preserves direct model NULL flags and never uses that formatter. |
+| Literal registry is mixed | `environment.py:118,197-205,287-293`: `env.variables` maps integer codes to Z3 Const; not a dedicated string dictionary. Database variables also use `String_x<n>__Int` (`551-553`). Environment exit clears it (`169-174`). |
+| Parser string hazards | `parsers/sql_parser.py:167` uppercases the whole SQL; `102-104,109-159` rewrites some date/numeric strings. `encoder.py:870-880,885-888` has numeric/empty-string conversion. |
+| Complete C semantics | `environment.py:627-655` PK and FK; `695-749` comparisons use all Cartesian column pairs and swap literal-left operands; `utils.py:42-46` equality/inequality require both sides non-NULL. These semantics are retained in the independent limited checker, rather than replaced by standard SQL DDL assumptions. |
+| Division differs | `visitors/visitor.py:168-172` explicitly real-coerces division; SQLite original SQL integer division cannot be silently rewritten to match. |
+
+A future VARCHAR equality-only adapter must capture the exact known original literal list from a statically reviewed, hash-bound pair/C; prove parser normalization preserves each original literal; match exact `String_<literal>__Int` Const declarations to existing integer keys without rehashing; reject missing/colliding mappings and literal changes; allocate fresh distinct text only to remaining equivalence classes, disjoint from every literal; and admit no text order, MIN/MAX, inequalities, collation, arithmetic, numeric/text coercion or text functions. Mere prefix filtering is unsound because of database-symbol collisions. Extracting official `counterexample_dict` is also unsound because it has sentinel/stringification loss and splits literal names on `__` (`environment.py:990-1003`). Therefore this initial adapter refuses generic VARCHAR rather than producing an invented decoder.
+
+Prepared implementation is intentionally narrow: exact source-hash-pinned dev03_10 and dev03_15 INT pairs only. Fixed dev03_07 and dev03_04 remain in all exact-2/4/8 denominators and may generate official raw models after approval, but their SQLite replay is INCONCLUSIVE. This is an engineering pipeline, no new solver, no added scientific method, no speedup/hardness conclusion and no claim that all inputs are fast.
+
+Validation performed: standard-library `ast.parse` of six files. No module was imported for validation, no process supervisor started, no SQLite database opened, no target parser/encoder/solver/Java executed, no dependency installation performed. Dynamic correctness, practical budget fit, native imports and SQLite runtime capability remain untested. `generation_common.EXECUTION_ENABLED=False` prevents the intended launcher from starting scientific work before independent review and fresh freeze.
+
+Static follow-up amendment: added explicitly tagged existing C-model sanity control for the two INT cases before official query analysis, using the very same full-C model already validated. Control outcomes cannot promote the formal query-SAT classification. Patched two pre-review defects without executing them: SQLite callback guard failures are preserved outside the callback and re-raised; the supervisor starts with 12 planned NOT_RUN slots before lock/registration checks. Final runtime behavior remains untested; execution is still disabled.

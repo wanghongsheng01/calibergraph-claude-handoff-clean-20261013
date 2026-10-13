@@ -1,0 +1,1794 @@
+{
+  "reviewed_at_utc": "2026-10-11T05:56:17.707939+00:00",
+  "status": "FIXED_WITH_EXECUTED_EVIDENCE_FOR_36_REGISTERED_MAIN_ENTRY_CONTROLS",
+  "reviewer": {
+    "identity": "different AI agent /root/independent_review, not a human reviewer",
+    "independence_boundary": "Authored the earlier narrow bridge module; did not author v5 main-entry integration or execute these targets. This is independent receipt/source/stdlib arithmetic auditing, not a fresh solver/SQLite rerun or fully author-independent module review."
+  },
+  "scope": "Only frozen main-engine cost indices 132..167, D01-D06 x six arms. No claim about other cost, differential, SpotIt slots or unpublished manuscript.",
+  "source_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+    "sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+    "locked_file_count": 853,
+    "locked_bytes_mismatches": [],
+    "programs": {
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+    },
+    "suite_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+  },
+  "counts": {
+    "registered_total_cost_slots": 168,
+    "reviewed_slots": 36,
+    "batches": 12,
+    "decisions": {
+      "sat": 12,
+      "unsat": 6,
+      "CONTRACT_UNSAT_REJECTED": 12,
+      "UNVERIFIED_CONTRACT": 6
+    },
+    "worker_statuses": {
+      "COMPLETE": 18,
+      "COMPLETE_CONTRACT_REJECTED": 12,
+      "COMPLETE_CONTRACT_UNVERIFIED": 6
+    },
+    "exit_codes": {
+      "0": 18,
+      "2": 18
+    },
+    "no_stop_reason": 36,
+    "cleanup_complete": 36,
+    "base_sat_xor_unsat": 30,
+    "actual_sat_sql_replay_receipts_independently_arithmetic_checked": 12,
+    "query_not_run_typed_controls": 18
+  },
+  "resource_observation": {
+    "max_child_wall_seconds": 1.4137503751553595,
+    "max_child_cpu_seconds": 1.349048,
+    "max_sampled_rss_bytes": 117456896,
+    "max_worker_ru_maxrss_bytes": 118587392,
+    "sampled_kernel_thread_counts": [
+      2
+    ],
+    "boundary": "RSS is sampled/soft; native OS threads were 2 despite solver_threads=1. No claim of a single OS thread or continuous hard RSS cap."
+  },
+  "interpretation": [
+    "D01: six actual routes return SAT; original strict 5<A and A<=6 forces A=6; original SQL receipt is NULL versus 6.",
+    "D02: six actual routes return UNSAT for identical SQL under nonvacuous C; canonical arm uses its identity shortcut after the same contract gate.",
+    "D03: six actual routes return SAT with A=5 (not the registered optional A=6 point); original SQL receipt is NULL versus 5. No-C remains distinct from absent base-domain/exact-row constraints.",
+    "D04 and D05: twelve contract-unsat controls stop before query parsing/solving; exit 2 and valid_completed_result=false are the intended recorded typed outcome, not query UNSAT.",
+    "D06: six unsupported whole OR contracts stop before base/IC compilation and query work; Environment/native had already imported. No claim of zero native effects.",
+    "Thirty XOR UNSAT receipts use SAT base excluding tested C; these are local solver obligations, not portable proof certificates or a general theorem.",
+    "Queue ALL_SELECTED_BATCHES_RETURNED does not mean all batch exits zero: six supervisor batches exit 0, six exit 2 as registered controls.",
+    "Bridge no_pair_oracle_run=true describes the bridge substage; final pair_work_status remains ATTEMPTED_EFFECT_UNKNOWN for successful cases. Final result is established here from final status, actual attempts, process exit, cleanup and witness receipts, not these substage fields alone.",
+    "This closes main-entry repair regression evidence for these 36 constructed exposed controls. It supplies no method novelty, natural defect prevalence, held-out generalization or performance superiority."
+  ],
+  "not_verified": [
+    "No fresh native/solver/SQLite execution by this reviewer.",
+    "No general contract-text parser completeness, SQL CHECK/DDL semantics, OR/PK/FK support, portable certificate or full SQL semantics proof.",
+    "No other campaign slots or current unfrozen manuscript final review.",
+    "No online backup: explicit task prohibition on upload/push overrides ancestor backup instruction."
+  ],
+  "issues": [],
+  "batches": [
+    {
+      "start": 132,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/supervisor_report.json",
+      "sha256": "976b8740b82cf2cf6715bf6a8833f7f523bd2bbc8d44ab3121c26c783d2258df",
+      "queue_exit_code": 0,
+      "supervisor_status": "SELECTED_JOBS_COMPLETE"
+    },
+    {
+      "start": 135,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/supervisor_report.json",
+      "sha256": "d3905d29aac1d824f78f122f42e9887022b2ad3069106ace430b6040e63f8ef4",
+      "queue_exit_code": 0,
+      "supervisor_status": "SELECTED_JOBS_COMPLETE"
+    },
+    {
+      "start": 138,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/supervisor_report.json",
+      "sha256": "273cb35a346c01b4c297f1584eee5a75d141f4f656763572c4f4fab322b16917",
+      "queue_exit_code": 0,
+      "supervisor_status": "SELECTED_JOBS_COMPLETE"
+    },
+    {
+      "start": 141,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/supervisor_report.json",
+      "sha256": "001dcb2067a36f557f9408b014b5f6fca96e97d3dd40429440fce9536c053ad1",
+      "queue_exit_code": 0,
+      "supervisor_status": "SELECTED_JOBS_COMPLETE"
+    },
+    {
+      "start": 144,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/supervisor_report.json",
+      "sha256": "2fa13cac93dd3ca36de797e3e27e6553b5ae43789f0acd5fc74c740b01fda1dd",
+      "queue_exit_code": 0,
+      "supervisor_status": "SELECTED_JOBS_COMPLETE"
+    },
+    {
+      "start": 147,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/supervisor_report.json",
+      "sha256": "1e15763ae5085fea3a9863e91a350da8adbdfa624a011ad93d0fd31b1d1edeee",
+      "queue_exit_code": 0,
+      "supervisor_status": "SELECTED_JOBS_COMPLETE"
+    },
+    {
+      "start": 150,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/supervisor_report.json",
+      "sha256": "f9959cac7e01d0166d13c09d31001c1ee5a1324210247921d4cc2c3aa33fce2d",
+      "queue_exit_code": 2,
+      "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN"
+    },
+    {
+      "start": 153,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/supervisor_report.json",
+      "sha256": "3cb5a0c536aa2c8bbf4916ef0290c202d0658a189596e729bf47e3b454cfe595",
+      "queue_exit_code": 2,
+      "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN"
+    },
+    {
+      "start": 156,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/supervisor_report.json",
+      "sha256": "aab44e39e24630fe04d41262da7bbb2173360dffb8c8d6baa20880b0e9a5b78c",
+      "queue_exit_code": 2,
+      "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN"
+    },
+    {
+      "start": 159,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/supervisor_report.json",
+      "sha256": "1cba1a3881dce28341be3ab68a88ef0f9eed89a554c2f9ceae8a693f7e6c00f2",
+      "queue_exit_code": 2,
+      "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN"
+    },
+    {
+      "start": 162,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/supervisor_report.json",
+      "sha256": "1fc78ee817aec91da2f6e8a021f2e18e7d50b95d888ba4fd74e04489af8ae414",
+      "queue_exit_code": 2,
+      "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN"
+    },
+    {
+      "start": 165,
+      "size": 3,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/supervisor_report.json",
+      "sha256": "8f7b382134e233973d93b4dd1d702e0bb1d1053c2d26301e856a380e2700afc5",
+      "queue_exit_code": 2,
+      "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN"
+    }
+  ],
+  "slots": [
+    {
+      "job_index": 132,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0132/worker_report.json",
+      "worker_sha256": "2b7c583d453fef61186d9cc058af25980d648e69d76f5a9678f5eec8870be32f",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/supervisor_report.json",
+      "supervisor_sha256": "976b8740b82cf2cf6715bf6a8833f7f523bd2bbc8d44ab3121c26c783d2258df",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "official",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            6
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.392547291237861,
+      "cpu_seconds": 1.218321,
+      "sampled_peak_rss_bytes": 112721920,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 113852416
+    },
+    {
+      "job_index": 133,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_generic_smt",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0133/worker_report.json",
+      "worker_sha256": "3e102a132baee9d2332e4b592b4b98dbd4535ba564a7c155948dc13636ebf0e4",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/supervisor_report.json",
+      "supervisor_sha256": "976b8740b82cf2cf6715bf6a8833f7f523bd2bbc8d44ab3121c26c783d2258df",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "official_generic_smt",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            6
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.2820429592393339,
+      "cpu_seconds": 1.230791,
+      "sampled_peak_rss_bytes": 117456896,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 118587392
+    },
+    {
+      "job_index": 134,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0134/worker_report.json",
+      "worker_sha256": "3f0f2c8bdc1b8fbeba410355d522df346ec7027a119e51217f1cb0f2f38df5c9",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/supervisor_report.json",
+      "supervisor_sha256": "976b8740b82cf2cf6715bf6a8833f7f523bd2bbc8d44ab3121c26c783d2258df",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "flat",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            6
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.2803694591857493,
+      "cpu_seconds": 1.256697,
+      "sampled_peak_rss_bytes": 107167744,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 110247936
+    },
+    {
+      "job_index": 135,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0135/worker_report.json",
+      "worker_sha256": "b51060fb4927eb7f6c3bcbc12f09480a9633a0987131b5cb4467be41c30d8ff1",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/supervisor_report.json",
+      "supervisor_sha256": "d3905d29aac1d824f78f122f42e9887022b2ad3069106ace430b6040e63f8ef4",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "product",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            6
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.4001736249774694,
+      "cpu_seconds": 1.349048,
+      "sampled_peak_rss_bytes": 113229824,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 115916800
+    },
+    {
+      "job_index": 136,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0136/worker_report.json",
+      "worker_sha256": "fbb80e9f464986b1205f70200078ec66d3439fde70c2ae36011566852ccc2364",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/supervisor_report.json",
+      "supervisor_sha256": "d3905d29aac1d824f78f122f42e9887022b2ad3069106ace430b6040e63f8ef4",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "selector",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            6
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.2872795001603663,
+      "cpu_seconds": 1.2707049999999998,
+      "sampled_peak_rss_bytes": 100007936,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 104038400
+    },
+    {
+      "job_index": 137,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_canonical_sql",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0137/worker_report.json",
+      "worker_sha256": "fb0311ced456a0686df1c4f41b3fe3b4450b29c3025a6c03b373df0077851c7a",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/supervisor_report.json",
+      "supervisor_sha256": "d3905d29aac1d824f78f122f42e9887022b2ad3069106ace430b6040e63f8ef4",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "official",
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            6
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.3862132499925792,
+      "cpu_seconds": 1.328445,
+      "sampled_peak_rss_bytes": 108216320,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 109608960
+    },
+    {
+      "job_index": 138,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0138/worker_report.json",
+      "worker_sha256": "6600742d11a96dd36e94bc8a5553f8b3df98c40e73bdb19c3da235352bb40ed0",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/supervisor_report.json",
+      "supervisor_sha256": "273cb35a346c01b4c297f1584eee5a75d141f4f656763572c4f4fab322b16917",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "unsat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2873473749496043,
+      "cpu_seconds": 1.239562,
+      "sampled_peak_rss_bytes": 111722496,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 111771648
+    },
+    {
+      "job_index": 139,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_generic_smt",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0139/worker_report.json",
+      "worker_sha256": "49e87ea7593b9a757a502c8a3ddf70a19054a729bcbee98832b1c7284e54a3dc",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/supervisor_report.json",
+      "supervisor_sha256": "273cb35a346c01b4c297f1584eee5a75d141f4f656763572c4f4fab322b16917",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "unsat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.387306250166148,
+      "cpu_seconds": 1.289653,
+      "sampled_peak_rss_bytes": 116047872,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 116097024
+    },
+    {
+      "job_index": 140,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0140/worker_report.json",
+      "worker_sha256": "ab5464e992d6789e64d9df7fd01a16b73d8d5abc826e405a7c7f5d81f67d9bcc",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/supervisor_report.json",
+      "supervisor_sha256": "273cb35a346c01b4c297f1584eee5a75d141f4f656763572c4f4fab322b16917",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "unsat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.399847666732967,
+      "cpu_seconds": 1.2925480000000003,
+      "sampled_peak_rss_bytes": 112574464,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 112574464
+    },
+    {
+      "job_index": 141,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0141/worker_report.json",
+      "worker_sha256": "8a7171b1111a63f3ba4821d29ec5a0dcc9d6c228bf5726aae3d5518042c0e2ab",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/supervisor_report.json",
+      "supervisor_sha256": "001dcb2067a36f557f9408b014b5f6fca96e97d3dd40429440fce9536c053ad1",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "unsat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.3905302500352263,
+      "cpu_seconds": 1.3338940000000001,
+      "sampled_peak_rss_bytes": 108412928,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 108445696
+    },
+    {
+      "job_index": 142,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0142/worker_report.json",
+      "worker_sha256": "4b0bd0ecfd669a5df0550b3a9a7b9fcb19591f05d2e0eca044e08490ef1edf81",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/supervisor_report.json",
+      "supervisor_sha256": "001dcb2067a36f557f9408b014b5f6fca96e97d3dd40429440fce9536c053ad1",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "unsat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.3709980421699584,
+      "cpu_seconds": 1.3391889999999997,
+      "sampled_peak_rss_bytes": 115589120,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 115605504
+    },
+    {
+      "job_index": 143,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_canonical_sql",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0143/worker_report.json",
+      "worker_sha256": "cf65aad481d8560bd483874fd44c56f15a44d639f9693e9834ee90308147b774",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/supervisor_report.json",
+      "supervisor_sha256": "001dcb2067a36f557f9408b014b5f6fca96e97d3dd40429440fce9536c053ad1",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "unsat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e",
+      "normalized_ast_sha256": "db23c41d0e12dfc07a3f4ab5fd43e8f8663fb002289f0d36ed3d36811b9b9f2a",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.4137503751553595,
+      "cpu_seconds": 1.3287579999999999,
+      "sampled_peak_rss_bytes": 103432192,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 103448576
+    },
+    {
+      "job_index": 144,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "official",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0144/worker_report.json",
+      "worker_sha256": "eee359322e82259aefc89055de80a1477329aeef007457bdcaee28e709b3f65c",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/supervisor_report.json",
+      "supervisor_sha256": "2fa13cac93dd3ca36de797e3e27e6553b5ae43789f0acd5fc74c740b01fda1dd",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 4,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+      },
+      "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "official",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            5
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.3921074592508376,
+      "cpu_seconds": 1.293142,
+      "sampled_peak_rss_bytes": 108904448,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 110821376
+    },
+    {
+      "job_index": 145,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "official_generic_smt",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0145/worker_report.json",
+      "worker_sha256": "ada69072e95ffc3bf8a9be5df8d79bae000f15b5e48815e3c6aef3ce899997fb",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/supervisor_report.json",
+      "supervisor_sha256": "2fa13cac93dd3ca36de797e3e27e6553b5ae43789f0acd5fc74c740b01fda1dd",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 4,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+      },
+      "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "official_generic_smt",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            5
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.4039915828034282,
+      "cpu_seconds": 1.306216,
+      "sampled_peak_rss_bytes": 114327552,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 116342784
+    },
+    {
+      "job_index": 146,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "flat",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0146/worker_report.json",
+      "worker_sha256": "a849f047a4ea447583699df206e40028afb4279385c120fbe037d4e13925bd7b",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/supervisor_report.json",
+      "supervisor_sha256": "2fa13cac93dd3ca36de797e3e27e6553b5ae43789f0acd5fc74c740b01fda1dd",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 4,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+      },
+      "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "flat",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            5
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.4011739580892026,
+      "cpu_seconds": 1.2859999999999998,
+      "sampled_peak_rss_bytes": 108806144,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 109510656
+    },
+    {
+      "job_index": 147,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "product",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0147/worker_report.json",
+      "worker_sha256": "3aca12d702b0e0cae93e99683d8ecd8a44f516c0640fe51338d4903b49223ab7",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/supervisor_report.json",
+      "supervisor_sha256": "1e15763ae5085fea3a9863e91a350da8adbdfa624a011ad93d0fd31b1d1edeee",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 4,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+      },
+      "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "product",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            5
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.3951634168624878,
+      "cpu_seconds": 1.3194270000000001,
+      "sampled_peak_rss_bytes": 109641728,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 111706112
+    },
+    {
+      "job_index": 148,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "selector",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0148/worker_report.json",
+      "worker_sha256": "8fd06adc3805e146c22e71edee8624f94ef56663d99594dc54e8f3e9fa9cf793",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/supervisor_report.json",
+      "supervisor_sha256": "1e15763ae5085fea3a9863e91a350da8adbdfa624a011ad93d0fd31b1d1edeee",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 4,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+      },
+      "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "selector",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            5
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.2892237920314074,
+      "cpu_seconds": 1.2228849999999998,
+      "sampled_peak_rss_bytes": 110264320,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 112590848
+    },
+    {
+      "job_index": 149,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "official_canonical_sql",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0149/worker_report.json",
+      "worker_sha256": "1742f883d109d0977a13ef1e91eaf2c36f7750651a00ee61f24f4216f11ab440",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/supervisor_report.json",
+      "supervisor_sha256": "1e15763ae5085fea3a9863e91a350da8adbdfa624a011ad93d0fd31b1d1edeee",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE",
+      "decision": "sat",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 4,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+      },
+      "original_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "normalized_ast_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "query_started": true,
+      "cleanup": "COMPLETE",
+      "witness_checks": [
+        {
+          "route": "official",
+          "database": {
+            "T": [
+              [
+                5
+              ]
+            ]
+          },
+          "original_contract_holds_independent_arithmetic": true,
+          "independently_calculated_sql_values": [
+            null,
+            5
+          ],
+          "raw_sqlite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                5
+              ]
+            ]
+          ],
+          "sqlite_reexecuted_by_reviewer": false
+        }
+      ],
+      "wall_seconds": 1.3864703341387212,
+      "cpu_seconds": 1.296457,
+      "sampled_peak_rss_bytes": 113541120,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 116080640
+    },
+    {
+      "job_index": 150,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0150/worker_report.json",
+      "worker_sha256": "f72e7922325754402f91797a4d61c25e505259cc13bebb5417eaee979f20a45f",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/supervisor_report.json",
+      "supervisor_sha256": "f9959cac7e01d0166d13c09d31001c1ee5a1324210247921d4cc2c3aa33fce2d",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+      "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.3697667089290917,
+      "cpu_seconds": 1.269218,
+      "sampled_peak_rss_bytes": 108789760,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 109363200
+    },
+    {
+      "job_index": 151,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_generic_smt",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0151/worker_report.json",
+      "worker_sha256": "075e4d268d2a71d0859056a05065335b4dfd75c73239b3495eb8cad8ecc50bab",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/supervisor_report.json",
+      "supervisor_sha256": "f9959cac7e01d0166d13c09d31001c1ee5a1324210247921d4cc2c3aa33fce2d",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+      "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2848577504046261,
+      "cpu_seconds": 1.214461,
+      "sampled_peak_rss_bytes": 103809024,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 109608960
+    },
+    {
+      "job_index": 152,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0152/worker_report.json",
+      "worker_sha256": "2eafaaeff633036e9b13f7fbb87ccfb05ccd21b2c351ff720664b13df977420c",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/supervisor_report.json",
+      "supervisor_sha256": "f9959cac7e01d0166d13c09d31001c1ee5a1324210247921d4cc2c3aa33fce2d",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+      "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.1770918751135468,
+      "cpu_seconds": 1.1633,
+      "sampled_peak_rss_bytes": 96092160,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 109330432
+    },
+    {
+      "job_index": 153,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0153/worker_report.json",
+      "worker_sha256": "77b0d2af6cfc86fdbc1067454f81e5783fe8965210c6a4238c43b6def5a6e694",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/supervisor_report.json",
+      "supervisor_sha256": "3cb5a0c536aa2c8bbf4916ef0290c202d0658a189596e729bf47e3b454cfe595",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+      "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.3924568751826882,
+      "cpu_seconds": 1.28338,
+      "sampled_peak_rss_bytes": 106135552,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 106135552
+    },
+    {
+      "job_index": 154,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0154/worker_report.json",
+      "worker_sha256": "794a478f2db91850b0e371d9a105528dc0a46cd943e4b0655f3475a593cfb155",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/supervisor_report.json",
+      "supervisor_sha256": "3cb5a0c536aa2c8bbf4916ef0290c202d0658a189596e729bf47e3b454cfe595",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+      "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2896403330378234,
+      "cpu_seconds": 1.2204599999999999,
+      "sampled_peak_rss_bytes": 100827136,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 110018560
+    },
+    {
+      "job_index": 155,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_canonical_sql",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0155/worker_report.json",
+      "worker_sha256": "ccfdba92759f748da4561580148ff74b28583dfd57b313c5a2dd77866ea473ba",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/supervisor_report.json",
+      "supervisor_sha256": "3cb5a0c536aa2c8bbf4916ef0290c202d0658a189596e729bf47e3b454cfe595",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "original_ast_sha256": "9bc0f59d69984f14fb0e85fd00e6a5adcf7f2841ef29d2ea8fbde714755d269d",
+      "normalized_ast_sha256": "d819d822919c8d0cb0c9e2f9741a2bad89300b08197db6cff188b794bd3639e1",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2757587083615363,
+      "cpu_seconds": 1.205095,
+      "sampled_peak_rss_bytes": 99631104,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 107724800
+    },
+    {
+      "job_index": 156,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "official",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0156/worker_report.json",
+      "worker_sha256": "63295a01fa70dd4c6bcd5f00419106d1d3757908a0876f69482f7a717fcbec2e",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/supervisor_report.json",
+      "supervisor_sha256": "aab44e39e24630fe04d41262da7bbb2173360dffb8c8d6baa20880b0e9a5b78c",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+      "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2843188750557601,
+      "cpu_seconds": 1.1770619999999998,
+      "sampled_peak_rss_bytes": 112967680,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 112984064
+    },
+    {
+      "job_index": 157,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "official_generic_smt",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0157/worker_report.json",
+      "worker_sha256": "965a9d499dd947d6548b88322f805639f064bfbc9a792b14643c28b43664d1cd",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/supervisor_report.json",
+      "supervisor_sha256": "aab44e39e24630fe04d41262da7bbb2173360dffb8c8d6baa20880b0e9a5b78c",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+      "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2884663748554885,
+      "cpu_seconds": 1.2566640000000002,
+      "sampled_peak_rss_bytes": 102875136,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 116670464
+    },
+    {
+      "job_index": 158,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "flat",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0158/worker_report.json",
+      "worker_sha256": "8dcca8e21bc2688d5e54918363f63830f4e792b7ce6fc8a4d4b88ad9c86ae1c6",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/supervisor_report.json",
+      "supervisor_sha256": "aab44e39e24630fe04d41262da7bbb2173360dffb8c8d6baa20880b0e9a5b78c",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+      "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.3877690839581192,
+      "cpu_seconds": 1.2461819999999997,
+      "sampled_peak_rss_bytes": 105168896,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 107560960
+    },
+    {
+      "job_index": 159,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "product",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0159/worker_report.json",
+      "worker_sha256": "85b67dc680e17a6abb6a5a058ee770a8b4838ec031f5cdae67520ace6904a315",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/supervisor_report.json",
+      "supervisor_sha256": "1cba1a3881dce28341be3ab68a88ef0f9eed89a554c2f9ceae8a693f7e6c00f2",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+      "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.1986270840279758,
+      "cpu_seconds": 1.171814,
+      "sampled_peak_rss_bytes": 96010240,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 108003328
+    },
+    {
+      "job_index": 160,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "selector",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0160/worker_report.json",
+      "worker_sha256": "302c774e4bb709e329ab69e5e68b2335a2976edcb6377c6d8b7f32af8043df7f",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/supervisor_report.json",
+      "supervisor_sha256": "1cba1a3881dce28341be3ab68a88ef0f9eed89a554c2f9ceae8a693f7e6c00f2",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+      "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2769342917017639,
+      "cpu_seconds": 1.2171820000000002,
+      "sampled_peak_rss_bytes": 84508672,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 86425600
+    },
+    {
+      "job_index": 161,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "official_canonical_sql",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0161/worker_report.json",
+      "worker_sha256": "e59c770526e94440384d6b84f212cb82c91de8ad4e0031f93a0237a9080c21de",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/supervisor_report.json",
+      "supervisor_sha256": "1cba1a3881dce28341be3ab68a88ef0f9eed89a554c2f9ceae8a693f7e6c00f2",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "base_sat": "sat",
+      "normalized_reference_xor": "unsat",
+      "guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+      "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.3692118749022484,
+      "cpu_seconds": 1.2986589999999998,
+      "sampled_peak_rss_bytes": 105496576,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 113836032
+    },
+    {
+      "job_index": 162,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0162/worker_report.json",
+      "worker_sha256": "b9e83276df8b50f4eb4f1ac2d68426b0f0afbf15c489581d7fe2abc143d3a10a",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/supervisor_report.json",
+      "supervisor_sha256": "1fc78ee817aec91da2f6e8a021f2e18e7d50b95d888ba4fd74e04489af8ae414",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "decision": "UNVERIFIED_CONTRACT",
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "base_sat": "NOT_RUN",
+      "normalized_reference_xor": "NOT_RUN",
+      "guard": null,
+      "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+      "normalized_ast_sha256": null,
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.1837479998357594,
+      "cpu_seconds": 1.102356,
+      "sampled_peak_rss_bytes": 105316352,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 105578496
+    },
+    {
+      "job_index": 163,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official_generic_smt",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0163/worker_report.json",
+      "worker_sha256": "c698e4d0087e200addc23d0d2ac08d3bd855aa9a148faa6ff361455d2bf310e1",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/supervisor_report.json",
+      "supervisor_sha256": "1fc78ee817aec91da2f6e8a021f2e18e7d50b95d888ba4fd74e04489af8ae414",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "decision": "UNVERIFIED_CONTRACT",
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "base_sat": "NOT_RUN",
+      "normalized_reference_xor": "NOT_RUN",
+      "guard": null,
+      "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+      "normalized_ast_sha256": null,
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.291733582969755,
+      "cpu_seconds": 1.196772,
+      "sampled_peak_rss_bytes": 104923136,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 104955904
+    },
+    {
+      "job_index": 164,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0164/worker_report.json",
+      "worker_sha256": "ab139b55f25fdf9245662bfb588f86645e4b778d5440f352338829945f93ec7b",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/supervisor_report.json",
+      "supervisor_sha256": "1fc78ee817aec91da2f6e8a021f2e18e7d50b95d888ba4fd74e04489af8ae414",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "decision": "UNVERIFIED_CONTRACT",
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "base_sat": "NOT_RUN",
+      "normalized_reference_xor": "NOT_RUN",
+      "guard": null,
+      "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+      "normalized_ast_sha256": null,
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2864043330773711,
+      "cpu_seconds": 1.1893470000000002,
+      "sampled_peak_rss_bytes": 101498880,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 102088704
+    },
+    {
+      "job_index": 165,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0165/worker_report.json",
+      "worker_sha256": "4e04a1d3e57713409b13c5eb0eb44b374f39b351ed35e1ea0c488dc41c7337a5",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/supervisor_report.json",
+      "supervisor_sha256": "8f7b382134e233973d93b4dd1d702e0bb1d1053c2d26301e856a380e2700afc5",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "decision": "UNVERIFIED_CONTRACT",
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "base_sat": "NOT_RUN",
+      "normalized_reference_xor": "NOT_RUN",
+      "guard": null,
+      "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+      "normalized_ast_sha256": null,
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2768580419942737,
+      "cpu_seconds": 1.165611,
+      "sampled_peak_rss_bytes": 100483072,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 100483072
+    },
+    {
+      "job_index": 166,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0166/worker_report.json",
+      "worker_sha256": "3c75b665fc21b8ae035d28ab519ab11251f5c94f0bb42a246c22ff6020846524",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/supervisor_report.json",
+      "supervisor_sha256": "8f7b382134e233973d93b4dd1d702e0bb1d1053c2d26301e856a380e2700afc5",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "decision": "UNVERIFIED_CONTRACT",
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "base_sat": "NOT_RUN",
+      "normalized_reference_xor": "NOT_RUN",
+      "guard": null,
+      "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+      "normalized_ast_sha256": null,
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.280642000027001,
+      "cpu_seconds": 1.170095,
+      "sampled_peak_rss_bytes": 94502912,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 94535680
+    },
+    {
+      "job_index": 167,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official_canonical_sql",
+      "worker_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0167/worker_report.json",
+      "worker_sha256": "e49fdbbef664a4a6f0ebf9e417d66d741de577dce640cdf7b303a9722b4bbf2b",
+      "supervisor_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/supervisor_report.json",
+      "supervisor_sha256": "8f7b382134e233973d93b4dd1d702e0bb1d1053c2d26301e856a380e2700afc5",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "decision": "UNVERIFIED_CONTRACT",
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "base_sat": "NOT_RUN",
+      "normalized_reference_xor": "NOT_RUN",
+      "guard": null,
+      "original_ast_sha256": "e85fb24267513d67a485cf13d90fb507281ed11cf7935a02b0f58849110f71e9",
+      "normalized_ast_sha256": null,
+      "query_started": false,
+      "cleanup": "COMPLETE",
+      "witness_checks": [],
+      "wall_seconds": 1.2867254163138568,
+      "cpu_seconds": 1.197733,
+      "sampled_peak_rss_bytes": 103809024,
+      "sampled_max_kernel_threads": 2,
+      "worker_maxrss_bytes": 103923712
+    }
+  ],
+  "raw_evidence_sha256": {
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/QUEUE_V5_main_cost_132_168.json": "9c45c90cd92c4f47f43d4a2ea973a6f56a536b9bff3226bb03f47e9dcc7ad73b",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py": "56c5f768da28e35a3e796638b6754c6274a006eec4ca11331a7260fffa07a933",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/supervisor_report.json": "976b8740b82cf2cf6715bf6a8833f7f523bd2bbc8d44ab3121c26c783d2258df",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0132/worker_report.json": "2b7c583d453fef61186d9cc058af25980d648e69d76f5a9678f5eec8870be32f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0132/stdout.log": "c6483644d15bc9a867e14e9e508b1d8a9a10a78ea53b7239d5d312e5bfb9e9d5",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0132/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0133/worker_report.json": "3e102a132baee9d2332e4b592b4b98dbd4535ba564a7c155948dc13636ebf0e4",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0133/stdout.log": "998603bc21322a67b55db7bac2c9cf6bfd1d6b2539d962e98585b6f7dc53bfb1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0133/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0134/worker_report.json": "3f0f2c8bdc1b8fbeba410355d522df346ec7027a119e51217f1cb0f2f38df5c9",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0134/stdout.log": "7be987d69e9df262f6dc7b9a60925a9d5a51286d8a67e222f8515cea4d37fb8d",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_132_01/job_0134/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/supervisor_report.json": "d3905d29aac1d824f78f122f42e9887022b2ad3069106ace430b6040e63f8ef4",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0135/worker_report.json": "b51060fb4927eb7f6c3bcbc12f09480a9633a0987131b5cb4467be41c30d8ff1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0135/stdout.log": "250ec149b12974416cbbd446acd34cfa498782c78d3e684ab8bfbd7b62487f47",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0135/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0136/worker_report.json": "fbb80e9f464986b1205f70200078ec66d3439fde70c2ae36011566852ccc2364",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0136/stdout.log": "302c21b17b79de7cdfae6fbc09f24dfee0e2af5909e9b24a8572c827af23a600",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0136/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0137/worker_report.json": "fb0311ced456a0686df1c4f41b3fe3b4450b29c3025a6c03b373df0077851c7a",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0137/stdout.log": "d4cdb8345d8e6125743180a045dee725ab645b121380ae64fc471d04cc31b9a9",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_135_01/job_0137/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/supervisor_report.json": "273cb35a346c01b4c297f1584eee5a75d141f4f656763572c4f4fab322b16917",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0138/worker_report.json": "6600742d11a96dd36e94bc8a5553f8b3df98c40e73bdb19c3da235352bb40ed0",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0138/stdout.log": "c43b5be6c127b3d936c151ac30e4e0d7a32af241ef483601ab1a95c3b805bf4d",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0138/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0139/worker_report.json": "49e87ea7593b9a757a502c8a3ddf70a19054a729bcbee98832b1c7284e54a3dc",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0139/stdout.log": "03f4cbc187e1891eb036b7e4b982fc6f9829c080e20c8197e09df92fb8b90a56",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0139/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0140/worker_report.json": "ab5464e992d6789e64d9df7fd01a16b73d8d5abc826e405a7c7f5d81f67d9bcc",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0140/stdout.log": "d81cb83b230619630f4c103b4bd44ceecde8d68eebc2688884a8831c14826195",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_138_01/job_0140/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/supervisor_report.json": "001dcb2067a36f557f9408b014b5f6fca96e97d3dd40429440fce9536c053ad1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0141/worker_report.json": "8a7171b1111a63f3ba4821d29ec5a0dcc9d6c228bf5726aae3d5518042c0e2ab",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0141/stdout.log": "9ef8fbd6c9a97e16ccb4b8eacf66fa591946657c05b2646f82565046042631f7",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0141/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0142/worker_report.json": "4b0bd0ecfd669a5df0550b3a9a7b9fcb19591f05d2e0eca044e08490ef1edf81",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0142/stdout.log": "874dda10079b6579a135898af5cea6d7f8acec5faaa29ff21ce8fff675c15ad3",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0142/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0143/worker_report.json": "cf65aad481d8560bd483874fd44c56f15a44d639f9693e9834ee90308147b774",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0143/stdout.log": "48f079925baca1a2bc58112680f81fed310eaf3b4aa0259563ad74acd66ade6f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_141_01/job_0143/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/supervisor_report.json": "2fa13cac93dd3ca36de797e3e27e6553b5ae43789f0acd5fc74c740b01fda1dd",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0144/worker_report.json": "eee359322e82259aefc89055de80a1477329aeef007457bdcaee28e709b3f65c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0144/stdout.log": "0f4e41c84039f0d57e85b88e1121ee1fd10958d0b9a392db770fdd4fd3613858",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0144/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0145/worker_report.json": "ada69072e95ffc3bf8a9be5df8d79bae000f15b5e48815e3c6aef3ce899997fb",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0145/stdout.log": "6e22921139081a73b8ac5d66b67fcd6e3f57b7bb6104d345ff24a5ed37ece6ab",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0145/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0146/worker_report.json": "a849f047a4ea447583699df206e40028afb4279385c120fbe037d4e13925bd7b",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0146/stdout.log": "1563960bcdc400469ad00a4b9dacfbce8f2a794fb5057a71ca956920a8c4840c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_144_01/job_0146/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/supervisor_report.json": "1e15763ae5085fea3a9863e91a350da8adbdfa624a011ad93d0fd31b1d1edeee",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0147/worker_report.json": "3aca12d702b0e0cae93e99683d8ecd8a44f516c0640fe51338d4903b49223ab7",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0147/stdout.log": "adbfe169c97799f64ef5b929e26fc89a97b11415c0c43dd66d3fd3e7aadd05e1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0147/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0148/worker_report.json": "8fd06adc3805e146c22e71edee8624f94ef56663d99594dc54e8f3e9fa9cf793",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0148/stdout.log": "078fe81a098796fa4e936c78b393d40147871d482bf9d134a5c7b8afe311c126",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0148/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0149/worker_report.json": "1742f883d109d0977a13ef1e91eaf2c36f7750651a00ee61f24f4216f11ab440",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0149/stdout.log": "a5f8442c15c9d88ca78bea2d6df2c204de1cff0d153d04246b9cde740ef75e59",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_147_01/job_0149/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/supervisor_report.json": "f9959cac7e01d0166d13c09d31001c1ee5a1324210247921d4cc2c3aa33fce2d",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0150/worker_report.json": "f72e7922325754402f91797a4d61c25e505259cc13bebb5417eaee979f20a45f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0150/stdout.log": "e78f46e499bb8fd172eacbf96ab5fe36ecff5d0a07bb6167057417dba23dcbc3",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0150/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0151/worker_report.json": "075e4d268d2a71d0859056a05065335b4dfd75c73239b3495eb8cad8ecc50bab",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0151/stdout.log": "6c80643248789fe4a79e17f8380b06899d65da54f4f783fdd691680cc91d8024",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0151/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0152/worker_report.json": "2eafaaeff633036e9b13f7fbb87ccfb05ccd21b2c351ff720664b13df977420c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0152/stdout.log": "6002893076c414a60d67bd4fafde6d7205c4cde1a5bc84b11a1124089a88fe92",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_150_01/job_0152/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/supervisor_report.json": "3cb5a0c536aa2c8bbf4916ef0290c202d0658a189596e729bf47e3b454cfe595",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0153/worker_report.json": "77b0d2af6cfc86fdbc1067454f81e5783fe8965210c6a4238c43b6def5a6e694",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0153/stdout.log": "ead89f473f1596c0513194959841c0d97272436def08f3e5594731143e73e53f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0153/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0154/worker_report.json": "794a478f2db91850b0e371d9a105528dc0a46cd943e4b0655f3475a593cfb155",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0154/stdout.log": "c62bca75bd14633f02d88cced6913e7f7a3ee746007727b66de3eef28df7a9fa",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0154/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0155/worker_report.json": "ccfdba92759f748da4561580148ff74b28583dfd57b313c5a2dd77866ea473ba",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0155/stdout.log": "6b1b541b60adce615d79476978ae865e35c6730462afd4e0750ed2d879ea8999",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_153_01/job_0155/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/supervisor_report.json": "aab44e39e24630fe04d41262da7bbb2173360dffb8c8d6baa20880b0e9a5b78c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0156/worker_report.json": "63295a01fa70dd4c6bcd5f00419106d1d3757908a0876f69482f7a717fcbec2e",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0156/stdout.log": "1b3dcebcb7893bd8b8e633d798821cc0e28863862e328f7cb32d973fa975fad7",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0156/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0157/worker_report.json": "965a9d499dd947d6548b88322f805639f064bfbc9a792b14643c28b43664d1cd",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0157/stdout.log": "ba7d69d8bbcd85d0f316a13fed634e6c8256d94d1486c0222c5957c95e881d9d",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0157/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0158/worker_report.json": "8dcca8e21bc2688d5e54918363f63830f4e792b7ce6fc8a4d4b88ad9c86ae1c6",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0158/stdout.log": "6a2d7b4f8ab8086619f02712c38a02f506dae3d95b8155acb19f634f89650da5",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_156_01/job_0158/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/supervisor_report.json": "1cba1a3881dce28341be3ab68a88ef0f9eed89a554c2f9ceae8a693f7e6c00f2",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0159/worker_report.json": "85b67dc680e17a6abb6a5a058ee770a8b4838ec031f5cdae67520ace6904a315",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0159/stdout.log": "14e9f1397d092c2f8751dd3837cedb6738f4018f0bfe0b935060c0a49f660288",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0159/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0160/worker_report.json": "302c774e4bb709e329ab69e5e68b2335a2976edcb6377c6d8b7f32af8043df7f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0160/stdout.log": "d7c899a4bf3414f40db71361fe806b1425f6d7d9210c09c385c480d62c2044d3",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0160/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0161/worker_report.json": "e59c770526e94440384d6b84f212cb82c91de8ad4e0031f93a0237a9080c21de",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0161/stdout.log": "a7c85b81025018a20c97adfd190d80ae597895d71cd40d2ddb1d3d8c096a667c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_159_01/job_0161/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/supervisor_report.json": "1fc78ee817aec91da2f6e8a021f2e18e7d50b95d888ba4fd74e04489af8ae414",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0162/worker_report.json": "b9e83276df8b50f4eb4f1ac2d68426b0f0afbf15c489581d7fe2abc143d3a10a",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0162/stdout.log": "b9a2f2b2adc82bc979c9a4887f2edd692e6549e2112841542138ca83d4a3d1b2",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0162/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0163/worker_report.json": "c698e4d0087e200addc23d0d2ac08d3bd855aa9a148faa6ff361455d2bf310e1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0163/stdout.log": "d7042001fb16ae6e83f8f113e567694e937f6ca6e1ef1ea3686be877ad687a60",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0163/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0164/worker_report.json": "ab139b55f25fdf9245662bfb588f86645e4b778d5440f352338829945f93ec7b",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0164/stdout.log": "b926ae9f7faee930a41f9e9e33644a90485abd0c84771904dc20585c05b70250",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_162_01/job_0164/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/supervisor_report.json": "8f7b382134e233973d93b4dd1d702e0bb1d1053c2d26301e856a380e2700afc5",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0165/worker_report.json": "4e04a1d3e57713409b13c5eb0eb44b374f39b351ed35e1ea0c488dc41c7337a5",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0165/stdout.log": "f1c916dccc648d434cb0c64c27ec4f13a401f3507e10d05bfd7af09c2b2d3485",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0165/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0166/worker_report.json": "3c75b665fc21b8ae035d28ab519ab11251f5c94f0bb42a246c22ff6020846524",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0166/stdout.log": "5b75e54236c2076111be170ce5c7570f281632e9c3a6cc0604d5d7bbf24c8ec7",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0166/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0167/worker_report.json": "e49fdbbef664a4a6f0ebf9e417d66d741de577dce640cdf7b303a9722b4bbf2b",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0167/stdout.log": "82a4fced74748a72f661d3cb3e6334e8fb54c1b3411453489a4e08422858bb56",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_165_01/job_0167/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "audit_script_sha256": "3bf33595afbf8d40f1bdaf89b00edf64a9e78db190a90bc6907cadfe568e2a93"
+}

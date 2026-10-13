@@ -1,0 +1,5 @@
+Observed command: uptime && sysctl -n hw.physicalcpu hw.memsize && vm_stat && ps ...
+Actual result: exit code 1. Shell chain stopped at sysctl; vm_stat and ps did not run in this first command.
+10:38  1 user, load averages: 2.57 2.68 3.01
+sysctl: sysctl fmt -1 1024 1: Operation not permitted
+

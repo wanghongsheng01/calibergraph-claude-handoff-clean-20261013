@@ -1,0 +1,4683 @@
+{
+  "status": "PASS",
+  "prior_replays_not_rerun": true,
+  "count_star": {
+    "status": "PASS",
+    "original_encoder_sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+    "patch_sha256": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+    "patched_text_sha256": "9e142a350da2489252d8532d37329aae7326ac521b70bdbc90a683ae61fa7b3f",
+    "patch_exactly_one_statement": true,
+    "upstream_unchanged": true,
+    "real_ExpressionEncoder_AST": true,
+    "author_count_record_sha256": "932d3ef5727f7c9d805c539247281df34141b6f159741e395c9e552a36284a72",
+    "defects_reproduced_in_original": {
+      "unfiltered_value_mismatch": 4,
+      "filtered_type_error": 12
+    },
+    "patched_cases_passed": 28,
+    "tests": [
+      {
+        "version": "original",
+        "bound": 0,
+        "deleted": [],
+        "filter": "absent",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 0,
+        "deleted": [],
+        "filter": "true",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 0,
+        "deleted": [],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 0,
+        "deleted": [],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "absent",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "true",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "absent",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "true",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "absent",
+        "expected_sql_count": 2,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "true",
+        "expected_sql_count": 2,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "absent",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "true",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "absent",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "true",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "absent",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "true",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "original",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "right": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 1
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "type_valid": false,
+        "type_error": "Plus requires Int operands; got Bool,Bool",
+        "matches_SQL_count": false
+      },
+      {
+        "version": "patched",
+        "bound": 0,
+        "deleted": [],
+        "filter": "absent",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 0,
+        "deleted": [],
+        "filter": "true",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 0,
+        "deleted": [],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 0,
+        "deleted": [],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Int",
+          "value": 0
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "absent",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Deleted",
+              "table_id": 901,
+              "tuple_id": 0
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "true",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          false
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "absent",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Deleted",
+              "table_id": 901,
+              "tuple_id": 0
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "true",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": true
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": false
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": false
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "If",
+                          "condition": {
+                            "node": "Bool",
+                            "value": false
+                          },
+                          "then": {
+                            "node": "Int",
+                            "value": 1
+                          },
+                          "else": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 1,
+        "deleted": [
+          true
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "If",
+          "condition": {
+            "node": "Not",
+            "child": {
+              "node": "Or",
+              "children": [
+                {
+                  "node": "Deleted",
+                  "table_id": 901,
+                  "tuple_id": 0
+                },
+                {
+                  "node": "Bool",
+                  "value": true
+                },
+                {
+                  "node": "And",
+                  "children": [
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Bool",
+                        "value": true
+                      }
+                    },
+                    {
+                      "node": "Not",
+                      "child": {
+                        "node": "Neq",
+                        "left": {
+                          "node": "Int",
+                          "value": 0
+                        },
+                        "right": {
+                          "node": "Int",
+                          "value": 0
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "then": {
+            "node": "Int",
+            "value": 1
+          },
+          "else": {
+            "node": "Int",
+            "value": 0
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "absent",
+        "expected_sql_count": 2,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 0
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 1
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 2,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "true",
+        "expected_sql_count": 2,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 2,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          false
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "absent",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 0
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 1
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "true",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          false,
+          true
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "absent",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 0
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 1
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "true",
+        "expected_sql_count": 1,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 1,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          false
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "absent",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 0
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Deleted",
+                "table_id": 901,
+                "tuple_id": 1
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "true",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": true
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "false",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": false
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": false
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "If",
+                            "condition": {
+                              "node": "Bool",
+                              "value": false
+                            },
+                            "then": {
+                              "node": "Int",
+                              "value": 1
+                            },
+                            "else": {
+                              "node": "Int",
+                              "value": 0
+                            }
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      },
+      {
+        "version": "patched",
+        "bound": 2,
+        "deleted": [
+          true,
+          true
+        ],
+        "filter": "null",
+        "expected_sql_count": 0,
+        "actual_AST": {
+          "node": "Plus",
+          "left": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 0
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          },
+          "right": {
+            "node": "If",
+            "condition": {
+              "node": "Not",
+              "child": {
+                "node": "Or",
+                "children": [
+                  {
+                    "node": "Deleted",
+                    "table_id": 901,
+                    "tuple_id": 1
+                  },
+                  {
+                    "node": "Bool",
+                    "value": true
+                  },
+                  {
+                    "node": "And",
+                    "children": [
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Bool",
+                          "value": true
+                        }
+                      },
+                      {
+                        "node": "Not",
+                        "child": {
+                          "node": "Neq",
+                          "left": {
+                            "node": "Int",
+                            "value": 0
+                          },
+                          "right": {
+                            "node": "Int",
+                            "value": 0
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            "then": {
+              "node": "Int",
+              "value": 1
+            },
+            "else": {
+              "node": "Int",
+              "value": 0
+            }
+          }
+        },
+        "null_AST": {
+          "node": "Bool",
+          "value": false
+        },
+        "actual_count": 0,
+        "type_valid": true,
+        "matches_SQL_count": true
+      }
+    ],
+    "solver_calls": 0,
+    "parser_runs": 0,
+    "scope": "Direct AST unit only, not an end-to-end proof of the original SQL parser path or full Polygon correctness"
+  },
+  "elapsed_s": 0.008874916937202215
+}

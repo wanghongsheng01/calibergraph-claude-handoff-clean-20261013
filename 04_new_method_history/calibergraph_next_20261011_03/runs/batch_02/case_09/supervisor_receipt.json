@@ -1,0 +1,463 @@
+{
+  "case_index": 9,
+  "case_id": "dev03_10",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:23.011851+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 107741184,
+  "sampled_peak_group_cpu_seconds": 0.84,
+  "sample_count": 16,
+  "stop_remainder": null,
+  "pid": 43619,
+  "owned_pgid": 43619,
+  "worker_wait4_usage": {
+    "pid": 43619,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.8100189999999999,
+    "system_cpu_seconds": 0.066912,
+    "cpu_seconds": 0.8769309999999999,
+    "maxrss_bytes_darwin": 108478464
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.89635687507689,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.030219125095754862,
+    "check_count": 2,
+    "case_index": 9,
+    "id": "dev03_10",
+    "updated_monotonic": 2259255.234858125,
+    "observed_monotonic": 2259255.251034041,
+    "solver_watchdog_estimated_seconds": 0.030219125095754862,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "951ed37fd72ddf7432bc4666e45966a2ffd4672f060283f107648369c38d7ab8",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_10",
+    "case_index": 9,
+    "status": "RETURNED",
+    "engineering_class": "SUPPORTED_FAST",
+    "strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_10",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.001409917138516903,
+            "cpu_seconds": 0.0014020000000000143
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 3,
+            "base_fact_count": 28,
+            "admitted_delta_facts": 3,
+            "full_fact_count": 31,
+            "wall_seconds": 0.00189662491902709,
+            "cpu_seconds": 0.0018960000000000088
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.003533374983817339,
+            "cpu_seconds": 0.003529999999999922
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004463084042072296,
+            "actual_check_cpu_seconds": 0.004497999999999891,
+            "answer": "sat",
+            "wall_seconds": 0.006530874874442816,
+            "cpu_seconds": 0.0065350000000000685
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.00035675009712576866,
+            "cpu_seconds": 0.00035599999999991194
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              20,
+              20
+            ],
+            "output_tuple_counts": [
+              4,
+              4
+            ],
+            "wall_seconds": 0.08003495912998915,
+            "cpu_seconds": 0.07982599999999995
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "4fbae452a8850fcbecb9b4227ce9096ae592440755f37b7f2f262476bdf85a8b",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.06284658284857869,
+            "cpu_seconds": 0.06278699999999993
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "8c83bd25470f38319de41ffc1f2b5f5107453ce5e454552f70966e30a71c6607",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.004255624953657389,
+            "cpu_seconds": 0.0042560000000000375
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 800,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.025756041053682566,
+            "actual_check_cpu_seconds": 0.025725999999999916,
+            "answer": "unsat",
+            "wall_seconds": 0.028284583240747452,
+            "cpu_seconds": 0.02822900000000006
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "FRIENDSHIP": 2,
+          "LIKES": 2
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "a242c79e701597f1bac38c29502d528b26e358583049f4870c3c1517a4b4538b",
+        "solver_cumulative_wall_seconds": 0.030219125095754862,
+        "solver_cumulative_cpu_seconds": 0.030223999999999807,
+        "parsed_asts": [
+          {
+            "select_distinct": {
+              "value": "PAGE_ID",
+              "name": "RECOMMENDED_PAGE"
+            },
+            "from": [
+              {
+                "value": {
+                  "select": {
+                    "value": {
+                      "case": [
+                        {
+                          "then": "USER2_ID",
+                          "when": {
+                            "eq": [
+                              "USER1_ID",
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "then": "USER1_ID",
+                          "when": {
+                            "eq": [
+                              "USER2_ID",
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "null": null
+                        }
+                      ]
+                    },
+                    "name": "USER_ID"
+                  },
+                  "from": "FRIENDSHIP"
+                },
+                "name": "TB1"
+              },
+              {
+                "join": {
+                  "value": "LIKES",
+                  "name": "TB2"
+                },
+                "on": {
+                  "eq": [
+                    "TB1__USER_ID",
+                    "TB2__USER_ID"
+                  ]
+                }
+              }
+            ],
+            "where": {
+              "nin": [
+                "PAGE_ID",
+                {
+                  "select": {
+                    "value": "PAGE_ID"
+                  },
+                  "from": "LIKES",
+                  "where": {
+                    "eq": [
+                      "USER_ID",
+                      1
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "select_distinct": {
+              "value": "PAGE_ID",
+              "name": "RECOMMENDED_PAGE"
+            },
+            "from": [
+              {
+                "value": "LIKES",
+                "name": "L"
+              },
+              {
+                "join": {
+                  "value": {
+                    "select": {
+                      "value": {
+                        "case": [
+                          {
+                            "then": "USER2_ID",
+                            "when": {
+                              "eq": [
+                                "USER1_ID",
+                                1
+                              ]
+                            }
+                          },
+                          {
+                            "then": "USER1_ID",
+                            "when": {
+                              "eq": [
+                                "USER2_ID",
+                                1
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "name": "USER_ID"
+                    },
+                    "from": "FRIENDSHIP"
+                  },
+                  "name": "A"
+                },
+                "on": {
+                  "eq": [
+                    "L__USER_ID",
+                    "A__USER_ID"
+                  ]
+                }
+              }
+            ],
+            "where": {
+              "nin": [
+                "PAGE_ID",
+                {
+                  "select": {
+                    "value": "PAGE_ID"
+                  },
+                  "from": "LIKES",
+                  "where": {
+                    "eq": [
+                      "USER_ID",
+                      1
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.005039541982114315,
+          "cpu_seconds": 0.005025000000000057
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.010517249815165997,
+          "cpu_seconds": 0.01051599999999997
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06704299999999996,
+          "scope_encode": 0.012782999999999989,
+          "compare_encode": 0.005025000000000057,
+          "query_check": 0.025725999999999916
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.14771600000000007,
+          "wall_seconds": 0.14825483271852136,
+          "worker_peak_rss_bytes_macos": 108429312
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 13041,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "FRIENDSHIP__USER1_ID"
+            },
+            {
+              "value": "FRIENDSHIP__USER2_ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "LIKES__USER_ID"
+            },
+            {
+              "value": "LIKES__PAGE_ID"
+            }
+          ]
+        },
+        {
+          "neq": [
+            {
+              "value": "FRIENDSHIP__USER1_ID"
+            },
+            {
+              "value": "FRIENDSHIP__USER2_ID"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1264.csv",
+      "index": 25,
+      "pair": [
+        "SELECT DISTINCT PAGE_ID AS RECOMMENDED_PAGE FROM (SELECT CASE WHEN USER1_ID=1 THEN USER2_ID WHEN USER2_ID=1 THEN USER1_ID ELSE NULL END AS USER_ID FROM FRIENDSHIP) AS TB1 JOIN LIKES AS TB2 ON TB1.USER_ID=TB2.USER_ID WHERE PAGE_ID NOT IN (SELECT PAGE_ID FROM LIKES WHERE USER_ID=1)",
+        "SELECT DISTINCT PAGE_ID AS RECOMMENDED_PAGE FROM LIKES L JOIN (SELECT CASE WHEN USER1_ID = 1 THEN USER2_ID WHEN USER2_ID = 1 THEN USER1_ID END AS USER_ID FROM FRIENDSHIP) AS A ON L.USER_ID = A.USER_ID WHERE PAGE_ID NOT IN(SELECT PAGE_ID FROM LIKES WHERE USER_ID=1)"
+      ],
+      "schema": {
+        "FRIENDSHIP": {
+          "USER1_ID": "INT",
+          "USER2_ID": "INT"
+        },
+        "LIKES": {
+          "PAGE_ID": "INT",
+          "USER_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+      "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+    ],
+    "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+    "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+      "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+      "table_count": 2,
+      "column_count": 4,
+      "schema_type_counts": {
+        "INT": 4
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 3,
+      "operator_counts": {
+        "neq": 1,
+        "primary": 2,
+        "value": 6
+      },
+      "reference_counts": {
+        "FRIENDSHIP__USER1_ID": 2,
+        "FRIENDSHIP__USER2_ID": 2,
+        "LIKES__PAGE_ID": 1,
+        "LIKES__USER_ID": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "fast_scope": "query check CPU below 250ms only; import/parse/encode/whole process costs remain separately reported",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004463084042072296,
+        "actual_check_cpu_seconds": 0.004497999999999891,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.025756041053682566,
+        "actual_check_cpu_seconds": 0.025725999999999916,
+        "timeout_ms": 800
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.030219125095754862,
+    "solver_cumulative_cpu_seconds": 0.030223999999999807,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.14226999999999998,
+    "parent_system_cpu_seconds": 0.153194,
+    "all_reaped_children_user_cpu_seconds": 5.923544,
+    "all_reaped_children_system_cpu_seconds": 2.846371,
+    "supervisor_plus_reaped_cpu_seconds": 9.065379,
+    "observed_total_cpu_seconds": 16.942101,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

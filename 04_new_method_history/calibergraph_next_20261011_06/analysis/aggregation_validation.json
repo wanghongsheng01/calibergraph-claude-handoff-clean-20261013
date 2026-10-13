@@ -1,0 +1,19 @@
+{
+  "utc": "2026-10-11T14:34:23.600443+00:00",
+  "scope": "Read-only independent consistency pass on existing result bags and postrun analyzer syntax; no SQL/SMT run",
+  "checks": {
+    "all12fullCsat": true,
+    "all12evidencehashesmatch": true,
+    "all6replayedbagsindependentlyequal": true,
+    "analyzerASTvalid": true
+  },
+  "replay_cases": [
+    "dev03_10_exact2",
+    "dev03_10_exact4",
+    "dev03_10_exact8",
+    "dev03_15_exact2",
+    "dev03_15_exact4",
+    "dev03_15_exact8"
+  ],
+  "analyzer_sha256": "f7c33a05f5a6499a641d9ac09f5062c3e11ff90c3c82cdd43c95a3e6fb2a1ff0"
+}

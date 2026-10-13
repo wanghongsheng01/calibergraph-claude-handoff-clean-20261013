@@ -1,0 +1,77 @@
+{
+  "status": "IMPLEMENTED_AST_CHECKED_NOT_EXECUTED",
+  "program_sha256": {
+    "worker.py": "5baf3d5719db583abfc58553392ab4e711ee1c37ca8e0bdc1217dabd8f52efc1",
+    "supervisor.py": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e",
+    "common.py": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8"
+  },
+  "kernel_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+  "kernel_sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+  "frozen_runtime_fair_unchanged_sha256": {
+    "common.py": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a",
+    "worker.py": "bf2c8ba1f674f7185a87238356afc27131dbe653d4f6649d06b37e848c486afa",
+    "supervisor.py": "49a8682b74728c61b2180de57cf65f5d2fe284b040e9e1688b40acd2a6588f42",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+  },
+  "arms": [
+    "official",
+    "official_generic_smt",
+    "flat",
+    "product",
+    "selector",
+    "official_canonical_sql"
+  ],
+  "suite_requirement": "schema_version 1; full physical schema INT only; positive exact_rows; every supplied arm_order must contain all SIX arms exactly once. Old five-arm order must be explicitly re-registered.",
+  "invocation": "PYTHON -B -I -S runtime_fair_v4/supervisor.py --runtime-lock ABS_READY_V4_LOCK --suite ABS_REGISTERED_SIX_ARM_SUITE --out-dir NEW_UNDER_TODAY --kind cost|differential --job-start 0 --job-limit 6",
+  "canonical_sql": {
+    "admission": "common raw frontend guard; actual original SQL parse; both queries recognized by v4 kernel",
+    "rewrite": "recursively sort only AND operand lists by stable JSON AST; no simplification, expression rewriting, IC inference, movement, commutative arithmetic rewrite or COUNT elimination",
+    "decision": "identical resulting full AST => unsat by pure SQL three-valued conjunction commutativity; otherwise complete official fallback",
+    "failure": "FrontendUnsupported never falls back; parse/recognize/normalization failure is retained and takes same-budget official fallback",
+    "cost": "fresh process + full Environment/schema/IC + common contract checks + parse/recognize/normalize timings + fallback + cleanup; no pair-equivalence oracle pre-run"
+  },
+  "sat_oracle": {
+    "routes": [
+      "official",
+      "official_generic_smt",
+      "official fallback",
+      "candidate flat/product/selector",
+      "per-query differential SAT"
+    ],
+    "common_gate": "kernel.sqlite_integer_domain_audit for every original query; all must be SAFE_FOR_SQLITE_INT64 before SQLite original SQL replay",
+    "post_replay_checks": "single scalar row; only exact Python int or None; compare independently executed SQL result with concrete mathematical diagnostic; then check q1/q2 inequality or query-differential output correspondence",
+    "out_of_domain": "UNKNOWN_ORACLE_DOMAIN remains a non-success outcome with complete witness and denominator; no replay success, speedup win or algorithm counterexample",
+    "error": "audit/input/replay/type/shape/value mismatch errors retained; no data clipping, float tolerance, schema/IC weakening or hard-example removal",
+    "fallback_outside_auditor": "official SAT for a query outside the reviewed expression auditor becomes UNKNOWN_ORACLE_DOMAIN rather than trusting an unproved integer replay domain",
+    "timing": "all domain/replay work included in shared process CPU/wall envelope and semantic E2E; candidate may reuse its existing plan, official/differential audit parses original SQL"
+  },
+  "semantics_reporting": {
+    "requested_environment_semantics": null,
+    "implementation_evidence": "runtime wrapper and actual run method identity plus locked-source AST constructor inventory (comments excluded)",
+    "verieql_v1_auto": "BagSemanticsVerifier for unordered queries, ListSemanticsVerifier when both ordered",
+    "spotit_auto": "SetSemanticsVerifier in both branches; never reported as bag",
+    "boundary": "local dispatched verifier instance is not instrumented; scalar one-live-row agreement between set and bag is a property of this fragment, not implementation evidence",
+    "sqlite": "Counter comparison of complete SQL output rows is independently labeled; does not change engine semantics"
+  },
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "worker_wall_seconds": 24,
+    "parent_child_wall_seconds": 25,
+    "total_supervisor_wall_seconds": 89,
+    "rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "denominator": "all registered jobs prewritten NOT_RUN; retain unknown, frontend unsupported, fallback, errors, budget stops and nonselected remainder",
+  "not_claimed": [
+    "SSB full-schema reproduction",
+    "whole-formula LIA",
+    "held-out validation",
+    "runtime test success",
+    "paper novelty or performance advantage"
+  ],
+  "execution": "None by this agent; parent registers source/suite lock and controls unique actual run"
+}

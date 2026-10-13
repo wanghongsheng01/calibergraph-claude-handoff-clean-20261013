@@ -1,0 +1,579 @@
+{
+  "status": "RUNNING",
+  "kind": "cost",
+  "data_role": "DEVELOPMENT_ROUTING_AND_ADVERSARIAL_FRONTEND_CHECKS_NOT_NATURAL_BUGS_OR_PERFORMANCE",
+  "source_provenance": {
+    "rejection_sql": "runtime/smoke_cases.json seven existing rejection cases",
+    "frontend_sql": "frontend_diagnostic/RESULT.json two independently proposed and parent-reproduced cases"
+  },
+  "suite_sha256": "c60c8cc55666c6eef7ea8f55e540618791ecb33fe4de1e0edfe6cde7f910dced",
+  "runtime_lock_sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+  "program_sha256": {
+    "common.py": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a",
+    "worker.py": "bf2c8ba1f674f7185a87238356afc27131dbe653d4f6649d06b37e848c486afa",
+    "supervisor.py": "49a8682b74728c61b2180de57cf65f5d2fe284b040e9e1688b40acd2a6588f42",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+  },
+  "full_case_denominator": 9,
+  "full_job_denominator": 45,
+  "selected_job_start": 35,
+  "selected_job_limit": 10,
+  "jobs": [
+    {
+      "case_index": 0,
+      "case_id": "R01_outer_join",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "R01_outer_join",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "R01_outer_join",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "R01_outer_join",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "R01_outer_join",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "R02_cross_leaf",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "R02_cross_leaf",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "R02_cross_leaf",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "R02_cross_leaf",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "R02_cross_leaf",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "R03_leaf_SUM",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "R03_leaf_SUM",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "R03_leaf_SUM",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "R03_leaf_SUM",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "R03_leaf_SUM",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "R04_DISTINCT",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "R04_DISTINCT",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "R04_DISTINCT",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "R04_DISTINCT",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "R04_DISTINCT",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "R05_nonlinear_root",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "R05_nonlinear_root",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "R05_nonlinear_root",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "R05_nonlinear_root",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "R05_nonlinear_root",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "R06_GROUP_BY",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "R06_GROUP_BY",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "R06_GROUP_BY",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "R06_GROUP_BY",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "R06_GROUP_BY",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "R07_non_equi_join",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "R07_non_equi_join",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "R07_non_equi_join",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "R07_non_equi_join",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "R07_non_equi_join",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "F_V$X",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "F_V$X",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "F_V$X",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "F_V$X",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "F_V$X",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "F_A.B",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "F_A.B",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "F_A.B",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "F_A.B",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "F_A.B",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    }
+  ],
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_supervisor_seconds": 25,
+    "per_child_wall_alarm_seconds": 24,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Fresh process/Environment per admitted arm. Full schema, exact rows and IC unchanged. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+  "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate Ineligible -> raw official; candidate unknown -> raw official only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+  "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+  "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+  "clock_boundary": "89s guard starts after initial stdlib time import; per-child supervisor wall includes spawn/startup through reap. Worker final checkpoint excludes final write, full process wall/CPU measured here."
+}

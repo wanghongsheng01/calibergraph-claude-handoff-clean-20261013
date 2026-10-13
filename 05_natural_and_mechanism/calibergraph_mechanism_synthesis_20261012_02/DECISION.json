@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "scope": "TARGETED_MECHANISM_AND_PRIMARY_EVIDENCE_RESEARCH",
+  "decision": "REJECT_THIS_PROPOSAL_NO_IMPLEMENTATION_HANDOFF",
+  "candidate": "Joint aggregate-output difference objective after per-query coverage",
+  "candidate_implemented": false,
+  "novel_mechanism_qualified": false,
+  "reason": "Output difference and directed mutation goals have direct prior art; neither a residual algorithmic failure nor a distinct search modification is established.",
+  "new_experiments": 0,
+  "new_independent_tests": 0,
+  "experiment_recommendation_count": 0,
+  "scientific_processes_started": 0,
+  "old_denominator": {
+    "source": 50,
+    "eligible_executed": 1,
+    "baseline_solved": 1,
+    "not_run": 49
+  },
+  "new_failure_leads_are_not_confirmed_method_failures": [
+    "ParSEval fixed README: DISTINCT aggregates",
+    "XData fixed author log Q14: NULL-sensitive aggregate mutation NotKilled",
+    "XData fixed author log Q17: grouping mutation NotKilled"
+  ],
+  "missing_admission_package": [
+    "One public source/version-exact query pair and complete schema/C",
+    "Bindings, dialect, complete output observation contract",
+    "A legal known witness, or other verified non-equivalence evidence",
+    "Version-matched stage trace establishing a search failure or substantive cost after ordinary semantics/admission fixes",
+    "A precise modification with predictions beyond prior pair-target/UA/mutation mechanisms"
+  ],
+  "simple_fixes_do_not_count_as_novelty": [
+    "Parser/type adapter",
+    "NULL/FK support",
+    "Nonempty generation",
+    "More branch combinations",
+    "Known output-difference objective",
+    "Additional solver budget",
+    "Combining existing baseline stages"
+  ],
+  "source_locks": {
+    "parseval": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+    "polygon": "5e18237394d025dbb805cf833b4f54c321470774",
+    "xdata": "a86031197fd1b572bd7782431331e8cb15554f88",
+    "evosql": "5a90e4d4a360642c160013a049d8532c43962c3c"
+  },
+  "paper_vs_code_mapping": "Current code mechanisms and historical paper ablations are not interchangeable causal evidence",
+  "query_pair_XData_2024_v1_evaluation": "Explicitly deferred; 378/407 is not native pair-mode validation",
+  "parseval_hybrid_49_to_98_metric": "Support ratio table heading, not NEQ accuracy",
+  "polygon_local_ablation_boundary": "Most second-set variants near full method on ER/D50, worse on D100; not universal large pairwise effect",
+  "authoring_and_review_separate": true,
+  "independent_review": "PASS; zero required revisions; three optional precision edits accepted",
+  "datahub_registration": "BLOCKED_INHERITED: no general public SQL research module; canonical external checkout unchanged under task scope",
+  "backup_gate": "Seal authored manifest, commit, push, verify private visibility and remote main equals local HEAD; receipt is final delivery commit",
+  "performance_of_candidate_empirically_refuted": false,
+  "all_possible_residual_gaps_excluded": false
+}

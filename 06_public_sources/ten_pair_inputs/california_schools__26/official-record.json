@@ -1,0 +1,11 @@
+{
+  "dbid": "california_schools",
+  "index": "26",
+  "difficulty": "moderate",
+  "verdict": "SYNTAX_ERROR",
+  "reason": "no such column: T1.Street",
+  "results": null,
+  "end_to_end_s": 0.103,
+  "gold": "SELECT T1.`School Name`, T2.Zip, T2.Street, T2.City, T2.State FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T2.County = 'Monterey' AND T1.`Free Meal Count (Ages 5-17)` > 800 AND T1.`School Type` = 'High Schools (Public)'",
+  "predicted": "SELECT T1.`School Name`, T1.Street, T1.City, T1.Zip, T1.State FROM frpm AS T1 INNER JOIN schools AS T2 ON T1.CDSCode = T2.CDSCode WHERE T1.`FRPM Count (Ages 5-17)` > 800 AND T1.`County Name` = 'Monterey' AND T1.`School Type` = 'High School'"
+}

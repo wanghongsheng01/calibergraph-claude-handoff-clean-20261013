@@ -1,0 +1,20 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py
+@@ -60,7 +60,7 @@
+         raise ValueError("use a new result directory under today_20261011")
+     args.out_dir.mkdir(parents=True)
+     EMERGENCY_FD = os.open(args.out_dir / "emergency.jsonl", os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_APPEND, 0o600)
+-    program_hashes = {name: sha(HERE / name) for name in ("common.py", "worker.py", "supervisor.py", "query_differential.py", "contract_reference.py")}
++    program_hashes = {name: sha(HERE / name) for name in ("common.py", "worker.py", "supervisor.py", "query_differential.py", "contract_reference.py", "pair_status.py")}
+     for job in jobs:
+         job.update(status="NOT_RUN", final_decision="NOT_RUN", attempts=[], fallback={"status": "NOT_RUN"})
+     report = {"status": "RUNNING", "kind": args.kind, "data_role": suite["data_role"],
+@@ -145,7 +145,7 @@
+             job["final_decision"] = worker.get("final_decision", "NOT_RUN")
+             job["attempts"] = worker.get("attempts", [])
+             job["fallback"] = worker.get("fallback", {"status": "NOT_RUN"})
+-            for field in ("semantic_e2e_wall_seconds", "semantic_e2e_cpu_seconds", "analytical_expectation_match", "differential", "raw_frontend_guard", "actual_verifier_semantics", "contract_bridge", "contract_guard", "contract_adapter_label", "environment_cleanup"):
++            for field in ("semantic_e2e_wall_seconds", "semantic_e2e_cpu_seconds", "analytical_expectation_match", "differential", "raw_frontend_guard", "actual_verifier_semantics", "contract_bridge", "contract_guard", "contract_adapter_label", "environment_cleanup", "pair_work_started", "pair_work_status", "pair_work_receipt"):
+                 if field in worker:
+                     job[field] = worker[field]
+             job["valid_completed_result"] = ("stop_reason" not in job and job["exit_code"] == 0 and worker["status"] == "COMPLETE"

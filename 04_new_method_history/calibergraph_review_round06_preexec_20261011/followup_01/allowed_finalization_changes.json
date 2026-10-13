@@ -1,0 +1,17 @@
+{
+  "common_reviewed_sha256": "ebb0351ed9529c68daa02c9783f571e7f8ef67abb9395e482defd07c78477a6a",
+  "common_enabled_expected_sha256": "74df9d61a87be8fabe311e96d8418e9704baa8e1292ff97a1a5ccf9334265863",
+  "protocol_reviewed_status": "DRAFT_NOT_REGISTERED",
+  "protocol_reviewed_registered_utc": null,
+  "protocol_required_final_status": "REGISTERED",
+  "protocol_required_registered_utc": "nonempty truthful final registration time",
+  "protocol_sha256_excluding_status_and_registered_utc": "d9eb6458f5c527a406df138103c91d2d7c1294a095d598592f46246e31556ddf",
+  "allowed_postreview_content_changes": [
+    "generation_common.py single EXECUTION_ENABLED = False to EXECUTION_ENABLED = True replacement only",
+    "protocol status DRAFT_NOT_REGISTERED to REGISTERED and registered_utc null to truthful registration timestamp only"
+  ],
+  "freeze_required": true,
+  "freeze_must_reference_actual_final_hashes": true,
+  "all_other_code_content_changes_require_new_review": true,
+  "analytic_control_document": "protocols/ANALYTIC_CONTROLS.zh.md must be frozen as scope evidence; no timed baseline claim"
+}

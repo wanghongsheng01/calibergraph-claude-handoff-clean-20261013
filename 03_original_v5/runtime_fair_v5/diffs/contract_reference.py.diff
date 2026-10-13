@@ -1,0 +1,50 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py
+@@ -55,7 +55,7 @@
+ 
+ 
+ def prepare(original_ast, schema):
+-    """Accept explicit None, root conjunction list, not_null, comparisons, AND.
++    """Accept explicit None, root conjunction list, not_null, comparisons, AND and column BETWEEN integer bounds.
+ 
+     An unsupported node anywhere rejects the entire contract. The source AST is
+     copied and retained. Only the normalized copy swaps literal-left comparisons.
+@@ -93,6 +93,17 @@
+             column = col(operands, path + "/not_null")
+             node = Node(op, (column,), path)
+             normal = {op: ref_ast(column)}
++        elif op == "between":
++            if not isinstance(operands, list) or len(operands) != 3:
++                raise UnverifiedContract(path + ": BETWEEN requires column, integer lower, integer upper")
++            column = col(operands[0], path + "/between/0")
++            low, high = operands[1:]
++            if type(low) is not int or type(high) is not int:
++                raise UnverifiedContract(path + ": BETWEEN bounds must both be Python integers")
++            # Preserve original inclusive order in the independent reference.
++            # An inverted interval is contradictory, never silently discarded.
++            node = Node(op, (column, low, high), path)
++            normal = {"and": [{"gte": [ref_ast(column), low]}, {"lte": [ref_ast(column), high]}]}
+         elif op in COMPARISONS:
+             if not isinstance(operands, list) or len(operands) != 2:
+                 raise UnverifiedContract(path + ": comparison requires two ordered operands")
+@@ -164,6 +175,10 @@
+             nonnull = constants.Not(attr.NULL(row.SORT))
+             if node.kind == "not_null":
+                 terms.append(nonnull)
++            elif node.kind == "between":
++                _, low, high = node.args
++                terms.append(constants.And(nonnull, constants.IntVal(str(low)) <= attr.VALUE(row.SORT),
++                                           attr.VALUE(row.SORT) <= constants.IntVal(str(high))))
+             else:
+                 operands = [attr.VALUE(row.SORT) if isinstance(arg, Column) else constants.IntVal(str(arg))
+                             for arg in node.args]
+@@ -200,6 +215,9 @@
+                 rows.append(False)
+             elif node.kind == "not_null":
+                 rows.append(True)
++            elif node.kind == "between":
++                _, low, high = node.args
++                rows.append(low <= value <= high)
+             else:
+                 left, right = [value if isinstance(arg, Column) else arg for arg in node.args]
+                 rows.append(bool(_ordered_compare(node.kind, left, right)))

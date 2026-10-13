@@ -1,0 +1,14 @@
+{
+  "dbid": "superhero",
+  "index": "750",
+  "difficulty": "simple",
+  "verdict": "NEQ",
+  "reason": "q1's database tells them apart",
+  "results": [
+    "[(10.0,)]",
+    "[(None,)]"
+  ],
+  "end_to_end_s": 0.33,
+  "gold": "SELECT AVG(T1.weight_kg) FROM superhero AS T1 INNER JOIN gender AS T2 ON T1.gender_id = T2.id WHERE T2.gender = 'Female'",
+  "predicted": "SELECT AVG(weight_kg) FROM superhero WHERE gender_id = 2"
+}

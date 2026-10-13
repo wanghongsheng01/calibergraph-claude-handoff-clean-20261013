@@ -1,0 +1,22 @@
+{
+  "pid": 46405,
+  "scope": "self process only, stdlib, zero target import",
+  "getpriority": {
+    "ok": true,
+    "value": 0
+  },
+  "setpriority": {
+    "ok": false,
+    "error_type": "PermissionError",
+    "error": "[Errno 1] Operation not permitted"
+  },
+  "RLIMIT_CPU": {
+    "ok": true,
+    "value": null
+  },
+  "RLIMIT_CORE": {
+    "ok": true,
+    "value": null
+  },
+  "cpu_seconds_snapshot": 0.052682999999999994
+}

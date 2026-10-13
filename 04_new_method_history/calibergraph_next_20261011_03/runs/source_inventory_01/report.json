@@ -1,0 +1,124 @@
+{
+  "status": "COMPLETE_STATIC_SELECTION_NOT_EXECUTED",
+  "protocol_sha256": "7ec169d8764209be57a533cde6fd0a2dd425814b5772678d692820361534e121",
+  "source_denominators": {
+    "calcite_pairs": 397,
+    "literature_pairs": 64,
+    "leetcode_pairs": 23994,
+    "all_pairs": 24455,
+    "all_query_slots": 48910,
+    "expected_previously_reported_LeetCode_null_contract_rows": 957
+  },
+  "sources": [
+    {
+      "dataset": "calcite",
+      "sha256": "5fc6e0740134220856e93743147038cacaf22cb9d9823e7d6b8da2b461939ac4",
+      "bytes": 1060379,
+      "pairs": 397,
+      "matches_frozen": true
+    },
+    {
+      "dataset": "literature",
+      "sha256": "4c5e2661797177fd865a3f57c887376cb01bcbeec57ec77a032124e04c77f42f",
+      "bytes": 42046,
+      "pairs": 64,
+      "matches_frozen": true
+    },
+    {
+      "dataset": "leetcode",
+      "sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "bytes": 22995478,
+      "pairs": 23994,
+      "matches_frozen": true
+    }
+  ],
+  "input_rows_seen": 24455,
+  "failed_inventory_rows": 16,
+  "selection_performed": true,
+  "inventory_status_counts": {
+    "SOURCE_GROUP_NOT_ESTABLISHED": 397,
+    "UPSTREAM_REWRITTEN_NONNATURAL_CONTROL_NOT_PRIMARY": 64,
+    "STRATUM_CANDIDATE_BEFORE_GROUP_MEDIAN_AND_DEDUP": 16095,
+    "PREVIOUS_DEVELOPMENT_GROUP_EXCLUDED": 3256,
+    "NO_REGISTERED_LEXICAL_STRATUM": 2495,
+    "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT": 16,
+    "KNOWN_RESERVE_GROUP_EXCLUDED_BEFORE_SQL_DECODE": 2132
+  },
+  "contract_source_counts": {
+    "calcite": {
+      "PRESENT_JSON": 397
+    },
+    "literature": {
+      "PRESENT_JSON": 6,
+      "NULL_UNSPECIFIED": 58
+    },
+    "leetcode": {
+      "PRESENT_JSON": 23037,
+      "NULL_UNSPECIFIED": 957
+    }
+  },
+  "strata": [
+    {
+      "stratum": "S1_SET_OPERATION",
+      "candidate_source_labels": 29,
+      "selected_groups": 4,
+      "shortfall_from_four": 0
+    },
+    {
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "candidate_source_labels": 30,
+      "selected_groups": 4,
+      "shortfall_from_four": 0
+    },
+    {
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "candidate_source_labels": 30,
+      "selected_groups": 4,
+      "shortfall_from_four": 0
+    },
+    {
+      "stratum": "S4_OUTER_JOIN",
+      "candidate_source_labels": 18,
+      "selected_groups": 4,
+      "shortfall_from_four": 0
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "candidate_source_labels": 13,
+      "selected_groups": 4,
+      "shortfall_from_four": 0
+    },
+    {
+      "stratum": "S6_MULTI_JOIN_3_TABLES",
+      "candidate_source_labels": 1,
+      "selected_groups": 1,
+      "shortfall_from_four": 3
+    },
+    {
+      "stratum": "S7_JOIN_AGGREGATE",
+      "candidate_source_labels": 1,
+      "selected_groups": 0,
+      "shortfall_from_four": 4
+    },
+    {
+      "stratum": "S8_PURE_JOIN_NONAGGREGATE",
+      "candidate_source_labels": 0,
+      "selected_groups": 0,
+      "shortfall_from_four": 4
+    }
+  ],
+  "selected_pairs": 21,
+  "selected_query_slots": 42,
+  "source_groups_selected": 21,
+  "selected_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+  "selected_run_copy_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/selected.jsonl",
+  "selected_sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb",
+  "source_group_cross_split_rule": "previous six development and four known reserve groups excluded before selection; no reserve SQL decoded",
+  "cross_selected_group_SQL_overlap": 0,
+  "SQL_or_parser_or_solver_executed": false,
+  "usage": {
+    "wall_seconds": 6.3302232078276575,
+    "peak_rss_bytes_macos": 34799616
+  },
+  "science_status": "HOLD"
+}

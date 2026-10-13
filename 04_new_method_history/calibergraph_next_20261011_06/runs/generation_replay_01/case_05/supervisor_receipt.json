@@ -1,0 +1,2128 @@
+{
+  "case_index": 5,
+  "case_id": "dev03_10_exact8",
+  "registered_slot": {
+    "id": "dev03_10_exact8",
+    "kind": "official",
+    "source_case_index": 9,
+    "source_case_id": "dev03_10",
+    "exact_rows": 8
+  },
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T14:29:04.684783+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 256753664,
+  "sampled_peak_group_cpu_seconds": 1.83,
+  "sample_count": 18,
+  "stop_remainder": null,
+  "worker_wait4_usage": {
+    "pid": 50343,
+    "exit_code": 0,
+    "user_cpu_seconds": 1.787834,
+    "system_cpu_seconds": 0.092349,
+    "cpu_seconds": 1.880183,
+    "maxrss_bytes_darwin": 258162688
+  },
+  "observed_stage_sequence": [
+    "NATIVE_AND_OFFICIAL_IMPORT",
+    "OFFICIAL_PARSE_QUERY_0",
+    "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+    "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+    "OFFICIAL_QUERY_SOLVER_CHECK"
+  ],
+  "cpu_accounting_before_launch": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.14901799999999998,
+    "parent_system_cpu_seconds": 0.13791599999999998,
+    "all_reaped_children_user_cpu_seconds": 5.040678,
+    "all_reaped_children_system_cpu_seconds": 1.344996,
+    "supervisor_plus_reaped_cpu_seconds": 6.672607999999999,
+    "observed_total_cpu_seconds": 16.672608,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 16.872608,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "command": [
+    "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_worker.py",
+    "--protocol",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/protocols/generation_replay.registered.json",
+    "--case-index",
+    "5",
+    "--out",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_05"
+  ],
+  "pid": 50343,
+  "owned_pgid": 50343,
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 1.9447557497769594,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.47549904184415936,
+    "check_count": 2,
+    "case_index": 5,
+    "id": "dev03_10_exact8",
+    "updated_monotonic": 2265717.9012445,
+    "observed_monotonic": 2265717.96261175,
+    "solver_watchdog_estimated_seconds": 0.47549904184415936,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "907a82c8e860ee56200727f6f1e448f1ee93cd44c0dbb866cef60aea9f4d5b5b",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_10_exact8",
+    "source_case_id": "dev03_10",
+    "case_index": 5,
+    "status": "RETURNED",
+    "engineering_class": "QUERY_RETURNED",
+    "strict_class": "INCONCLUSIVE",
+    "attempts": [
+      {
+        "id": "dev03_10",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0035635000094771385,
+            "cpu_seconds": 0.003563000000000094
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 3,
+            "base_fact_count": 112,
+            "admitted_delta_facts": 3,
+            "full_fact_count": 115,
+            "wall_seconds": 0.010287666227668524,
+            "cpu_seconds": 0.0102850000000001
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.0038400841876864433,
+            "cpu_seconds": 0.0038399999999999546
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.00707087479531765,
+            "actual_check_cpu_seconds": 0.007078000000000029,
+            "answer": "sat",
+            "wall_seconds": 0.009219583123922348,
+            "cpu_seconds": 0.009200999999999904
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0010725408792495728,
+            "cpu_seconds": 0.0010710000000000441
+          },
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.0006355410441756248,
+            "cpu_seconds": 0.0006360000000000809
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.0034742075949907303,
+            "cpu_seconds": 0.003473999999999977
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              272,
+              272
+            ],
+            "output_tuple_counts": [
+              64,
+              64
+            ],
+            "wall_seconds": 0.3540016249753535,
+            "cpu_seconds": 0.35370599999999996
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "4fbae452a8850fcbecb9b4227ce9096ae592440755f37b7f2f262476bdf85a8b",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.06169208325445652,
+            "cpu_seconds": 0.06164499999999995
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "8c83bd25470f38319de41ffc1f2b5f5107453ce5e454552f70966e30a71c6607",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.004219834227114916,
+            "cpu_seconds": 0.0042200000000000015
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 700,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.4684281670488417,
+            "actual_check_cpu_seconds": 0.46805399999999975,
+            "answer": "unknown",
+            "reason_unknown": "out of memory",
+            "wall_seconds": 0.4718127497471869,
+            "cpu_seconds": 0.4713749999999999
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "FRIENDSHIP": 8,
+          "LIKES": 8
+        },
+        "raw_query_verdict": "unknown",
+        "full_C_nonempty": "sat",
+        "contract_model_sanity": {
+          "status": "RETURNED",
+          "model_origin": "FULL_C_NONEMPTY_CHECK",
+          "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+          "query_sat_witness": false,
+          "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY",
+          "witness": {
+            "all_physical_raw_values": {
+              "FRIENDSHIP": [
+                {
+                  "USER1_ID": -14,
+                  "USER2_ID": -13
+                },
+                {
+                  "USER1_ID": -12,
+                  "USER2_ID": -11
+                },
+                {
+                  "USER1_ID": -10,
+                  "USER2_ID": -9
+                },
+                {
+                  "USER1_ID": -8,
+                  "USER2_ID": -7
+                },
+                {
+                  "USER1_ID": -6,
+                  "USER2_ID": -5
+                },
+                {
+                  "USER1_ID": -4,
+                  "USER2_ID": -3
+                },
+                {
+                  "USER1_ID": -2,
+                  "USER2_ID": -1
+                },
+                {
+                  "USER1_ID": 0,
+                  "USER2_ID": 1
+                }
+              ],
+              "LIKES": [
+                {
+                  "PAGE_ID": -7,
+                  "USER_ID": -6
+                },
+                {
+                  "PAGE_ID": -6,
+                  "USER_ID": -5
+                },
+                {
+                  "PAGE_ID": -5,
+                  "USER_ID": -3
+                },
+                {
+                  "PAGE_ID": -4,
+                  "USER_ID": -4
+                },
+                {
+                  "PAGE_ID": -3,
+                  "USER_ID": -2
+                },
+                {
+                  "PAGE_ID": -2,
+                  "USER_ID": -1
+                },
+                {
+                  "PAGE_ID": -1,
+                  "USER_ID": 0
+                },
+                {
+                  "PAGE_ID": 0,
+                  "USER_ID": 1
+                }
+              ]
+            },
+            "decoded_values": {
+              "FRIENDSHIP": [
+                {
+                  "USER1_ID": -14,
+                  "USER2_ID": -13
+                },
+                {
+                  "USER1_ID": -12,
+                  "USER2_ID": -11
+                },
+                {
+                  "USER1_ID": -10,
+                  "USER2_ID": -9
+                },
+                {
+                  "USER1_ID": -8,
+                  "USER2_ID": -7
+                },
+                {
+                  "USER1_ID": -6,
+                  "USER2_ID": -5
+                },
+                {
+                  "USER1_ID": -4,
+                  "USER2_ID": -3
+                },
+                {
+                  "USER1_ID": -2,
+                  "USER2_ID": -1
+                },
+                {
+                  "USER1_ID": 0,
+                  "USER2_ID": 1
+                }
+              ],
+              "LIKES": [
+                {
+                  "PAGE_ID": -7,
+                  "USER_ID": -6
+                },
+                {
+                  "PAGE_ID": -6,
+                  "USER_ID": -5
+                },
+                {
+                  "PAGE_ID": -5,
+                  "USER_ID": -3
+                },
+                {
+                  "PAGE_ID": -4,
+                  "USER_ID": -4
+                },
+                {
+                  "PAGE_ID": -3,
+                  "USER_ID": -2
+                },
+                {
+                  "PAGE_ID": -2,
+                  "USER_ID": -1
+                },
+                {
+                  "PAGE_ID": -1,
+                  "USER_ID": 0
+                },
+                {
+                  "PAGE_ID": 0,
+                  "USER_ID": 1
+                }
+              ]
+            },
+            "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+          },
+          "replay": {
+            "status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+            "full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+            "original_sql_unchanged": true,
+            "query_rewrites": 0,
+            "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+            "independent_full_C": {
+              "status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+              "original_clause_count": 3,
+              "checked_clause_count": 3,
+              "semantics": "Pinned official operational C, including Cartesian column comparisons; not business-completeness proof."
+            },
+            "concrete_database": {
+              "FRIENDSHIP": [
+                {
+                  "USER1_ID": -14,
+                  "USER2_ID": -13
+                },
+                {
+                  "USER1_ID": -12,
+                  "USER2_ID": -11
+                },
+                {
+                  "USER1_ID": -10,
+                  "USER2_ID": -9
+                },
+                {
+                  "USER1_ID": -8,
+                  "USER2_ID": -7
+                },
+                {
+                  "USER1_ID": -6,
+                  "USER2_ID": -5
+                },
+                {
+                  "USER1_ID": -4,
+                  "USER2_ID": -3
+                },
+                {
+                  "USER1_ID": -2,
+                  "USER2_ID": -1
+                },
+                {
+                  "USER1_ID": 0,
+                  "USER2_ID": 1
+                }
+              ],
+              "LIKES": [
+                {
+                  "PAGE_ID": -7,
+                  "USER_ID": -6
+                },
+                {
+                  "PAGE_ID": -6,
+                  "USER_ID": -5
+                },
+                {
+                  "PAGE_ID": -5,
+                  "USER_ID": -3
+                },
+                {
+                  "PAGE_ID": -4,
+                  "USER_ID": -4
+                },
+                {
+                  "PAGE_ID": -3,
+                  "USER_ID": -2
+                },
+                {
+                  "PAGE_ID": -2,
+                  "USER_ID": -1
+                },
+                {
+                  "PAGE_ID": -1,
+                  "USER_ID": 0
+                },
+                {
+                  "PAGE_ID": 0,
+                  "USER_ID": 1
+                }
+              ]
+            },
+            "original_sql_sha256": [
+              "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+              "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+            ],
+            "admission": "INT-only CASE, equality join, DISTINCT and NOT IN; no arithmetic/string/date/order/collation.",
+            "sqlite_version": "3.53.3",
+            "original_sql_results": [
+              [
+                [
+                  -1
+                ]
+              ],
+              [
+                [
+                  -1
+                ]
+              ]
+            ],
+            "comparison": "bag multiplicities, exact INT/NULL equality",
+            "generated_official_model": true,
+            "phase_costs": [
+              {
+                "name": "INDEPENDENT_FULL_C_CHECK",
+                "status": "RETURNED",
+                "wall_seconds": 4.333304241299629e-05,
+                "cpu_seconds": 4.19999999999518e-05
+              },
+              {
+                "name": "SQLITE_LOAD_GENERATED_DATABASE",
+                "status": "RETURNED",
+                "wall_seconds": 0.00021562492474913597,
+                "cpu_seconds": 0.00021400000000002667
+              },
+              {
+                "name": "SQLITE_ORIGINAL_QUERY_0",
+                "status": "RETURNED",
+                "wall_seconds": 4.3584033846855164e-05,
+                "cpu_seconds": 4.29999999999528e-05
+              },
+              {
+                "name": "SQLITE_ORIGINAL_QUERY_1",
+                "status": "RETURNED",
+                "wall_seconds": 2.729194238781929e-05,
+                "cpu_seconds": 2.599999999997049e-05
+              }
+            ],
+            "model_origin": "FULL_C_NONEMPTY_CHECK",
+            "query_sat_witness": false
+          }
+        },
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "870045c29fb49f5eac60fc8ca5c4567118d0cfdfe78c11166b13508b9f313ccc",
+        "solver_cumulative_wall_seconds": 0.47549904184415936,
+        "solver_cumulative_cpu_seconds": 0.4751319999999998,
+        "parsed_asts": [
+          {
+            "select_distinct": {
+              "value": "PAGE_ID",
+              "name": "RECOMMENDED_PAGE"
+            },
+            "from": [
+              {
+                "value": {
+                  "select": {
+                    "value": {
+                      "case": [
+                        {
+                          "then": "USER2_ID",
+                          "when": {
+                            "eq": [
+                              "USER1_ID",
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "then": "USER1_ID",
+                          "when": {
+                            "eq": [
+                              "USER2_ID",
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "null": null
+                        }
+                      ]
+                    },
+                    "name": "USER_ID"
+                  },
+                  "from": "FRIENDSHIP"
+                },
+                "name": "TB1"
+              },
+              {
+                "join": {
+                  "value": "LIKES",
+                  "name": "TB2"
+                },
+                "on": {
+                  "eq": [
+                    "TB1__USER_ID",
+                    "TB2__USER_ID"
+                  ]
+                }
+              }
+            ],
+            "where": {
+              "nin": [
+                "PAGE_ID",
+                {
+                  "select": {
+                    "value": "PAGE_ID"
+                  },
+                  "from": "LIKES",
+                  "where": {
+                    "eq": [
+                      "USER_ID",
+                      1
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "select_distinct": {
+              "value": "PAGE_ID",
+              "name": "RECOMMENDED_PAGE"
+            },
+            "from": [
+              {
+                "value": "LIKES",
+                "name": "L"
+              },
+              {
+                "join": {
+                  "value": {
+                    "select": {
+                      "value": {
+                        "case": [
+                          {
+                            "then": "USER2_ID",
+                            "when": {
+                              "eq": [
+                                "USER1_ID",
+                                1
+                              ]
+                            }
+                          },
+                          {
+                            "then": "USER1_ID",
+                            "when": {
+                              "eq": [
+                                "USER2_ID",
+                                1
+                              ]
+                            }
+                          }
+                        ]
+                      },
+                      "name": "USER_ID"
+                    },
+                    "from": "FRIENDSHIP"
+                  },
+                  "name": "A"
+                },
+                "on": {
+                  "eq": [
+                    "L__USER_ID",
+                    "A__USER_ID"
+                  ]
+                }
+              }
+            ],
+            "where": {
+              "nin": [
+                "PAGE_ID",
+                {
+                  "select": {
+                    "value": "PAGE_ID"
+                  },
+                  "from": "LIKES",
+                  "where": {
+                    "eq": [
+                      "USER_ID",
+                      1
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.29014295898377895,
+          "cpu_seconds": 0.2900529999999999
+        },
+        "submitted_query_assertion_count": 1,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.006433000322431326,
+          "cpu_seconds": 0.006433000000000133
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06586499999999995,
+          "scope_encode": 0.287841,
+          "compare_encode": 0.2900529999999999,
+          "query_check": 0.46805399999999975
+        },
+        "attempt_cost": {
+          "cpu_seconds": 1.170127,
+          "wall_seconds": 1.1713849999941885,
+          "worker_peak_rss_bytes_macos": 258162688
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 13041,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "FRIENDSHIP__USER1_ID"
+            },
+            {
+              "value": "FRIENDSHIP__USER2_ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "LIKES__USER_ID"
+            },
+            {
+              "value": "LIKES__PAGE_ID"
+            }
+          ]
+        },
+        {
+          "neq": [
+            {
+              "value": "FRIENDSHIP__USER1_ID"
+            },
+            {
+              "value": "FRIENDSHIP__USER2_ID"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1264.csv",
+      "index": 25,
+      "pair": [
+        "SELECT DISTINCT PAGE_ID AS RECOMMENDED_PAGE FROM (SELECT CASE WHEN USER1_ID=1 THEN USER2_ID WHEN USER2_ID=1 THEN USER1_ID ELSE NULL END AS USER_ID FROM FRIENDSHIP) AS TB1 JOIN LIKES AS TB2 ON TB1.USER_ID=TB2.USER_ID WHERE PAGE_ID NOT IN (SELECT PAGE_ID FROM LIKES WHERE USER_ID=1)",
+        "SELECT DISTINCT PAGE_ID AS RECOMMENDED_PAGE FROM LIKES L JOIN (SELECT CASE WHEN USER1_ID = 1 THEN USER2_ID WHEN USER2_ID = 1 THEN USER1_ID END AS USER_ID FROM FRIENDSHIP) AS A ON L.USER_ID = A.USER_ID WHERE PAGE_ID NOT IN(SELECT PAGE_ID FROM LIKES WHERE USER_ID=1)"
+      ],
+      "schema": {
+        "FRIENDSHIP": {
+          "USER1_ID": "INT",
+          "USER2_ID": "INT"
+        },
+        "LIKES": {
+          "PAGE_ID": "INT",
+          "USER_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+      "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+    ],
+    "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+    "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+      "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+      "table_count": 2,
+      "column_count": 4,
+      "schema_type_counts": {
+        "INT": 4
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 3,
+      "operator_counts": {
+        "neq": 1,
+        "primary": 2,
+        "value": 6
+      },
+      "reference_counts": {
+        "FRIENDSHIP__USER1_ID": 2,
+        "FRIENDSHIP__USER2_ID": 2,
+        "LIKES__PAGE_ID": 1,
+        "LIKES__USER_ID": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.00707087479531765,
+        "actual_check_cpu_seconds": 0.007078000000000029,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.4684281670488417,
+        "actual_check_cpu_seconds": 0.46805399999999975,
+        "timeout_ms": 700
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.47549904184415936,
+    "solver_cumulative_cpu_seconds": 0.4751319999999998,
+    "query_solver_called": true,
+    "hardness_claim": "NOT_ESTABLISHED_SINGLE_ATTEMPT",
+    "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+  },
+  "worker_result_unmodified": {
+    "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+    "record": {
+      "id": "dev03_10_exact8",
+      "source_case_id": "dev03_10",
+      "case_index": 5,
+      "status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "INCONCLUSIVE",
+      "attempts": [
+        {
+          "id": "dev03_10",
+          "attempt": 1,
+          "status": "RETURNED",
+          "stages": [
+            {
+              "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+              "status": "RETURNED",
+              "wall_seconds": 0.0035635000094771385,
+              "cpu_seconds": 0.003563000000000094
+            },
+            {
+              "name": "FULL_ORIGINAL_IC_ADMISSION",
+              "status": "RETURNED",
+              "original_clause_count": 3,
+              "base_fact_count": 112,
+              "admitted_delta_facts": 3,
+              "full_fact_count": 115,
+              "wall_seconds": 0.010287666227668524,
+              "cpu_seconds": 0.0102850000000001
+            },
+            {
+              "name": "FULL_C_SOLVER_SETUP",
+              "status": "RETURNED",
+              "wall_seconds": 0.0038400841876864433,
+              "cpu_seconds": 0.0038399999999999546
+            },
+            {
+              "name": "FULL_C_NONEMPTY_CHECK",
+              "status": "RETURNED",
+              "timeout_ms": 100,
+              "attempt": 1,
+              "stage": "FULL_C_NONEMPTY_CHECK",
+              "actual_check_wall_seconds": 0.00707087479531765,
+              "actual_check_cpu_seconds": 0.007078000000000029,
+              "answer": "sat",
+              "wall_seconds": 0.009219583123922348,
+              "cpu_seconds": 0.009200999999999904
+            },
+            {
+              "name": "FULL_C_SAT_MODEL_VALIDATION",
+              "status": "RETURNED",
+              "wall_seconds": 0.0010725408792495728,
+              "cpu_seconds": 0.0010710000000000441
+            },
+            {
+              "name": "C_MODEL_SANITY_RAW_EXPORT",
+              "status": "RETURNED",
+              "wall_seconds": 0.0006355410441756248,
+              "cpu_seconds": 0.0006360000000000809
+            },
+            {
+              "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+              "status": "RETURNED",
+              "wall_seconds": 0.0034742075949907303,
+              "cpu_seconds": 0.003473999999999977
+            },
+            {
+              "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+              "status": "RETURNED",
+              "formula_counts": [
+                272,
+                272
+              ],
+              "output_tuple_counts": [
+                64,
+                64
+              ],
+              "wall_seconds": 0.3540016249753535,
+              "cpu_seconds": 0.35370599999999996
+            },
+            {
+              "name": "OFFICIAL_PARSE_QUERY_0",
+              "status": "RETURNED",
+              "ast_json_lossless": true,
+              "ast_sha256": "4fbae452a8850fcbecb9b4227ce9096ae592440755f37b7f2f262476bdf85a8b",
+              "ast_hash_scope": "lossless canonical JSON",
+              "wall_seconds": 0.06169208325445652,
+              "cpu_seconds": 0.06164499999999995
+            },
+            {
+              "name": "OFFICIAL_PARSE_QUERY_1",
+              "status": "RETURNED",
+              "ast_json_lossless": true,
+              "ast_sha256": "8c83bd25470f38319de41ffc1f2b5f5107453ce5e454552f70966e30a71c6607",
+              "ast_hash_scope": "lossless canonical JSON",
+              "wall_seconds": 0.004219834227114916,
+              "cpu_seconds": 0.0042200000000000015
+            },
+            {
+              "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+              "status": "RETURNED",
+              "timeout_ms": 700,
+              "attempt": 1,
+              "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+              "actual_check_wall_seconds": 0.4684281670488417,
+              "actual_check_cpu_seconds": 0.46805399999999975,
+              "answer": "unknown",
+              "reason_unknown": "out of memory",
+              "wall_seconds": 0.4718127497471869,
+              "cpu_seconds": 0.4713749999999999
+            }
+          ],
+          "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+          "exact_rows": {
+            "FRIENDSHIP": 8,
+            "LIKES": 8
+          },
+          "raw_query_verdict": "unknown",
+          "full_C_nonempty": "sat",
+          "contract_model_sanity": {
+            "status": "RETURNED",
+            "model_origin": "FULL_C_NONEMPTY_CHECK",
+            "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+            "query_sat_witness": false,
+            "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY",
+            "witness": {
+              "all_physical_raw_values": {
+                "FRIENDSHIP": [
+                  {
+                    "USER1_ID": -14,
+                    "USER2_ID": -13
+                  },
+                  {
+                    "USER1_ID": -12,
+                    "USER2_ID": -11
+                  },
+                  {
+                    "USER1_ID": -10,
+                    "USER2_ID": -9
+                  },
+                  {
+                    "USER1_ID": -8,
+                    "USER2_ID": -7
+                  },
+                  {
+                    "USER1_ID": -6,
+                    "USER2_ID": -5
+                  },
+                  {
+                    "USER1_ID": -4,
+                    "USER2_ID": -3
+                  },
+                  {
+                    "USER1_ID": -2,
+                    "USER2_ID": -1
+                  },
+                  {
+                    "USER1_ID": 0,
+                    "USER2_ID": 1
+                  }
+                ],
+                "LIKES": [
+                  {
+                    "PAGE_ID": -7,
+                    "USER_ID": -6
+                  },
+                  {
+                    "PAGE_ID": -6,
+                    "USER_ID": -5
+                  },
+                  {
+                    "PAGE_ID": -5,
+                    "USER_ID": -3
+                  },
+                  {
+                    "PAGE_ID": -4,
+                    "USER_ID": -4
+                  },
+                  {
+                    "PAGE_ID": -3,
+                    "USER_ID": -2
+                  },
+                  {
+                    "PAGE_ID": -2,
+                    "USER_ID": -1
+                  },
+                  {
+                    "PAGE_ID": -1,
+                    "USER_ID": 0
+                  },
+                  {
+                    "PAGE_ID": 0,
+                    "USER_ID": 1
+                  }
+                ]
+              },
+              "decoded_values": {
+                "FRIENDSHIP": [
+                  {
+                    "USER1_ID": -14,
+                    "USER2_ID": -13
+                  },
+                  {
+                    "USER1_ID": -12,
+                    "USER2_ID": -11
+                  },
+                  {
+                    "USER1_ID": -10,
+                    "USER2_ID": -9
+                  },
+                  {
+                    "USER1_ID": -8,
+                    "USER2_ID": -7
+                  },
+                  {
+                    "USER1_ID": -6,
+                    "USER2_ID": -5
+                  },
+                  {
+                    "USER1_ID": -4,
+                    "USER2_ID": -3
+                  },
+                  {
+                    "USER1_ID": -2,
+                    "USER2_ID": -1
+                  },
+                  {
+                    "USER1_ID": 0,
+                    "USER2_ID": 1
+                  }
+                ],
+                "LIKES": [
+                  {
+                    "PAGE_ID": -7,
+                    "USER_ID": -6
+                  },
+                  {
+                    "PAGE_ID": -6,
+                    "USER_ID": -5
+                  },
+                  {
+                    "PAGE_ID": -5,
+                    "USER_ID": -3
+                  },
+                  {
+                    "PAGE_ID": -4,
+                    "USER_ID": -4
+                  },
+                  {
+                    "PAGE_ID": -3,
+                    "USER_ID": -2
+                  },
+                  {
+                    "PAGE_ID": -2,
+                    "USER_ID": -1
+                  },
+                  {
+                    "PAGE_ID": -1,
+                    "USER_ID": 0
+                  },
+                  {
+                    "PAGE_ID": 0,
+                    "USER_ID": 1
+                  }
+                ]
+              },
+              "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+            },
+            "replay": {
+              "status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+              "full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+              "original_sql_unchanged": true,
+              "query_rewrites": 0,
+              "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+              "independent_full_C": {
+                "status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+                "original_clause_count": 3,
+                "checked_clause_count": 3,
+                "semantics": "Pinned official operational C, including Cartesian column comparisons; not business-completeness proof."
+              },
+              "concrete_database": {
+                "FRIENDSHIP": [
+                  {
+                    "USER1_ID": -14,
+                    "USER2_ID": -13
+                  },
+                  {
+                    "USER1_ID": -12,
+                    "USER2_ID": -11
+                  },
+                  {
+                    "USER1_ID": -10,
+                    "USER2_ID": -9
+                  },
+                  {
+                    "USER1_ID": -8,
+                    "USER2_ID": -7
+                  },
+                  {
+                    "USER1_ID": -6,
+                    "USER2_ID": -5
+                  },
+                  {
+                    "USER1_ID": -4,
+                    "USER2_ID": -3
+                  },
+                  {
+                    "USER1_ID": -2,
+                    "USER2_ID": -1
+                  },
+                  {
+                    "USER1_ID": 0,
+                    "USER2_ID": 1
+                  }
+                ],
+                "LIKES": [
+                  {
+                    "PAGE_ID": -7,
+                    "USER_ID": -6
+                  },
+                  {
+                    "PAGE_ID": -6,
+                    "USER_ID": -5
+                  },
+                  {
+                    "PAGE_ID": -5,
+                    "USER_ID": -3
+                  },
+                  {
+                    "PAGE_ID": -4,
+                    "USER_ID": -4
+                  },
+                  {
+                    "PAGE_ID": -3,
+                    "USER_ID": -2
+                  },
+                  {
+                    "PAGE_ID": -2,
+                    "USER_ID": -1
+                  },
+                  {
+                    "PAGE_ID": -1,
+                    "USER_ID": 0
+                  },
+                  {
+                    "PAGE_ID": 0,
+                    "USER_ID": 1
+                  }
+                ]
+              },
+              "original_sql_sha256": [
+                "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+                "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+              ],
+              "admission": "INT-only CASE, equality join, DISTINCT and NOT IN; no arithmetic/string/date/order/collation.",
+              "sqlite_version": "3.53.3",
+              "original_sql_results": [
+                [
+                  [
+                    -1
+                  ]
+                ],
+                [
+                  [
+                    -1
+                  ]
+                ]
+              ],
+              "comparison": "bag multiplicities, exact INT/NULL equality",
+              "generated_official_model": true,
+              "phase_costs": [
+                {
+                  "name": "INDEPENDENT_FULL_C_CHECK",
+                  "status": "RETURNED",
+                  "wall_seconds": 4.333304241299629e-05,
+                  "cpu_seconds": 4.19999999999518e-05
+                },
+                {
+                  "name": "SQLITE_LOAD_GENERATED_DATABASE",
+                  "status": "RETURNED",
+                  "wall_seconds": 0.00021562492474913597,
+                  "cpu_seconds": 0.00021400000000002667
+                },
+                {
+                  "name": "SQLITE_ORIGINAL_QUERY_0",
+                  "status": "RETURNED",
+                  "wall_seconds": 4.3584033846855164e-05,
+                  "cpu_seconds": 4.29999999999528e-05
+                },
+                {
+                  "name": "SQLITE_ORIGINAL_QUERY_1",
+                  "status": "RETURNED",
+                  "wall_seconds": 2.729194238781929e-05,
+                  "cpu_seconds": 2.599999999997049e-05
+                }
+              ],
+              "model_origin": "FULL_C_NONEMPTY_CHECK",
+              "query_sat_witness": false
+            }
+          },
+          "active_stage": null,
+          "latest_stage": "CLEANUP",
+          "full_contract_fact_sha256": "870045c29fb49f5eac60fc8ca5c4567118d0cfdfe78c11166b13508b9f313ccc",
+          "solver_cumulative_wall_seconds": 0.47549904184415936,
+          "solver_cumulative_cpu_seconds": 0.4751319999999998,
+          "parsed_asts": [
+            {
+              "select_distinct": {
+                "value": "PAGE_ID",
+                "name": "RECOMMENDED_PAGE"
+              },
+              "from": [
+                {
+                  "value": {
+                    "select": {
+                      "value": {
+                        "case": [
+                          {
+                            "then": "USER2_ID",
+                            "when": {
+                              "eq": [
+                                "USER1_ID",
+                                1
+                              ]
+                            }
+                          },
+                          {
+                            "then": "USER1_ID",
+                            "when": {
+                              "eq": [
+                                "USER2_ID",
+                                1
+                              ]
+                            }
+                          },
+                          {
+                            "null": null
+                          }
+                        ]
+                      },
+                      "name": "USER_ID"
+                    },
+                    "from": "FRIENDSHIP"
+                  },
+                  "name": "TB1"
+                },
+                {
+                  "join": {
+                    "value": "LIKES",
+                    "name": "TB2"
+                  },
+                  "on": {
+                    "eq": [
+                      "TB1__USER_ID",
+                      "TB2__USER_ID"
+                    ]
+                  }
+                }
+              ],
+              "where": {
+                "nin": [
+                  "PAGE_ID",
+                  {
+                    "select": {
+                      "value": "PAGE_ID"
+                    },
+                    "from": "LIKES",
+                    "where": {
+                      "eq": [
+                        "USER_ID",
+                        1
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "select_distinct": {
+                "value": "PAGE_ID",
+                "name": "RECOMMENDED_PAGE"
+              },
+              "from": [
+                {
+                  "value": "LIKES",
+                  "name": "L"
+                },
+                {
+                  "join": {
+                    "value": {
+                      "select": {
+                        "value": {
+                          "case": [
+                            {
+                              "then": "USER2_ID",
+                              "when": {
+                                "eq": [
+                                  "USER1_ID",
+                                  1
+                                ]
+                              }
+                            },
+                            {
+                              "then": "USER1_ID",
+                              "when": {
+                                "eq": [
+                                  "USER2_ID",
+                                  1
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        "name": "USER_ID"
+                      },
+                      "from": "FRIENDSHIP"
+                    },
+                    "name": "A"
+                  },
+                  "on": {
+                    "eq": [
+                      "L__USER_ID",
+                      "A__USER_ID"
+                    ]
+                  }
+                }
+              ],
+              "where": {
+                "nin": [
+                  "PAGE_ID",
+                  {
+                    "select": {
+                      "value": "PAGE_ID"
+                    },
+                    "from": "LIKES",
+                    "where": {
+                      "eq": [
+                        "USER_ID",
+                        1
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "comparison_formula_encode": {
+            "wall_seconds": 0.29014295898377895,
+            "cpu_seconds": 0.2900529999999999
+          },
+          "submitted_query_assertion_count": 1,
+          "engineering_class": "QUERY_RETURNED",
+          "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+          "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+          "cleanup_cost": {
+            "wall_seconds": 0.006433000322431326,
+            "cpu_seconds": 0.006433000000000133
+          },
+          "exclusive_phase_cpu": {
+            "parse": 0.06586499999999995,
+            "scope_encode": 0.287841,
+            "compare_encode": 0.2900529999999999,
+            "query_check": 0.46805399999999975
+          },
+          "attempt_cost": {
+            "cpu_seconds": 1.170127,
+            "wall_seconds": 1.1713849999941885,
+            "worker_peak_rss_bytes_macos": 258162688
+          }
+        }
+      ],
+      "active_stage": null,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 13041,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "provenance_class": "PRESENT_JSON",
+      "original_source_record": {
+        "constraint": [
+          {
+            "primary": [
+              {
+                "value": "FRIENDSHIP__USER1_ID"
+              },
+              {
+                "value": "FRIENDSHIP__USER2_ID"
+              }
+            ]
+          },
+          {
+            "primary": [
+              {
+                "value": "LIKES__USER_ID"
+              },
+              {
+                "value": "LIKES__PAGE_ID"
+              }
+            ]
+          },
+          {
+            "neq": [
+              {
+                "value": "FRIENDSHIP__USER1_ID"
+              },
+              {
+                "value": "FRIENDSHIP__USER2_ID"
+              }
+            ]
+          }
+        ],
+        "file": "benchmark/leetcode/raw_data/1264.csv",
+        "index": 25,
+        "pair": [
+          "SELECT DISTINCT PAGE_ID AS RECOMMENDED_PAGE FROM (SELECT CASE WHEN USER1_ID=1 THEN USER2_ID WHEN USER2_ID=1 THEN USER1_ID ELSE NULL END AS USER_ID FROM FRIENDSHIP) AS TB1 JOIN LIKES AS TB2 ON TB1.USER_ID=TB2.USER_ID WHERE PAGE_ID NOT IN (SELECT PAGE_ID FROM LIKES WHERE USER_ID=1)",
+          "SELECT DISTINCT PAGE_ID AS RECOMMENDED_PAGE FROM LIKES L JOIN (SELECT CASE WHEN USER1_ID = 1 THEN USER2_ID WHEN USER2_ID = 1 THEN USER1_ID END AS USER_ID FROM FRIENDSHIP) AS A ON L.USER_ID = A.USER_ID WHERE PAGE_ID NOT IN(SELECT PAGE_ID FROM LIKES WHERE USER_ID=1)"
+        ],
+        "schema": {
+          "FRIENDSHIP": {
+            "USER1_ID": "INT",
+            "USER2_ID": "INT"
+          },
+          "LIKES": {
+            "PAGE_ID": "INT",
+            "USER_ID": "INT"
+          }
+        }
+      },
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "semantic_admission": {},
+      "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+      "original_sql_sha256": [
+        "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+        "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+      ],
+      "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+      "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+      "structural_admission": {
+        "status": "ADMITTED_STRUCTURALLY",
+        "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+        "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+        "table_count": 2,
+        "column_count": 4,
+        "schema_type_counts": {
+          "INT": 4
+        },
+        "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+        "original_clause_count": 3,
+        "operator_counts": {
+          "neq": 1,
+          "primary": 2,
+          "value": 6
+        },
+        "reference_counts": {
+          "FRIENDSHIP__USER1_ID": 2,
+          "FRIENDSHIP__USER2_ID": 2,
+          "LIKES__PAGE_ID": 1,
+          "LIKES__USER_ID": 1
+        },
+        "full_preservation": true,
+        "dropped_tables": 0,
+        "dropped_fields": 0,
+        "dropped_clauses": 0,
+        "rewrites": 0,
+        "operational_notes": [
+          "OFFICIAL_COLUMN_COMPARISON_USES_ALL_CARTESIAN_ROW_PAIRS"
+        ],
+        "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+      },
+      "latest_stage": "CLEANUP",
+      "repeat_triggered": false,
+      "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.00707087479531765,
+          "actual_check_cpu_seconds": 0.007078000000000029,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.4684281670488417,
+          "actual_check_cpu_seconds": 0.46805399999999975,
+          "timeout_ms": 700
+        }
+      ],
+      "solver_cumulative_wall_seconds": 0.47549904184415936,
+      "solver_cumulative_cpu_seconds": 0.4751319999999998,
+      "query_solver_called": true,
+      "hardness_claim": "NOT_ESTABLISHED_SINGLE_ATTEMPT",
+      "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+    },
+    "scope": "Registered input only; registered exact N official semantics, no business or cross-dialect gold",
+    "protocol_sha256": "7a5c6fd9a38f59529031d8c6f475e9b2dacebb274474e8993f1d8dd188421f36",
+    "input": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+      "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+    },
+    "code_sha256": {
+      "official_generation_worker.py": "001ad93abc7d06313faf7267a47ca928f4e213a7733a75de8692bd1f3f66ec7b",
+      "official_generation_backend.py": "5fcb3935218d954f728607c0da44617f5f5bec26c4f6e331baf738a106bbfc18",
+      "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+      "generation_common.py": "74df9d61a87be8fabe311e96d8418e9704baa8e1292ff97a1a5ccf9334265863",
+      "safe_sqlite_replay.py": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5"
+    },
+    "registered_group_count": 4,
+    "registered_slot": {
+      "id": "dev03_10_exact8",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 8
+    },
+    "denominator_unchanged": true,
+    "last_event": {
+      "event": "SINGLE_ATTEMPT_COMPLETE",
+      "id": "dev03_10_exact8",
+      "attempt": null,
+      "active_stage": null
+    },
+    "runtime": {
+      "id": "runtime",
+      "stages": [
+        {
+          "name": "LOCK_AND_DEPENDENCY_HASH",
+          "status": "RETURNED",
+          "checked_files": 848,
+          "wall_seconds": 0.0386141249909997,
+          "cpu_seconds": 0.038611000000000006
+        },
+        {
+          "name": "NATIVE_AND_OFFICIAL_IMPORT",
+          "status": "RETURNED",
+          "version": [
+            4,
+            12,
+            0,
+            0
+          ],
+          "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+          "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+          "wall_seconds": 0.6208297503180802,
+          "cpu_seconds": 0.620298
+        }
+      ],
+      "active_stage": null,
+      "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+    },
+    "latest_attempt_snapshot": {
+      "id": "dev03_10",
+      "attempt": 1,
+      "status": "RETURNED",
+      "stages": [
+        {
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "status": "RETURNED",
+          "wall_seconds": 0.0035635000094771385,
+          "cpu_seconds": 0.003563000000000094
+        },
+        {
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "status": "RETURNED",
+          "original_clause_count": 3,
+          "base_fact_count": 112,
+          "admitted_delta_facts": 3,
+          "full_fact_count": 115,
+          "wall_seconds": 0.010287666227668524,
+          "cpu_seconds": 0.0102850000000001
+        },
+        {
+          "name": "FULL_C_SOLVER_SETUP",
+          "status": "RETURNED",
+          "wall_seconds": 0.0038400841876864433,
+          "cpu_seconds": 0.0038399999999999546
+        },
+        {
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "status": "RETURNED",
+          "timeout_ms": 100,
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.00707087479531765,
+          "actual_check_cpu_seconds": 0.007078000000000029,
+          "answer": "sat",
+          "wall_seconds": 0.009219583123922348,
+          "cpu_seconds": 0.009200999999999904
+        },
+        {
+          "name": "FULL_C_SAT_MODEL_VALIDATION",
+          "status": "RETURNED",
+          "wall_seconds": 0.0010725408792495728,
+          "cpu_seconds": 0.0010710000000000441
+        },
+        {
+          "name": "C_MODEL_SANITY_RAW_EXPORT",
+          "status": "RETURNED",
+          "wall_seconds": 0.0006355410441756248,
+          "cpu_seconds": 0.0006360000000000809
+        },
+        {
+          "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+          "status": "RETURNED",
+          "wall_seconds": 0.0034742075949907303,
+          "cpu_seconds": 0.003473999999999977
+        },
+        {
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "status": "RETURNED",
+          "formula_counts": [
+            272,
+            272
+          ],
+          "output_tuple_counts": [
+            64,
+            64
+          ],
+          "wall_seconds": 0.3540016249753535,
+          "cpu_seconds": 0.35370599999999996
+        },
+        {
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "status": "RETURNED",
+          "ast_json_lossless": true,
+          "ast_sha256": "4fbae452a8850fcbecb9b4227ce9096ae592440755f37b7f2f262476bdf85a8b",
+          "ast_hash_scope": "lossless canonical JSON",
+          "wall_seconds": 0.06169208325445652,
+          "cpu_seconds": 0.06164499999999995
+        },
+        {
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "status": "RETURNED",
+          "ast_json_lossless": true,
+          "ast_sha256": "8c83bd25470f38319de41ffc1f2b5f5107453ce5e454552f70966e30a71c6607",
+          "ast_hash_scope": "lossless canonical JSON",
+          "wall_seconds": 0.004219834227114916,
+          "cpu_seconds": 0.0042200000000000015
+        },
+        {
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "status": "RETURNED",
+          "timeout_ms": 700,
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.4684281670488417,
+          "actual_check_cpu_seconds": 0.46805399999999975,
+          "answer": "unknown",
+          "reason_unknown": "out of memory",
+          "wall_seconds": 0.4718127497471869,
+          "cpu_seconds": 0.4713749999999999
+        }
+      ],
+      "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+      "exact_rows": {
+        "FRIENDSHIP": 8,
+        "LIKES": 8
+      },
+      "raw_query_verdict": "unknown",
+      "full_C_nonempty": "sat",
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "model_origin": "FULL_C_NONEMPTY_CHECK",
+        "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+        "query_sat_witness": false,
+        "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY",
+        "witness": {
+          "all_physical_raw_values": {
+            "FRIENDSHIP": [
+              {
+                "USER1_ID": -14,
+                "USER2_ID": -13
+              },
+              {
+                "USER1_ID": -12,
+                "USER2_ID": -11
+              },
+              {
+                "USER1_ID": -10,
+                "USER2_ID": -9
+              },
+              {
+                "USER1_ID": -8,
+                "USER2_ID": -7
+              },
+              {
+                "USER1_ID": -6,
+                "USER2_ID": -5
+              },
+              {
+                "USER1_ID": -4,
+                "USER2_ID": -3
+              },
+              {
+                "USER1_ID": -2,
+                "USER2_ID": -1
+              },
+              {
+                "USER1_ID": 0,
+                "USER2_ID": 1
+              }
+            ],
+            "LIKES": [
+              {
+                "PAGE_ID": -7,
+                "USER_ID": -6
+              },
+              {
+                "PAGE_ID": -6,
+                "USER_ID": -5
+              },
+              {
+                "PAGE_ID": -5,
+                "USER_ID": -3
+              },
+              {
+                "PAGE_ID": -4,
+                "USER_ID": -4
+              },
+              {
+                "PAGE_ID": -3,
+                "USER_ID": -2
+              },
+              {
+                "PAGE_ID": -2,
+                "USER_ID": -1
+              },
+              {
+                "PAGE_ID": -1,
+                "USER_ID": 0
+              },
+              {
+                "PAGE_ID": 0,
+                "USER_ID": 1
+              }
+            ]
+          },
+          "decoded_values": {
+            "FRIENDSHIP": [
+              {
+                "USER1_ID": -14,
+                "USER2_ID": -13
+              },
+              {
+                "USER1_ID": -12,
+                "USER2_ID": -11
+              },
+              {
+                "USER1_ID": -10,
+                "USER2_ID": -9
+              },
+              {
+                "USER1_ID": -8,
+                "USER2_ID": -7
+              },
+              {
+                "USER1_ID": -6,
+                "USER2_ID": -5
+              },
+              {
+                "USER1_ID": -4,
+                "USER2_ID": -3
+              },
+              {
+                "USER1_ID": -2,
+                "USER2_ID": -1
+              },
+              {
+                "USER1_ID": 0,
+                "USER2_ID": 1
+              }
+            ],
+            "LIKES": [
+              {
+                "PAGE_ID": -7,
+                "USER_ID": -6
+              },
+              {
+                "PAGE_ID": -6,
+                "USER_ID": -5
+              },
+              {
+                "PAGE_ID": -5,
+                "USER_ID": -3
+              },
+              {
+                "PAGE_ID": -4,
+                "USER_ID": -4
+              },
+              {
+                "PAGE_ID": -3,
+                "USER_ID": -2
+              },
+              {
+                "PAGE_ID": -2,
+                "USER_ID": -1
+              },
+              {
+                "PAGE_ID": -1,
+                "USER_ID": 0
+              },
+              {
+                "PAGE_ID": 0,
+                "USER_ID": 1
+              }
+            ]
+          },
+          "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+        },
+        "replay": {
+          "status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+          "full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+          "original_sql_unchanged": true,
+          "query_rewrites": 0,
+          "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+          "independent_full_C": {
+            "status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+            "original_clause_count": 3,
+            "checked_clause_count": 3,
+            "semantics": "Pinned official operational C, including Cartesian column comparisons; not business-completeness proof."
+          },
+          "concrete_database": {
+            "FRIENDSHIP": [
+              {
+                "USER1_ID": -14,
+                "USER2_ID": -13
+              },
+              {
+                "USER1_ID": -12,
+                "USER2_ID": -11
+              },
+              {
+                "USER1_ID": -10,
+                "USER2_ID": -9
+              },
+              {
+                "USER1_ID": -8,
+                "USER2_ID": -7
+              },
+              {
+                "USER1_ID": -6,
+                "USER2_ID": -5
+              },
+              {
+                "USER1_ID": -4,
+                "USER2_ID": -3
+              },
+              {
+                "USER1_ID": -2,
+                "USER2_ID": -1
+              },
+              {
+                "USER1_ID": 0,
+                "USER2_ID": 1
+              }
+            ],
+            "LIKES": [
+              {
+                "PAGE_ID": -7,
+                "USER_ID": -6
+              },
+              {
+                "PAGE_ID": -6,
+                "USER_ID": -5
+              },
+              {
+                "PAGE_ID": -5,
+                "USER_ID": -3
+              },
+              {
+                "PAGE_ID": -4,
+                "USER_ID": -4
+              },
+              {
+                "PAGE_ID": -3,
+                "USER_ID": -2
+              },
+              {
+                "PAGE_ID": -2,
+                "USER_ID": -1
+              },
+              {
+                "PAGE_ID": -1,
+                "USER_ID": 0
+              },
+              {
+                "PAGE_ID": 0,
+                "USER_ID": 1
+              }
+            ]
+          },
+          "original_sql_sha256": [
+            "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+            "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+          ],
+          "admission": "INT-only CASE, equality join, DISTINCT and NOT IN; no arithmetic/string/date/order/collation.",
+          "sqlite_version": "3.53.3",
+          "original_sql_results": [
+            [
+              [
+                -1
+              ]
+            ],
+            [
+              [
+                -1
+              ]
+            ]
+          ],
+          "comparison": "bag multiplicities, exact INT/NULL equality",
+          "generated_official_model": true,
+          "phase_costs": [
+            {
+              "name": "INDEPENDENT_FULL_C_CHECK",
+              "status": "RETURNED",
+              "wall_seconds": 4.333304241299629e-05,
+              "cpu_seconds": 4.19999999999518e-05
+            },
+            {
+              "name": "SQLITE_LOAD_GENERATED_DATABASE",
+              "status": "RETURNED",
+              "wall_seconds": 0.00021562492474913597,
+              "cpu_seconds": 0.00021400000000002667
+            },
+            {
+              "name": "SQLITE_ORIGINAL_QUERY_0",
+              "status": "RETURNED",
+              "wall_seconds": 4.3584033846855164e-05,
+              "cpu_seconds": 4.29999999999528e-05
+            },
+            {
+              "name": "SQLITE_ORIGINAL_QUERY_1",
+              "status": "RETURNED",
+              "wall_seconds": 2.729194238781929e-05,
+              "cpu_seconds": 2.599999999997049e-05
+            }
+          ],
+          "model_origin": "FULL_C_NONEMPTY_CHECK",
+          "query_sat_witness": false
+        }
+      },
+      "active_stage": null,
+      "latest_stage": "CLEANUP",
+      "full_contract_fact_sha256": "870045c29fb49f5eac60fc8ca5c4567118d0cfdfe78c11166b13508b9f313ccc",
+      "solver_cumulative_wall_seconds": 0.47549904184415936,
+      "solver_cumulative_cpu_seconds": 0.4751319999999998,
+      "parsed_asts": [
+        {
+          "select_distinct": {
+            "value": "PAGE_ID",
+            "name": "RECOMMENDED_PAGE"
+          },
+          "from": [
+            {
+              "value": {
+                "select": {
+                  "value": {
+                    "case": [
+                      {
+                        "then": "USER2_ID",
+                        "when": {
+                          "eq": [
+                            "USER1_ID",
+                            1
+                          ]
+                        }
+                      },
+                      {
+                        "then": "USER1_ID",
+                        "when": {
+                          "eq": [
+                            "USER2_ID",
+                            1
+                          ]
+                        }
+                      },
+                      {
+                        "null": null
+                      }
+                    ]
+                  },
+                  "name": "USER_ID"
+                },
+                "from": "FRIENDSHIP"
+              },
+              "name": "TB1"
+            },
+            {
+              "join": {
+                "value": "LIKES",
+                "name": "TB2"
+              },
+              "on": {
+                "eq": [
+                  "TB1__USER_ID",
+                  "TB2__USER_ID"
+                ]
+              }
+            }
+          ],
+          "where": {
+            "nin": [
+              "PAGE_ID",
+              {
+                "select": {
+                  "value": "PAGE_ID"
+                },
+                "from": "LIKES",
+                "where": {
+                  "eq": [
+                    "USER_ID",
+                    1
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "select_distinct": {
+            "value": "PAGE_ID",
+            "name": "RECOMMENDED_PAGE"
+          },
+          "from": [
+            {
+              "value": "LIKES",
+              "name": "L"
+            },
+            {
+              "join": {
+                "value": {
+                  "select": {
+                    "value": {
+                      "case": [
+                        {
+                          "then": "USER2_ID",
+                          "when": {
+                            "eq": [
+                              "USER1_ID",
+                              1
+                            ]
+                          }
+                        },
+                        {
+                          "then": "USER1_ID",
+                          "when": {
+                            "eq": [
+                              "USER2_ID",
+                              1
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    "name": "USER_ID"
+                  },
+                  "from": "FRIENDSHIP"
+                },
+                "name": "A"
+              },
+              "on": {
+                "eq": [
+                  "L__USER_ID",
+                  "A__USER_ID"
+                ]
+              }
+            }
+          ],
+          "where": {
+            "nin": [
+              "PAGE_ID",
+              {
+                "select": {
+                  "value": "PAGE_ID"
+                },
+                "from": "LIKES",
+                "where": {
+                  "eq": [
+                    "USER_ID",
+                    1
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.29014295898377895,
+        "cpu_seconds": 0.2900529999999999
+      },
+      "submitted_query_assertion_count": 1,
+      "engineering_class": "QUERY_RETURNED",
+      "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+      "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+      "cleanup_cost": {
+        "wall_seconds": 0.006433000322431326,
+        "cpu_seconds": 0.006433000000000133
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.06586499999999995,
+        "scope_encode": 0.287841,
+        "compare_encode": 0.2900529999999999,
+        "query_check": 0.46805399999999975
+      },
+      "attempt_cost": {
+        "cpu_seconds": 1.170127,
+        "wall_seconds": 1.1713849999941885,
+        "worker_peak_rss_bytes_macos": 258162688
+      }
+    },
+    "worker_usage": {
+      "cpu_user_seconds": 1.786967,
+      "cpu_system_seconds": 0.09197699999999999,
+      "peak_rss_bytes_macos": 258162688,
+      "wall_from_main_seconds": 1.8573051667772233
+    }
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.161103,
+    "parent_system_cpu_seconds": 0.1565,
+    "all_reaped_children_user_cpu_seconds": 6.907553,
+    "all_reaped_children_system_cpu_seconds": 1.784027,
+    "supervisor_plus_reaped_cpu_seconds": 9.009183,
+    "observed_total_cpu_seconds": 19.009183,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 19.209183,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  }
+}

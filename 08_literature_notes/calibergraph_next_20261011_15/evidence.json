@@ -1,0 +1,514 @@
+{
+  "audit_date": "2026-10-11",
+  "stage": 15,
+  "purpose": "Scope gate for real public SQL/fullC diagnostics at bounds 2, 3, 4",
+  "execution": "READ_ONLY_PRIMARY_SOURCE_AUDIT; no solver, SQL, installation, credentials, large artifacts, or old-directory writes",
+  "status_vocabulary": {
+    "PAPERCLAIM": "freshly read primary text, not independently reproduced",
+    "CHECKEDCODE": "fresh static inspection, not an execution result",
+    "INFERENCE": "our conditional conclusion",
+    "UNRESOLVED": "not established in this bounded audit",
+    "NOTREPRODUCED": "all empirical performance/correctness results"
+  },
+  "routing": {
+    "datahub": "Parent reports list completed; no paper module; DATAHUB_REGISTRATION_BLOCKED outside writable scope",
+    "backup": "PARENT_COORDINATED_PENDING"
+  },
+  "sources": [
+    {
+      "id": "V-paper",
+      "url": "https://arxiv.org/html/2403.03193v2",
+      "version": "arXiv v2, 2024-03-15; DOI 10.1145/3649849",
+      "locators": [
+        "§1",
+        "§3.1–3.5; Def.3.5",
+        "§4.2; §4.5; Thm.4.8",
+        "§6.1–6.4; Figs.13–15",
+        "§7",
+        "Appendix C.1,C.3; Table 1"
+      ],
+      "freshly_opened": true
+    },
+    {
+      "id": "V-code",
+      "url": "https://github.com/VeriEQL/VeriEQL/blob/3b99928bf976c11cb59c9db6a177adba21f75798/environment.py",
+      "commit": "3b99928bf976c11cb59c9db6a177adba21f75798",
+      "local_root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+      "freshly_opened": true,
+      "git_metadata": "absent in local archive; supplied pin; online pinned environment.py inspected"
+    },
+    {
+      "id": "V-readme",
+      "url": "https://github.com/VeriEQL/VeriEQL",
+      "freshly_opened": true,
+      "locators": [
+        "Benchmarks",
+        "Updates",
+        "Comparison RQ1/RQ2"
+      ]
+    },
+    {
+      "id": "S-paper",
+      "url": "https://www.cs.yale.edu/homes/piskac/papers/2024SIGMOD.pdf",
+      "doi": "10.1145/3626768",
+      "freshly_opened": true,
+      "locators": [
+        "§5 pp.227:20–21",
+        "§6.1–6.2 pp.227:21–23; Tables 5,6"
+      ]
+    },
+    {
+      "id": "S-readme",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver",
+      "freshly_opened": true,
+      "locators": [
+        "API",
+        "Benchmark"
+      ]
+    },
+    {
+      "id": "S-code-constraint",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver/blob/dcc2a91d8971a4c4d30b055f99d7d8428a1b754b/superopt/src/main/java/sqlsolver/superopt/constraint/Constraint.java",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "freshly_opened_by": "delegated primary-source auditor sqlsolver_primary; returned section/line evidence"
+    },
+    {
+      "id": "S-code-translator",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver/blob/dcc2a91d8971a4c4d30b055f99d7d8428a1b754b/superopt/src/main/java/sqlsolver/superopt/uexpr/UExprTranslator.java",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "freshly_opened_by": "delegated primary-source auditor sqlsolver_primary; returned section/line evidence"
+    },
+    {
+      "id": "S-code-null",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver/blob/dcc2a91d8971a4c4d30b055f99d7d8428a1b754b/superopt/src/main/java/sqlsolver/superopt/uexpr/UExprSupport.java",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "freshly_opened_by": "delegated primary-source auditor sqlsolver_primary; returned section/line evidence"
+    },
+    {
+      "id": "S-code-api",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver/blob/dcc2a91d8971a4c4d30b055f99d7d8428a1b754b/api/src/main/java/sqlsolver/api/entry/Verification.java",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "freshly_opened_by": "delegated primary-source auditor sqlsolver_primary; returned section/line evidence"
+    },
+    {
+      "id": "S-code-configuration",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver/blob/dcc2a91d8971a4c4d30b055f99d7d8428a1b754b/sqlsolver.properties",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "freshly_opened_by": "delegated primary-source auditor sqlsolver_primary; returned section/line evidence"
+    },
+    {
+      "id": "S-code-version",
+      "url": "https://github.com/SJTU-IPADS/SQLSolver/blob/dcc2a91d8971a4c4d30b055f99d7d8428a1b754b/version",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "freshly_opened_by": "delegated primary-source auditor sqlsolver_primary; returned section/line evidence"
+    }
+  ],
+  "verieql": {
+    "paper": {
+      "status": "PAPERCLAIM",
+      "task": "bounded equivalence modulo IC; concrete counterexamples",
+      "bound": "each relation cardinality <= N; empty/mixed cardinalities included",
+      "semantics": [
+        "bag",
+        "list for ORDER BY",
+        "NULL/three-valued logic"
+      ],
+      "types": [
+        "Int",
+        "Bool",
+        "other types via integer/uninterpreted-function abstraction"
+      ],
+      "SQL": [
+        "joins including outer",
+        "aggregation/grouping",
+        "set/bag operators",
+        "CASE",
+        "WITH",
+        "IN/NOT IN",
+        "ORDER BY"
+      ],
+      "excluded": [
+        "correlated subqueries",
+        "window functions",
+        "LIMIT"
+      ],
+      "IC": [
+        "PK",
+        "FK",
+        "NOT NULL",
+        "CHECK predicates",
+        "unit-step auto-increment"
+      ],
+      "innovation": "practical SQL formalization and operator/IC SMT encodings using symbolic tuples, integers and uninterpreted functions",
+      "mature_mechanisms": [
+        "bounded model checking",
+        "SMT relational encoding",
+        "counterexample extraction",
+        "multiplicity comparison",
+        "bubble sorting"
+      ],
+      "refs": [
+        "V-paper §3–§5, §7, Appendix C.1"
+      ]
+    },
+    "checked_code": {
+      "status": "CHECKEDCODE",
+      "bound": "EXACT_LIVE_PER_TABLE in inspected create_database path",
+      "evidence": [
+        "environment.py:518 loops range(bound_size)",
+        "environment.py:584 asserts Not(DELETED) for each base tuple",
+        "verifiers/verifier.py:79–91 includes DBMS_facts in premise",
+        "environment.py:942–952 negates premise=>equivalence and calls solver",
+        "parallel/cli_within_bound.py:35–39 gives every table same scalar",
+        "parallel/cli_within_bound.py:97 iterates 1..max_bound_size"
+      ],
+      "coverage_gap": "No empty or unequal relation-cardinality vectors in inspected scalar driver; no padding theorem established",
+      "IC_operators": [
+        "primary",
+        "foreign",
+        "not_null",
+        "in",
+        "between",
+        "lt/lte/gt/gte/eq/neq",
+        "and/or",
+        "inc"
+      ],
+      "IC_refs": [
+        "environment.py:626–782"
+      ],
+      "other_semantics": [
+        "bag_semantics_verifier.py:112–159 checks sizes and multiplicities with null-aware comparison",
+        "verifier.py:93–101 selects list only when BOTH outer queries have ORDER BY",
+        "constants.py:49–57 constrains INT/date representations; exact declared types matter"
+      ],
+      "limits": [
+        "parallel/cli_within_timeout.py absent in this partial local snapshot",
+        "runtime correctness NOTREPRODUCED"
+      ]
+    },
+    "experiments": {
+      "status": "PAPERCLAIM; NOTREPRODUCED",
+      "denominators": {
+        "LeetCode": 23994,
+        "Calcite": 397,
+        "Literature": 64,
+        "total": 24455
+      },
+      "origins": {
+        "LeetCode": "accepted syntactically distinct public submissions paired with author-written reference SQL; manual schema/IC",
+        "Calcite": "optimizer-rule tests with schema/IC",
+        "Literature": "38 Cosette-series + 26 Wang et al.2018"
+      },
+      "outcomes": {
+        "LeetCode": {
+          "checked": 14905,
+          "refuted": 3586,
+          "remainder_by_subtraction": 5503
+        },
+        "Calcite": {
+          "checked": 261,
+          "refuted": 4,
+          "remainder_by_subtraction": 132
+        },
+        "Literature": {
+          "checked": 34,
+          "refuted": 29,
+          "remainder_by_subtraction": 1
+        }
+      },
+      "remainder_label": "Derived residual, not independently classified timeout/error counts",
+      "parameters": {
+        "timeout_seconds": 600,
+        "schedule": "N grows from 1 until timeout/counterexample",
+        "checked_definition": "at least bound 1 completed without found counterexample",
+        "fixed_bound_table": "Appendix C.3 Table 1; time statistics only over terminating cases"
+      },
+      "bound_2_3_4_table": {
+        "columns": [
+          "bound",
+          "LeetCode proved/mean_s/median_s",
+          "Calcite proved/mean_s/median_s",
+          "Literature proved/mean_s/median_s"
+        ],
+        "rows": [
+          [
+            2,
+            [
+              14894,
+              0.7,
+              0.4
+            ],
+            [
+              261,
+              0.4,
+              0.3
+            ],
+            [
+              34,
+              2.6,
+              0.3
+            ]
+          ],
+          [
+            3,
+            [
+              14618,
+              16.1,
+              0.8
+            ],
+            [
+              261,
+              3.1,
+              0.4
+            ],
+            [
+              32,
+              4.6,
+              0.6
+            ]
+          ],
+          [
+            4,
+            [
+              11757,
+              24.5,
+              1.6
+            ],
+            [
+              242,
+              9.7,
+              0.6
+            ],
+            [
+              29,
+              17.0,
+              1.3
+            ]
+          ]
+        ],
+        "denominator": "RQ1 checked subset: 14905 / 261 / 34, not all query pairs"
+      },
+      "misses": "Literature: 7/34 checked pairs manually judged inequivalent; 2 need >1000 tuples",
+      "hardware": "UNRESOLVED; not found in inspected HTML/setup",
+      "full_corpus_cost": "UNRESOLVED; no all-job walltime measured here"
+    },
+    "version_discrepancy": {
+      "status": "CHECKEDCODE/UNRESOLVED",
+      "readme_LeetCode": 23224,
+      "paper_LeetCode": 23994,
+      "readme_RQ1": [
+        5636,
+        15200,
+        3619
+      ],
+      "readme_RQ1_total": 24455,
+      "readme_dataset_total": 23685,
+      "difference": 770,
+      "notes": "README mentions 2025_10_31 constraint updates and literature-rewrite.jsonlines; cannot substitute current file denominator into paper results; current files not recounted"
+    }
+  },
+  "sqlsolver": {
+    "paper": {
+      "status": "PAPERCLAIM",
+      "task": "sound incomplete unbounded equivalence proof; no database row bound",
+      "semantics": [
+        "bag multiplicities via U-expressions",
+        "ordered bag via separate ORDER BY strategy",
+        "COUNT NULL handling explicit in §4.3 Table 4; exhaustive NULL coverage not independently verified"
+      ],
+      "bound_refs": "§2.2 pp.227:5–6; §5 pp.227:20–21",
+      "SAT": "Over-approximation SAT does not prove inequivalence; no valid concrete counterexample follows",
+      "innovation": "handling nested/parameterized/nonlinear summations, plus ORDER BY decomposition",
+      "mature_mechanisms": [
+        "U-expressions",
+        "existing LIA* to LIA algorithm",
+        "SMT/Z3"
+      ],
+      "two_variables": "No global two-variable restriction located; cannot reinterpret as two-row bound"
+    },
+    "checked_code": {
+      "status": "CHECKEDCODE_BY_DELEGATED_AUDITOR",
+      "commit": "dcc2a91d8971a4c4d30b055f99d7d8428a1b754b",
+      "version": "v1.1.0",
+      "commit_date": "2025-11-22T07:37:07Z",
+      "IC": [
+        "Unique",
+        "NotNull",
+        "Reference"
+      ],
+      "evidence": [
+        "Constraint.java:14–16,44–45",
+        "UExprTranslator.java:957–962;972–999;1007–1057;1220ff"
+      ],
+      "IC_limit": "Only these mechanisms established; arbitrary CHECK/fullC translation UNRESOLVED. Reference rewrite checks target uniqueness (bag case) and source nonnull conditions.",
+      "NULL": "UExprSupport.java:224–240 uses IsNull; no independent NULL switch found in inspected API/configuration, not an exhaustive absence claim",
+      "timeout": {
+        "Z3_ms": 10000,
+        "configuration": "sqlsolver.properties:1",
+        "API_unit": "seconds; negative means unlimited",
+        "API_ref": "Verification.java:43ff",
+        "caveat": "current code defaults are not paper parameters; README warns external calls can exceed API timeout"
+      },
+      "result_mapping": "README API explicitly allows NEQ/UNKNOWN on equivalent pairs; neither is replay-valid inequivalence evidence"
+    },
+    "experiments": {
+      "status": "PAPERCLAIM; NOTREPRODUCED",
+      "sources": "§1 p.227:3; §6.1–6.2 pp.227:21–23; Tables 5,6",
+      "datasets": [
+        {
+          "name": "Calcite",
+          "origin": "optimizer test suites",
+          "denominator": 232,
+          "proved": 232,
+          "unproved": 0
+        },
+        {
+          "name": "Spark SQL",
+          "origin": "optimizer rewrite rules",
+          "denominator": 127,
+          "proved": 114,
+          "unproved": 13
+        },
+        {
+          "name": "TPC-C",
+          "origin": "Spark optimized plans manually converted to SQL",
+          "denominator": 19,
+          "proved": 19,
+          "unproved": 0
+        },
+        {
+          "name": "TPC-H",
+          "origin": "Spark optimized plans manually converted to SQL",
+          "denominator": 22,
+          "proved": 19,
+          "unproved": 3
+        }
+      ],
+      "totals": {
+        "denominator": 400,
+        "proved": 384,
+        "unproved": 16
+      },
+      "abstract_subtotal": {
+        "denominator": 359,
+        "proved": 346,
+        "scope": "Calcite+Spark only"
+      },
+      "failure": "unsupported SQL features including lateral subqueries/window functions; unproved is not inequivalent",
+      "Table5_denominator": "384 SQLSolver-proved pairs, not 400 nor all workloads",
+      "Table6_latency_ms": {
+        "conditioning": "per pair of tools, common successfully proved subset",
+        "columns": [
+          "comparison",
+          "Calcite baseline/SQLSolver",
+          "Spark baseline/SQLSolver",
+          "TPC-C baseline/SQLSolver"
+        ],
+        "rows": [
+          [
+            "UDP",
+            [
+              3178,
+              28
+            ],
+            [
+              3039,
+              12
+            ],
+            null
+          ],
+          [
+            "SPES",
+            [
+              45,
+              122
+            ],
+            [
+              17,
+              35
+            ],
+            [
+              38,
+              39
+            ]
+          ],
+          [
+            "WeTune",
+            [
+              8,
+              30
+            ],
+            [
+              2,
+              10
+            ],
+            null
+          ]
+        ]
+      },
+      "parameters": {
+        "java": "17.0.4",
+        "z3": "4.8.9",
+        "antlr": "4.8",
+        "verification_machine": "EC2 c5a.8xlarge",
+        "paper_timeout": "UNRESOLVED",
+        "total_experiment_cost": "UNRESOLVED"
+      },
+      "separate_rewrite_benefit_experiment": {
+        "machine": "m4.10xlarge for rule discovery",
+        "execution_engine": "SQL Server 2019",
+        "rows": 1000000,
+        "data": "uniform random",
+        "repetitions": 200,
+        "warning": "execution benefit experiment; 1M is not proof row bound"
+      }
+    }
+  },
+  "same_semantics_gate": {
+    "status": "INFERENCE",
+    "required": [
+      "freeze exact query pair, schema, fullC and source hashes",
+      "same bag/list output equality, NULL/3VL, types and scalar-function abstractions",
+      "same IC semantics; assert fullC satisfiability independently of disequality",
+      "record relation-cardinality vector and exact-live versus up-to",
+      "same timeout, hardware, versions, seed/parallelism; separate encode/solve/wall time",
+      "separate unsupported, schema/parse/error, timeout, unknown, finite UNSAT, unbounded EQ, replay-valid witness"
+    ],
+    "two_variable_warning": "Two-variable cloning/renaming counts logical variable copies; row bound N counts base tuples per relation. No equivalence or two-row completeness theorem follows from sharing the number 2.",
+    "can_ask": [
+      "For the same real SQL/fullC, does a replay-valid counterexample appear at each tested cardinality?",
+      "Which SQL/IC feature causes unsupported/unknown/error, with a minimal faithful case?",
+      "How do encoding size and costs change at exact-live cardinalities 2,3,4?",
+      "Does a claimed optimization preserve statuses/witness validity and reduce cost under identical semantics?"
+    ],
+    "cannot_infer": [
+      "UNSAT at 2/3/4 proves unbounded equivalence",
+      "uniform exact-live 1..N covers all cardinality vectors up to N",
+      "two-variable theory certifies two-row SQL",
+      "timeout/unknown/unsupported is semantic inequivalence",
+      "SQLSolver NEQ is a concrete counterexample",
+      "small selected diagnostics establish population-wide coverage or SOTA",
+      "rising bound alone isolates integrity-constraint overhead"
+    ],
+    "SQLSolver_without_fullC": "An unbounded proof under weaker constraints implies equivalence under fullC if query/type semantics match. Failure under weaker constraints is not a same-semantics negative result.",
+    "research_claim_limit": "Useful diagnosis and source-faithful validation; renaming SMT/BMC/multiplicity/constraint toggles alone is not a new scientific mechanism."
+  },
+  "unresolved": [
+    "VeriEQL paper-vs-code up-to bridge",
+    "Current public benchmark count/versions underlying aggregate outcomes",
+    "VeriEQL hardware and complete experiment cost",
+    "Runtime and SQL counterexample replay of either tool",
+    "SQLSolver paper experiment timeout",
+    "Origin of claimed two-variable restriction",
+    "Complete same-semantics mapping of current fullC into SQLSolver"
+  ],
+  "restore": "Reopen linked paper sections and pinned official code; compare listed SHA256; do not commit third-party paper/code/data copies. Parent maintains recovery catalog/private backup.",
+  "local_verieql_sha256": {
+    "environment.py": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+    "parallel/cli_within_bound.py": "5d54daf868bae5924a0dd92e7a2778f0305e8fdd23e12d24d05b0f902608fb96",
+    "verifiers/bag_semantics_verifier.py": "8bc31e4b3aa4bec5e5fc2a82ffaf3e29607bb0497ebfa93938cb8dde43dc804d",
+    "README.md": "51401a36ac82711f0e4eda818f43b446ab5421d26258e9e0d5dfdc2e9ed67189",
+    "constants.py": "c7c9f759d33a1b96d8cfefa9407effb26edffddb1799d2259939d98f1fe22fa5",
+    "verifiers/verifier.py": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07"
+  }
+}

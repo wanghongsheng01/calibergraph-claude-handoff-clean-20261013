@@ -1,0 +1,11 @@
+2026-10-11 20:15:43.077 UTC [76477] LOG:  too many background workers
+2026-10-11 20:15:43.077 UTC [76477] DETAIL:  Up to 0 background workers can be registered with the current settings.
+2026-10-11 20:15:43.077 UTC [76477] HINT:  Consider increasing the configuration parameter "max_worker_processes".
+2026-10-11 20:15:43.078 UTC [76477] LOG:  starting PostgreSQL 16.14 (Homebrew) on aarch64-apple-darwin24.6.0, compiled by Apple clang version 17.0.0 (clang-1700.6.4.2), 64-bit
+2026-10-11 20:15:43.078 UTC [76477] LOG:  listening on Unix socket "/tmp/cg-pv03-sx6j6rlq/.s.PGSQL.65433"
+2026-10-11 20:15:43.080 UTC [76480] LOG:  database system was shut down at 2026-10-11 20:15:43 UTC
+2026-10-11 20:15:43.082 UTC [76477] LOG:  database system is ready to accept connections
+2026-10-11 20:15:45.722 UTC [76494] ERROR:  unrecognized configuration parameter "lc_collate"
+2026-10-11 20:15:45.722 UTC [76494] STATEMENT:  SELECT version(), current_setting('server_version_num'), current_setting('lc_collate'), current_setting('lc_ctype'), current_setting('server_encoding'), current_setting('TimeZone')
+2026-10-11 20:15:45.755 UTC [76477] LOG:  received immediate shutdown request
+2026-10-11 20:15:45.756 UTC [76477] LOG:  database system is shut down

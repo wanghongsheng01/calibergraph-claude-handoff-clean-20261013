@@ -1,0 +1,96 @@
+{
+  "case": "thrombosis_prediction__1261",
+  "development_only": true,
+  "rows": [
+    {
+      "case": "thrombosis_prediction__1261",
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.9519907077774405,
+      "solver_call_states": [
+        "SAT",
+        "UNSAT",
+        "UNSAT"
+      ],
+      "solver_call_count": 3,
+      "stages_seconds": {
+        "imports": 0.12341749994084239,
+        "schema_C": 0.004054332617670298,
+        "parse": 0.1767680011689663,
+        "encode": 0.011331001296639442,
+        "search_including_solver": 0.5420532082207501,
+        "solver_calls": 0.5391908739693463,
+        "decode": null,
+        "replay": null
+      },
+      "schema_C": {
+        "tables": 3,
+        "columns": 64,
+        "constraints": 7,
+        "all_source_columns_kept": true,
+        "constraint_kinds": [
+          "eq",
+          "not_null",
+          "primary"
+        ],
+        "auxiliary_integrity_list_not_appended": true
+      },
+      "witness_generated": false,
+      "original_SQLite_witness_replay": "NOT_APPLICABLE_NO_COUNTERMODEL"
+    },
+    {
+      "case": "thrombosis_prediction__1261",
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.36981416679918766,
+      "solver_call_states": [
+        "UNSAT"
+      ],
+      "solver_call_count": 1,
+      "stages_seconds": {
+        "imports": 0.09909074986353517,
+        "schema_C": 0.0011935420334339142,
+        "parse": 0.17449645791202784,
+        "encode": 0.011343833524733782,
+        "search_including_solver": 0.012942957691848278,
+        "solver_calls": 0.011893666815012693,
+        "decode": null,
+        "replay": null
+      },
+      "schema_C": {
+        "tables": 3,
+        "columns": 64,
+        "constraints": 7,
+        "all_source_columns_kept": true,
+        "constraint_kinds": [
+          "eq",
+          "not_null",
+          "primary"
+        ],
+        "auxiliary_integrity_list_not_appended": true
+      },
+      "witness_generated": false,
+      "original_SQLite_witness_replay": "NOT_APPLICABLE_NO_COUNTERMODEL"
+    }
+  ],
+  "batch_elapsed_s": 1.3229526248760521,
+  "solver_call_count": 4,
+  "attempted_slots": 2,
+  "scientific_retries": 0,
+  "owned_handles": 6,
+  "all_reaped": true,
+  "memory_contract": "512 MiB native allocator per Z3, own Python sampling; no aggregate RSS guarantee",
+  "old_hashes_verified_after_run": 360,
+  "freeze_hashes_verified_after_run": 356,
+  "coverage": {
+    "frozen_development_cases": 10,
+    "invalid_inputs": 2,
+    "valid_inputs": 8,
+    "cases_with_completed_bounded_runs": 4,
+    "validated_NEQ_cases": 2,
+    "bounded_UNSAT_cases": 2,
+    "not_admitted_cases": 4,
+    "not_a_success_rate": true
+  },
+  "decision": "ANTI_MASKING_HYPOTHESIS_CLOSED; no new-mechanism advantage; remaining semantic admission work is not baseline solver failure; no automatic expansion"
+}

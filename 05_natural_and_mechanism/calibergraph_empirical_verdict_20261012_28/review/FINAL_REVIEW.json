@@ -1,0 +1,68 @@
+{
+  "reviewed_utc": "2026-10-12T15:11:23Z",
+  "verdict": "ACCEPT_WITH_LIMITATIONS",
+  "verdict_target": "One-page empirical-paper-type decision; not manuscript acceptance",
+  "blocking_must_fix": [],
+  "supports_current_hold": true,
+  "hold_reason": "Current material does not yet establish sufficiently systematic new SQL empirical knowledge; absence of a new algorithm is not a valid sole rejection reason.",
+  "reviewed_files": [
+    {
+      "path": "../DECISION_ONE_PAGE.zh.md",
+      "sha256": "83cb8c4cbb22babd315cdafbc0c66faf181b0a7cf6c0a75cad0730fb6dcb7349"
+    },
+    {
+      "path": "../EVIDENCE_RECEIPT.json",
+      "sha256": "91c523c6bc7f03e372ab90e660f97687a735a6ca1f9793e99494302e5669d966"
+    }
+  ],
+  "targeted_local_read": [
+    "P19_DKE_revised.tex: abstract, contributions, evidence obligations, SQL boundary, independent verifier, discussion and limitations",
+    "results_current.tex: six-arm outcomes, public applicability and stated boundaries",
+    "sqlite_case_study.tex: natural inventory, Polygon outcomes, constructed witnesses and COUNT regression scope"
+  ],
+  "P19_sha256_checked": "f4e66ef3308cc75d66f08bd09e7b61a3f4b8de02d1344d92b50d3d44ae801c2c",
+  "P19_submission_identity_verified": false,
+  "P19_full_overlap_audit_performed": false,
+  "web_review": {
+    "official_scope_body_read": true,
+    "official_scope_url": "https://shop.elsevier.com/journals/data-and-knowledge-engineering/0169-023X",
+    "comparison_papers_direct_open": "Both publisher pages returned 403",
+    "comparison_paper_snippets_independently_recovered": false,
+    "full_papers_or_result_tables_read": false,
+    "author_guide_verified": false,
+    "scope_of_conclusion": "Access-level disclosure is appropriately limited; bibliographic detail is not independently certified by this review"
+  },
+  "optional_wording_refinement": {
+    "location": "DECISION_ONE_PAGE.zh.md line 5",
+    "issue": "DLBench+ cannot by itself establish a journal-wide hard system-count rule from the accessible excerpts",
+    "suggested_text": "这些可读材料不能推出固定的系统数量门槛；本裁决关注可复用评估对象及明确的新知识。"
+  },
+  "experiment_assessment": {
+    "can_change_judgment": true,
+    "requires_positive_bug_count_or_baseline_win": false,
+    "sixty_pairs_six_schemas_is_hard_threshold": false,
+    "three_tools_is_venue_requirement": false,
+    "only_possible_empirical_paper_path": false,
+    "tonight_feasibility_guaranteed": false,
+    "core_requirements": [
+      "Faithful common semantic admission and complete source constraints",
+      "Native and adapted paths distinguished",
+      "Code lineage and independent witness replay",
+      "All failures remain in denominators",
+      "Cross-schema recurring SQL-specific knowledge or useful characterized coverage boundaries"
+    ]
+  },
+  "actions": {
+    "sql_parser_solver_benchmark_executed": false,
+    "experiments_recomputed": false,
+    "author_or_legacy_files_modified": false,
+    "new_candidates_or_broad_review_started": false,
+    "only_created_review_files": true
+  },
+  "limitations": [
+    "Narrow decision review, not full manuscript or submission audit",
+    "Reported experimental quantities were checked against manuscript tables, not raw-run recomputation",
+    "No full text/data/figure reuse certification",
+    "No journal acceptance prediction"
+  ]
+}

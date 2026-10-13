@@ -1,0 +1,7 @@
+# 恢复与审计
+
+作者包存于私有wanghongsheng01/calibergraph-method-research-20261011的polygon_case1172_20261012_16/。备份作者controller/worker/adapter/保护代码、原生调用记录、生成SMT、抽象与具体合成见证、结果/独审及哈希；不备份原公共SQL/DDL、上游源码、依赖或native_local二进制。
+
+恢复同级09、13、15作者包，按各自RECOVERY恢复固定第三方来源：ParSEval commit88cfe245bcf249a5b0df561a6b09c116ff2a2896，Polygon commit5e18237394d025dbb805cf833b4f54c321470774及13固定依赖。16的worker/adapter与15完全同字节，controller/owned_processes与13同字节，旧15执行门不改。所有运行绑定见16/FREEZE.files_sha256；../指向同级原包。native_local/z3复制自13，字节SHA edae32f9e37ea4b5bb35310d72f0e352d0dc07626cac4e9e30bc1ea9a5bc8efb，只对新副本设置0755。不得换成当前main或系统其他Z3。
+
+核对DELIVERY_MANIFEST后，只对保存见证使用review_local的独立脚本复核原DDL/C/SQL与固定lift。不删ATTEMPT_STARTED或BATCH_CLOSED，不再运行run_batch.py；本批已经完成且无重试授权。恢复后再次求解属于新实验，需要新批次，不能冒充文件验证。原官方artifact的长期可得性、专用DataHub注册历史限制仍沿前包记录，作者备份不等于永久第三方数据存档。

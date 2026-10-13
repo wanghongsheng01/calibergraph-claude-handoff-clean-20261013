@@ -1,0 +1,1904 @@
+{
+  "schema_version": 1,
+  "data_role": "EXPOSED_DEV_PLUS_CONSTRUCTED_ANALYTICAL_CONTROLS_NOT_HELDOUT",
+  "registered_utc": "2026-10-11T04:11:19.630545+00:00",
+  "source_provenance": {
+    "inherited_registration_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "inherited_registration_sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746",
+    "original_22_cases_preserved_exactly": true,
+    "inherited_original_provenance": {
+      "original_stress_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+      "sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4",
+      "original_N2_N4_cases_preserved": 12,
+      "new_constructed_cases": 10,
+      "N8": "not in this suite; prior N8 registration remains separate, no claim of running it"
+    },
+    "bridge_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py",
+    "bridge_source_sha256": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "new_controls": "Six source-derived constructed repair controls D01-D06; expected labels analytical only, not measured."
+  },
+  "cost_full_denominator": 168,
+  "differential_full_denominator": 168,
+  "cases": [
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S01_reordered_conjunction_N2",
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S01_reordered_conjunction_N2",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S02_nullable_count_N2",
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S02_nullable_count_N2",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": [
+        {
+          "not_null": "F__V"
+        }
+      ],
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S03_full_not_null_IC_N2",
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S03_full_not_null_IC_N2",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S04_sum_vs_count_N2",
+      "arm_order": [
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S04_sum_vs_count_N2",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>1 AND F.V<0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>2 AND F.V<0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S05_empty_SUM_NULL_N2",
+      "arm_order": [
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S05_empty_SUM_NULL_N2",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S06_all_NULL_SUM_N2",
+      "arm_order": [
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S06_all_NULL_SUM_N2",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S01_reordered_conjunction_N4",
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S01_reordered_conjunction_N4",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S02_nullable_count_N4",
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S02_nullable_count_N4",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": [
+        {
+          "not_null": "F__V"
+        }
+      ],
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S03_full_not_null_IC_N4",
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S03_full_not_null_IC_N4",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S04_sum_vs_count_N4",
+      "arm_order": [
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S04_sum_vs_count_N4",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>1 AND F.V<0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>2 AND F.V<0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S05_empty_SUM_NULL_N4",
+      "arm_order": [
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S05_empty_SUM_NULL_N4",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S06_all_NULL_SUM_N4",
+      "arm_order": [
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ],
+      "origin": {
+        "role": "REUSED_EXPOSED_DEV",
+        "original_case_id": "S06_all_NULL_SUM_N4",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+        "source_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical existence of a complete database; not a measured result",
+        "empty_query_output_is_not_contract_unsat": true
+      }
+    },
+    {
+      "id": "E01_add_sub_nonnull_identity",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": [
+        {
+          "not_null": "F__L"
+        }
+      ],
+      "pair": [
+        "SELECT SUM((F.V+F.L)-F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Root addition/subtraction cancellation with required non-null L; V may be NULL."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            7
+          ]
+        ],
+        [
+          [
+            7
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat"
+    },
+    {
+      "id": "E02_add_sub_nullable_negative",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM((F.V+F.L)-F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Same cancellation is invalid with nullable L; preserve the negative control."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            null,
+            2
+          ],
+          [
+            2,
+            1,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            5
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "sat"
+    },
+    {
+      "id": "E03_variable_product_commutativity",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": [
+        {
+          "between": [
+            "F__V",
+            -8,
+            8
+          ]
+        },
+        {
+          "between": [
+            "F__L",
+            -8,
+            8
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.L*F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Root variable product; predeclared bounded constructed ICs, still nonlinear syntax; no global LIA claim."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            26
+          ]
+        ],
+        [
+          [
+            26
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat"
+    },
+    {
+      "id": "E04_root_between_inclusive",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE F.V BETWEEN -2 AND 3",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE F.V>=-2 AND F.V<=3"
+      ],
+      "arm_order": [
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Inclusive root BETWEEN and SQL three-valued conjunction."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat"
+    },
+    {
+      "id": "E05_leaf_between_boundary_negative",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE D.P BETWEEN 0 AND 1",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE D.P>0 AND D.P<1"
+      ],
+      "arm_order": [
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Leaf BETWEEN endpoints 0/1; second integer predicate admits no row."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            7
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "sat"
+    },
+    {
+      "id": "E06_null_times_zero_negative",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V*0) FROM F JOIN D ON F.K=D.ID WHERE F.V IS NULL",
+        "SELECT SUM(0) FROM F JOIN D ON F.K=D.ID WHERE F.V IS NULL"
+      ],
+      "arm_order": [
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Strict NULL: NULL*0 remains NULL while literal zero is non-null."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            7,
+            null
+          ],
+          [
+            2,
+            4,
+            1
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "sat"
+    },
+    {
+      "id": "E07_count_zero_expression",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(F.V-F.V) FROM F JOIN D ON F.K=D.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "COUNT(expr) counts a non-null zero; excludes nullable V."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            null
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat"
+    },
+    {
+      "id": "E08_empty_sum_not_vacuous_contract",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID WHERE F.V>3 AND F.V<0",
+        "SELECT SUM(F.V+F.L) FROM F JOIN D ON F.K=D.ID WHERE F.V>4 AND F.V<0"
+      ],
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Both query filters empty; database contract remains SAT and positive exact cardinalities remain."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat"
+    },
+    {
+      "id": "E09_fixed_sum_overflow_domain",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 1,
+        "D": 2,
+        "E": 1
+      },
+      "constraint": [
+        {
+          "eq": [
+            "F__K",
+            1
+          ]
+        },
+        {
+          "eq": [
+            "F__L",
+            -2147483648
+          ]
+        },
+        {
+          "eq": [
+            "F__V",
+            -2147483648
+          ]
+        },
+        {
+          "eq": [
+            "D__ID",
+            1
+          ]
+        },
+        {
+          "eq": [
+            "D__P",
+            0
+          ]
+        },
+        {
+          "eq": [
+            "E__ID",
+            10
+          ]
+        },
+        {
+          "eq": [
+            "E__Q",
+            0
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V*F.L-1) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Exact fixed complete DB ensures overflow is tested without solver choosing extreme values."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            -2147483648,
+            -2147483648
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ]
+        ]
+      },
+      "point_expected_relations": null,
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "UNKNOWN_ORACLE_DOMAIN",
+      "oracle_expectation": {
+        "mathematical_pair_decision": "sat",
+        "per_query_domain": [
+          "UNKNOWN_ORACLE_DOMAIN",
+          "SAFE_FOR_SQLITE_INT64"
+        ],
+        "mathematical_relations_decimal_strings": [
+          [
+            [
+              "9223372036854775808"
+            ]
+          ],
+          [
+            [
+              "9223372036854775806"
+            ]
+          ]
+        ],
+        "safe_query_sqlite_relations": {
+          "1": [
+            [
+              9223372036854775806
+            ]
+          ]
+        },
+        "out_of_domain_is_not_success_or_algorithm_counterexample": true
+      }
+    },
+    {
+      "id": "E10_inconsistent_contract_not_pair_unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": [
+        {
+          "gte": [
+            "F__V",
+            1
+          ]
+        },
+        {
+          "lte": [
+            "F__V",
+            0
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V+1) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "arm_order": [
+        "product",
+        "selector",
+        "official_canonical_sql",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Negative vacuity control: complete input contract is inconsistent; no pair-equivalence decision admissible."
+      },
+      "contract_expectation": {
+        "satisfiability": "unsat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": null,
+      "point_expected_relations": null,
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected_runtime_guard": {
+        "contract_guard.consistency": "unsat",
+        "final_decision": "NOT_RUN",
+        "worker_status": "BLOCKED_OR_ERROR"
+      }
+    },
+    {
+      "id": "D01_literal_left_forced_A6",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            6
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "5 < A AND A <= 6 over INT forces A=6 and NOT NULL. Original SQL returns NULL versus 6. Wrong raw upstream compiler would instead impose A<5 AND A<=6 and make these queries equal.",
+      "contract_expectation": "sat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected": "sat",
+      "registered_fixed_database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "registered_fixed_sql_outputs": [
+        null,
+        6
+      ]
+    },
+    {
+      "id": "D02_same_SQL_same_C",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            6
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "Same raw SQL under same nonvacuous C; canonical and solver paths must still pass whole contract bridge.",
+      "contract_expectation": "sat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected": "unsat",
+      "registered_fixed_database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "registered_fixed_sql_outputs": [
+        6,
+        6
+      ]
+    },
+    {
+      "id": "D03_no_C_same_pair",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "No extra contract; A=6 is a legal difference. The base exact-row/INT32 contract remains active.",
+      "contract_expectation": "sat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected": "sat",
+      "registered_fixed_database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "registered_fixed_sql_outputs": [
+        null,
+        6
+      ]
+    },
+    {
+      "id": "D04_contradictory_literal_left",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "5<A AND A<=5 is inconsistent. Base-only bridge XOR may pass but contract guard must reject without pair UNSAT.",
+      "contract_expectation": "unsat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected_final_decision": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "id": "D05_inverted_BETWEEN_contract",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "between": [
+            {
+              "value": "T__A"
+            },
+            6,
+            5
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "Inclusive original-order BETWEEN 6 and 5 is contradictory. It must not be reordered, dropped, or reported as query equivalence.",
+      "contract_expectation": "unsat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected_final_decision": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "id": "D06_unsupported_whole_C",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "or": [
+            {
+              "eq": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            {
+              "eq": [
+                {
+                  "value": "T__A"
+                },
+                7
+              ]
+            }
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "OR is outside the independent reference. Reject the entire original AST without compiling only the supported first clause or using old upstream fallback.",
+      "contract_expectation": "UNVERIFIED_UNSUPPORTED_WHOLE_AST",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected_final_decision": "UNVERIFIED_CONTRACT"
+    }
+  ],
+  "analysis_rules": {
+    "same_contract_for_all_arms": "Use v5 main entry with source AST bridge, including baseline and fallback. No raw-C bypass.",
+    "rejection": "Whole unsupported or unknown bridge stops with typed no-pair outcome; inconsistent verified C gives CONTRACT_UNSAT_REJECTED, never pair unsat.",
+    "source_semantics": "Only source AST faithfulness, not text-parser completeness. Strict TRUE NULL policy; not inferred SQL CHECK/DDL semantics.",
+    "case_strata": "First12 original DEV N2/N4; next10 v4 constructed controls; last6 v5 contract-adapter controls. No pooled natural generalization or success-rate inflation.",
+    "fixed_A6": "D01 source C logically forces T.A=6; every actual SAT witness must validate original C and replay original SQL NULL versus6. Fixed metadata for other controls is analytical, not a measurement.",
+    "control_cost": "Every admitted arm pays base/schema/normalization/reference audit/XOR/full-C guard/fallback/cleanup in cold cost.",
+    "bridge_nonvacuity": "Base-only SAT precedes normalized-v-reference XOR; full C SAT separately required before any pair attempt.",
+    "spotit": "Controlled engine same 4.12 native; actual auto/set preserved, scalar-only set/bag coincidence does not assert bag implementation."
+  },
+  "registration_status": "NOT_RUN"
+}

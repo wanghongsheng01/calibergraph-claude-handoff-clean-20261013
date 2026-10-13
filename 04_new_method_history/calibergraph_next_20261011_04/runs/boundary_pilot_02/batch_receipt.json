@@ -1,0 +1,627 @@
+{
+  "id": "calibergraph-04-pilot-supervisor-receipt-v1",
+  "status": "REGISTERED_SEQUENCE_FINISHED",
+  "created_utc": "2026-10-11T13:31:01.347081+00:00",
+  "registered_denominator": 10,
+  "slots": [
+    {
+      "slot": 0,
+      "case_id": "dev04_N1_concrete",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N1_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 1,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:01.519613+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 33%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 33,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.098079,
+          "parent_system_cpu_seconds": 0.066777,
+          "all_reaped_children_user_cpu_seconds": 0.000514,
+          "all_reaped_children_system_cpu_seconds": 0.0011819999999999999,
+          "supervisor_plus_reaped_cpu_seconds": 0.16655199999999998,
+          "observed_total_cpu_seconds": 3.574881,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 3.774881,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46458,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.029285,
+        "system_cpu_seconds": 0.015019,
+        "cpu_seconds": 0.044303999999999996,
+        "maxrss_bytes_darwin": 20054016
+      },
+      "worker_report_status": "COMPLETED",
+      "observed_stage_sequence": [],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 1,
+      "case_id": "dev04_N1_official",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N1_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 1,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:01.638092+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 33%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 33,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.10071999999999999,
+          "parent_system_cpu_seconds": 0.070685,
+          "all_reaped_children_user_cpu_seconds": 0.034823,
+          "all_reaped_children_system_cpu_seconds": 0.040136,
+          "supervisor_plus_reaped_cpu_seconds": 0.24636399999999997,
+          "observed_total_cpu_seconds": 3.654693,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 3.854693,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46461,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.7512519999999999,
+        "system_cpu_seconds": 0.077044,
+        "cpu_seconds": 0.8282959999999999,
+        "maxrss_bytes_darwin": 107937792
+      },
+      "worker_report_status": "REGISTERED_EXACT_SHAPE_ATTEMPT_RETURNED",
+      "observed_stage_sequence": [
+        "NATIVE_AND_OFFICIAL_IMPORT",
+        "OFFICIAL_PARSE_QUERY_0"
+      ],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 2,
+      "case_id": "dev04_N2_concrete",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N2_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 2,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:02.620378+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.109398,
+          "parent_system_cpu_seconds": 0.083159,
+          "all_reaped_children_user_cpu_seconds": 0.826251,
+          "all_reaped_children_system_cpu_seconds": 0.304544,
+          "supervisor_plus_reaped_cpu_seconds": 1.3233519999999999,
+          "observed_total_cpu_seconds": 4.731681,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 4.931681,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46478,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.030336,
+        "system_cpu_seconds": 0.012579,
+        "cpu_seconds": 0.042914999999999995,
+        "maxrss_bytes_darwin": 19447808
+      },
+      "worker_report_status": "COMPLETED",
+      "observed_stage_sequence": [],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 3,
+      "case_id": "dev04_N2_official",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N2_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 2,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:02.738377+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.11254099999999999,
+          "parent_system_cpu_seconds": 0.087056,
+          "all_reaped_children_user_cpu_seconds": 0.8619559999999999,
+          "all_reaped_children_system_cpu_seconds": 0.338551,
+          "supervisor_plus_reaped_cpu_seconds": 1.400104,
+          "observed_total_cpu_seconds": 4.808433,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 5.008433,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46484,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.764162,
+        "system_cpu_seconds": 0.06730799999999999,
+        "cpu_seconds": 0.83147,
+        "maxrss_bytes_darwin": 108822528
+      },
+      "worker_report_status": "REGISTERED_EXACT_SHAPE_ATTEMPT_RETURNED",
+      "observed_stage_sequence": [
+        "NATIVE_AND_OFFICIAL_IMPORT",
+        "FULL_C_NONEMPTY_CHECK"
+      ],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 4,
+      "case_id": "dev04_N3_concrete",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N3_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 3,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:03.608822+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.12042,
+          "parent_system_cpu_seconds": 0.09744599999999999,
+          "all_reaped_children_user_cpu_seconds": 1.661829,
+          "all_reaped_children_system_cpu_seconds": 0.561574,
+          "supervisor_plus_reaped_cpu_seconds": 2.441269,
+          "observed_total_cpu_seconds": 5.849598,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 6.0495980000000005,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46504,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.0288,
+        "system_cpu_seconds": 0.012551,
+        "cpu_seconds": 0.041351,
+        "maxrss_bytes_darwin": 19791872
+      },
+      "worker_report_status": "COMPLETED",
+      "observed_stage_sequence": [],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 5,
+      "case_id": "dev04_N3_official",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N3_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 3,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:03.726724+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.12361499999999999,
+          "parent_system_cpu_seconds": 0.10122199999999999,
+          "all_reaped_children_user_cpu_seconds": 1.695582,
+          "all_reaped_children_system_cpu_seconds": 0.594421,
+          "supervisor_plus_reaped_cpu_seconds": 2.51484,
+          "observed_total_cpu_seconds": 5.923169,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 6.123169,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46508,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.854947,
+        "system_cpu_seconds": 0.06897099999999999,
+        "cpu_seconds": 0.923918,
+        "maxrss_bytes_darwin": 110886912
+      },
+      "worker_report_status": "REGISTERED_EXACT_SHAPE_ATTEMPT_RETURNED",
+      "observed_stage_sequence": [
+        "NATIVE_AND_OFFICIAL_IMPORT",
+        "OFFICIAL_PARSE_QUERY_0"
+      ],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 6,
+      "case_id": "dev04_N4_concrete",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N4_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 4,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:04.698856+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.13267099999999998,
+          "parent_system_cpu_seconds": 0.112991,
+          "all_reaped_children_user_cpu_seconds": 2.59124,
+          "all_reaped_children_system_cpu_seconds": 0.85029,
+          "supervisor_plus_reaped_cpu_seconds": 3.6871919999999996,
+          "observed_total_cpu_seconds": 7.095521,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 7.295521,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46521,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.028347999999999998,
+        "system_cpu_seconds": 0.013583,
+        "cpu_seconds": 0.041930999999999996,
+        "maxrss_bytes_darwin": 19775488
+      },
+      "worker_report_status": "COMPLETED",
+      "observed_stage_sequence": [],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 7,
+      "case_id": "dev04_N4_official",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N4_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 4,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:04.813632+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.21484375,
+          2.7783203125,
+          2.7724609375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.135759,
+          "parent_system_cpu_seconds": 0.11662399999999999,
+          "all_reaped_children_user_cpu_seconds": 2.62451,
+          "all_reaped_children_system_cpu_seconds": 0.8845219999999999,
+          "supervisor_plus_reaped_cpu_seconds": 3.761415,
+          "observed_total_cpu_seconds": 7.169744,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 7.369744,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46525,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.7675329999999999,
+        "system_cpu_seconds": 0.06412799999999999,
+        "cpu_seconds": 0.8316609999999999,
+        "maxrss_bytes_darwin": 103038976
+      },
+      "worker_report_status": "REGISTERED_EXACT_SHAPE_ATTEMPT_RETURNED",
+      "observed_stage_sequence": [
+        "NATIVE_AND_OFFICIAL_IMPORT",
+        "BETWEEN_STAGES"
+      ],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 8,
+      "case_id": "dev04_N5_concrete",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N5_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 5,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:05.751422+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.197265625,
+          2.78173828125,
+          2.7734375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.14549199999999998,
+          "parent_system_cpu_seconds": 0.128336,
+          "all_reaped_children_user_cpu_seconds": 3.431844,
+          "all_reaped_children_system_cpu_seconds": 1.119947,
+          "supervisor_plus_reaped_cpu_seconds": 4.825619,
+          "observed_total_cpu_seconds": 8.233948,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 8.433948,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46540,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.032211,
+        "system_cpu_seconds": 0.013597,
+        "cpu_seconds": 0.045807999999999995,
+        "maxrss_bytes_darwin": 19349504
+      },
+      "worker_report_status": "COMPLETED",
+      "observed_stage_sequence": [],
+      "stop_remainder": null,
+      "violations": []
+    },
+    {
+      "slot": 9,
+      "case_id": "dev04_N5_official",
+      "status": "RETURNED",
+      "registered_slot": {
+        "id": "dev04_N5_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 5,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:31:05.871199+00:00",
+        "status": "RETURNED",
+        "load": [
+          3.197265625,
+          2.78173828125,
+          2.7734375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 32,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 3.408329,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.149508,
+          "parent_system_cpu_seconds": 0.133103,
+          "all_reaped_children_user_cpu_seconds": 3.469719,
+          "all_reaped_children_system_cpu_seconds": 1.1570259999999999,
+          "supervisor_plus_reaped_cpu_seconds": 4.909356,
+          "observed_total_cpu_seconds": 8.317685,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 8.517685,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/supervisor_receipt.json",
+      "worker_exit_code": 0,
+      "worker_wait4_usage": {
+        "pid": 46544,
+        "exit_code": 0,
+        "user_cpu_seconds": 0.7310559999999999,
+        "system_cpu_seconds": 0.066577,
+        "cpu_seconds": 0.7976329999999999,
+        "maxrss_bytes_darwin": 100188160
+      },
+      "worker_report_status": "REGISTERED_EXACT_SHAPE_ATTEMPT_RETURNED",
+      "observed_stage_sequence": [
+        "NATIVE_AND_OFFICIAL_IMPORT",
+        "OFFICIAL_PARSE_QUERY_0"
+      ],
+      "stop_remainder": null,
+      "violations": []
+    }
+  ],
+  "violations": [],
+  "fixed_policy": {
+    "worker_cpu_hard_seconds": 3,
+    "worker_wall_seconds": 4.0,
+    "worker_rss_bytes": 268435456,
+    "batch_cpu_seconds": 60.0,
+    "prior_preflight_cpu_charge_seconds": 3.408329,
+    "final_report_exit_tail_reserve_seconds": 0.2,
+    "start_new_slot_max_charged_cpu_seconds": 50.0,
+    "active_parent_and_reaped_stop_seconds": 56.0,
+    "solver_watchdog_trigger_seconds": 1.5,
+    "solver_cumulative_wall_seconds": 2.0,
+    "maximum_checks_per_case": 2,
+    "max_1min_load": 4.0,
+    "min_memory_available_percentage": 25,
+    "machine_probe_timeout_seconds": 0.5,
+    "ps_timeout_seconds": 0.3,
+    "poll_target_seconds": 0.1,
+    "initial_progress_grace_seconds": 0.5,
+    "maximum_workers": 1,
+    "nice_minimum": 15
+  },
+  "maximum_workers": 1,
+  "read_reserve": false,
+  "automatic_retries": 0,
+  "registered_case_ids": [
+    "dev04_N1_concrete",
+    "dev04_N1_official",
+    "dev04_N2_concrete",
+    "dev04_N2_official",
+    "dev04_N3_concrete",
+    "dev04_N3_official",
+    "dev04_N4_concrete",
+    "dev04_N4_official",
+    "dev04_N5_concrete",
+    "dev04_N5_official"
+  ],
+  "protocol_sha256": "384fc9ea85f10da0b305d092c770d440661eb4bec26b03822909db851b024ac2",
+  "freeze_sha256": "5773ebac1b4800df7170997a85f6e3ca83863b66f6cb7bb6b36be39d43746cce",
+  "supervisor_sha256": "513667f5bb102f14b57f131b13e12c0a707ade5a4ce1e3aa1b0669eff5288a47",
+  "frozen_file_count": 868,
+  "interpreter": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "interpreter_sha256": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324",
+  "clean_worker_environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "NUMEXPR_MAX_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "TBB_NUM_THREADS": "1"
+  },
+  "cpu_accounting": {
+    "pre_registered_prior_cpu_seconds": 3.408329,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.158222,
+    "parent_system_cpu_seconds": 0.143461,
+    "all_reaped_children_user_cpu_seconds": 4.236164,
+    "all_reaped_children_system_cpu_seconds": 1.38971,
+    "supervisor_plus_reaped_cpu_seconds": 5.927556999999999,
+    "observed_total_cpu_seconds": 9.335885999999999,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 9.535885999999998,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "halt_reason": null,
+  "finished_utc": "2026-10-11T13:31:06.735721+00:00",
+  "registered_attempts": 10,
+  "measurement_note": "RSS, solver and wall checks are sampled and can overshoot; actual wait4 usage, all violations and censored timings are preserved. The 1.0s prior and 0.2s tail are charged reserves, not measurements."
+}

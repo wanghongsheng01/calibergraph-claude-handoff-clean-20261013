@@ -1,0 +1,352 @@
+{
+  "denominator": {
+    "frozen_cases": 10,
+    "valid_SQL_pairs": 8,
+    "invalid_SQL_pairs": 2,
+    "typed_full_C_admitted_cases": 2,
+    "other_valid_not_admitted_cases": 6,
+    "potential_case_modes": 20,
+    "prior_executed_case_modes": 4,
+    "new_executed_case_modes": 0,
+    "static_NOT_RUN_case_modes": 16
+  },
+  "runtime_counts_all_available_prior_evidence": {
+    "VALIDATED_NEQ": 2,
+    "BOUNDED_SYMBOLIC_UNSAT": 2,
+    "UNKNOWN": 0,
+    "TIMEOUT": 0,
+    "ERROR": 0,
+    "INVALID_WITNESS": 0
+  },
+  "not_run_is_not_solver_failure": true,
+  "not_population_success_rate": true,
+  "rows": [
+    {
+      "case_id": "thrombosis_prediction__1172",
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "table_count": 3,
+      "column_count": 64,
+      "type_counts": {
+        "INTEGER": 26,
+        "DATE": 5,
+        "REAL": 13,
+        "TEXT": 20
+      },
+      "reasons": [
+        "Laboratory.T-BIL is REAL and used at the 2.0 boundary; source also contains DATE. Existing worker maps only INTEGER/TEXT. No silent REAL-to-int or DATE-to-text conversion admitted.",
+        "Historical ParSEval false EQ and independent legal witness remain prior development evidence, not a new Polygon result."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "case_id": "toxicology__319",
+      "category": "PREVIOUSLY_EXECUTED",
+      "table_count": 4,
+      "column_count": 11,
+      "type_counts": {
+        "TEXT": 11
+      },
+      "reasons": [
+        "Reuse pilot13 two bounded symbolic UNSAT results; original SQL bytes identical. No whole SQLite-domain proof and no rerun."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "BOUNDED_SYMBOLIC_UNSAT",
+        "evidence_batch": "pilot13",
+        "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_UA/RESULT.json",
+        "result_sha256": "2714aa1c32d49f639265f91120031e0544b8aac900a5dc134439c58a6f03dc31",
+        "witness_sha256": null,
+        "new_run": false
+      },
+      "precise": {
+        "status": "BOUNDED_SYMBOLIC_UNSAT",
+        "evidence_batch": "pilot13",
+        "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_precise/RESULT.json",
+        "result_sha256": "a2a69aa9b82c65dae16440037b902ce8eed6ff7c152e0d7d74d5579df7a64053",
+        "witness_sha256": null,
+        "new_run": false
+      },
+      "secondary_static_tags": []
+    },
+    {
+      "case_id": "thrombosis_prediction__1261",
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "table_count": 3,
+      "column_count": 64,
+      "type_counts": {
+        "INTEGER": 26,
+        "DATE": 5,
+        "REAL": 13,
+        "TEXT": 20
+      },
+      "reasons": [
+        "Laboratory.RF is TEXT compared to numeric 20: SQLite affinity/order is not numeric string-hash order. Complete DDL also contains REAL and DATE.",
+        "Earlier FK equivalence argument is separate static evidence, not a new solver result."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "case_id": "debit_card_specializing__1490",
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "table_count": 5,
+      "column_count": 21,
+      "type_counts": {
+        "INTEGER": 11,
+        "TEXT": 7,
+        "DATE": 1,
+        "REAL": 2
+      },
+      "reasons": [
+        "Consumption is REAL, comparison literal is 46.73, queries use FLOAT/REAL CAST and division. Fixed encoder makes CAST an identity and cell is Int; SQLite floating semantics not admitted.",
+        "DDL has two REFERENCES declarations on yearmonth.CustomerID with implicit target PK, UNIQUE, AUTOINCREMENT and DATE; existing restricted full-C mapper is not complete for this schema."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED",
+        "ENCODER_SEMANTIC_GAP_OR_NO_EXPLICIT_OPERATOR_BRANCH_NOT_DYNAMICALLY_TESTED"
+      ]
+    },
+    {
+      "case_id": "superhero__750",
+      "category": "PREVIOUSLY_EXECUTED",
+      "table_count": 10,
+      "column_count": 31,
+      "type_counts": {
+        "INTEGER": 22,
+        "TEXT": 9
+      },
+      "reasons": [
+        "Reuse pilot13 two independently replayed full-C witnesses; no rerun. Negative weights are DDL-legal synthetic values, not real records."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "VALIDATED_NEQ",
+        "evidence_batch": "pilot13",
+        "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_UA/RESULT.json",
+        "result_sha256": "563a41e6ce5b37826138cc38f8fc576fb732e1b514393967412418bc0e410031",
+        "witness_sha256": "3a704deb6e4144ba3d32a793d6e2ebb949bfe1e0ad5371f407630ebe48b7971a",
+        "new_run": false
+      },
+      "precise": {
+        "status": "VALIDATED_NEQ",
+        "evidence_batch": "pilot13",
+        "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_precise/RESULT.json",
+        "result_sha256": "f695aadd548b8edd8003193c589248612c4f934852f37f2c1f4dd9820c2562aa",
+        "witness_sha256": "c5f0e88854890aad85fe483c739f3bac31315a5d4bd50a94230982219f6c0a9b",
+        "new_run": false
+      },
+      "secondary_static_tags": []
+    },
+    {
+      "case_id": "european_football_2__1073",
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "table_count": 7,
+      "column_count": 199,
+      "type_counts": {
+        "INT": 136,
+        "VARCHAR": 33,
+        "REAL": 30
+      },
+      "reasons": [
+        "Original pair uses SUBSTR versus strftime on date strings. No explicit substr/substring/strftime encoder branch in fixed complete source; parser normalization was not executed and is not assumed absent.",
+        "Full schema has additional types and UNIQUE constraints outside the old mapper. Date decoder clamps overflowing integers; do not claim exact source-domain mapping."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED",
+        "ENCODER_SEMANTIC_GAP_OR_NO_EXPLICIT_OPERATOR_BRANCH_NOT_DYNAMICALLY_TESTED"
+      ]
+    },
+    {
+      "case_id": "california_schools__45",
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "table_count": 3,
+      "column_count": 89,
+      "type_counts": {
+        "TEXT": 62,
+        "INTEGER": 12,
+        "REAL": 12,
+        "DATE": 3
+      },
+      "reasons": [
+        "Complete schema includes REAL and DATE (including NOT NULL schools.LastUpdate), plus quoted column names. Cannot drop unreferenced frpm or coerce all source types into existing map.",
+        "N=1 is insufficient for the existing two-school group-merging countermodel; this limits interpretation but is NOT an independent reason to reject admission."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED"
+      ]
+    },
+    {
+      "case_id": "debit_card_specializing__1526",
+      "category": "TYPE_SEMANTICS_NOT_ADMITTED",
+      "table_count": 5,
+      "column_count": 21,
+      "type_counts": {
+        "INTEGER": 11,
+        "TEXT": 7,
+        "DATE": 1,
+        "REAL": 2
+      },
+      "reasons": [
+        "REAL/DATE, CAST/division, scalar subqueries and SUBSTRING/IIF/LIKE need source-dialect semantics. LIKE has an implementation branch, so it is not categorically labelled absent.",
+        "Complete DDL has the same duplicate/implicit-target REFERENCES, UNIQUE, AUTOINCREMENT mapping obligations as #1490."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "FULL_C_TYPE_MAPPING_NOT_ADMITTED",
+        "ENCODER_SEMANTIC_GAP_OR_NO_EXPLICIT_OPERATOR_BRANCH_NOT_DYNAMICALLY_TESTED"
+      ]
+    },
+    {
+      "case_id": "california_schools__26",
+      "category": "INVALID_INPUT",
+      "table_count": 3,
+      "column_count": 89,
+      "type_counts": {
+        "TEXT": 62,
+        "INTEGER": 12,
+        "REAL": 12,
+        "DATE": 3
+      },
+      "reasons": [
+        "Predicted query refers to frpm.Street (also City/Zip/State); those columns are absent. Keep malformed pair in denominator, do not repair aliases or replace case."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_INVALID_INPUT",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_INVALID_INPUT",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "ORIGINAL_QUERY_MISSING_COLUMN"
+      ]
+    },
+    {
+      "case_id": "student_club__1390",
+      "category": "INVALID_INPUT",
+      "table_count": 8,
+      "column_count": 48,
+      "type_counts": {
+        "TEXT": 41,
+        "REAL": 3,
+        "INTEGER": 4
+      },
+      "reasons": [
+        "Predicted query refers to expense.link_to_event, absent from original expense DDL. Keep malformed pair in denominator.",
+        "Nullable non-integer SQLite PRIMARY KEY columns add a separate semantic issue: Polygon primary encoder forces non-NULL; no mapping admission asserted."
+      ],
+      "development_only": true,
+      "new_attempts": 0,
+      "UA": {
+        "status": "NOT_RUN_INVALID_INPUT",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "precise": {
+        "status": "NOT_RUN_INVALID_INPUT",
+        "evidence_batch": "coverage14_static",
+        "new_run": false,
+        "stage_times": null
+      },
+      "secondary_static_tags": [
+        "ORIGINAL_QUERY_MISSING_COLUMN"
+      ]
+    }
+  ]
+}

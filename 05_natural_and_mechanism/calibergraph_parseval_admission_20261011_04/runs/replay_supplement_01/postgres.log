@@ -1,0 +1,25 @@
+2026-10-11 20:47:11.429 UTC [78345] LOG:  too many background workers
+2026-10-11 20:47:11.429 UTC [78345] DETAIL:  Up to 0 background workers can be registered with the current settings.
+2026-10-11 20:47:11.429 UTC [78345] HINT:  Consider increasing the configuration parameter "max_worker_processes".
+2026-10-11 20:47:11.430 UTC [78345] LOG:  starting PostgreSQL 16.14 (Homebrew) on aarch64-apple-darwin24.6.0, compiled by Apple clang version 17.0.0 (clang-1700.6.4.2), 64-bit
+2026-10-11 20:47:11.430 UTC [78345] LOG:  listening on Unix socket "/tmp/cg-pv04s-rmyh1d6l/.s.PGSQL.65433"
+2026-10-11 20:47:11.432 UTC [78348] LOG:  database system was shut down at 2026-10-11 20:47:11 UTC
+2026-10-11 20:47:11.433 UTC [78345] LOG:  database system is ready to accept connections
+2026-10-11 20:47:12.189 UTC [78353] ERROR:  duplicate key value violates unique constraint "users_star_projects_user_id_project_id_key"
+2026-10-11 20:47:12.189 UTC [78353] DETAIL:  Key (user_id, project_id)=(987, 654) already exists.
+2026-10-11 20:47:12.189 UTC [78353] STATEMENT:  INSERT INTO users_star_projects(id,user_id,project_id) VALUES(2,987,654)
+2026-10-11 20:47:12.189 UTC [78353] ERROR:  null value in column "user_id" of relation "users_star_projects" violates not-null constraint
+2026-10-11 20:47:12.189 UTC [78353] DETAIL:  Failing row contains (3, 655, null, null, null).
+2026-10-11 20:47:12.189 UTC [78353] STATEMENT:  INSERT INTO users_star_projects(id,user_id,project_id) VALUES(3,NULL,655)
+2026-10-11 20:47:12.189 UTC [78353] ERROR:  insert or update on table "project_authorizations" violates foreign key constraint "project_authorizations_project_id_fkey"
+2026-10-11 20:47:12.189 UTC [78353] DETAIL:  Key (project_id)=(987) is not present in table "projects".
+2026-10-11 20:47:12.189 UTC [78353] STATEMENT:  INSERT INTO project_authorizations(user_id,project_id,access_level) VALUES(NULL,987,NULL)
+2026-10-11 20:47:12.189 UTC [78353] ERROR:  insert or update on table "project_authorizations" violates foreign key constraint "project_authorizations_user_id_fkey"
+2026-10-11 20:47:12.189 UTC [78353] DETAIL:  Key (user_id)=(987) is not present in table "users".
+2026-10-11 20:47:12.189 UTC [78353] STATEMENT:  INSERT INTO project_authorizations(user_id,project_id,access_level) VALUES(987,NULL,NULL)
+2026-10-11 20:47:12.189 UTC [78353] ERROR:  integer out of range
+2026-10-11 20:47:12.189 UTC [78353] STATEMENT:  INSERT INTO users_star_projects(id,user_id,project_id) VALUES(2147483648,1,1)
+2026-10-11 20:47:16.668 UTC [78346] LOG:  checkpoint starting: immediate force wait
+2026-10-11 20:47:16.675 UTC [78346] LOG:  checkpoint complete: wrote 102 buffers (5.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.007 s; sync files=106, longest=0.001 s, average=0.001 s; distance=4875 kB, estimate=4875 kB; lsn=0/19D6360, redo lsn=0/19D6328
+2026-10-11 20:47:16.746 UTC [78345] LOG:  received immediate shutdown request
+2026-10-11 20:47:16.747 UTC [78345] LOG:  database system is shut down

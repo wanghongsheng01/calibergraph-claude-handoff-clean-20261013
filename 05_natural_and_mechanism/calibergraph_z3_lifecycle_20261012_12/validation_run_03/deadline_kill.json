@@ -1,0 +1,129 @@
+{
+  "reason": "CASE_DEADLINE",
+  "elapsed_s": 0.6597257917746902,
+  "wall_seconds": 0.5,
+  "handle_count": 1,
+  "all_reaped": true,
+  "returncodes": [
+    -9
+  ],
+  "cleanup_errors": [],
+  "self_rss_stop_bytes": 1073741824,
+  "rss_scope": "own Python high-water RSS only; excludes all children",
+  "events": [
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.311515541,
+      "bytes": 16678912
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2333144.312562625,
+      "index": 0,
+      "pid_for_logging_only": 40464
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.341614333,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.368630041,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.3982805,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.428344291,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.458394958,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.488439166,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.517252166,
+      "bytes": 16744448
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.547454958,
+      "bytes": 16777216
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.576242916,
+      "bytes": 16777216
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.605261708,
+      "bytes": 16809984
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.630950166,
+      "bytes": 16809984
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.660961291,
+      "bytes": 16809984
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.689282833,
+      "bytes": 16842752
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.718113583,
+      "bytes": 16842752
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.748249833,
+      "bytes": 16842752
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.777982875,
+      "bytes": 16842752
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333144.807736291,
+      "bytes": 16842752
+    },
+    {
+      "kind": "terminate",
+      "monotonic": 2333144.816768041,
+      "pid_for_logging_only": 40464
+    },
+    {
+      "kind": "kill",
+      "monotonic": 2333144.96753425,
+      "pid_for_logging_only": 40464
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2333144.970920416,
+      "pid_for_logging_only": 40464,
+      "returncode": -9
+    }
+  ],
+  "test": "deadline_kill",
+  "expected": "CASE_DEADLINE + SIGKILL escalation + wait"
+}

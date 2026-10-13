@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-11",
+  "scope": "Read-only bounded literature verification; one identified DKE target; no SQL, SMT, experiments, clone, install or third-party full-text vendoring",
+  "target_resolution": "Parent found this exact target in the frozen references.bib/main.tex after initial transparent candidate search; no second candidate retained",
+  "papers": [
+    {
+      "id": "thanisch2019measurement",
+      "title": "Detecting measurement issues in SQL arithmetic expressions and aggregations",
+      "authors": ["Peter Thanisch", "Tapio Niemi", "Jyrki Nummenmaa", "Marko Niinimäki"],
+      "venue": "Data & Knowledge Engineering",
+      "year": 2019,
+      "volume": "122",
+      "pages": "116–129",
+      "doi": "10.1016/j.datak.2019.06.001",
+      "pii": "S0169023X1730589X",
+      "publication_status": "VERIFIED_PUBLICATION",
+      "fulltext_status": "FULLTEXT_UNRESOLVED",
+      "reproduction_status": "NOT_REPRODUCED",
+      "task": {"status": "ABSTRACT_FRAGMENT", "summary": "Detecting erroneous SQL aggregations that violate numerical measurement properties of the data", "source_ids": ["S1", "S2"]},
+      "method": {"status": "ABSTRACT_FRAGMENT", "summary": "Publisher author-index fragments mention metadata rules supplied by the data provider and implemented static checks; complete rules, algorithm and guarantees remain unresolved", "source_ids": ["S5"]},
+      "keywords": ["Aggregation", "Measurement scale and unit", "SQL", "Summarizability"],
+      "novelty": {"status": "UNRESOLVED", "note": "No firstness, dominance or complete coverage conclusion from metadata and abstract fragments"},
+      "semantics": {
+        "measurement_property_aggregation_errors": "ABSTRACT_LEVEL_SUPPORTED",
+        "measurement_scale_and_unit": "METADATA_CONFIRMED",
+        "primary_key": "UNRESOLVED",
+        "foreign_key": "UNRESOLVED",
+        "null_three_valued_logic": "UNRESOLVED",
+        "bag_set_duplicates": "UNRESOLVED",
+        "join_fanout_outer_join": "UNRESOLVED",
+        "group_by_having_exact_fragment": "UNRESOLVED",
+        "relational_grouping_semantics": "UNRESOLVED",
+        "query_equivalence": "UNRESOLVED",
+        "counterexample_database_generation": "UNRESOLVED",
+        "tuple_domain_bound_completeness": "UNRESOLVED"
+      },
+      "evaluation": {
+        "denominator_queries_subjects_datasets_errors": "UNRESOLVED",
+        "success_failure_exclusion_timeout_counts": "UNRESOLVED",
+        "baseline_and_input_budget": "UNRESOLVED",
+        "bound_timeout_hardware_repetitions_seeds": "UNRESOLVED",
+        "metadata_authoring_cost": "UNRESOLVED",
+        "runtime_memory_precision_recall": "UNRESOLVED",
+        "artifact_availability_and_license": "UNRESOLVED",
+        "fulltext_locator_lead_only": "Unverified Academia manuscript introduction points to section 7 interface/performance and section 8 experiment; not admitted as primary evidence",
+        "absence_inference_forbidden": true
+      },
+      "calibergraph_supports": [
+        "Cite this as published prior work on SQL measurement-property aggregation errors",
+        "Retain a serious related-work comparison; do not characterize as syntax-only",
+        "Use task/input/output/metadata/semantic guarantees as comparison axes pending primary full text"
+      ],
+      "calibergraph_does_not_support": [
+        "First method detecting aggregation semantic errors",
+        "DKE lacks NULL, PK/FK, relational semantics, counterexamples or experiments",
+        "CaliberGraph dominates DKE in quality, cost, coverage or completeness",
+        "DKE numerical results have been independently reproduced"
+      ]
+    }
+  ],
+  "sources": [
+    {"id":"S1","url":"https://researchportal.tuni.fi/en/publications/detecting-measurement-issues-in-sql-arithmetic-expressions-and-ag/","kind":"institutional_primary_metadata","status":"READ_METADATA_NO_FULLTEXT"},
+    {"id":"S2","url":"https://www.sciencedirect.com/science/article/pii/S0169023X1730589X","kind":"publisher_article","status":"SEARCH_INDEX_ABSTRACT_FRAGMENT; DIRECT_HTTP_403"},
+    {"id":"S3","url":"https://www.sciencedirect.com/science/article/abs/pii/S0169023X1730589X","kind":"publisher_abstract","status":"DIRECT_HTTP_403"},
+    {"id":"S4","url":"https://www.sciencedirect.com/journal/data-and-knowledge-engineering/vol/122/suppl/C","kind":"publisher_issue","status":"SEARCH_INDEX_TITLE_DOI; DIRECT_HTTP_403"},
+    {"id":"S5","url":"https://www.sciencedirect.com/author/6507393852/jyrki-nummenmaa","kind":"publisher_author_index","status":"SEARCH_INDEX_ABSTRACT_FRAGMENTS; DIRECT_HTTP_403"},
+    {"id":"S6","url":"https://sites.google.com/webster.ac.th/niinimaki/niinimaki-publications","kind":"author_publication_list","status":"READ_BIBLIOGRAPHY"},
+    {"id":"S7","url":"https://dl.acm.org/doi/10.1016/j.datak.2019.06.001","kind":"bibliographic_index","status":"SEARCH_INDEX_ONLY; DIRECT_UNAVAILABLE"},
+    {"id":"S8","url":"https://www.academia.edu/91459592/Detecting_measurement_issues_in_SQL_arithmetic_expressions_and_aggregations","kind":"unverified_mirror_lead","status":"INDEXED_MANUSCRIPT_TEXT; UPLOADER_BYTES_VERSION_UNVERIFIED; NOT_PRIMARY_EVIDENCE"},
+    {"id":"S9","url":"https://doi.org/10.1016/j.datak.2019.06.001","kind":"doi_resolver","status":"WEB_READ_FAILED; DOI_VERIFIED_VIA_S1_S4"},
+    {"id":"S10","url":"https://api.elsevier.com/content/article/pii/S0169023X1730589X?httpAccept=text/xml","kind":"publisher_api","status":"WEB_READ_FAILED"},
+    {"id":"S11","url":"https://api.crossref.org/works/10.1016/j.datak.2019.06.001","kind":"doi_metadata_api","status":"WEB_READ_FAILED; LOCAL_READ_ONLY_URLLIB_DNS_FAILED"},
+    {"id":"S12","url":"https://www.sciencedirect.com/science/article/pii/S0169023X1730589X/pdf","kind":"publisher_pdf","status":"WEB_READ_FAILED"}
+  ],
+  "blockers": ["FULLTEXT_UNRESOLVED", "DATAHUB_REGISTRATION_BLOCKED inherited from root: canonical checkout outside writable scope"],
+  "backup_status": "BACKUP_PENDING_PARENT",
+  "third_party_fulltext_vendored": false
+}

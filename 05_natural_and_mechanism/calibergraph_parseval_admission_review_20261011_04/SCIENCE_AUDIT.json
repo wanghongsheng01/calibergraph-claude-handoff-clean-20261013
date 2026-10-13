@@ -1,0 +1,212 @@
+{
+  "reviewed_utc": "2026-10-11T20:49:58.314945+00:00",
+  "method": "Independent stdlib-only typed JSON decode, source Ruby line/metadata crosscheck, fullC checks and manual original-SQL relational evaluation; no SQL engine/parser/SMT/author scripts executed",
+  "D_sha256": "f780633e689cdf9500dc711dbc7419c6c14dae49a5d5aee02a39648e4e487794",
+  "D_rows": 45,
+  "source_columns_crosschecked": 117,
+  "table_checks": {
+    "projects": {
+      "rows": 13,
+      "columns": 42,
+      "cells": 546,
+      "nonnull_cells": 467,
+      "null_cells": 79
+    },
+    "users": {
+      "rows": 1,
+      "columns": 67,
+      "cells": 67,
+      "nonnull_cells": 67,
+      "null_cells": 0
+    },
+    "users_star_projects": {
+      "rows": 14,
+      "columns": 5,
+      "cells": 70,
+      "nonnull_cells": 69,
+      "null_cells": 1
+    },
+    "project_authorizations": {
+      "rows": 17,
+      "columns": 3,
+      "cells": 51,
+      "nonnull_cells": 38,
+      "null_cells": 13
+    }
+  },
+  "key_checks": [
+    {
+      "table": "projects",
+      "kind": "PK",
+      "key": [
+        "id"
+      ],
+      "nonnull_keys": 13,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users",
+      "kind": "PK",
+      "key": [
+        "id"
+      ],
+      "nonnull_keys": 1,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users",
+      "kind": "UK",
+      "key": [
+        "authentication_token"
+      ],
+      "nonnull_keys": 1,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users",
+      "kind": "UK",
+      "key": [
+        "confirmation_token"
+      ],
+      "nonnull_keys": 1,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users",
+      "kind": "UK",
+      "key": [
+        "email"
+      ],
+      "nonnull_keys": 1,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users",
+      "kind": "UK",
+      "key": [
+        "reset_password_token"
+      ],
+      "nonnull_keys": 1,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users_star_projects",
+      "kind": "PK",
+      "key": [
+        "id"
+      ],
+      "nonnull_keys": 14,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "users_star_projects",
+      "kind": "UK",
+      "key": [
+        "user_id",
+        "project_id"
+      ],
+      "nonnull_keys": 14,
+      "nullable_exempt_rows": 0,
+      "conflicting_nonnull_keys": 0
+    },
+    {
+      "table": "project_authorizations",
+      "kind": "UK",
+      "key": [
+        "user_id",
+        "project_id",
+        "access_level"
+      ],
+      "nonnull_keys": 6,
+      "nullable_exempt_rows": 11,
+      "conflicting_nonnull_keys": 0
+    }
+  ],
+  "foreign_key_checks": [
+    {
+      "table": "project_authorizations",
+      "columns": [
+        "project_id"
+      ],
+      "parent": "projects",
+      "missing_parent_count": 0,
+      "null_exempt_rows": 1
+    },
+    {
+      "table": "project_authorizations",
+      "columns": [
+        "user_id"
+      ],
+      "parent": "users",
+      "missing_parent_count": 0,
+      "null_exempt_rows": 1
+    }
+  ],
+  "fullC_failures": [],
+  "original_query_semantics": {
+    "before": "outer F and positive IN over UNION of actual authorized-star and visible-star joins",
+    "after": "actual outer star join plus F and correlated authorization EXISTS OR visibility",
+    "python_SQL_null_equality": "NULL never satisfies ordinary equal comparison",
+    "before_union_branch_ids": {
+      "authorization": [
+        -1,
+        0,
+        1,
+        10,
+        49,
+        106,
+        116,
+        145,
+        168,
+        189,
+        355
+      ],
+      "visibility": [
+        -1,
+        1,
+        2,
+        49,
+        100,
+        106,
+        116,
+        145,
+        168,
+        189,
+        355
+      ]
+    },
+    "matched_full_typed_output_rows": 11,
+    "columns": 42,
+    "expected_project_ids_desc": [
+      355,
+      189,
+      168,
+      145,
+      116,
+      106,
+      49,
+      10,
+      1,
+      0,
+      -1
+    ],
+    "before_after_identical_for_this_D": true,
+    "both_main_and_fresh_confirmation_equal_independent_reconstruction": true,
+    "duplicates_preserved": true
+  },
+  "not_certified": [
+    "All-input equivalence",
+    "Historical server reproduction",
+    "SMT path effectiveness",
+    "Unmodified baseline compatibility",
+    "Identity of unpersisted initial32-cap candidate with supplement candidate"
+  ],
+  "scientific_outcome": "Ordinarily adapted mature baseline activated original-query path on one exposed legal D; this removes the joint-condition activation gap for this case, not a new method."
+}

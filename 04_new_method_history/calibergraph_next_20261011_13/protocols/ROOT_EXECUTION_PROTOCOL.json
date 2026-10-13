@@ -1,0 +1,36 @@
+{
+  "schema": "calibergraph.round13.root_execution_disposition.v1",
+  "author_code_edit_allowed": "Only EXECUTION_ENABLED = False to True in code/replay.py after independent approval; preserve exact author disabled snapshot and hash its files first",
+  "scientific_runs_allowed": 1,
+  "rerun_allowed": false,
+  "planned_database_instances": 98,
+  "planned_count_sql_executions": 196,
+  "launch": {
+    "interpreter": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+    "python_flags": ["-B", "-E", "-s", "-S"],
+    "whole_launch_measurement": "/usr/bin/time -l",
+    "priority": "nice 15 or lower priority",
+    "fresh_machine_gate": "load1m<=4; memory_pressure -Q free>=25%; receipt age<=60s",
+    "runtime_hashes": "ROOT_RUNTIME_PROVENANCE.json"
+  },
+  "success_requires": [
+    "Process exit code 0",
+    "Valid completion.json status COMPLETED bound to result_receipt.json SHA256",
+    "Exactly 98 completed entries and 196 completed fixed synthetic count SQL executions",
+    "All row constraints, registered expected values and frozen denominators match",
+    "Fresh preflight, runtime and source/review bindings pass",
+    "Whole-launch timing and RSS retained with no reported resource violation"
+  ],
+  "missing_or_invalid_receipt_disposition": {
+    "batch_status": "NOTCOMPLETED",
+    "initial_98_NOTRUN_ledger_role": "PRE_EXECUTION_SNAPSHOT_ONLY_NOT_ACTUAL_OUTCOME",
+    "actual_status_for_each_of_98_planned_entries": "ACTUAL_STATUS_UNKNOWN",
+    "attempted_count_sql": "UNKNOWN; possible range 0..196",
+    "completed_count_sql": "UNKNOWN; possible range 0..196",
+    "do_not_infer": ["zero actual work", "all NOTRUN", "completion", "which entry was interrupted"],
+    "preserve": ["exit status", "external timing", "all raw files", "all planned denominators"],
+    "rerun": false
+  },
+  "failure_detail_limit": "A caught sampled CPU/RSS guard can be followed by another guard exception during receipt writing. No durable per-entry journal is claimed. Conservative unknown accounting is accepted instead of expanding the budget for recovery.",
+  "scope": "Synthetic negative-case implementation replay only; no novelty, natural-case, held-out test or speed claim"
+}

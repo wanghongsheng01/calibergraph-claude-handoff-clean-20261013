@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-12",
+  "review_role": "INDEPENDENT_NONAUTHOR_SCIENTIFIC_REVIEW",
+  "verdict": "PASS",
+  "verdict_scope": "Scientific decision record; neither venue acceptance nor empirical method validation",
+  "supported_author_decision": "REJECT_THIS_PROPOSAL_NO_IMPLEMENTATION_HANDOFF",
+  "candidate_scope": "Joint aggregate-output difference objective after per-query coverage",
+  "decision_reason": "The goal has direct prior art and the proposal supplies no distinct, independently testable mechanism; lack of local baseline admission does not remove that prior art, and prior art does not establish local baseline success.",
+  "not_merely_repeated_hold": true,
+  "new_contribution_of_round": "Direct mechanism prior-art exclusion, bounded interpretation of original ablations, and explicitly unconfirmed failure leads",
+  "novel_mechanism_found_by_reviewer": false,
+  "universal_impossibility_claim_supported": false,
+  "empirical_refutation_of_candidate_performance": false,
+  "required_revisions": [],
+  "optional_minimal_edits": [
+    {
+      "file": "MECHANISM_DECISION.zh.md",
+      "line": 26,
+      "issue": "Absence of established residual evidence could be misread as affirmative exclusion of all residuals",
+      "suggestion": "State that evidence excluding ordinary semantic fixes, known goals and known search explanations has not yet been obtained",
+      "blocking": false
+    },
+    {
+      "file": "MECHANISM_DECISION.zh.md",
+      "line": 28,
+      "issue": "Three mechanism categories should be examples rather than an exhaustive necessity",
+      "suggestion": "Require an independently testable mechanism change and introduce the three categories with for example",
+      "blocking": false
+    },
+    {
+      "file": "MECHANISM_DECISION.zh.md",
+      "line": 34,
+      "issue": "Markdown witness requirement is narrower than DECISION.json's allowance of other verified non-equivalence evidence",
+      "suggestion": "Permit a reliable mathematical non-equivalence demonstration under complete SQL/C in place of an original legal witness; keep version-matched failure attribution separate",
+      "blocking": false
+    }
+  ],
+  "boundary_checks": {
+    "paper_vs_current_code": "PASS",
+    "parseval_support_vs_NEQ": "PASS",
+    "polygon_ablation_scope": "PASS",
+    "xdata_native_pair_evaluation": "PASS: v1 Section 7 evaluation deferred; Section 9 is mutant-killing evaluation",
+    "NotKilled_vs_non_equivalence": "PASS: report preserves uncertainty; original log rows not independently reverified",
+    "baseline_admission_vs_algorithmic_novelty": "PASS",
+    "old_denominator": "CONSISTENT_WITH_DESIGNATED_PRIOR_REPORT",
+    "mutation_benchmark_vs_natural_defect": "PASS"
+  },
+  "local_sources_read": [
+    "MECHANISM_DECISION.zh.md",
+    "DECISION.json",
+    "XDATA_EVIDENCE.zh.md",
+    "XDATA_EVIDENCE.json",
+    "../calibergraph_scientific_decision_20261012_01/DECISION.zh.md",
+    "../calibergraph_strong_baseline_prep_20261011_02/literature/POLYGON_STATIC_AUDIT.zh.md",
+    "../calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/README.md",
+    "../calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/main.py",
+    "../calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/generator/generate.py",
+    "../calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/speculate/speculate.py"
+  ],
+  "primary_sources_rechecked": [
+    "https://dbgroup.cs.tsinghua.edu.cn/jnwang/papers/vldb2025-parseval.pdf",
+    "https://arxiv.org/html/2504.06542v1",
+    "https://arxiv.org/html/2409.18821v1"
+  ],
+  "independent_source_limits": [
+    "Fixed XData GitLab result log and DDL returned 403 to the independent subreviewer; their line contents and legal NEQ remain unverified by this review",
+    "No XData core Java or JAR execution verification",
+    "No Polygon execution or fullC admission verification",
+    "Old run records were not fully re-audited; denominator was checked against the specified prior decision"
+  ],
+  "residual_assessment": "Marginal plan coverage need not imply pair distinction, but this target mismatch alone is already addressed conceptually by prior pair/mutation targets. No additional concrete mechanism or established cost residual was found in the reviewed material.",
+  "missing_evidence_to_change_decision": [
+    "Version-exact complete input and observation contract with reliable non-equivalence evidence",
+    "Localized failure or substantive cost after separating admission and ordinary semantic defects",
+    "Distinct mechanism with predictions and a same-goal ablation beyond known pair-target, mutation-target and UA search mechanisms"
+  ],
+  "new_experiments": 0,
+  "new_independent_tests": 0,
+  "installations": 0,
+  "scientific_processes_started": 0,
+  "author_files_modified": false,
+  "manuscript_or_unrelated_project_modified": false,
+  "git_commit_created": false,
+  "files_created": ["INDEPENDENT_REVIEW.zh.md", "INDEPENDENT_REVIEW.json"],
+  "hashing_and_backup": "DEFERRED_TO_PARENT_AS_REQUESTED"
+}

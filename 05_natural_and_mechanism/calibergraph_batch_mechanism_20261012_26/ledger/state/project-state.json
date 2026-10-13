@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "project_id": "dke-2026-method-research-only",
+  "created_utc": "2026-10-12T14:03:58.441332+00:00",
+  "stage": "INTAKE",
+  "topic_status": "UNCOMMITTED",
+  "venue": {
+    "name": "DKE",
+    "year": 2026,
+    "track": "method-research-only"
+  },
+  "resource_envelope": {
+    "status": "UNVERIFIED",
+    "budget_ledger_sha256": null,
+    "feasibility_audit_sha256": null,
+    "gpu": {
+      "adapter": "UNKNOWN",
+      "devices": null,
+      "memory_gb_each": null,
+      "status": "UNVERIFIED"
+    },
+    "llm_api": {
+      "adapter": "UNKNOWN",
+      "providers": [],
+      "call_cap": null,
+      "token_cap": null,
+      "currency_cap": null,
+      "status": "UNVERIFIED"
+    },
+    "cpu": {
+      "status": "UNVERIFIED"
+    },
+    "storage": {
+      "status": "UNVERIFIED"
+    }
+  },
+  "split_policy": {
+    "identity_unit": null,
+    "development_ids_sha256": null,
+    "calibration_ids_sha256": null,
+    "confirmation_ids_sha256": null,
+    "split_manifest_sha256": null,
+    "overlap_checked": false,
+    "exposure_ledger": "governance/exposure-ledger.jsonl"
+  },
+  "gates": {
+    "venue_profile": "MISSING",
+    "problem_landscape": "MISSING",
+    "opportunity": "MISSING",
+    "novelty": "MISSING",
+    "feasibility": "MISSING",
+    "protocol_freeze": "MISSING",
+    "harness_baseline": "MISSING",
+    "development_run": "MISSING",
+    "development": "MISSING",
+    "method_lock": "MISSING",
+    "confirmation": "MISSING",
+    "promotion": "MISSING",
+    "submission_readiness": "MISSING"
+  },
+  "latest_next_gate": "Verify the current venue rules and resource envelope.",
+  "events": [
+    {
+      "seq": 1,
+      "event_id": "EVT-0001",
+      "created_utc": "2026-10-12T14:03:58.441332+00:00",
+      "stage": "INTAKE",
+      "summary": "Research project initialized.",
+      "next_gate": "Verify the current venue rules and resource envelope.",
+      "evidence": [],
+      "previous_event_sha256": null,
+      "event_sha256": "617673543afc778b02fa58d47b0029764299a10e5b738e4b720a07eba61d201a"
+    }
+  ]
+}

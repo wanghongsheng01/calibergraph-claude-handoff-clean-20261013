@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "round": "09",
+  "date": "2026-10-11",
+  "author_role": "theory author, not independent reviewer",
+  "mechanism_status": "NULL",
+  "theory_gate": "HOLD",
+  "hypothesis_count": 1,
+  "hypothesis_id": "H09_RAW_FD_COVER_ENDOMORPHISMS",
+  "hypothesis": "For a common pure-variable body with selfjoins, finite non-NULL set tables, explicit acyclic FK closure, and PKs, equivalence iff each counted set is covered by the FD closure of the other counted set's image under a head-preserving endomorphism of the original body.",
+  "hypothesis_status": "REFUTED_NECESSITY_ON_UNCHASED_BODY",
+  "proved": [
+    "The FD-cover condition is sufficient for the appropriate per-head count inequality; both directions imply equality.",
+    "On the full-tuple-PK/no-FK fragment, the condition reduces to the mature complete bidirectional counted-variable transport criterion.",
+    "A two-atom PK example makes raw FD-cover fail while all legal databases give equal counts.",
+    "Ordinary key-chase repairs this counterexample.",
+    "A three-cycle full-tuple-PK example has minimum separating relation size exactly three."
+  ],
+  "not_proved": [
+    "Necessity of FD-cover after a complete key-chase on general non-key-anchorable inputs.",
+    "A new finite witness bound for the general non-key-anchorable selfjoin fragment.",
+    "A legal replacement for Cartesian diversification retaining all separating counts.",
+    "A new mechanism, experimental advantage, natural coverage or performance bound."
+  ],
+  "closest_prior_mechanisms": [
+    "Chen-Mengel 2016 renaming-equivalence characterization of finite pp counting equivalence",
+    "Chirkova covering mappings and assignment injections",
+    "DeHaan 2009 index-covering homomorphisms and diversification",
+    "Few Rows 2026 key-anchorable demotion/chase/hom characterization and bounds",
+    "Ordinary key EGD chase"
+  ],
+  "mathematical_counterexamples": {
+    "raw_FD_cover_necessity": "C2_key_chase_required",
+    "one_way_transport_equivalence": "C4_one_way_is_insufficient",
+    "unconditional_two_rows_per_relation": "C3_triangle_row_threshold"
+  },
+  "execution": {
+    "SQL": false,
+    "SMT": false,
+    "scientific_program": false,
+    "finite_model_enumeration": false,
+    "model_API": false,
+    "GPU_or_queue": false,
+    "unrelated_project_interaction": false,
+    "benchmark_finaltest_holdout_access": false,
+    "local_actions": ["text reads", "artifact writes within designated theory directory", "SHA256 metadata"],
+    "external_actions": ["read-only primary-paper web retrieval"]
+  },
+  "future_bounded_search_interpretation": {
+    "cover_EQ_and_legal_count_difference": "contradicts the sufficient lemma or indicates implementation/schema mismatch; inspect exact counterexample",
+    "noncover_and_agreement_on_all_enumerated_models": "bounded candidate only, not proof of equivalence or a necessity counterexample",
+    "triangle_control_schema_warning": "The three-row threshold uses full-tuple PK. The same instance is illegal under first-column PK; the first-column-PK triangle projections are equivalent.",
+    "results_seen": false
+  },
+  "stopping_reason": "Raw hypothesis refuted; exact unconstrained selfjoin mechanism directly predates this task; no new retained subfragment result.",
+  "backup": "PARENT_UNIFIED_BACKUP_PENDING",
+  "independent_review": "PENDING"
+}

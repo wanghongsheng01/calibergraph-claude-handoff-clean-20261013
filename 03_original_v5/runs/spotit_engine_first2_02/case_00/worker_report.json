@@ -1,0 +1,413 @@
+{
+  "status": "COMPLETE_DEV_AGREEMENT",
+  "id": "S01_reordered_conjunction",
+  "expected": "unsat",
+  "pid": 89039,
+  "case_index": 0,
+  "data_role": "EXISTING_EXPOSED_ANALYTICAL_DEV_NOT_NEW_TEST",
+  "performance_claim": false,
+  "runtime_lock_sha256": "6f701d9dd26c83866ed85448652ff34a2f1404392b6130d512575a045994de86",
+  "fixture_sha256": "b3be16fd0f2c5a03513363c907d773e3087bbab16c2633ca4a4656ec256f4918",
+  "input": {
+    "schema": {
+      "F": {
+        "K": "INT",
+        "L": "INT",
+        "V": "INT"
+      },
+      "D": {
+        "ID": "INT",
+        "P": "INT"
+      },
+      "E": {
+        "ID": "INT",
+        "Q": "INT"
+      }
+    },
+    "exact_rows": {
+      "F": 2,
+      "D": 2,
+      "E": 2
+    },
+    "constraint": null,
+    "pair": [
+      "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+      "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+    ]
+  },
+  "gates": {
+    "input_hash_lock": "PASS",
+    "contract": {
+      "consistency": "sat",
+      "any_base_row_deleted": "unsat"
+    }
+  },
+  "arms": {
+    "official": {
+      "status": "unsat",
+      "resource_wall_seconds": 0.15361054241657257
+    },
+    "flat": {
+      "status": "unsat",
+      "counts": [
+        {
+          "match_terms": 0,
+          "flat_rows": 8,
+          "selectors": 0
+        },
+        {
+          "match_terms": 0,
+          "flat_rows": 8,
+          "selectors": 0
+        }
+      ],
+      "resource_wall_seconds": 0.00890762498602271
+    },
+    "product": {
+      "status": "unsat",
+      "counts": [
+        {
+          "match_terms": 8,
+          "flat_rows": 0,
+          "selectors": 0
+        },
+        {
+          "match_terms": 8,
+          "flat_rows": 0,
+          "selectors": 0
+        }
+      ],
+      "resource_wall_seconds": 0.008938916027545929
+    },
+    "selector": {
+      "status": "unsat",
+      "counts": [
+        {
+          "match_terms": 8,
+          "flat_rows": 0,
+          "selectors": 24
+        },
+        {
+          "match_terms": 8,
+          "flat_rows": 0,
+          "selectors": 24
+        }
+      ],
+      "resource_wall_seconds": 0.011293707881122828
+    }
+  },
+  "point_checks": {
+    "flat": {
+      "status": "POINT_VALUES_MATCH",
+      "relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "expected_relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "resource_wall_seconds": 0.0082739582285285
+    },
+    "product": {
+      "status": "POINT_VALUES_MATCH",
+      "relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "expected_relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "resource_wall_seconds": 0.008924709167331457
+    },
+    "selector": {
+      "status": "POINT_VALUES_MATCH",
+      "relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "expected_relations": [
+        [
+          [
+            4
+          ]
+        ],
+        [
+          [
+            4
+          ]
+        ]
+      ],
+      "resource_wall_seconds": 0.008717000018805265
+    }
+  },
+  "solver_threads": 1,
+  "native_load": "LOADED",
+  "environment_import": "IMPORTED",
+  "phase": "FINAL",
+  "resource_last_checkpoint": {
+    "elapsed_wall_seconds": 1.6119246669113636,
+    "cpu_seconds": 1.532751,
+    "peak_rss_bytes_darwin": 113065984,
+    "python_threads": [
+      {
+        "name": "MainThread",
+        "daemon": false
+      }
+    ]
+  },
+  "native_identity": {
+    "pinned_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+    "sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+    "version": [
+      4,
+      12,
+      0,
+      0
+    ],
+    "symbol": "Z3_get_version",
+    "binding_pointer": 4386557364,
+    "pinned_pointer": 4386557364,
+    "method": "same_process_function_identity_plus_pinned_source"
+  },
+  "loaded_module_paths": {
+    "pkg_resources": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support/pkg_resources/__init__.py",
+    "z3.z3types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3types.py",
+    "z3.z3consts": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3consts.py",
+    "z3.z3core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3core.py",
+    "z3.z3printer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3printer.py",
+    "z3.z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3.py",
+    "z3.z3num": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3num.py",
+    "z3.z3poly": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3poly.py",
+    "z3.z3rcf": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3rcf.py",
+    "z3.z3util": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3util.py",
+    "z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/__init__.py",
+    "ordered_set": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0/ordered_set/__init__.py",
+    "ujson": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0/ujson.cpython-312-darwin.so",
+    "constants": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/constants.py",
+    "yaml.error": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/error.py",
+    "yaml.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/tokens.py",
+    "yaml.events": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/events.py",
+    "yaml.nodes": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/nodes.py",
+    "yaml.reader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/reader.py",
+    "yaml.scanner": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/scanner.py",
+    "yaml.parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/parser.py",
+    "yaml.composer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/composer.py",
+    "yaml.constructor": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/constructor.py",
+    "yaml.resolver": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/resolver.py",
+    "yaml.loader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/loader.py",
+    "yaml.emitter": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/emitter.py",
+    "yaml.serializer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/serializer.py",
+    "yaml.representer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/representer.py",
+    "yaml.dumper": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/dumper.py",
+    "yaml._yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/_yaml.cpython-312-darwin.so",
+    "yaml.cyaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/cyaml.py",
+    "yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/__init__.py",
+    "lark.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/utils.py",
+    "lark.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/exceptions.py",
+    "lark.grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/grammar.py",
+    "lark.lexer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lexer.py",
+    "lark.tree": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/tree.py",
+    "lark.visitors": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/visitors.py",
+    "lark.parse_tree_builder": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parse_tree_builder.py",
+    "lark.parsers": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/__init__.py",
+    "lark.common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/common.py",
+    "lark.parsers.grammar_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/grammar_analysis.py",
+    "lark.parsers.earley_common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_common.py",
+    "lark.parsers.earley_forest": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_forest.py",
+    "lark.parsers.earley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley.py",
+    "lark.parsers.xearley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/xearley.py",
+    "lark.parsers.cyk": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/cyk.py",
+    "lark.parsers.lalr_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_analysis.py",
+    "lark.parsers.lalr_interactive_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_interactive_parser.py",
+    "lark.parsers.lalr_parser_state": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser_state.py",
+    "lark.parsers.lalr_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser.py",
+    "lark.parser_frontends": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parser_frontends.py",
+    "lark.load_grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/load_grammar.py",
+    "lark.lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lark.py",
+    "lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/__init__.py",
+    "mo_future": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303/mo_future/__init__.py",
+    "mo_imports": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201/mo_imports/__init__.py",
+    "mo_dots.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/utils.py",
+    "mo_dots.lists": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/lists.py",
+    "mo_dots.nones": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/nones.py",
+    "mo_dots.datas": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/datas.py",
+    "mo_dots.objects": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/objects.py",
+    "mo_dots": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/__init__.py",
+    "mo_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/utils.py",
+    "mo_parsing.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/exceptions.py",
+    "mo_parsing.results": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/results.py",
+    "mo_parsing.core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py",
+    "mo_parsing.whitespaces": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/whitespaces.py",
+    "mo_parsing.enhancement": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/enhancement.py",
+    "mo_parsing.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/tokens.py",
+    "mo_parsing.expressions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/expressions.py",
+    "mo_parsing.infix": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/infix.py",
+    "mo_parsing.regex": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/regex.py",
+    "mo_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/__init__.py",
+    "mo_sql_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/utils.py",
+    "mo_sql_parsing.keywords": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/keywords.py",
+    "mo_sql_parsing.types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/types.py",
+    "mo_sql_parsing.windows": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/windows.py",
+    "mo_sql_parsing.sql_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/sql_parser.py",
+    "mo_sql_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py",
+    "environment": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/environment.py"
+  },
+  "base_fact_count": 48,
+  "base_facts_sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa",
+  "parsed_asts": [
+    {
+      "select": {
+        "value": {
+          "sum": "F__V"
+        }
+      },
+      "from": [
+        "F",
+        {
+          "join": "D",
+          "on": {
+            "eq": [
+              "F__K",
+              "D__ID"
+            ]
+          }
+        },
+        {
+          "join": "E",
+          "on": {
+            "eq": [
+              "F__L",
+              "E__ID"
+            ]
+          }
+        }
+      ],
+      "where": {
+        "and": [
+          {
+            "gt": [
+              "D__P",
+              0
+            ]
+          },
+          {
+            "gt": [
+              "E__Q",
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "select": {
+        "value": {
+          "sum": "F__V"
+        }
+      },
+      "from": [
+        "F",
+        {
+          "join": "D",
+          "on": {
+            "eq": [
+              "F__K",
+              "D__ID"
+            ]
+          }
+        },
+        {
+          "join": "E",
+          "on": {
+            "eq": [
+              "F__L",
+              "E__ID"
+            ]
+          }
+        }
+      ],
+      "where": {
+        "and": [
+          {
+            "gt": [
+              "E__Q",
+              0
+            ]
+          },
+          {
+            "gt": [
+              "D__P",
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "candidate_identifier_encoding": "verieql_double_underscore",
+  "point_sqlite": {
+    "relations": [
+      [
+        [
+          4
+        ]
+      ],
+      [
+        [
+          4
+        ]
+      ]
+    ],
+    "unequal_as_bags": false,
+    "sqlite_version": "3.53.3",
+    "scope": "fixed scalar INT32 constructed DEV"
+  },
+  "expectation_matches": {
+    "official": true,
+    "flat": true,
+    "product": true,
+    "selector": true
+  }
+}

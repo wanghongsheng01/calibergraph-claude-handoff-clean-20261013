@@ -1,0 +1,663 @@
+{
+  "status": "ALL_SELECTED_TARGETS_RETURNED",
+  "fixed_previous_completed_indices": [
+    8,
+    9
+  ],
+  "fixed_case_denominator": 12,
+  "fixed_query_denominator": 21,
+  "spotit_selected_official_denominator": 22,
+  "spotit_full_registered_slot_denominator": 132,
+  "jobs": [
+    {
+      "kind": "fixed",
+      "index": 10,
+      "limit": 2,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 2.87798908399418,
+      "stdout": "{\"status\": \"SELECTED_FIXED_CONTROLS_AS_EXPECTED\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_010_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_010_01",
+      "decisions": [
+        {
+          "id": "O11_root_intermediate_overflow",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "UNKNOWN_ORACLE_DOMAIN"
+          ]
+        },
+        {
+          "id": "O12_zero_does_not_hide_intermediate_overflow",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "UNKNOWN_ORACLE_DOMAIN"
+          ]
+        }
+      ],
+      "strict_completed_controls": true
+    },
+    {
+      "kind": "fixed",
+      "index": 0,
+      "limit": 2,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 2.650937625207007,
+      "stdout": "{\"status\": \"SELECTED_FIXED_CONTROLS_AS_EXPECTED\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_000_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_000_01",
+      "decisions": [
+        {
+          "id": "E01_add_sub_nonnull_identity",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        },
+        {
+          "id": "E02_add_sub_nullable_negative",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        }
+      ],
+      "strict_completed_controls": true
+    },
+    {
+      "kind": "fixed",
+      "index": 2,
+      "limit": 2,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 2.638099166098982,
+      "stdout": "{\"status\": \"SELECTED_FIXED_CONTROLS_AS_EXPECTED\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_002_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_002_01",
+      "decisions": [
+        {
+          "id": "E03_variable_product_commutativity",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        },
+        {
+          "id": "E04_root_between_inclusive",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        }
+      ],
+      "strict_completed_controls": true
+    },
+    {
+      "kind": "fixed",
+      "index": 4,
+      "limit": 2,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 2.746901167090982,
+      "stdout": "{\"status\": \"SELECTED_FIXED_CONTROLS_AS_EXPECTED\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_004_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_004_01",
+      "decisions": [
+        {
+          "id": "E05_leaf_between_boundary_negative",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        },
+        {
+          "id": "E06_null_times_zero_negative",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        }
+      ],
+      "strict_completed_controls": true
+    },
+    {
+      "kind": "fixed",
+      "index": 6,
+      "limit": 2,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 2.659740749746561,
+      "stdout": "{\"status\": \"SELECTED_FIXED_CONTROLS_AS_EXPECTED\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_006_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fixed_v4_006_01",
+      "decisions": [
+        {
+          "id": "E07_count_zero_expression",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        },
+        {
+          "id": "E08_empty_sum_not_vacuous_contract",
+          "status": "PROCESS_EXITED",
+          "exit_code": 0,
+          "worker_status": "COMPLETE",
+          "stop_reason": null,
+          "control_expectation_match": true,
+          "query_statuses": [
+            "REPLAYED_WITHIN_INT64_DOMAIN",
+            "REPLAYED_WITHIN_INT64_DOMAIN"
+          ]
+        }
+      ],
+      "strict_completed_controls": true
+    },
+    {
+      "kind": "spotit",
+      "index": 0,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.51658391719684,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_000_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_000_01",
+      "decisions": [
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.397377
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 11,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5074989581480622,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_011_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_011_01",
+      "decisions": [
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.350425
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 16,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5107613331638277,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_016_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_016_01",
+      "decisions": [
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.349267
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 21,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5088686249218881,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_021_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_021_01",
+      "decisions": [
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.346927
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 26,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.4133585831150413,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_026_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_026_01",
+      "decisions": [
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.248461
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 31,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5142376250587404,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_031_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_031_01",
+      "decisions": [
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.367464
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 36,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 2,
+      "wall_seconds": 13.998297499958426,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_036_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_036_01",
+      "decisions": [
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 13.780349999999999
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 47,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.6247360412962735,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_047_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_047_01",
+      "decisions": [
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.452134
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 52,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 2,
+      "wall_seconds": 13.958137332927436,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_052_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_052_01",
+      "decisions": [
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 13.846523999999999
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 57,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.7158670001663268,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_057_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_057_01",
+      "decisions": [
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.482313
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 62,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.6152057922445238,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_062_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_062_01",
+      "decisions": [
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.468499
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 67,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.6171568338759243,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_067_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_067_01",
+      "decisions": [
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.5374880000000002
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 72,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5069398749619722,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_072_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_072_01",
+      "decisions": [
+        {
+          "case_id": "E01_add_sub_nonnull_identity",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.379825
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 83,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.4030960421077907,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_083_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_083_01",
+      "decisions": [
+        {
+          "case_id": "E02_add_sub_nullable_negative",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.3013940000000002
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 88,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5041882498189807,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_088_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_088_01",
+      "decisions": [
+        {
+          "case_id": "E03_variable_product_commutativity",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.368369
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 93,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.5048495410010219,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_093_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_093_01",
+      "decisions": [
+        {
+          "case_id": "E04_root_between_inclusive",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.3690039999999999
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 98,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.3999734576791525,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_098_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_098_01",
+      "decisions": [
+        {
+          "case_id": "E05_leaf_between_boundary_negative",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.3372089999999999
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 103,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.2888778750784695,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_103_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_103_01",
+      "decisions": [
+        {
+          "case_id": "E06_null_times_zero_negative",
+          "arm": "official",
+          "status": "RESOURCE_STOP",
+          "final_decision": "sat",
+          "stop_reason": "RSS_OBSERVATION_UNAVAILABLE",
+          "full_process_cpu_seconds": 1.232968
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 108,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.3917013751342893,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_108_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_108_01",
+      "decisions": [
+        {
+          "case_id": "E07_count_zero_expression",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.3139939999999999
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 119,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 0,
+      "wall_seconds": 1.4035174581222236,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_119_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_119_01",
+      "decisions": [
+        {
+          "case_id": "E08_empty_sum_not_vacuous_contract",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.307607
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 124,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 2,
+      "wall_seconds": 1.4011992500163615,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_124_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_124_01",
+      "decisions": [
+        {
+          "case_id": "E09_fixed_sum_overflow_domain",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "UNKNOWN_ORACLE_DOMAIN",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.308621
+        }
+      ]
+    },
+    {
+      "kind": "spotit",
+      "index": 129,
+      "limit": 1,
+      "status": "RETURNED",
+      "exit_code": 2,
+      "wall_seconds": 1.3962139170616865,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_129_01/supervisor_report.json\"}\n",
+      "stderr": "",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/spotit_v4_official_129_01",
+      "decisions": [
+        {
+          "case_id": "E10_inconsistent_contract_not_pair_unsat",
+          "arm": "official",
+          "status": "PROCESS_EXITED",
+          "final_decision": "NOT_RUN",
+          "stop_reason": null,
+          "full_process_cpu_seconds": 1.234944
+        }
+      ]
+    }
+  ]
+}

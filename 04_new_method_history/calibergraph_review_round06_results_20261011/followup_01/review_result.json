@@ -1,0 +1,83 @@
+{
+  "id": "calibergraph-round06-results-independent-followup-01",
+  "created_utc": "2026-10-11T14:50:54.161704+00:00",
+  "decision": "PASS_SCOPE_CORRECTIONS_P1_P2_RESOLVED",
+  "parent_review_sha256": "a3cf0d857ad7359f91c5db9ba04f86f5d8514a9c3820633b3d7bdb71a973d022",
+  "author_revision_manifest_sha256": "04a9200086774a7732a0ccc386c0acfb6ca770f6c17a6365d7210e6cfc9726b8",
+  "author_correction_sha256": "0b54f2fdc2f1aae3e44f9095cb6b3651409a596493a8978ba5f92fb700d88d88",
+  "author_original_snapshot_sha256": "ab22d1fcb9ec4964441c6b6f5b316b23a3978c094298b9d25bbc26d17a3e8b57",
+  "unresolved_findings": {
+    "P0": [],
+    "P1": [],
+    "P2": []
+  },
+  "resolved_findings": [
+    {
+      "id": "P1-01",
+      "status": "RESOLVED_BY_EXPLICIT_RESTRICTION_AND_WITHDRAWAL",
+      "anchors": [
+        "revision_02/THEORY_SCOPE_CORRECTION.md:9",
+        "revision_02/THEORY_SCOPE_CORRECTION.md:11",
+        "revision_02/THEORY_SCOPE_CORRECTION.md:12",
+        "revision_02/THEORY_SCOPE_CORRECTION.md:17",
+        "revision_02/THEORY_SCOPE_CORRECTION.md:19"
+      ],
+      "scope": "Only corrected S0 with independent nonoverlapping PK, FK-source and payload fields; original broader P_lift remains withdrawn.",
+      "original_counterexample_retained": true,
+      "original_broad_proposition_certified": false
+    },
+    {
+      "id": "P2-01",
+      "status": "RESOLVED_BY_AUTHORITATIVE_SCOPE_DISTINCTION",
+      "anchors": [
+        "revision_02/THEORY_SCOPE_CORRECTION.md:23",
+        "revision_02/THEORY_SCOPE_CORRECTION.md:25"
+      ],
+      "scope": "Historical B applicability selector is narrower than the formal alias-tree fragment. Literal complete original SQL pair applicability remains 0/21, selected 0/4.",
+      "repeated_table_alone_is_exclusion": false,
+      "semantic_unusability_of_broader_methods_claimed": false
+    }
+  ],
+  "integrity": {
+    "original_author_members_rehashed": 115,
+    "author_member_mismatches": [],
+    "initial_review_content_outputs_rehashed": 5,
+    "initial_review_content_mismatches": [],
+    "new_author_files": 2,
+    "original_logs_unchanged": true,
+    "source_denominator_metadata_checked": 21,
+    "all_880_dependencies_rehashed_in_this_followup": false,
+    "original_1288_checks_rerun_in_this_followup": false
+  },
+  "scientific_status": {
+    "NO_NEW_METHOD_accepted": true,
+    "NO_FAIR_SUPERIORITY_accepted": true,
+    "retained_hypothesis": null,
+    "candidate_algorithm_present": false,
+    "ablation_present": false,
+    "fair_win_present": false,
+    "query_UNKNOWN_upgraded": false,
+    "source_UNKNOWN_or_UNVERIFIED_upgraded": false,
+    "unknown_synthesis_solved_by_indexing_precedent_claimed": false
+  },
+  "review_boundaries": {
+    "target_imports": false,
+    "SQL_or_SMT_executed": false,
+    "parser_executed": false,
+    "scientific_experiments_executed": false,
+    "author_or_initial_review_files_modified": false,
+    "unseen_corpus_or_credentials_accessed": false,
+    "new_web_literature_search": false
+  },
+  "remaining_limits": [
+    "P_lift for overlapping PK/FK-source fields still lacks joint realization conditions and is outside corrected S0.",
+    "No arbitrary SQL constraint or cross-dialect certification.",
+    "No complete unknown-certificate synthesis algorithm or K<B completeness claim.",
+    "0/21 is literal original-pair strict-fragment coverage, not broader semantic impossibility.",
+    "Existing historical and business-provenance uncertainty remains."
+  ],
+  "research_continues": true,
+  "overall_task_complete": false,
+  "backup_by_parent_pending": true,
+  "existing_BACKUP_BLOCKED_and_DATAHUB_REGISTRATION_BLOCKED_not_cleared": true
+}

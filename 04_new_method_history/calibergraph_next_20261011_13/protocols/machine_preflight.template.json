@@ -1,0 +1,11 @@
+{
+  "schema": "calibergraph.round13.machine_preflight.v1",
+  "measured_unix_s": null,
+  "platform": "darwin",
+  "load_1m": null,
+  "memory_free_percent": null,
+  "memory_measurement_source": "macOS memory_pressure -Q",
+  "passed": false,
+  "measured_by": "PENDING_ROOT",
+  "notes": "Template only. Root supplies real non-secret read-only measurements, saves machine_preflight.json, hashes exact bytes into execution_freeze.json. Must be at most 60 seconds old at validation. No program subprocess, ctypes, credential read, or system security change."
+}

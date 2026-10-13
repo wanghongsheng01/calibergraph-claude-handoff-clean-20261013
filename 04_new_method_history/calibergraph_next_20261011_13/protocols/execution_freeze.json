@@ -1,0 +1,63 @@
+{
+  "schema": "calibergraph.round13.sqlite_replay.freeze.v1",
+  "execution_enabled": true,
+  "author_id": "/root/round13_sqlite_counterexample_replay",
+  "hypothesis_count": 1,
+  "round12_proof_confirmed": true,
+  "round12_independent_review": {
+    "outcome": "REJECT_H12_NO_BLOCKERS",
+    "REVIEW.md_sha256": "ff64a2fef864418165aa5704bb4016fb54e9c3e44d84f6a7ddf2c1da37082c2b",
+    "decision_sha256": "93e19fdb9b1893bd8840c49bbe6bb9b366ad7d2b902c92eceecda043d5c56a88",
+    "manifest_sha256": "0801eca8f257808b96c21bfc48bf3e5f3c2985c248c4b0bd1f7d3d0eedda9559",
+    "confirmation_source": "root reported final independent review and hashes"
+  },
+  "root_reported_runtime_metadata": {
+    "python_version": "3.12.13",
+    "executable": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "executable_sha256": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324",
+    "sqlite_version": "3.53.3",
+    "sqlite_extension_sha256": "8eee64ea4615346f309b1d11a90c3863180048cfe724b7a6375e683331853759",
+    "scope": "Root metadata import/hash only, no SQLite connect; root owns exact-runtime launch verification"
+  },
+  "round12_freeze_sha256": "dfa81be07edf21839bf83bdaeb9cb1ac065d03d909fc086fbbbaa890155aa33e",
+  "round12_evidence_pins": {
+    "SHA256SUMS.outputs": "feb0be27bcd1b8c36efa0045d7a003e9fb4c1507db880e5d479e880fa1e0df4a",
+    "theory.md": "ea2e8ca63305e05113513fea5cb35f9e8b2772c18ebf7c34bd32310be9b2baca",
+    "result.json": "d3c21a605667c06c6a319b4eca5ac1741356cd5425ca5186c4aa76dabc195279"
+  },
+  "executable_source_sha256": "50e6d27ad3ebaa9227e274f4247f97d91a2641bfb79ee8b6cf6d2d47df72d755",
+  "source_snapshot_disabled_sha256": "467f8df522a9dbb845ec35542f9dd412452ede05debffb9d9056b144c30a5004",
+  "machine_preflight_sha256": "f657443e61cfee35be545be20b10e197b80143aaa66200d7ab00005e84197158",
+  "independent_review": {
+    "approved": true,
+    "reviewer_id": "/root/round13_independent_preexec",
+    "review_report_sha256": "68c315fd2c8cb4f1844e8b2ce1a838c5758f5865fbc3b9b10a49d4d5ddb592f3",
+    "reviewed_source_snapshot_disabled_sha256": "467f8df522a9dbb845ec35542f9dd412452ede05debffb9d9056b144c30a5004"
+  },
+  "fixed_denominators": {
+    "literal_family_entries": 97,
+    "cartesian_control_entries": 1,
+    "database_instances": 98,
+    "fixed_synthetic_count_sql_executions": 196,
+    "cheap_family_marked_entries": 4,
+    "distinct_S_for_cost_annotation_only": 31
+  },
+  "budget": {
+    "processes": 1,
+    "nice_minimum": 15,
+    "rlimit_cpu_hard_s": 2,
+    "cpu_sampled_stop_s": 1.95,
+    "wall_from_entry_hard_signal_exit_s": 3,
+    "darwin_sampled_peak_rss_bytes": 134217728,
+    "sqlite_progress_op_interval": 1000,
+    "preflight_max_age_s": 60,
+    "load_1m_max": 4,
+    "memory_free_percent_min": 25
+  },
+  "not_yet_verified": [
+    "Actual generated inputs, SQLite counts and whole-launch costs remain NOTRUN"
+  ],
+  "root_runtime_provenance_sha256": "503486b11348ba53613ff3e2ae2c9eefb9ac65cea550b93d71e9ec08d88c45dd",
+  "root_execution_protocol_sha256": "f576f5b71713b8aa08bc15399a6eb170ccbef0968c102035b4e7c323ffd62fbb",
+  "registered_utc": "2026-10-11T15:57:38.816356+00:00"
+}

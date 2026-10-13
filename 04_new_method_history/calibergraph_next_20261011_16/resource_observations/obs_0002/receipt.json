@@ -1,0 +1,34 @@
+{
+  "id": "calibergraph16-resource-observation-v1",
+  "observation_number": 2,
+  "started_unix": 1791738090.2186081,
+  "started_utc": "2026-10-11T17:01:30.218608+00:00",
+  "started_monotonic": 2274861.566313916,
+  "earliest_allowed_unix": 1791738060.753611,
+  "schedule_sha256": "ac48f60868e24805456c1978c09b5c2db240e31bd7fdceab9220482e1294be12",
+  "scientific_runs": 0,
+  "query_calls": 0,
+  "status": "ELIGIBLE",
+  "checks": {
+    "nice": 15,
+    "cpu_limit": [
+      1,
+      1
+    ],
+    "load_1m": 2.69287109375,
+    "memory_free_percent": 37
+  },
+  "previous_observation_charge_s": 0.252699,
+  "memory_stdout": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 37%\n",
+  "usage_before_receipt": {
+    "self_cpu_s": 0.031103,
+    "reaped_children_cpu_s": 0.0014889999999999999,
+    "self_peak_rss_bytes": 15810560,
+    "wall_s": 0.023904791101813316
+  },
+  "measured_cpu_sample_s": 0.032591999999999996,
+  "unmeasured_final_receipt_exit_tail_reserve_s": 0.2,
+  "cpu_charge_s": 0.23259200000000002,
+  "cumulative_observation_charge_s": 0.48529100000000003,
+  "finished_unix": 1791738090.222062
+}

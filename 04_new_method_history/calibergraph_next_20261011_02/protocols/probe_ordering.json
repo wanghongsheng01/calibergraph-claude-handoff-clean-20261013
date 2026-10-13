@@ -1,0 +1,220 @@
+{
+  "id": "calibergraph-02-probe-ordering-v1",
+  "status": "PREPARED_NOT_EXECUTED_PENDING_PARENT_REVIEW_FREEZE",
+  "worker_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/code/probe_ordering.py",
+  "worker_sha256": "1bfd24e98cde81f64690de6b190a9a5c37de07970fe21b5b6ba8461dc46e38c1",
+  "entrypoint": "python3 -B -I -S code/probe_ordering.py --protocol protocols/probe_ordering.json --out NEW_RUN_DIRECTORY",
+  "parent_external_guard_required": true,
+  "development": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/data/development_v2.jsonl",
+    "sha256": "a51307167fb80e5caaf83b18fcd929e8781183fd7130821134eae18782e32430"
+  },
+  "pool": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/data/probe_pool.jsonl",
+    "sha256": "9971d4469f4a123a8e7fb38bd7f7529af366c7898f2e1e80a2417d536caaf401"
+  },
+  "checker": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/code/generate_probe_pool.py",
+    "sha256": "04169f5ad218487885e3f56569a91eb3461247a4df41c13bcb8767bfcf7d29cc"
+  },
+  "official_backend": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/code/official_smoke_backend.py",
+    "sha256": "1ecf4a7bdd199913ee79f2efec6cc21c9904fd75a6cf36d7a2f1f10cc06b880c"
+  },
+  "official_protocol": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/protocols/official_smoke.json",
+    "sha256": "8f43a0053aeec5d3a9430232883f3b7a533fa5f4bb3ec4fae275660b213b0c59"
+  },
+  "smoke_report": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/runs/official_smoke_02/official_smoke_report.json",
+    "sha256": "c319ed2832408050ad99f13eabb30952aa6977981191b60368adb6ce0f48f3cd"
+  },
+  "case_ids": [
+    "dev_01",
+    "dev_02",
+    "dev_03",
+    "dev_04",
+    "dev_05",
+    "dev_06"
+  ],
+  "denominator": {
+    "cases": 6,
+    "arms_per_case": 2,
+    "fixed_databases": 32,
+    "registered_case_arm_slots": 12,
+    "probe_attempt_upper_bound": 64,
+    "initial_SQL_slot_upper_bound": 128,
+    "witness_validation_and_dev01_reverse_SQL_slots": "additional conditional attempts, each separately recorded and charged within same arm budget"
+  },
+  "execution_order": "source case order, B then C for each case; no repetitions or favorable order swaps",
+  "semantic_intersection": {
+    "dev_01": {
+      "eligible": false,
+      "reason": "Bare columns/SELECT * under GROUP BY have implementation-dependent representative semantics; keep SQLite replay and reverse insertion control, mark DIALECT_UNKNOWN."
+    },
+    "dev_02": {
+      "eligible": true,
+      "reason": "Equality/group/count/distinct with non-NULL strings and explicit official all-cross neq profile; compare result bags, retain original ORDER BY."
+    },
+    "dev_03": {
+      "eligible": false,
+      "reason": "AVG vs integer SUM/COUNT division and ROUND is the already exposed dialect control; any difference is DIALECT_UNKNOWN, never an advantage or natural-defect success."
+    },
+    "dev_04": {
+      "eligible": true,
+      "reason": "INT32 keys, strict non-NULL FK, NOT IN vs natural-left-join/count; a nullable FK poison witness is invalid under this profile."
+    },
+    "dev_05": {
+      "eligible": true,
+      "reason": "Account and name are separate PKs, so bare name grouping is functionally determined; equality/group/INT32 SUM under exact two rows remains within int64."
+    },
+    "dev_06": {
+      "eligible": true,
+      "reason": "Strict FK excludes unmatched BOXES; nonnegative INT32 counts with two rows and SUM/add/IFNULL remain int64 safe."
+    }
+  },
+  "frontend_semantic_evidence": {
+    "dev_04": {
+      "status": "STATIC_CONVENTION_EXPLAINED_NO_OVERRIDE",
+      "observed_AST": "from [{value:VISITS,name:NATURAL},{left join:TRANSACTIONS}]",
+      "interpretation": "Official AST convention, not ordinary alias. Static independent review reports encoder.py312-318 is_outer_join2 recognizes NATURAL marker plus leftjoin;550-576 especially572-573 infer common VISIT_ID and construct using;657-660 alias handling excludes NATURAL. No SQL or AST repair applied.",
+      "eligible_retained": true,
+      "evidence_kind": "parent-provided independent static audit; no fresh SQL/solver run by ordering author"
+    }
+  },
+  "AST_source": "Only exactly two parsed_asts from SHA-pinned official_smoke_report per case, bound original_SQL/schema/C hashes. Missing or unbound data stays AST_FEATURE_UNAVAILABLE and C remains NOT_RUN. No SQL-text feature reconstruction or guessed AST.",
+  "feature_tokens": {
+    "count": [
+      "count"
+    ],
+    "distinct": [
+      "distinct",
+      "select_distinct"
+    ],
+    "notin": [
+      "notin",
+      "nin"
+    ],
+    "left": [
+      "left join",
+      "left outer join"
+    ],
+    "group": [
+      "groupby"
+    ],
+    "having": [
+      "having"
+    ]
+  },
+  "B": {
+    "name": "generic_NULL_first",
+    "ordering": [
+      "null_all",
+      "null_single",
+      "duplicate_nonkey",
+      "base"
+    ],
+    "ties": [
+      "candidate_index",
+      "id"
+    ],
+    "query_aware": false
+  },
+  "C": {
+    "name": "frozen_AST_feature_ordering",
+    "score": {
+      "null_all": {
+        "count": 30,
+        "notin": 25,
+        "left": 20,
+        "resolved_count_column_bonus": 40
+      },
+      "null_single": {
+        "count": 20,
+        "notin": 25,
+        "left": 20,
+        "resolved_count_column_bonus": 40
+      },
+      "duplicate_nonkey": {
+        "group": 40,
+        "distinct": 35,
+        "having": 25,
+        "count": 10,
+        "resolved_group_column_bonus": 60
+      },
+      "base": 0
+    },
+    "ties": [
+      "B_kind_rank",
+      "candidate_index",
+      "id"
+    ],
+    "column_binding": "exact original table.column or unique unqualified column only; unresolved official alias encodings receive no column bonus",
+    "limitations": "Heuristic feature ordering only; no completeness improvement, learned weights, query-output tuning, AST repair, or extra candidate pool."
+  },
+  "selection_timing": "Weights and pool were authored before parent supplied smoke per-case outcomes. Actual AST node-name mapping nin->notin and provenance were added after reading only projected parsed_asts/hash fields; no ranking weights or database values changed based on outcomes. Prior outcomes and development source exposure are disclosed, not treated as a hidden test.",
+  "comparison": {
+    "output": "same SQLite result multiset via Counter(tuple rows), original ORDER BY retained but ignored by bag comparator",
+    "per_candidate": "rehash rows/schema/C; independently check complete original OperationalIC; execute both original SQL and record each slot durably",
+    "first_difference": "Only dev02/04/05/06; recheck C and rerun both unchanged SQL on fresh DB, require stable per-side output bags before first validated difference stop",
+    "dev01": "Never scientific SAT; preserve DIALECT_UNKNOWN and reverse insertion diagnostic if differing; continue entire shared pool",
+    "dev03": "Never scientific SAT; preserve DIALECT_UNKNOWN and continue entire shared pool",
+    "not_found": "NOT_FOUND means no validated witness in these attempted fixed DBs; never equivalence. Failures retained separately; remaining slots NOT_RUN on limits."
+  },
+  "budget": {
+    "maximum_workers": 1,
+    "parent_combined_RSS_limit_bytes": 268435456,
+    "worker_cpu_soft_hard_seconds": [
+      7,
+      8
+    ],
+    "worker_wall_alarm_seconds": 15,
+    "cooperative_global_cpu_stop_seconds": 6.75,
+    "cooperative_global_main_wall_stop_seconds": 13.5,
+    "per_arm_cpu_seconds_including_ordering": 0.5,
+    "per_arm_wall_seconds_including_ordering": 0.75,
+    "per_query_cpu_seconds": 0.1,
+    "per_query_wall_seconds": 0.1,
+    "per_query_result_row_limit": 1024,
+    "sqlite_progress_opcode_interval": 100,
+    "same_budget_all_arms": true,
+    "solver_calls_in_this_worker": 0
+  },
+  "durability": "Exclusive new event log; fsync complete matrix and frozen orders before SQL, then every probe START/END and every SQL slot START/END. START without terminal event is ATTEMPTED_EFFECT_UNKNOWN; unstarted registered work is NOT_RUN. Arm checkpoint reports are secondary to event log.",
+  "cost_accounting": {
+    "shared_actual_once": [
+      "pool/source/code hashing and loading",
+      "checker import",
+      "smoke AST cache loading and identity validation",
+      "initial matrix/order fsync and final reporting"
+    ],
+    "method_specific": [
+      "B generic sort",
+      "C feature extraction/scoring/sort",
+      "fullC validation on every DB including rejects",
+      "SQLite construction/insertion/query/compare",
+      "eligible witness revalidation/replay",
+      "dev01 reverse control",
+      "all query errors and stops",
+      "arm event logging"
+    ],
+    "arm_budget_debit": "Method-specific ordering CPU/wall charged before each identical probe budget; shared preparation counted in whole worker and listed separately. No ranking/validation failure is free.",
+    "standalone_scenario_rule": "Add the entire applicable shared preprocessing cost to each standalone B or C scenario; do not divide it by12 or hide it as free. Original artificial-pool construction cost from probe_pool_manifest is a separate one-time shared preparation dependency.",
+    "historical_frontend": "Pinned smoke parser and import stage costs are historical predecessor evidence, not freshly timed frontend; missing costs are unknown, not zero. Smoke solver cost must not be relabeled preprocessing.",
+    "complete_process_totals": "Only external supervisor totals include imports before main plus final fsync/cleanup/close; local per-arm clocks do not replace them.",
+    "claims": "Report probe cost and dependency on official smoke only; no end-to-end fused-vs-fallback speedup."
+  },
+  "fallback": {
+    "same_backend": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/code/official_smoke_backend.py",
+      "sha256": "1ecf4a7bdd199913ee79f2efec6cc21c9904fd75a6cf36d7a2f1f10cc06b880c"
+    },
+    "same_original_C_and_SQL": true,
+    "pure_fallback_ablation": "Existing official smoke is shared dependency evidence; not rerun by this worker and not paired cold-timing evidence. fusion_plan returns a deferred descriptor only.",
+    "no_automatic_solver": true,
+    "stop_gate": "If B and C both completely and successfully scan every frozen candidate with zero validated differences on dev02/04/05/06, stop fallback-savings claim: neither permutation avoids fallback here, no repeated solver necessary. Missing AST/failed/truncated arms cannot pass this gate."
+  },
+  "scientific_position": "Known XData-style probe ordering plus VeriEQL fallback engineering diagnostic, all six groups exposed. Expected possible zero increment; preserve it. No natural-defect gold, unseen-test, equivalence, new-mechanism, or automatic-promotion claim.",
+  "authoring_validation": "Python AST syntax parse only; target module not imported or executed; no SQL/solver invoked by ordering author.",
+  "science_status": "HOLD"
+}

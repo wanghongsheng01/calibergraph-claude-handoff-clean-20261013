@@ -1,0 +1,79 @@
+{
+  "status": "STATIC_REVIEWED_READY_TARGET_NOT_RUN_BY_AUTHOR",
+  "frozen_utc": "2026-10-11T04:14:12.490870+00:00",
+  "runtime_locks": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "prior_pending_sha256": "99e3e167b0c719c519dfb7131d1f29befb36a5592326ee02f885cc36991f4c77",
+      "locked_file_count": 853
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+      "sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+      "prior_pending_sha256": "5cdd4008c8fc2ae606e7570c210f53fa5cde6d9d42d76cf5735d2f5dd22848a4",
+      "locked_file_count": 861
+    }
+  ],
+  "suite": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "cases": 28,
+    "cost_slots": 168,
+    "differential_slots": 168
+  },
+  "source_and_diff_manifest": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/SOURCE_AND_DIFF_MANIFEST.json",
+    "sha256": "33fd4b0564026df68e7f81b0542518b65b9cff6b0ef073f9c979ce390e2e2d8a"
+  },
+  "independent_reviews": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/V5_MAINFLOW_IDENTITY_REVIEW.json",
+      "sha256": "443731d8b9cd13d584d9ca2540253d331b25f02b42d6a621c514990b03f371d6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/RUNTIME_FAIR_V5_SUPPORT_CLOSURE_REVIEW.json",
+      "sha256": "7f6c0b2e1b6bb01317f7af365053ef7e9e6efb935c722f2fa928acdd03b1f616"
+    }
+  ],
+  "registration_files": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/INITIAL_NOT_RUN.json",
+      "sha256": "acc30538dd46765de1d33609308f3b49548f350c8f6c25c51d1dbcc3cf5603fe"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+      "sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/RUN_COMMANDS.txt",
+      "sha256": "06c78216c8ff0569e2efcbb2f5541e206874d964a02dc3a9a9ba41c42527ec58"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/SPOTIT_INITIAL_NOT_RUN.json",
+      "sha256": "90b14d976b1c7fcffb17e549a86e47e908f267b5d4ff06d955f87f936caac97c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+      "sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87"
+    }
+  ],
+  "target_execution": "NOT_RUN_BY_RUNTIME_GUARD_AUTHOR_PARENT_IS_SOLE_EXECUTOR",
+  "runtime_pending": "All v5 target results are NOT_RUN at author freeze; prior bridge execution is not inherited v5 coverage.",
+  "author_validation": "stdlib AST/JSON/SHA/exact old-case identity only; no import or execution of target, reference, solver, native, or SQL",
+  "limits_unchanged": {
+    "CPU_soft_hard": [
+      14,
+      15
+    ],
+    "worker_wall": 24,
+    "supervisor_child_wall": 25,
+    "supervisor_total_wall": 89,
+    "RSS_soft_bytes": 1073741824
+  },
+  "primary_claim_boundary": "Faithfulness from registered source contract AST for the supported narrow fragment; controlled normalization adapter. No source-text parser completeness or unmodified upstream IC behavior claim."
+}

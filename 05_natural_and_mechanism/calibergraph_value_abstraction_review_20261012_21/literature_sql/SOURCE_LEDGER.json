@@ -1,0 +1,289 @@
+{
+  "audit_date_utc": "2026-10-12",
+  "role": "primary-evidence-author; not independent challenger",
+  "scope": "SQL prior art for certified query-dependent value abstraction; six main comparison rows",
+  "activities": [
+    "public primary-paper read",
+    "author-source static inspection",
+    "HTML/PDF text extraction",
+    "hashing"
+  ],
+  "no_sql_solver_benchmark_or_model_execution": true,
+  "no_old_file_edits": true,
+  "no_push": true,
+  "repos": {
+    "SpotIt-plus": {
+      "repo": "ai-ar-research/SpotIt-plus",
+      "commit": "abee2baa26b2b50398c1807a46b2db126d2dda97"
+    },
+    "uwdb_Cosette": {
+      "repo": "uwdb/Cosette",
+      "commit": "7a951aa3b1a70a8b310c676e524740b7114975c3"
+    },
+    "VeriEQL_VeriEQL": {
+      "repo": "VeriEQL/VeriEQL",
+      "commit": "493cbb81000205e33b0623cfd1c39106fa035fae"
+    },
+    "QED": {
+      "repo": "qed-solver/prover",
+      "commit": "9e9c2621d6d922007694a72f9cc2d5ed0de2eccd"
+    }
+  },
+  "downloaded_or_created_files": [
+    {
+      "path": "NEAREST_WORK.md",
+      "bytes": 12354,
+      "sha256": "22b76ef7c1fa0d158df6b283acd649ba437eceeea8ac4db54d92848884ea32e7"
+    },
+    {
+      "path": "QED_tree.json",
+      "bytes": 562713,
+      "sha256": "9ffa5156ee1649aadf5dde2c94f78517bf60b34e589a29daed9530b088312c99"
+    },
+    {
+      "path": "SpotIt-plus_tree.json",
+      "bytes": 20790,
+      "sha256": "2e09331b290728a3205488b3d265bd325d3b131f42973be9a37f1b3d18a57e74"
+    },
+    {
+      "path": "VeriEQL_VeriEQL_tree.json",
+      "bytes": 87213,
+      "sha256": "112d66d4db5b31f13256ffcc48af245a9dce7ecc913387d4264beb1155ce7b2d"
+    },
+    {
+      "path": "code/QED/src/pipeline/normal.rs",
+      "bytes": 23967,
+      "sha256": "4fcb3dc4b261c5a5359e1a5ddc21ef62194bc6ba5d54c6c584de77695caaa021",
+      "source_url": "https://raw.githubusercontent.com/qed-solver/prover/9e9c2621d6d922007694a72f9cc2d5ed0de2eccd/src/pipeline/normal.rs"
+    },
+    {
+      "path": "code/QED/src/pipeline/null.rs",
+      "bytes": 9729,
+      "sha256": "7256fb2344d11471be18eb4d3e628214988b8f65c8c26177ac14f36efefad3ce",
+      "source_url": "https://raw.githubusercontent.com/qed-solver/prover/9e9c2621d6d922007694a72f9cc2d5ed0de2eccd/src/pipeline/null.rs"
+    },
+    {
+      "path": "code/QED/src/pipeline/unify.rs",
+      "bytes": 9332,
+      "sha256": "852d2655fdbc0390e4a40b2cb57cf67c4ff85e5e2d5d3c840a1858c9baa30eaa",
+      "source_url": "https://raw.githubusercontent.com/qed-solver/prover/9e9c2621d6d922007694a72f9cc2d5ed0de2eccd/src/pipeline/unify.rs"
+    },
+    {
+      "path": "code/QED/src/pipeline.rs",
+      "bytes": 3071,
+      "sha256": "7677e25940b7ded1d32064db29a92feb37a6f7db87a9331d91ea7b1510dd1a4e",
+      "source_url": "https://raw.githubusercontent.com/qed-solver/prover/9e9c2621d6d922007694a72f9cc2d5ed0de2eccd/src/pipeline.rs"
+    },
+    {
+      "path": "code/SpotIt-plus/constraint_extraction/extract_constraints.py",
+      "bytes": 19380,
+      "sha256": "0c649bfd0326f69542a5dea94451ac12e7dbdcc5988aa027bc01db0c17189152",
+      "source_url": "https://raw.githubusercontent.com/ai-ar-research/SpotIt-plus/abee2baa26b2b50398c1807a46b2db126d2dda97/constraint_extraction/extract_constraints.py"
+    },
+    {
+      "path": "code/SpotIt-plus/constraint_extraction/extract_constraints_LLM.py",
+      "bytes": 32293,
+      "sha256": "b5dc3a1af6cfb6262255a40cb90e5c11309fc98b757ae0cc490922f89ef40e61",
+      "source_url": "https://raw.githubusercontent.com/ai-ar-research/SpotIt-plus/abee2baa26b2b50398c1807a46b2db126d2dda97/constraint_extraction/extract_constraints_LLM.py"
+    },
+    {
+      "path": "code/SpotIt-plus/run_rule_based.py",
+      "bytes": 7684,
+      "sha256": "9ca32a576c53e5201f30db84ada279a925c56d8490f187024d9555dfda464418",
+      "source_url": "https://raw.githubusercontent.com/ai-ar-research/SpotIt-plus/abee2baa26b2b50398c1807a46b2db126d2dda97/run_rule_based.py"
+    },
+    {
+      "path": "code/VeriEQL_VeriEQL/constants.py",
+      "bytes": 2288,
+      "sha256": "c7c9f759d33a1b96d8cfefa9407effb26edffddb1799d2259939d98f1fe22fa5",
+      "source_url": "https://raw.githubusercontent.com/VeriEQL/VeriEQL/493cbb81000205e33b0623cfd1c39106fa035fae/constants.py"
+    },
+    {
+      "path": "code/VeriEQL_VeriEQL/environment.py",
+      "bytes": 46813,
+      "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+      "source_url": "https://raw.githubusercontent.com/VeriEQL/VeriEQL/493cbb81000205e33b0623cfd1c39106fa035fae/environment.py"
+    },
+    {
+      "path": "code/VeriEQL_VeriEQL/formulas/tables/base_table.py",
+      "bytes": 1509,
+      "sha256": "20e57aff81699c64d45de8a97c2956629f804eaa293ad0e33cf7d3060d6531ee",
+      "source_url": "https://raw.githubusercontent.com/VeriEQL/VeriEQL/493cbb81000205e33b0623cfd1c39106fa035fae/formulas/tables/base_table.py"
+    },
+    {
+      "path": "code/uwdb_Cosette/hott/library/Denotation.v",
+      "bytes": 111,
+      "sha256": "b7af1823ac99ec3d24a9e315eeb69b9a04320409ef8f2b478c1056305fcd1d6e",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/hott/library/Denotation.v"
+    },
+    {
+      "path": "code/uwdb_Cosette/hott/library/UnivalentSemantics.v",
+      "bytes": 18512,
+      "sha256": "76d7fda595be3d257b7c4d6ad5b5136576b530e97f5a41ae6b6a842ee41c0f8c",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/hott/library/UnivalentSemantics.v"
+    },
+    {
+      "path": "code/uwdb_Cosette/rosette/cosette.rkt",
+      "bytes": 11143,
+      "sha256": "319827fbc15a9b81027508f031f37a7488b35a3d0b15f519e2786ef6abf1b6e6",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/rosette/cosette.rkt"
+    },
+    {
+      "path": "code/uwdb_Cosette/rosette/server.rkt",
+      "bytes": 1908,
+      "sha256": "e7bd94e81a3df66c48d91cd84080af04f4c4ea102041adfdd22a4e872654cdce",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/rosette/server.rkt"
+    },
+    {
+      "path": "code/uwdb_Cosette/rosette/symmetry.rkt",
+      "bytes": 24309,
+      "sha256": "03bc9f806fa7cbab29de5067d8906962564b42bf2baa090043bd1eb03faf2d5e",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/rosette/symmetry.rkt"
+    },
+    {
+      "path": "code/uwdb_Cosette/rosette/table.rkt",
+      "bytes": 2999,
+      "sha256": "aaa9c5edd9d8f3f84b7700533fd6671ab242d180adbdaa25a56e8b1e9c126e64",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/rosette/table.rkt"
+    },
+    {
+      "path": "code/uwdb_Cosette/rosette/util.rkt",
+      "bytes": 5708,
+      "sha256": "a3f4a18a23acec1ffdab435ec1fa83be43990775833d50383687e880f6d74e3f",
+      "source_url": "https://raw.githubusercontent.com/uwdb/Cosette/7a951aa3b1a70a8b310c676e524740b7114975c3/rosette/util.rkt"
+    },
+    {
+      "path": "cosette_cidr.pdf",
+      "bytes": 409088,
+      "sha256": "cc6fc09d1030a88d5468e4a3617d258e03d57627c4cb914191e8a9d83f1a1b9b",
+      "source_url": "https://www.cidrdb.org/cidr2017/papers/p51-chu-cidr17.pdf"
+    },
+    {
+      "path": "cosette_cidr.text.txt",
+      "bytes": 39817,
+      "sha256": "7b331d0e15c153b849334c05356515c46e79347a427d9037be745efb12b0fdc4",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "cosette_symmetry.pdf",
+      "bytes": 888441,
+      "sha256": "737d5d06b33d8a451d432fc8b7b04721f038022a811fe5293cf95499ac06300a",
+      "source_url": "https://chenglongwang.org/data/oopsla18.pdf"
+    },
+    {
+      "path": "cosette_symmetry.text.txt",
+      "bytes": 92808,
+      "sha256": "90b4a0005ee56d490c8606670f3107f0eaa315d7e180be732cb51a8a19f91122",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "fewrows.html",
+      "bytes": 618491,
+      "sha256": "24fb1495cc85ad0688225d50c75e485f97c14a37e4dbfa9ea3271ab1bb6981b8",
+      "source_url": "https://arxiv.org/html/2609.09978v1"
+    },
+    {
+      "path": "fewrows.text.txt",
+      "bytes": 122267,
+      "sha256": "64666b161826d12748ff7ec52e5d04a538aa84b1fa8460817204648d65959aff",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "polygon.html",
+      "bytes": 1409760,
+      "sha256": "5a3ae18d8b9309f6b60313f9360456370aefe811dbc4c69c933b8d98f82f927b",
+      "source_url": "https://arxiv.org/html/2504.06542v1"
+    },
+    {
+      "path": "polygon.text.txt",
+      "bytes": 228601,
+      "sha256": "e3e32f97ab97569d379b2b994dbecf457f90f7a2ee5081e50b3aa6ecb79eb4f3",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "qed.pdf",
+      "bytes": 639759,
+      "sha256": "438b08a8afab4ac6f38242aa51cd6f3e553a58a054f541024e4df269b69e991c",
+      "source_url": "https://www.vldb.org/pvldb/vol17/p3602-wang.pdf"
+    },
+    {
+      "path": "qed.text.txt",
+      "bytes": 83489,
+      "sha256": "d3a90aa3564911cc35336ee4916baa66145dcf32f884b95cb595da1a44539e65",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "spotitplus.html",
+      "bytes": 482994,
+      "sha256": "aba2a094962e3abc0a6805906346a1aaa4ea759af814ba1f5f1cd5c1f19b72f1",
+      "source_url": "https://arxiv.org/html/2603.04334v3"
+    },
+    {
+      "path": "spotitplus.text.txt",
+      "bytes": 48688,
+      "sha256": "213ec0275bfd57b490fb2f322bd7429af06b900f6a763489f4c13b78d587083d",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "usemiring.html",
+      "bytes": 893947,
+      "sha256": "3a2467a6da086974de84a46e35d199a7df04d2884292264e49e39dea8f9fcaa7",
+      "source_url": "https://arxiv.org/html/1802.02229"
+    },
+    {
+      "path": "usemiring.text.txt",
+      "bytes": 156814,
+      "sha256": "56736237982009b8a2d7c876f0d35aece84e45da6afe54e1bf533b97997b4d4b",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    },
+    {
+      "path": "uwdb_Cosette_tree.json",
+      "bytes": 141791,
+      "sha256": "54707414187d65d68449762ca82ed0059eaaada987bd9891e1e02c7a10ff924f"
+    },
+    {
+      "path": "verieql.html",
+      "bytes": 3122275,
+      "sha256": "04b22cf63c96592778e609ba73a3e575eabe0faf486c370edce99d673c66bb03",
+      "source_url": "https://arxiv.org/html/2403.03193v2"
+    },
+    {
+      "path": "verieql.text.txt",
+      "bytes": 502532,
+      "sha256": "783a20de10574af4fb73bbdd54d955e3b1e9878e0a11150cfccf5ad862c3e3f3",
+      "kind": "text extraction of adjacent primary source; no executable code imported"
+    }
+  ],
+  "frozen_existing_inputs_read": [
+    {
+      "path": "calibergraph_polygon_pilot_20261012_13/upstream_local/polygon-5e18237394d025dbb805cf833b4f54c321470774/polygon/smt/ast.py",
+      "sha256_at_read": "7fba410379e6dab5b8ec6d8d1ab12414ce243b1cb371a84e4f71b6ab6b958d5e",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "calibergraph_polygon_pilot_20261012_13/upstream_local/polygon-5e18237394d025dbb805cf833b4f54c321470774/polygon/environment.py",
+      "sha256_at_read": "4cdc6fa9d2604e90755358d02bc6c27a467b17781febd0b94d776f0bbb4e6a2f",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "calibergraph_polygon_pilot_20261012_13/upstream_local/polygon-5e18237394d025dbb805cf833b4f54c321470774/polygon/formulas/filter.py",
+      "sha256_at_read": "0aa2a77a7ec1d82485805e5b4e6506b2c061ce60b51d146a447ef5aa8b10d3d6",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "calibergraph_polygon_pilot_20261012_13/upstream_local/polygon-5e18237394d025dbb805cf833b4f54c321470774/polygon/formulas/integrity_constraint.py",
+      "sha256_at_read": "41680a9100cf653feb05bc4d4ca174ccc7c5e8ac1c0dc6eba8737f4526bed871",
+      "access": "READ_ONLY"
+    },
+    {
+      "path": "calibergraph_polygon_pilot_20261012_13/upstream_local/polygon-5e18237394d025dbb805cf833b4f54c321470774/polygon/visitors/initializer.py",
+      "sha256_at_read": "c3ce32067ff98ee7589faded33f61ca24d44335834bdd76958ed31301d04a0f4",
+      "access": "READ_ONLY"
+    }
+  ],
+  "unverified": [
+    "Few Rows author implementation availability",
+    "whether inspected current repository commits match paper evaluation commits",
+    "absence of any mechanism outside inspected formal definitions and code paths"
+  ]
+}

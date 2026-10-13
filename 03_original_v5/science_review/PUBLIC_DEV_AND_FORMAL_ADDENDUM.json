@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-11T02:49:06.573302+00:00",
+  "reviewer": "/root/independent_review; distinct AI reviewer, not a human reviewer",
+  "scope": "Read-only source and root-executed evidence review; independent JSON denominator recount only. No target/native/SQL/solver execution, imports or network by this reviewer.",
+  "author_mainline": "Continue author-selected ten-page DKE manuscript; no blanket overlap or business-gold hold.",
+  "scientific_acceptance": "NOT_ESTABLISHED",
+  "public_dev": {
+    "version": "v2 historical scan, not v3 coverage",
+    "pairs": 461,
+    "query_slots": 922,
+    "eligible": 7,
+    "ineligible": 807,
+    "parse_or_ast_errors": 108,
+    "both_eligible_pairs": 2,
+    "eligible_with_leaf": 0,
+    "both_eligible_join_pairs": 0,
+    "all_seven_plans_have_empty_leaves": true,
+    "both_pairs": [
+      "calcite:142",
+      "literature:25"
+    ],
+    "post_v3_gate_counts": "NOT_MEASURED_BY_THIS_REVIEW",
+    "at_least_one_old_eligible_rejected_by_v3": "calcite:187 query_index 1 contains original $f0 output alias",
+    "not_claims": [
+      "equivalence_accuracy",
+      "heldout_generalization",
+      "factorization_speedup",
+      "novelty"
+    ]
+  },
+  "findings": [
+    {
+      "id": "SCI-DEV-01",
+      "status": "Confirmed-with-evidence",
+      "finding": "No eligible query in the full existing 922-slot DEV snapshot exercises a leaf loop; method utility is unsupported on this corpus."
+    },
+    {
+      "id": "SCI-FRONTEND-01",
+      "severity": "P1",
+      "status": "Root-reproduced-and-independently-read; static mitigation verified; new runtime mitigation not reviewed",
+      "finding": "Two adversarial original SQL pairs produce SQLite 2 vs 7 but identical official AST and v2 candidate plans. Shared frontend information loss defeats encoder-relative agreement as a standalone SQL oracle.",
+      "cases": [
+        "V$X vs V_DOLLAR_X",
+        "quoted A.B vs A____B"
+      ],
+      "origin": "Independent static-review-generated adversarial cases, not natural defects or human gold",
+      "not_performed": "No official analyze or solver.check in the diagnostic."
+    },
+    {
+      "id": "SCI-FRONTEND-02",
+      "status": "Static-path-verified-only",
+      "finding": "v3 common raw identifier gate separates FrontendUnsupported from algorithm Ineligible for every arm and forbids official fallback/equivalence decisions on rejected inputs."
+    },
+    {
+      "id": "SCI-PROOF-01",
+      "status": "Open",
+      "finding": "Mathematical factorization and finite selector identities do not prove raw SQL recognizer/Scope mapping or official auxiliary totality. SAT nonvacuity is existential, not universal."
+    },
+    {
+      "id": "SCI-FAIR-01",
+      "status": "Static-design-acceptable-for-admitted-diagnostic-inputs",
+      "finding": "Independent process per arm, complete input contract, remaining budget, cumulative fallback and failures retained. Actual correctness and comparative performance require separate evidence."
+    },
+    {
+      "id": "SCI-CONTROL-01",
+      "status": "Open",
+      "finding": "Generic SMT tactic control does not close aggregate-pushdown, join-elimination or key/FK 0/1 multiplicity controls; preserve all original ICs."
+    },
+    {
+      "id": "SCI-NOVELTY-01",
+      "status": "Open",
+      "finding": "Known factorization, tuple multiplicities and finite selectors are acknowledged ingredients. Restricted verifier integration plus useful new guarantee/empirical boundary may form a contribution, but reimplementation alone does not establish novelty."
+    },
+    {
+      "id": "SCI-V4-01",
+      "status": "Prospective-advice-only; implementation not reviewed",
+      "finding": "Root symbolic multiplication leaves NIA; multiplicity selector does not make all formulas LIA. Strict recursive NULL semantics and per-step/aggregate int64 oracle domain must be explicit."
+    }
+  ],
+  "minimal_non_toy_demand": {
+    "needed": "Traceable unmodified actual aggregate query and sourced rewrite/version, full schema and IC retained; activates leaf path. Multiple leaves needed to substantiate Cartesian-vs-factorized structural separation.",
+    "one_family_supports": "Existence of demand only",
+    "forbidden_shortcuts": [
+      "remove real GROUP BY solely to enter fragment without labeling derived workload",
+      "drop key/FK to increase multiplicity",
+      "call adversarial fixtures natural defects",
+      "use zero-leaf timing as factorization benefit",
+      "drop parseerrors/ineligible/unknown from denominators"
+    ]
+  },
+  "falsification": {
+    "H1_U": "No native applicable demand implies no demonstrated external utility, even with many synthetic passing cases.",
+    "H1_C": "Equal benefit under known factorization/general optimization or no total-cost improvement refutes selector incremental speed claim.",
+    "negative_result_path": "May remain useful if rigorous same-guarantee controls establish reproducible tradeoffs, failure mechanisms or crossover regimes; no automatic acceptance claim."
+  },
+  "not_verified": [
+    "final larger public corpus scan",
+    "v3 raw gate actual execution",
+    "v4 arithmetic implementation",
+    "complete raw SQL semantic theorem",
+    "official encoder auxiliary totality",
+    "strong SQL optimization baselines",
+    "new fair comparative runtime results",
+    "DKE full-text related-work comparison",
+    "new ten-page manuscript and final surface"
+  ],
+  "evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_dev/runs/full_scan_01/scan_report.json",
+      "sha256": "4ca6ee3e96465c719bb93dbe0b7ba4400a80ccc58ba71618044f180e1ffbf81b",
+      "bytes": 5338470
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/frontend_diagnostic/RESULT.json",
+      "sha256": "ee1c2da47104b6ce919ee5d2a0c23af266fa6199e338ea124ccefa1eea8c2127",
+      "bytes": 22087
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/frontend_diagnostic/SUPERVISION.json",
+      "sha256": "7531b17e099936cc8a00e5e384cdd2806b2959fe2b53ecc60d014f735928151c",
+      "bytes": 519
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py",
+      "sha256": "21867cb828df1ab5aa5b360874f93768e5fcfb7a902b1989b16ddd8fa6fd3200",
+      "bytes": 15045
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/aggregate_kernel.py",
+      "sha256": "defa1812ec36c91a23d428f8d71d2070f808eddeb5f473748d3e7ac09fdfe5f3",
+      "bytes": 13954
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/common.py",
+      "sha256": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a",
+      "bytes": 9808
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/worker.py",
+      "sha256": "bf2c8ba1f674f7185a87238356afc27131dbe653d4f6649d06b37e848c486afa",
+      "bytes": 14374
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/supervisor.py",
+      "sha256": "49a8682b74728c61b2180de57cf65f5d2fe284b040e9e1688b40acd2a6588f42",
+      "bytes": 10147
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/query_differential.py",
+      "sha256": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e",
+      "bytes": 22517
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/SCIENCE_REVIEW.zh.md",
+      "sha256": "e840c101c874dfa2e2c251f8b008adfb48d03ac07d35a6afabe629ae4ddaeb4e",
+      "bytes": 17795
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/SCIENCE_REVIEW.json",
+      "sha256": "894e157d3a45133f24bf0d488e251af73fdf600557e4cf3290fc1acc4a202d46",
+      "bytes": 19291
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/PUBLIC_DEV_AND_FORMAL_ADDENDUM.zh.md",
+      "sha256": "e4d982b9ec2500a70951b9db3ff94a7e61c7bbd563ba4a7701e0ceb882842563",
+      "bytes": 12669
+    }
+  ]
+}

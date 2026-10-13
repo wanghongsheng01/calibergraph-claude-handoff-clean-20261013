@@ -1,0 +1,99 @@
+{
+  "status": "COMPLETE_DIAGNOSTIC",
+  "manifest_sha256": "f0f102f46ff8e2c4e5f3e567ffbf3e0612e9f26ed1624ef3dff8dcf8fe792feb",
+  "cell_denominator": 24,
+  "result_valid": true,
+  "sampled_peak_rss_bytes": 117374976,
+  "sampled_max_kernel_threads": 2,
+  "limits": {
+    "cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "total_supervisor_wall_alarm_seconds": 24,
+    "worker_wall_alarm_seconds": 24,
+    "supervisor_stop_work_at_seconds": 23,
+    "rss_sampled_soft_bytes": 1073741824,
+    "rss_sampling_seconds": 0.05,
+    "solver_threads": 1
+  },
+  "scope": "One no-network computation child. Child itself does not create subprocesses; temporary upstream monitor threads are observed. RSS is sampled, not a continuous hard cap.",
+  "command": [
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_diagnostic/worker.py",
+    "--expected-manifest-sha256",
+    "f0f102f46ff8e2c4e5f3e567ffbf3e0612e9f26ed1624ef3dff8dcf8fe792feb",
+    "--out-dir",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_diagnostic/runs/literal_left_01"
+  ],
+  "child_pid": 3710,
+  "exit_code": 0,
+  "full_child_wall_seconds": 1.7805045838467777,
+  "full_child_cpu_seconds": 1.609927,
+  "worker_report_sha256": "3e9b60677c12bd2087b7360de190bb065915c81d196e6a8d2d227ccbfa5f998d",
+  "worker_status": "COMPLETE_DIAGNOSTIC",
+  "diagnostic_summary": {
+    "cell_denominator": 24,
+    "cells_recorded": 24,
+    "agreement_cells": 16,
+    "disagreement_cells": 8,
+    "null_is_not_true": true
+  },
+  "original_pair": {
+    "status": "RECORDED",
+    "original_pair": [
+      "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+      "SELECT SUM(T.A) FROM T"
+    ],
+    "actual_constraint_ast": [
+      {
+        "lt": [
+          5,
+          {
+            "value": "T__A"
+          }
+        ]
+      }
+    ],
+    "constraint_scope": "Official emitted constraint; not a correction to the original AST semantics.",
+    "contract_guard": {
+      "full_base_fact_count": 5,
+      "consistency": "sat",
+      "any_base_row_deleted": "unsat",
+      "base_fact_sha256": "20140c60cd244631e50d00e2afa9afe07f3ce111c768778145b6a92202427415"
+    },
+    "complete_fact_sexprs": [
+      "(not (DELETED t1))",
+      "(= (T__A t1) String_x1__Int)",
+      "(<= (- 2147483648) (T__A t1))",
+      "(>= 2147483647 (T__A t1))",
+      "(and (> 5 (T__A t1)) (not (NULL t1 T__A__String)))"
+    ],
+    "actual_verifier_semantics": {
+      "requested_semantics": null,
+      "observed_wrapper_class": "verifiers.verifier.Verifier",
+      "actual_run_method": "verifiers.verifier.Verifier.run",
+      "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+      "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+      "dispatch_constructors_in_locked_run_ast": [
+        "BagSemanticsVerifier",
+        "ListSemanticsVerifier"
+      ],
+      "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+      "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+      "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+      "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+    },
+    "equivalence_boolean": true,
+    "solver_verdict": "unsat",
+    "matches_registered_emitted_contract_prediction": true,
+    "prediction_scope": "Prediction is equivalence under emitted reversed IC; completion status is separate from prediction agreement.",
+    "solver_assertions_sexprs": [
+      "(let ((a!1 (and (not (DELETED t1))\n                (ite (or (NULL t1 T__A__String) false) false (> 5 (T__A t1)))))\n      (a!3 (= (NULL t3 TABLE2__SUM_T__A__String)\n              (and (or (DELETED t2) (NULL t2 T__A__String)))))\n      (a!4 (+ (ite (or (DELETED t2) (NULL t2 T__A__String)) 0 (T__A t2))))\n      (a!7 (= (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String)\n              (and (or (DELETED t2) (NULL t2 T__A__String)))))\n      (a!9 (=> (not (and (DELETED t2))) (DELETED pity_tuple_of_Table3)))\n      (a!10 (= (NULL t5 T__SUM_T__A__String)\n               (and (or (DELETED t1) (NULL t1 T__A__String)))))\n      (a!11 (+ (ite (or (DELETED t1) (NULL t1 T__A__String)) 0 (T__A t1))))\n      (a!14 (= (NULL pity_tuple_of_Table4 T__SUM_T__A__String)\n               (and (or (DELETED t1) (NULL t1 T__A__String)))))\n      (a!16 (=> (not (and (DELETED t1))) (DELETED pity_tuple_of_Table4)))\n      (a!17 (= (+ (ite (DELETED t3) 0 1)\n                  (ite (DELETED pity_tuple_of_Table3) 0 1))\n               (+ (ite (DELETED t5) 0 1)\n                  (ite (DELETED pity_tuple_of_Table4) 0 1))))\n      (a!18 (or (and (NULL t3 TABLE2__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                (and (not (NULL t3 TABLE2__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A t3)\n                        (TABLE2__SUM_T__A pity_tuple_of_Table3)))))\n      (a!20 (or (and (NULL t3 TABLE2__SUM_T__A__String)\n                     (NULL t5 T__SUM_T__A__String))\n                (and (not (NULL t3 TABLE2__SUM_T__A__String))\n                     (not (NULL t5 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A t3) (T__SUM_T__A t5)))))\n      (a!22 (or (and (NULL t3 TABLE2__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                (and (not (NULL t3 TABLE2__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A t3)\n                        (T__SUM_T__A pity_tuple_of_Table4)))))\n      (a!25 (or (and (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String)\n                     (NULL t5 T__SUM_T__A__String))\n                (and (not (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                     (not (NULL t5 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A pity_tuple_of_Table3)\n                        (T__SUM_T__A t5)))))\n      (a!27 (or (and (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                (and (not (NULL pity_tuple_of_Table3 TABLE2__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                     (= (TABLE2__SUM_T__A pity_tuple_of_Table3)\n                        (T__SUM_T__A pity_tuple_of_Table4)))))\n      (a!30 (or (and (NULL t5 T__SUM_T__A__String)\n                     (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                (and (not (NULL t5 T__SUM_T__A__String))\n                     (not (NULL pity_tuple_of_Table4 T__SUM_T__A__String))\n                     (= (T__SUM_T__A t5) (T__SUM_T__A pity_tuple_of_Table4))))))\n(let ((a!2 (=> a!1 (and (not (DELETED t2)) (= t2 t1))))\n      (a!5 (ite (and (or (DELETED t2) (NULL t2 T__A__String))) (- 10) a!4))\n      (a!12 (ite (and (or (DELETED t1) (NULL t1 T__A__String))) (- 10) a!11))\n      (a!19 (or (and (DELETED t3) (DELETED pity_tuple_of_Table3))\n                (and (not (DELETED t3))\n                     (not (DELETED pity_tuple_of_Table3))\n                     a!18)))\n      (a!21 (or (and (DELETED t3) (DELETED t5))\n                (and (not (DELETED t3)) (not (DELETED t5)) a!20)))\n      (a!23 (or (and (DELETED t3) (DELETED pity_tuple_of_Table4))\n                (and (not (DELETED t3))\n                     (not (DELETED pity_tuple_of_Table4))\n                     a!22)))\n      (a!26 (or (and (DELETED pity_tuple_of_Table3) (DELETED t5))\n                (and (not (DELETED pity_tuple_of_Table3))\n                     (not (DELETED t5))\n                     a!25)))\n      (a!28 (or (and (DELETED pity_tuple_of_Table3)\n                     (DELETED pity_tuple_of_Table4))\n                (and (not (DELETED pity_tuple_of_Table3))\n                     (not (DELETED pity_tuple_of_Table4))\n                     a!27)))\n      (a!31 (or (and (DELETED t5) (DELETED pity_tuple_of_Table4))\n                (and (not (DELETED t5))\n                     (not (DELETED pity_tuple_of_Table4))\n                     a!30))))\n(let ((a!6 (=> (not (DELETED t2))\n               (and (not (DELETED t3)) a!3 (= (TABLE2__SUM_T__A t3) a!5))))\n      (a!8 (=> (and (DELETED t2))\n               (and (not (DELETED pity_tuple_of_Table3))\n                    a!7\n                    (= (TABLE2__SUM_T__A pity_tuple_of_Table3) a!5))))\n      (a!13 (=> (not (DELETED t1))\n                (and (not (DELETED t5)) a!10 (= (T__SUM_T__A t5) a!12))))\n      (a!15 (=> (and (DELETED t1))\n                (and (not (DELETED pity_tuple_of_Table4))\n                     a!14\n                     (= (T__SUM_T__A pity_tuple_of_Table4) a!12))))\n      (a!24 (=> (not (DELETED t3))\n                (= (+ 1 (ite a!19 1 0)) (+ (ite a!21 1 0) (ite a!23 1 0)))))\n      (a!29 (=> (not (DELETED pity_tuple_of_Table3))\n                (= (+ (ite a!19 1 0) 1) (+ (ite a!26 1 0) (ite a!28 1 0)))))\n      (a!32 (=> (not (DELETED t5))\n                (= (+ (ite a!21 1 0) (ite a!26 1 0)) (+ 1 (ite a!31 1 0)))))\n      (a!33 (=> (not (DELETED pity_tuple_of_Table4))\n                (= (+ (ite a!23 1 0) (ite a!28 1 0)) (+ (ite a!31 1 0) 1)))))\n(let ((a!34 (=> (and (not (DELETED t1))\n                     (= (T__A t1) String_x1__Int)\n                     (<= (- 2147483648) (T__A t1))\n                     (>= 2147483647 (T__A t1))\n                     (> 5 (T__A t1))\n                     (not (NULL t1 T__A__String))\n                     a!2\n                     (=> (not a!1) (DELETED t2))\n                     a!6\n                     (=> (DELETED t2) (DELETED t3))\n                     a!8\n                     a!9\n                     a!13\n                     (=> (DELETED t1) (DELETED t5))\n                     a!15\n                     a!16)\n                (and a!17 a!24 a!29 a!32 a!33))))\n  (not a!34)))))"
+    ]
+  },
+  "supervisor_wall_seconds_before_final_write": 1.8213676670566201
+}

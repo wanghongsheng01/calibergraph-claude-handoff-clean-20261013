@@ -1,0 +1,36 @@
+{
+  "ordered_frozen_cases": [
+    "thrombosis_prediction__1172",
+    "toxicology__319",
+    "thrombosis_prediction__1261",
+    "debit_card_specializing__1490",
+    "superhero__750",
+    "european_football_2__1073",
+    "california_schools__45",
+    "debit_card_specializing__1526",
+    "california_schools__26",
+    "student_club__1390"
+  ],
+  "new_run_slots": [],
+  "prior_cases_not_retried": [
+    "superhero__750",
+    "toxicology__319"
+  ],
+  "static_categories": {
+    "TYPE_SEMANTICS_NOT_ADMITTED": 6,
+    "PREVIOUSLY_EXECUTED": 2,
+    "INVALID_INPUT": 2
+  },
+  "decision": "NO_NEW_ADMITTED_CASES_CLOSE_WITHOUT_SCIENCE",
+  "no_new_samples": true,
+  "admission_policy": "Reuse INTEGER/TEXT N=1 generation+original full-C replay admission only; do not silently broaden types, drop columns, repair SQL or count syntactic compilation as semantic admission.",
+  "approved_if_admitted": {
+    "serial": true,
+    "batch_science_wall_s": 60,
+    "per_solver_s": 3,
+    "per_native_z3_internal_MiB": 512,
+    "aggregate_RSS_limit": false,
+    "no_science_retries": true,
+    "unstarted_on_budget_exhaustion": "NOT_RUN"
+  }
+}

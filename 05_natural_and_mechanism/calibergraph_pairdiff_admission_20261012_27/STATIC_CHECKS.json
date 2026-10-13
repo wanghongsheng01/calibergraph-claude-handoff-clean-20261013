@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "name": "one_for_one_bag_union_cancel",
+      "pass": true
+    },
+    {
+      "name": "whole_pair_is_cache_only",
+      "pass": true
+    },
+    {
+      "name": "alpha_alias_binding",
+      "pass": true
+    },
+    {
+      "name": "ordinary_filter_change_not_elimination",
+      "pass": true
+    },
+    {
+      "name": "distinct_barrier",
+      "pass": true
+    },
+    {
+      "name": "order_limit_barrier",
+      "pass": true
+    },
+    {
+      "name": "outer_join_barrier",
+      "pass": true
+    },
+    {
+      "name": "aggregate_barrier",
+      "pass": true
+    },
+    {
+      "name": "ambiguous_column_refused",
+      "pass": true
+    },
+    {
+      "name": "join_zero_term_keeps_common_scan",
+      "pass": true
+    },
+    {
+      "name": "different_projection_not_canceled",
+      "pass": true
+    },
+    {
+      "name": "unknown_predicate_function_refused",
+      "pass": true
+    },
+    {
+      "name": "same_filter_not_dropped",
+      "pass": true
+    }
+  ],
+  "natural_data": false,
+  "sql_executions": 0,
+  "solver_calls": 0,
+  "scope": "Static parser/algebra safety fixtures; not empirical evidence for candidate"
+}

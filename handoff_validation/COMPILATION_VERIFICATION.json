@@ -1,0 +1,145 @@
+[
+  {
+    "name": "candidate",
+    "source": "01_manuscript/candidate24/latex",
+    "entry": "main.tex",
+    "steps": [
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "main.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/bibtex",
+          "main"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "main.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "main.tex"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "pdf_created": true,
+    "all_commands_succeeded": true,
+    "missing_characters": 0,
+    "overfull_occurrences": 0,
+    "SQL_solver_training_executed": false,
+    "scope": "Entry/dependency compilation check only; historical source preserved; no new scientific or surface-review certificate"
+  },
+  {
+    "name": "original",
+    "source": "01_manuscript/original_wording11/latex",
+    "entry": "main.tex",
+    "steps": [
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "main.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/bibtex",
+          "main"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "main.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "main.tex"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "pdf_created": true,
+    "all_commands_succeeded": true,
+    "missing_characters": 0,
+    "overfull_occurrences": 0,
+    "SQL_solver_training_executed": false,
+    "scope": "Entry/dependency compilation check only; historical source preserved; no new scientific or surface-review certificate"
+  },
+  {
+    "name": "addendum",
+    "source": "02_latest_matrix_addendum",
+    "entry": "CaliberGraph_empirical_addendum.tex",
+    "steps": [
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "CaliberGraph_empirical_addendum.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "CaliberGraph_empirical_addendum.tex"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "/opt/homebrew/bin/pdflatex",
+          "-no-shell-escape",
+          "-interaction=nonstopmode",
+          "-halt-on-error",
+          "CaliberGraph_empirical_addendum.tex"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "pdf_created": true,
+    "all_commands_succeeded": true,
+    "missing_characters": 0,
+    "overfull_occurrences": 0,
+    "SQL_solver_training_executed": false,
+    "scope": "Entry/dependency compilation check only; historical source preserved; no new scientific or surface-review certificate"
+  }
+]

@@ -1,0 +1,259 @@
+{
+  "status": "PASS",
+  "scope": "INDEPENDENT_FINAL_EVIDENCE_REVIEW",
+  "utc": "2026-10-12T11:34:11.749843+00:00",
+  "must_fix": [],
+  "reviewer_reruns": 0,
+  "first_segment": {
+    "elapsed_s": 0.10004812525585294,
+    "overall_status": "PARTIAL_FAILURE_RETAINED",
+    "SQLite_author_candidates_passed": 8,
+    "SQLite_independent_candidates_passed": 8,
+    "COUNT_status": "Extra SQLParser import requested background monitor thread; Thread.start blocked before COUNT matrix. Missing patch then caused independent COUNT FileNotFound.",
+    "thread_start_attempt_blocked": true,
+    "no_new_thread_started": true
+  },
+  "completion_segment": {
+    "elapsed_s": 0.04989416617900133,
+    "COUNT_author_status": "BUG_CONFIRMED_PATCH_UNIT_PASS",
+    "COUNT_independent_status": "PASS",
+    "candidate_replay_rerun": false,
+    "scope_change": "Removed nonessential parser import only; same real ExpressionEncoder AST matrix"
+  },
+  "resource": {
+    "windows": 2,
+    "cumulative_actual_execution_wall_s": 0.14994229143485427,
+    "total_budget_s": 60,
+    "one_continuous_batch": false,
+    "thread_count_at_each_end": 1,
+    "solver_calls": 0,
+    "subprocess_or_network_events": [],
+    "plan_revision_basis": "Trusted user requirement total60s/one thread; original continuous one-shot was an author-added execution plan, explicitly revised while preserving failed first segment."
+  },
+  "replays": [
+    {
+      "candidate_id": "1073_invalid_date",
+      "case_id": "european_football_2__1073",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            1
+          ]
+        ],
+        "predicted": [
+          [
+            0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "1073_nullable_pk",
+      "case_id": "european_football_2__1073",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            0
+          ]
+        ],
+        "predicted": [
+          [
+            1
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_text_N1",
+      "case_id": "california_schools__45",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            "x"
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            0.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_large_int_N1",
+      "case_id": "california_schools__45",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            9007199254740993
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            9007199254740992.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_group_N2",
+      "case_id": "california_schools__45",
+      "N": 2,
+      "total_source_rows": 4,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            1
+          ],
+          [
+            "S",
+            3
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            2.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_bag_N2",
+      "case_id": "california_schools__45",
+      "N": 2,
+      "total_source_rows": 4,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            0
+          ],
+          [
+            "S",
+            0
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            0.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "1526_N1",
+      "case_id": "debit_card_specializing__1526",
+      "N": 1,
+      "total_source_rows": 4,
+      "outputs": {
+        "gold": [
+          [
+            1.0
+          ]
+        ],
+        "predicted": [
+          [
+            null
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "1526_sum_scalar",
+      "case_id": "debit_card_specializing__1526",
+      "N": 3,
+      "total_source_rows": 7,
+      "outputs": {
+        "gold": [
+          [
+            0.8333333333333334
+          ]
+        ],
+        "predicted": [
+          [
+            0.5
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    }
+  ],
+  "count_star": {
+    "original_numeric_mismatches": 4,
+    "original_Bool_plus_type_errors": 12,
+    "patched_boundary_cases_passed": 28,
+    "patch_exactly_one_statement": true,
+    "patch_sha256": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+    "original_encoder_sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+    "original_encoder_unchanged": true,
+    "patch_applied_to_baseline": false,
+    "parser_path_dynamically_validated": false,
+    "end_to_end_natural_query_pipeline_validated": false,
+    "independent_matrix_agrees_author_SQLite_oracle": true
+  },
+  "preservation": {
+    "first_freeze_items_verified": 369,
+    "completion_freeze_items_verified": 378,
+    "both_attempt_markers_reference_actual_freezes": true,
+    "both_closed_receipts_hash_match": true,
+    "old_attempt_marker_not_in_completion_prefreeze": true,
+    "old_attempt_marker_postchecked_exact_expected_bytes": true,
+    "old_attempt_marker_postcheck_explanation": "Deterministic JSON reconstructed from frozen run_once marker serialization and original FREEZE hash; this is post-execution validation, not a claim of inclusion in 378 pre-run hashes.",
+    "final_precompletion_admission_record_created": false,
+    "precompletion_review_note": "Technical plan/controller PASS messages preceded execution; last supplemental hash-coverage check raised the old marker omission before no new final admission JSON was created. No executed freeze was retroactively changed."
+  },
+  "evidence_sha256": {
+    "FREEZE.json": "877855cda9f9f1cbdfdb80d1648494c13f94c91f3f72b3944dabefd86a0e19cc",
+    "COUNT_COMPLETION_FREEZE.json": "f53f960175aa071f3945b60ff2f37ad167b2be0d79b32a2f362e3b9a30402b76",
+    "ATTEMPT_STARTED.json": "a68ac3c9c2943384096f4553afa08663951173401c65e7d288f942c6c1b72d2b",
+    "COUNT_COMPLETION_STARTED.json": "63f2396ccfac68404503e7f52d0ff07e1a57a254c33c72b6b799f4c7d612caa4",
+    "BATCH_RESULT.json": "6749258f316dbcc66d0a584eca6a64c301d58ec1a8535248f9403daf10e9b17a",
+    "BATCH_CLOSED.json": "4aef29c07b2c18697b2452e0e9e2d6096c1b720587d26e7046131e99b51b5242",
+    "COUNT_COMPLETION_RESULT.json": "0d89baeaf936fe5e999c5f469c735c3f2792aabc47e2ec8ac21c7a6a74489356",
+    "COUNT_COMPLETION_CLOSED.json": "04dada95fc2e31ce5a7ba0f1bfb6ab53b48589157f249540a18551d2c29dbdd7",
+    "replays.json": "e9553a39a67de18c767cd1f81675dd612f186ba264084b8dff35746591426362",
+    "review_local/independent_validation.py": "7efcedd5e6cdd3083fac75013c28c47dc4a85760872bd6d0beaac29916ea6aef",
+    "review_local/independent_validation.json": "e6581144c63b291db4277c3a33733695217591313a7e8f6a0190ec921dcaddf0",
+    "count_star_results.json": "932d3ef5727f7c9d805c539247281df34141b6f159741e395c9e552a36284a72",
+    "COUNT_STAR.patch": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+    "review_local/count_only_completion.json": "14408efa2310f9bb9a75887ab2c8722d3b02c73d884a18c3a19fafe68c3f2af7",
+    "COMPLETION_NOTE.zh.md": "e8c0ec928f386a087907bac5517b16623ed1377f6a2999329df41e1b81845f36"
+  },
+  "interpretation": [
+    "8 constructed source-legal SQLite distinguishing databases now independently replayed; they remain synthetic candidates, not recovered official witnesses or new natural tasks.",
+    "#45 source-domain type/rounding N1 and group/bag N2 phenomena are distinct.",
+    "#1526 question/evidence date conflict does not establish business intent.",
+    "COUNT patch corrects this tested AST branch only; source unchanged, no solver or complete natural-query validation.",
+    "Existing 4/8 completed Polygon bounded-run coverage remains unchanged; anti-masking remains closed."
+  ]
+}

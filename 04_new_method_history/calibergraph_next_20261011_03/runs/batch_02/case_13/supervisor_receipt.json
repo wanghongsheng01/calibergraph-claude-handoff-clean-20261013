@@ -1,0 +1,353 @@
+{
+  "case_index": 13,
+  "case_id": "dev03_14",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:26.520148+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 105463808,
+  "sampled_peak_group_cpu_seconds": 0.73,
+  "sample_count": 14,
+  "stop_remainder": null,
+  "pid": 43691,
+  "owned_pgid": 43691,
+  "worker_wait4_usage": {
+    "pid": 43691,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.6388039999999999,
+    "system_cpu_seconds": 0.106844,
+    "cpu_seconds": 0.7456479999999999,
+    "maxrss_bytes_darwin": 105529344
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.8068306669592857,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.0121608329936862,
+    "check_count": 2,
+    "case_index": 13,
+    "id": "dev03_14",
+    "updated_monotonic": 2259258.630166583,
+    "observed_monotonic": 2259258.669787083,
+    "solver_watchdog_estimated_seconds": 0.0121608329936862,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "931877267d1a7d01be558a522f6ff5a0ae6d8aa4970a9b032f94a750543e2dcd",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_14",
+    "case_index": 13,
+    "status": "RETURNED",
+    "engineering_class": "SUPPORTED_FAST",
+    "strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_14",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0005537080578505993,
+            "cpu_seconds": 0.0005539999999999434
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 1,
+            "base_fact_count": 8,
+            "admitted_delta_facts": 1,
+            "full_fact_count": 9,
+            "wall_seconds": 0.0005285418592393398,
+            "cpu_seconds": 0.000528000000000084
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.0032888748683035374,
+            "cpu_seconds": 0.003290000000000126
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.003924208227545023,
+            "actual_check_cpu_seconds": 0.003931000000000018,
+            "answer": "sat",
+            "wall_seconds": 0.006149333901703358,
+            "cpu_seconds": 0.0061229999999998785
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0001494591124355793,
+            "cpu_seconds": 0.00014999999999998348
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              12,
+              17
+            ],
+            "output_tuple_counts": [
+              2,
+              2
+            ],
+            "wall_seconds": 0.0714859589934349,
+            "cpu_seconds": 0.07142300000000001
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "9633c1f5f370d7230be40916f51700af5fd8433f0491f7d83a2196dc24e796e5",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.05908258305862546,
+            "cpu_seconds": 0.059078000000000075
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "304899ff91a1da748c3582d0be7b1cc4c461d2bd066cd4a5e5c2c21658e40c0d",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0022000418975949287,
+            "cpu_seconds": 0.0021999999999999797
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 800,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.008236624766141176,
+            "actual_check_cpu_seconds": 0.008240999999999943,
+            "answer": "unsat",
+            "wall_seconds": 0.010525042191147804,
+            "cpu_seconds": 0.01050300000000004
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "POINT": 2
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "20b38130e732eac78739237c3bc1c7396e10c3720d3a35633bc6f712be710b00",
+        "solver_cumulative_wall_seconds": 0.0121608329936862,
+        "solver_cumulative_cpu_seconds": 0.01217199999999996,
+        "parsed_asts": [
+          {
+            "select": {
+              "value": {
+                "min": {
+                  "abs": {
+                    "sub": [
+                      "A__X",
+                      "B__X"
+                    ]
+                  }
+                }
+              },
+              "name": "SHORTEST"
+            },
+            "from": [
+              {
+                "value": "POINT",
+                "name": "A"
+              },
+              {
+                "value": "POINT",
+                "name": "B"
+              }
+            ],
+            "where": {
+              "neq": [
+                "A__X",
+                "B__X"
+              ]
+            }
+          },
+          {
+            "select": {
+              "value": {
+                "min": {
+                  "abs": {
+                    "sub": [
+                      "A__X",
+                      "B__X"
+                    ]
+                  }
+                }
+              },
+              "name": "SHORTEST"
+            },
+            "from": [
+              {
+                "value": "POINT",
+                "name": "A"
+              },
+              {
+                "left join": {
+                  "value": "POINT",
+                  "name": "B"
+                },
+                "on": {
+                  "neq": [
+                    "A__X",
+                    "B__X"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.004263666924089193,
+          "cpu_seconds": 0.004249000000000058
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.009227707982063293,
+          "cpu_seconds": 0.009208000000000105
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.061278000000000055,
+          "scope_encode": 0.01014499999999996,
+          "compare_encode": 0.004249000000000058,
+          "query_check": 0.008240999999999943
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.11563100000000004,
+          "wall_seconds": 0.11731812497600913,
+          "worker_peak_rss_bytes_macos": 105463808
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/613.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 4513,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "5741930550dd51f86c0b0fbc68ad84571d28712cd4082d648c7eeb9d61111ee6",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "POINT__X"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/613.csv",
+      "index": 45,
+      "pair": [
+        "SELECT MIN(ABS((A.X - B.X))) AS SHORTEST FROM POINT AS A, POINT AS B WHERE A.X <> B.X",
+        "SELECT MIN(ABS(A.X-B.X)) AS SHORTEST FROM POINT A LEFT JOIN POINT B ON A.X != B.X"
+      ],
+      "schema": {
+        "POINT": {
+          "X": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "d95ce8a5047c801b269f3f39c0f20d8fa88e5a173414708d14e1b39b6396658b",
+      "c0a6f047e26f8293c1acdc0f197cc99557d07a84009f50da6a753e7a4aadeff9"
+    ],
+    "schema_sha256": "f72b45f187ae5c8f4fb495fe22e227483d978549f0a2bb2e9a706a85b3345c1e",
+    "constraint_sha256": "5b37363b7c23c660961d44ba7d5f65c478a7c76cbd8a608012ebca189358b936",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "f72b45f187ae5c8f4fb495fe22e227483d978549f0a2bb2e9a706a85b3345c1e",
+      "constraint_sha256": "5b37363b7c23c660961d44ba7d5f65c478a7c76cbd8a608012ebca189358b936",
+      "table_count": 1,
+      "column_count": 1,
+      "schema_type_counts": {
+        "INT": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 1,
+      "operator_counts": {
+        "primary": 1,
+        "value": 1
+      },
+      "reference_counts": {
+        "POINT__X": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "fast_scope": "query check CPU below 250ms only; import/parse/encode/whole process costs remain separately reported",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.003924208227545023,
+        "actual_check_cpu_seconds": 0.003931000000000018,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.008236624766141176,
+        "actual_check_cpu_seconds": 0.008240999999999943,
+        "timeout_ms": 800
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.0121608329936862,
+    "solver_cumulative_cpu_seconds": 0.01217199999999996,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.20793299999999998,
+    "parent_system_cpu_seconds": 0.216665,
+    "all_reaped_children_user_cpu_seconds": 9.123515,
+    "all_reaped_children_system_cpu_seconds": 4.376058,
+    "supervisor_plus_reaped_cpu_seconds": 13.924170999999998,
+    "observed_total_cpu_seconds": 21.800892999999995,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

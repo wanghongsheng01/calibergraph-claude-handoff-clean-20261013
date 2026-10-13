@@ -1,0 +1,30 @@
+{
+  "role": "independent_reviewer_evidence_note",
+  "created_before_reading_theory_draft": true,
+  "scientific_execution": false,
+  "primary_source": {
+    "title": "Structure and Complexity of Bag Consistency",
+    "authors": ["Albert Atserias", "Phokion G. Kolaitis"],
+    "version_observed": "arXiv:2012.12126v1, 22 Dec 2020",
+    "url": "https://arxiv.org/pdf/2012.12126",
+    "read_via": "public web PDF text, not author summary",
+    "anchors": [
+      {"location": "Lemma 2, printed pp.7–8", "paraphrase": "For two finite bags, equality of exact intersection marginals, integer feasibility and saturated flow are equivalent."},
+      {"location": "Theorem 2, printed p.11; proof Step 1, p.15", "paraphrase": "Hypergraph acyclicity characterizes local-to-global bag consistency. The constructive direction glues exact marginals using the running intersection property."},
+      {"location": "Theorem 6, printed pp.23–24", "paraphrase": "For acyclic hypergraphs, a global consistency witness can be constructed in polynomial time with support bounded by the sum of input supports."}
+    ],
+    "reviewer_boundary": "These results concern exact finite bag marginals. They do not by themselves identify a key-erased FK summary with such marginals, preserve arbitrary SQL query answers, or cover all PK/FK/NULL constraints. No originality claim for generic integer-flow gluing is justified."
+  },
+  "hand_derivation": {
+    "origin": "Counterexample pattern supplied in parent task; arithmetic independently reconstructed, not independently discovered.",
+    "schema": "B -> A <- C, one non-null FK from B to A and from C to A; unique fresh PKs; no additional constraints.",
+    "payload": "Two A rows with equal payload a; two B rows with equal payload b; two C rows with equal payload c. PK and referenced-key identities are erased from the abstraction.",
+    "summary": "nA(a)=nB(b)=nC(c)=2; fBA(b,a)=fCA(c,a)=2 in both instances.",
+    "instance_plus": "B1,B2 reference A1; C1,C2 reference A1.",
+    "instance_minus": "B1,B2 reference A1; C1,C2 reference A2.",
+    "manual_count_plus": "2*2 + 0*0 = 4",
+    "manual_count_minus": "2*0 + 0*2 = 0",
+    "conclusion": "Both instances are legal. The same summary does not determine the FK join COUNT, even on an undirected tree. This refutes universal query fidelity, not existence of a legal reconstruction.",
+    "execution": "Pure hand reasoning; no SQL, parser, solver, exhaustive enumeration, benchmark, or experimental rerun."
+  }
+}

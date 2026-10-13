@@ -1,0 +1,180 @@
+{
+  "status": "ALL_QUEUES_RETURNED",
+  "registered_utc": "2026-10-11T05:52:45.886978+00:00",
+  "old_managed_session": 49665,
+  "session_recovery": "Unknown process id",
+  "process_absence_evidence": {
+    "command": "pgrep -f 'run_v5_remaining_campaign|run_v5_queue|runtime_fair_v5'",
+    "mode": "approved read-only process inspection outside sandbox",
+    "exit_code": 1,
+    "output": "",
+    "meaning": "no matching experiment/controller process observed before recovery"
+  },
+  "original_cost_slot_state": {
+    "RETURNED": 94,
+    "INTERRUPTED_EFFECT_UNKNOWN": 1,
+    "NOT_RUN": 73
+  },
+  "original_interrupted_slot": 52,
+  "interrupted_policy": "Preserve original STARTED/worker OFFICIAL_ATTEMPT as an incomplete attempt; a new selected attempt completes this same logical slot.",
+  "preserved_resource_observation_slots": [
+    19,
+    39,
+    51
+  ],
+  "new_logical_slot_denominators": {
+    "main_cost": 168,
+    "main_differential": 168,
+    "spotit_selected_cost": 28
+  },
+  "runtime_reverification": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "files_checked": 853
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+      "sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+      "files_checked": 861
+    }
+  ],
+  "prior_evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/CAMPAIGN_V5_REMAINING.json",
+      "sha256": "a026bec238db33adb382b9c429219878e3c3bc1d5ff39423c530168c1812cf96"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/QUEUE_V5_main_cost_000_084.json",
+      "sha256": "cbc5ffdab09743928e453693be61bcb2c83b5c034c301c650916ad01f8de2c6f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_051_01/supervisor_report.json",
+      "sha256": "5a54fd22606f73526487ac76941be81147e91fa88d91f81668552820874df60d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_cost_051_01/job_0052/worker_report.json",
+      "sha256": "7359a49e341a45348fffaad167009cf5d05b830d9eee76ae5755974d4163957b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_RECOVERY_READONLY_SNAPSHOT_20261011T055109.json",
+      "sha256": "93c4ff0e13a7180288bc301edfbd8a8105efb908ff6b227ace4b8d581e161942"
+    }
+  ],
+  "queue_source_sha256": "56c5f768da28e35a3e796638b6754c6274a006eec4ca11331a7260fffa07a933",
+  "campaign_source_sha256": "7b5767e21c4c19d6d7a44402360517402eec59ebe68f5f9cef874a7d4ea8b333",
+  "entries": [
+    {
+      "mode": "main",
+      "kind": "cost",
+      "start": 52,
+      "stop": 84,
+      "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "RETURNED",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py",
+        "--kind",
+        "cost",
+        "--mode",
+        "main",
+        "--start",
+        "52",
+        "--stop",
+        "84",
+        "--runtime-lock-sha256",
+        "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+        "--suite-sha256",
+        "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+      ],
+      "exit_code": 0
+    },
+    {
+      "mode": "main",
+      "kind": "cost",
+      "start": 90,
+      "stop": 132,
+      "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "RETURNED",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py",
+        "--kind",
+        "cost",
+        "--mode",
+        "main",
+        "--start",
+        "90",
+        "--stop",
+        "132",
+        "--runtime-lock-sha256",
+        "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+        "--suite-sha256",
+        "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+      ],
+      "exit_code": 0
+    },
+    {
+      "mode": "main",
+      "kind": "differential",
+      "start": 0,
+      "stop": 168,
+      "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "RETURNED",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py",
+        "--kind",
+        "differential",
+        "--mode",
+        "main",
+        "--start",
+        "0",
+        "--stop",
+        "168",
+        "--runtime-lock-sha256",
+        "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+        "--suite-sha256",
+        "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+      ],
+      "exit_code": 0
+    },
+    {
+      "mode": "spotit",
+      "kind": "cost",
+      "start": 0,
+      "stop": 168,
+      "lock_sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+      "status": "RETURNED",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py",
+        "--kind",
+        "cost",
+        "--mode",
+        "spotit",
+        "--start",
+        "0",
+        "--stop",
+        "168",
+        "--runtime-lock-sha256",
+        "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+        "--suite-sha256",
+        "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+      ],
+      "exit_code": 0
+    }
+  ]
+}

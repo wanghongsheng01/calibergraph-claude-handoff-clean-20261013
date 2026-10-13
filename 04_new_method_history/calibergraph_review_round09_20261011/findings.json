@@ -1,0 +1,185 @@
+{
+  "schema_version": "1.0",
+  "round": "09",
+  "review_kind": "independent theoretical review",
+  "date": "2026-10-11",
+  "decision": {
+    "mechanism": "NULL",
+    "general_theory_gate": "HOLD",
+    "mathematical_claims": "SUPPORTED_WITHIN_STATED_SCOPE",
+    "literature_audit": "WITHDRAWN_PENDING_REPAIR",
+    "promotion": "NOT_SUPPORTED",
+    "critical_mathematical_errors_found": 0,
+    "required_literature_corrections": 1
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "priority": "P1",
+      "category": "direct_precedent_omission",
+      "status": "WITHDRAWN_PENDING_REPAIR",
+      "title": "DeHaan 第6章的受约束等价流程被遗漏",
+      "author_anchors": [
+        "THEORY.zh.md:63",
+        "THEORY.zh.md:66",
+        "THEORY.zh.md:72",
+        "references.json:DEHAAN2009_THESIS"
+      ],
+      "source_anchors": [
+        "DEHAAN2009 §6.2 printed p153 / PDF173",
+        "DEHAAN2009 §6.3 printed p159 / PDF179",
+        "DEHAAN2009 §3.3.2 printed p88 / PDF108"
+      ],
+      "review_anchor": "REVIEW.zh.md §3",
+      "impact": "不能在未比较该流程前排除该谱系对本轮受约束迁移的直接覆盖；不推翻已手证的充分性或raw反例。",
+      "required_action": "补单层combined CEQ翻译、chase、FD索引扩充、正规化与精确H09_chased的逐步关系和成本；区分原文声称与完整迁移证明。",
+      "does_not_establish": [
+        "H09_chased necessity",
+        "H09_chased falsity",
+        "new novelty",
+        "new legal witness bound"
+      ]
+    },
+    {
+      "id": "F02",
+      "priority": "INFORMATIONAL",
+      "category": "sufficiency",
+      "status": "SUPPORTED_BY_HAND_PROOF",
+      "title": "双向raw FD-cover的注入证明成立",
+      "author_anchors": [
+        "THEORY.zh.md:21",
+        "THEORY.zh.md:23"
+      ],
+      "review_anchor": "REVIEW.zh.md §5.1",
+      "scope": "finite legal databases, per-head projection counts; FK only restricts the instance class"
+    },
+    {
+      "id": "F03",
+      "priority": "INFORMATIONAL",
+      "category": "counterexample_scope",
+      "status": "RAW_NECESSITY_REFUTED_CHASED_CASE_OPEN",
+      "title": "C2只否定未chase必要性",
+      "author_anchors": [
+        "THEORY.zh.md:31",
+        "THEORY.zh.md:37",
+        "THEORY.zh.md:41"
+      ],
+      "review_anchor": "REVIEW.zh.md §5.2",
+      "evidence": "Four raw endomorphisms, diagonal projection bijection, key quotient repairs the pair. One-atom minimality supported in the pure-variable same-body PK-only fragment."
+    },
+    {
+      "id": "F04",
+      "priority": "INFORMATIONAL",
+      "category": "primary_theorem_transfer",
+      "status": "SUPPORTED_BY_PRIMARY_SOURCE_AND_HAND_PROOF",
+      "title": "CM2016无约束逐head迁移成立",
+      "author_anchors": [
+        "THEORY.zh.md:45",
+        "THEORY.zh.md:49"
+      ],
+      "review_anchor": "REVIEW.zh.md §5.3",
+      "source_anchors": [
+        "CM2016 Def5.3/Thm5.4"
+      ],
+      "scope": "full-tuple PK, no FK, pp; fresh unary pinning fixes distinct head variables"
+    },
+    {
+      "id": "F05",
+      "priority": "INFORMATIONAL",
+      "category": "minimum_row_witness",
+      "status": "SUPPORTED_BY_HAND_PROOF",
+      "title": "三角控制的最小分离行数恰为3",
+      "author_anchors": [
+        "THEORY.zh.md:78",
+        "THEORY.zh.md:86",
+        "THEORY.zh.md:107"
+      ],
+      "review_anchor": "REVIEW.zh.md §5.4",
+      "full_tuple_pk_counts": [
+        2,
+        3
+      ],
+      "all_instances_with_at_most_two_R_rows": "equal counts; only constant loop walks",
+      "first_column_pk_variant": "equivalent on every legal database; submitted 3-row instance is illegal"
+    },
+    {
+      "id": "F06",
+      "priority": "INFORMATIONAL",
+      "category": "cost_and_application",
+      "status": "ASYMPTOTIC_BOUND_PLAUSIBLE_NO_EMPIRICAL_ADVANTAGE",
+      "title": "成本未被视为免费，但没有性能或覆盖率证据",
+      "author_anchors": [
+        "THEORY.zh.md:96",
+        "THEORY.zh.md:97",
+        "THEORY.zh.md:99",
+        "THEORY.zh.md:103"
+      ],
+      "review_anchor": "REVIEW.zh.md §6",
+      "limits": [
+        "expected word-operation model for atom hashing",
+        "explicit FK-closed input for key-chase bound",
+        "account for actual FK expansion size",
+        "no implementation or scientific run"
+      ]
+    },
+    {
+      "id": "F07",
+      "priority": "P1_GATE",
+      "category": "unresolved_general_theory",
+      "status": "HOLD_NOT_NEGATIVE_PROOF",
+      "title": "完整chase后一般必要性仍需精确判定",
+      "author_anchors": [
+        "THEORY.zh.md:105",
+        "THEORY.zh.md:107"
+      ],
+      "review_anchor": "REVIEW.zh.md §4",
+      "required_evidence": "An exact valid transfer/proof, or a fully chased counterexample proved equivalent on all finite legal instances with absence of cover certificates.",
+      "bounded_agreement_is_not": "equivalence proof or a necessity counterexample"
+    }
+  ],
+  "hand_cases": {
+    "C1": [
+      3,
+      3
+    ],
+    "C2": [
+      2,
+      2
+    ],
+    "C3": [
+      2,
+      3
+    ],
+    "C4": [
+      2,
+      1
+    ],
+    "method": "manual reasoning only; no fixture execution"
+  },
+  "novelty": "No retained new mechanism established; known transport/chase/normalization must remain prior art.",
+  "execution": {
+    "scientific_program": false,
+    "SQL": false,
+    "SMT": false,
+    "parser_or_fixture_execution": false,
+    "finite_model_enumeration": false,
+    "model_API": false,
+    "GPU": false,
+    "unrelated_project_or_other_queue": false,
+    "protected_data_access": false,
+    "credential_access": false,
+    "old_reviews_read": false,
+    "author_files_modified": false
+  },
+  "operational_status": {
+    "datahub": "DATAHUB_REGISTRATION_BLOCKED: canonical registry outside permitted write scope; parent confirmed no matching module",
+    "backup": "PARENT_UNIFIED_BACKUP_PENDING"
+  },
+  "minimum_repair_requirements": [
+    "Exact single-layer combined projection semantics to CEQ translation",
+    "Chase, FD index expansion and normalization with correct head/count transport",
+    "Prove relationship to exact H09_chased; do not infer completeness from repaired C2",
+    "Full cost based on actual chase size and an explicit ledger of unclosed proof obligations"
+  ],
+  "subsequent_revision_read": false
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0",
+  "review_date": "2026-10-11",
+  "evidence_mode": "READ_ONLY_PRIMARY_TEXT_PLUS_MANUAL_REASONING",
+  "scientific_experiments": 0,
+  "author_inputs": [
+    {
+      "path": "calibergraph_next_20261011_07/literature/constraint_polynomial_opportunity_v1.md",
+      "sha256": "7910e788e834148805d183872e2c30679d42ad2fec6e6068b5f8fbeb4623dadc",
+      "bytes": 15298
+    },
+    {
+      "path": "calibergraph_next_20261011_07/literature/neighbor_audit.md",
+      "sha256": "a56e261f027648e889f3a16dcaa1f25092da278d00986e086918c0fe54a85003",
+      "bytes": 10282
+    },
+    {
+      "path": "calibergraph_next_20261011_07/literature/hand_witnesses.sql",
+      "sha256": "fdd72cb9dfb6a0f51c6e46ae65902f5299d92042b21787950dca61ace043780b",
+      "bytes": 1208
+    },
+    {
+      "path": "calibergraph_next_20261011_07/literature/hand_witnesses.json",
+      "sha256": "f9d31463b1bb8e5d5ecac62190f27005b312902ff1b2cc1bba9d05435d39c152",
+      "bytes": 1384
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "U2018",
+      "url": "https://www.vldb.org/pvldb/vol11/p1482-chu.pdf",
+      "primary": true,
+      "status": "CONFIRMED_WITH_SCOPE",
+      "anchors": [
+        "§4.1 Def.4.1, Def.4.4; printed p.1487 / PDF page 6",
+        "Thm.4.2; §5.3 Thm.5.3–5.5 / PDF page 10",
+        "§3.1 squash Eq.(1)"
+      ],
+      "checks": {
+        "key_equation": "[t.k=t2.k] R(t) R(t2) = [t=t2] R(t)",
+        "foreign_key_equation": "S(s)=S(s)*sum_t R(t)[t.k=s.fk]",
+        "ucq_completeness": "No general constrained combined-query completeness follows."
+      },
+      "reviewer_inference": "Key identity forces field row indicators to 0/1. Moreover, squash(0)=0 and squash(1+x)=1 contradict x=-1 in a nontrivial field; direct full U-semiring substitution is impossible."
+    },
+    {
+      "id": "CG2009",
+      "url": "https://arxiv.org/html/0812.2195v3",
+      "primary": true,
+      "status": "CONFIRMED_WITH_SCOPE",
+      "anchors": [
+        "Thm.5.3",
+        "Thm.5.5",
+        "Thm.6.1–6.2"
+      ],
+      "checks": {
+        "termination_assumption": "Set-chase results exist.",
+        "bag_case": "Retains set-enforcing dependencies.",
+        "bag_set_case": "Dependency-free equivalence of sound-chase results.",
+        "complexity": "Polynomial in query size, exponential in dependency size under weak acyclicity."
+      },
+      "reviewer_inference": "This establishes prior architecture, not a theorem for every arbitrary M subset in author C."
+    },
+    {
+      "id": "DH2009",
+      "url": "https://uwspace.uwaterloo.ca/bitstreams/75481061-96ae-4f14-89b7-44c6aab72683/download",
+      "primary": true,
+      "status": "CONFIRMED_WITH_PAGE_INDEX_CORRECTION",
+      "anchors": [
+        "App.A.2.1 Def.A.2.1–A.2.2",
+        "Eq.A.2–A.3",
+        "App.A.2.2 Thm.A.2.5; Cor.A.2.6–A.2.8"
+      ],
+      "checks": {
+        "sample_space": "Positive-integer diversification cardinalities, not random tuple data values.",
+        "bound": "P[any pair collision among m distinct degree-at-most-k polynomials] < k*m^2/(2*|S|).",
+        "page_mapping": "printed 170–171 = PDF 1-based 190–191 = zero-based indices 189–190"
+      },
+      "reviewer_inference": "Independent nonkey diversification can violate a PK; preserving arbitrary PK/FK requires additional proof."
+    },
+    {
+      "id": "FR2026",
+      "url": "https://arxiv.org/html/2609.09978v1",
+      "primary": true,
+      "status": "SCOPE_CONFIRMED_DEPTH_ONLY_COMPLEXITY_QUALIFIED",
+      "anchors": [
+        "§2 standing assumptions",
+        "Def.A.1; Prop.5; Lemma6; Thm.7",
+        "§4; Prop.B.3; Thm.13; Thm.15; Cor.16; LemmaB.4",
+        "Thm.18; §5.3 Thm.23",
+        "§4 residual open case; §7"
+      ],
+      "checks": {
+        "standing": "Satisfiable; set-equivalent over legal databases; set-valued stored relations.",
+        "thm7": "2^w*max(|Q|,|Q2|), with per-predicate refinement.",
+        "anchor_test": "M subset closure(X union A); A: counted variables occurring only at key positions.",
+        "thm13": "Key-anchorability after reduct/key chase; key-width bound.",
+        "thm15": "Acyclic FK; chased queries key-anchorable; uses actual chased size.",
+        "corners": "Each counted-variable domain size in {1,2}; not two physical rows.",
+        "thm18": "Unconstrained var-constant comparisons over dense order; strictified position groups directed/retained/isolated.",
+        "thm23": "Pinned comparisons (variables in output key closure), comparison-free bodies key-anchorable.",
+        "residual": "Customer-counting obstruction is explicitly stated."
+      },
+      "reviewer_inference": "Binary FK branching disproves the depth-only explicit chase-size estimate; neither actual-chased-size witness bound nor fixed-schema NP membership is thereby refuted."
+    }
+  ],
+  "not_independently_reaudited": [
+    "XData",
+    "Cosette",
+    "SQLSolver",
+    "VeriEQL",
+    "Polygon",
+    "SpotIt",
+    "SpotIt+",
+    "QED"
+  ],
+  "scope_note": "Checks concern specified anchors and transfer claims, not a certified proof of every source theorem or an exhaustive novelty search."
+}

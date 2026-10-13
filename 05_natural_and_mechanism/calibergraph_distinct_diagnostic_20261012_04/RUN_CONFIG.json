@@ -1,0 +1,41 @@
+{
+  "case": "thrombosis_prediction/1172",
+  "official_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "official_entry": "parseval.main.disprove",
+  "connection_string": "sqlite:///:memory:",
+  "dialect": "sqlite",
+  "queries_order": [
+    "gold",
+    "predicted"
+  ],
+  "generation_config": {
+    "timeout_ms": 5000,
+    "time_limit_s": 360,
+    "min_string_length": 1,
+    "speculate": true,
+    "seed": 0,
+    "provider": "parseval.instance.domain.sequential (official default; no override)",
+    "set_semantics": false
+  },
+  "query_timeout_s": 15,
+  "outer_caps": {
+    "wall_s": 60,
+    "cpu_s": 60,
+    "rss_bytes": 1073741824,
+    "workers": 1,
+    "retries": 0
+  },
+  "prelaunch_gate": {
+    "load1_max": 2,
+    "available_memory_gib_min": 3,
+    "duplicate_worker_check_required": true,
+    "failure_action": "NO_LAUNCH_NO_QUEUE_NO_RETRY"
+  },
+  "authorization": "Current delegated user request permits one bounded baseline diagnostic, but asks to report new permissions first",
+  "source_of_resource_gate": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/NEXT_DIAGNOSTIC.json",
+    "sha256": "ca0365d1ba71359c263f96b1c57096e0da74a094d634f6228e12011ad0d6d58c"
+  },
+  "effective_execution_enabled": false,
+  "reason": "Prelaunch gate failed and duplicate-process observation denied; no runner was started"
+}

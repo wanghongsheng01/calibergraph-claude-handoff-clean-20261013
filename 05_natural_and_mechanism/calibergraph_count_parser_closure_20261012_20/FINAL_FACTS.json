@@ -1,0 +1,60 @@
+{
+  "engineering_status": "P3_PASSES_FROZEN_42_CASES_WITH_INDEPENDENT_168_RECORD_REFERENCE_CHECK",
+  "versions": {
+    "original": {
+      "matrix": {
+        "PASS": 12,
+        "MISMATCH": 4,
+        "ERROR": 12
+      },
+      "pipeline": {
+        "PASS": 7,
+        "MISMATCH": 6,
+        "ERROR": 1
+      }
+    },
+    "p1": {
+      "matrix": {
+        "PASS": 28
+      },
+      "pipeline": {
+        "PASS": 9,
+        "MISMATCH": 5
+      }
+    },
+    "p2": {
+      "matrix": {
+        "PASS": 28
+      },
+      "pipeline": {
+        "PASS": 11,
+        "MISMATCH": 3
+      }
+    },
+    "p3": {
+      "matrix": {
+        "PASS": 28
+      },
+      "pipeline": {
+        "PASS": 14
+      }
+    }
+  },
+  "cumulative_execution_s": 0.8471677498511374,
+  "peak_RSS_bytes": 60489728,
+  "solver_calls": 0,
+  "cases_per_version": 42,
+  "independent_records_checked": 168,
+  "historical_cases_affected_by_these_specific_bugs": [],
+  "historical_bounded_run_coverage": "4/8 unchanged",
+  "new_method_evidence": false,
+  "complete_Environment_check_tested": false,
+  "backup_status": "BACKUP_BLOCKED_USER_NO_PUSH",
+  "original_baseline_modified": false,
+  "failed_attempts_retained": [
+    "001 Python3.9 import failure",
+    "002 partial harness failures"
+  ],
+  "preservation_note": "001/002 unused helper changed before reviewer readiness; executed inputs preserved,003 all541 match",
+  "independent_final_evidence_review": "PASS_WITH_DISCLOSED_PRESERVATION_EXCEPTION"
+}

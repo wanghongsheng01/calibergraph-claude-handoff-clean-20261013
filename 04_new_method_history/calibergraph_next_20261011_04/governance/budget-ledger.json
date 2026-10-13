@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "currency": "USD",
+  "resources": {
+    "api_attempts": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    },
+    "input_tokens": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    },
+    "output_tokens": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    },
+    "currency_cost": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    },
+    "gpu_hours": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    },
+    "cpu_hours": {
+      "planned": 0.016666666666666666,
+      "reserved": 0.016666666666666666,
+      "status": "PILOT_COMPLETED",
+      "observed_supervisor_and_reaped_hours": 0.0016465436111111112,
+      "conservatively_charged_hours": 0.002648857222222222
+    },
+    "storage_gb": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    },
+    "human_hours": {
+      "planned": 0,
+      "reserved": 0,
+      "status": "PLANNED"
+    }
+  },
+  "confirmation_reserve_protected": true,
+  "updated_utc": "2026-10-11T13:23:47.910679+00:00",
+  "notes": [
+    "Only this 10-slot local problem-evidence pilot; no GPU/API/new resource purchase.",
+    "60s CPU includes 1.0s prior charge, supervisor and all reaped probes/workers plus 0.2s tail reserve; authoring/literature activity outside measured scope.",
+    "No final-test access authorized by this protocol; no performance/new-mechanism claim.",
+    "Initial sandbox preexec failure and stdlib diagnosis retained; prospective same-input recovery exception. Full charge9.535886s<60s, no further scientific execution in this protocol."
+  ]
+}

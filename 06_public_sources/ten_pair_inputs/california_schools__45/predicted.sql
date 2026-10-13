@@ -1,0 +1,1 @@
+SELECT T1.School, AVG(T2.AvgScrWrite) AS Average_Writing_Score FROM schools AS T1 INNER JOIN satscores AS T2 ON T1.CDSCode = T2.cds WHERE T1.AdmFName1 = 'Ricci' AND T1.AdmLName1 = 'Ulrich' GROUP BY T1.School

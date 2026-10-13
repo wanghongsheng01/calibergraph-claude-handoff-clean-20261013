@@ -1,0 +1,2386 @@
+{
+  "case": "thrombosis_prediction/1172",
+  "official_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "files": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/case1172.gold.sql",
+      "sha256": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/case1172.predicted.sql",
+      "sha256": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/sources_local/case1172.full-schema.sql",
+      "sha256": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.devcontainer/Dockerfile",
+      "sha256": "421e1a6b2bb25aa8dc9aba3a4f45e3111f77be45d65f2e9b0a69bbb9598adfcc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.devcontainer/devcontainer.json",
+      "sha256": "8ad68a98f71cdc3d110a291517acba441715a9feec1131caef091dc173e3a935"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.devcontainer/docker-compose.yml",
+      "sha256": "c30ae7025182b5648f67deaa0e6c12dcb079dd3804b0b48e1aa4b32f361aeb7c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.github/workflows/ci.yml",
+      "sha256": "79094ffdd8f707ce1888649f52a2c5f767a24d90d5befb6fe1d73e81735210b3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.github/workflows/release.yml",
+      "sha256": "051ae25115df9967d8479f3aa99f9a2146775dc985c6bd311cf1580be1fe95fe"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.github/workflows/run-mysql-test.yml",
+      "sha256": "0d5b67c70e02ecd5fae4081f4115c2fd618dcb2bf9df819763669fc89d1e3854"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.github/workflows/run-sqlite-test.yml",
+      "sha256": "456b63364f36ccda5cc065c7b0ef4037addd94878e41dd09993415c36d2c6d6a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.gitignore",
+      "sha256": "cd4d3e5a6cc1bdb2bd7fe6492a9c96528190e43fcdcb1ed2909c69a536d3f355"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.gitmodules",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.python-version",
+      "sha256": "7a41a41354ab8049091ef1a00253ca00567f5a1d3f9aef5502c0b4b5ce9ae707"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/.vscode/settings.json",
+      "sha256": "8eb95bcbc154530931e15fc418c8b1fe991095671409552099ea1aa596999ede"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/README.md",
+      "sha256": "550b8c17e48b73c98a5e24a9bca2c3d7fcf2a7da6aa84d539d976bffa84cd85a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/mysql/leetcode-new.jsonlines",
+      "sha256": "6102c604586294103d1dba865344210fbe9e1797ed97f669bfc383d8f750850c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/mysql/leetcode.jsonlines",
+      "sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/sqlite/dail.txt",
+      "sha256": "fcceb9e44a23df59ed483c33d3da16f87f8336e493ef69df7fc798a7892c4d82"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/sqlite/dev.json",
+      "sha256": "9b4c38da7f07999180dc1a463e03371e3b4eb685ce8a110e5944eb8fe3a70853"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/sqlite/schema.json",
+      "sha256": "5379f02bc4100f9521f442c132a37da40d4ebb532c32ec319f68ecb95c80ba2b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/sqlite/train.json",
+      "sha256": "abf17d3def22f56f41b3e139b94bba3fa4a986280abcbf6df2d7f30150695520"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/data/sqlite/train_schema.json",
+      "sha256": "4be50334e1c5c4e9dc72ac410247512e47b63f007d7ff3701265180cf6a271e0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docker/Dockerfile",
+      "sha256": "2b24426c31e373b2c99eda6b2aace5ad5b3e707bfb8b963ca1eb6a6d4124e83e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/generator.md",
+      "sha256": "e2ab57a750b2ba24cf7aa043c6c157b19143c6c15f68117a872d5d05994d0e26"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/instance.md",
+      "sha256": "08818fba44801c7f9688f60a78b7262e30e0ff3dffe687d4f2bc0d17fe61beed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/parser.md",
+      "sha256": "82d474b18b1f994f581d21d6a67deca65d0c870a19ea010aca757d36d0b12b5d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/smt.md",
+      "sha256": "46e3e99522338c9beaa72a506cd905bd8bb70c37d53a60520d7c5e65ffc4803d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/speculate.md",
+      "sha256": "9c5b1161bc024ecd9b908cb1be0dd8d5146984b9fafc72c81e490d5e15d0a875"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/styles/styles.css",
+      "sha256": "56d8898e57f4c6c30715fd6152164bf24d52ffd8e413b7de52293a23860ca347"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/symbolic.md",
+      "sha256": "32c125e2ca51c502c69710d185fbca69bccd21323092ab4b747513fb9726a893"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/terms.md",
+      "sha256": "ef97f133c7460d9e0dcb00431214a738d51fccf14450a3d5763009edcb26af6b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/docs/uexpr.md",
+      "sha256": "e65e6c3812ae97bb1310c17e6ec71eaf101837f9005c54588c8f6acc6605eca0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/mkdocs.yml",
+      "sha256": "ff5236ad2c381e9a5a48a85a759c5148e4303c10fa69d875ca7438a882d71ee5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/parseval.png",
+      "sha256": "3e930ceadd88269bbd4968c720752835e18baedfc31cd3669870a677e3824664"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/pyproject.toml",
+      "sha256": "04280e719664aaf198ba90e3aec5134103bc55d9668b0e13d4743645c924b3d2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/scripts/disprove_bird.py",
+      "sha256": "22f270d5cd4cbf3daac08ecd877c2877dc5d17725b0fc8c8d91e8010048f28fc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/scripts/disprove_leetcode.py",
+      "sha256": "a9bc7b63bdab493b98ca2eb9fcdacd658c17fa55cd8908ae6cb3e0672c6693af"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/__init__.py",
+      "sha256": "f25b9a903d4d299d4289bac277cb9df6e9416e504f7cc7669947cf4dfcce6867"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/catalog.py",
+      "sha256": "2b72035ee270c845e5c872f9be84546733911fd3a2051c2671c40dfbc0239025"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/db_manager.py",
+      "sha256": "e5143b559b028776368c3aa9b8c0d802a4d4d4e463cf021cffa019e80fab6c4a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/errors.py",
+      "sha256": "31344a8f869b0b9711d3ed2182d047999c9a3ee90e69b0cfbf49e5b8366380d9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/generator/__init__.py",
+      "sha256": "0ba929d29b6768bb471c10e4e38613ef578ee1b214caebaa2482965cff524907"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/generator/coverage.py",
+      "sha256": "6cc7a7ff4a3988862c7e56c5e7367853f2729e2e8d08be4a0da4d37c0ed0d3fa"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/generator/generate.py",
+      "sha256": "2e9200c322868de266ffe9ac8768e0462720b26d07180884017f3f5e3dd7ee6d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/identifiers.py",
+      "sha256": "35958cfa2e7f3ab5c3371b6e9311d791cef925f8275d1cb18c3391d871043bdd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/__init__.py",
+      "sha256": "a1c35f5e292c46c1d5d488535766880025ff40847592f2d885d9f5c86d4d4058"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/aggregates.py",
+      "sha256": "ffef1b9665b682a6305429e48bef83566e6cbd38015b471612c212e905480d4b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/constraints.py",
+      "sha256": "2caf9151d003cda4a1d8efafc152499d8c9051a57c9b872b40315a91050a595d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/domain.py",
+      "sha256": "e2df97eddbaa6968de351ab3b930a3135820add7ac9f924fbaf2589d74f823a5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/machine.py",
+      "sha256": "de0c5916d6e2f92917de923442c297332090a45287551c219d6b01dd243a7a94"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/model.py",
+      "sha256": "651ea0d28b6b02250d4bd6930b95bda1403f9f9d03fa144de1856bd0487ccd7d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/ordering.py",
+      "sha256": "e97a672bd513992da3fd2a24625b64bd7112e60128c8aad40e63e394cf2fe409"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/relations.py",
+      "sha256": "b132e7b834a71f9986a2f630efc405adb8179e3e1f3394fd631024b3961bfbd6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/instance/valuation.py",
+      "sha256": "d4c2fe9ca3bf96cf8c6d38ccf399510a2421f4d2a97b529ae93b6caf2b52bf9a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/main.py",
+      "sha256": "771c58bb1acee1cf00075e56308167cea711e3e799bed262c8eb5e519697957e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/__init__.py",
+      "sha256": "dec113992222d896061ca6b337e23bbf1bf18619a583b7679a899df6a609e7e0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/context.py",
+      "sha256": "d31badb5ac5c6cda2ccbe43b0325bc6e5de4bfa03d79034318c34ebbc50c4f6e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/ddl.py",
+      "sha256": "f5fb5a4e224657b72f05e5d8d516efdaa7dc294de307055a7040185942bd0325"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/dialect.py",
+      "sha256": "1f3cea2f552d1f9f1cc847d81cd78e4784ce05682e1144c29b3e03752c568258"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/expression.py",
+      "sha256": "c814609279e435dc57939e4d090c86a30f968041b417b2d73749c9e23434e670"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/helper.py",
+      "sha256": "d7397e282702be875eab76946f9f7600e1247b7feceef79da8988de777a1c698"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/__init__.py",
+      "sha256": "c15105b888c235a9b45f4b3b8de60ca40ca82f09682bcb6778e6fd507fd158da"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/aggregates.py",
+      "sha256": "b7e3d97b3da9cf0dc1c68c8de03491fe977cc5131624a9a2ba4c0cd3d10f7789"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/analysis.py",
+      "sha256": "01b324924d771c1b86dd96ccc6471d95debda5b5d065117cd95efafffb60db41"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/compiler.py",
+      "sha256": "a43a033cb616c3f7b0262952a98565a2f4b61ffdecfb2f90885760e3346f050f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/inference.py",
+      "sha256": "de9a994d0efb6dfc52f3c626e0cb45aeda14ada5be06939fd99f5dcc37977a47"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/normalize.py",
+      "sha256": "58d5103f58f909582a9fba06e5c1a24915e8227b8aa2c30991773414051be5d9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/projections.py",
+      "sha256": "b32a028340f31a12e8b5552cfa9307aa6f342dbe89aea45b4c8ff13d591f2966"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/sources.py",
+      "sha256": "99cce52813b1d0de95dcf23d87a71a5128085efc80ab946dfd6cf3cb15ba919f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/query/windows.py",
+      "sha256": "abe7972b08e0c4339077d41f2a1b91a49fdccacad89a2684a3ca00d86194476c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/parser/scope.py",
+      "sha256": "c4c0c05f92b7f42bc21241c1925fb4535ea308068ddbd6564c53c8edd1bdf672"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/smt/__init__.py",
+      "sha256": "5e49d35d3c59644ad4b833534d7be5356e55086c3967bfa1c3f1323b5e540009"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/smt/csp.py",
+      "sha256": "0786cbe9d9d1498df09b5b9b54e866037849f49082b120710de665ce856b872d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/smt/solve.py",
+      "sha256": "347f3bb4117f73a4611a056f93b8a491b84b42a9a2c3e20e90b06727247eb567"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/smt/translate.py",
+      "sha256": "62e32da242e20dad58911aee695fce6b6079860a9887ac729bd8dabedd091983"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/speculate/__init__.py",
+      "sha256": "61fd9d13d2cb2aca1f6d3d345ae27828a90273edef0412b32d7434e3ffdc88be"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/speculate/speculate.py",
+      "sha256": "8bf29d54c9c58a6a0e00a104e2e5946db5ca24c04054143a4068c3c41f7f8ba0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/__init__.py",
+      "sha256": "981e35a12b92222c4d1fa7827eebcece7a34fc8dd56a3526fefff90bc1532577"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/base.py",
+      "sha256": "008637ac33567d329b750203b1a87990c55b80b8a403ef07de70bbe72d310a20"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/boolean.py",
+      "sha256": "7bcd17b3fd826820a4b3b17512140eefcc21b7a1e572728626ebf36e6af8f8da"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/expression.py",
+      "sha256": "6ec39d557e12e1c3716090528c89a0ecd9dcf37a5bc54b6e9e5861dea73c30b8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/functions.py",
+      "sha256": "d01e7b5eeea2a69381f345b8f7973bc452b4d48daa79c7412fba49e45fa9b1ad"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/numeric.py",
+      "sha256": "f4369853f80d2c067b49494e917e05c8927e644ad8a4e00afa58f5bd8f3d7be7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/operations.py",
+      "sha256": "a129fa91bf7bde74a9aeadac5d7d8758dfe415ef3e0625d89c893fc26bf014ae"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/runtime.py",
+      "sha256": "36076c6378632be8cb2aced33b340a4706ae3dc96c1e8a6f4a70211ead2fce70"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/semantics.py",
+      "sha256": "9f0bbccfd699b4f1369c8551b9d4ec897dfaccd8c7fa88fcd29fa525e9142547"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/string.py",
+      "sha256": "44555b21d540d204b3888ee1f51d0bc77057a5011e3c4fb81be31b41aeb7c006"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/symbolic/temporal.py",
+      "sha256": "22702fbb454cb2193f8839aeb28e243a801f4e4c5152d05ab8be345d46e1dc8c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/__init__.py",
+      "sha256": "2b61dbd7009db3cffee16712e9c3bf5b211618e52fce36ad2f56cd98593c3108"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/arena.py",
+      "sha256": "23c695d9f2f90c1d207ecb504e77de574e12e52d252cc5c569d359eef4fcfb44"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/binding.py",
+      "sha256": "13df8f4d6feb2dab00cb3a23a6bb79f3fcb00d4f612ee58caf868711e33b4e49"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/builder.py",
+      "sha256": "c5b95b07d164d9f37950609f10fdc2c640af9c9411cbf0e5fcbf7c9051d6c523"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/constraints.py",
+      "sha256": "1afe4565acb468cb3a090454cde584223bcde08b4033986f09f413b3ef42bb49"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/context.py",
+      "sha256": "559a21253a7986277b63abd3441a75f897e5c95a899f081da861c57a7dda23b0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/decls.py",
+      "sha256": "6edfb10c0fcfe14867e5713e044c9ce22367dba57e574d6c14c6514e15180f55"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/names.py",
+      "sha256": "a8b6d846fb843305dd11c02cad2b21db25b4aee1ea15595956d87a1e31dde3a0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/printer.py",
+      "sha256": "7d7e1892fc6df76b76f3d5cad886a039e20a28f3edc70fbf34eb49da92a73814"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/sorts.py",
+      "sha256": "ad0377b768e31d862a010e75bee05c981fe6de28aeda650d280392d058e196cc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/terms.py",
+      "sha256": "619a2aa93671da625523e9f5fb9396df406ae23b251602e3d2a14ec2e1031927"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/terms/verify.py",
+      "sha256": "3b03d804ad970b4fc4d371fd09c2e00379b0aae80f57bad2bcbe97538577898e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/__init__.py",
+      "sha256": "6559bd118507654296d931b2d3699a19f8caf2f957af639bf9c2d6e1e55f467d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/aggregate.py",
+      "sha256": "43e9bae333190ff77a0487ed7c7bad4a2863f6a3e5f7154d74d2167648e891a1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/bag.py",
+      "sha256": "ba9bed387a7f55f49d312487fbbcea5c6aa523b1a97e9d23de7d943d854d6a95"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/espnf.py",
+      "sha256": "3bb6c1b22ee699e60ebb46c8f71a02add2dc3dbd6883415ca4a86266508430ad"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/lowering.py",
+      "sha256": "1cd1352fec441560d8230fe68757d500fa6ea6c181bff85e8af0739a168e6b33"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/normalize.py",
+      "sha256": "9264a70e16aefc4bfdc61806cbd5f08e06baccaed4298d50a51055b9a8cdc6c5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/order.py",
+      "sha256": "4b2fee738bf84876d1cc2f89b54a7704d69a51810d7e92c248faa84b2a855f5b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/projection.py",
+      "sha256": "4e1bd5bd071b0c80483667fd64e05b4a834d381497c5834c98e927f3ee7930cf"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/uexpr/scalar.py",
+      "sha256": "3edc74fba17b4fa51f4aa595992c85b766715b0e95125a79b4ae95c3b7580340"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/generator/test_coverage.py",
+      "sha256": "3088fb0945517b51f53eaebe61c4da5a40befbb67c850652e2f1e60ca87e95e2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/generator/test_datasets.py",
+      "sha256": "7b3051156497ddedb81a6f829f78a961fc1c50608577120e2e313e4c9f1a86bf"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/generator/test_generate.py",
+      "sha256": "bdf203a50adad47e3b8744eb7ab1ca055c93403bfba529b12364aaa9b64219d2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/instance/test_machine.py",
+      "sha256": "e3514f29ea5b928aaada05ff37ffca1b6507ccf17b873ce00eb1194b3a17c6c6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/parser/leetcode_schema.py",
+      "sha256": "40a1bb6399ad64d23c6aeb0035a039d9b1be6da569de9e64ffda9f0949855b4c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/parser/test_catalog.py",
+      "sha256": "7ca7b457bdefcda320c28e9cc2c64d9a9bf670b2aa46a0df9ac96599b71e1aea"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/parser/test_dataset_catalogs.py",
+      "sha256": "d0a731e43a9fc7df24bec8c0cebb2e31f0fa672546f6c0fe739de09daae4c9ce"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/parser/test_query_lowering.py",
+      "sha256": "50a81603041dd2b83a888ddff0ae5a68dfa28a5ae2eb9459259dc924acb39356"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/smt/test_translate.py",
+      "sha256": "76a81dad22dbd12055a0ae04b6b9047cb62cc16e09934eb8954129eef790966b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/speculate/test_speculate.py",
+      "sha256": "02c2289a67c2232e23ead9974e4fd3452334f04a5a7837a024205b74cc8a7a58"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/symbolic/test_boolean.py",
+      "sha256": "1081e424d08ce79ef857b53da9d7e94e9cb714074d80cdd462b47a6158b6bace"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/symbolic/test_numeric.py",
+      "sha256": "d35f2f4a3afda3c7fe6e72d068602bdcf51f758a8fd180a90dde9d06871b63d8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/symbolic/test_runtime.py",
+      "sha256": "7b7f4b8594b30b7db9fd45e6c2843a3c935a33dbc67cf51217a741846effa8f7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/symbolic/test_symbolic_functions.py",
+      "sha256": "663ce4210bac273db0e3a33cb353d46947da68790f2e240d4e89750df440597a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/terms/test_terms.py",
+      "sha256": "dce2e0af3416531218bd833f3a3e1ad6c7d72942639edaf18e9c936aa47b2bd7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/test_db_manager.py",
+      "sha256": "d276373126a0738dec2ba78c9b1118301ba66940845011f3b55dde5c17eb4186"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/test_main.py",
+      "sha256": "61d113f94ddec95367b6fe4b1ad200845258033e4852fb677827eda836184b42"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/tests/uexpr/test_normalize.py",
+      "sha256": "5aeacf7ff4bab2775cad3c079302a56b30ec2b38ba5fe89f1683102e656c3868"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/uv.lock",
+      "sha256": "6fa1f199e9ac641592dafab6b914583e2b6744a2365ccd3aa22647438fbbea03"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/_json.py",
+      "sha256": "5cf9f83e7cdb4e0d4372acfb9f524cbf974a841e55155ebcdf8184b7149ac2dd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/extras.py",
+      "sha256": "a017eb76fb569fc213c5cdf1fa1da1e88c0752c59d56a09d7f81a985bd09a98f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/_psycopg.cpython-312-darwin.so",
+      "sha256": "1b7e3341e5f16824505c32b11b9bf50fa326655d6383ca1f2da3cd8baed50edb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/errorcodes.py",
+      "sha256": "f0113f6403fb6e1b0848ac8b3f4824ad683f34d8f5ba3dfb751df9e840deeb2a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/tz.py",
+      "sha256": "afde642bb7864a9398aff96e0b262cce71ccce3979dac2e3b2748f5e45cbcd12"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/_range.py",
+      "sha256": "b1779e9c6ada244130d88de673c46598d8afcb68cc83bcd6a1a9c37acd98c29f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/_ipaddress.py",
+      "sha256": "8e4bb284b82a50644170b3560ccf10272b15eaad4da5cfd1607e3f904ec964f5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/__init__.py",
+      "sha256": "f66a3941dd2e587884071d82768806a2cda436ab6534d1b36ed625182d21592f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/extensions.py",
+      "sha256": "086d241b9bcbf0eb79d375069435d724915d1562e0e07136fdcd7e94b38b73c3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/errors.py",
+      "sha256": "6804b8749c938356ec0f3243091400301fecef3bfe438c81e98be2876e88fb43"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/sql.py",
+      "sha256": "39c144026a5ed9a31faf1d0c124e0bc74d17bd75c90a6be595a3956c963eca81"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/pool.py",
+      "sha256": "50612df0874fdf135cd8f1983651b8b10be0f2785fe1a7829f3dfd8534741fc2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libcom_err.3.0.dylib",
+      "sha256": "681c86bd0784a883b2c2c28809c30c7868d3d4d51f68c3b2bf825eaae6472092"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libldap.2.dylib",
+      "sha256": "ebce7a821251a7685fae32d984d823f914c1318ac410968fc165026ef8f64ed7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libpq.5.dylib",
+      "sha256": "790a24f74005ff5fb59a5357b3d7b6f4a445669b9ac82649718cb49f3dd587a6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libssl.3.dylib",
+      "sha256": "5021d9e6b8f76d4daafb495245ed09891dfe7183f6d66f88b416c8c91d0fa4e0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libcrypto.3.dylib",
+      "sha256": "fa84c4d23689f4521f3e70346cec3c4e720aa67cf8e20b9feebac6302b6b0d6f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libgssapi_krb5.2.2.dylib",
+      "sha256": "8c84f54daea643032000ca8748cf615f4eb19d19f8de590c0b7f3ceb2fd09cdc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/liblber.2.dylib",
+      "sha256": "abdf5d621c8be8f10ca34e721a48791b08aeb0502fb7dd15504e7df6e581c8a4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libkrb5.3.3.dylib",
+      "sha256": "8619730aac16bb8195b743384b1c5b651027f3d03eae903ce658a1a93bfadeb9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libkrb5support.1.1.dylib",
+      "sha256": "7054b63c05a3ff796030742841fece3d26db88a3783cffe7e3f6fae9961f535a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2/.dylibs/libk5crypto.3.1.dylib",
+      "sha256": "2e74b872f346fdde55fd5394919a5f671712e3bc644ebcca3b18f67b25e7d8f1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2_binary-2.9.13.dist-info/RECORD",
+      "sha256": "8013e4650b7f3aecfb460d9e49fd082b842943997bde81516eb6ccc5e86b8cb3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2_binary-2.9.13.dist-info/WHEEL",
+      "sha256": "7156dcce88ca058d4e5118bde8900f7f0cacc719d55b67b78cb6de2362e7dbdb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2_binary-2.9.13.dist-info/top_level.txt",
+      "sha256": "edd1c6a4ba90df0faf1a6184567fbbb8af74a94f5fcab19d5968bb4be8137273"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2_binary-2.9.13.dist-info/METADATA",
+      "sha256": "a5267b4520191137e34589704162fce02cfd40efcfeb899c45187c7f6bfea7e5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/psycopg2_binary-2.9.13.dist-info/licenses/LICENSE",
+      "sha256": "9614b85dfc9a72c5b2ca33144c1d7e1ed3b1c297459d9fb28a6a5762c2e8d71b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/__init__.py",
+      "sha256": "ccd6a6c1edebfd58d3952fb3d1baa5a4d4f872518f8d22de2a17c6f10ddf659f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/_auth.py",
+      "sha256": "edb2059c9ee526b14484a2c49c71a8d7e87b139727641db6d75284d6f6ad0404"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/charset.py",
+      "sha256": "6381a0303c67d18cfef7d370b2d7c22de09fa1115dc32c16a07ae7e469ef8219"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/connections.py",
+      "sha256": "649bb1e0c3e3e797b2b6cd4aa35b2084edd75c4b2f6c5b1900ae696285b9acce"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/converters.py",
+      "sha256": "f37107d6a14a2c54a5903010c976c750352655ac26bdcea3408aaafaac104dec"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/cursors.py",
+      "sha256": "bb302b0e6f59813ecbddf03ce6cac205dbe1a92cd0d394e9368f2d248508cdf7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/err.py",
+      "sha256": "6d1bdc7ec7a195d5ec9fc746b30e0d74f959026f03173459038a86496e0e8eb5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/optionfile.py",
+      "sha256": "790a33e9ce37caf987b69e4c23d4c1d863d176882038b7a6714580064b1fbad9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/protocol.py",
+      "sha256": "683f8f18f45873091223a649a095995512a7f47fc0d1fef429f3c3bbae6dab4a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/times.py",
+      "sha256": "fea5e00da630b079edbe920a48a5e9d6bad8220b6ae99f692f22e73b65cda0bd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/CLIENT.py",
+      "sha256": "492bcc14f6424d5314d5459ae333ab7e160c0dd476c06da64b41391b32610ec8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/COMMAND.py",
+      "sha256": "4c621301470d5a5ab61b0836c2fe542b6ca47537782d84e4fc470924e0a91887"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/CR.py",
+      "sha256": "424df915644cc511dde926bd0822004cc87b8de811df19cb76b75a0424f47534"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/ER.py",
+      "sha256": "9f0a97febd28e2698de02c66ecd551c89393568bffe466e5e697867baa33e5f9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/FIELD_TYPE.py",
+      "sha256": "cad1738009c699bf61bddb019672baf2a759bff6ba8d81485d3e954806fad33f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/FLAG.py",
+      "sha256": "172f8fac22e7508edfc7fa395b2a589d403358033413d779c8bf1f15154a7df6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/SERVER_STATUS.py",
+      "sha256": "9b6f08ab92460850962e169f13bdfe88ebf0ffd8031aa9f2b56dcd907a5bba00"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql/constants/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql-1.2.0.dist-info/licenses/LICENSE",
+      "sha256": "314120dc65f0800f738a4b31400c76ee14decd1fbe77ce9c3540a421b86ea7b6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql-1.2.0.dist-info/METADATA",
+      "sha256": "a3256c895206725e3930f1c9f9fc4e6cf6662c9933c498759c0ed992250cf57f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql-1.2.0.dist-info/WHEEL",
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql-1.2.0.dist-info/top_level.txt",
+      "sha256": "20a955f9fe28f74b0e76731de8706fa349769ea7c938653393065e684106b918"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/pymysql-1.2.0.dist-info/RECORD",
+      "sha256": "b37a818a71f3b36f00c3deac2b35ac181731de4992a03b19c252dd163a56fc6b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/__init__.py",
+      "sha256": "a0dd79f5c77554efd3d177c2ab6f0c253984e1d33f1ffa3ad26434e25d4b3467"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/events.py",
+      "sha256": "bc40d6d385ff3cc84cc39cb4ffde6d6c4ce1b77c2e6bcfe09e430126cb58351c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/exc.py",
+      "sha256": "d828a98df9474ddb668ba1be4db6c0e23f78b095f7f51f84826ceb407c96e5bb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/inspection.py",
+      "sha256": "cddddff99cfefd9ae18119bd24b65b0b8503cbcc703bddf1ebc2d2457be07d1f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/log.py",
+      "sha256": "8d1b1c08474c9e73f24e29072ab4fecba12e47be821e836609435fa4789e0154"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/schema.py",
+      "sha256": "45203f8c223430591e3aa8904aca2b91ac8df9a155458b0e7c3338134be59352"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/types.py",
+      "sha256": "98e273cc5e4b1cdd845d7f4f379005935cd2a945ad2607b2859fdac0002bafd7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/connectors/__init__.py",
+      "sha256": "1a6e9c40284f7e448041c90280072f3efc420ce151ba341e7c562071c3014a94"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/connectors/aioodbc.py",
+      "sha256": "48fff1558b1b110000382cd5347c41d42afb86ac9a34c1b97fb511bad5faf5cd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/connectors/asyncio.py",
+      "sha256": "44d173217bfaf38174149b84d396bed502bf769a98ad41f022269408edf69f9b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/connectors/pyodbc.py",
+      "sha256": "207b859e11f4b5be49896b1c645f3864ae1e4ea429e5d66c3fb1177c3cf6b575"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/__init__.py",
+      "sha256": "66201546f39c092df5ccad2a341c1e42ef7a2376034f92d91e8f9df6503aa0a1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/collections.pyx",
+      "sha256": "2fb0d9dc318aa60c36313d996514710a7adcc84e69535340168c16800cd03c47"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/immutabledict.pxd",
+      "sha256": "df1dfead71b979143b6c19e4b59f8e27dfba7edf334e83e64c339df76897a41d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/immutabledict.pyx",
+      "sha256": "29f0d361b4df79bb2d13cc6ea80b6e5ec1cd00ad3f6f9abfca65228a751eff1b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/processors.pyx",
+      "sha256": "475ac7b062c4686781ab955e0b27630a5cd8962bc444827d07e5cb38995fd8c4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/resultproxy.pyx",
+      "sha256": "7962ddc815e2072fc22d0ac5e5271f5899bb5f435e7a5b1c49779db63d73bfd4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/cyextension/util.pyx",
+      "sha256": "4ede55c1352d3b760a40ad8f1df60e2e157626be4631125ca760f31f87e318eb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/__init__.py",
+      "sha256": "fcf96cdc9387ed3e52fcaf020794d21f78185f7eb448d6d0820e80199a1ccc12"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/_typing.py",
+      "sha256": "29227a1e348fe4c4e257e4d50ca9b8dad4a454ef8710c6d7731f2568d64f64ca"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/type_migration_guidelines.txt",
+      "sha256": "fae1cd766605181edbcd4353ea2f0ce676f88fa8fd614280b56e2570166ab0c8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/__init__.py",
+      "sha256": "fb159c3950a24c0a2017632282968b34912c85b61024e0bc294491efaeff5edd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/aioodbc.py",
+      "sha256": "ac56dd249eec471d15232182d7bc1044104b75e9994d75e8ef3510f806656b91"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/base.py",
+      "sha256": "e5cc2b78796a9cf5df9d329dcdef6ad2db46785222d5b613ccc1c3291572f6e7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/information_schema.py",
+      "sha256": "d453a060ff3ad85392bb2e99f666868df1308bea224d1ba9539b2846d9406565"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/json.py",
+      "sha256": "f420cd5920af04c31057ffaf6eaaf12206a80cae8f7ef8b12633f31113e4b7c0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/provision.py",
+      "sha256": "d933e9e2623f9d55018b33868f0d2d5e1883ac5050c02fb9a31a9ecb16ab3de1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/pymssql.py",
+      "sha256": "eacee715dd1071b32ea09049face2578eac5dbf1173e77098ed7402f750c36a4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mssql/pyodbc.py",
+      "sha256": "3ad818fde19854fbf68c9ecc0125506c895a2c57b910f5deaa991b36716880d2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/__init__.py",
+      "sha256": "5d0cfae540a93a9151fcd03183ab0cdb32603e62c4a75e83ff212a8093e38ab2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/aiomysql.py",
+      "sha256": "df28ca1f1bc8027f756bc5fcd32a5582822cb9ebc220c5c1500be72d5ccc5693"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/asyncmy.py",
+      "sha256": "544645ffbadd42f70f715d6714daa99802c5014988239b5f0f5ebef93384c823"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/base.py",
+      "sha256": "6bbf785570b5eff3f5e84a78d5e88caf5b8441038bbe531518c2b75fb5cedd74"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/cymysql.py",
+      "sha256": "66f87a1ce5ade22720c93d4fb92992072af9fca478d72566e76c850aa809cea8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/dml.py",
+      "sha256": "bb0bb527b04b75834ff0b47afa60a4a1328e038512a3802fe9ddc8fe7e5cde72"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/enumerated.py",
+      "sha256": "b121b9aa2606bbe7286f1ce847017dc7c41f73e8925a1d2a78619ee684255d63"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/expression.py",
+      "sha256": "4a157957a67e61a5e2fc44db3dc2f3d403ae4a3f6966bbe09a1d8d7bad71eba0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/json.py",
+      "sha256": "5941340430a956fe7f46c368052d41240cfa4d4a4d96cd570b5f5612e1cfd003"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/mariadb.py",
+      "sha256": "227b198e6b5648f5115bf832ea15d9849e9ff055c291a2c2a6186a1d5328b04c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/mariadbconnector.py",
+      "sha256": "a9aa8cfad2ad58d01bf17e86455b6c2a43b5d61330e1f5210e20fce5bda42a4f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/mysqlconnector.py",
+      "sha256": "987abde75d0cbd33730d8aaf2109cd6cb2a877c22d710e7e18ad7c5c4b6682ce"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/mysqldb.py",
+      "sha256": "ea8a0b69a4ae7bcc90c60a27c73e2ffe8a4c1d5fa37e2f71f6f5aa7b173fc605"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/provision.py",
+      "sha256": "a5521e041e19179fe308b48922985c405583c57a38a2953ba92d5c3a40e14867"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/pymysql.py",
+      "sha256": "f71dab40acedbad99aa49f7ebcdcf117f082dc46812e327f25dd39c5429d00a4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/pyodbc.py",
+      "sha256": "db5032451a8af270d6a086353ac56351801daeb956545cab0ee6a3803b381e82"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/reflection.py",
+      "sha256": "5b2865007e1042928d9b7f9202eef2f0365de4faf3700e8b22424978acb10fd8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/reserved_words.py",
+      "sha256": "da93a796b334b892c7001a5131f8a358ecc7946c454e65b39e53f034a1d7a616"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/mysql/types.py",
+      "sha256": "5ecec10a44c0d646df5901362e1f4e29076144d0554c7aaba7865a5383ebebef"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/__init__.py",
+      "sha256": "fcd7e2eff0b52e3fd1016dc8213243ee711a8149df240186fed7d1b45c821b7d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/base.py",
+      "sha256": "000e4028c3ac1f6a2c8289ea3041a75331aa72da8948192b774155a3d5b6dc33"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/cx_oracle.py",
+      "sha256": "d0f2fc2a29d86d18c8ea20653912b8e00329196024560875b2811a99415af087"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/dictionary.py",
+      "sha256": "868b4865cb64639f287a92c9dcd610c566f8e2830ebabc6c5e00f6ca17b79de8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/oracledb.py",
+      "sha256": "41226c09bd53396cc2da2f3f857c6317489c382adfd6a6060592785fb5350aeb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/provision.py",
+      "sha256": "86da7a8d0d7b2937276273d0a5e3a71344907b2ca0e4396c2bb12117f40ba908"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/types.py",
+      "sha256": "02b593aa4a29e6eb1d8fd682a7da34c5350e5220a7d72ab072361dd1f479cc40"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/oracle/vector.py",
+      "sha256": "a65b91ee10f8855e92f58b7719ce5fa26728604f230f35e7f0468631aaede760"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/__init__.py",
+      "sha256": "0c79140e5f20893e16cd2b7fb3e117ba6e7d7a7e52f1bb0ff37f9d78180a43de"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/_psycopg_common.py",
+      "sha256": "ac7aeaedc56fb1dab9cb183d82563e3fe7dfed6b0f726dab05656947ea18624b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/array.py",
+      "sha256": "733e361d5dbc83f55b1f536de139c4794d46512f2e4826d3a94d82349e2a0df8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py",
+      "sha256": "bcd9da5dd314d4e6e43ea16cb566544d5ebf58e5a9f38593a6924546e9e4c5c5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/base.py",
+      "sha256": "215ddbb4b73512f14ed9bf391f62bdf5bef9bd7c46b1a0a321c7bac38264eae6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/dml.py",
+      "sha256": "6a89a0a2ca239535a528a41c13031995ff0f70dedaefb7e4dcd73966acafc620"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/ext.py",
+      "sha256": "28d936ac61b7b71e4ef3ee5d08b55b1fa89be96211e7dd6c082db5adab48f967"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/hstore.py",
+      "sha256": "3c8867e6176396a040979e02bd7cfc8a6df12196cd11ecd299731632a4fc6d3f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/json.py",
+      "sha256": "7d68a10a31f1c00c02ad212521bfff8ae795c4bbecf7f86ca980ecda8c7934bc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/named_types.py",
+      "sha256": "fe2e37e662ecac5f44109c8bc418a142c8d692d5ca90a9cd0ab9025a98f2d373"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/operators.py",
+      "sha256": "c01d4378fa1696ac00a3191d547df947b45e147e14c1af06d21e877d963ee629"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/pg8000.py",
+      "sha256": "c79c6160906db657ed42828bd29e31323cb097af3232165ea325cfba28f4d83e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/pg_catalog.py",
+      "sha256": "207bf8b6ba6fab7c73d13f0c2863ee6bea4d82f5758a311fde65da2cb89cee91"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/provision.py",
+      "sha256": "dc8617e7322caa49bdb699d6b85329644018bec0ad783d994676bcab3e1983b9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/psycopg.py",
+      "sha256": "21b536a55f6bf2e522f9fb790cb84cc1e3a2cbfbf90fda091d698d1e1618b46f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/psycopg2.py",
+      "sha256": "70c23742a9e5307814a1d0d3cffc68f61635b5c82b27e6e8d044a9772d03b189"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/psycopg2cffi.py",
+      "sha256": "314c76c58ec3a4d2b2c0b41c3b355b0f7580325d0756202853953688714432a1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/ranges.py",
+      "sha256": "688bc7611b3eb4a424b7c7894e6137fc905a1f1400f7b5b015feede972c47ef4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/postgresql/types.py",
+      "sha256": "04d87aaefa839f45339fa20ef13fa419862dbf75be6b1020f0ec0840354d245e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/__init__.py",
+      "sha256": "927614ac02cff7a259a4c79c028c66228ba826b45b190e0a3e48c65e5a73975e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/aiosqlite.py",
+      "sha256": "57bc309954b34488fa4c10578f4d9c6ae4b1983739f35588fbd0a19b5b3ca6ce"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/base.py",
+      "sha256": "826702ce49c1518ced54fd8cfb39ea16c444bf3fcefa88ad0233591fb9f4fe59"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/dml.py",
+      "sha256": "6f8a55ddfffb24c9b6671b96f74e98408ed87198b21ce631a9128f81ed1c31a3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/json.py",
+      "sha256": "3ee067a0e31c51c574314897802de65c20affe28a09518665f76544f7362531d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/provision.py",
+      "sha256": "d0310344618eae789ed3d51bd133d466337fe3dd167c12bf3d7bc788c7c9f1cc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/pysqlcipher.py",
+      "sha256": "cc8aa4568b7293e35315fc7b4ec5aa8bd6a9417c2d2f6fc2130e3221219381e6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/dialects/sqlite/pysqlite.py",
+      "sha256": "8a955591ae3c2b7158795f7f8204aa2256e21195b17e09b56cfc01e325db2f8a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/__init__.py",
+      "sha256": "367d390095407d99ffb13a068edd3dbc1719113df8dfec18c25fa8a36160e91f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/_py_processors.py",
+      "sha256": "6ba7b1bc31904f265cbe7541697d75c3446eb02b95112c55737980047ef6fe2e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/_py_row.py",
+      "sha256": "219bd8672b676222b2930027a46bfead1e57b0506aa1a02959d959720fc7f727"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/_py_util.py",
+      "sha256": "488a0a915523385d94ece6eb83469364d3917ec1f2ccf857deeee2b35e09029e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/base.py",
+      "sha256": "6eaf5c64fb87d30670ff9a08e1a1c04afc632f20cf9d95bac89b223750cd5310"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/characteristics.py",
+      "sha256": "c1183ab84f0d6121f7f30be9d02318d94e61bfdbb75533a44c7c8979762b92f4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/create.py",
+      "sha256": "e7140e007d0f1b170db27a2b580da2f5cd69f6a64357579adde09a9b6244f6f6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/cursor.py",
+      "sha256": "f33dff3cb788887f2219b3aa675407057aaaef900828bbea5a5d2a05e98e07cf"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/default.py",
+      "sha256": "43886cde55bc6ec1da223a20319c811f8d46a81282c60455691df2cb632a0c2f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/events.py",
+      "sha256": "d4c0098fe0f97711c18535d96276f163c015888b51b639be184c53ad737e9eb6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/interfaces.py",
+      "sha256": "e66c07db0cd905e88b1f8ced87412cfd0987b47ec6ce925a036560f2d7b5b752"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/mock.py",
+      "sha256": "302fd2d8a8a133f8828ebf6466cbd3d4353ef98697e166bed566d77200606d68"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/processors.py",
+      "sha256": "21e514de9f39e3bcbdb9431f9f4b62f14979a7cc27aef22404c5a2015fdc9596"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/reflection.py",
+      "sha256": "81963355846c511c89bcf483763a3e87a6b50d6f1619ef68e1cdfb8941b9b985"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/result.py",
+      "sha256": "1d7ce239218c4c62a40f64654f2bce0a409e4a592d8aa97b33d7f873654e2a3d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/row.py",
+      "sha256": "b02f758c84c1a22b448637909b7e884bb2a31b08992638b008acce15bc69e6aa"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/strategies.py",
+      "sha256": "1143a9d72efcb439696c2d89f57267c83307fa5563bac141c7fdfdcc28759211"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/url.py",
+      "sha256": "26cad73b08a9dfddf756e621d0e39b1df2e4da8915dab82a10ff12eec69c7128"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/engine/util.py",
+      "sha256": "664f0b293c8e3bf59f8d07e6155757aa55450c9cf516339bedbc05e3ce516a0a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/event/__init__.py",
+      "sha256": "0df498ae12cc7f59eb0a710178a6994f86c9924b207b6718d93839d3a138d665"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/event/api.py",
+      "sha256": "c96b2ddab95a813bd4617cd9743ca6cb38fe718c1c61e251df86c7729da02944"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/event/attr.py",
+      "sha256": "39b62f35256b9c0c019a9df326aec5780dee50a9d79e84b0a62e8dcc62e40199"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/event/base.py",
+      "sha256": "37c6757a3aef00b20b0bf1d1285a9ec9947343dd363dd164b21ff5833a8bd4af"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/event/legacy.py",
+      "sha256": "6be0be78de2f0390a83d84e8d9cf19d65622a4d64c251a881feeac3286752e58"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/event/registry.py",
+      "sha256": "b51734c5d51fd2cdb54f9feb68ccaae08aca691f2e2c3e8f6d25bc43fb49c8e3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/__init__.py",
+      "sha256": "bb46db8c77e1712ff39d2109beb7e298a6394a4f8cec62577c5883291dc5c0bc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/associationproxy.py",
+      "sha256": "9134ceb825ce22aff2b6b59e7c62e7f9daa8fa72bd37e4d09a4d9c620ca89f7b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/automap.py",
+      "sha256": "4440f4312ef6b2084a1b8dcef264b9f5b5ff23dd9ebe73500f916505095d2a67"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/baked.py",
+      "sha256": "8a39b8c6d75fd0db8039bc44cba207d957c6b1c33326bbf3fc4a322a2842b6da"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/compiler.py",
+      "sha256": "5d0806082aa71d02a43733a3b07c915633651c3b589399f0b26eb9d24ca1a28f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/horizontal_shard.py",
+      "sha256": "9710a3c193160709aa976985420a95f5f3854fc30f26e00427e774fc24849a2b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/hybrid.py",
+      "sha256": "8e09e7ca472f1840bc257d939ab97da13c75334fb3ef5940ed891f561f87b647"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/indexable.py",
+      "sha256": "ccd50ed3c84d520fbefcb5bc601691bf238d9ec0a878f68eb3a28aa4f4ecf551"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/instrumentation.py",
+      "sha256": "48952c6ffe5ad8f0a61c522f2ec5e85235e7370b5c6aebae30de71cd344def3c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mutable.py",
+      "sha256": "912cdb05cac182b51097a8a731cd1f20cc7090f627ff2c6a46b70145c3dc67c1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/orderinglist.py",
+      "sha256": "60abd1ec7d2046cf0cfae29c8f6e66816f918a9d1d0e538a00f498cb2df1934d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/serializer.py",
+      "sha256": "a05904cffb55fe03223e43fd81a704300084271bbdb23c37677474ca9f04893a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/__init__.py",
+      "sha256": "442608c78fdec5952004f9acf08e61db35def1b2b3a7016c9cd062067cb03541"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/base.py",
+      "sha256": "797580618779bc18e8b05f3f658d63da0b1bae563fc727a024bb6abbd9606636"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/engine.py",
+      "sha256": "0a743733f816effc183a8f61d7c828e8b8f5ffed00d0338fecbc63ced6393dd5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/exc.py",
+      "sha256": "0ad1b1f2c8c7cf2929519a238a176e62d5e3654cfeabe38b72e3fc10da071416"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/result.py",
+      "sha256": "c457d360bf22f72aac9820fd12b1dbd89aa12a1030ba5786cf5aaeb604382920"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/scoping.py",
+      "sha256": "e93ef0175771390e9cf8fc8df8277a6b31c1f869a18e857d964e91403abdb17c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/asyncio/session.py",
+      "sha256": "da7665e41e6687a302c72375b8258683ff8677d8f8318e6e876b738812b4ec73"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/declarative/__init__.py",
+      "sha256": "c2b22cf33e9a9bcfab4b00d8c28c599edc3fdd3d838ffdbc35bc8e0e70f103cb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/declarative/extensions.py",
+      "sha256": "4e0510638d2f9213e3069f41f706e9afa505d9a51426b093110d1469cfe116a5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/__init__.py",
+      "sha256": "a2fb9843d67ca223a5d0aaa6ace2a8b4072192c8ffd86ebf6ce6952dbf79ba0c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/apply.py",
+      "sha256": "d65983b310ee95052249cf30dcb915a8c2990fcf1c2dc49f27777d966320d0ce"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/decl_class.py",
+      "sha256": "547a18892566856c74353ad731aedf2e63fe42e30ed7db98bffad785eadc41f1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/infer.py",
+      "sha256": "148ea6e1f7ac71574db5c497e41820ac3ee2fe8ac7ff734eb37578f6ea46436f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/names.py",
+      "sha256": "5e420703cb13fd83c9e935e41fcb5c40c9eb63e7b74a0e0582f858d39b684955"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/plugin.py",
+      "sha256": "5bf4c6f6e350d7452a045ec92805860fac9b761c590643d02e02e4b98aebc327"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/ext/mypy/util.py",
+      "sha256": "56097e15e6659b11273a025bc25cf1bac98e5162f8eaf557c9e28c32ae0c1758"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/future/__init__.py",
+      "sha256": "9d77b59b6a349d1108046ad1efb09c77941eb8c25e6c18d5ca2cfcd5867b05c5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/future/engine.py",
+      "sha256": "08d21e673fb4dc6481ca56024d36a6fd89399070f4129adf4f168d12041cfb42"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/__init__.py",
+      "sha256": "10d5f71b8fe667566197a02569701209603f8447d7d6dd906f70c6e61eabbecb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/_orm_constructors.py",
+      "sha256": "f9b1de572ecba113655156c516e74e3a5338736d32e7cd6b49cddbd7d782700e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/_typing.py",
+      "sha256": "e82a6fecb9676e81730d142a8b7101f1ffba3ec2e4ecdbc558ce3729bc0ff807"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/attributes.py",
+      "sha256": "e41d1f812af624b41bc4c7bcb2028e4a46e9017f59ef2145a46d1c208c0c169e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/base.py",
+      "sha256": "66596ab4e2c4392cc1ba3c2e2607b8f6bb1a18dc8e7166485f578375fefe8e06"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/bulk_persistence.py",
+      "sha256": "629245228121de3b28ad7d7c1f064fd9ac1628c8ea0c506d6aeac3da74449c8a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/clsregistry.py",
+      "sha256": "98ca550420b46154d87f5b90f6ef982676d1cb8c9f2f9cde415eb4b408c4b92b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/collections.py",
+      "sha256": "0bfe3848510b206057ec8df64ac4c203b613d084b583e5330b587428938eec9e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/context.py",
+      "sha256": "955b57f21cb8aa31d35f6e10762b437131e7adcf2d0cc6cb75e60265bbee55af"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/decl_api.py",
+      "sha256": "86929acbb65e11dc68f5a8651c9d6da69f5c821f4f5db158e327f0e5c40e34c1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/decl_base.py",
+      "sha256": "3472125e99eeea38f068fca50573e20f9cd8f989076fbad20fbdb4424d09897e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/dependency.py",
+      "sha256": "aab08306574428d39482588f161c2f5a441922bb793512de65da893635984ec9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/descriptor_props.py",
+      "sha256": "b712a8a9c12467daed4e67199b505eb0ec7320ee97f296b20cee384fc4375614"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/dynamic.py",
+      "sha256": "941fa08017f427dd0bf8a6cbaa5f3c236dc6fc1226c14066b451d4cca726105f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/evaluator.py",
+      "sha256": "61fcb6dbc1b2bef8eabc42fcf246b56b3beaeee822733e8dc38f0fc3488bd1d0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/events.py",
+      "sha256": "4577f5747210fceb841e0c0e362d01f77e63ad1d0e5f9ba1de98ad7040680b20"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/exc.py",
+      "sha256": "5b5d530369035550f0798beb0cac28aa01553bbc22228156ff21ea0edb3b7c65"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/identity.py",
+      "sha256": "90880981b37630b68bde4738dfe8b5080dfd7b0c3bb37517b2ff71c628e5419a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/instrumentation.py",
+      "sha256": "6c46538abb06a90753864457535fb52c5bb6541c7632390784bbc643e5f21868"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/interfaces.py",
+      "sha256": "79719640b29fc7575300863a0970bf20ef73cd699c73455969043935841ce7b0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/loading.py",
+      "sha256": "39dabca8c7e92110a6e73941a01bf17b4c1dd057a4ad0995b010f2ddc2267e21"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/mapped_collection.py",
+      "sha256": "501dc99823594369345c1d0c1fa4fb6e044fb9e13ba52ae1732163497fe0f0cb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/mapper.py",
+      "sha256": "a38e2b1a2accd7bd4e98bb5a8e4406197c508f09acc6277688c7395e6941858d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/path_registry.py",
+      "sha256": "002020001462ea3c62c6cd62f714eb3c7bec3e6b50eb2ecbbc1bf1c7cb974c41"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/persistence.py",
+      "sha256": "3358b6c26dd89b15f76f14172f531cc3659db626f46e4313606d0d999072bd4f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/properties.py",
+      "sha256": "7d1f1402c93e632cd608fbbb1e10848d5ada4bf81c37c0cde1e9aca42e7bfe46"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/query.py",
+      "sha256": "b8fdb92031c92ce44b583922e2c19ba5f9fb2f4f581053e0190680480c359843"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/relationships.py",
+      "sha256": "b699eed0f800cf99c5b699239f41f82bb23d8691cab95f4cc15e4c7377a7c52d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/scoping.py",
+      "sha256": "d1d89b80ddf4716d4b3a0552e8c2668f164774d7420b5b34d2a89a000cd01aa1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/session.py",
+      "sha256": "6572e39ee8aae2a53d978d39ea323f97a03e20b477b05e94259469361e69c3fc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/state.py",
+      "sha256": "612d2fa0dfdf7e3ee183b76a92519dbcd306c0420b2a8d6d5efef6e4e216f665"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/state_changes.py",
+      "sha256": "ccc870c5b40d56571198aed8c1a3ec62cc4de2e849930e0c9a0fec9dfb401838"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/strategies.py",
+      "sha256": "9c717d0600e06007831b777b35e5a21885b10fe84d7eb20ef8768b6d87f63bd4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/strategy_options.py",
+      "sha256": "5d6d50fa7e285f2bc085e7a9a4c88ecb3f6144a6fc533298291188d9fd4286e4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/sync.py",
+      "sha256": "df2726b160072b8cf051fbdf5e3d9ee2fe7c333990f4a50b5b2e1ac281b3a0c2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/unitofwork.py",
+      "sha256": "2cafda1a82e029dc1ad7b21ad72eff565e5dc7322f441ed530684e40b9bd6dc3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/util.py",
+      "sha256": "b0682db3628e3c452ae640f46063f32c138d87d6a56ae0c5e55dcf44901f1873"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/orm/writeonly.py",
+      "sha256": "3aa45696259affd9ae599208fc2b433a6e7c60c6313505ad68fe85febf64fa28"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/pool/__init__.py",
+      "sha256": "474b5d8ef5c7d937d3bfcb12dfa083b37837455c279e8dde5d695f349861cded"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/pool/base.py",
+      "sha256": "5dbe91e32ec424f1e4cfee5db84896b96cfb23c601020e291d0a6644ff50883f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/pool/events.py",
+      "sha256": "1666b612f525f177db9cf118b116266ab46dba66099a9153131c6f3b86e63a69"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/pool/impl.py",
+      "sha256": "def4ea99ec2ee7db541906cccb53c9b4530e52473d8ef2fe0a1693ed8039825b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/__init__.py",
+      "sha256": "5fa56a42e7049974b9ff48d6e08939efaf3227ef91c0d3cb09e574a6da121b79"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/_dml_constructors.py",
+      "sha256": "c840aa92af0ff3c9ac28a266bc7aa2206780b501024916bdbd0a42f153f31b22"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/_elements_constructors.py",
+      "sha256": "e1dcdc312d31352bf115d5ccc71fb6a7b38af7c4abba2fdc5aad3a0a4d0a9544"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/_orm_types.py",
+      "sha256": "7d0202a3fc4c8e59cd7b858259aa6cf0cc1feed78ace5d7bbf6fee7dfe7f8a44"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/_py_util.py",
+      "sha256": "eeafd41fd4b32ba9d5ea79f5cf3392b6f7dd5a38814583da81daf8521ac55139"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/_selectable_constructors.py",
+      "sha256": "101781422af670a481ca47a3576eebce9ac9a4dba6df124130c253938921e055"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/_typing.py",
+      "sha256": "ffee155fe66d5a822947e82cc7088ece5c07cccb91ece58b4c191c3f3ff287dd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/annotation.py",
+      "sha256": "cbebc64826cb26cae02e49102f9337ff2b5ccceb32c78cf7da40e7a7045e243b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/base.py",
+      "sha256": "f5916dfc42ffb15f793d86906eb31a9d5cede71905eb5a58c5564a38dea62ac2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/cache_key.py",
+      "sha256": "004d0b1c1de1fae90213de6cbd6f4751c33bad65105a824a7bd4d85bda4ac4a7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/coercions.py",
+      "sha256": "f7f19d38fe7d01f94322cb56b0344f9c9ada2465714b907894f7cbfba8877e0d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/compiler.py",
+      "sha256": "7d2871ec81c641cfc3dc575238cb768655e7067ac947cc572306d438751341a4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/crud.py",
+      "sha256": "c312d0a35d101246dd808c5ecaca4ff6e197d13f98cc0d9a0ceceda4210ccece"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/ddl.py",
+      "sha256": "b279b187934b222fbb8b88b3d4045815915c2426c598eae3793c584a256ae282"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/default_comparator.py",
+      "sha256": "8dac5de3d202d5f952df8f6a3d9d997098479756b203e06e5aae7607845a25ec"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/dml.py",
+      "sha256": "96c253b0dd78555a2653792898a9eb7aa5747334b01a6469a9db3f122b83046d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/elements.py",
+      "sha256": "e11b4b6db3482cffae1e2e6958ae8c80ff5f9d2e7a6626e10066373359235c95"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/events.py",
+      "sha256": "c69ab1de2ae41bc377832b1701588b0aa5d791ef4a09253eeb0e336547585f3c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/expression.py",
+      "sha256": "ff5da74222e9967de27d21620806df8f2e01782afa6d1387c7ed4279b7ca4af0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/functions.py",
+      "sha256": "5acd63686d3b1b6cc44e9989cf268c936e020d63045ded49451793918f49de9e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/lambdas.py",
+      "sha256": "f5ee5254dc58425ba277eb753229eca50d6f329ba990d537e9e2d2ea80dc142a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/naming.py",
+      "sha256": "c3ad93db28faa5a7cb3517bb48352cbad9251d262021a6d78f652d9da0894523"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/operators.py",
+      "sha256": "ee1f283f0c3c808ceaca18b3a625be8b254d485084594a2e1b2325846d645da7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/roles.py",
+      "sha256": "f4aae711dd66b79fcb9bc1befbbb8a08a1d576b5b73e4b3765749a710efd0d01"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/schema.py",
+      "sha256": "88fbc4e8659456a417f0a0885f8367ffe4e28eefa446e68d8a0a01feef2b4f64"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/selectable.py",
+      "sha256": "de1cbd74c330e64bd15f30f8557417aa45b3b7d3917c3c897764533af703279d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/sqltypes.py",
+      "sha256": "69b8d23dd227b9b8d360ad320bf236a6a01b63041707acc038669e44a9c38598"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/traversals.py",
+      "sha256": "a537bcd5392b24a4558b86f59c5d009b82243a5d90fcdcf130e97ff5a9517952"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/type_api.py",
+      "sha256": "a9328f0f453a337dd231ec7014c347621e4aeeeac449f5261ee5a8a42b56a860"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/util.py",
+      "sha256": "3f57c6ad36a0e798446b0e63156ed18516600d2b1b16fcbb00ba3c63465e8c7a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/sql/visitors.py",
+      "sha256": "abbb014080d6013c14d2559a4156121260166a5fb781910db2f146a918a149ad"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/__init__.py",
+      "sha256": "cf8afd925672cd607f010fe363ba397a0ef62308067de8fceee784b78405082d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/assertions.py",
+      "sha256": "40d4ce3557e0f3a4354dc311c4b86a203dbb6dcad0ee39edc25ee4800f096efb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/assertsql.py",
+      "sha256": "14089306f50e256401eb5bc4076d5b4757c4cda991ae950717d7dee2ab6f2b0a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/asyncio.py",
+      "sha256": "f0e2a492419b24d31b399c2c0bf1b0f292de33ceffc49869a284b865a7f4b6e1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/config.py",
+      "sha256": "6878bde4993f8568f33c6693fee34db7199b30201b964f5288ab7b723a667b7a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/engines.py",
+      "sha256": "63d067819cc139b401aefe3c763e488c369cc48333e2ad15fd66f9eccdaa3103"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/entities.py",
+      "sha256": "648138382cc394a1353b1540ae4585ef9e60bd86434bca14b97e5fbb03c0420a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/exclusions.py",
+      "sha256": "3c2fb8ee50528615248a2a27fe7f46a7b5c3c26a57839fa3236569267d18a489"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/pickleable.py",
+      "sha256": "81783248d237f5d51cb8d63a7bebccf4714ac50ed4bdaecd55981e632358e19c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/profiling.py",
+      "sha256": "41c0caaddd31671e0875740b41943455f1609a30007a4e4a7caa7a269ef7fcae"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/provision.py",
+      "sha256": "96a1d7f67f50bf73166c84c45d1923916fa308030183deef91e4b115b1af6b6d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/requirements.py",
+      "sha256": "ffe18bbcdc3ce588599e6fbd532dc9b9fa4b46593a9322650ab9f797dc26a187"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/schema.py",
+      "sha256": "e3dc7e4d70112f693ca0889a4b3c86c571b97e1eef24eb81a14bf987d6137caa"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/util.py",
+      "sha256": "09dafca172a622170fa8a4c2ded1e133a4ced967d1d4b2fb5570b068121b9ab4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/warnings.py",
+      "sha256": "8fc19688ffb2ada096d08839889c406b97a437cd995aa7105b247e0546f83190"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/fixtures/__init__.py",
+      "sha256": "1ddffa9a4d0e1643e91f531532f2b4ad8e24c86f3625f208c26f07491fc866b4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/fixtures/base.py",
+      "sha256": "b95c042b6e9dc0b7f89f1f5c8183f4550d8dc32c48c5526668db15a005bf3c16"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/fixtures/mypy.py",
+      "sha256": "530dc62c980fd5823eea1876682745d418b111bb60055852074447550b99016d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/fixtures/orm.py",
+      "sha256": "fef3312114ae0a63a705ca95db1c2a5168c5a7563031c81042c0dac6c0ccdf18"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/fixtures/sql.py",
+      "sha256": "266803d257962c461a5c1584715a0c7dc19eae665e1265874704d80775ce9918"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/plugin/__init__.py",
+      "sha256": "f0b07e80dee3c2f1955b86cf00cd5bf0c980410c0148a87f046552dc741ce043"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/plugin/bootstrap.py",
+      "sha256": "92f609ceaed1db120dbe683242727b56c0c3c4694e8fbdb8887921ada5cd34ca"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/plugin/plugin_base.py",
+      "sha256": "692f40e73a0a6a818a332f05d8e20a6cf38c7b9486e3d942840359fdc77750cd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/plugin/pytestplugin.py",
+      "sha256": "7939547defd8537ac10b9954b96f6458ffa7f1f77a017e8e1019b156506bad09"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/__init__.py",
+      "sha256": "95f188b2ef60c352f974264db90efec1aabd7ff22ebc4b67df2c06b163720f90"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_cte.py",
+      "sha256": "ec09d5f5d47d87be89598d325aec9e413fb9190b186cd333dead921bc200fd1e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_ddl.py",
+      "sha256": "bba191c47287630f4e0baca2a8c26f9575189fab04904827b36c5d7e958d36b1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_deprecations.py",
+      "sha256": "5afb99d2666450bddd1d653ff7e32bd31cb03375f10f5bffe2e8da94b17827ad"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_dialect.py",
+      "sha256": "6fc8e65781769a7040c4dfdae6fe37d16701254f5a0e507439322a9a59620510"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_insert.py",
+      "sha256": "b5aa4461e7123caa8bf31ae395c4330ce7db59d289cfd95d4fba518b46e20de3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_reflection.py",
+      "sha256": "8d73150b9d6766bdcc2d13800bcb048de6c738eadfb28e3729abb0b73da0aa4d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_results.py",
+      "sha256": "788284ea16d7b9dc1d7bca222a529de81d44d819f9a722038ff28f3263e38887"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_rowcount.py",
+      "sha256": "57a4501b07bd2cee6d2b314f1686b6f5d0ecf0cd1e63c259f6daa06f382d098b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_select.py",
+      "sha256": "ba1fc014afe16dafecfa2d7641901d585c9bbc12389da3c078b78db2450951ab"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_sequence.py",
+      "sha256": "f1ae943b7a634459d0db710b1bd9b970c311a03de20fb69282e97e1e791e2e7b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_types.py",
+      "sha256": "c16a6c5199f18f6b2842b1b99b5b1aafe672698b1a309c1d6c0b907c10e85412"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_unicode_ddl.py",
+      "sha256": "b552dff51a8225ef82b3284258bf5df96b966b30f1e62598ce806b4826e08d7b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/testing/suite/test_update_delete.py",
+      "sha256": "c541f2b70b0ccaf25c1f7521ce6bc6a738b1ef205b43ed2d866944a45f9e348f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/__init__.py",
+      "sha256": "678b6c2d1ccd157fd5cc26a04857c4ce5e67beea7c3b3dcfe3ef3b0922186173"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/_collections.py",
+      "sha256": "6f5cb2390c27b1252590148be11a1d8833032a9d1a808bdf58634b7bf69f58b8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/_concurrency_py3k.py",
+      "sha256": "77d8fa9522bf45122616afc8b4104e948db96c08ddabb4ecf4d9cdc69a0d6d2c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/_has_cy.py",
+      "sha256": "872d5e5e1c44db9553e5bbd620a5fa8ed7ea8dac124019ecb2b4db1a8f24c3d4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/_py_collections.py",
+      "sha256": "f64736dd52b62d6628209608a7ec448f6e84400f0e2c509871d4f18c061f8f69"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/compat.py",
+      "sha256": "8848543316b21aaa1c531607d1c8b1a78dd8042961308686eef47734aed2d5fa"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/concurrency.py",
+      "sha256": "42bedb54101e85bbfc82febef9daa0f01cb9a53136a087629d931ceeb704b1ec"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/deprecations.py",
+      "sha256": "15a5daca8b6fd89a08d945f02b1b8230c199f1e997d56d5d5f8910374e9b4666"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/langhelpers.py",
+      "sha256": "7fa401e352a59004bc27bd56ec4e319c2f041d8440a4c12ac2c042157a49607c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/preloaded.py",
+      "sha256": "dcf02964cd7523314bf62ed060f27c68bdf19f82ad1e2503881fabbd42adf510"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/queue.py",
+      "sha256": "20673db52132a5e29969edad1dfe6ef6857c0ac3aa39b1fc74653f825ed6bf46"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/tool_support.py",
+      "sha256": "05dfcbe54e0a144c4342f85ced73b7b5ae1e042f4ba0acfafa9a40744a47edac"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/topological.py",
+      "sha256": "c8ca5a036b3425821e9101785cac33273cbc955a3ef327a8f28d49db1cf1ab8f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy/util/typing.py",
+      "sha256": "e248ac239398adcb45dbfa15650d59616202327aea270f930613ef3df97165ca"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy-2.0.49.dist-info/licenses/LICENSE",
+      "sha256": "e862bb5b904fb5513c3e14288d7a25a12eb0ecc7847a0a965d310e9a955e7cb9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy-2.0.49.dist-info/METADATA",
+      "sha256": "8d203f0e137c9d42709f5f6c184d23ceb64e11cffc8ed3d1c41b5412e86274c1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy-2.0.49.dist-info/WHEEL",
+      "sha256": "69e6228a0d35958183cc1812f07c565ce837b95eb51bd8a33acba9fa4f68d6c9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy-2.0.49.dist-info/top_level.txt",
+      "sha256": "ae9f99801ec3f06d758af5ce3795463e3ba94f5be86265aa91c883b7951ac3f4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlalchemy-2.0.49.dist-info/RECORD",
+      "sha256": "95f4a3db2683bf626473aac2462322a9fa77a80d0181185d4eb86cb697d00c36"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/__init__.py",
+      "sha256": "2e4929eca8f6d43f39115b288ce8043260ca5447949a4d8e87a667f86732d2b3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/__main__.py",
+      "sha256": "d36d9cd7bdcaab1b22001593129508abfb49531b8d896edaec006cc415eabeef"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/_typing.py",
+      "sha256": "fb51cfcabdf0e423a54895aa960b7c8e1164d9dc8cbc1baf541a885f5c325423"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/_version.py",
+      "sha256": "911b6c0bcfe5d1cf885313a0bd627dc8facc935305758e6770c2b2c51dee07d2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/diff.py",
+      "sha256": "e586e0215768d24e4de24be90fe3530cfd4baac2c96f8fffff545f9f6800eba9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/errors.py",
+      "sha256": "40d28cafea732d40d1fadb8c9a7fc62ba88c1d421575bfd8489fc184612fbaca"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/expressions.py",
+      "sha256": "8ef7de5c2afaa83ee47b797092ec974e28388710305062e6a35cacf78398333b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/generator.py",
+      "sha256": "806205611edb8f0641970a74def82970d06beb12dfc616fb19eada8695113ff8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/helper.py",
+      "sha256": "661f4f0a3d06b2baa9ee1bce56620fdc71d9bb865b19876583a5c03c8f4727c4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/jsonpath.py",
+      "sha256": "3237b7480929f5f38b824563dc1085c85f970bb2a397df0499e9e7a32f7e9088"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/lineage.py",
+      "sha256": "7072beee2d0c9f9c3b4bcd20fd57524ec83c883862010457a544f9a3fdf9ab5d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/parser.py",
+      "sha256": "722f792813cddf1ad7371b161fd7e6ec18ed46a85409e77a71c1df5385b71508"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/planner.py",
+      "sha256": "25e5a6f7efd2b2b1f2e9a45cdcfd77d7a324c8d4deeae21980ceab2eb1f0c923"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/py.typed",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/schema.py",
+      "sha256": "667cdec7541aca03702c563b1e75e2a45518704b1fb5f56a463a407070e25e43"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/serde.py",
+      "sha256": "0d0549f795ab22f8587ded3662d6f8350ba0d9a3300c2130a4c056d4b283ab31"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/time.py",
+      "sha256": "2a4f4c832be6baa6c70b741dafb2124546c99206458671ad16b584c4f7ddb85c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/tokens.py",
+      "sha256": "d4e45fb2eea4232caa576b95c4af05cd834c812ab8410a1349ea641f29f53d54"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/transforms.py",
+      "sha256": "f1a8b8a9b2a73c25103a1888a028edcf59f7fc71a6b2ff6a89f9efae321d3c4d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/trie.py",
+      "sha256": "bf6eee5ccac77eaad7949e8699e4d2328bec07fde8d1cb6794a85d36ded6e9f2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/__init__.py",
+      "sha256": "104e789e4d9d6ed13120412f2cf09352427f1125793983f8076ac12650e92798"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/__init__.py",
+      "sha256": "77862394bde8b0bbc85f94397b23e83074dc29a04eac5c0d22ede5e374da7d08"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/_typing.py",
+      "sha256": "52d849ed4e9f30c894b77be909dc5d36cb1728d1c2fb8eac56a6af8041f1369a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/column.py",
+      "sha256": "8814cbee4b4e8bcd682d91e2c4ced550a742140ebdbf2857814986a58ce3c8b7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/dataframe.py",
+      "sha256": "a625efa25d6642732c27a14180d096c2deda2a72951777bdbb5749c0a66b4c05"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/functions.py",
+      "sha256": "e6336b90b2730535c9695a3342891ff4769f669b850991561f400901b8e586f7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/group.py",
+      "sha256": "3889cbe3e3821348bd878adbc2bfd46886d8147ff413e70c8348606c1e1cc4a3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/normalize.py",
+      "sha256": "7e74060706978647c98c21c88264eb8e364d2b36186e20d7895e9d55c11144f7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/operations.py",
+      "sha256": "1fa2530e22f0a86edae397a48e831aae4e8339c6523f0feb2c2dd4642f47bac2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/readwriter.py",
+      "sha256": "812899430e9c378ec2326463798264b035cd861f63f0ebc65fcd74c23dbe559c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/session.py",
+      "sha256": "200a25d7ff6ed791ed2907e789bcf7065389d4887815245ef2f4e454fe10a4e8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/transforms.py",
+      "sha256": "579fc399326a1b4344a2384a981fa944337143fe713d269a8316834b3e3bf137"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/types.py",
+      "sha256": "a0dc5f55e7608a04c08e30953f092997894d8753f4deec4bcdf88be0e053cbac"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/util.py",
+      "sha256": "2da96a9cf3e99ab3302c77b2926240e8d9437d8a821998bb1b1569fc4b9d1907"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dataframe/sql/window.py",
+      "sha256": "833e20784af7e01f9a42a30b574dd1ae338fcdff965a887d5fd9eebb8402ddb7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/__init__.py",
+      "sha256": "51a897eba4def20262259ba987075963454c06a633855f538cef1b5bacf44842"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/athena.py",
+      "sha256": "c93a215ac7e6e36654ee7a48360d8d294e185e1e2449ebb36b8ff0a94544716d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/bigquery.py",
+      "sha256": "d9c50c5604df71d79afb2d6f88df9c1f223f2bb072a63375bcfa6e851e29a3ef"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/clickhouse.py",
+      "sha256": "d2d59953d3dd0f05101e8b5a00d13301d3c81b5900e708951f40c868a76c97d1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/databricks.py",
+      "sha256": "77f997ef46359f45a6047b3c177f3808dfef5c2a9d617c82c916f3f47cb13f2c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/dialect.py",
+      "sha256": "af000c3ac27f54f551c9d03980374a0cbb24b7fc480412e46ec75c6eaf7faf9d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/doris.py",
+      "sha256": "373d202bc975662b3be241776abbcc42f1cbdfd5a7801fcafd617058ce3ae32b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/drill.py",
+      "sha256": "80032de94aa84668cd274d51e75144b947cf74f7b2957f428de0978142965437"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/duckdb.py",
+      "sha256": "94b09e6c2463cc0692d08214b6c8157a290f75541e5041bf8bda7da38e2e3bd0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/hive.py",
+      "sha256": "a7ca8c45cfe51baf716d0944eaaf161aca50f28871cfc0b885b113da0012c7a5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/mysql.py",
+      "sha256": "9182b3a6f73486a66e07aefcc724358fce1165e77eba1f0c60f97d468dc408a7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/oracle.py",
+      "sha256": "b2802d25aa1d3e6bcd2c314a136d502b91004cfb68a671030597d45c6c1e2f4d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/postgres.py",
+      "sha256": "30e9bef7ab9dbca401dc1e137a2e2291bff58d8cde220ad4161d734607f5d777"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/presto.py",
+      "sha256": "694ca49c52b6ab13ae24a54f009fd557ba27b503335ec959247ce5008bcc12f2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/prql.py",
+      "sha256": "fa9051b364538bc0d47b884f286f88cc571d51405ad9cc397652dcf3b1dba0d4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/redshift.py",
+      "sha256": "e406ee45bc0f8a502ad419a73d29ad332f3339d7c2608afe05f0e53f493ddf25"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/snowflake.py",
+      "sha256": "7eb7ed01f4a629365108f55c5d8ed487551a2f0514ff4213d1eb516fc3abc472"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/spark.py",
+      "sha256": "e338352c69c52fe41a4bbc23c1457797278a67855517a24b988fdb7e6924162a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/spark2.py",
+      "sha256": "36227b73580bd730a27c9fabbdf2061e6eb0d8112970ecbb8215251f9cefa506"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/sqlite.py",
+      "sha256": "204a2404e14bd72652cdd6d6f728543c8288d31ed75937f31cb2c41fbd9fd59a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/starrocks.py",
+      "sha256": "2f12ce3ebc6462ad5154a678f69da1494becc444f1233249e44096eec26f81cd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/tableau.py",
+      "sha256": "d1ec5d2fe450ba805b7e036ad8d804730731f67374c6afc9b5dbc4a5d177d7e6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/teradata.py",
+      "sha256": "0f269d75bdbcc768c02cdce724451175c5107f8bec545abac8c30b5872135fb5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/trino.py",
+      "sha256": "90bd8a3bb2cd0b3da9e2bfb03f6f7989d185a3d315daaffa62786eee5171b077"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/dialects/tsql.py",
+      "sha256": "b12227d0524b8ccac093c7dfdcb825ffcc075ed154b4c7e07cab98c2f89ef7ab"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/executor/__init__.py",
+      "sha256": "bf391ecba9532ef256c2d5d20d3ab728e714785aefba98c2b549ae8bd589d87c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/executor/context.py",
+      "sha256": "5891c975840239e557c0bc34b924ab592736e5e04c9f9231d74f110af76c2914"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/executor/env.py",
+      "sha256": "ca7116de76cad835c7b2fa7f9b2d32815288302612475ecfe11cdbd778b8ed7b"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/executor/python.py",
+      "sha256": "50cb0c8aec9253ae2b0e8daed7ba8127b5e682ad09bcdb99d689aa57de20edb8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/executor/table.py",
+      "sha256": "7cbd7d2d873afe5531538950185f6a25f3b89b0f211ecf37cb8ed31b9300747a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/__init__.py",
+      "sha256": "b8003963416b748105667a39895703bb4542a5382aa271c2e23fdb03eafabd28"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/annotate_types.py",
+      "sha256": "68485da313b70e48adc81433a9e6f0f777abff3648c3ea2b38f3a9046224fb38"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/canonicalize.py",
+      "sha256": "5c48a5024882396b8015ffd7969fbfa3e527835f1f800a8392db3f286efd9094"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/eliminate_ctes.py",
+      "sha256": "7d404cd115273eb9b6b18a6d11606ec7df01edf731ed6f81335cd5a9f803cfd7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/eliminate_joins.py",
+      "sha256": "e5686589e81ced4f019d2ead96b97dc247808323f53698020803f10a11f315fc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/eliminate_subqueries.py",
+      "sha256": "257f69006cccf75b4287015b7097a392f66b83c96785668b5611fa5e4ee9ba15"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/isolate_table_selects.py",
+      "sha256": "026e802a6164c9daefb957e0f8ed0ad4109d231fd24245e2c748a6ca877f66df"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/merge_subqueries.py",
+      "sha256": "970ac8c773e5017871a9a0e3b65d62b4997ce38f3d2443de2e928b5c760a79fb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/normalize.py",
+      "sha256": "00ac69d455b6c716c0ef3b71bd36dc19336b6330e44dcb038a930761840d61fd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/normalize_identifiers.py",
+      "sha256": "344351a2e59da4e5710aa01a5c8eeed8c723d044ce349e6d77631b5a3fac918e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/optimize_joins.py",
+      "sha256": "2cb047e9993451e82c7dfe3cb2826026a869197910c7956cb4612de34bec8eb8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/optimizer.py",
+      "sha256": "9018ac53032ce986e8d257dd38b20ef05bdd89b82707e184bc96e414c08e2dff"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/pushdown_predicates.py",
+      "sha256": "0fd9c82b3fb8b34dd75beb1abc5145c25965635ddbfb9c5980731ddb27130a88"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/pushdown_projections.py",
+      "sha256": "5889c9626f2d7a0c70992a85d7fe8a9a8c58bde2da8bbdf874218ac3597b9b9c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/qualify.py",
+      "sha256": "41ce748c7fde5c2e41677cec7d20ed354f98e5b5de896a92cea38d342c0e2dd5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/qualify_columns.py",
+      "sha256": "82368c370366caedd1c882e5e04d498828cd896062bd73f68439e7135b501b17"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/qualify_tables.py",
+      "sha256": "32dff411b45cb3a38a54327d3a43e2dbb4e68728d059031f0e834505eed8ce7f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/scope.py",
+      "sha256": "73b234cb17f63367b882f013606247243b98a3ad2f4ed8aa0244eeb6eb92da2f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/simplify.py",
+      "sha256": "5c5bb82f7f417644299c4142ed400167f5d61a672c4f4403b942c90a683972e0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot/optimizer/unnest_subqueries.py",
+      "sha256": "bcc38e0996b63e03e0ab0963dda82ceba3504fdeda1369c3b45fa9d2679b1023"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot-23.12.1.dist-info/LICENSE",
+      "sha256": "008dfffe61d97ceb73637125b91fe9218066dffa44ed36d5c7ba9a1f1a19d75e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot-23.12.1.dist-info/METADATA",
+      "sha256": "c6ba0cd30402697ab777097b7c657238040c1646e949bc38f0c78eccd86d680e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot-23.12.1.dist-info/WHEEL",
+      "sha256": "189eedfe4581172c1b6a02b97a8f48a14c0b5baa3239e4ca990fbd8871553714"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot-23.12.1.dist-info/top_level.txt",
+      "sha256": "e6446c902180fe05400c5f6b49f4b33dd2c75eabdf32eb0361e1de3df358da74"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/sqlglot-23.12.1.dist-info/RECORD",
+      "sha256": "1e724eb9301801f1e9fcf69e0061e43e48a529060cbe934ef1f247a617469ace"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/typing_extensions.py",
+      "sha256": "433d11d170d3a24d2eb065ebc1bfe848cea7e3d7ce68567ab52bea2d4c2f7ed8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/typing_extensions-4.15.0.dist-info/licenses/LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/typing_extensions-4.15.0.dist-info/WHEEL",
+      "sha256": "1b68144734c4b66791f27add5d425f3620775585718a03d0f9b110ba3a4d88db"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/typing_extensions-4.15.0.dist-info/METADATA",
+      "sha256": "c138378fe8f18934ac99de060535c53ec6c13aeed65e94c32641da7ee3192a72"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/typing_extensions-4.15.0.dist-info/RECORD",
+      "sha256": "d115b31bd342e1ffe5c3e13291f1b633969390e029b9f64f8ddbcc9883feef3a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/__init__.py",
+      "sha256": "53c4529a01f38e7c0d593b7548c79e0d7398aa09f7d7cbd1773470859ee2febd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3.py",
+      "sha256": "4b6130ea4f9f98d1c119e3e854802b11182a6f83c0057a29bb0bd53550299ca1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3consts.py",
+      "sha256": "4469a1aca95e4282f5fa8fa81041af544347baa7f2b898e0cddf7d1328a181a3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3core.py",
+      "sha256": "2df439bdbae68feceefe967ac7651134069a09056b0c6739cd487567f5019f1a"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3num.py",
+      "sha256": "b099dee2352be581ef96fbedc183ac324f03002ee7cf71fbebf6aa1355cd4341"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3poly.py",
+      "sha256": "fd06029418e5899b300fe3b3a300d110c8e174e633cba8b751314f22a583394e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3printer.py",
+      "sha256": "e4f2e86e45a87d40f11ce078ce7d6eb27b3f747bcbdf49b91734e622308b34a4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3rcf.py",
+      "sha256": "504e0339b1bb06075c19ca52e51457716671218a2f2191d0c9754e0b75bede87"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3types.py",
+      "sha256": "ba728354b4a9ee40bcfbd899f405d904bc4bb023e41807044c06c318548c3080"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/z3util.py",
+      "sha256": "bd1b436749b0d7700100a6a49fd09f09975c025f156925fc8805ac99e6db50f8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3++.h",
+      "sha256": "5a7729b753c0d30400026ae14c688035eecbec84d7643e33bef80442dbdf5adb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3.h",
+      "sha256": "60cc2bb3e1df2c0fc6105b6a73c032b9d4f47487471616994ba63df8d81898a8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_algebraic.h",
+      "sha256": "7659d6dec25e49e2dd6546a6ca6c05adb27437a989d857af0cbcc7191adb45a6"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_api.h",
+      "sha256": "81c56c5cb8e568175cc9f73fe39035cdfe13debfd391ac019f68bbe66ced4b45"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_ast_containers.h",
+      "sha256": "6687f3ec9483f3774b8951be0f9944ab47f61bedbd42193d075dd88c612fb248"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_fixedpoint.h",
+      "sha256": "cc8a424163dd6a92a1bfe07dea68edb8fc8dabb58f612b1e85a033a21178dedc"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_fpa.h",
+      "sha256": "5ebe1a61d128c579f53be2f1f2b4d45e76b7e04081de89a11542719c5976396c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_macros.h",
+      "sha256": "9d92f8136abef10dd8429a28fd9068e9b3e4feb5696072763cd8d0edc1f00b24"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_optimization.h",
+      "sha256": "3f7dac1bd1696bfff5266f422171e10fae413db7b065549e17934d9212acbcc7"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_polynomial.h",
+      "sha256": "e1894c40edb37115cf221a8ef2f7e5557c7360c3c0583f05582f849ebdd78c36"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_rcf.h",
+      "sha256": "0cf1d77e67e49df12dd20aac8bf3bf3f46973ebf828ca8f7d14228d6d2cb86ca"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_spacer.h",
+      "sha256": "dd23be86e4fc74cd0adf6ca944834d165b93f6a6f3af81923116db97a7ee1ddd"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_v1.h",
+      "sha256": "30d1776dafddd426d06a4a737d51d37731b45790fc26573b361562e3758ebb04"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/include/z3_version.h",
+      "sha256": "0a2db4e21b93b304fae6d87c3cde0027205479ec663207fc14f28682d0765ea0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/libz3.4.16.dylib",
+      "sha256": "752e7241ea570da619daf1fd4e5974c2638f5e83a2c19977ac2aa622bcc139c2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/libz3.dll",
+      "sha256": "aed13947e8a50f06c2ee7229dc28e92de988403eef16db753c4955c24e197186"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/libz3.dylib",
+      "sha256": "752e7241ea570da619daf1fd4e5974c2638f5e83a2c19977ac2aa622bcc139c2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/msvcp140.dll",
+      "sha256": "045faeab0b5710816ae160ea20dae8495ffc11bb51feca15d22aaf7ff3752cb3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/msvcp140_1.dll",
+      "sha256": "af9dd287c5e5d47186fec391099e140bf9e758245d39c78e94f8cb4ffaada1e5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/msvcp140_2.dll",
+      "sha256": "17dd07ea186d419e1803a4b25785644b59d4346dd1a00df709fb6eb403baa11e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/msvcp140_atomic_wait.dll",
+      "sha256": "4384e35592b7be1f0b80718eba2f779060d73c3e232eb1bfadf8a4cb9b14601f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/msvcp140_codecvt_ids.dll",
+      "sha256": "6e075254adab66a80e1624b656fbe81043c23149e5045871b2eccc4c7ff589ce"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/vcomp140.dll",
+      "sha256": "1a455c526e42d80d3aa3189e082500b6eb7837fcf8be0e9fbd1f26c92acdab71"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/vcruntime140.dll",
+      "sha256": "d8a8513921544569837e400d37cc71302819967ae6defa932266a7ecb41dbaf9"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/vcruntime140_1.dll",
+      "sha256": "42b5f76f1f0ae03c93fc4c107adf83c5f14e86032474860032cfe672d0836546"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3/lib/vcruntime140_threads.dll",
+      "sha256": "165c779ae40e8c1a914537873629c17546d6866ecb3c24cc2022805053e6c77d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3_solver-4.16.0.0.data/data/bin/z3",
+      "sha256": "edae32f9e37ea4b5bb35310d72f0e352d0dc07626cac4e9e30bc1ea9a5bc8efb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3_solver-4.16.0.0.dist-info/METADATA",
+      "sha256": "5599a5dab35117e580a32c66512a930e067593541f35c0eb98727ab61a522270"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3_solver-4.16.0.0.dist-info/WHEEL",
+      "sha256": "e6d63a8772b30b2e02850a81d35c0d9d02b722c2c6ea73620ae735e0aa61dca4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3_solver-4.16.0.0.dist-info/top_level.txt",
+      "sha256": "5e1b3b203b8d9c1fe1424420b5d56a8244880e1a7539eb7e88b035ec0257fafe"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/dependencies_local/site-packages/z3_solver-4.16.0.0.dist-info/RECORD",
+      "sha256": "4030847a1a13e408bbb3918d458ae5d57a56dcd9a645bcff53653c89e8d255c4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sampled_diagnostic_20261012_07/worker.py",
+      "sha256": "4a427ad2ac43a548097b2629356aff76c05636e96c9cc9056cd3860dd22dc97f"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sampled_diagnostic_20261012_07/supervisor.py",
+      "sha256": "53009f1a1de934a7be23911156743d40f526bc58286b1cded1ce74a1e2cc72d4"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sampled_diagnostic_20261012_07/guard.py",
+      "sha256": "1de9c86c3860f3bf9d6defe40c7c7917168ef64e893b4236aeb367b9bf5e7ffc"
+    },
+    {
+      "path": "/opt/homebrew/bin/python3.12",
+      "sha256": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324"
+    }
+  ],
+  "resource_contract": {
+    "worker_processes": 1,
+    "wall_s": 60,
+    "cpu_s": 60,
+    "sampled_RSS_stop_bytes": 1073741824,
+    "sample_interval_s": 0.05,
+    "overshoot_permitted_by_user": true,
+    "hard_limit": false,
+    "telemetry_silence_stop_s": 2,
+    "automatic_retry": false
+  },
+  "baseline_config": {
+    "timeout_ms": 5000,
+    "time_limit_s": 360,
+    "min_string_length": 1,
+    "speculate": true,
+    "seed": 0,
+    "provider": "parseval.instance.domain.sequential (official default; no override)",
+    "set_semantics": false
+  },
+  "query_timeout_s": 15,
+  "backend": "sqlite:///:memory:",
+  "known_control_never_supplied_to_generator": true,
+  "authorization": "Current parent delegation includes explicit user consent to sampled RSS stop with temporary overshoot and one 60s run after successful synthetic validation",
+  "old_batches_unchanged": true,
+  "science_run_permitted_only_if_synthetic_validation_passes": true,
+  "instrumentation": "Passive wrappers only; original args and return values; no added generation callbacks, seeds or schedule modifications",
+  "runtime_difference": "Python3.12/macOS vs author CI Python3.11/Linux; diagnostic not exact platform replication"
+}

@@ -1,0 +1,245 @@
+{
+  "status": "READY_IDENTITY_MATCH_FOR_REGISTERED_14_SLOT_ROOT_ONLY_INTEGRATION",
+  "reviewed_utc": "2026-10-11T06:27:36.933657+00:00",
+  "reviewer": "Different AI reviewer /root/independent_review; not human review. Earlier narrow reference-bridge module authored by this reviewer; current statusfix/registration/supervisor authored elsewhere.",
+  "scope": "Offline read-only source, JSON, byte hashes, inventories, command and current control-flow inspection. No target import/execution, solver, native load, SQL replay, network, or UI. Writes limited to new review artifacts.",
+  "execution_by_this_review": false,
+  "identity": {
+    "locked_files_checked": 854,
+    "mismatches": [],
+    "runtime_program_count": 6,
+    "runtime_programs": {
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/common.py": "aad39a0fe6eeb0dbafbc949a16c81cda1aa5268f7b519dedf6275e46acc10576",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/worker.py": "5848538a168495d3a336afedd5d1efe696d43eea8a15d353679b905be7ecc320",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/pair_status.py": "65edfe932aee49a64f3986d420eb3115bb71d271d3ac402e039052ea5826ca5f"
+    },
+    "compared_to_pending_lock": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix.json",
+      "sha256": "994537c79bfaf7998800adcd3eb87092d6feaa56ecb053dfb142e09951e2ac76",
+      "bytes": 204566
+    },
+    "changed_top_level_fields_only": [
+      "status",
+      "statusfix_integration_registration_01"
+    ],
+    "inventories": [
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+        "files": 159,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+        "files": 11,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+        "files": 503,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260",
+        "files": 18,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252",
+        "files": 24,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201",
+        "files": 17,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201",
+        "files": 11,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303",
+        "files": 11,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0",
+        "files": 5,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9",
+        "files": 46,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0",
+        "files": 6,
+        "exact": true,
+        "symlinks": 0
+      },
+      {
+        "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2",
+        "files": 24,
+        "exact": true,
+        "symlinks": 0
+      }
+    ],
+    "case_dictionaries_exactly_match_original_suite": true,
+    "ready_lock": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix_reviewed_main_01.json",
+      "sha256": "16c76c134cdca4ef9461506968cecbbdb73ce6bc6304acdbeb7e878f19613d18",
+      "bytes": 206182
+    },
+    "interpreter": {
+      "literal_entrypoint": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+      "resolved_path": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "sha256": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324"
+    }
+  },
+  "registration": {
+    "parent_explicitly_authorized_selected_count": 14,
+    "full_registered_cost_slots": 24,
+    "selected_indices": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "unselected_count": 10,
+    "per_query_differential_requested": false,
+    "expected_final_decisions": {
+      "sat": 1,
+      "unsat": 6,
+      "CONTRACT_UNSAT_REJECTED": 6,
+      "UNVERIFIED_CONTRACT": 1
+    },
+    "expected_work_states": {
+      "RETURNED": 7,
+      "NOT_RUN_CONTRACT_STOP": 7
+    },
+    "expected_supervisor_exit": 2,
+    "expected_exit_reason": "Seven intentional typed no-query stops have child exit2; valid_completed_result remains false for those; inspect all14 individual receipts. A resource anomaly is not an expected pass.",
+    "new_integration_does_not_replace_main_168_or_pool_costs": true
+  },
+  "resolved_preparation_issues": [
+    {
+      "issue": "Old PRECHECK bound pre-final metadata SHA4fe69..., not current16c76...",
+      "resolution": "Original preserved; new append-only CURRENT_FREEZE_PRECHECK binds current lock/suite/registration/command; independently checked."
+    },
+    {
+      "issue": "Command used bare python3",
+      "resolution": "Current command pins existing absolute project .venv/bin/python -B -I -S; interpreter file hash independently checked."
+    }
+  ],
+  "incomplete_receipt_gate_judgment": {
+    "severity": "Defensive/fault-injection coverage gap; no current reachable P0/P1 demonstrated",
+    "locations": [
+      "runtime_fair_v5_statusfix/supervisor.py:151",
+      "runtime_fair_v5_statusfix/pair_status.py:60",
+      "runtime_fair_v5_statusfix/worker.py:326"
+    ],
+    "fact": "Supervisor valid_completed_result does not explicitly reject RETURNED_INCOMPLETE_RECEIPT or INCONSISTENT_RETURN_RECEIPT.",
+    "analysis": "Current accepted sat/unsat/differential-UNSAT normal routes finalize attempts/oracle outputs before DISPATCH_RETURNED; exceptions use BLOCKED_OR_ERROR and exit2, and interrupted native work cannot reach that callback. Static path inspection did not establish a reachable current COMPLETE+exit0+incomplete-receipt combination. A malformed/injected or future-regression report could satisfy the supervisor boolean; this is a defensive gate gap, not evidence that current actual regression results were wrongly accepted.",
+    "not_a_formal_reachability_proof": true,
+    "current_14_slot_scope": "Normal dispatch returns, typed contract stops, and supervisor propagation. Does not inject incomplete receipts, hard stops, or resource observation failures.",
+    "future_hardening": "If adopted, explicit receipt-state consistency gating belongs in another isolated revision and needs fault-injection tests; do not alter these six externally-tested source identities."
+  },
+  "external_evidence_boundary": {
+    "external_actual_regression": "24 original v5 +24 statusfix worker jobs independently identity-audited in separate report",
+    "supervisor_actual_coverage_from_external_run": false,
+    "future_supervisor_14_slot_actual_result_not_reviewed_here": true,
+    "science_acceptance_inferred": false
+  },
+  "remaining": [
+    "Root must execute and inspect all14 selected supervisor receipts, including no stop_reason, correct typed exit codes, cleanup, work-state propagation, and ten unselected NOT_RUN. This identity review is not an execution PASS.",
+    "No general fault-injection/resource-race completeness or full scientific validity follows.",
+    "No native original-author version pin is newly established."
+  ],
+  "evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix_reviewed_main_01.json",
+      "sha256": "16c76c134cdca4ef9461506968cecbbdb73ce6bc6304acdbeb7e878f19613d18",
+      "bytes": 206182
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix.json",
+      "sha256": "994537c79bfaf7998800adcd3eb87092d6feaa56ecb053dfb142e09951e2ac76",
+      "bytes": 204566
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/spotit_engine_runtime_paths_statusfix.json",
+      "sha256": "115452b51f0849e080e9afce1f0150717950d6551965eb9c2733024594704919",
+      "bytes": 210978
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_14_SLOTS_01.json",
+      "sha256": "84b1077a998a5cac1d05e6ad5631fc3f6b0f6a618f0e228402c2eb70c08f12e9",
+      "bytes": 7660
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_INITIAL_NOT_RUN_01.json",
+      "sha256": "81a93a70abfc369de8157405f367fca3a27e92c36e6b8dc0be1416e87c3095ac",
+      "bytes": 8437
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_REGISTRATION_01.json",
+      "sha256": "298ffb2598506f3a9df5a69b3e6fffcbeda59529349bdfd7084f3331b88570d0",
+      "bytes": 8701
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/reviewed_main_01_vs_original_pending.diff",
+      "sha256": "32bf55337570377c827934173b6936c5d51d7761a07bcfe990a2a7c1db0c2641",
+      "bytes": 2965
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/REVIEWED_MAIN_01_PRECHECK.json",
+      "sha256": "2bbe0cb2b30d10793920733338713b64e2a1a4a464dba5dc2661318258a8d9e3",
+      "bytes": 5135
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/REVIEWED_MAIN_01_CURRENT_FREEZE_PRECHECK.json",
+      "sha256": "c29fddb633977267de78b42d0df62e2de43b2fdc1f04fb6d50ce1fe5699b3751",
+      "bytes": 9122
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_COMMAND_01.txt",
+      "sha256": "51ef33f1a5ff81fdff7a2ffce055b9c65fdfb1a9420872f0dd684433990ee125",
+      "bytes": 1068
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/EXTERNAL_V5_STATUS_REGRESSION_IDENTITY.json",
+      "sha256": "621719a9f639d87ec114101bb7f4e7898fc069e6dcb29cc6ac8b6eea31c1e962",
+      "bytes": 74448
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/PAIR_WORK_STATUS_FIX_INDEPENDENT_REVIEW.json",
+      "sha256": "8df48aa798c9422cef6bc92a8c169b7a612bd0a88dba582394d21c6164bb4d5d",
+      "bytes": 472423
+    }
+  ]
+}

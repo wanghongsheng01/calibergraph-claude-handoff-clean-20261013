@@ -1,0 +1,1074 @@
+{
+  "created_utc": "2026-10-11T13:37:49.683090+00:00",
+  "audit_scope": "Saved evidence hashes, JSON consistency, bag/PK recount and arithmetic only; no SQL/parser/solver rerun. No reserve/test or credentials opened.",
+  "status": "ALL_SAVED_EVIDENCE_RECONCILIATIONS_PASSED",
+  "author_report_sha256": "67699010beb50164542b16d821dc7a631b097f03716ddeeb00a2a05342afb859",
+  "author_recount_sha256": "3629e64101ce66f2f47e2b8a9762890a470902c400fc67a699745c9dd1df44b7",
+  "registered_scientific_slots": 10,
+  "failed_bootstrap_launches": 1,
+  "failed_bootstrap_worker_exec": 0,
+  "recovery_completed_slots": 10,
+  "concrete_original_pair_executions": 10,
+  "concrete_original_query_executions": 20,
+  "official_C_checks": 5,
+  "official_query_checks": 0,
+  "unchanged_previous_freeze_bindings": 861,
+  "recovery_freeze_bindings": 868,
+  "source_provenance_limit": "Original source repeated in saved workers, byte/schema/C bindings checked. Original frozen JSONL and upstream source repository were not independently opened.",
+  "cost": {
+    "prior_conservative_seconds": 3.408329,
+    "current_parent_and_all_reaped_seconds": 5.927556999999999,
+    "worker_wait4_cpu_sum_seconds": 4.4292869999999995,
+    "current_monitor_children_cpu_seconds": 1.196587,
+    "current_parent_cpu_seconds": 0.30168300000000003,
+    "tail_reserve_seconds": 0.2,
+    "conservative_total_seconds": 9.535885999999998,
+    "charged_not_measured": true
+  },
+  "resource_summary": {
+    "max_worker_cpu_seconds": 0.923918,
+    "max_worker_lifecycle_wall_seconds": 0.9751777499914169,
+    "max_wait4_rss_bytes": 110886912,
+    "max_slot_start_load1": 3.21484375,
+    "min_slot_start_memory_available_percentage": 32,
+    "saved_violations": []
+  },
+  "rows": [
+    {
+      "id": "dev04_N1_concrete",
+      "kind": "concrete",
+      "N": 1,
+      "worker_cpu_seconds": 0.044303999999999996,
+      "worker_lifecycle_wall_seconds": 0.11147233285009861,
+      "wait4_maxrss_bytes": 20054016,
+      "fixtures": {
+        "all_null_class": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        },
+        "nonnull_class_control": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        }
+      },
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N1_official",
+      "kind": "official",
+      "N": 1,
+      "worker_cpu_seconds": 0.8282959999999999,
+      "worker_lifecycle_wall_seconds": 0.9751777499914169,
+      "wait4_maxrss_bytes": 107937792,
+      "C_sat": true,
+      "query_solver_calls": 0,
+      "raw_class": "INCONCLUSIVE",
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "exact_live_assertions": 1,
+      "C_check_wall_seconds": 0.004905667155981064
+    },
+    {
+      "id": "dev04_N2_concrete",
+      "kind": "concrete",
+      "N": 2,
+      "worker_cpu_seconds": 0.042914999999999995,
+      "worker_lifecycle_wall_seconds": 0.11159133305773139,
+      "wait4_maxrss_bytes": 19447808,
+      "fixtures": {
+        "all_null_class": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        },
+        "nonnull_class_control": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        }
+      },
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N2_official",
+      "kind": "official",
+      "N": 2,
+      "worker_cpu_seconds": 0.83147,
+      "worker_lifecycle_wall_seconds": 0.8635207088664174,
+      "wait4_maxrss_bytes": 108822528,
+      "C_sat": true,
+      "query_solver_calls": 0,
+      "raw_class": "INCONCLUSIVE",
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "exact_live_assertions": 2,
+      "C_check_wall_seconds": 0.004181291908025742
+    },
+    {
+      "id": "dev04_N3_concrete",
+      "kind": "concrete",
+      "N": 3,
+      "worker_cpu_seconds": 0.041351,
+      "worker_lifecycle_wall_seconds": 0.11155787529423833,
+      "wait4_maxrss_bytes": 19791872,
+      "fixtures": {
+        "all_null_class": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        },
+        "nonnull_class_control": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        }
+      },
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N3_official",
+      "kind": "official",
+      "N": 3,
+      "worker_cpu_seconds": 0.923918,
+      "worker_lifecycle_wall_seconds": 0.9648214587941766,
+      "wait4_maxrss_bytes": 110886912,
+      "C_sat": true,
+      "query_solver_calls": 0,
+      "raw_class": "INCONCLUSIVE",
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "exact_live_assertions": 3,
+      "C_check_wall_seconds": 0.004278500098735094
+    },
+    {
+      "id": "dev04_N4_concrete",
+      "kind": "concrete",
+      "N": 4,
+      "worker_cpu_seconds": 0.041930999999999996,
+      "worker_lifecycle_wall_seconds": 0.10825258400291204,
+      "wait4_maxrss_bytes": 19775488,
+      "fixtures": {
+        "all_null_class": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        },
+        "nonnull_class_control": {
+          "outputs": [
+            [],
+            []
+          ],
+          "bag_equal": true
+        }
+      },
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N4_official",
+      "kind": "official",
+      "N": 4,
+      "worker_cpu_seconds": 0.8316609999999999,
+      "worker_lifecycle_wall_seconds": 0.9294217498973012,
+      "wait4_maxrss_bytes": 103038976,
+      "C_sat": true,
+      "query_solver_calls": 0,
+      "raw_class": "INCONCLUSIVE",
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "exact_live_assertions": 4,
+      "C_check_wall_seconds": 0.004380083177238703
+    },
+    {
+      "id": "dev04_N5_concrete",
+      "kind": "concrete",
+      "N": 5,
+      "worker_cpu_seconds": 0.045807999999999995,
+      "worker_lifecycle_wall_seconds": 0.11182766733691096,
+      "wait4_maxrss_bytes": 19349504,
+      "fixtures": {
+        "all_null_class": {
+          "outputs": [
+            [
+              [
+                null
+              ]
+            ],
+            []
+          ],
+          "bag_equal": false
+        },
+        "nonnull_class_control": {
+          "outputs": [
+            [
+              [
+                "same_nonnull_class"
+              ]
+            ],
+            [
+              [
+                "same_nonnull_class"
+              ]
+            ]
+          ],
+          "bag_equal": true
+        }
+      },
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N5_official",
+      "kind": "official",
+      "N": 5,
+      "worker_cpu_seconds": 0.7976329999999999,
+      "worker_lifecycle_wall_seconds": 0.8565799170173705,
+      "wait4_maxrss_bytes": 100188160,
+      "C_sat": true,
+      "query_solver_calls": 0,
+      "raw_class": "INCONCLUSIVE",
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "exact_live_assertions": 5,
+      "C_check_wall_seconds": 0.00425404217094183
+    }
+  ],
+  "minor_discrepancy": "Frozen recovery measurement_note still says 1.0s prior; numerical policy/accounting correctly says 3.408329. Preserve raw log and clarify in author narrative.",
+  "reviewed_author_files": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/boundary_pilot.registered.json",
+      "relative_path": "protocols/boundary_pilot.registered.json",
+      "sha256": "942a64add3043b5f12be8dd16132cab455247e899fd992ad5fe08cc9a621f0cd",
+      "bytes": 5540,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/boundary_pilot.recovery_registered.json",
+      "relative_path": "protocols/boundary_pilot.recovery_registered.json",
+      "sha256": "384fc9ea85f10da0b305d092c770d440661eb4bec26b03822909db851b024ac2",
+      "bytes": 5754,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/execution_freeze.json",
+      "relative_path": "protocols/execution_freeze.json",
+      "sha256": "9f731374103804dd06eb09774f6b82ec05d5b16cd15e4a0390137458e4a81d1a",
+      "bytes": 248803,
+      "review_mode": "manifest metadata, full binding-map comparison; external targets not opened"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/execution_recovery_freeze.json",
+      "relative_path": "protocols/execution_recovery_freeze.json",
+      "sha256": "5773ebac1b4800df7170997a85f6e3ca83863b66f6cb7bb6b36be39d43746cce",
+      "bytes": 250526,
+      "review_mode": "manifest metadata, full binding-map comparison; external targets not opened"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/PROBLEM_EVIDENCE_PILOT.zh.md",
+      "relative_path": "protocols/PROBLEM_EVIDENCE_PILOT.zh.md",
+      "sha256": "9c0f8485b7839eee3f89a7e3ad1a6dfafe0de4dc99f4c8add4b0e4f7fefd4b59",
+      "bytes": 4241,
+      "review_mode": "manual full text review"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/decisions/bootstrap_amendment_01.json",
+      "relative_path": "decisions/bootstrap_amendment_01.json",
+      "sha256": "5437da428cd007671848eca13aaa6aa3dd2b645ed3505eb5f6136fa60d69350a",
+      "bytes": 1642,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/decisions/stdlib_preexec_diagnosis.registered.json",
+      "relative_path": "decisions/stdlib_preexec_diagnosis.registered.json",
+      "sha256": "16d21c5d56eeacf5e4d29aee164a2e5d91267f42506272cb6f990281a2627840",
+      "bytes": 1004,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/audits/stdlib_preexec_diagnosis.json",
+      "relative_path": "audits/stdlib_preexec_diagnosis.json",
+      "sha256": "a545b0d95557346c12bde6e266355ef6b13d830cef19429d866757aa65616571",
+      "bytes": 424,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/audits/stdlib_nice_context_diagnosis.json",
+      "relative_path": "audits/stdlib_nice_context_diagnosis.json",
+      "sha256": "41e9b6fead61b2f7a77a4b6cd4a3d727d2796941a79f31ae7d7d582d72be0a4f",
+      "bytes": 177,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/pilot_common.py",
+      "relative_path": "code/pilot_common.py",
+      "sha256": "197532f6b824a6f883db5e201a86f09050b420e092c1a102f2b3711e2d4e5822",
+      "bytes": 7542,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/concrete_boundary_worker.py",
+      "relative_path": "code/concrete_boundary_worker.py",
+      "sha256": "ccbc7f2b94d807f55e3976bac79ce56c7361af9c50bd012c426797d3cd8093a9",
+      "bytes": 13154,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/official_boundary_worker.py",
+      "relative_path": "code/official_boundary_worker.py",
+      "sha256": "74b9150ddb6a378c00059932c9616a564c7ed523025ebdab86dc7d159a51519c",
+      "bytes": 6461,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/official_boundary_backend.py",
+      "relative_path": "code/official_boundary_backend.py",
+      "sha256": "32302da24200908e89f35fe0ae4213c4bf49296416f05b1889847f86ce5f4a34",
+      "bytes": 24880,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/official_contract_admission.py",
+      "relative_path": "code/official_contract_admission.py",
+      "sha256": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+      "bytes": 11192,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/pilot_supervisor.py",
+      "relative_path": "code/pilot_supervisor.py",
+      "sha256": "52f8fb02829e4ef31129af234f75afc85469dd4c23ddc83e5d27cbc598dba62a",
+      "bytes": 32212,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/pilot_supervisor_recovery.py",
+      "relative_path": "code/pilot_supervisor_recovery.py",
+      "sha256": "513667f5bb102f14b57f131b13e12c0a707ade5a4ce1e3aa1b0669eff5288a47",
+      "bytes": 32217,
+      "review_mode": "manual full source or exact full-source diff review; source never imported/executed"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/batch_events.jsonl",
+      "relative_path": "runs/boundary_pilot_01/batch_events.jsonl",
+      "sha256": "3db66504e5ff07a9493d05b4fbd288990d7fda4b97cdc5f7a7dc6e18ff94537c",
+      "bytes": 2109,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/batch_receipt.json",
+      "relative_path": "runs/boundary_pilot_01/batch_receipt.json",
+      "sha256": "5149c90e411714c8b3adb7ab189a310c5b32e89eaf74aada98748c22a9b40579",
+      "bytes": 8666,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00/results.json",
+      "relative_path": "runs/boundary_pilot_01/case_00/results.json",
+      "sha256": "3669398b05fdaa38621e7023068a1730923dcbd5d3642d958ac8c1d08d39ffcb",
+      "bytes": 146,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00/stderr.log",
+      "relative_path": "runs/boundary_pilot_01/case_00/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00/stdout.log",
+      "relative_path": "runs/boundary_pilot_01/case_00/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_01/case_00/supervisor_events.jsonl",
+      "sha256": "eb47a2f7e2740b7f6566d2145b12fd3783ea0999acc02a5db63682b5a72fd41e",
+      "bytes": 212,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_01/case_00/supervisor_receipt.json",
+      "sha256": "aad9cd42b714aa7e91e2c811af834d4f7042f39e19c138603da3d1cf1ac5d47d",
+      "bytes": 3001,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/batch_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/batch_events.jsonl",
+      "sha256": "9c77bce292e4de10a18823aa252dbd66a43aa314074f806bee8261047bd194a0",
+      "bytes": 13358,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/batch_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/batch_receipt.json",
+      "sha256": "036a16af3d56a66f8499e4842cf6cd65aeb11bda7069329558f281ad0e193dd9",
+      "bytes": 26349,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_00/events.jsonl",
+      "sha256": "be282a60e5877efe4667ce45bdccb724035d405e8d86d957a2c8799b2f82f512",
+      "bytes": 4077,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_00/progress.json",
+      "sha256": "9d4979ecbbde5f83f63dfbec3cb9a4f01edbec387bb465ea24289921c6baf9c3",
+      "bytes": 378,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_00/results.json",
+      "sha256": "155a739ab28cb1853f7ef291f7a7e3da74fa265643116fd63b821846a0df45eb",
+      "bytes": 9346,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_00/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_00/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_00/supervisor_events.jsonl",
+      "sha256": "9e6b1f6d980eb45b6e0d4c405a0a32dc848e7b64374e6a8a16ce9dadb4ef9eae",
+      "bytes": 1812,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_00/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_00/supervisor_receipt.json",
+      "sha256": "f48779d36581b468c1f5882ca68900613e4cb82565863b7d23444cf3428fb1e3",
+      "bytes": 23638,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/contract_assertions.smt2",
+      "relative_path": "runs/boundary_pilot_02/case_01/contract_assertions.smt2",
+      "sha256": "892585cedfa63e02e0b0d9a30b12b2ba97a65158445dfc24905b9177ea205954",
+      "bytes": 624,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/contract_full_model.sexpr",
+      "relative_path": "runs/boundary_pilot_02/case_01/contract_full_model.sexpr",
+      "sha256": "2a0e965b9c94ce4d51936a8d66f5a8ab10f0af05ed2f0a3d046b500fddb52768",
+      "bytes": 726,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_01/events.jsonl",
+      "sha256": "6668c144cfc5a6e658ef673841a083e75602989cb789d626d6454af09600a500",
+      "bytes": 89385,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/parsed_ast_1.json",
+      "relative_path": "runs/boundary_pilot_02/case_01/parsed_ast_1.json",
+      "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+      "bytes": 189,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/parsed_ast_2.json",
+      "relative_path": "runs/boundary_pilot_02/case_01/parsed_ast_2.json",
+      "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+      "bytes": 532,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_01/progress.json",
+      "sha256": "27101d7bde1aafb8271dab078fc4ef505e50e553001e24326190bab8302fcff8",
+      "bytes": 303,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_01/results.json",
+      "sha256": "198dd4d812d0b55be97b38c1f618a4aced8b8eece04385a5fa0821731883991e",
+      "bytes": 33379,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_01/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_01/stdout.log",
+      "sha256": "18cb49da93a93ba47b936d43318833b2052325e52bc3b5b858d1edd0e6daea9d",
+      "bytes": 315,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_01/supervisor_events.jsonl",
+      "sha256": "0d04711d38ca84fc92d5fd1dda6af7fd8e8d7e5cc1dc36abff731f96f72cd820",
+      "bytes": 13389,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_01/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_01/supervisor_receipt.json",
+      "sha256": "17e766acee7421ba6bf84ba6427f7b3bdcb3d9d41f718720ebbee848765cb12d",
+      "bytes": 56758,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_02/events.jsonl",
+      "sha256": "13af64c2207935167989261a92fdd8363b46ed8d575a71ee8853d37e83f2d8e9",
+      "bytes": 4106,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_02/progress.json",
+      "sha256": "7b3f213d729abdcb70221b73bb6e881e8f3d9ac238797ab3d4b0d7c0824ee620",
+      "bytes": 390,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_02/results.json",
+      "sha256": "69e98bb8414a2c2217e205e3edd989d219011ed17527e841d5b472e40b9e3e55",
+      "bytes": 9494,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_02/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_02/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_02/supervisor_events.jsonl",
+      "sha256": "02a50a0ea81faad63078b7157b5c5201774eea8f5be81e3f5c648543ec03474e",
+      "bytes": 1336,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_02/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_02/supervisor_receipt.json",
+      "sha256": "ac78f3dfcba4d9581c000b833106e22f1259df4a93287af87ef4624e1876557b",
+      "bytes": 23967,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/contract_assertions.smt2",
+      "relative_path": "runs/boundary_pilot_02/case_03/contract_assertions.smt2",
+      "sha256": "0b1a5cf41f7d61abe4874030bdef40e9044fdfe333d6d2d24cdb7ac283ce82d6",
+      "bytes": 1048,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/contract_full_model.sexpr",
+      "relative_path": "runs/boundary_pilot_02/case_03/contract_full_model.sexpr",
+      "sha256": "4c6eb6898ffa66842f5e8f542734d9cd65ff07f8802b139c05b72bfdf34ad0c4",
+      "bytes": 1000,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_03/events.jsonl",
+      "sha256": "9e08720203cb02065edb1919d9f4c3477de9b4acf7fb259ffd198f25f6cdc2b8",
+      "bytes": 91004,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/parsed_ast_1.json",
+      "relative_path": "runs/boundary_pilot_02/case_03/parsed_ast_1.json",
+      "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+      "bytes": 189,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/parsed_ast_2.json",
+      "relative_path": "runs/boundary_pilot_02/case_03/parsed_ast_2.json",
+      "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+      "bytes": 532,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_03/progress.json",
+      "sha256": "d736316b70004f8aaa69de1277ba57814709c6932f4b9ff92fcab6235c253e35",
+      "bytes": 303,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_03/results.json",
+      "sha256": "db0bcb7340a44fb825c57cde85ebd393f5f14e4f4f998f807af788204e2967eb",
+      "bytes": 34062,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_03/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_03/stdout.log",
+      "sha256": "328e6fb65c1a5f9d2f5fb1b359047d0f8b72fa0165e7d3f2ae492823878a0a65",
+      "bytes": 312,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_03/supervisor_events.jsonl",
+      "sha256": "fd44fd2aecc686aff0a94e136bb118a63383c1e93ab78e19f6a939a81f9ebf00",
+      "bytes": 11523,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_03/supervisor_receipt.json",
+      "sha256": "34d40bbe0a2e9850c07c6730ee172956dde18092c3d78afd586d4a2f231e8bd7",
+      "bytes": 57825,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_04/events.jsonl",
+      "sha256": "f6aa28b9b02108e9e639236016ad9a173e1f722843804cf26b1e74cc1631d9a7",
+      "bytes": 4046,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_04/progress.json",
+      "sha256": "1c20b68792aff1db27418b9fb75ef1e17b7a2f6a6441cdd748f840d8705dfae2",
+      "bytes": 378,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_04/results.json",
+      "sha256": "b4b0b540a86cd22396c5fcfae8e366672d63094be5825cf3b98f43b4a9ff4903",
+      "bytes": 9630,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_04/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_04/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_04/supervisor_events.jsonl",
+      "sha256": "56bccafda7546c1fc92cd0c1e86a31b31c3deeee8fc3b76a401fbb05dac1ea22",
+      "bytes": 1355,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_04/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_04/supervisor_receipt.json",
+      "sha256": "cd6109941c1d5f2864877229e57ee6b6ff5f21ca8bbd39f00c048f5569f34e07",
+      "bytes": 24254,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/contract_assertions.smt2",
+      "relative_path": "runs/boundary_pilot_02/case_05/contract_assertions.smt2",
+      "sha256": "04b0f70b92fc25fa9c115880cd94fdc7f70ce431d507db8615970572978770d6",
+      "bytes": 1532,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/contract_full_model.sexpr",
+      "relative_path": "runs/boundary_pilot_02/case_05/contract_full_model.sexpr",
+      "sha256": "9a27032b67dce4a20184c5a5c0563abcc89d29535346042091725e6f3efe8066",
+      "bytes": 1275,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_05/events.jsonl",
+      "sha256": "b35ce9a9be87c49e77e16559fb41b73c55dc225c0b1b286e02aef0d3f81ef48c",
+      "bytes": 92635,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/parsed_ast_1.json",
+      "relative_path": "runs/boundary_pilot_02/case_05/parsed_ast_1.json",
+      "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+      "bytes": 189,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/parsed_ast_2.json",
+      "relative_path": "runs/boundary_pilot_02/case_05/parsed_ast_2.json",
+      "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+      "bytes": 532,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_05/progress.json",
+      "sha256": "52103964f1fa6a6ccac990007a748910e4fbee916bbe05f54a8f368d8fafa5a4",
+      "bytes": 303,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_05/results.json",
+      "sha256": "d6a1d9d4b4c06d67f0026244fce2df4a082822c318f84dab2e523a0fa19c86c8",
+      "bytes": 34716,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_05/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_05/stdout.log",
+      "sha256": "a05616133be09cc31db62ad308788fbf97ed154e7355112d5465b323f4af08d9",
+      "bytes": 315,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_05/supervisor_events.jsonl",
+      "sha256": "3ad3b66d4ecfa555928a92a31a780ec23734d89668240d092d244a5dfce2a8fc",
+      "bytes": 12865,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_05/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_05/supervisor_receipt.json",
+      "sha256": "a704d07c418e7e6af4e1ed2629c2dd55f29282eac3f7730015f03bc35067715b",
+      "bytes": 58924,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_06/events.jsonl",
+      "sha256": "7682b79c8753a051fba0ff91b0e2d0fde9b4700dd05202bf419b162ce9c42850",
+      "bytes": 4054,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_06/progress.json",
+      "sha256": "0ef8e86ead31397e3acbb28f0902c5046369706c60e271f7f98ae5291f8ae183",
+      "bytes": 378,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_06/results.json",
+      "sha256": "0b7dcc89ff965aa1114100514464dd4f5533cdc3226b54572790356209dd9a3c",
+      "bytes": 9755,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_06/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_06/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_06/supervisor_events.jsonl",
+      "sha256": "62f69bb900393fa69fd0de3ddbf44f73a85d58da0e26d2efa4e20ee349234636",
+      "bytes": 1322,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_06/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_06/supervisor_receipt.json",
+      "sha256": "04af4f303dcf61fda6bec3bd29798d3ad0f665b601289190c02257e33110a522",
+      "bytes": 24561,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/contract_assertions.smt2",
+      "relative_path": "runs/boundary_pilot_02/case_07/contract_assertions.smt2",
+      "sha256": "4e38a23cc4e5aa4855205d85bf5921d38cb0ee48258977f197fbe8401e770a13",
+      "bytes": 2076,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/contract_full_model.sexpr",
+      "relative_path": "runs/boundary_pilot_02/case_07/contract_full_model.sexpr",
+      "sha256": "a8c65e763c4517e6db9541f58424cfb74adceb62c697cad73c260a927bb70e49",
+      "bytes": 1578,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_07/events.jsonl",
+      "sha256": "7ff8c699fd640015d1c624beb607cf15657f6ad9a6077ab5c240d18c5a29ae78",
+      "bytes": 94303,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/parsed_ast_1.json",
+      "relative_path": "runs/boundary_pilot_02/case_07/parsed_ast_1.json",
+      "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+      "bytes": 189,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/parsed_ast_2.json",
+      "relative_path": "runs/boundary_pilot_02/case_07/parsed_ast_2.json",
+      "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+      "bytes": 532,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_07/progress.json",
+      "sha256": "0bfb5d58c9c6f2aba68e46f8cc35b82a28c0b1facb03258cedd2d9dde29116d1",
+      "bytes": 300,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_07/results.json",
+      "sha256": "f66e71a63717b5840082c4ac9e1077f0e5ba4c4eeb9de5bee2cd34b2498d1134",
+      "bytes": 35399,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_07/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_07/stdout.log",
+      "sha256": "8b672be1aaba7034d2015dd95944ec612404f1221d8aa8eeae2c384a801702af",
+      "bytes": 326,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_07/supervisor_events.jsonl",
+      "sha256": "c2a53d0767ab7e9cf97f778e8a47b5eb02887a2fc64c3b3e221356b180570b42",
+      "bytes": 12884,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_07/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_07/supervisor_receipt.json",
+      "sha256": "edb254d2315d0fea872e27d1e79d41f52a88b612ecce355ebc0df47391476c31",
+      "bytes": 60001,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_08/events.jsonl",
+      "sha256": "75edeee3ae40a99d2152d2492a7db63b1ee4e09934e59f650106d0432d03c491",
+      "bytes": 4299,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_08/progress.json",
+      "sha256": "0d88e0f6fe79a057cc7771f6c9577a10bee779b41e4c86952abd3eb6ae9e795f",
+      "bytes": 390,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_08/results.json",
+      "sha256": "d9a9dccb617a9c4c666718b49b905ab71235aecd2673678e99ed32681a2023f2",
+      "bytes": 10539,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_08/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_08/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_08/supervisor_events.jsonl",
+      "sha256": "ef5684f8699ba577d102f53cfecd823ff7fa79d3a50dede43c2d9f70ed9e84e3",
+      "bytes": 1341,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_08/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_08/supervisor_receipt.json",
+      "sha256": "5aaa11bdc0c6d70cac54ee8770ce677784adf651dfd1ea869edf566888d65c22",
+      "bytes": 26271,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/contract_assertions.smt2",
+      "relative_path": "runs/boundary_pilot_02/case_09/contract_assertions.smt2",
+      "sha256": "76c09d173a91c3d8829d41be4f7f4ffda5e78626fb631c39d51555aa63b49969",
+      "bytes": 2682,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/contract_full_model.sexpr",
+      "relative_path": "runs/boundary_pilot_02/case_09/contract_full_model.sexpr",
+      "sha256": "7513f26fbe65a915206992c5802980ab89836cde4ce6dd3d5886d0f047e1cbb1",
+      "bytes": 1858,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_09/events.jsonl",
+      "sha256": "3ba499651afd8475014b62abeca79ccd8d74c542124c0ce7aa33376295076678",
+      "bytes": 95980,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/parsed_ast_1.json",
+      "relative_path": "runs/boundary_pilot_02/case_09/parsed_ast_1.json",
+      "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+      "bytes": 189,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/parsed_ast_2.json",
+      "relative_path": "runs/boundary_pilot_02/case_09/parsed_ast_2.json",
+      "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+      "bytes": 532,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/progress.json",
+      "relative_path": "runs/boundary_pilot_02/case_09/progress.json",
+      "sha256": "9606acba5154fb99ecf7fcac6e8294a81de040d16991c98f7c1965e3813b9a67",
+      "bytes": 302,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/results.json",
+      "relative_path": "runs/boundary_pilot_02/case_09/results.json",
+      "sha256": "1da9a7d521b5a2472b5efcd1288646047206849dd5999506cb214711597da1d3",
+      "bytes": 36076,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/stderr.log",
+      "relative_path": "runs/boundary_pilot_02/case_09/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/stdout.log",
+      "relative_path": "runs/boundary_pilot_02/case_09/stdout.log",
+      "sha256": "2e225c7394d863d9ade9654a589a271f5054342a37a597a12862c7eaa26d9d83",
+      "bytes": 304,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/supervisor_events.jsonl",
+      "relative_path": "runs/boundary_pilot_02/case_09/supervisor_events.jsonl",
+      "sha256": "22aa01c9f00b57b873979ab377fd8a07686ee9063dee8b0ce3f769368438a579",
+      "bytes": 11356,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_09/supervisor_receipt.json",
+      "relative_path": "runs/boundary_pilot_02/case_09/supervisor_receipt.json",
+      "sha256": "4de876627792b752c36c176b041fc908cad93aaa150391fa19b3ac71e33858ed",
+      "bytes": 61086,
+      "review_mode": "full saved text/JSON structural scan, artifact hash and numerical reconciliation; no scientific rerun"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/FOURTH_ROUND_REPORT.zh.md",
+      "relative_path": "FOURTH_ROUND_REPORT.zh.md",
+      "sha256": "67699010beb50164542b16d821dc7a631b097f03716ddeeb00a2a05342afb859",
+      "bytes": 8747,
+      "review_mode": "manual full-text claim audit against pinned saved evidence"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/analyses/pilot_recount.json",
+      "relative_path": "analyses/pilot_recount.json",
+      "sha256": "3629e64101ce66f2f47e2b8a9762890a470902c400fc67a699745c9dd1df44b7",
+      "bytes": 12127,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/decisions/stage_decision.json",
+      "relative_path": "decisions/stage_decision.json",
+      "sha256": "e26c3f38fc72cdedae8e9357c470a824faf1885668be170c63912b0a9683b7dd",
+      "bytes": 646,
+      "review_mode": "saved JSON structure and evidence reconciliation"
+    }
+  ]
+}

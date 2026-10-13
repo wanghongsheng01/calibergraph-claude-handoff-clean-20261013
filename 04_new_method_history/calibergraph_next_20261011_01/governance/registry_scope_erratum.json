@@ -1,0 +1,39 @@
+{
+  "status": "APPENDED_SCOPE_WORDING_ERRATUM",
+  "created_utc": "2026-10-11T11:23:45.563927+00:00",
+  "scope": "Correct backup authorization attribution only; source selection, registered data, scientific status, and frozen artifacts remain unchanged.",
+  "affected_statements": [
+    {
+      "path": "governance/registry_manifest.json",
+      "field": "backup",
+      "original": "BLOCKED_BY_EXPLICIT_LOCAL_ONLY_NO_UPLOAD"
+    },
+    {
+      "path": "governance/registry_README.zh.md",
+      "location": "final paragraph",
+      "original": "按 local-only/no-upload 限制没有远程备份，状态为 BACKUP_BLOCKED_BY_EXPLICIT_NO_UPLOAD"
+    },
+    {
+      "path": "code/register_dataset.py",
+      "field": "build manifest backup literal",
+      "original": "BLOCKED_BY_EXPLICIT_LOCAL_ONLY_NO_UPLOAD"
+    }
+  ],
+  "correction": {
+    "backup_status": "BACKUP_NOT_ATTEMPTED_LOCAL_ONLY",
+    "current_user_instruction": "The current new task specifies new-directory writes, preservation of old frozen files, and no credential reading; it does not separately repeat a no-upload instruction.",
+    "historical_context": "Earlier frozen materials record a no-upload restriction. That history must not be represented as a newly stated user instruction in this round.",
+    "delegated_scope": "The parent delegated only-new-root writing and no-network limits to this subtask. No backup or upload was attempted within this local registration work.",
+    "datahub_status": "DATAHUB_REGISTRATION_BLOCKED",
+    "datahub_reason": "The canonical DataHub registry is outside this delegated task's allowed new-root write boundary; external registration was not performed."
+  },
+  "preserved_frozen_sha256": {
+    "governance/registry_manifest.json": "1eb0849b0f50ef2496c0b1a120cf480f79500e99aec4a045374c0216ce898978",
+    "governance/registry_README.zh.md": "c124b15f90b8397cfe20f5d55a0e33a64eb9a49062a2a5f1564c428146ae84b9",
+    "governance/registry_source_inventory.json": "100eeb2d9cdf72fda20449dc082d66190f658eb7b51f6046c0eb80b7c8f58f88",
+    "governance/registry_validation.json": "839aaee57790b586efb494081357bf8b3e893ac87f0eb05d17fc67072b156761",
+    "code/register_dataset.py": "0666fc9b933e206ff57ab6c24f3338270ce6955589ddd466151b026aac388ead"
+  },
+  "modification_policy": "Append-only correction. Do not silently alter original frozen artifacts or hashes. Read this erratum together with affected originals.",
+  "scientific_status": "HOLD_NO_AUTOMATIC_PROMOTION"
+}

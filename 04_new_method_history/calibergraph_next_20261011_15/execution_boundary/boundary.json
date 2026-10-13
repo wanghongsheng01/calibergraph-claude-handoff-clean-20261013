@@ -1,0 +1,131 @@
+{
+  "schema": "calibergraph.round15.execution_boundary.v1",
+  "status": "STATIC_ONLY_NO_EXECUTION_AUTHORIZATION",
+  "author": "/root/round15_execution_boundary_audit",
+  "created_utc": "2026-10-11T16:17:56.239512+00:00",
+  "report": "BRIEF.zh.md",
+  "scientific_code_runs": 0,
+  "sql_runs": 0,
+  "solver_runs": 0,
+  "scientific_imports": 0,
+  "tests": 0,
+  "priority_changes": 0,
+  "capability_probes": 0,
+  "escalation_requests": 0,
+  "old_round06_or_round13_files_modified": false,
+  "round13": {
+    "status": "NOTCOMPLETED",
+    "attempts_consumed": 1,
+    "retry_allowed": false,
+    "observed_failure": "OS_OR_SANDBOX_SYSCALL_EPERM",
+    "auto_review_rejection_evidence": false,
+    "exit_code": 1,
+    "planned_database_instances": 98,
+    "planned_count_selects": 196,
+    "actual_entry_status": "ACTUAL_STATUS_UNKNOWN_PER_FROZEN_DISPOSITION",
+    "eperm_sites": [
+      "external nice setpriority",
+      "replay.py:34 os.nice",
+      "external time sysctl kern.clockrate"
+    ]
+  },
+  "round06": {
+    "registered_slots": 12,
+    "returned_slots": 12,
+    "full_C_checks_sat": 12,
+    "query_checks": 9,
+    "unsat": 5,
+    "unknown_timeout": 2,
+    "unknown_out_of_memory": 2,
+    "zero_query_check_encoding_errors": 3,
+    "C_model_sanity_models": 6,
+    "C_model_sanity_original_SQL_executions": 12,
+    "query_SAT_witnesses": 0,
+    "automatic_retries": 0,
+    "reported_resource_violations": 0,
+    "measured_self_plus_reaped_children_CPU_s": 18.274636,
+    "charged_with_reserves_CPU_s": 28.474636,
+    "max_lifecycle_wall_s": 2.239919625,
+    "outer_execution_tool_and_sandbox_mode": "UNKNOWN_NOT_PRESENT_IN_INSPECTED_ARTIFACTS"
+  },
+  "reusability": {
+    "unchanged_runner_for_new_2_3_4": false,
+    "unchanged_analysis_for_new_slots": false,
+    "reason": [
+      "Hardcoded round06 protocol ID/output paths",
+      "Fixed old source indices and exact bounds 2/4/8",
+      "Fixed 12-slot precheck denominator",
+      "Only two old complete source profiles admitted to SQLite replay",
+      "Analyzer asserts historical outcomes and all completed attempt snapshots"
+    ],
+    "reusable_design": [
+      "single worker process ownership",
+      "nice floor and resource guards",
+      "full-C/unchanged SQL operational pipeline within existing source profiles",
+      "full-process accounting and explicit censored timings"
+    ]
+  },
+  "root_new_proposal_not_registered": {
+    "source_indices": [
+      6,
+      9,
+      14,
+      3
+    ],
+    "bounds_exact_rows_per_original_table": [
+      2,
+      3,
+      4
+    ],
+    "predeclared_repeats": 2,
+    "planned_slots": 24,
+    "environment_attempts_per_slot": 1,
+    "batch_attempts": 1,
+    "total_cpu_limit_s": 60,
+    "C_model_sanity": "UNCHANGED_ROUND06_LOGIC",
+    "new_fixed_witness_comparator": false,
+    "new_mechanism": false,
+    "scientific_execution_enabled": false
+  },
+  "minimum_new_adaptation": [
+    "New round15 IDs and output root, explicit repeat ID and complete predeclared 24-slot order",
+    "Preserve all old resource/semantic/C sanity behavior",
+    "Complete SOURCE_AND_STRUCTURE_ADMISSION timing if statically safe",
+    "Capture comparison encode duration on caught failure without turning never-reached/censored into zero",
+    "New denominator-driven readonly analysis including missing/failed/notrun slots",
+    "New manifest and independent pre-execution review before root enablement"
+  ],
+  "measurement_limitations": [
+    "phase totals do not exactly partition whole-process cost",
+    "nested parse/replay costs must not be summed twice",
+    "old comparison-encode precheck errors have null cost",
+    "hard interruption can prevent finally and leave censored values",
+    "preparation 10s and tail 0.2s are reserves, not measurements",
+    "RSS/wall/load checks are sampled; batch CPU is not a process-tree kernel hard limit"
+  ],
+  "supported_execution_request_candidate": {
+    "tool": "exec_command",
+    "sandbox_permissions": "require_escalated",
+    "reviewer": "auto_review",
+    "submit_now": false,
+    "justification_required": true,
+    "broad_prefix_rule": false,
+    "guaranteed_approval": false,
+    "guaranteed_runtime_capability": false,
+    "scope": "One exact new frozen round15 command, local pinned inputs, new output only, nice>=15 and unchanged caps; no network/GPU/credentials/security changes",
+    "denied_disposition": "APPROVAL_DENIED_NOT_LAUNCHED; retain stated reason; no alternate route",
+    "runtime_syscall_failure_disposition": "ENVIRONMENT_STARTUP_FAILURE_NOTCOMPLETED; consume new protocol attempt; no retry"
+  },
+  "scientific_scope": {
+    "old_21_sources": "ALL_EXPOSED_DEVELOPMENT_NOT_NEW_TEST",
+    "business_contract_truth_completeness": "UNKNOWN",
+    "full_C": "COMPLETE_PUBLIC_OPERATIONAL_C_REQUIRED",
+    "no_selection_after_outcome": true,
+    "no_novelty_or_superiority_claim": true,
+    "exact_N_not_at_most_N": true
+  },
+  "backup_owner": "root",
+  "backup_status": "PENDING_ROOT_UNIFIED_PRIVATE_BACKUP",
+  "datahub_owner": "root",
+  "external_data_access_this_audit": false
+}

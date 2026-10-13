@@ -1,0 +1,64 @@
+{
+  "decision": "NO_GO_AS_NEW_MECHANISM",
+  "classification": "observed_single_case_generation_coverage_gap; not demonstrated front-end, semantics or comparator bug",
+  "exact_condition": "A minus B is nonempty; A = male IDs with joined T-BIL=2; B = male IDs with joined T-BIL>2",
+  "difference_formula": "Q_ge-Q_gt = |A minus B|",
+  "saved_snapshots": 9,
+  "saved_snapshots_with_boundary": 4,
+  "saved_snapshots_with_final_neq": 0,
+  "control": "previously constructed and independently verified 1/0, never independent test",
+  "automated_changes_proposed": 1,
+  "automated_changes_implemented": 0,
+  "proposal": "Restricted pair-derived distinct-key absence goal; known semantic specialization, optional engineering repair only",
+  "single_factor": "include vs omit stricter-side absence for distinguished key under otherwise identical bounded formulas",
+  "comparator_is_unmodified_parseval": false,
+  "future_source": "Polygon original LeetCode pairs, unacquired/unqualified; deterministic first 20 records at fixed artifact commit, deduplicate prior sources",
+  "future_independent_cases_target": {
+    "external_development": 1,
+    "sealed_test": 1
+  },
+  "future_optional_ablation_budget_only": {
+    "executed": false,
+    "authorized_by_this_document": false,
+    "max_solver_calls": 4,
+    "per_call_timeout_seconds": 5,
+    "total_solver_timeout_seconds": 20,
+    "whole_pilot_wall_seconds": 90,
+    "own_cpu_seconds": 60,
+    "rss_sampled_stop_bytes": 1073741824,
+    "nominal_sample_interval_seconds": 0.05,
+    "hard_rss_cap": false,
+    "overshoot_possible": true,
+    "science_workers": 1,
+    "retries": 0,
+    "official_strong_baseline_runs_included": false
+  },
+  "new_science_runs": 0,
+  "general_superiority_claim": false,
+  "blockers": [
+    "XData core Java and paper/artifact mapping unverified",
+    "Polygon full-C runtime admission and matched comparison not performed",
+    "No independent natural cases acquired/qualified",
+    "DATAHUB_REGISTRATION_BLOCKED: no approved public-research source module; external canonical registry not changed in this task scope",
+    "Historical third-party raw/native BACKUP_BLOCKED remains separate from author-output backup"
+  ],
+  "proposal_admission": {
+    "same_from_and_inner_join": true,
+    "same_proven_nonnull_key": true,
+    "single_ungrouped_scalar_count_distinct_projection": true,
+    "only_where_truth_set_containment_may_differ": true,
+    "excluded": [
+      "HAVING",
+      "LIMIT",
+      "OFFSET",
+      "set operations",
+      "window functions",
+      "outer joins",
+      "correlated subqueries",
+      "other projections",
+      "post-aggregate transformations"
+    ],
+    "unproven_admission": "UNSUPPORTED",
+    "both_arms_share_admission_and_nonnull_conditions": true
+  }
+}

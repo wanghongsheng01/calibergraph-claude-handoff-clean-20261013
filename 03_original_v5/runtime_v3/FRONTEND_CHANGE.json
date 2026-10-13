@@ -1,0 +1,55 @@
+{
+  "status": "IMPLEMENTED_AST_CHECKED_NOT_EXECUTED",
+  "kernel_source_v2_sha256": "c5ef813532ad190c5af82e2255da973fe8bc469ab24aed7da304678edcd46c35",
+  "program_sha256": {
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/aggregate_kernel.py": "defa1812ec36c91a23d428f8d71d2070f808eddeb5f473748d3e7ac09fdfe5f3",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/worker.py": "bf2c8ba1f674f7185a87238356afc27131dbe653d4f6649d06b37e848c486afa",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/supervisor.py": "49a8682b74728c61b2180de57cf65f5d2fe284b040e9e1688b40acd2a6588f42",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair/common.py": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a"
+  },
+  "interface": {
+    "guard": "ensure_raw_identifiers(schema, original_sql) -> None; raises FrontendUnsupported(Ineligible)",
+    "recognize": "recognize(ast, schema, *, identifier_encoding=\"dot\", original_sql=None); original_sql required for verieql_double_underscore"
+  },
+  "common_frontend_contract": [
+    "Every raw schema table/column is ASCII [A-Za-z_][A-Za-z0-9_]*, contains no __, and names do not collide under uppercase within a namespace.",
+    "Reject raw SQL containing any backtick, double quote, or dollar sign. This is deliberately conservative, including strings/comments.",
+    "All five cost arms and each differential job apply this gate before Environment construction and SQL parsing.",
+    "FrontendUnsupported remains in the registered denominator and has full process/gate timing; no official parse/solve or fallback; not a SAT/UNSAT decision.",
+    "Only after raw gate admits input can algorithm Ineligible use original official fallback under the same remaining resource budget.",
+    "This is a necessary conservative identifier-safety gate; it does not prove all upstream SQL semantics or parser totality."
+  ],
+  "runtime_contract": {
+    "arms": [
+      "official",
+      "official_generic_smt",
+      "flat",
+      "product",
+      "selector"
+    ],
+    "per_job": "fresh process and Environment for each admitted arm; complete schema, ICs, exact positive row counts; identical remaining CPU/wall budget",
+    "cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "worker_wall_seconds": 24,
+    "supervisor_child_wall_seconds": 25,
+    "supervisor_total_wall_seconds": 89,
+    "rss_soft_bytes": 1073741824,
+    "solver_threads": 1,
+    "cost": "full process wall/CPU plus semantic E2E; includes contract checks, parse/recognize, encoding, solver, SAT SQLite replay, fallback, cleanup",
+    "differential": "separate correctness jobs; per query NULL/value mismatch vs official Scope output under unchanged premises; official auxiliary totality not established"
+  },
+  "preserved": [
+    "runtime",
+    "runtime_v2",
+    "all existing run directories",
+    "official source files"
+  ],
+  "not_done": [
+    "no target/native import or solver execution",
+    "no runtime lock upgrade; parent registers and runs",
+    "no broadening of aggregate algorithm fragment"
+  ]
+}

@@ -1,0 +1,872 @@
+{
+  "status": "ALL_SELECTED_BATCHES_RETURNED",
+  "kind": "cost",
+  "full_registered_job_denominator": 132,
+  "script_sha256": "0eefb5b6ee240db2403bd08d10a0f0397e1325c2e9f61d9f5bdf727ea08c310a",
+  "entries": [
+    {
+      "start": 0,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_000",
+      "exit_code": 0,
+      "wall_seconds": 4.7729994165711105,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_000/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "RESOURCE_STOP",
+          "final_decision": "unsat",
+          "stop_reason": "RSS_OBSERVATION_UNAVAILABLE"
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 3,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_003",
+      "exit_code": 0,
+      "wall_seconds": 4.21254266705364,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_003/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N2",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 6,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_006",
+      "exit_code": 0,
+      "wall_seconds": 4.470994916278869,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_006/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 9,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_009",
+      "exit_code": 0,
+      "wall_seconds": 4.330769042018801,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_009/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N2",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 12,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_012",
+      "exit_code": 0,
+      "wall_seconds": 4.404931166674942,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_012/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 15,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_015",
+      "exit_code": 0,
+      "wall_seconds": 4.531720125116408,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_015/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N2",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 18,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_018",
+      "exit_code": 0,
+      "wall_seconds": 4.311336083803326,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_018/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 21,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_021",
+      "exit_code": 0,
+      "wall_seconds": 4.458090708125383,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_021/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "official",
+          "query_index": null,
+          "status": "RESOURCE_STOP",
+          "final_decision": "sat",
+          "stop_reason": "RSS_OBSERVATION_UNAVAILABLE"
+        },
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N2",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 24,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_024",
+      "exit_code": 0,
+      "wall_seconds": 4.5308154579252005,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_024/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 27,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_027",
+      "exit_code": 0,
+      "wall_seconds": 4.66414041724056,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_027/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N2",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 30,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_030",
+      "exit_code": 0,
+      "wall_seconds": 4.519859875086695,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_030/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 33,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_033",
+      "exit_code": 0,
+      "wall_seconds": 4.553898042067885,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_033/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N2",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 36,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_036",
+      "exit_code": 2,
+      "wall_seconds": 29.33654279075563,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_036/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 39,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_039",
+      "exit_code": 0,
+      "wall_seconds": 4.499032832682133,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_039/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S01_reordered_conjunction_N4",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 42,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_042",
+      "exit_code": 2,
+      "wall_seconds": 17.310344458092004,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_042/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 45,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_045",
+      "exit_code": 0,
+      "wall_seconds": 5.072849957738072,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_045/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S02_nullable_count_N4",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 48,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_048",
+      "exit_code": 0,
+      "wall_seconds": 4.35476000001654,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_048/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 51,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_051",
+      "exit_code": 2,
+      "wall_seconds": 42.10563124995679,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_051/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S03_full_not_null_IC_N4",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 54,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_054",
+      "exit_code": 0,
+      "wall_seconds": 17.413034583907574,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_054/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 57,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_057",
+      "exit_code": 0,
+      "wall_seconds": 4.659682959318161,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_057/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S04_sum_vs_count_N4",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "sat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 60,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_060",
+      "exit_code": 0,
+      "wall_seconds": 4.852240374777466,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_060/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 63,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_063",
+      "exit_code": 2,
+      "wall_seconds": 16.88273987499997,
+      "stdout": "{\"status\": \"COMPLETED_WITH_FAILURES_OR_NOT_RUN\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_063/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S05_empty_SUM_NULL_N4",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unknown",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 66,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_066",
+      "exit_code": 0,
+      "wall_seconds": 5.155406082980335,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_066/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "official_canonical_sql",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "official",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "official_generic_smt",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    },
+    {
+      "start": 69,
+      "size": 3,
+      "status": "RETURNED",
+      "out": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_069",
+      "exit_code": 0,
+      "wall_seconds": 4.330567833036184,
+      "stdout": "{\"status\": \"SELECTED_JOBS_COMPLETE\", \"report\": \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_cost_queue_069/supervisor_report.json\"}\n",
+      "stderr": "",
+      "decisions": [
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "flat",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "product",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        },
+        {
+          "case_id": "S06_all_NULL_SUM_N4",
+          "arm": "selector",
+          "query_index": null,
+          "status": "PROCESS_EXITED",
+          "final_decision": "unsat",
+          "stop_reason": null
+        }
+      ]
+    }
+  ]
+}

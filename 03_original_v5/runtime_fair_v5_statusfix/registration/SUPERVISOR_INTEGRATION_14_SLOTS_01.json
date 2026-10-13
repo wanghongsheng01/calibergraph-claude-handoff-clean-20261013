@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "data_role": "EXPOSED_LOGGING_SUPERVISOR_INTEGRATION_REGRESSION_NOT_SCIENTIFIC_SAMPLE",
+  "registered_utc": "2026-10-11T06:18:58.981363+00:00",
+  "source_provenance": {
+    "source_suite": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "source_suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "cases_extracted_unchanged": [
+      "D01_literal_left_forced_A6",
+      "D02_same_SQL_same_C",
+      "D04_contradictory_literal_left",
+      "D06_unsupported_whole_C"
+    ],
+    "all_case_dictionaries_exactly_unchanged": true
+  },
+  "cases": [
+    {
+      "id": "D01_literal_left_forced_A6",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            6
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "5 < A AND A <= 6 over INT forces A=6 and NOT NULL. Original SQL returns NULL versus 6. Wrong raw upstream compiler would instead impose A<5 AND A<=6 and make these queries equal.",
+      "contract_expectation": "sat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected": "sat",
+      "registered_fixed_database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "registered_fixed_sql_outputs": [
+        null,
+        6
+      ]
+    },
+    {
+      "id": "D02_same_SQL_same_C",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            6
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "Same raw SQL under same nonvacuous C; canonical and solver paths must still pass whole contract bridge.",
+      "contract_expectation": "sat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected": "unsat",
+      "registered_fixed_database": {
+        "T": [
+          [
+            6
+          ]
+        ]
+      },
+      "registered_fixed_sql_outputs": [
+        6,
+        6
+      ]
+    },
+    {
+      "id": "D04_contradictory_literal_left",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            5
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "5<A AND A<=5 is inconsistent. Base-only bridge XOR may pass but contract guard must reject without pair UNSAT.",
+      "contract_expectation": "unsat",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected_final_decision": "CONTRACT_UNSAT_REJECTED"
+    },
+    {
+      "id": "D06_unsupported_whole_C",
+      "schema": {
+        "T": {
+          "A": "INT"
+        }
+      },
+      "exact_rows": {
+        "T": 1
+      },
+      "constraint": [
+        {
+          "lt": [
+            5,
+            {
+              "value": "T__A"
+            }
+          ]
+        },
+        {
+          "or": [
+            {
+              "eq": [
+                {
+                  "value": "T__A"
+                },
+                6
+              ]
+            },
+            {
+              "eq": [
+                {
+                  "value": "T__A"
+                },
+                7
+              ]
+            }
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+        "SELECT SUM(T.A) FROM T"
+      ],
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official_canonical_sql"
+      ],
+      "data_role": "CONSTRUCTED_EXPOSED_CONTRACT_ADAPTER_CONTROL_NOT_NATURAL_DEFECT_OR_HELDOUT",
+      "contract_scope": "Registered source AST; no text parser completeness claim. INT32 physical domain, exact positive rows, strict TRUE/NULL fails for contract atoms.",
+      "analytical_derivation": "OR is outside the independent reference. Reject the entire original AST without compiling only the supported first clause or using old upstream fallback.",
+      "contract_expectation": "UNVERIFIED_UNSUPPORTED_WHOLE_AST",
+      "intended_purpose": "Main-entry repair regression, not method novelty or cost advantage",
+      "expected_final_decision": "UNVERIFIED_CONTRACT"
+    }
+  ],
+  "cost_full_denominator": 24,
+  "differential_full_denominator": 24,
+  "selected_kind": "cost",
+  "selected_job_start": 5,
+  "selected_job_limit": 14,
+  "analysis_rules": {
+    "single_supervisor": "One original unchanged supervisor invocation, sequential single computational child, unchanged CPU14/15 wall24/25/RSS1GiB and89s total.",
+    "scientific_scope": "Status logging and copied supervisor receipts only. Repeated exposed cases are not new scientific samples; new timings are an independent source-lock cohort and never replace old v5 cost evidence.",
+    "partial_selection": "24 registered cost slots; indices5..18 selected,10 remain NOT_RUN. Per-query differential is not requested.",
+    "expected_supervisor_completion": "Intentional typed stops exit2; COMPLETED_WITH_FAILURES_OR_NOT_RUN is expected, not a failed scientific experiment and not all-positive correctness. Inspect all14 selected individual receipts and resource records."
+  }
+}

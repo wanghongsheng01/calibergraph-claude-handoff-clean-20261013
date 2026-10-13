@@ -1,0 +1,175 @@
+{
+  "status": "CURRENT_FROZEN_LOCK_AND_SUITE_HASH_INVENTORY_CHECK_PASSED",
+  "checked_utc": "2026-10-11T06:23:00.074241+00:00",
+  "scope": "Pure standard-library path/hash/JSON/inventory verification only; no target/native/SQL execution. Exact independent READY review still required before ROOT invocation.",
+  "current_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix_reviewed_main_01.json",
+    "sha256": "16c76c134cdca4ef9461506968cecbbdb73ce6bc6304acdbeb7e878f19613d18",
+    "bytes": 206182
+  },
+  "suite": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_14_SLOTS_01.json",
+    "sha256": "84b1077a998a5cac1d05e6ad5631fc3f6b0f6a618f0e228402c2eb70c08f12e9",
+    "bytes": 7660
+  },
+  "main_suite": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+    "bytes": 48504
+  },
+  "initial_NOT_RUN": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_INITIAL_NOT_RUN_01.json",
+    "sha256": "81a93a70abfc369de8157405f367fca3a27e92c36e6b8dc0be1416e87c3095ac",
+    "bytes": 8437
+  },
+  "registration": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_REGISTRATION_01.json",
+    "sha256": "298ffb2598506f3a9df5a69b3e6fffcbeda59529349bdfd7084f3331b88570d0",
+    "bytes": 8701
+  },
+  "historical_precheck": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/REVIEWED_MAIN_01_PRECHECK.json",
+    "sha256": "2bbe0cb2b30d10793920733338713b64e2a1a4a464dba5dc2661318258a8d9e3",
+    "bytes": 5135
+  },
+  "historical_precheck_note": "Earlier candidate_lock_sha256 4fe69c... preceded suite metadata finalization; retained as history, not evidence for current final lock identity. This append-only receipt binds the final current lock.",
+  "old_pending_locks": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix.json",
+      "sha256": "994537c79bfaf7998800adcd3eb87092d6feaa56ecb053dfb142e09951e2ac76",
+      "bytes": 204566
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/spotit_engine_runtime_paths_statusfix.json",
+      "sha256": "115452b51f0849e080e9afce1f0150717950d6551965eb9c2733024594704919",
+      "bytes": 210978
+    }
+  ],
+  "old_pending_preserved": true,
+  "source_program_changes": [],
+  "runtime_programs": {
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/common.py": "aad39a0fe6eeb0dbafbc949a16c81cda1aa5268f7b519dedf6275e46acc10576",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/worker.py": "5848538a168495d3a336afedd5d1efe696d43eea8a15d353679b905be7ecc320",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/pair_status.py": "65edfe932aee49a64f3986d420eb3115bb71d271d3ac402e039052ea5826ca5f"
+  },
+  "files_checked": 854,
+  "inventories": [
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+      "file_count": 159,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+      "file_count": 11,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+      "file_count": 503,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260",
+      "file_count": 18,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252",
+      "file_count": 24,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201",
+      "file_count": 17,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201",
+      "file_count": 11,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303",
+      "file_count": 11,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0",
+      "file_count": 5,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9",
+      "file_count": 46,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0",
+      "file_count": 6,
+      "exact": true,
+      "symlinks": 0
+    },
+    {
+      "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2",
+      "file_count": 24,
+      "exact": true,
+      "symlinks": 0
+    }
+  ],
+  "native": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+    "sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+    "bytes": 22859864
+  },
+  "case_dictionaries_exactly_extracted_unchanged": [
+    "D01_literal_left_forced_A6",
+    "D02_same_SQL_same_C",
+    "D04_contradictory_literal_left",
+    "D06_unsupported_whole_C"
+  ],
+  "arm_order_unchanged": true,
+  "selected_indices": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "selected_count": 14,
+  "full_denominator": 24,
+  "unselected_NOT_RUN": 10,
+  "command": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_COMMAND_01.txt",
+    "sha256": "51ef33f1a5ff81fdff7a2ffce055b9c65fdfb1a9420872f0dd684433990ee125",
+    "bytes": 1068
+  },
+  "command_prior_sha256": "9c90a524eda1fc654c482cfe40fc4727c4734c3a18a75546eba7d651e3667e08",
+  "command_change": "Only replace bare python3 with existing absolute research_phase2/.venv/bin/python. No source, lock, or suite changes.",
+  "interpreter_entrypoint": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+  "interpreter_resolved_path": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "interpreter_binary_sha256": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324",
+  "interpretation": "Separate integration regression only; no new scientific samples or replacement v5 costs. This covers normal-return logging, typed stops, and supervisor propagation. It does not cover injected incomplete-return/error paths."
+}

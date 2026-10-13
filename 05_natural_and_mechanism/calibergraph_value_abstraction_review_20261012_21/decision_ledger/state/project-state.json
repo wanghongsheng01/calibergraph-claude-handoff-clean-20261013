@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "project_id": "calibergraph-value-abstraction-21",
+  "created_utc": "2026-10-12T11:56:38.428222+00:00",
+  "stage": "REJECTED",
+  "topic_status": "UNCOMMITTED",
+  "venue": {
+    "name": "UNCOMMITTED",
+    "year": 2026,
+    "track": "scientific-direction-review"
+  },
+  "resource_envelope": {
+    "status": "UNVERIFIED",
+    "budget_ledger_sha256": null,
+    "feasibility_audit_sha256": null,
+    "gpu": {
+      "adapter": "UNKNOWN",
+      "devices": null,
+      "memory_gb_each": null,
+      "status": "UNVERIFIED"
+    },
+    "llm_api": {
+      "adapter": "UNKNOWN",
+      "providers": [],
+      "call_cap": null,
+      "token_cap": null,
+      "currency_cap": null,
+      "status": "UNVERIFIED"
+    },
+    "cpu": {
+      "status": "UNVERIFIED"
+    },
+    "storage": {
+      "status": "UNVERIFIED"
+    }
+  },
+  "split_policy": {
+    "identity_unit": null,
+    "development_ids_sha256": null,
+    "calibration_ids_sha256": null,
+    "confirmation_ids_sha256": null,
+    "split_manifest_sha256": null,
+    "overlap_checked": false,
+    "exposure_ledger": "governance/exposure-ledger.jsonl"
+  },
+  "gates": {
+    "venue_profile": "MISSING",
+    "problem_landscape": "MISSING",
+    "opportunity": "MISSING",
+    "novelty": "MISSING",
+    "feasibility": "MISSING",
+    "protocol_freeze": "MISSING",
+    "harness_baseline": "MISSING",
+    "development_run": "MISSING",
+    "development": "MISSING",
+    "method_lock": "MISSING",
+    "confirmation": "MISSING",
+    "promotion": "MISSING",
+    "submission_readiness": "MISSING"
+  },
+  "latest_next_gate": "Archive this rejected candidate. No implementation or SQL/solver experiments. Reopening requires substantively new mechanism evidence in a derived review.",
+  "events": [
+    {
+      "seq": 1,
+      "event_id": "EVT-0001",
+      "created_utc": "2026-10-12T11:56:38.428222+00:00",
+      "stage": "INTAKE",
+      "summary": "Research project initialized.",
+      "next_gate": "Verify the current venue rules and resource envelope.",
+      "evidence": [],
+      "previous_event_sha256": null,
+      "event_sha256": "3004d7e6f46d56a0fb18a25754de32c60e9983231e3fd4212827fc6a589effcf"
+    },
+    {
+      "seq": 2,
+      "event_id": "EVT-3392edc57c0d",
+      "created_utc": "2026-10-12T12:12:33.567461+00:00",
+      "stage": "REJECTED",
+      "summary": "Analysis-only critical direction review completed; non-author independent review concurs in rejecting current candidate; zero candidates retained.",
+      "next_gate": "Archive this rejected candidate. No implementation or SQL/solver experiments. Reopening requires substantively new mechanism evidence in a derived review.",
+      "evidence": [
+        {
+          "path": "decisions/current-candidate-rejection.json",
+          "sha256": "587801763f3741371198dcc17eacacb06addb29683f0957dc62805338ff57286",
+          "size_bytes": 1227,
+          "mode": "IMMUTABLE"
+        },
+        {
+          "path": "sources/source-ledger.jsonl",
+          "sha256": "f48045412532b9915e994f40cbbee06f67994598c8faa9a14ca92cb7524d4eb2",
+          "size_bytes": 7947,
+          "mode": "APPEND_ONLY_PREFIX"
+        }
+      ],
+      "previous_event_sha256": "3004d7e6f46d56a0fb18a25754de32c60e9983231e3fd4212827fc6a589effcf",
+      "resume_reason": null,
+      "event_sha256": "a3dd271346340e9fb5633c0c0855b0e299add860cb4078004f0377b2db1059ff"
+    }
+  ]
+}

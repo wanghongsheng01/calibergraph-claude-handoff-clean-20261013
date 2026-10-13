@@ -1,0 +1,5619 @@
+{
+  "status": "ADAPTED_BASELINE_ORIGINAL_QUERY_NONEMPTY_CONFIRMED",
+  "stage": "WORKER_FINISHED",
+  "counters_complete": true,
+  "parser_internal_calls": "NOT_COLLECTED; explicit lowering invocations are counted; generator internal lowering is included in generation cost only",
+  "case": "gitlab#47",
+  "historical_server_reproduction": false,
+  "variant": "ParSEval_with_ordinary_PostgreSQL_BOOLEAN_literal_adapter",
+  "original_SQL_rewritten": false,
+  "supplement": "EXPLICITLY_AUTHORIZED_FIRST_CANDIDATE_REPLAY_ONLY",
+  "counters": {
+    "generation_calls": 1,
+    "solver_checks": 0,
+    "solver_results": {},
+    "candidate_callbacks": 1,
+    "original_query_replays": 2,
+    "confirmation_query_replays": 2,
+    "driver_execute_calls": 165,
+    "explicit_lowering_calls": 2
+  },
+  "calibration": [
+    {
+      "label": "boolean_literal",
+      "input": "f",
+      "postgres": false,
+      "parseval_adapter": false,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "t",
+      "postgres": true,
+      "parseval_adapter": true,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "false",
+      "postgres": false,
+      "parseval_adapter": false,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "true",
+      "postgres": true,
+      "parseval_adapter": true,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "0",
+      "postgres": false,
+      "parseval_adapter": false,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "1",
+      "postgres": true,
+      "parseval_adapter": true,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "F",
+      "postgres": false,
+      "parseval_adapter": false,
+      "pass": true
+    },
+    {
+      "label": "boolean_literal",
+      "input": "T",
+      "postgres": true,
+      "parseval_adapter": true,
+      "pass": true
+    },
+    {
+      "label": "NULL_not_false",
+      "sqlstate": null,
+      "expected": null,
+      "pass": true,
+      "result": {
+        "columns": [
+          "?column?",
+          "?column?"
+        ],
+        "type_oids": [
+          16,
+          16
+        ],
+        "rows": [
+          [
+            true,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "label": "nullable_triple_unique_duplicate_NULL_allowed",
+      "sqlstate": null,
+      "expected": null,
+      "pass": true,
+      "result": null
+    },
+    {
+      "label": "star_no_invented_FK",
+      "sqlstate": null,
+      "expected": null,
+      "pass": true,
+      "result": null
+    },
+    {
+      "label": "star_nonNULL_unique_reject",
+      "sqlstate": "23505",
+      "expected": "23505",
+      "pass": true
+    },
+    {
+      "label": "star_source_NOT_NULL_reject",
+      "sqlstate": "23502",
+      "expected": "23502",
+      "pass": true
+    },
+    {
+      "label": "auth_project_FK_reject",
+      "sqlstate": "23503",
+      "expected": "23503",
+      "pass": true
+    },
+    {
+      "label": "auth_user_FK_reject",
+      "sqlstate": "23503",
+      "expected": "23503",
+      "pass": true
+    },
+    {
+      "label": "signed_int32_reject",
+      "sqlstate": "22003",
+      "expected": "22003",
+      "pass": true
+    }
+  ],
+  "lowering": [
+    {
+      "variant": "stock",
+      "side": "after",
+      "status": "ERROR",
+      "error": {
+        "type": "ValueError",
+        "raw_local_path": "error_1.txt",
+        "raw_sha256": "1e13d1e2835caf8d5608cec87d86fb897b58a0aabd94e5ffb12d7d18858358fd",
+        "message_sha256": "d13138dd4a7b2c35638548087ae7a95bcc3c7b794fdf3f503be2a494ed14771c"
+      }
+    },
+    {
+      "variant": "ordinary_boolean_adapter",
+      "side": "after",
+      "status": "PASS",
+      "columns": 42
+    }
+  ],
+  "candidates": [
+    {
+      "D_sha256": "f780633e689cdf9500dc711dbc7419c6c14dae49a5d5aee02a39648e4e487794",
+      "duplicate": false,
+      "rows": 45,
+      "D": {
+        "projects": [
+          [
+            1,
+            "a",
+            "b",
+            "c",
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-02T00:00:00"
+            },
+            2,
+            3,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            "d",
+            10,
+            false,
+            "e",
+            "f",
+            4,
+            "g",
+            "h",
+            "i",
+            5,
+            true,
+            "j",
+            "k",
+            false,
+            6,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-01-04T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "l",
+            false,
+            false,
+            false,
+            "m",
+            false,
+            false,
+            7,
+            "n",
+            8,
+            null
+          ],
+          [
+            49,
+            "cd",
+            "ce",
+            "bg",
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-24T00:00:00"
+            },
+            50,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            "bh",
+            20,
+            false,
+            "bi",
+            "f",
+            4,
+            "bk",
+            "h",
+            "cf",
+            5,
+            true,
+            "cg",
+            "k",
+            false,
+            6,
+            false,
+            false,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-02-03T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "bm",
+            false,
+            false,
+            false,
+            "ch",
+            false,
+            false,
+            7,
+            null,
+            null,
+            null
+          ],
+          [
+            -1,
+            "a",
+            "ct",
+            "c",
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-10T00:00:00"
+            },
+            63,
+            3,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            null,
+            20,
+            false,
+            null,
+            "bj",
+            4,
+            "g",
+            "h",
+            null,
+            45,
+            true,
+            "j",
+            "k",
+            false,
+            6,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-02-03T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "l",
+            false,
+            null,
+            false,
+            null,
+            false,
+            false,
+            7,
+            "cs",
+            64,
+            {
+              "type": "datetime",
+              "value": "2000-02-11T00:00:00"
+            }
+          ],
+          [
+            100,
+            "a",
+            "ct",
+            "bg",
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-02T00:00:00"
+            },
+            2,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            null,
+            10,
+            false,
+            "e",
+            "bj",
+            4,
+            null,
+            "h",
+            "bl",
+            5,
+            true,
+            "cg",
+            "k",
+            false,
+            6,
+            null,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-01-04T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "cc",
+            false,
+            null,
+            false,
+            "cy",
+            false,
+            false,
+            7,
+            "n",
+            70,
+            null
+          ],
+          [
+            0,
+            null,
+            "b",
+            "c",
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-02-10T00:00:00"
+            },
+            null,
+            3,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            null,
+            0,
+            false,
+            null,
+            "bj",
+            76,
+            "dc",
+            "h",
+            null,
+            5,
+            false,
+            "j",
+            "dd",
+            false,
+            77,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-02-12T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "de",
+            false,
+            null,
+            false,
+            "ch",
+            false,
+            false,
+            7,
+            null,
+            8,
+            {
+              "type": "datetime",
+              "value": "2000-02-13T00:00:00"
+            }
+          ],
+          [
+            10,
+            "cb",
+            "dh",
+            "bg",
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-02T00:00:00"
+            },
+            83,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            "di",
+            0,
+            false,
+            "e",
+            "dj",
+            4,
+            "dk",
+            "h",
+            null,
+            5,
+            true,
+            "j",
+            "dd",
+            false,
+            77,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-01-04T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "de",
+            false,
+            false,
+            false,
+            null,
+            null,
+            false,
+            7,
+            "cs",
+            84,
+            {
+              "type": "datetime",
+              "value": "2000-01-25T00:00:00"
+            }
+          ],
+          [
+            106,
+            null,
+            null,
+            "bg",
+            null,
+            null,
+            107,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-02-24T00:00:00"
+            },
+            "bh",
+            10,
+            false,
+            "bi",
+            "dj",
+            108,
+            null,
+            "h",
+            "ec",
+            45,
+            true,
+            "cg",
+            "ed",
+            false,
+            109,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-02-25T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "de",
+            false,
+            false,
+            false,
+            "ch",
+            false,
+            false,
+            7,
+            null,
+            8,
+            {
+              "type": "datetime",
+              "value": "2000-01-25T00:00:00"
+            }
+          ],
+          [
+            116,
+            "a",
+            "eg",
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-10T00:00:00"
+            },
+            117,
+            118,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            "bh",
+            10,
+            false,
+            null,
+            null,
+            119,
+            null,
+            "eh",
+            null,
+            5,
+            true,
+            null,
+            "dd",
+            false,
+            6,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-02-27T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "de",
+            false,
+            null,
+            null,
+            null,
+            false,
+            false,
+            7,
+            null,
+            70,
+            null
+          ],
+          [
+            145,
+            "a",
+            "fd",
+            "bg",
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-10T00:00:00"
+            },
+            88,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            "bh",
+            10,
+            false,
+            "bi",
+            null,
+            76,
+            "do",
+            null,
+            "cf",
+            148,
+            true,
+            "fe",
+            "k",
+            false,
+            109,
+            false,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-02-03T00:00:00"
+            },
+            false,
+            false,
+            null,
+            "cc",
+            false,
+            false,
+            false,
+            "ch",
+            false,
+            false,
+            47,
+            "n",
+            70,
+            null
+          ],
+          [
+            168,
+            "cb",
+            "b",
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:00"
+            },
+            null,
+            2,
+            3,
+            {
+              "type": "datetime",
+              "value": "2000-03-16T00:00:00"
+            },
+            "bh",
+            10,
+            false,
+            null,
+            "fl",
+            76,
+            null,
+            "eh",
+            "fm",
+            5,
+            true,
+            "fn",
+            "k",
+            false,
+            6,
+            false,
+            false,
+            false,
+            null,
+            null,
+            false,
+            false,
+            "bm",
+            false,
+            false,
+            false,
+            null,
+            null,
+            false,
+            7,
+            "fo",
+            8,
+            {
+              "type": "datetime",
+              "value": "2000-02-13T00:00:00"
+            }
+          ],
+          [
+            189,
+            "fy",
+            "b",
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-03-24T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-10T00:00:00"
+            },
+            null,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-01-03T00:00:00"
+            },
+            "fz",
+            10,
+            false,
+            "ga",
+            "gb",
+            4,
+            "gc",
+            "eh",
+            null,
+            null,
+            true,
+            null,
+            "k",
+            false,
+            6,
+            false,
+            false,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-03-25T00:00:00"
+            },
+            false,
+            false,
+            null,
+            "bm",
+            false,
+            null,
+            false,
+            "gd",
+            false,
+            false,
+            190,
+            "cs",
+            70,
+            {
+              "type": "datetime",
+              "value": "2000-02-13T00:00:00"
+            }
+          ],
+          [
+            2,
+            "cb",
+            "gw",
+            "c",
+            {
+              "type": "datetime",
+              "value": "2000-01-01T00:00:01"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-04-03T00:00:00"
+            },
+            -1,
+            213,
+            {
+              "type": "datetime",
+              "value": "2000-04-04T00:00:00"
+            },
+            "a",
+            20,
+            false,
+            "aa",
+            "gb",
+            212,
+            "gz",
+            "a0",
+            "gx",
+            148,
+            true,
+            "gy",
+            "ha",
+            false,
+            1,
+            true,
+            false,
+            false,
+            {
+              "type": "datetime",
+              "value": "2000-03-25T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "cc",
+            false,
+            null,
+            false,
+            "ab",
+            false,
+            false,
+            47,
+            "a1",
+            64,
+            null
+          ],
+          [
+            355,
+            "a",
+            "ct",
+            "bg",
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-02-10T00:00:00"
+            },
+            88,
+            118,
+            null,
+            "ll",
+            10,
+            false,
+            null,
+            null,
+            212,
+            "g",
+            "h",
+            "lm",
+            5,
+            true,
+            "ln",
+            "k",
+            false,
+            359,
+            false,
+            false,
+            null,
+            {
+              "type": "datetime",
+              "value": "2000-02-03T00:00:00"
+            },
+            false,
+            false,
+            false,
+            "lo",
+            false,
+            false,
+            false,
+            null,
+            false,
+            false,
+            360,
+            "cs",
+            70,
+            null
+          ]
+        ],
+        "users": [
+          [
+            1,
+            "ac",
+            "ad",
+            "ae",
+            {
+              "type": "datetime",
+              "value": "2000-01-12T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-13T00:00:00"
+            },
+            21,
+            {
+              "type": "datetime",
+              "value": "2000-01-14T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-15T00:00:00"
+            },
+            "af",
+            "ag",
+            {
+              "type": "datetime",
+              "value": "2000-01-16T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-17T00:00:00"
+            },
+            "ah",
+            false,
+            22,
+            "ai",
+            "aj",
+            "ak",
+            "al",
+            "am",
+            23,
+            {
+              "type": "datetime",
+              "value": "2000-01-18T00:00:00"
+            },
+            "an",
+            false,
+            false,
+            "ao",
+            24,
+            {
+              "type": "datetime",
+              "value": "2000-01-19T00:00:00"
+            },
+            25,
+            {
+              "type": "datetime",
+              "value": "2000-01-20T00:00:00"
+            },
+            "ap",
+            "aq",
+            {
+              "type": "datetime",
+              "value": "2000-01-21T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-22T00:00:00"
+            },
+            "ar",
+            false,
+            "as",
+            "at",
+            false,
+            false,
+            "au",
+            "av",
+            "aw",
+            "ax",
+            false,
+            "ay",
+            "az",
+            26,
+            27,
+            28,
+            29,
+            false,
+            "ba",
+            {
+              "type": "datetime",
+              "value": "2000-01-23T00:00:00"
+            },
+            false,
+            "bb",
+            "bc",
+            false,
+            30,
+            false,
+            {
+              "type": "date",
+              "value": "2000-01-01"
+            },
+            false,
+            "bd",
+            "be",
+            false,
+            "bf"
+          ]
+        ],
+        "users_star_projects": [
+          [
+            11,
+            1,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-01-05T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-06T00:00:00"
+            }
+          ],
+          [
+            51,
+            49,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-02-04T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            65,
+            -1,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-02-04T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            72,
+            100,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-01-05T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-01-26T00:00:00"
+            }
+          ],
+          [
+            79,
+            0,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-02-14T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-15T00:00:00"
+            }
+          ],
+          [
+            85,
+            10,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-02-20T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            91,
+            -1,
+            2,
+            {
+              "type": "datetime",
+              "value": "2000-02-04T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            110,
+            106,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-01-05T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            120,
+            116,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-02-28T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            149,
+            145,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-03-13T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            169,
+            168,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-01-05T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            191,
+            189,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-01-05T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ],
+          [
+            214,
+            2,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-02-14T00:00:00"
+            },
+            null
+          ],
+          [
+            361,
+            355,
+            1,
+            {
+              "type": "datetime",
+              "value": "2000-03-13T00:00:00"
+            },
+            {
+              "type": "datetime",
+              "value": "2000-02-02T00:00:00"
+            }
+          ]
+        ],
+        "project_authorizations": [
+          [
+            1,
+            1,
+            12
+          ],
+          [
+            1,
+            1,
+            null
+          ],
+          [
+            1,
+            null,
+            null
+          ],
+          [
+            1,
+            49,
+            null
+          ],
+          [
+            null,
+            49,
+            null
+          ],
+          [
+            1,
+            -1,
+            null
+          ],
+          [
+            1,
+            100,
+            null
+          ],
+          [
+            1,
+            0,
+            null
+          ],
+          [
+            1,
+            10,
+            null
+          ],
+          [
+            1,
+            -1,
+            null
+          ],
+          [
+            1,
+            106,
+            111
+          ],
+          [
+            1,
+            116,
+            null
+          ],
+          [
+            1,
+            145,
+            150
+          ],
+          [
+            1,
+            168,
+            170
+          ],
+          [
+            1,
+            189,
+            null
+          ],
+          [
+            1,
+            2,
+            111
+          ],
+          [
+            1,
+            355,
+            150
+          ]
+        ]
+      },
+      "independent_fullC": {
+        "pass": true,
+        "failures": [],
+        "text_equality_scope": "New PostgreSQL deterministic C collation; not historical unknown collation"
+      },
+      "observed": {
+        "before": {
+          "columns": [
+            "id",
+            "name",
+            "path",
+            "description",
+            "created_at",
+            "updated_at",
+            "creator_id",
+            "namespace_id",
+            "last_activity_at",
+            "import_url",
+            "visibility_level",
+            "archived",
+            "avatar",
+            "import_status",
+            "star_count",
+            "import_type",
+            "import_source",
+            "import_error",
+            "ci_id",
+            "shared_runners_enabled",
+            "runners_token",
+            "build_coverage_regex",
+            "build_allow_git_fetch",
+            "build_timeout",
+            "pending_delete",
+            "public_builds",
+            "last_repository_check_failed",
+            "last_repository_check_at",
+            "container_registry_enabled",
+            "only_allow_merge_if_pipeline_succeeds",
+            "has_external_issue_tracker",
+            "repository_storage",
+            "request_access_enabled",
+            "has_external_wiki",
+            "lfs_enabled",
+            "description_html",
+            "only_allow_merge_if_all_discussions_are_resolved",
+            "printing_merge_request_link_enabled",
+            "auto_cancel_pending_pipelines",
+            "import_jid",
+            "cached_markdown_version",
+            "last_repository_updated_at"
+          ],
+          "type_oids": [
+            23,
+            1043,
+            1043,
+            25,
+            1114,
+            1114,
+            23,
+            23,
+            1114,
+            1043,
+            23,
+            16,
+            1043,
+            1043,
+            23,
+            1043,
+            1043,
+            25,
+            23,
+            16,
+            1043,
+            1043,
+            16,
+            23,
+            16,
+            16,
+            16,
+            1114,
+            16,
+            16,
+            16,
+            1043,
+            16,
+            16,
+            16,
+            25,
+            16,
+            16,
+            23,
+            1043,
+            23,
+            1114
+          ],
+          "rows": [
+            [
+              355,
+              "a",
+              "ct",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              118,
+              null,
+              "ll",
+              10,
+              false,
+              null,
+              null,
+              212,
+              "g",
+              "h",
+              "lm",
+              5,
+              true,
+              "ln",
+              "k",
+              false,
+              359,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "lo",
+              false,
+              false,
+              false,
+              null,
+              false,
+              false,
+              360,
+              "cs",
+              70,
+              null
+            ],
+            [
+              189,
+              "fy",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-24T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "fz",
+              10,
+              false,
+              "ga",
+              "gb",
+              4,
+              "gc",
+              "eh",
+              null,
+              null,
+              true,
+              null,
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-25T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "bm",
+              false,
+              null,
+              false,
+              "gd",
+              false,
+              false,
+              190,
+              "cs",
+              70,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              168,
+              "cb",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              null,
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-03-16T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              "fl",
+              76,
+              null,
+              "eh",
+              "fm",
+              5,
+              true,
+              "fn",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "fo",
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              145,
+              "a",
+              "fd",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              null,
+              76,
+              "do",
+              null,
+              "cf",
+              148,
+              true,
+              "fe",
+              "k",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "cc",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              47,
+              "n",
+              70,
+              null
+            ],
+            [
+              116,
+              "a",
+              "eg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              117,
+              118,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              null,
+              119,
+              null,
+              "eh",
+              null,
+              5,
+              true,
+              null,
+              "dd",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-27T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              null,
+              null,
+              false,
+              false,
+              7,
+              null,
+              70,
+              null
+            ],
+            [
+              106,
+              null,
+              null,
+              "bg",
+              null,
+              null,
+              107,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-24T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              "dj",
+              108,
+              null,
+              "h",
+              "ec",
+              45,
+              true,
+              "cg",
+              "ed",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-25T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              49,
+              "cd",
+              "ce",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-24T00:00:00"
+              },
+              50,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              20,
+              false,
+              "bi",
+              "f",
+              4,
+              "bk",
+              "h",
+              "cf",
+              5,
+              true,
+              "cg",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              null,
+              null
+            ],
+            [
+              10,
+              "cb",
+              "dh",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              83,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "di",
+              0,
+              false,
+              "e",
+              "dj",
+              4,
+              "dk",
+              "h",
+              null,
+              5,
+              true,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "cs",
+              84,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              1,
+              "a",
+              "b",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "d",
+              10,
+              false,
+              "e",
+              "f",
+              4,
+              "g",
+              "h",
+              "i",
+              5,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              false,
+              false,
+              "m",
+              false,
+              false,
+              7,
+              "n",
+              8,
+              null
+            ],
+            [
+              0,
+              null,
+              "b",
+              "c",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              0,
+              false,
+              null,
+              "bj",
+              76,
+              "dc",
+              "h",
+              null,
+              5,
+              false,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-12T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              -1,
+              "a",
+              "ct",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              63,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              20,
+              false,
+              null,
+              "bj",
+              4,
+              "g",
+              "h",
+              null,
+              45,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              null,
+              false,
+              null,
+              false,
+              false,
+              7,
+              "cs",
+              64,
+              {
+                "type": "datetime",
+                "value": "2000-02-11T00:00:00"
+              }
+            ]
+          ]
+        },
+        "after": {
+          "columns": [
+            "id",
+            "name",
+            "path",
+            "description",
+            "created_at",
+            "updated_at",
+            "creator_id",
+            "namespace_id",
+            "last_activity_at",
+            "import_url",
+            "visibility_level",
+            "archived",
+            "avatar",
+            "import_status",
+            "star_count",
+            "import_type",
+            "import_source",
+            "import_error",
+            "ci_id",
+            "shared_runners_enabled",
+            "runners_token",
+            "build_coverage_regex",
+            "build_allow_git_fetch",
+            "build_timeout",
+            "pending_delete",
+            "public_builds",
+            "last_repository_check_failed",
+            "last_repository_check_at",
+            "container_registry_enabled",
+            "only_allow_merge_if_pipeline_succeeds",
+            "has_external_issue_tracker",
+            "repository_storage",
+            "request_access_enabled",
+            "has_external_wiki",
+            "lfs_enabled",
+            "description_html",
+            "only_allow_merge_if_all_discussions_are_resolved",
+            "printing_merge_request_link_enabled",
+            "auto_cancel_pending_pipelines",
+            "import_jid",
+            "cached_markdown_version",
+            "last_repository_updated_at"
+          ],
+          "type_oids": [
+            23,
+            1043,
+            1043,
+            25,
+            1114,
+            1114,
+            23,
+            23,
+            1114,
+            1043,
+            23,
+            16,
+            1043,
+            1043,
+            23,
+            1043,
+            1043,
+            25,
+            23,
+            16,
+            1043,
+            1043,
+            16,
+            23,
+            16,
+            16,
+            16,
+            1114,
+            16,
+            16,
+            16,
+            1043,
+            16,
+            16,
+            16,
+            25,
+            16,
+            16,
+            23,
+            1043,
+            23,
+            1114
+          ],
+          "rows": [
+            [
+              355,
+              "a",
+              "ct",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              118,
+              null,
+              "ll",
+              10,
+              false,
+              null,
+              null,
+              212,
+              "g",
+              "h",
+              "lm",
+              5,
+              true,
+              "ln",
+              "k",
+              false,
+              359,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "lo",
+              false,
+              false,
+              false,
+              null,
+              false,
+              false,
+              360,
+              "cs",
+              70,
+              null
+            ],
+            [
+              189,
+              "fy",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-24T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "fz",
+              10,
+              false,
+              "ga",
+              "gb",
+              4,
+              "gc",
+              "eh",
+              null,
+              null,
+              true,
+              null,
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-25T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "bm",
+              false,
+              null,
+              false,
+              "gd",
+              false,
+              false,
+              190,
+              "cs",
+              70,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              168,
+              "cb",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              null,
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-03-16T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              "fl",
+              76,
+              null,
+              "eh",
+              "fm",
+              5,
+              true,
+              "fn",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "fo",
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              145,
+              "a",
+              "fd",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              null,
+              76,
+              "do",
+              null,
+              "cf",
+              148,
+              true,
+              "fe",
+              "k",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "cc",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              47,
+              "n",
+              70,
+              null
+            ],
+            [
+              116,
+              "a",
+              "eg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              117,
+              118,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              null,
+              119,
+              null,
+              "eh",
+              null,
+              5,
+              true,
+              null,
+              "dd",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-27T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              null,
+              null,
+              false,
+              false,
+              7,
+              null,
+              70,
+              null
+            ],
+            [
+              106,
+              null,
+              null,
+              "bg",
+              null,
+              null,
+              107,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-24T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              "dj",
+              108,
+              null,
+              "h",
+              "ec",
+              45,
+              true,
+              "cg",
+              "ed",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-25T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              49,
+              "cd",
+              "ce",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-24T00:00:00"
+              },
+              50,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              20,
+              false,
+              "bi",
+              "f",
+              4,
+              "bk",
+              "h",
+              "cf",
+              5,
+              true,
+              "cg",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              null,
+              null
+            ],
+            [
+              10,
+              "cb",
+              "dh",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              83,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "di",
+              0,
+              false,
+              "e",
+              "dj",
+              4,
+              "dk",
+              "h",
+              null,
+              5,
+              true,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "cs",
+              84,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              1,
+              "a",
+              "b",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "d",
+              10,
+              false,
+              "e",
+              "f",
+              4,
+              "g",
+              "h",
+              "i",
+              5,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              false,
+              false,
+              "m",
+              false,
+              false,
+              7,
+              "n",
+              8,
+              null
+            ],
+            [
+              0,
+              null,
+              "b",
+              "c",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              0,
+              false,
+              null,
+              "bj",
+              76,
+              "dc",
+              "h",
+              null,
+              5,
+              false,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-12T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              -1,
+              "a",
+              "ct",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              63,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              20,
+              false,
+              null,
+              "bj",
+              4,
+              "g",
+              "h",
+              null,
+              45,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              null,
+              false,
+              null,
+              false,
+              false,
+              7,
+              "cs",
+              64,
+              {
+                "type": "datetime",
+                "value": "2000-02-11T00:00:00"
+              }
+            ]
+          ]
+        }
+      },
+      "original_fullC_backend_accepted": true,
+      "nonempty_after": true,
+      "difference": false,
+      "status": "VALID_NONEMPTY",
+      "confirmation": {
+        "before": {
+          "columns": [
+            "id",
+            "name",
+            "path",
+            "description",
+            "created_at",
+            "updated_at",
+            "creator_id",
+            "namespace_id",
+            "last_activity_at",
+            "import_url",
+            "visibility_level",
+            "archived",
+            "avatar",
+            "import_status",
+            "star_count",
+            "import_type",
+            "import_source",
+            "import_error",
+            "ci_id",
+            "shared_runners_enabled",
+            "runners_token",
+            "build_coverage_regex",
+            "build_allow_git_fetch",
+            "build_timeout",
+            "pending_delete",
+            "public_builds",
+            "last_repository_check_failed",
+            "last_repository_check_at",
+            "container_registry_enabled",
+            "only_allow_merge_if_pipeline_succeeds",
+            "has_external_issue_tracker",
+            "repository_storage",
+            "request_access_enabled",
+            "has_external_wiki",
+            "lfs_enabled",
+            "description_html",
+            "only_allow_merge_if_all_discussions_are_resolved",
+            "printing_merge_request_link_enabled",
+            "auto_cancel_pending_pipelines",
+            "import_jid",
+            "cached_markdown_version",
+            "last_repository_updated_at"
+          ],
+          "type_oids": [
+            23,
+            1043,
+            1043,
+            25,
+            1114,
+            1114,
+            23,
+            23,
+            1114,
+            1043,
+            23,
+            16,
+            1043,
+            1043,
+            23,
+            1043,
+            1043,
+            25,
+            23,
+            16,
+            1043,
+            1043,
+            16,
+            23,
+            16,
+            16,
+            16,
+            1114,
+            16,
+            16,
+            16,
+            1043,
+            16,
+            16,
+            16,
+            25,
+            16,
+            16,
+            23,
+            1043,
+            23,
+            1114
+          ],
+          "rows": [
+            [
+              355,
+              "a",
+              "ct",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              118,
+              null,
+              "ll",
+              10,
+              false,
+              null,
+              null,
+              212,
+              "g",
+              "h",
+              "lm",
+              5,
+              true,
+              "ln",
+              "k",
+              false,
+              359,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "lo",
+              false,
+              false,
+              false,
+              null,
+              false,
+              false,
+              360,
+              "cs",
+              70,
+              null
+            ],
+            [
+              189,
+              "fy",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-24T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "fz",
+              10,
+              false,
+              "ga",
+              "gb",
+              4,
+              "gc",
+              "eh",
+              null,
+              null,
+              true,
+              null,
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-25T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "bm",
+              false,
+              null,
+              false,
+              "gd",
+              false,
+              false,
+              190,
+              "cs",
+              70,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              168,
+              "cb",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              null,
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-03-16T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              "fl",
+              76,
+              null,
+              "eh",
+              "fm",
+              5,
+              true,
+              "fn",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "fo",
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              145,
+              "a",
+              "fd",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              null,
+              76,
+              "do",
+              null,
+              "cf",
+              148,
+              true,
+              "fe",
+              "k",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "cc",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              47,
+              "n",
+              70,
+              null
+            ],
+            [
+              116,
+              "a",
+              "eg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              117,
+              118,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              null,
+              119,
+              null,
+              "eh",
+              null,
+              5,
+              true,
+              null,
+              "dd",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-27T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              null,
+              null,
+              false,
+              false,
+              7,
+              null,
+              70,
+              null
+            ],
+            [
+              106,
+              null,
+              null,
+              "bg",
+              null,
+              null,
+              107,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-24T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              "dj",
+              108,
+              null,
+              "h",
+              "ec",
+              45,
+              true,
+              "cg",
+              "ed",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-25T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              49,
+              "cd",
+              "ce",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-24T00:00:00"
+              },
+              50,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              20,
+              false,
+              "bi",
+              "f",
+              4,
+              "bk",
+              "h",
+              "cf",
+              5,
+              true,
+              "cg",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              null,
+              null
+            ],
+            [
+              10,
+              "cb",
+              "dh",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              83,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "di",
+              0,
+              false,
+              "e",
+              "dj",
+              4,
+              "dk",
+              "h",
+              null,
+              5,
+              true,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "cs",
+              84,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              1,
+              "a",
+              "b",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "d",
+              10,
+              false,
+              "e",
+              "f",
+              4,
+              "g",
+              "h",
+              "i",
+              5,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              false,
+              false,
+              "m",
+              false,
+              false,
+              7,
+              "n",
+              8,
+              null
+            ],
+            [
+              0,
+              null,
+              "b",
+              "c",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              0,
+              false,
+              null,
+              "bj",
+              76,
+              "dc",
+              "h",
+              null,
+              5,
+              false,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-12T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              -1,
+              "a",
+              "ct",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              63,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              20,
+              false,
+              null,
+              "bj",
+              4,
+              "g",
+              "h",
+              null,
+              45,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              null,
+              false,
+              null,
+              false,
+              false,
+              7,
+              "cs",
+              64,
+              {
+                "type": "datetime",
+                "value": "2000-02-11T00:00:00"
+              }
+            ]
+          ]
+        },
+        "after": {
+          "columns": [
+            "id",
+            "name",
+            "path",
+            "description",
+            "created_at",
+            "updated_at",
+            "creator_id",
+            "namespace_id",
+            "last_activity_at",
+            "import_url",
+            "visibility_level",
+            "archived",
+            "avatar",
+            "import_status",
+            "star_count",
+            "import_type",
+            "import_source",
+            "import_error",
+            "ci_id",
+            "shared_runners_enabled",
+            "runners_token",
+            "build_coverage_regex",
+            "build_allow_git_fetch",
+            "build_timeout",
+            "pending_delete",
+            "public_builds",
+            "last_repository_check_failed",
+            "last_repository_check_at",
+            "container_registry_enabled",
+            "only_allow_merge_if_pipeline_succeeds",
+            "has_external_issue_tracker",
+            "repository_storage",
+            "request_access_enabled",
+            "has_external_wiki",
+            "lfs_enabled",
+            "description_html",
+            "only_allow_merge_if_all_discussions_are_resolved",
+            "printing_merge_request_link_enabled",
+            "auto_cancel_pending_pipelines",
+            "import_jid",
+            "cached_markdown_version",
+            "last_repository_updated_at"
+          ],
+          "type_oids": [
+            23,
+            1043,
+            1043,
+            25,
+            1114,
+            1114,
+            23,
+            23,
+            1114,
+            1043,
+            23,
+            16,
+            1043,
+            1043,
+            23,
+            1043,
+            1043,
+            25,
+            23,
+            16,
+            1043,
+            1043,
+            16,
+            23,
+            16,
+            16,
+            16,
+            1114,
+            16,
+            16,
+            16,
+            1043,
+            16,
+            16,
+            16,
+            25,
+            16,
+            16,
+            23,
+            1043,
+            23,
+            1114
+          ],
+          "rows": [
+            [
+              355,
+              "a",
+              "ct",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              118,
+              null,
+              "ll",
+              10,
+              false,
+              null,
+              null,
+              212,
+              "g",
+              "h",
+              "lm",
+              5,
+              true,
+              "ln",
+              "k",
+              false,
+              359,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "lo",
+              false,
+              false,
+              false,
+              null,
+              false,
+              false,
+              360,
+              "cs",
+              70,
+              null
+            ],
+            [
+              189,
+              "fy",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-24T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "fz",
+              10,
+              false,
+              "ga",
+              "gb",
+              4,
+              "gc",
+              "eh",
+              null,
+              null,
+              true,
+              null,
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-03-25T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "bm",
+              false,
+              null,
+              false,
+              "gd",
+              false,
+              false,
+              190,
+              "cs",
+              70,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              168,
+              "cb",
+              "b",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              null,
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-03-16T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              "fl",
+              76,
+              null,
+              "eh",
+              "fm",
+              5,
+              true,
+              "fn",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "fo",
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              145,
+              "a",
+              "fd",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              88,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              null,
+              76,
+              "do",
+              null,
+              "cf",
+              148,
+              true,
+              "fe",
+              "k",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              null,
+              "cc",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              47,
+              "n",
+              70,
+              null
+            ],
+            [
+              116,
+              "a",
+              "eg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              117,
+              118,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              null,
+              null,
+              119,
+              null,
+              "eh",
+              null,
+              5,
+              true,
+              null,
+              "dd",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-27T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              null,
+              null,
+              false,
+              false,
+              7,
+              null,
+              70,
+              null
+            ],
+            [
+              106,
+              null,
+              null,
+              "bg",
+              null,
+              null,
+              107,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-24T00:00:00"
+              },
+              "bh",
+              10,
+              false,
+              "bi",
+              "dj",
+              108,
+              null,
+              "h",
+              "ec",
+              45,
+              true,
+              "cg",
+              "ed",
+              false,
+              109,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-25T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              49,
+              "cd",
+              "ce",
+              "bg",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-24T00:00:00"
+              },
+              50,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "bh",
+              20,
+              false,
+              "bi",
+              "f",
+              4,
+              "bk",
+              "h",
+              "cf",
+              5,
+              true,
+              "cg",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "bm",
+              false,
+              false,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              null,
+              null
+            ],
+            [
+              10,
+              "cb",
+              "dh",
+              "bg",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              83,
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "di",
+              0,
+              false,
+              "e",
+              "dj",
+              4,
+              "dk",
+              "h",
+              null,
+              5,
+              true,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              false,
+              false,
+              null,
+              null,
+              false,
+              7,
+              "cs",
+              84,
+              {
+                "type": "datetime",
+                "value": "2000-01-25T00:00:00"
+              }
+            ],
+            [
+              1,
+              "a",
+              "b",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-01-02T00:00:00"
+              },
+              2,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              "d",
+              10,
+              false,
+              "e",
+              "f",
+              4,
+              "g",
+              "h",
+              "i",
+              5,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-01-04T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              false,
+              false,
+              "m",
+              false,
+              false,
+              7,
+              "n",
+              8,
+              null
+            ],
+            [
+              0,
+              null,
+              "b",
+              "c",
+              null,
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              null,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              0,
+              false,
+              null,
+              "bj",
+              76,
+              "dc",
+              "h",
+              null,
+              5,
+              false,
+              "j",
+              "dd",
+              false,
+              77,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-12T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "de",
+              false,
+              null,
+              false,
+              "ch",
+              false,
+              false,
+              7,
+              null,
+              8,
+              {
+                "type": "datetime",
+                "value": "2000-02-13T00:00:00"
+              }
+            ],
+            [
+              -1,
+              "a",
+              "ct",
+              "c",
+              {
+                "type": "datetime",
+                "value": "2000-01-01T00:00:00"
+              },
+              {
+                "type": "datetime",
+                "value": "2000-02-10T00:00:00"
+              },
+              63,
+              3,
+              {
+                "type": "datetime",
+                "value": "2000-01-03T00:00:00"
+              },
+              null,
+              20,
+              false,
+              null,
+              "bj",
+              4,
+              "g",
+              "h",
+              null,
+              45,
+              true,
+              "j",
+              "k",
+              false,
+              6,
+              false,
+              false,
+              false,
+              {
+                "type": "datetime",
+                "value": "2000-02-03T00:00:00"
+              },
+              false,
+              false,
+              false,
+              "l",
+              false,
+              null,
+              false,
+              null,
+              false,
+              false,
+              7,
+              "cs",
+              64,
+              {
+                "type": "datetime",
+                "value": "2000-02-11T00:00:00"
+              }
+            ]
+          ]
+        }
+      },
+      "confirmed": true
+    }
+  ],
+  "attempts": [],
+  "new_test": false,
+  "elapsed_wall_s": 5.082021334208548,
+  "cpu_s": 4.892869999999999,
+  "worker_peak_rss_bytes": 85671936,
+  "resource_limits": {
+    "RLIMIT_CPU": [
+      20,
+      21
+    ],
+    "RLIMIT_FSIZE": [
+      8388608,
+      8388608
+    ]
+  },
+  "rss_guard": {
+    "threshold_MiB": 512,
+    "sample_interval_s": 0.05,
+    "scope": "Own worker peak RSS only; sampled guard may overshoot, not an OS hard RSS limit"
+  },
+  "versions": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "sqlglot": "23.12.1",
+    "z3": "4.16.0",
+    "psycopg2": "2.9.13 (dt dec pq3 ext lo64)"
+  },
+  "derived_ddl_sha256": "c5d4304aa8b0719e998c0f424bec0c91344b933dcb1ac47b827bd3005dcd0dac",
+  "query_hashes": {
+    "before": "36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7",
+    "after": "1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2"
+  },
+  "catalog_audit": {
+    "status": "FULL_DECLARED_C_ACTIVE",
+    "columns": 117,
+    "constraints": {
+      "NotNullDecl": 32,
+      "PrimaryKeyDecl": 3,
+      "UniqueDecl": 6,
+      "ForeignKeyDecl": 2
+    },
+    "proof_active_count": 43,
+    "inactive_count": 0,
+    "historical_engine_replay": false,
+    "source_collation": "UNSPECIFIED_UNKNOWN"
+  },
+  "adapter": "postgres_boolean_tf_literal_aliases_v1",
+  "backend": {
+    "columns": [
+      "version",
+      "current_setting",
+      "datlocprovider",
+      "datcollate",
+      "datctype",
+      "pg_encoding_to_char",
+      "current_setting"
+    ],
+    "type_oids": [
+      25,
+      25,
+      18,
+      25,
+      25,
+      19,
+      25
+    ],
+    "rows": [
+      [
+        "PostgreSQL 16.14 (Homebrew) on aarch64-apple-darwin24.6.0, compiled by Apple clang version 17.0.0 (clang-1700.6.4.2), 64-bit",
+        "160014",
+        "c",
+        "C",
+        "C",
+        "UTF8",
+        "UTC"
+      ]
+    ]
+  },
+  "postgres_columns": {
+    "columns": [
+      "table_name",
+      "column_name",
+      "data_type",
+      "is_nullable",
+      "character_maximum_length"
+    ],
+    "type_oids": [
+      19,
+      19,
+      1043,
+      1043,
+      23
+    ],
+    "rows": [
+      [
+        "project_authorizations",
+        "user_id",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "project_authorizations",
+        "project_id",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "project_authorizations",
+        "access_level",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "id",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "name",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "path",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "description",
+        "text",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "created_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "updated_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "creator_id",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "namespace_id",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "last_activity_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "import_url",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "visibility_level",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "archived",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "avatar",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "import_status",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "star_count",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "import_type",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "import_source",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "import_error",
+        "text",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "ci_id",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "shared_runners_enabled",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "runners_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "build_coverage_regex",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "build_allow_git_fetch",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "build_timeout",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "pending_delete",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "public_builds",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "last_repository_check_failed",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "last_repository_check_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "container_registry_enabled",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "only_allow_merge_if_pipeline_succeeds",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "has_external_issue_tracker",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "repository_storage",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "request_access_enabled",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "has_external_wiki",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "lfs_enabled",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "description_html",
+        "text",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "only_allow_merge_if_all_discussions_are_resolved",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "printing_merge_request_link_enabled",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "auto_cancel_pending_pipelines",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "projects",
+        "import_jid",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "cached_markdown_version",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "projects",
+        "last_repository_updated_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "id",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "email",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "encrypted_password",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "reset_password_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "reset_password_sent_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "remember_created_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "sign_in_count",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "current_sign_in_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "last_sign_in_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "current_sign_in_ip",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "last_sign_in_ip",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "created_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "updated_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "name",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "admin",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "projects_limit",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "skype",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "linkedin",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "twitter",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "authentication_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "bio",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "failed_attempts",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "locked_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "username",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "can_create_group",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "can_create_team",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "state",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "color_scheme_id",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "password_expires_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "created_by_id",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "last_credential_check_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "avatar",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "confirmation_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "confirmed_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "confirmation_sent_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "unconfirmed_email",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "hide_no_ssh_key",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "website_url",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "notification_email",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "hide_no_password",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "password_automatically_set",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "location",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "encrypted_otp_secret",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "encrypted_otp_secret_iv",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "encrypted_otp_secret_salt",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "otp_required_for_login",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "otp_backup_codes",
+        "text",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "public_email",
+        "character varying",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "dashboard",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "project_view",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "consumed_timestep",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "layout",
+        "integer",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "hide_project_limit",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "unlock_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "otp_grace_period_started_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "external",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "incoming_email_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "organization",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "require_two_factor_authentication_from_group",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "two_factor_grace_period",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "ghost",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "last_activity_on",
+        "date",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "notified_of_own_activity",
+        "boolean",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "preferred_language",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "rss_token",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users",
+        "external_email",
+        "boolean",
+        "NO",
+        null
+      ],
+      [
+        "users",
+        "email_provider",
+        "character varying",
+        "YES",
+        null
+      ],
+      [
+        "users_star_projects",
+        "id",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "users_star_projects",
+        "project_id",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "users_star_projects",
+        "user_id",
+        "integer",
+        "NO",
+        null
+      ],
+      [
+        "users_star_projects",
+        "created_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ],
+      [
+        "users_star_projects",
+        "updated_at",
+        "timestamp without time zone",
+        "YES",
+        null
+      ]
+    ]
+  },
+  "postgres_defaults": [
+    {
+      "table": "projects",
+      "column": "id",
+      "kind": "SERIAL",
+      "sequence": "public.projects_id_seq",
+      "default": "nextval('projects_id_seq'::regclass)"
+    },
+    {
+      "table": "projects",
+      "column": "visibility_level",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "projects",
+      "column": "archived",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "projects",
+      "column": "star_count",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "projects",
+      "column": "shared_runners_enabled",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": true,
+      "expression": "true"
+    },
+    {
+      "table": "projects",
+      "column": "build_allow_git_fetch",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": true,
+      "expression": "true"
+    },
+    {
+      "table": "projects",
+      "column": "build_timeout",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 3600,
+      "expression": "3600"
+    },
+    {
+      "table": "projects",
+      "column": "pending_delete",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "projects",
+      "column": "public_builds",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": true,
+      "expression": "true"
+    },
+    {
+      "table": "projects",
+      "column": "only_allow_merge_if_pipeline_succeeds",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "projects",
+      "column": "repository_storage",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "default",
+      "expression": "'default'::character varying"
+    },
+    {
+      "table": "projects",
+      "column": "request_access_enabled",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "projects",
+      "column": "printing_merge_request_link_enabled",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": true,
+      "expression": "true"
+    },
+    {
+      "table": "projects",
+      "column": "auto_cancel_pending_pipelines",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 1,
+      "expression": "1"
+    },
+    {
+      "table": "users",
+      "column": "id",
+      "kind": "SERIAL",
+      "sequence": "public.users_id_seq",
+      "default": "nextval('users_id_seq'::regclass)"
+    },
+    {
+      "table": "users",
+      "column": "email",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "encrypted_password",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "sign_in_count",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "users",
+      "column": "admin",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "projects_limit",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 10,
+      "expression": "10"
+    },
+    {
+      "table": "users",
+      "column": "skype",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "linkedin",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "twitter",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "failed_attempts",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "users",
+      "column": "can_create_group",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": true,
+      "expression": "true"
+    },
+    {
+      "table": "users",
+      "column": "can_create_team",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": true,
+      "expression": "true"
+    },
+    {
+      "table": "users",
+      "column": "color_scheme_id",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 1,
+      "expression": "1"
+    },
+    {
+      "table": "users",
+      "column": "hide_no_ssh_key",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "website_url",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "hide_no_password",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "password_automatically_set",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "otp_required_for_login",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "public_email",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": "",
+      "expression": "''::character varying"
+    },
+    {
+      "table": "users",
+      "column": "dashboard",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "users",
+      "column": "project_view",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "users",
+      "column": "layout",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 0,
+      "expression": "0"
+    },
+    {
+      "table": "users",
+      "column": "hide_project_limit",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "external",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "require_two_factor_authentication_from_group",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users",
+      "column": "two_factor_grace_period",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": 48,
+      "expression": "48"
+    },
+    {
+      "table": "users",
+      "column": "external_email",
+      "kind": "EXPLICIT_DEFAULT",
+      "value": false,
+      "expression": "false"
+    },
+    {
+      "table": "users_star_projects",
+      "column": "id",
+      "kind": "SERIAL",
+      "sequence": "public.users_star_projects_id_seq",
+      "default": "nextval('users_star_projects_id_seq'::regclass)"
+    }
+  ],
+  "postgres_key_policy": {
+    "columns": [
+      "relname",
+      "contype",
+      "conkey",
+      "indnullsnotdistinct",
+      "indisunique",
+      "indisvalid",
+      "indimmediate"
+    ],
+    "type_oids": [
+      19,
+      18,
+      1005,
+      16,
+      16,
+      16,
+      16
+    ],
+    "rows": [
+      [
+        "project_authorizations",
+        "u",
+        [
+          1,
+          2,
+          3
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "projects",
+        "p",
+        [
+          1
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users",
+        "p",
+        [
+          1
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users",
+        "u",
+        [
+          2
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users",
+        "u",
+        [
+          4
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users",
+        "u",
+        [
+          20
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users",
+        "u",
+        [
+          33
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users_star_projects",
+        "p",
+        [
+          1
+        ],
+        false,
+        true,
+        true,
+        true
+      ],
+      [
+        "users_star_projects",
+        "u",
+        [
+          3,
+          2
+        ],
+        false,
+        true,
+        true,
+        true
+      ]
+    ]
+  },
+  "postgres_constraints": {
+    "verified_signature": [
+      [
+        "project_authorizations",
+        "f",
+        [
+          "user_id"
+        ],
+        "users",
+        [
+          "id"
+        ],
+        "c",
+        "s"
+      ],
+      [
+        "project_authorizations",
+        "f",
+        [
+          "project_id"
+        ],
+        "projects",
+        [
+          "id"
+        ],
+        "c",
+        "s"
+      ],
+      [
+        "project_authorizations",
+        "u",
+        [
+          "user_id",
+          "project_id",
+          "access_level"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "projects",
+        "p",
+        [
+          "id"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users",
+        "p",
+        [
+          "id"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users",
+        "u",
+        [
+          "email"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users",
+        "u",
+        [
+          "reset_password_token"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users",
+        "u",
+        [
+          "authentication_token"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users",
+        "u",
+        [
+          "confirmation_token"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users_star_projects",
+        "p",
+        [
+          "id"
+        ],
+        null,
+        [],
+        null,
+        null
+      ],
+      [
+        "users_star_projects",
+        "u",
+        [
+          "user_id",
+          "project_id"
+        ],
+        null,
+        [],
+        null,
+        null
+      ]
+    ],
+    "counts": {
+      "f": 2,
+      "u": 6,
+      "p": 3
+    }
+  },
+  "postgres_original_literal_equivalence": {
+    "complete_nullable_boolean_domain": true,
+    "observed": {
+      "columns": [
+        "b",
+        "?column?",
+        "?column?",
+        "?column?",
+        "?column?"
+      ],
+      "type_oids": [
+        16,
+        16,
+        16,
+        16,
+        16
+      ],
+      "rows": [
+        [
+          false,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          false,
+          false,
+          true,
+          true
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    "query_bytes_unchanged": true
+  },
+  "generator_result": {
+    "nonempty": true,
+    "reached": [],
+    "covered": [],
+    "failed": {},
+    "unsupported": null,
+    "timed_out": false
+  }
+}

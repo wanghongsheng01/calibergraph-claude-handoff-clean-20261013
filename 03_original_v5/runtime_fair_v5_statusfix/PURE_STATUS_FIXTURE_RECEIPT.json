@@ -1,0 +1,186 @@
+{
+  "status": "PASS_PURE_STDLIB_LOGGING_FIXTURES_ONLY",
+  "fixture_count": 25,
+  "fixtures": [
+    {
+      "fixture": "solver_unsat",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "sat_with_finished_oracle",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "canonical_without_pair_solver",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "differential_not_pair_unsat",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "unknown_not_decided",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "unsupported",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "UNKNOWN_ORACLE_DOMAIN",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "COUNTEREXAMPLE_REPLAY_MISMATCH",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "INELIGIBLE",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "early_contract_stop",
+      "event": "CONTRACT_STOP",
+      "expected_execution_state": "NOT_RUN_CONTRACT_STOP",
+      "observed_execution_state": "NOT_RUN_CONTRACT_STOP",
+      "status": "PASS"
+    },
+    {
+      "fixture": "late_contract_stop",
+      "event": "CONTRACT_STOP",
+      "expected_execution_state": "RETURNED_WITH_CONTRACT_STOP",
+      "observed_execution_state": "RETURNED_WITH_CONTRACT_STOP",
+      "status": "PASS"
+    },
+    {
+      "fixture": "frontend_before_pair",
+      "event": "FRONTEND_STOP",
+      "expected_execution_state": "NOT_RUN_FRONTEND_STOP",
+      "observed_execution_state": "NOT_RUN_FRONTEND_STOP",
+      "status": "PASS"
+    },
+    {
+      "fixture": "error_before_pair",
+      "event": "ERROR",
+      "expected_execution_state": "NOT_RUN_ERROR",
+      "observed_execution_state": "NOT_RUN_ERROR",
+      "status": "PASS"
+    },
+    {
+      "fixture": "error_after_pair_started",
+      "event": "ERROR",
+      "expected_execution_state": "RETURNED_WITH_ERROR",
+      "observed_execution_state": "RETURNED_WITH_ERROR",
+      "status": "PASS"
+    },
+    {
+      "fixture": "dispatch_before_cleanup_error",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "cleanup_error_preserves_prior_receipt",
+      "event": "ERROR",
+      "expected_execution_state": "RETURNED_WITH_ERROR",
+      "observed_execution_state": "RETURNED_WITH_ERROR",
+      "status": "PASS"
+    },
+    {
+      "fixture": "dispatch_without_final_label",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "observed_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "fixture": "sat_with_oracle_unfinished",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "observed_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "fixture": "attempt_unfinished",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "observed_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "fixture": "fallback_unfinished",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "observed_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "fixture": "differential_oracle_unfinished",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "observed_execution_state": "RETURNED_INCOMPLETE_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "fixture": "unrecognized_event",
+      "event": "UNRECOGNIZED",
+      "expected_execution_state": "ATTEMPTED_EFFECT_UNKNOWN",
+      "observed_execution_state": "ATTEMPTED_EFFECT_UNKNOWN",
+      "status": "PASS"
+    },
+    {
+      "fixture": "return_without_start",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "INCONSISTENT_RETURN_RECEIPT",
+      "observed_execution_state": "INCONSISTENT_RETURN_RECEIPT",
+      "status": "PASS"
+    },
+    {
+      "fixture": "resource_stop_not_promoted",
+      "event": "DISPATCH_RETURNED",
+      "expected_execution_state": "RETURNED",
+      "observed_execution_state": "RETURNED",
+      "status": "PASS"
+    },
+    {
+      "fixture": "interrupted_no_callback",
+      "status": "PASS"
+    }
+  ],
+  "worker_control_flow_ast_equal_after_removing_logging_only_additions": true,
+  "target_native_solver_SQL_import_or_execution": "NONE",
+  "module_import_policy": "zero-import pair_status.py only; worker inspected as AST, never executed",
+  "programs": {
+    "pair_status.py": "65edfe932aee49a64f3986d420eb3115bb71d271d3ac402e039052ea5826ca5f",
+    "worker.py": "5848538a168495d3a336afedd5d1efe696d43eea8a15d353679b905be7ecc320",
+    "validate_status_fixtures.py": "4b494ef4bc2eafeddfdcc17db9a37b17675bf6f4ee31888b9c2c6e45bdbe261c"
+  }
+}

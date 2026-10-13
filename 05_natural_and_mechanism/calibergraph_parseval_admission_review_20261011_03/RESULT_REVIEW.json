@@ -1,0 +1,126 @@
+{
+  "schema_version": 1,
+  "reviewer_role": "INDEPENDENT_RESULT_REVIEWER_NOT_AUTHOR_IMPLEMENTER",
+  "verdict": "PASS_EVIDENCE_AND_BOUNDARY_AUDIT_ADMISSION_INCOMPLETE",
+  "admission_status": "INCOMPLETE_AUTHOR_HARNESS_BLOCKED_BEFORE_ADAPTED_LOWERING_DDL_OR_GENERATION",
+  "scientific_decision": "NO_GO_NEW_MECHANISM_CLAIM",
+  "method": "NONE",
+  "topic": "UNCOMMITTED",
+  "further_execution_approved": false,
+  "additional_probe_launches_allowed": 0,
+  "observed_attempt_denominator": {
+    "launcher_invocations": 2,
+    "owned_PostgreSQL_cluster_starts": 2,
+    "owned_PostgreSQL_stops_confirmed": 2,
+    "v1_pre_target_platform_limit_error": 1,
+    "v2_author_metadata_SQL_error": 1,
+    "target_import_worker_sessions": 1,
+    "stock_original_AFTER_explicit_lowering_calls": 1,
+    "stock_original_AFTER_lowering_errors": 1,
+    "adapted_explicit_lowering_calls": 0,
+    "internal_parser_calls": "NOT_COLLECTED; explicit lowering count is not an internal parser count",
+    "driver_SQL_execute_calls": 1,
+    "driver_SQL_scope": "Author metadata SELECT only",
+    "derived_DDL_executions": 0,
+    "backend_fullC_census_or_calibration": 0,
+    "generation_calls": 0,
+    "solver_checks": 0,
+    "solver_models": 0,
+    "candidate_callbacks": 0,
+    "candidate_fullC_checks": 0,
+    "original_query_replays": 0,
+    "confirmation_query_replays": 0,
+    "new_independent_tests": 0,
+    "scientific_baseline_failure_rate": "NOT_DEFINED; no admitted generation/comparison denominator"
+  },
+  "run_findings": [
+    {
+      "run": "admission_01",
+      "classification": "AUTHOR_PLATFORM_LIMIT_SETUP_ERROR_BEFORE_TARGET_IMPORT",
+      "evidence": "worker.log at probe_worker.py line20: setrlimit(RLIMIT_DATA) raises ValueError before target sys.path and main imports",
+      "worker_exit_code": 1,
+      "scientific_execution_reached": false,
+      "elapsed_launcher_wall_s": 0.961402417,
+      "result_counter_interpretation": "Zero scientific calls independently supported by exact abort location; not inferred from missing RESULT.json"
+    },
+    {
+      "run": "admission_02",
+      "classification": "AUTHOR_METADATA_API_QUERY_ERROR_BEFORE_DDL_ADAPTER_CALIBRATION_OR_GENERATION",
+      "worker_exit_code": 0,
+      "worker_result_status": "PROBE_ERROR",
+      "exit_code_interpretation": "Top-level handler catches exceptions; exit0 is not successful admission",
+      "stock_lowering": "Original AFTER reaches official BOOLEAN string conversion and raises ValueError; the original f compatibility risk is now observed",
+      "backend_error": "Author metadata SELECT uses current_setting(lc_collate), raising UndefinedObject before execute(conn,ddl). This is not a CREATE TABLE error or a ParSEval generation/solver failure",
+      "catalog": "Recorded runtime audit:117 columns;32 NN,3 PK,6 UNIQUE,2 FK;43 proof_active,0 inactive. Catalog-only audit is not actual backend fullC acceptance",
+      "adapter": "PATCH_ID field is metadata only; with postgres_tf_literal_aliases was not reached. Adapter lowering/calibration NOT_RUN",
+      "elapsed_launcher_wall_s": 3.318238,
+      "elapsed_worker_wall_s": 2.4462431673891842,
+      "worker_cpu_s": 0.5395989999999999,
+      "worker_peak_rss_bytes": 87277568,
+      "counters_complete": true
+    }
+  ],
+  "independent_postrun_checks": {
+    "v1_freeze_files": "11/11 SHA256 unchanged",
+    "v2_freeze_files": "12/12 SHA256 unchanged",
+    "initial_read_evidence_including_original_SQL_schema": "6/6 SHA256 unchanged",
+    "official_source_files": "126/126 SHA256 match",
+    "extracted_dependency_files": "455/455 SHA256 match",
+    "error_tracebacks": "Both v2 raw errors verified against RESULT hashes",
+    "run01_cleanup": "Receipt STOPPED/stop0 and log; current postmaster.pid absent; recorded socket directory absent",
+    "run02_cleanup": "Receipt STOPPED/stop0 and server system-shut-down log; current postmaster.pid absent; recorded socket directory absent",
+    "execution_guards": "Both locks bind respective frozen reviewed version; both prelaunch resource gates passed",
+    "resource_after": "V2 load1m6.91845703125 exceeded launch threshold5.5 after run; no further science approved. Causal attribution to this worker not established"
+  },
+  "scope_limits": [
+    "PostgreSQL16.14 and Unix socket attested by server log; complete session/locale metadata SELECT failed, so no successful metadata row exists",
+    "New engine is not historical deployment; original server/session/collation remain unknown",
+    "Own RSS sampling is not an OS hard cap; nominal50ms can be delayed by GIL/scheduling; entire PG RSS unmeasured",
+    "No legal generated D/nonempty/EQ/NEQ observed; no both-empty experimental result exists",
+    "ParSEval BEFORE frontend, adapted AFTER, backend fullC and original-pair replay remain unverified",
+    "Both engineering failures retained; no seed selection, third probe or new holdout certified"
+  ],
+  "remaining_blockers": [
+    "Correct and separately review author metadata SQL before any future permitted probe",
+    "Adapter/backend fullC/generation/replay require a future authorized finite protocol; this review grants no further execution"
+  ],
+  "connection_interruption_resolution": "Read-only tool access recovered; final hash and PID/socket checks now complete",
+  "reviewer_target_execution_counts": {
+    "target_import": 0,
+    "SQL": 0,
+    "parser": 0,
+    "SMT": 0,
+    "DB_startup": 0,
+    "generation": 0,
+    "author_script": 0
+  },
+  "reviewer_modified_author_or_frozen_files": false,
+  "author_final_summary_review": {
+    "status": "PASS_FINAL_AUTHORED_RESULT_BOUNDARIES",
+    "manifest_path": "calibergraph_parseval_admission_20261011_03/AUTHOR_MANIFEST.json",
+    "manifest_sha256": "277ac97864c18b9264905914381acff60624e790aef99da979d2114916d5cb1f",
+    "files_verified": 26,
+    "final_result_path": "analysis/ADMISSION_RESULT.zh.md",
+    "final_result_sha256": "fde86d0ae1b4848fd96fa161915577a6aa086117135171936c4e04ed51699b11",
+    "recovery_sha256": "4f99c639dc5d87776b52be85186bebc0631c9fc772919e6c8f9dfc594f043d77",
+    "backend_diagnosis_sha256": "2de2fedcc5f8ab72e6d20e7db34c640776b69f977e84bc95e64b788f863ea362",
+    "findings": [
+      "Final result states admission incomplete and retains two engineering failures with zero generation/SMT/candidates/original replay.",
+      "Catalog audit is separated from unexecuted backend fullC/adapter validation.",
+      "Worker exit0 is correctly distinguished from PROBE_ERROR.",
+      "Original f failure is reported as frontend compatibility, not a novel algorithm failure.",
+      "Connection recovery is separated from final backup completeness; raw/native clean-machine restoration is not certified.",
+      "Proposed pg_database metadata repair and census strengthening remain static, unexecuted, and confer no third-probe permission."
+    ],
+    "backup_certification": "NOT_REVIEWED_BY_THIS_REPORT; final completion receipt/export evidence must establish remote backup separately."
+  },
+  "supporting_files": [
+    "RESULT_EVIDENCE_CHECKS.json",
+    "RUN01_ABORT_REVIEW.json",
+    "PRE_EXEC_REVIEW.json",
+    "PRE_EXEC_REVIEW_v2.json",
+    "FINAL_AUTHOR_MANIFEST_CHECKS.json"
+  ],
+  "reviewed_utc": "2026-10-11T20:26:58.519206+00:00",
+  "must_fix_count": 0
+}

@@ -1,0 +1,41 @@
+{
+  "started_utc": "2026-10-11T20:12:52.356433+00:00",
+  "freeze_sha256": "8c8321ec44728cdce5fd0571fa1dee8e2933fcfb77b48577644cfd91c37e1bae",
+  "review_sha256": "28dbd5e33a1ca38780b42d225b7c05088b982ddb849f419f0cf3fb267a21586e",
+  "resource_before": {
+    "utc": "2026-10-11T20:12:52.355692+00:00",
+    "loadavg": [
+      2.9541015625,
+      2.5634765625,
+      2.84521484375
+    ],
+    "free_percent": 37
+  },
+  "one_worker": true,
+  "temporary_pgdata": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/runtime_local/pgdata",
+  "temporary_socket": "/tmp/cg-pv03-12ecat06",
+  "tcp_listen": false,
+  "credentials_read": false,
+  "memory_limit_note": "Worker RLIMIT_DATA 768 MiB; RSS measured for worker only. PostgreSQL shared_buffers16MiB/work_mem1MiB; whole-server RSS is not measured.",
+  "worker_exit_code": 1,
+  "stop_attempts": [
+    {
+      "exit_code": 0
+    }
+  ],
+  "postgres_stop_exit_code": 0,
+  "cleanup_status": "STOPPED",
+  "elapsed_wall_s": 0.961402417,
+  "resource_after": {
+    "loadavg": [
+      2.9541015625,
+      2.5634765625,
+      2.84521484375
+    ]
+  },
+  "child_usage": {
+    "cpu_user_s": 0.25261,
+    "cpu_system_s": 0.227178
+  },
+  "worker_counters_may_be_partial": true
+}

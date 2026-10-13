@@ -1,0 +1,873 @@
+{
+  "validation_only": false,
+  "wall_budget_s": 60,
+  "elapsed_s": 2.249685457907617,
+  "records": [
+    {
+      "case": "superhero__750",
+      "mode": "UA",
+      "status": "VALIDATED_NEQ",
+      "wall_elapsed_s": 0.8162775002419949,
+      "native_launches": [
+        {
+          "pid_for_logging_only": 49528,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 1
+        },
+        {
+          "pid_for_logging_only": 49530,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 2
+        }
+      ],
+      "worker_returncode": 0,
+      "all_slot_handles_reaped": true,
+      "result_path": "science_run_01/superhero__750_UA/RESULT.json"
+    },
+    {
+      "case": "superhero__750",
+      "mode": "precise",
+      "status": "VALIDATED_NEQ",
+      "wall_elapsed_s": 0.5875289998948574,
+      "native_launches": [
+        {
+          "pid_for_logging_only": 49817,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 4
+        }
+      ],
+      "worker_returncode": 0,
+      "all_slot_handles_reaped": true,
+      "result_path": "science_run_01/superhero__750_precise/RESULT.json"
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.43461791705340147,
+      "native_launches": [
+        {
+          "pid_for_logging_only": 49872,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 6
+        },
+        {
+          "pid_for_logging_only": 49873,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 7
+        },
+        {
+          "pid_for_logging_only": 49874,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 8
+        }
+      ],
+      "worker_returncode": 0,
+      "all_slot_handles_reaped": true,
+      "result_path": "science_run_01/toxicology__319_UA/RESULT.json"
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.4091591672040522,
+      "native_launches": [
+        {
+          "pid_for_logging_only": 49878,
+          "args": [
+            "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/native_local/z3",
+            "--in",
+            "-T:3",
+            "-memory:512"
+          ],
+          "handle_index": 10
+        }
+      ],
+      "worker_returncode": 0,
+      "all_slot_handles_reaped": true,
+      "result_path": "science_run_01/toxicology__319_precise/RESULT.json"
+    }
+  ],
+  "guard": {
+    "reason": null,
+    "elapsed_s": 2.2496527498587966,
+    "wall_seconds": 60,
+    "handle_count": 11,
+    "all_reaped": true,
+    "returncodes": [
+      0,
+      -15,
+      -15,
+      0,
+      -15,
+      0,
+      -15,
+      -15,
+      -15,
+      0,
+      -15
+    ],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.092673375,
+        "bytes": 46071808
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336668.094760125,
+        "index": 0,
+        "pid_for_logging_only": 49409
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.122919,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.151658208,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.192223125,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.222989708,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.258288583,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.28832625,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.318401958,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.348583375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.373821666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.405432125,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.43748375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.465955166,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.495986333,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.526025333,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.5534455,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.580981916,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.60612475,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.6334285,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.663454375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.690191958,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.717770375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.744068666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.772287375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336668.797503625,
+        "index": 1,
+        "pid_for_logging_only": 49528
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.802631375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336668.813388625,
+        "index": 2,
+        "pid_for_logging_only": 49530
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.831355291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.866100666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.894301916,
+        "bytes": 46088192
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336668.904368166,
+        "pid_for_logging_only": 49530
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336668.90439225,
+        "pid_for_logging_only": 49528
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336668.908074583,
+        "pid_for_logging_only": 49530,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336668.90808725,
+        "pid_for_logging_only": 49528,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336668.908090625,
+        "pid_for_logging_only": 49409,
+        "returncode": 0
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336668.924849708,
+        "index": 3,
+        "pid_for_logging_only": 49531
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.925221291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.955556416,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336668.981530583,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.006922208,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.036989958,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.062563,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.087939291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.118960375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.148448666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.177873958,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.206863,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.23690075,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.266933041,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.296970625,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.322109416,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.352177666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.381159416,
+        "bytes": 46088192
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336669.405967833,
+        "index": 4,
+        "pid_for_logging_only": 49817
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.411248333,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.438738291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.468790666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336669.495395,
+        "pid_for_logging_only": 49817
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.496733833,
+        "pid_for_logging_only": 49817,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.496736666,
+        "pid_for_logging_only": 49531,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.496737916,
+        "pid_for_logging_only": 49530,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.496738833,
+        "pid_for_logging_only": 49528,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.496739791,
+        "pid_for_logging_only": 49409,
+        "returncode": 0
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336669.498822458,
+        "index": 5,
+        "pid_for_logging_only": 49828
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.498936583,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.524915916,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.551781458,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.576976166,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.607138291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.637182125,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.663809791,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.69203725,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.721893625,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.747767625,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.777793041,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.802892291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.831138708,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.861170291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336669.876702,
+        "index": 6,
+        "pid_for_logging_only": 49872
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336669.88615825,
+        "index": 7,
+        "pid_for_logging_only": 49873
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.889608083,
+        "bytes": 46088192
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336669.897596833,
+        "index": 8,
+        "pid_for_logging_only": 49874
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.919100666,
+        "bytes": 46088192
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336669.929129833,
+        "pid_for_logging_only": 49874
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336669.929136583,
+        "pid_for_logging_only": 49873
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336669.929141125,
+        "pid_for_logging_only": 49872
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.930422791,
+        "pid_for_logging_only": 49874,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.931703166,
+        "pid_for_logging_only": 49873,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.93171175,
+        "pid_for_logging_only": 49872,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.931713208,
+        "pid_for_logging_only": 49828,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.93171425,
+        "pid_for_logging_only": 49817,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.931715291,
+        "pid_for_logging_only": 49531,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.931717625,
+        "pid_for_logging_only": 49530,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.931718458,
+        "pid_for_logging_only": 49528,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336669.931719333,
+        "pid_for_logging_only": 49409,
+        "returncode": 0
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336669.933785833,
+        "index": 9,
+        "pid_for_logging_only": 49875
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.947793458,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.9778305,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.0060995,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.036136416,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.062130208,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.092163708,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.122188,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.149933541,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.178841291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.208411166,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.238444166,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.267094833,
+        "bytes": 46088192
+      },
+      {
+        "kind": "spawn",
+        "monotonic": 2336670.288880416,
+        "index": 10,
+        "pid_for_logging_only": 49878
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.297346291,
+        "bytes": 46088192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336670.327394375,
+        "bytes": 46088192
+      },
+      {
+        "kind": "terminate",
+        "monotonic": 2336670.340145083,
+        "pid_for_logging_only": 49878
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341422791,
+        "pid_for_logging_only": 49878,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341426583,
+        "pid_for_logging_only": 49875,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341427833,
+        "pid_for_logging_only": 49874,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341428833,
+        "pid_for_logging_only": 49873,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341429708,
+        "pid_for_logging_only": 49872,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341430583,
+        "pid_for_logging_only": 49828,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341431541,
+        "pid_for_logging_only": 49817,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341432375,
+        "pid_for_logging_only": 49531,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341433375,
+        "pid_for_logging_only": 49530,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.34143425,
+        "pid_for_logging_only": 49528,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.341435166,
+        "pid_for_logging_only": 49409,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342151666,
+        "pid_for_logging_only": 49878,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342153416,
+        "pid_for_logging_only": 49875,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342154541,
+        "pid_for_logging_only": 49874,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342155791,
+        "pid_for_logging_only": 49873,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342156625,
+        "pid_for_logging_only": 49872,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342160458,
+        "pid_for_logging_only": 49828,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342161541,
+        "pid_for_logging_only": 49817,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342162416,
+        "pid_for_logging_only": 49531,
+        "returncode": 0
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.34216325,
+        "pid_for_logging_only": 49530,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342164083,
+        "pid_for_logging_only": 49528,
+        "returncode": -15
+      },
+      {
+        "kind": "wait",
+        "monotonic": 2336670.342164958,
+        "pid_for_logging_only": 49409,
+        "returncode": 0
+      }
+    ]
+  },
+  "science_attempts": 4,
+  "memory_contract": "512 MiB native allocator per Z3, own Python sampling; no aggregate RSS guarantee"
+}

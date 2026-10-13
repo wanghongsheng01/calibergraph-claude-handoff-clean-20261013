@@ -1,0 +1,36 @@
+{
+  "select": {
+    "value": "CLASS"
+  },
+  "from": {
+    "value": "COURSES",
+    "name": "CS"
+  },
+  "groupby": {
+    "value": "CLASS"
+  },
+  "having": {
+    "gte": [
+      {
+        "select": {
+          "value": {
+            "count": {
+              "distinct": "STUDENT"
+            }
+          }
+        },
+        "from": {
+          "value": "COURSES",
+          "name": "CP"
+        },
+        "where": {
+          "eq": [
+            "CP__CLASS",
+            "CS__CLASS"
+          ]
+        }
+      },
+      5
+    ]
+  }
+}

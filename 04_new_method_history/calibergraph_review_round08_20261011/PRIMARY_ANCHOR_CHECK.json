@@ -1,0 +1,119 @@
+{
+  "artifact_version": 1,
+  "checked_date": "2026-10-11",
+  "method": "Read-only primary-source inspection and independent manual reasoning; parallel literature checker plus reviewer inspection of key primary text.",
+  "overall": "KEY_CLAIMS_SUPPORTED_WITH_MINOR_LOCATOR_CORRECTIONS",
+  "source_bytes_policy": "Original third-party paper bytes were not downloaded into the workspace or redistributed. URLs/version/pages identify the originals. No original PDF/HTML byte SHA is claimed. Evidence notes below are reviewer paraphrases, not verbatim primary-source captures.",
+  "checks": [
+    {
+      "id": "BDFS1984",
+      "title": "On the Structure of Armstrong Relations for Functional Dependencies",
+      "primary_origin": "Ronald Fagin author bibliography directly links the original published paper PDF",
+      "bibliography_url": "https://ronfagin.com/papers/",
+      "url": "https://s3.us.cloud-object-storage.appdomain.cloud/res-files/500-jacm84.pdf",
+      "doi": "10.1145/2422.322414",
+      "anchor": "Section 3, Lemma 3.1 and the immediately following constructive proof; printed pages 33-34; PDF pages 4-5 (1-based)",
+      "status": "SUPPORTED",
+      "evidence_note": "Lemma 3.1 supplies a two-tuple FD nonimplication witness. The following constructive proof agrees on X closure and differs outside it.",
+      "scope_limit": "Single-relation FD witness; not direct PK/FK combined-query theorem, and not a two-row global Armstrong relation separating all nonimplied FDs simultaneously.",
+      "reviewer_inference": "Projection into the explicitly closed self-join-free body plus the manuscript's legality/count argument is a mature specialization; novelty NULL is supported.",
+      "locator_correction": "Prefer this author-linked primary PDF to ResearchGate; keep the distinction between the lemma's first proof and its following constructive proof.",
+      "original_source_sha256": null,
+      "reviewer_evidence_note_sha256": "0485850efdc929f26cdcd0c5a6a44d0b94841f8809c05ab1f1f62615e7b22c84",
+      "evidence_note_hash_scope": "Exact UTF-8 reviewer paraphrase in evidence_note; not the original source bytes."
+    },
+    {
+      "id": "Cohen2026v1",
+      "title": "Few Rows Tell Them Apart: Equivalence of Queries Mixing Set and Bag Semantics",
+      "url": "https://arxiv.org/html/2609.09978v1#S4",
+      "pdf_url": "https://arxiv.org/pdf/2609.09978v1",
+      "version": "arXiv v1 (2026-09-09), preprint",
+      "anchor": "Section 4: Lemma 11 and key-anchorability definition p.9; Theorem 13 pp.9-10; Theorem 15 p.10; residual-open-case p.11; Appendix B.2 Proposition B.3 pp.22-23",
+      "status": "SUPPORTED",
+      "evidence_note": "Demotion preserves multiplicity by a projection bijection. Key-anchorability requires counted variables to lie in closure of the head and counted variables occurring only at key positions. Theorems 13/15 retain that restriction.",
+      "scope_limit": "Does not settle the general nonanchorable constrained realizability problem; no claim that the exact Round08 specialization appears verbatim.",
+      "reviewer_fixture_inferences": [
+        {
+          "fixture": "F1",
+          "side": "M={x,y}",
+          "A": [],
+          "closure_head_A": [],
+          "key_anchorable": false
+        },
+        {
+          "fixture": "F1",
+          "side": "N={x}",
+          "A": [],
+          "closure_head_A": [],
+          "key_anchorable": false
+        },
+        {
+          "fixture": "F2",
+          "side": "M={x}",
+          "A": [],
+          "closure_head_A": [],
+          "key_anchorable": false
+        },
+        {
+          "fixture": "F2",
+          "side": "N={x,y}",
+          "A": [],
+          "closure_head_A": [],
+          "key_anchorable": false
+        }
+      ],
+      "F2_reason": "x appears at X's key but at C(c,x)'s non-key position. Demoting y on the N side still leaves nonanchored x. These are reviewer deductions, not source examples.",
+      "original_source_sha256": null,
+      "reviewer_evidence_note_sha256": "0b70ea9e1ceec3854cbd85a5418821162c0972009c1c937bd6498e8b4c4bf1e4",
+      "evidence_note_hash_scope": "Exact UTF-8 reviewer paraphrase in evidence_note; not the original source bytes."
+    },
+    {
+      "id": "DeHaan2009",
+      "title": "Equivalence of Queries with Nested Aggregation",
+      "primary_origin": "University of Waterloo institutional dissertation repository",
+      "url": "https://uwspace.uwaterloo.ca/bitstreams/75481061-96ae-4f14-89b7-44c6aab72683/download",
+      "anchor": "Appendix A.2; Definitions A.2.1/A.2.2 printed p.168 (PDF page188); multiplicity polynomial discussion printed p.170 (PDF page190); Definitions A.2.3/A.2.4, Theorem A.2.5 and Corollaries A.2.6-A.2.8 printed p.171 (PDF page191), all PDF pages 1-based",
+      "status": "SUPPORTED_WITH_LOCATOR_CORRECTION",
+      "evidence_note": "Colour diversification uses positive-integer points; multiplicities are represented polynomially; Schwartz-Zippel and subsequent corollaries supply separating diversification points.",
+      "scope_limit": "No blanket preservation of arbitrary PK/FK constraints by diversification is established by these anchors.",
+      "locator_correction": "The frozen references.json range p.170-171 does not contain Definitions A.2.1/A.2.2, which are on p.168.",
+      "original_source_sha256": null,
+      "reviewer_evidence_note_sha256": "8770fe9edbed5b23af5e936685d8386784514152e8a134833a368915daae2748",
+      "evidence_note_hash_scope": "Exact UTF-8 reviewer paraphrase in evidence_note; not the original source bytes."
+    },
+    {
+      "id": "ChirkovaGenesereth2009v3",
+      "title": "Equivalence of SQL Queries In Presence of Embedded Dependencies",
+      "url": "https://arxiv.org/html/0812.2195v3",
+      "pdf_url": "https://arxiv.org/pdf/0812.2195v3",
+      "version": "arXiv v3",
+      "anchor": "Section2.1 canonical database and reversed containment homomorphism, PDF p.3; Section6.1 Theorems6.1/6.2, PDF p.13; HTML/PDF numbering differences explicitly recorded below",
+      "status": "SUPPORTED_WITH_FORMAT_SPECIFIC_NUMBERING",
+      "evidence_note": "Set containment uses a head-preserving homomorphism in the reverse direction. Theorems6.1/6.2 reduce constrained bag/bag-set equivalence using their sound chases when set-chase results exist.",
+      "scope_limit": "The bag reduction retains set-enforcing dependencies. These are not unrestricted ordinary-set-chase or general partial-counting theorems. Round08 must itself prove canonical database legality and self-join-free rigidity.",
+      "numbering_map": [
+        {
+          "section": "2.4",
+          "html": "Theorem2.3",
+          "pdf": "Theorem2.2"
+        },
+        {
+          "section": "6.1",
+          "html": "Theorems6.1/6.2",
+          "pdf": "Theorems6.1/6.2"
+        },
+        {
+          "section": "6.2",
+          "html": "Theorem6.5",
+          "pdf": "Theorem6.3"
+        }
+      ],
+      "original_source_sha256": null,
+      "reviewer_evidence_note_sha256": "49d1df9cd2f0641b614725146aead78602232e9a85a8142aebfd0e83403723ef",
+      "evidence_note_hash_scope": "Exact UTF-8 reviewer paraphrase in evidence_note; not the original source bytes."
+    }
+  ],
+  "novelty_conclusion": "NULL mechanism is well supported by direct mature ingredients. This check neither asserts prior verbatim publication of the exact combined specialization nor claims a literature-wide absence proof.",
+  "third_party_paper_files_vendored": false,
+  "remaining_primary_source_blockers": []
+}

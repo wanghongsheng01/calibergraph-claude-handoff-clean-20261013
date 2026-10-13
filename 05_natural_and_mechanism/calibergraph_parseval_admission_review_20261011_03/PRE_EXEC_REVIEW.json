@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-11T20:12:22.946854+00:00",
+  "reviewer_role": "INDEPENDENT_STATIC_REVIEWER_NOT_AUTHOR_IMPLEMENTER",
+  "verdict": "PASS_ONCE_ONLY_BOUNDED_ADMISSION_PROBE",
+  "execution_approved": true,
+  "freeze_sha256": "8c8321ec44728cdce5fd0571fa1dee8e2933fcfb77b48577644cfd91c37e1bae",
+  "max_launches": 1,
+  "automatic_scientific_retries": 0,
+  "approval_scope": "Only the exact frozen launcher/worker/protocol, selected original AFTER lowering/generation plus independent unchanged original BEFORE/AFTER PostgreSQL replay. Runtime resource gate and all source/hash/fullC gates remain mandatory; this is not confirmation that the probe will run or succeed.",
+  "must_fix_count": 0,
+  "resolved_findings": [
+    "R1: bounded same-owned-cluster shutdown attempts plus independently persisted receipt; unconfirmed shutdown is BLOCKED, no further work.",
+    "R2: oversize callback row count/status retained before budget exit.",
+    "R3: explicit lowering calls counted; internal parser calls declared unmeasured; hard termination counters explicitly partial."
+  ],
+  "independent_checks": {
+    "freeze_files": "11/11 SHA256 match",
+    "official_source_files": "126/126 SHA256 and declared Git blob SHA1 match in draft02; immutable source lock unchanged and launcher rechecks current bytes",
+    "extracted_dependencies": "455/455 SHA256 match in draft02; immutable receipt unchanged and launcher rechecks current bytes",
+    "original_query_hashes": "Pinned original before36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7 and after1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2",
+    "source_C": "Independently read original Ruby declarations; all117 columns in4-table query/FK closure,32 NN,3 PK,6 UNIQUE,2 actual authorization FKs. No authorization PK/pair unique, no invented star FK, no visibility CHECK.",
+    "Rails_mapping": "Read exact Rails4.2.8 PostgreSQL type mapping and type_to_sql: source-unlimited VARCHAR, native BOOLEAN, int32, DATE/TIMESTAMP; SERIAL backend defaults retained with complete explicit generated rows.",
+    "nullable_unique": "All6 UNIQUE declarations use NULLS DISTINCT;4 keys actually contain nullable columns. Other historical relations admit an empty extension because this selected closure has no missing outgoing FKs.",
+    "boolean_adapter": "Only t/f aliases in known BOOLEAN context on one postgres dialect object, delegates other behavior and restores prior attribute; original SQL unchanged.",
+    "fullC_acceptance": "Catalog43-active exact census + actual PG117-column/key/FK metadata calibration + independent candidate Python checks + full PG insert required before complete typed ordered42-column replay.",
+    "isolation": "Fresh task-local pgdata, exclusive creation; private0700 /tmp Unix socket, no TCP, sanitized env and explicit nonexistent passfile. Same owned pgdata only for shutdown; independent confirmation database/connection.",
+    "boundedness": "one generate seed0/speculateTrue,5s generation,4 checks with500ms solver budget,3 callbacks<=32 replay rows,20/21s worker CPU,35s wall, no scientific retries; runtime load/free-memory gate mandatory",
+    "result_acceptance": "First nonempty/difference requires same D in fresh confirmation DB; one empty side valid; no difference or both empty never promoted to mechanism failure."
+  },
+  "limitations": [
+    "New PostgreSQL16.14/C/UTF8/UTC profile must be checked in actual result; unknown historical server/session/collation is not reproduced.",
+    "RLIMIT_DATA768MiB is not a hard RSS cap; worker peak RSS only and whole PostgreSQL cluster RSS unmeasured. Small server config and finite runtime are the available controls.",
+    "Only selected AFTER is required to lower in ParSEval; BEFORE remains original SQL backend replay, not claimed ParSEval frontend support.",
+    "Internal parser call count is unmeasured; hard-killed worker checkpoints are incomplete/censored.",
+    "Oversize generated D is not exported or replayed; its row count and skipped-budget status must remain in denominators.",
+    "A valid nonempty D proves this exposed instance path can be activated within the observed probe; it proves neither all-input equivalence, novelty, comparative advantage nor historical-engine reproduction."
+  ],
+  "scientific_decision": "NO_GO_NEW_MECHANISM_CLAIM",
+  "method": "NONE",
+  "topic": "UNCOMMITTED",
+  "reviewer_execution_counts": {
+    "SQL": 0,
+    "parser": 0,
+    "SMT": 0,
+    "target_import": 0,
+    "DB_startup": 0,
+    "install": 0,
+    "author_scripts": 0
+  },
+  "reviewer_modified_author_or_frozen_files": false,
+  "supporting_files": [
+    "INITIAL_REVIEW_CRITERIA.json",
+    "PRE_EXEC_FINDINGS_DRAFT02.json",
+    "PRE_EXEC_HASH_CHECKS_DRAFT02.json",
+    "PRE_EXEC_HASH_CHECKS.json"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "calibergraph.round16.aggregator_static_check.v1",
+  "created_utc": "2026-10-11T17:01:38.821867+00:00",
+  "status": "STATIC_ONLY_NOT_EXECUTED_NOT_INDEPENDENT_REVIEW",
+  "source_sha256": "ee1a223630d6c2bf3c61ff75d8f0798e1482e854ff66e8e0a55b389cf98c2d19",
+  "method": "ast.parse, AST shape/import inspection and text checks only; aggregator functions were not imported, evaluated or executed",
+  "stdlib_imports": [
+    "argparse",
+    "collections",
+    "datetime",
+    "hashlib",
+    "json",
+    "math",
+    "re",
+    "pathlib"
+  ],
+  "checks": {
+    "AST_syntax": true,
+    "main_guard": true,
+    "stdlib_only": true,
+    "no_scientific_or_process_calls": true,
+    "no_outcome_distribution_assertions": true,
+    "registered24_and_historical12_separate": true,
+    "missing_timing_not_filled_zero": true,
+    "budget_reason_exact_match_and_batch_budget_gate": true,
+    "receipt_input_code_freeze_binding": true,
+    "planned_binding_separate_for_NOT_RUN": true,
+    "stage_entry_separate_from_actual_check": true,
+    "nested_invalid_slot_retained": true,
+    "round16_frozen_files_unchanged": 12,
+    "output_fresh_direct_child_analysis_only": true,
+    "nonfinite_JSON_rejected_as_invalid": true
+  },
+  "runtime_correctness": "UNTESTED_BY_INSTRUCTION",
+  "limitations": [
+    "No import, execution or functional fixture testing was permitted.",
+    "Independent raw receipt crosscheck is still required after execution.",
+    "Outer time/exit JSON schemas are retained by hash and numeric fields but not automatically certified.",
+    "Malformed nested slot receipts preserve the slot as invalid; its known cost requires raw audit.",
+    "New low-bound return definition is predeclared as the same sat or unsat in both repeats; UNKNOWN is never a low-bound return."
+  ]
+}

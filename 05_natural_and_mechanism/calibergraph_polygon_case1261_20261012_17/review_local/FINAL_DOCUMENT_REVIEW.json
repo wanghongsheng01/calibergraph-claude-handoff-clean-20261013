@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "gate": "FINAL_DOCUMENT_CONSISTENCY",
+  "utc": "2026-10-12T11:06:40.315874+00:00",
+  "must_fix": [],
+  "solver_calls_by_reviewer": 0,
+  "reviewed_files_sha256": {
+    "RESULT.zh.md": "b427fd6fb0442a3cbb1cacf4abccdd1577babc76153913cd26b9d5a34ab3896d",
+    "SUMMARY.json": "c11cc01186a4c3a5d91b96f9b4ff93f7888c1b3767e6a9c53f58c39a43710b78",
+    "STAGES.json": "e17fadfb52d97f63371709fa6a319903efa203ba504894f8fe3a7161eb9676a8",
+    "BATCH_CLOSED.json": "bd3fbc1c1bc9396464327cafae2b7fecf9b0c364c1b9f7771180648ff39422f4",
+    "RECOVERY.zh.md": "1d97063308d60b673c98554fa140d8ecda788e6f8e785889cca11b4a385b0e0b",
+    "review_local/RESULT_REVIEW.json": "1062e2c3eb39ba701453dba787e161599218fb2d632c01aa25bb285586662eee",
+    "review_local/RESULT_REVIEW.zh.md": "02629bb7da21bb649857740bd149be0bc381a3b17c4f0dbd2f4950cc2558f3ab",
+    "review_local/INDEPENDENT_REVIEW.json": "07d50e3cf16ceb27286a8da5964df77d6b9175c6dedfbb8306b337091cee1b93",
+    "review_local/RESOURCE_ADMISSION.json": "8e6035653a5aac14b998d3233fd2f79a882c712fe74e0f40daebed59981f88a4"
+  },
+  "checks": {
+    "summary_equals_raw_slot_results": true,
+    "stage_rows_match_summary": true,
+    "closed_marker_hashes_match": true,
+    "bounded_scope_and_no_witness_replay_correct": true,
+    "UA_partial_SAT_explanation_correct": true,
+    "per_process_memory_and_idle_process_overlap_explained": true,
+    "four_of_eight_coverage_matches_frozen_development_and_historical_results": true,
+    "not_success_rate_or_independent_final_test": true,
+    "anti_masking_remains_closed": true,
+    "all_356_freeze_hashes_still_match": true
+  },
+  "scope_notes": [
+    "Recovery file is a destination/restore contract; this reviewer did not independently verify remote private backup completion.",
+    "No new scientific run authorized by this review; batch remains closed."
+  ],
+  "reviewer_finished_writing": true
+}

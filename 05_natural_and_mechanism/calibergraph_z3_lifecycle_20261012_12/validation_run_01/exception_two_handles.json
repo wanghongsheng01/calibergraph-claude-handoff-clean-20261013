@@ -1,0 +1,67 @@
+{
+  "reason": null,
+  "elapsed_s": 0.19717166712507606,
+  "wall_seconds": 2,
+  "handle_count": 2,
+  "all_reaped": true,
+  "returncodes": [
+    -15,
+    -9
+  ],
+  "cleanup_errors": [],
+  "self_rss_stop_bytes": 1073741824,
+  "rss_scope": "own Python high-water RSS only; excludes all children",
+  "events": [
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2332950.089451375,
+      "bytes": 16941056
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2332950.091175375,
+      "index": 0,
+      "pid_for_logging_only": 39943
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2332950.111445625,
+      "index": 1,
+      "pid_for_logging_only": 39944
+    },
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2332950.119503875,
+      "bytes": 17039360
+    },
+    {
+      "kind": "terminate",
+      "monotonic": 2332950.129602958,
+      "pid_for_logging_only": 39944
+    },
+    {
+      "kind": "terminate",
+      "monotonic": 2332950.129610916,
+      "pid_for_logging_only": 39943
+    },
+    {
+      "kind": "kill",
+      "monotonic": 2332950.284849958,
+      "pid_for_logging_only": 39944
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2332950.286190458,
+      "pid_for_logging_only": 39944,
+      "returncode": -9
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2332950.286213666,
+      "pid_for_logging_only": 39943,
+      "returncode": -15
+    }
+  ],
+  "test": "exception_two_handles",
+  "expected": "all retained handles cleaned, not only newest"
+}

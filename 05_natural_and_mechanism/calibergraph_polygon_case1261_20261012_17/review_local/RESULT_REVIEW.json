@@ -1,0 +1,193 @@
+{
+  "status": "PASS",
+  "gate": "INDEPENDENT_POST_RUN_REVIEW",
+  "utc": "2026-10-12T11:05:31.327148+00:00",
+  "reviewer_solver_reruns": 0,
+  "must_fix": [],
+  "batch_count": 1,
+  "scientific_slots": 2,
+  "total_wall_seconds": 1.3229526248760521,
+  "modes": [
+    {
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.9519907077774405,
+      "solver_states": [
+        "SAT",
+        "UNSAT",
+        "UNSAT"
+      ],
+      "stages_seconds": {
+        "imports": 0.12341749994084239,
+        "schema_C": 0.004054332617670298,
+        "parse": 0.1767680011689663,
+        "encode": 0.011331001296639442,
+        "search_including_solver": 0.5420532082207501,
+        "solver_calls": 0.5391908739693463,
+        "decode": null,
+        "replay": null
+      },
+      "decode_replay_run": false,
+      "witness_exists": false
+    },
+    {
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.36981416679918766,
+      "solver_states": [
+        "UNSAT"
+      ],
+      "stages_seconds": {
+        "imports": 0.09909074986353517,
+        "schema_C": 0.0011935420334339142,
+        "parse": 0.17449645791202784,
+        "encode": 0.011343833524733782,
+        "search_including_solver": 0.012942957691848278,
+        "solver_calls": 0.011893666815012693,
+        "decode": null,
+        "replay": null
+      },
+      "decode_replay_run": false,
+      "witness_exists": false
+    }
+  ],
+  "hash_checks": {
+    "freeze_files_verified": 356,
+    "old_files_verified": 360,
+    "attempt_references_current_freeze": true
+  },
+  "complete_C_evidence": {
+    "actual_IC_identical_all_4_formulas": true,
+    "actual_IC_top_level_constraints": 7,
+    "PK": 2,
+    "explicit_NN": 3,
+    "FK": 2,
+    "base_tables": 3,
+    "base_columns": 64,
+    "IC_sha256": "5353ca008077745ed50e1145caa8f881adec4eb75f68bdccac5dd3ad96c166c1"
+  },
+  "formulas": [
+    {
+      "file": "science_run_01/thrombosis_prediction__1261_UA/formula_0.smt2",
+      "sha256": "a28754115b95a4005a6173610d3f600be08c276f7c6f0094b19efe7b1fc5a48c",
+      "bytes": 1826,
+      "labels": [
+        "ic",
+        "scan_examination",
+        "scan_laboratory",
+        "project$3",
+        "scan_patient",
+        "project$7",
+        "neq"
+      ]
+    },
+    {
+      "file": "science_run_01/thrombosis_prediction__1261_UA/formula_1.smt2",
+      "sha256": "396a757c182b840ac9f91b01c05448b1b8e35bd50334baa630e61df900afde7f",
+      "bytes": 26083,
+      "labels": [
+        "ic",
+        "scan_examination",
+        "scan_laboratory",
+        "inner_join$1",
+        "filter$2",
+        "project$3",
+        "scan_patient",
+        "inner_join$4",
+        "inner_join$5",
+        "filter$6",
+        "project$7",
+        "neq",
+        "under"
+      ]
+    },
+    {
+      "file": "science_run_01/thrombosis_prediction__1261_UA/formula_2.smt2",
+      "sha256": "3188e24d12cb9b355f367966d161f606374034df8e0aba382fc21843a9a44c64",
+      "bytes": 26213,
+      "labels": [
+        "ic",
+        "scan_examination",
+        "scan_laboratory",
+        "inner_join$1",
+        "filter$2",
+        "project$3",
+        "scan_patient",
+        "inner_join$4",
+        "inner_join$5",
+        "filter$6",
+        "project$7",
+        "neq",
+        "under",
+        "conflict1_inner_join$1&filter$2&project$3&inner_join$4&inner_join$5&filter$6&project$7"
+      ]
+    },
+    {
+      "file": "science_run_01/thrombosis_prediction__1261_precise/formula_0.smt2",
+      "sha256": "9a0c833e23679a390d365a7ca323e2aa5a72ac0b853b75a5b71a87c61a0da1e7",
+      "bytes": 26012,
+      "labels": [
+        "ic",
+        "scan_examination",
+        "scan_laboratory",
+        "inner_join$1",
+        "filter$2",
+        "project$3",
+        "scan_patient",
+        "inner_join$4",
+        "inner_join$5",
+        "filter$6",
+        "project$7",
+        "neq"
+      ]
+    }
+  ],
+  "UA_initial_SAT": "Partial operator encoding containing only project$3/project$7 plus IC/scans/neq. Missing 3 joins and 2 filters; SAT is an internal search/refinement state, not a decoded/full-C concrete SQL counterexample. Subsequent full-operator query and backtrack query were UNSAT.",
+  "cleanup": {
+    "owned_handles": 6,
+    "workers": 2,
+    "native_Z3": 4,
+    "all_reaped": true,
+    "cleanup_errors": [],
+    "returncodes": [
+      0,
+      -15,
+      -15,
+      -15,
+      0,
+      -15
+    ],
+    "native_minus15_explanation": "Broker terminates retained interactive solver processes after worker has consumed successful responses; no protocol errors or native stderr.",
+    "UA_all_handles_reaped_before_precise_spawn": true,
+    "native_parameters": [
+      "--in",
+      "-T:3",
+      "-memory:512"
+    ],
+    "no_aggregate_RSS_claim": true,
+    "UA_native_processes_may_overlap_while_idle": true
+  },
+  "evidence_hashes": {
+    "FREEZE.json": "a99aeb6a405bae8554a56d0d4aec835da34fb8c59e02f67383bb71fb2243dbcb",
+    "ATTEMPT_STARTED.json": "7d5ddf5ef74882a0d9aeba762cec25beab4a8680b17cddaf73e37c9475421428",
+    "science_run_01/BATCH_RESULT.json": "562c2fb9f732d04f94dae48838d92e4622bcf912702288150444b9bf75d75733",
+    "science_run_01/thrombosis_prediction__1261_UA/CONTROLLER.json": "ce5cba267d45c07e4d0933817b6d719d26fbbbbbbc08ea61a80e9f4cff81dc47",
+    "science_run_01/thrombosis_prediction__1261_UA/RESULT.json": "9738acfc2ec54f5a6330016305661105263a29a1940e517e084c715d41f250f2",
+    "science_run_01/thrombosis_prediction__1261_UA/formula_0.smt2": "a28754115b95a4005a6173610d3f600be08c276f7c6f0094b19efe7b1fc5a48c",
+    "science_run_01/thrombosis_prediction__1261_UA/formula_1.smt2": "396a757c182b840ac9f91b01c05448b1b8e35bd50334baa630e61df900afde7f",
+    "science_run_01/thrombosis_prediction__1261_UA/formula_2.smt2": "3188e24d12cb9b355f367966d161f606374034df8e0aba382fc21843a9a44c64",
+    "science_run_01/thrombosis_prediction__1261_UA/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_UA/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_UA/z3_0_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_UA/z3_1_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_UA/z3_2_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_precise/CONTROLLER.json": "cb0d873b6882d3fb4ec2c2878ec1f937b9cdcbcc7b9fa511d159783b76f7cd2a",
+    "science_run_01/thrombosis_prediction__1261_precise/RESULT.json": "d0b19ab32e11edf8f516f7c90da821a3552a940b4bf1b878d8345cd5c7de5ff1",
+    "science_run_01/thrombosis_prediction__1261_precise/formula_0.smt2": "9a0c833e23679a390d365a7ca323e2aa5a72ac0b853b75a5b71a87c61a0da1e7",
+    "science_run_01/thrombosis_prediction__1261_precise/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_precise/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "science_run_01/thrombosis_prediction__1261_precise/z3_0_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "accepted_interpretation": "Both frozen #1261 N<=1 local-adapter modes return bounded symbolic UNSAT. No concrete witness; no decode/replay. No infinite-bound equivalence, generic operator support, anti-masking revival or new evaluation denominator.",
+  "evidence_limit": "Independent static/log/formula review, not a second solver execution or proof certificate check."
+}

@@ -1,0 +1,30 @@
+{
+  "elapsed_s": 0.10004812525585294,
+  "budget_s": 60,
+  "results": [
+    {
+      "script": "replay_candidates.py",
+      "status": "RETURNED",
+      "elapsed_s": 0.0489416248165071
+    },
+    {
+      "script": "count_star_test.py",
+      "status": "ERROR",
+      "error": "RuntimeError('Single-thread batch prohibits Thread.start')",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/run_once.py\", line 35, in main\n    runpy.run_path(str(HERE/rel),run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/count_star_test.py\", line 10, in <module>\n    from polygon.sql_parser import SQLParser\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/sql_parser.py\", line 10, in <module>\n    from mo_parsing import ParseException\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_parsing/__init__.py\", line 28, in <module>\n    from mo_parsing import whitespaces\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_parsing/whitespaces.py\", line 8, in <module>\n    from mo_parsing.core import ParserElement\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_parsing/core.py\", line 10, in <module>\n    from mo_parsing import exceptions, whitespaces\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_parsing/exceptions.py\", line 8, in <module>\n    from mo_parsing.utils import Log, enlist, quote, indent\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_parsing/utils.py\", line 14, in <module>\n    from mo_dots import is_null, Null, is_many\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_dots/__init__.py\", line 11, in <module>\n    from mo_dots import datas\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_dots/datas.py\", line 17, in <module>\n    from mo_dots.nones import Null, NullType\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_dots/nones.py\", line 13, in <module>\n    to_data, get_attr = expect(\"to_data\", \"get_attr\")\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/dependencies_local/mo_imports/__init__.py\", line 61, in expect\n    _monitor.start()\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/run_once.py\", line 16, in no_thread\n    def no_thread(*a,**k):raise RuntimeError('Single-thread batch prohibits Thread.start')\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Single-thread batch prohibits Thread.start\n",
+      "elapsed_s": 0.031261208932846785
+    },
+    {
+      "script": "review_local/independent_validation.py",
+      "status": "ERROR",
+      "error": "FileNotFoundError(2, 'No such file or directory')",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/run_once.py\", line 35, in main\n    runpy.run_path(str(HERE/rel),run_name='__main__')\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/review_local/independent_validation.py\", line 363, in <module>\n    main()\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/review_local/independent_validation.py\", line 349, in main\n    report['count_star'] = validate_count_ast()\n                           ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/review_local/independent_validation.py\", line 282, in validate_count_ast\n    patch = (RUN / 'COUNT_STAR.patch').read_text()\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py\", line 1027, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_sqlite_closure_20261012_19/COUNT_STAR.patch'\n",
+      "elapsed_s": 0.019714583177119493
+    }
+  ],
+  "forbidden_events": [],
+  "thread_count_at_end": 1,
+  "new_solver_calls": 0,
+  "self_RSS_peak_bytes": 56377344,
+  "all_runtime_inside_one_continuous_budget": true
+}

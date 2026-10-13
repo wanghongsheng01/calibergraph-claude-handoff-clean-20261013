@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "stage": 15,
+  "retrieved_date": "2026-10-11",
+  "scope": "一次有界一手文献范围核验；没有SQL/SMT运行、科学枚举、性能实验、proof recheck或基准复现。",
+  "evidence_status": {
+    "paper_claims": "READ_PRIMARY_HTML",
+    "proof_checked": false,
+    "experiments_reproduced": false,
+    "artifact_executed": false,
+    "classification": "PAPER_CLAIM / NOT_REPRODUCED"
+  },
+  "governance": {
+    "datahub": "DATAHUB_REGISTRATION_BLOCKED (root已映射无匹配；canonical registry超授权写范围)",
+    "backup": "PARENT_COORDINATED_PENDING",
+    "third_party_content": "No papers, datasets, archives or repositories vendored.",
+    "source_byte_hashes": "UNAVAILABLE: browser extracts only; sha256 manifest hashes authored deliverables, not original source bytes."
+  },
+  "polygon": {
+    "title": "Polygon: Symbolic Reasoning for SQL using Conflict-Driven Under-Approximation Search",
+    "authors": [
+      "Pinhan Zhao",
+      "Yuepeng Wang",
+      "Xinyu Wang"
+    ],
+    "publication": {
+      "venue": "Proceedings of the ACM on Programming Languages 9 (PLDI), 2025",
+      "doi": "10.1145/3729303",
+      "arxiv": "2504.06542v1",
+      "status": "published metadata cross-confirmed in author paper and official repository; publisher access 403"
+    },
+    "sources": [
+      {
+        "id": "P1",
+        "url": "https://arxiv.org/html/2504.06542v1",
+        "kind": "author manuscript, full HTML",
+        "locators": "§1; §3.1 Fig7; §3.3; §3.8 Theorems3.9–3.12; §4 Table1; §4.2 Figs9–10"
+      },
+      {
+        "id": "P2",
+        "url": "https://github.com/polygon-sql/polygon",
+        "kind": "official repository, read-only"
+      },
+      {
+        "id": "P3",
+        "url": "https://raw.githubusercontent.com/polygon-sql/polygon/main/example.py",
+        "kind": "official source; moving main, commit NOT_PINNED",
+        "locators": "lines9–84 schema/constraints; line84 bound=2,time_budget=60; lines110–122 replay path"
+      },
+      {
+        "id": "P4",
+        "url": "https://raw.githubusercontent.com/polygon-sql/polygon/main/README.md",
+        "kind": "official documentation",
+        "locators": "Prerequisite; example output; Citation"
+      },
+      {
+        "id": "P5",
+        "url": "https://zenodo.org/records/15059866",
+        "kind": "versioned artifact metadata",
+        "version": "v2, 2025-03-20",
+        "doi": "10.5281/zenodo.15059866",
+        "advertised_archive_md5": "98b773e69d07905ac200b42ddc9d630e",
+        "bytes_downloaded": false
+      },
+      {
+        "id": "P6",
+        "url": "https://zenodo.org/records/15059866/files/README.md?download=1",
+        "kind": "artifact author documentation",
+        "locators": "RQ1; RQ3; Reusability Guide"
+      },
+      {
+        "id": "P7",
+        "url": "https://dl.acm.org/doi/10.1145/3729303",
+        "kind": "publisher",
+        "access": "403 Forbidden"
+      }
+    ],
+    "task_and_novelty": {
+      "task": "Generate one database making outputs of one/multiple SQL queries satisfy a supplied SMT property; evaluations instantiate inequivalence witnesses and balanced query disambiguation.",
+      "novelty": "Compositional under-approximation maps over query ASTs; lattice-guided conflict resolution and accumulation search a covering UA family.",
+      "source": "P1 §1, §§3.2–3.7"
+    },
+    "semantic_scope": {
+      "bag_set": "Fig7 has DISTINCT/UNION ALL and duplicate-sensitive operators; no claim that all SQL dialect behavior is covered.",
+      "null": "Fig7 includes Null/IsNull; official example README contains None; expression guide encodes value/nullability pairs. This is positive NULL-related evidence, not an implementation audit.",
+      "aggregate": "Fig7 includes COUNT, MIN, MAX, SUM, AVG, GROUP BY, arithmetic, outer joins, subqueries, ORDER BY.",
+      "pk_fk": "P3 declares PKeys/FKeys plus explicit distinct/eq/etc constraints; P6 has primary-key distinct example. Comprehensive PK/FK semantics and consistency of declared vs operational constraints NOT_AUDITED.",
+      "bound": "P1 §3.3 symbolic n-tuples permit deletion: at most n rows per input table, not exact-N. Theorem3.12 completeness is relative to those bounded semantics.",
+      "proofs": "P1 §3.8 states soundness/completeness; AppendixC proof text exists. This audit locates statements only; CHECKED_PROOF=false."
+    },
+    "experiments": {
+      "status": "PAPER_REPORTED_NOT_REPRODUCED",
+      "table1": [
+        {
+          "task": "ER",
+          "solved": 5497,
+          "total": 24455,
+          "mean_s": 0.6,
+          "median_s": 0.1,
+          "denominator": "all benchmark query pairs; not all known inequivalent/solvable; durations conditional on solved"
+        },
+        {
+          "task": "D-50",
+          "solved": 4004,
+          "total": 4245,
+          "mean_s": 6.4,
+          "median_s": 3.7,
+          "denominator": "curated 50-query sets, reported solvable by construction; durations conditional on solved"
+        },
+        {
+          "task": "D-100",
+          "solved": 2392,
+          "total": 2475,
+          "mean_s": 21.7,
+          "median_s": 18,
+          "denominator": "curated 100-query sets, reported solvable by construction; durations conditional on solved"
+        }
+      ],
+      "source_data": "ER reuses VeriEQL 24,455 pairs from grading, rewriting and mutation. Disambiguation uses Cubes synthesis, then bounded VeriEQL partitioning; timeout cases dropped before selecting two classes.",
+      "timeout_s": 60,
+      "comparison": "§4.2 Polygon5497 vs VeriEQL3177 refutations; medians0.1 vs0.4s computed on each tool's own solved subset, not necessarily a matched cohort.",
+      "numeric_evaluation_bound": "UNRESOLVED in accessed paper/README; official example bound=2 does not establish full benchmark bound.",
+      "hardware": "UNRESOLVED in accessed sections.",
+      "source_inconsistency": "§4 has 2,861 generated tasks then 2,816 tasks in curation paragraph; not silently reconciled.",
+      "artifact_cost_claim": "P6 estimates RQ1 subset~1h (ER~800+D50~50+D100~50), full~30h; full RQ3~500h. These are author estimates, not measured here.",
+      "ablations": "§4.3 compares UA enumeration and lower-level variants; do not equate to cold-start import/encoding/solver cost attribution.",
+      "source": "P1 §4–§4.3, Table1, Figs9–12; P6 RQ1/RQ3"
+    },
+    "calibergraph_alignment": {
+      "supports": "Use a concrete reference for constraint-aware bounded witness generation and for reporting solved/unknown plus conditional cost. H15 may inspect bound-related implementation costs.",
+      "does_not_support": [
+        "H15 exact-N = Polygon <=n semantics without a proven conversion",
+        "0.7s H15 queries directly comparable to published60s baselines",
+        "No witness at N2 implies global SQL equivalence",
+        "Four fixed development sources establish new method, hardness, enterprise defect discovery or superiority over Polygon"
+      ],
+      "prospective_h15": "Only fixed-source tool-development diagnosis: dev03_07/10/15/04, originalSQL/schema and full operational C, exact-N, same budgets at N2/3/4. Plan is not registration or execution."
+    }
+  },
+  "fewrows": {
+    "title": "Few Rows Tell Them Apart: Equivalence of Queries Mixing Set and Bag Semantics",
+    "authors": [
+      "Sara Cohen"
+    ],
+    "publication": {
+      "status": "2026 preprint, not a DKE publication established here",
+      "submitted": "2026-09-09",
+      "arxiv": "2609.09978v1",
+      "doi": "10.48550/arXiv.2609.09978"
+    },
+    "sources": [
+      {
+        "id": "F1",
+        "url": "https://arxiv.org/html/2609.09978v1",
+        "kind": "author manuscript full HTML",
+        "locators": "§2; §3 Prop5/Lemma6/Thm7/Example8; §4 Thms13,15; §5 Thms18,23; §7; Use of AI Tools"
+      },
+      {
+        "id": "F2",
+        "url": "https://arxiv.org/abs/2609.09978",
+        "kind": "arXiv submission metadata",
+        "locators": "Submission history; comments27pages"
+      }
+    ],
+    "task_and_novelty": {
+      "task": "Compute fragment-specific completeness thresholds for mixed DISTINCT/bag-set conjunctive query equivalence over set-valued stored relations.",
+      "novelty": "Characteristic multiplicity-polynomial monomial and Boolean-corner extraction yield width-sensitive counterexample size; refine under keys and constrained comparisons.",
+      "source": "F1 §§1–3"
+    },
+    "semantic_scope": {
+      "base": "Set-valued stored relations; duplicates arise in answers, not duplicate stored tuples (§2).",
+      "language": "Safe conjunctive relational/order atoms with distinguished, set and multiset variables; no general SQL parser/engine is presented.",
+      "count": "§2 relates answer multiplicities to COUNT(*)/COUNT(DISTINCT...) and says adding that aggregate preserves equivalence.",
+      "general_aggregation": "§7 lists extension to further query classes, aggregation foremost, as future work; do not claim general SUM/AVG/HAVING/outer-join coverage.",
+      "pk_fk": "Thm13 requires key-anchorable relational queries/key-reduct+key-chase; Thm15 requires acyclic FK and key-anchorable chased queries. No arbitrary cyclic FK completeness inferred.",
+      "null": "No SQL NULL/3VL formalization established by §2 syntax/semantics. Do not transfer theorem to NULL-sensitive SQL without a separate embedding proof.",
+      "comparisons": "Thm18 certified var-constant position-groups (directed/retained/isolated with boundary-free handling); Thm23 pinned comparisons with key-anchorable comparison-free bodies and set-equivalence. Not unrestricted comparisons."
+    },
+    "bounds": {
+      "theorem7_total": "|D| <= 2^w max(|Q|,|Q'|)",
+      "theorem7_per_relation": "size(p,D) <= 2^w_p max(sj(Q,p),sj(Q',p))",
+      "theorem13": "replace width by key-width after key-reduct/key-chase for admitted queries",
+      "theorem15": "2^kw max(|Qhat|,|Q'hat|) for admitted FK-chased queries; unchanged width factor does NOT mean original unchased query size is unchanged",
+      "boolean_corner": "a in {1,2}^m sizes the fresh-value block for each multiset variable; NOT per-table row bound2.",
+      "tightness": "Example8 distinguishes corner necessity from database-size tightness: theorem permits16 atoms, canonical all-two corner9, smaller witness3. These are author-reported examples, not recomputed.",
+      "source": "F1 §3 Prop5,Lemma6,Thm7,Example8; §4 Thm13,15"
+    },
+    "evidence": {
+      "proof": "PAPER_CLAIM; proof statements/appendix located, not independently checked",
+      "experiments": "NO_REPORTED_EXPERIMENTS (explicit in Use of AI Tools); no measured datasets/denominators/timings to compare",
+      "implementation_cost": "UNRESOLVED / NOT_APPLICABLE to a runtime evaluation; exponential witness bound is not observed solver runtime",
+      "not_reproduced": true
+    },
+    "calibergraph_alignment": {
+      "supports": "Requires writing exact fragment/constraint/bound assumptions and keeping bounded absence separate from unbounded equivalence. Could guide a future theorem-eligibility check.",
+      "does_not_support": [
+        "H15N2 complete solely because Boolean corner uses{1,2}",
+        "H15 exact-N one-size search equivalent to <=B completeness premise",
+        "General aggregation/NULL/business units or complete operational C covered automatically",
+        "Any evidence about import/encoding/solver costs",
+        "No witness/timeout/OOM establishes correctness or scientific hardness"
+      ]
+    }
+  },
+  "audit_limitations": [
+    "No full benchmark scripts audited; moving GitHub main not pinned; versioned artifact metadata only.",
+    "Source byte checksums unavailable; authored output hashes are separate.",
+    "DKE target identification supplied later from root's frozen bibliography; see dke_candidates files for primary-source access status.",
+    "This is author scope verification, not independent review; independent review owned elsewhere."
+  ]
+}

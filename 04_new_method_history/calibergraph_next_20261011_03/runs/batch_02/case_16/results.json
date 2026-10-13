@@ -1,0 +1,511 @@
+{
+  "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev03_17",
+    "case_index": 16,
+    "status": "RETURNED",
+    "engineering_class": "INCONCLUSIVE",
+    "strict_class": "INCONCLUSIVE",
+    "attempts": [
+      {
+        "id": "dev03_17",
+        "attempt": 1,
+        "status": "STAGE_ERROR",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0010479576885700226,
+            "cpu_seconds": 0.001048000000000049
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 2,
+            "base_fact_count": 22,
+            "admitted_delta_facts": 2,
+            "full_fact_count": 24,
+            "wall_seconds": 0.0010808752849698067,
+            "cpu_seconds": 0.0010809999999999986
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.0033061658032238483,
+            "cpu_seconds": 0.003306000000000142
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004089124966412783,
+            "actual_check_cpu_seconds": 0.004097000000000017,
+            "answer": "sat",
+            "wall_seconds": 0.0065772500820457935,
+            "cpu_seconds": 0.006200999999999901
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0002669999375939369,
+            "cpu_seconds": 0.00026599999999998847
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RAISED",
+            "error_type": "ParserSyntaxError",
+            "error": "ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`",
+            "wall_seconds": 0.06985004106536508,
+            "cpu_seconds": 0.06894800000000001
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "a5082f592690e72feea198ccba0b81a90f74df84efd0f59530d87ab7e0adf4ab",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.06187620805576444,
+            "cpu_seconds": 0.06175800000000009
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RAISED",
+            "error_type": "ParserSyntaxError",
+            "error": "ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`",
+            "wall_seconds": 0.003702082671225071,
+            "cpu_seconds": 0.003702000000000094
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "QUERIES": 2
+        },
+        "raw_query_verdict": null,
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "5fcb738ef2af979fe6eaa0d443bf82011e65736085fb192dd5ef955174299214",
+        "solver_cumulative_wall_seconds": 0.004089124966412783,
+        "solver_cumulative_cpu_seconds": 0.004097000000000017,
+        "parsed_asts": [
+          {
+            "select": [
+              {
+                "value": "QUERY_NAME"
+              },
+              {
+                "value": {
+                  "round": [
+                    {
+                      "avg": {
+                        "div": [
+                          "RATING",
+                          "POSITION"
+                        ]
+                      }
+                    },
+                    2
+                  ]
+                },
+                "name": "QUALITY"
+              },
+              {
+                "value": {
+                  "round": [
+                    {
+                      "div": [
+                        {
+                          "mul": [
+                            100,
+                            {
+                              "sum": {
+                                "case": [
+                                  {
+                                    "then": 1,
+                                    "when": {
+                                      "lt": [
+                                        "RATING",
+                                        3
+                                      ]
+                                    }
+                                  },
+                                  0
+                                ]
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "count": 1
+                        }
+                      ]
+                    },
+                    2
+                  ]
+                },
+                "name": "POOR_QUERY_PERCENTAGE"
+              }
+            ],
+            "from": "QUERIES",
+            "groupby": {
+              "value": "QUERY_NAME"
+            }
+          }
+        ],
+        "failure_stage": "OFFICIAL_PARSE_QUERY_1",
+        "engineering_class": "INCONCLUSIVE",
+        "error_type": "ParserSyntaxError",
+        "error": "ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py\", line 300, in parse\n    parsed_query = parse(query, null=SQL_NULL)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py\", line 37, in parse\n    result = _parse(common_parser, sql, null, calls)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py\", line 78, in _parse\n    parse_result = parser.parse_string(sql, parse_all=True)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py\", line 80, in output\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py\", line 149, in parse\n    return self._parseString(string, parse_all=parse_all)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py\", line 171, in _parseString\n    raise cause.best_cause from None\nmo_parsing.exceptions.ParseException: Expecting {StringEnd} | {from} | {order by} | {offset} | {fetch} | {limit}, found \"( (SELECT \" (at char 69), (line:1, col:70)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/code/official_diagnostic_backend.py\", line 314, in run_attempt\n    env.analyze(*src['pair'])\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 860, in analyze\n    query_asts = [self.parse_sql_query(query) for query in queries]\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/code/official_diagnostic_backend.py\", line 294, in parse\n    ast = original_parse(sql)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 835, in parse_sql_query\n    return self.sql_parser.parse(query, dialect=self.dialect)  # .replace('\\\"', '\\'')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py\", line 322, in parse\n    raise ParserSyntaxError(query)\nerrors.ParserSyntaxError: ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`\n",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.009656999725848436,
+          "cpu_seconds": 0.009655999999999998
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06546000000000018,
+          "scope_encode": 0.0034879999999998246,
+          "compare_encode": null,
+          "query_check": 0
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.09967899999999996,
+          "wall_seconds": 0.10414025001227856,
+          "worker_peak_rss_bytes_macos": 111378432
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1211.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 12206,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "8ec1202fde53fb8e0668e9db0a82a7f532c1de35a577c11e2c3687a37d964657",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "between": [
+            {
+              "value": "QUERIES__RATING"
+            },
+            1,
+            5
+          ]
+        },
+        {
+          "between": [
+            {
+              "value": "QUERIES__POSITION"
+            },
+            1,
+            500
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1211.csv",
+      "index": 390,
+      "pair": [
+        "SELECT QUERY_NAME, ROUND(AVG(RATING/POSITION), 2) AS QUALITY, ROUND(100*SUM(CASE WHEN RATING<3 THEN 1 ELSE 0 END)/COUNT(1), 2) AS POOR_QUERY_PERCENTAGE FROM QUERIES GROUP BY QUERY_NAME",
+        "SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME"
+      ],
+      "schema": {
+        "QUERIES": {
+          "POSITION": "INT",
+          "QUERY_NAME": "VARCHAR",
+          "RATING": "INT",
+          "RESULT": "VARCHAR"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "996ed54205f380d691e691a3d0bc1b184d144704ff18b236042bc4cd6893233a",
+      "8b3b84992c3bbb8a38b1ed1b7b616554e2c134e1bfe98f53d842066186d24c31"
+    ],
+    "schema_sha256": "707318b12dde4a451ec90ab551060553ba2cc1726ce212b88823e4cda8300864",
+    "constraint_sha256": "392d43c0e112da27b44be381b2fd03e427850b4b717a6e8462c5bc479049e429",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "707318b12dde4a451ec90ab551060553ba2cc1726ce212b88823e4cda8300864",
+      "constraint_sha256": "392d43c0e112da27b44be381b2fd03e427850b4b717a6e8462c5bc479049e429",
+      "table_count": 1,
+      "column_count": 4,
+      "schema_type_counts": {
+        "INT": 2,
+        "VARCHAR": 2
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 2,
+      "operator_counts": {
+        "between": 2,
+        "value": 2
+      },
+      "reference_counts": {
+        "QUERIES__POSITION": 1,
+        "QUERIES__RATING": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004089124966412783,
+        "actual_check_cpu_seconds": 0.004097000000000017,
+        "timeout_ms": 100
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.004089124966412783,
+    "solver_cumulative_cpu_seconds": 0.004097000000000017,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "scope": "Registered input only; exact2 official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "065f8574563a3cb0fab2dd98a4e64fd44fe17f66f4b32ec73a2bee9bb39b8a55",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_diagnostic_worker.py": "c8c9ffcc2d22807ef4333d43ebdc11dc08b64f54956a00ce1dc0f2675b9bb1ec",
+    "official_diagnostic_backend.py": "b599f04890b8d7cbf5b12b872a8cbf8a97a0fa74f2ac49ec9eb88fa48e115e5e",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d"
+  },
+  "registered_group_count": 21,
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "FIRST_ATTEMPT_COMPLETE",
+    "id": "dev03_17",
+    "attempt": null,
+    "active_stage": null
+  },
+  "runtime": {
+    "id": "runtime",
+    "stages": [
+      {
+        "name": "LOCK_AND_DEPENDENCY_HASH",
+        "status": "RETURNED",
+        "checked_files": 848,
+        "wall_seconds": 0.039703082758933306,
+        "cpu_seconds": 0.03959599999999999
+      },
+      {
+        "name": "NATIVE_AND_OFFICIAL_IMPORT",
+        "status": "RETURNED",
+        "version": [
+          4,
+          12,
+          0,
+          0
+        ],
+        "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+        "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+        "wall_seconds": 0.6196895418688655,
+        "cpu_seconds": 0.6181249999999999
+      }
+    ],
+    "active_stage": null,
+    "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  },
+  "latest_attempt_snapshot": {
+    "id": "dev03_17",
+    "attempt": 1,
+    "status": "STAGE_ERROR",
+    "stages": [
+      {
+        "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+        "status": "RETURNED",
+        "wall_seconds": 0.0010479576885700226,
+        "cpu_seconds": 0.001048000000000049
+      },
+      {
+        "name": "FULL_ORIGINAL_IC_ADMISSION",
+        "status": "RETURNED",
+        "original_clause_count": 2,
+        "base_fact_count": 22,
+        "admitted_delta_facts": 2,
+        "full_fact_count": 24,
+        "wall_seconds": 0.0010808752849698067,
+        "cpu_seconds": 0.0010809999999999986
+      },
+      {
+        "name": "FULL_C_SOLVER_SETUP",
+        "status": "RETURNED",
+        "wall_seconds": 0.0033061658032238483,
+        "cpu_seconds": 0.003306000000000142
+      },
+      {
+        "name": "FULL_C_NONEMPTY_CHECK",
+        "status": "RETURNED",
+        "timeout_ms": 100,
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004089124966412783,
+        "actual_check_cpu_seconds": 0.004097000000000017,
+        "answer": "sat",
+        "wall_seconds": 0.0065772500820457935,
+        "cpu_seconds": 0.006200999999999901
+      },
+      {
+        "name": "FULL_C_SAT_MODEL_VALIDATION",
+        "status": "RETURNED",
+        "wall_seconds": 0.0002669999375939369,
+        "cpu_seconds": 0.00026599999999998847
+      },
+      {
+        "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+        "status": "RAISED",
+        "error_type": "ParserSyntaxError",
+        "error": "ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`",
+        "wall_seconds": 0.06985004106536508,
+        "cpu_seconds": 0.06894800000000001
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_0",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "a5082f592690e72feea198ccba0b81a90f74df84efd0f59530d87ab7e0adf4ab",
+        "ast_hash_scope": "lossless canonical JSON",
+        "wall_seconds": 0.06187620805576444,
+        "cpu_seconds": 0.06175800000000009
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_1",
+        "status": "RAISED",
+        "error_type": "ParserSyntaxError",
+        "error": "ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`",
+        "wall_seconds": 0.003702082671225071,
+        "cpu_seconds": 0.003702000000000094
+      }
+    ],
+    "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+    "exact_rows": {
+      "QUERIES": 2
+    },
+    "raw_query_verdict": null,
+    "full_C_nonempty": "sat",
+    "active_stage": null,
+    "latest_stage": "CLEANUP",
+    "full_contract_fact_sha256": "5fcb738ef2af979fe6eaa0d443bf82011e65736085fb192dd5ef955174299214",
+    "solver_cumulative_wall_seconds": 0.004089124966412783,
+    "solver_cumulative_cpu_seconds": 0.004097000000000017,
+    "parsed_asts": [
+      {
+        "select": [
+          {
+            "value": "QUERY_NAME"
+          },
+          {
+            "value": {
+              "round": [
+                {
+                  "avg": {
+                    "div": [
+                      "RATING",
+                      "POSITION"
+                    ]
+                  }
+                },
+                2
+              ]
+            },
+            "name": "QUALITY"
+          },
+          {
+            "value": {
+              "round": [
+                {
+                  "div": [
+                    {
+                      "mul": [
+                        100,
+                        {
+                          "sum": {
+                            "case": [
+                              {
+                                "then": 1,
+                                "when": {
+                                  "lt": [
+                                    "RATING",
+                                    3
+                                  ]
+                                }
+                              },
+                              0
+                            ]
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "count": 1
+                    }
+                  ]
+                },
+                2
+              ]
+            },
+            "name": "POOR_QUERY_PERCENTAGE"
+          }
+        ],
+        "from": "QUERIES",
+        "groupby": {
+          "value": "QUERY_NAME"
+        }
+      }
+    ],
+    "failure_stage": "OFFICIAL_PARSE_QUERY_1",
+    "engineering_class": "INCONCLUSIVE",
+    "error_type": "ParserSyntaxError",
+    "error": "ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py\", line 300, in parse\n    parsed_query = parse(query, null=SQL_NULL)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py\", line 37, in parse\n    result = _parse(common_parser, sql, null, calls)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py\", line 78, in _parse\n    parse_result = parser.parse_string(sql, parse_all=True)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py\", line 80, in output\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py\", line 149, in parse\n    return self._parseString(string, parse_all=parse_all)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py\", line 171, in _parseString\n    raise cause.best_cause from None\nmo_parsing.exceptions.ParseException: Expecting {StringEnd} | {from} | {order by} | {offset} | {fetch} | {limit}, found \"( (SELECT \" (at char 69), (line:1, col:70)\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/code/official_diagnostic_backend.py\", line 314, in run_attempt\n    env.analyze(*src['pair'])\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 860, in analyze\n    query_asts = [self.parse_sql_query(query) for query in queries]\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/code/official_diagnostic_backend.py\", line 294, in parse\n    ast = original_parse(sql)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 835, in parse_sql_query\n    return self.sql_parser.parse(query, dialect=self.dialect)  # .replace('\\\"', '\\'')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py\", line 322, in parse\n    raise ParserSyntaxError(query)\nerrors.ParserSyntaxError: ParserSyntaxError: cannot parse `SELECT QUERY_NAME, ROUND(AVG(RATING / POSITION), 2) AS QUALITY, ROUND( (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME AND RATING < 3) / (SELECT COUNT(1) FROM QUERIES WHERE QUERY_NAME = Q.QUERY_NAME) * 100, 2 ) AS POOR_QUERY_PERCENTAGE FROM QUERIES Q GROUP BY QUERY_NAME`\n",
+    "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+    "cleanup_cost": {
+      "wall_seconds": 0.009656999725848436,
+      "cpu_seconds": 0.009655999999999998
+    },
+    "exclusive_phase_cpu": {
+      "parse": 0.06546000000000018,
+      "scope_encode": 0.0034879999999998246,
+      "compare_encode": null,
+      "query_check": 0
+    },
+    "attempt_cost": {
+      "cpu_seconds": 0.09967899999999996,
+      "wall_seconds": 0.10414025001227856,
+      "worker_peak_rss_bytes_macos": 111378432
+    }
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.733904,
+    "cpu_system_seconds": 0.06508,
+    "peak_rss_bytes_macos": 111427584,
+    "wall_from_main_seconds": 0.7858103751204908
+  }
+}

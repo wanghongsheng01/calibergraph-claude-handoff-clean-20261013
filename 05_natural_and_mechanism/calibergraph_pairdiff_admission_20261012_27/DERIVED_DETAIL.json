@@ -1,0 +1,114 @@
+{
+  "scope": "Post-scan counting only; rules and eligibility unchanged; raw scanner labels SCANNER_ERROR are all tokenizer failures, reclassified transparently here. Exact statistics.median used rather than raw summary upper middle.",
+  "data": {
+    "parseval_bird": {
+      "records": 1534,
+      "exclusive_reasons_with_tokenization_reclassified": {
+        "BARRIER": 1065,
+        "NO_STRICT_ZERO_ELIMINATION": 152,
+        "UNSUPPORTED_PREDICATE_ADD": 1,
+        "UNSUPPORTED_PREDICATE_SUB": 4,
+        "UNSUPPORTED_PREDICATE_DIV": 3,
+        "PRIOR_CASE_DEVELOPMENT_OR_SQL_MATCH": 10,
+        "UNSUPPORTED_PREDICATE_BETWEEN": 16,
+        "NON_SIMPLE_PROJECTION": 25,
+        "EXACT_PAIR_CACHE_ONLY": 126,
+        "PAIR_OUTPUT_TYPE_MISMATCH": 30,
+        "SUBQUERY_OR_NONLITERAL_IN": 20,
+        "UNSUPPORTED_PREDICATE_TIMETOSTR": 10,
+        "UNSUPPORTED_PREDICATE_SUBQUERY": 12,
+        "UNRESOLVED_OR_AMBIGUOUS_COLUMN": 19,
+        "UNSUPPORTED_PREDICATE_ANONYMOUS": 18,
+        "UNSUPPORTED_PREDICATE_LIKE": 14,
+        "NOT_SINGLE_QUERY": 1,
+        "TOKENIZATION_ERROR": 8
+      },
+      "left_known_sql_matches": 10,
+      "right_known_sql_matches": 10,
+      "excluded_source_families": 7,
+      "nontrivial_admitted": 152,
+      "nontrivial_with_inner_join": 138,
+      "nontrivial_with_union_all": 0,
+      "nontrivial_shared_dag_nodes": {
+        "n": 152,
+        "min": 1,
+        "median": 2.0,
+        "p90_nearest_rank": 3,
+        "max": 7
+      },
+      "nontrivial_original_shared_dag_nodes": {
+        "n": 152,
+        "min": 4,
+        "median": 8.0,
+        "p90_nearest_rank": 11,
+        "max": 14
+      },
+      "nontrivial_residual_dag_nodes": {
+        "n": 152,
+        "min": 5,
+        "median": 9.0,
+        "p90_nearest_rank": 12,
+        "max": 15
+      },
+      "nontrivial_net_reduction": {
+        "n": 152,
+        "min": -0.25,
+        "median": -0.1,
+        "p90_nearest_rank": 0.0,
+        "max": 0.125
+      },
+      "admitted_pair_context_unique": 277
+    },
+    "verieql_leetcode": {
+      "records": 23994,
+      "exclusive_reasons_with_tokenization_reclassified": {
+        "BARRIER": 12651,
+        "PRIOR_CASE_DEVELOPMENT_OR_SQL_MATCH": 10558,
+        "PARSE_ERROR": 95,
+        "NO_STRICT_ZERO_ELIMINATION": 31,
+        "EXACT_PAIR_CACHE_ONLY": 6,
+        "UNSUPPORTED_PREDICATE_MUL": 2,
+        "UNSUPPORTED_PREDICATE_SUBQUERY": 10,
+        "NON_SIMPLE_PROJECTION": 573,
+        "SUBQUERY_OR_NONLITERAL_IN": 64,
+        "NOT_SINGLE_QUERY": 1,
+        "TOKENIZATION_ERROR": 3
+      },
+      "left_known_sql_matches": 10557,
+      "right_known_sql_matches": 27,
+      "excluded_source_families": 27,
+      "nontrivial_admitted": 31,
+      "nontrivial_with_inner_join": 0,
+      "nontrivial_with_union_all": 0,
+      "nontrivial_shared_dag_nodes": {
+        "n": 31,
+        "min": 1,
+        "median": 1,
+        "p90_nearest_rank": 1,
+        "max": 2
+      },
+      "nontrivial_original_shared_dag_nodes": {
+        "n": 31,
+        "min": 4,
+        "median": 5,
+        "p90_nearest_rank": 5,
+        "max": 5
+      },
+      "nontrivial_residual_dag_nodes": {
+        "n": 31,
+        "min": 5,
+        "median": 5,
+        "p90_nearest_rank": 5,
+        "max": 6
+      },
+      "nontrivial_net_reduction": {
+        "n": 31,
+        "min": -0.25,
+        "median": 0.0,
+        "p90_nearest_rank": 0.0,
+        "max": 0.0
+      },
+      "admitted_pair_context_unique": 37
+    }
+  }
+}

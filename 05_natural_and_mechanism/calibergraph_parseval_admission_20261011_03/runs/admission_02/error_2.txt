@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/implementation/probe_worker_v2.py", line 288, in <module>
+    main()
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/implementation/probe_worker_v2.py", line 154, in main
+    R['backend']=execute(conn,"SELECT version(), current_setting('server_version_num'), current_setting('lc_collate'), current_setting('lc_ctype'), current_setting('server_encoding'), current_setting('TimeZone')")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/implementation/probe_worker_v2.py", line 62, in execute
+    cur.execute(sql,params)
+psycopg2.errors.UndefinedObject: unrecognized configuration parameter "lc_collate"
+

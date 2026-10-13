@@ -1,0 +1,8 @@
+{
+  "status": "STATIC_BOUNDARY_NOTE_NOT_AN_EXECUTION_RESULT",
+  "fixed_checker_sha256": "8c03887df0f80e284695ea9485970deeac5d1a834bf9ec289c3ba4690fe30adb",
+  "contract_check_scope": "The fixed database is checked against all official Environment DBMS_facts and bound_constraints plus explicit row NULL/value equalities. This is a complete check of that encoded premise, not an independent proof that the source constraint translator implements every intended raw contract.",
+  "known_constraint_translation_boundary": "Another task is auditing a literal-left comparison direction issue in official add_constraints. This registration uses column-left comparisons/equalities, NOT NULL and explicit column BETWEEN; it does not rely on the identified literal-left form. No official source or original constraint has been modified.",
+  "independent_review_status": "The v4 kernel and fair_v4 integration were independently statically reviewed. The additional fixed_oracle_check.py has AST validation and author review only; the independent reviewer moved to contract_bridge_v1 and has not completed this script review. Parent controls any actual execution.",
+  "no_algorithm_success_inference": "An expected overflow rejection may make a fixed-control check match its analytical expectation; it is never counted as successful query equivalence or as a performance win."
+}

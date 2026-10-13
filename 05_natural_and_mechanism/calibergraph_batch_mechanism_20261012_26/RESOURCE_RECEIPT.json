@@ -1,0 +1,30 @@
+{
+  "date_utc": "2026-10-12",
+  "scope": "Static research and bounded standard-library counting only",
+  "initial_load_1_5_15_min": [3.75, 3.63, 3.37],
+  "later_load_1_5_15_min": [4.59, 3.62, 3.29],
+  "later_memory_snapshot": {
+    "page_size_bytes": 16384,
+    "pages_free": 3696,
+    "pages_active": 172840,
+    "pages_inactive": 157193,
+    "pages_speculative": 15019,
+    "pages_wired_down": 222704,
+    "pages_occupied_by_compressor": 437106
+  },
+  "cpu_core_count": null,
+  "physical_memory_bytes": null,
+  "capacity_read_note": "Read-only sysctl query was denied by sandbox; no escalation requested. vm_stat snapshot is not an available-memory or pressure conclusion; cumulative swap counters are not current swap rates.",
+  "counting_limits": {
+    "stdlib_only": true,
+    "source_file_bytes_cap": 33554432,
+    "jsonl_line_bytes_cap": 1048576,
+    "inventory_cpu_seconds_cap": 45
+  },
+  "new_sql_executions": 0,
+  "new_parser_executions": 0,
+  "new_solver_executions": 0,
+  "new_benchmark_runs": 0,
+  "training_jobs": 0,
+  "claim_limit": "No experiment worker was started; no assertion that unrelated_project throughput was measured or that the machine was idle."
+}

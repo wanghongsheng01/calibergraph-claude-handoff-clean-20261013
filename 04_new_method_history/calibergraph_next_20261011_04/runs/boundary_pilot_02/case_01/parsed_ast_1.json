@@ -1,0 +1,17 @@
+{
+  "select": {
+    "value": "CLASS"
+  },
+  "from": "COURSES",
+  "groupby": {
+    "value": "CLASS"
+  },
+  "having": {
+    "gte": [
+      {
+        "count": "*"
+      },
+      5
+    ]
+  }
+}

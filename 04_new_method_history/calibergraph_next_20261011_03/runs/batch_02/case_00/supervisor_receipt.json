@@ -1,0 +1,146 @@
+{
+  "case_index": 0,
+  "case_id": "dev03_01",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:17.500024+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 1753088,
+  "sampled_peak_group_cpu_seconds": 0.0,
+  "sample_count": 1,
+  "stop_remainder": null,
+  "pid": 43488,
+  "owned_pgid": 43488,
+  "worker_wait4_usage": {
+    "pid": 43488,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.028284,
+    "system_cpu_seconds": 0.009176,
+    "cpu_seconds": 0.03746,
+    "maxrss_bytes_darwin": 21626880
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.054314292035996914,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "latest_stage": null,
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.0,
+    "check_count": 0,
+    "case_index": 0,
+    "id": "dev03_01",
+    "updated_monotonic": 2259248.885200208,
+    "observed_monotonic": 2259248.897201333,
+    "solver_watchdog_estimated_seconds": 0.0,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "adcaea44198991ea4ef698c474c6a68bce2378529d5bfe084341808659c318a8",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_01",
+    "case_index": 0,
+    "status": "RETURNED",
+    "engineering_class": "SCHEMA_UNSUPPORTED",
+    "strict_class": "SCHEMA_UNSUPPORTED",
+    "attempts": [],
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1127.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 9581,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "3a089d4292cd95de6a725b163704249d3b39f6424d348a8ebcc70e2f6839a405",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "SPENDING__USER_ID"
+            },
+            {
+              "value": "SPENDING__SPEND_DATE"
+            },
+            {
+              "value": "SPENDING__PLATFORM"
+            }
+          ]
+        },
+        {
+          "gt": [
+            {
+              "value": "SPENDING__AMOUNT"
+            },
+            0
+          ]
+        },
+        {
+          "in": [
+            {
+              "value": "SPENDING__PLATFORM"
+            },
+            [
+              {
+                "literal": "DESKTOP"
+              },
+              {
+                "literal": "MOBILE"
+              }
+            ]
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1127.csv",
+      "index": 171,
+      "pair": [
+        "SELECT P.SPEND_DATE,P.PLATFORM,IFNULL(SUM(AMOUNT), 0) TOTAL_AMOUNT,COUNT(USER_ID) TOTAL_USERS FROM (SELECT DISTINCT(SPEND_DATE), 'DESKTOP' PLATFORM FROM SPENDING UNION SELECT DISTINCT(SPEND_DATE), 'MOBILE' PLATFORM FROM SPENDING UNION SELECT DISTINCT(SPEND_DATE), 'BOTH' PLATFORM FROM SPENDING) P LEFT JOIN (SELECT SPEND_DATE, USER_ID, IF(MOBILE_AMOUNT > 0, IF(DESKTOP_AMOUNT > 0, 'BOTH', 'MOBILE'), 'DESKTOP') PLATFORM,(MOBILE_AMOUNT + DESKTOP_AMOUNT) AMOUNT FROM (SELECT SPEND_DATE, USER_ID, SUM(CASE PLATFORM WHEN 'MOBILE' THEN AMOUNT ELSE 0 END) MOBILE_AMOUNT, SUM(CASE PLATFORM WHEN 'DESKTOP' THEN AMOUNT ELSE 0 END) DESKTOP_AMOUNT FROM SPENDING GROUP BY SPEND_DATE, USER_ID) O) T ON P.PLATFORM=T.PLATFORM AND P.SPEND_DATE=T.SPEND_DATE GROUP BY SPEND_DATE, PLATFORM",
+        "WITH CTE1 AS (SELECT USER_ID, SPEND_DATE, IF(COUNT(DISTINCT PLATFORM)=1,PLATFORM,'BOTH') AS PLATFORM, SUM(AMOUNT) AS AMOUNT FROM SPENDING GROUP BY USER_ID, SPEND_DATE), CTE2 AS (SELECT SPEND_DATE, PLATFORM, SUM(AMOUNT) AS TOTAL_AMOUNT, COUNT(USER_ID) AS TOTAL_USERS FROM CTE1 GROUP BY SPEND_DATE, PLATFORM), CTE3 AS (SELECT SPEND_DATE, PLATFORM FROM (SELECT DISTINCT SPEND_DATE FROM SPENDING) T1 CROSS JOIN (SELECT DESKTOP AS PLATFORM UNION SELECT MOBILE AS PLATFORM UNION SELECT BOTH AS PLATFORM) T2) SELECT A.SPEND_DATE, A.PLATFORM, IFNULL(TOTAL_AMOUNT, 0) AS TOTAL_AMOUNT, IFNULL(TOTAL_USERS, 0) AS TOTAL_USERS FROM CTE3 A LEFT JOIN CTE2 B ON A.SPEND_DATE = B.SPEND_DATE AND A.PLATFORM=B.PLATFORM"
+      ],
+      "schema": {
+        "SPENDING": {
+          "AMOUNT": "INT",
+          "PLATFORM": "ENUM,DESKTOP,MOBILE",
+          "SPEND_DATE": "DATE",
+          "USER_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "8ea23f976781dd631b981a28009e1dc189085374724c205fa1b89c3007174f88",
+      "3a963258edc1d58e51defbcb2793830e8a86c92bbbc9bcd771851a48a634f234"
+    ],
+    "schema_sha256": "91e4e9a0a027377fd0b1eccf4a0923378d0c4e11d5136bc9aa7bd635fba1e41b",
+    "constraint_sha256": "c54a2812b9846f26b468cb13e43212b7ac003218e995ccccad8dfa0f2473841d",
+    "failure_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "reason": "schema.SPENDING.PLATFORM: official create_database does not encode this type: 'ENUM,DESKTOP,MOBILE'",
+    "solver_calls": [],
+    "solver_cumulative_wall_seconds": 0.0,
+    "solver_cumulative_cpu_seconds": 0.0
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.038619,
+    "parent_system_cpu_seconds": 0.031314999999999996,
+    "all_reaped_children_user_cpu_seconds": 0.033229,
+    "all_reaped_children_system_cpu_seconds": 0.031174999999999998,
+    "supervisor_plus_reaped_cpu_seconds": 0.134338,
+    "observed_total_cpu_seconds": 8.011059999999999,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

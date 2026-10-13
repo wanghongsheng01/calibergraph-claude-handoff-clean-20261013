@@ -1,0 +1,1 @@
+SELECT AVG(weight_kg) FROM superhero WHERE gender_id = 2

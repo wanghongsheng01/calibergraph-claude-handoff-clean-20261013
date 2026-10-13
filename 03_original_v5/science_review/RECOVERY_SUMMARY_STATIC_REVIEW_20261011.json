@@ -1,0 +1,51 @@
+{
+  "status": "READ_ONLY_STATIC_REVIEW_NO_TARGET_EXECUTION",
+  "reviewer": "/root/runtime_guard/recovery_summary_review",
+  "sources": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/manuscript_v2/summarize_saved_v5.py",
+      "sha256": "9572c3549973cb30e3e257e56a1733b4fe52b6299bda6336ae08ac9c29321044"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+      "sha256": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py",
+      "sha256": "56c5f768da28e35a3e796638b6754c6274a006eec4ca11331a7260fffa07a933"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_recovery_campaign.py",
+      "sha256": "7b5767e21c4c19d6d7a44402360517402eec59ebe68f5f9cef874a7d4ea8b333"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/V5_RECOVERY_READONLY_SNAPSHOT_20261011T055109.json",
+      "sha256": "93c4ff0e13a7180288bc301edfbd8a8105efb908ff6b227ace4b8d581e161942"
+    }
+  ],
+  "scope": "Static source and named frozen read-only snapshot only. No live result reads, no target/solver/native execution, no edits to existing scripts.",
+  "verdict": "P1_EXPLICIT_SLOT_SELECTION_REQUIRED_BEFORE_RECOVERY_AGGREGATION",
+  "findings": [
+    {
+      "severity": "P1",
+      "location": "manuscript_v2/summarize_saved_v5.py:45-57,147-148",
+      "title": "Report-level selection cannot merge frozen partial batch 051 with recovery starting 052",
+      "evidence": "Each report selects its entire registered [start,start+limit) regardless of row state. Old batch 051 selects 51,52,53. Recovery [52,84) overlaps at 52,53 and duplicate guard raises. Omitting old report loses returned resource-stop slot 51; omitting recovery loses repaired logical slots.",
+      "required_change": "Create a new immutable explicit attempt-selection ledger: retain old report index 51; select new recovery report index 52 and 53 onward. Include original report hashes and index/key identity. Preserve old 52 STARTED/unfinished and old 53 NOT_RUN as alternatives, with selection reason. Do not edit raw supervisor selected range, delete failures, or use latest-wins."
+    }
+  ],
+  "verified_boundaries": {
+    "resource_stop": "v5 supervisor.py:151-152 requires no stop_reason, exit_code==0, worker COMPLETE and expectation not false. Frozen snapshot slots 19 and 39 record RSS_OBSERVATION_UNAVAILABLE despite exit0/COMPLETE; they must remain non-strict. Slot 51 also remains resource-stop failure/unknown.",
+    "summary_strict": "summarize_saved_v5.py:124 trusts recorded valid_completed_result, rather than reconstructing it. Correct frozen v5 records are safe. New recovery summarizer should independently assert not resource stop, no stop_reason, exit0, worker COMPLETE, valid_completed_result True and expectation not false; contradictory source fields must be an issue or rejection, never strict_success.",
+    "cpu_scope": "cpu_sum_all_observed_seconds at lines 118-130 sums only selected logical-slot rows with full_process_cpu_seconds present. It is selected-attempt observed CPU, not all-attempt or whole-campaign cost. Missing interrupted attempt CPU is unavailable, not zero. Report selected-attempt CPU and all-observed-attempt CPU separately, deduplicate attempt identity, and state missing-cost count. Do not derive speedup from this partial/recovery accounting.",
+    "pooling": "Lines 43-44,98-99 reject multiple declared runtime_lock_sha256 or program_sha256 mappings within one summarize call. Worker lock/suite/index and saved worker SHA are checked. Main and SpotIt must remain separate summaries/pools even with the same suite and numeric native version. This is a lock-based provenance check, not a fresh native execution audit.",
+    "program_provenance": "Summary enforces single program_sha256 mapping internally but does not expose that mapping in returned JSON; include it in a new recovery summary for inspectable provenance.",
+    "denominator": "Keep all 168 registered slots per kind, selected evidence once per logical slot; retain rejected contracts, unknown, resource-stop and not-run states. Extra interrupted attempts do not enlarge logical-slot denominator."
+  },
+  "not_reviewed": [
+    "No read_cached_execution script was found by filename under task-7; no claim about an unseen recovery summarizer.",
+    "No new live recovery results were read or validated."
+  ],
+  "p0_count": 0,
+  "p1_count": 1
+}

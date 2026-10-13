@@ -1,0 +1,175 @@
+{
+  "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev03_05",
+    "case_index": 4,
+    "status": "RETURNED",
+    "engineering_class": "SCHEMA_UNSUPPORTED",
+    "strict_class": "SCHEMA_UNSUPPORTED",
+    "attempts": [],
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 10021,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "8a168706ea27e0cc41fa411ec5bd4d777cbe39503454fe178e949d0666494381",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "REMOVALS__POST_ID"
+            }
+          ]
+        },
+        {
+          "in": [
+            {
+              "value": "ACTIONS__ACTION"
+            },
+            [
+              {
+                "literal": "VIEW"
+              },
+              {
+                "literal": "LIKE"
+              },
+              {
+                "literal": "REACTION"
+              },
+              {
+                "literal": "COMMENT"
+              },
+              {
+                "literal": "REPORT"
+              },
+              {
+                "literal": "SHARE"
+              }
+            ]
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "REMOVALS__POST_ID"
+            },
+            {
+              "value": "ACTIONS__POST_ID"
+            }
+          ]
+        },
+        {
+          "imply": [
+            {
+              "eq": [
+                {
+                  "value": "ACTIONS__ACTION"
+                },
+                "REPORT"
+              ]
+            },
+            {
+              "neq": [
+                "ACTIONS__EXTRA",
+                "NULL"
+              ]
+            }
+          ]
+        },
+        {
+          "imply": [
+            {
+              "eq": [
+                {
+                  "value": "REMOVALS__POST_ID"
+                },
+                {
+                  "value": "ACTIONS__POST_ID"
+                }
+              ]
+            },
+            {
+              "neq": [
+                {
+                  "value": "ACTIONS__ACTION"
+                },
+                "REPORT"
+              ]
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1132.csv",
+      "index": 292,
+      "pair": [
+        "FROM (SELECT (COUNT(DISTINCT R.POST_ID) / COUNT(DISTINCT A.POST_ID)) * 100 AS REMOVAL_PERCENT, A.ACTION_DATE FROM ACTIONS A LEFT JOIN REMOVALS R ON A.POST_ID = R.POST_ID WHERE A.EXTRA = 'SPAM' GROUP BY A.ACTION_DATE ) X",
+        "WITH CTE AS(SELECT * FROM ACTIONS WHERE EXTRA='SPAM'), CTE1 AS(SELECT COUNT(DISTINCT R.POST_ID)/ COUNT(DISTINCT C.POST_ID) AS DAILY_PERCENT FROM CTE C LEFT JOIN REMOVALS R ON C.POST_ID=R.POST_ID GROUP BY ACTION_DATE) SELECT ROUND(AVG(DAILY_PERCENT)*100,2) AS AVERAGE_DAILY_PERCENT FROM CTE1"
+      ],
+      "schema": {
+        "ACTIONS": {
+          "ACTION": "ENUM,VIEW,LIKE,REACTION,COMMENT,REPORT,SHARE",
+          "ACTION_DATE": "DATE",
+          "EXTRA": "ENUM,SPAM,RACISM,NULL",
+          "POST_ID": "INT",
+          "USER_ID": "INT"
+        },
+        "REMOVALS": {
+          "POST_ID": "INT",
+          "REMOVE_DATE": "DATE"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+      "71edda688f50325688171de2489d473d742dd33ea626082b6b7e6d82821bbf83"
+    ],
+    "schema_sha256": "c67daa15c7f3b2b0a28a0bc9b3d3e8f31a16af90e04a08988cb8e95b0cffc0f8",
+    "constraint_sha256": "561da2a4582eae44870e212a6e7c58aee0d710b321cde24b3623f5006c76800c",
+    "failure_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "reason": "schema.ACTIONS.ACTION: official create_database does not encode this type: 'ENUM,VIEW,LIKE,REACTION,COMMENT,REPORT,SHARE'",
+    "solver_calls": [],
+    "solver_cumulative_wall_seconds": 0.0,
+    "solver_cumulative_cpu_seconds": 0.0
+  },
+  "scope": "Registered input only; exact2 official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "065f8574563a3cb0fab2dd98a4e64fd44fe17f66f4b32ec73a2bee9bb39b8a55",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_diagnostic_worker.py": "c8c9ffcc2d22807ef4333d43ebdc11dc08b64f54956a00ce1dc0f2675b9bb1ec",
+    "official_diagnostic_backend.py": "b599f04890b8d7cbf5b12b872a8cbf8a97a0fa74f2ac49ec9eb88fa48e115e5e",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d"
+  },
+  "registered_group_count": 21,
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "STAGE_START",
+    "id": "dev03_05",
+    "attempt": null,
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION"
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.028428,
+    "cpu_system_seconds": 0.008319,
+    "peak_rss_bytes_macos": 20774912,
+    "wall_from_main_seconds": 0.015665999613702297
+  }
+}

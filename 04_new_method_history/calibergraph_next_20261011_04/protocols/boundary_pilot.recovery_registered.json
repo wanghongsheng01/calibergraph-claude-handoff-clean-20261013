@@ -1,0 +1,145 @@
+{
+  "id": "calibergraph-04-exact-boundary-pilot-v1",
+  "status": "REGISTERED_ZERO_EXEC_BOOTSTRAP_RECOVERY",
+  "source_case_id": "dev03_18",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "runtime_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+    "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+  },
+  "original_sql_sha256": [
+    "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+    "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+  ],
+  "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+  "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+  "registered_cases": [
+    {
+      "id": "dev04_N1_concrete",
+      "source_case_id": "dev03_18",
+      "exact_rows": 1,
+      "kind": "concrete",
+      "fixture": "all_null_class_and_nonnull_control"
+    },
+    {
+      "id": "dev04_N1_official",
+      "source_case_id": "dev03_18",
+      "exact_rows": 1,
+      "kind": "official",
+      "fixture": "unconstrained_original_C"
+    },
+    {
+      "id": "dev04_N2_concrete",
+      "source_case_id": "dev03_18",
+      "exact_rows": 2,
+      "kind": "concrete",
+      "fixture": "all_null_class_and_nonnull_control"
+    },
+    {
+      "id": "dev04_N2_official",
+      "source_case_id": "dev03_18",
+      "exact_rows": 2,
+      "kind": "official",
+      "fixture": "unconstrained_original_C"
+    },
+    {
+      "id": "dev04_N3_concrete",
+      "source_case_id": "dev03_18",
+      "exact_rows": 3,
+      "kind": "concrete",
+      "fixture": "all_null_class_and_nonnull_control"
+    },
+    {
+      "id": "dev04_N3_official",
+      "source_case_id": "dev03_18",
+      "exact_rows": 3,
+      "kind": "official",
+      "fixture": "unconstrained_original_C"
+    },
+    {
+      "id": "dev04_N4_concrete",
+      "source_case_id": "dev03_18",
+      "exact_rows": 4,
+      "kind": "concrete",
+      "fixture": "all_null_class_and_nonnull_control"
+    },
+    {
+      "id": "dev04_N4_official",
+      "source_case_id": "dev03_18",
+      "exact_rows": 4,
+      "kind": "official",
+      "fixture": "unconstrained_original_C"
+    },
+    {
+      "id": "dev04_N5_concrete",
+      "source_case_id": "dev03_18",
+      "exact_rows": 5,
+      "kind": "concrete",
+      "fixture": "all_null_class_and_nonnull_control"
+    },
+    {
+      "id": "dev04_N5_official",
+      "source_case_id": "dev03_18",
+      "exact_rows": 5,
+      "kind": "official",
+      "fixture": "unconstrained_original_C"
+    }
+  ],
+  "worker_cpu_limit_seconds": 3,
+  "worker_wall_limit_seconds": 4,
+  "external_rss_limit_bytes": 268435456,
+  "internal_z3_memory_parameter_mb": 128,
+  "contract_check_timeout_ms": 100,
+  "query_check_timeout_ms": 700,
+  "solver_cumulative_wall_limit_seconds": 2.0,
+  "solver_timeout_reserve_seconds": 0.1,
+  "supervisor_solver_stop_seconds": 1.5,
+  "maximum_independent_environment_attempts": 1,
+  "maximum_active_workers": 1,
+  "nice": 15,
+  "total_parent_cpu_limit_seconds": 60,
+  "baseline": {
+    "id": "PINNED_OFFICIAL_COLD_FULL_C_PLUS_QUERY",
+    "fixture": "unconstrained_original_C",
+    "scope": "Complete unchanged original schema/C/pair; exactly N live physical rows because official create_database adds NotDeleted for every row; no rows/facts removed."
+  },
+  "concrete": {
+    "fixture": "all_null_class_and_nonnull_control",
+    "scope": "Mechanism fixtures only: N distinct nonnull STUDENT strings and all NULL CLASS; same rows/STUDENT with CLASS set to one nonnull string. Original two SQL strings executed unchanged. Not natural data labels or new tests."
+  },
+  "repeat_policy": "One manually preregistered recovery from proven zero worker exec. Exact same ten slots/order/input/runtime/check limits; no per-slot retry thereafter.",
+  "failure_policy": "Retain all ten frozen slots and original order; any unknown/error/resource-stop is inconclusive, never equivalence or a positive scientific mechanism.",
+  "worker_paths": {
+    "concrete": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/concrete_boundary_worker.py",
+    "official": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/official_boundary_worker.py"
+  },
+  "supervisor": {
+    "python_executable": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+    "required_flags": [
+      "-B",
+      "-I",
+      "-S"
+    ],
+    "external_guards": "Root-owned frozen machine gate, one nice15 worker, 3s CPU/4s wall/256MiB sampled RSS, completed+active solver wall >=1.5s stop; every worker/probe/parent CPU charged to 60s."
+  },
+  "artifacts": {
+    "result": "results.json",
+    "events": "events.jsonl",
+    "progress": "progress.json"
+  },
+  "root_binding_required": [
+    "status, registered_utc and source/resource/code freeze receipts before execution",
+    "supervisor policy and global previous/preflight CPU charges",
+    "hash all code and this completed protocol in root-owned freeze"
+  ],
+  "registered_utc": "2026-10-11T13:30:29.275365+00:00",
+  "method_novelty_hypothesis": null,
+  "problem_hypothesis": "H-P: original COUNT>=5 NULL-group boundary appears at N=5 and is absent in matched nonnull CLASS control",
+  "prior_charge_cpu_seconds": 3.408329,
+  "tail_reserve_cpu_seconds": 0.2,
+  "execution_context": "AUTO_REVIEW_APPROVED_HOST_EXECUTION_WITH_SELF_ONLY_NICE15",
+  "bootstrap_exception": "decisions/bootstrap_amendment_01.json"
+}

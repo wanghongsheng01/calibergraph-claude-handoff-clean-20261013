@@ -1,0 +1,60 @@
+{
+  "reviewer": "independent execution/semantic review agent",
+  "verdict": "TWO_INDEPENDENTLY_REPLAYED_FULL_C_COUNTEREXAMPLES_AND_TWO_BOUNDED_SYMBOLIC_UNSAT",
+  "sqlite_audit": "review_local/SQLITE_AUDIT.json",
+  "sqlite_audit_script": "review_local/independent_sqlite_audit.py",
+  "frozen_hashes_verified": 336,
+  "source_tables": 14,
+  "source_columns": 42,
+  "explicit_constraint_mappings": 41,
+  "independent_sqlite_witness_replays": 2,
+  "independent_scientific_solver_runs": 0,
+  "process_rss_queries": 0,
+  "aggregate_rss_guarantee": false,
+  "whole_sqlite_domain_semantic_closure": false,
+  "bounded_unsat_slots": [
+    "toxicology__319_UA",
+    "toxicology__319_precise"
+  ],
+  "validated_counterexample_slots": [
+    "superhero__750_UA",
+    "superhero__750_precise"
+  ],
+  "protocol_events_observed": [],
+  "negative_weight_is_source_ddl_admissible_synthetic_data": true,
+  "cost": {
+    "verification_state": "INDEPENDENTLY_READ_AND_ASSERTED",
+    "elapsed_s": 2.249685457907617,
+    "owned_handle_count": 11,
+    "worker_count": 4,
+    "z3_count": 7,
+    "all_reaped": true,
+    "worker_returncodes": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "remaining_blocker": null,
+  "execution_audit": "review_local/EXECUTION_AUDIT.json",
+  "result_prose_audit": {
+    "path": "RESULT.zh.md",
+    "sha256": "f4919ade2bd18541495f1ebd2a1f30129de1d99f6d7769d97a8d5dfdcf09257e",
+    "verdict": "ACCEPT_WITH_STATED_BOUNDARIES",
+    "material_unsupported_claims_found": false
+  },
+  "final_document_audits": [
+    {
+      "path": "RESULT.zh.md",
+      "sha256": "f4919ade2bd18541495f1ebd2a1f30129de1d99f6d7769d97a8d5dfdcf09257e",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "RECOVERY.zh.md",
+      "sha256": "df4b9e126c306104be10a4ff834d7ae67a32ffd090106499a6c26bf473aa3523",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    }
+  ],
+  "recovery_audit_scope": "Static instructions review only; no archive/dependency reacquisition, no remote backup verification and no solver reconstruction performed by independent reviewer."
+}

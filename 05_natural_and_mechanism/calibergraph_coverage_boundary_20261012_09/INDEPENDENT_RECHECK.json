@@ -1,0 +1,42 @@
+{
+  "verdict": "PASS_AFTER_REQUIRED_CORRECTION",
+  "scope": "R1 source raw-line/official-strip distinction and hashes only; no new matters",
+  "created_utc": "2026-10-12T08:33:59.193003+00:00",
+  "resolved_findings": [
+    "R1"
+  ],
+  "remaining_must_fix": [],
+  "initial_review_verdict_preserved": "MUST_FIX",
+  "initial_review_hashes_preserved": {
+    "INDEPENDENT_REVIEW.zh.md": "2f7c6f61ac0dbb26883daa224380384b9aca52ae2fa1d8b58240c44a021cccd4",
+    "INDEPENDENT_REVIEW.json": "2cd433dbe48e6b5c5a8900d486fc97136c92ac811cb841cb984eaf0af5b33f42"
+  },
+  "current_reviewed_hashes": {
+    "REPORT.zh.md": "2cf198aa997db1cfc76ec3a1e82539098af7617d6c38d72b52a48f5fd0270b55",
+    "SOURCE_CHECKS.json": "d7bf1f09b0dc9af4875a7815357c3786dfc4d9e8cd931aab16e37501cfb2b934",
+    "AUTHOR_REVISIONS.json": "c7122c8a8a663f867c6a9ad2eaf25fdca92bd5babd62f894e3d2747de1db1203"
+  },
+  "checks": {
+    "initial_report_sourcechecks_snapshots_match_initial_review_hashes": true,
+    "author_revision_current_hashes_match": true,
+    "other_initial_reviewed_files_unchanged": true,
+    "candidate_file_hashes_verified_unchanged": 40,
+    "predicted_raw_line_exact_count": 9,
+    "predicted_official_strip_exact_count": 10,
+    "only_raw_line_difference": "superhero__750 trailing one ASCII space",
+    "all_20_line_hashes_recomputed": true,
+    "report_provenance_claim_corrected": true
+  },
+  "new_science_executions": 0,
+  "sql_calls": 0,
+  "solver_calls": 0,
+  "network_calls": 0,
+  "new_tests": 0,
+  "runtime_admission_confirmed": false,
+  "experimental_execution_authorized": false,
+  "retained_limits": [
+    "Static review only; no baseline or solver experiment",
+    "N=1 type and full-C admission remains pending",
+    "No full SQLite equivalence, mechanism novelty, independent test or submission-ready claim"
+  ]
+}

@@ -1,0 +1,1610 @@
+{
+  "case_index": 6,
+  "case_id": "dev03_15_exact2",
+  "registered_slot": {
+    "id": "dev03_15_exact2",
+    "kind": "official",
+    "source_case_index": 14,
+    "source_case_id": "dev03_15",
+    "exact_rows": 2
+  },
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T14:29:06.638490+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 103432192,
+  "sampled_peak_group_cpu_seconds": 0.75,
+  "sample_count": 8,
+  "stop_remainder": null,
+  "worker_wait4_usage": {
+    "pid": 50370,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.765332,
+    "system_cpu_seconds": 0.065609,
+    "cpu_seconds": 0.830941,
+    "maxrss_bytes_darwin": 107282432
+  },
+  "observed_stage_sequence": [
+    "NATIVE_AND_OFFICIAL_IMPORT",
+    "OFFICIAL_PARSE_QUERY_0"
+  ],
+  "cpu_accounting_before_launch": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.164904,
+    "parent_system_cpu_seconds": 0.15899,
+    "all_reaped_children_user_cpu_seconds": 6.908198,
+    "all_reaped_children_system_cpu_seconds": 1.784997,
+    "supervisor_plus_reaped_cpu_seconds": 9.017089,
+    "observed_total_cpu_seconds": 19.017089,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 19.217088999999998,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "command": [
+    "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_worker.py",
+    "--protocol",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/protocols/generation_replay.registered.json",
+    "--case-index",
+    "6",
+    "--out",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/runs/generation_replay_01/case_06"
+  ],
+  "pid": 50370,
+  "owned_pgid": 50370,
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.8688348750583827,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.03609958291053772,
+    "check_count": 2,
+    "case_index": 6,
+    "id": "dev03_15_exact2",
+    "updated_monotonic": 2265718.809485291,
+    "observed_monotonic": 2265718.840391958,
+    "solver_watchdog_estimated_seconds": 0.03609958291053772,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "0cbab96f3154d6444decf041d3f05a056f632447fcf0b4c6997b9fd8579c2e19",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_15_exact2",
+    "source_case_id": "dev03_15",
+    "case_index": 6,
+    "status": "RETURNED",
+    "engineering_class": "QUERY_RETURNED",
+    "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_15",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0014514578506350517,
+            "cpu_seconds": 0.0014520000000001199
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 4,
+            "base_fact_count": 34,
+            "admitted_delta_facts": 4,
+            "full_fact_count": 38,
+            "wall_seconds": 0.0018493328243494034,
+            "cpu_seconds": 0.0018489999999998785
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.0032357918098568916,
+            "cpu_seconds": 0.003234999999999988
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.0042997500859200954,
+            "actual_check_cpu_seconds": 0.004305999999999921,
+            "answer": "sat",
+            "wall_seconds": 0.006532083265483379,
+            "cpu_seconds": 0.006506000000000012
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0003850003704428673,
+            "cpu_seconds": 0.0003850000000000797
+          },
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.00022241706028580666,
+            "cpu_seconds": 0.00022200000000005549
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.0034832917153835297,
+            "cpu_seconds": 0.003483000000000014
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              19,
+              19
+            ],
+            "output_tuple_counts": [
+              6,
+              6
+            ],
+            "wall_seconds": 0.07738895807415247,
+            "cpu_seconds": 0.07731900000000003
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "89f5502283453f1ae2ddb83b6c4d5f586d1fddffc53d610b1f7b3ceb0e19ee4d",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.05789929209277034,
+            "cpu_seconds": 0.05789599999999995
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "5c7ad538c2fe2b18d961133ca78e13bad298c5f3ef676e612b4f79eaebab65d6",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0026307497173547745,
+            "cpu_seconds": 0.00262999999999991
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 700,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.031799832824617624,
+            "actual_check_cpu_seconds": 0.031806,
+            "answer": "unsat",
+            "wall_seconds": 0.03428112482652068,
+            "cpu_seconds": 0.03425
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "NPV": 2,
+          "QUERIES": 2
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "contract_model_sanity": {
+          "status": "RETURNED",
+          "model_origin": "FULL_C_NONEMPTY_CHECK",
+          "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+          "query_sat_witness": false,
+          "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY",
+          "witness": {
+            "all_physical_raw_values": {
+              "NPV": [
+                {
+                  "ID": 1,
+                  "NPV": 0,
+                  "YEAR": 0
+                },
+                {
+                  "ID": 0,
+                  "NPV": 0,
+                  "YEAR": 1
+                }
+              ],
+              "QUERIES": [
+                {
+                  "ID": 1,
+                  "YEAR": 0
+                },
+                {
+                  "ID": 1,
+                  "YEAR": 1
+                }
+              ]
+            },
+            "decoded_values": {
+              "NPV": [
+                {
+                  "ID": 1,
+                  "NPV": 0,
+                  "YEAR": 0
+                },
+                {
+                  "ID": 0,
+                  "NPV": 0,
+                  "YEAR": 1
+                }
+              ],
+              "QUERIES": [
+                {
+                  "ID": 1,
+                  "YEAR": 0
+                },
+                {
+                  "ID": 1,
+                  "YEAR": 1
+                }
+              ]
+            },
+            "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+          },
+          "replay": {
+            "status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+            "full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+            "original_sql_unchanged": true,
+            "query_rewrites": 0,
+            "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+            "independent_full_C": {
+              "status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+              "original_clause_count": 4,
+              "checked_clause_count": 4,
+              "semantics": "Pinned official operational C, including Cartesian column comparisons; not business-completeness proof."
+            },
+            "concrete_database": {
+              "NPV": [
+                {
+                  "ID": 1,
+                  "NPV": 0,
+                  "YEAR": 0
+                },
+                {
+                  "ID": 0,
+                  "NPV": 0,
+                  "YEAR": 1
+                }
+              ],
+              "QUERIES": [
+                {
+                  "ID": 1,
+                  "YEAR": 0
+                },
+                {
+                  "ID": 1,
+                  "YEAR": 1
+                }
+              ]
+            },
+            "original_sql_sha256": [
+              "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+              "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+            ],
+            "admission": "INT-only outer joins, equality and row equality, IFNULL/COALESCE; RIGHT JOIN requires SQLite >=3.39.",
+            "sqlite_version": "3.53.3",
+            "original_sql_results": [
+              [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ]
+              ],
+              [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ]
+              ]
+            ],
+            "comparison": "bag multiplicities, exact INT/NULL equality",
+            "generated_official_model": true,
+            "phase_costs": [
+              {
+                "name": "INDEPENDENT_FULL_C_CHECK",
+                "status": "RETURNED",
+                "wall_seconds": 3.570783883333206e-05,
+                "cpu_seconds": 3.4999999999896225e-05
+              },
+              {
+                "name": "SQLITE_LOAD_GENERATED_DATABASE",
+                "status": "RETURNED",
+                "wall_seconds": 0.00019841594621539116,
+                "cpu_seconds": 0.00019700000000004436
+              },
+              {
+                "name": "SQLITE_ORIGINAL_QUERY_0",
+                "status": "RETURNED",
+                "wall_seconds": 2.9875431209802628e-05,
+                "cpu_seconds": 2.9000000000084514e-05
+              },
+              {
+                "name": "SQLITE_ORIGINAL_QUERY_1",
+                "status": "RETURNED",
+                "wall_seconds": 1.966673880815506e-05,
+                "cpu_seconds": 1.8999999999935735e-05
+              }
+            ],
+            "model_origin": "FULL_C_NONEMPTY_CHECK",
+            "query_sat_witness": false
+          }
+        },
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "1ad99ac0a91f7d2c514e89fc6104e25ff3958f626fbe5de92ec3e9458846490f",
+        "solver_cumulative_wall_seconds": 0.03609958291053772,
+        "solver_cumulative_cpu_seconds": 0.03611199999999992,
+        "parsed_asts": [
+          {
+            "select": [
+              {
+                "value": "Q__ID"
+              },
+              {
+                "value": "Q__YEAR"
+              },
+              {
+                "value": {
+                  "ifnull": [
+                    "N__NPV",
+                    0
+                  ]
+                },
+                "name": "NPV"
+              }
+            ],
+            "from": [
+              {
+                "value": "QUERIES",
+                "name": "Q"
+              },
+              {
+                "left join": {
+                  "value": "NPV",
+                  "name": "N"
+                },
+                "on": {
+                  "and": [
+                    {
+                      "eq": [
+                        "Q__ID",
+                        "N__ID"
+                      ]
+                    },
+                    {
+                      "eq": [
+                        "Q__YEAR",
+                        "N__YEAR"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "select": [
+              {
+                "value": "QUERIES__ID"
+              },
+              {
+                "value": "QUERIES__YEAR"
+              },
+              {
+                "value": {
+                  "coalesce": [
+                    "NPV__NPV",
+                    0
+                  ]
+                },
+                "name": "NPV"
+              }
+            ],
+            "from": [
+              "NPV",
+              {
+                "right join": "QUERIES",
+                "on": {
+                  "eq": [
+                    [
+                      "NPV__ID",
+                      "NPV__YEAR"
+                    ],
+                    [
+                      "QUERIES__ID",
+                      "QUERIES__YEAR"
+                    ]
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.00852037500590086,
+          "cpu_seconds": 0.008504999999999874
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.007960291113704443,
+          "cpu_seconds": 0.007960999999999996
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06052599999999986,
+          "scope_encode": 0.01679300000000017,
+          "compare_encode": 0.008504999999999874,
+          "query_check": 0.031806
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.1592960000000001,
+          "wall_seconds": 0.15979712503030896,
+          "worker_peak_rss_bytes_macos": 107233280
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 15534,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "31255142400af226ca6a2fc91b35d2a3585d81ee318af4348e70012e15d1eb48",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "NPV__ID"
+            },
+            {
+              "value": "NPV__YEAR"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "QUERIES__ID"
+            },
+            {
+              "value": "QUERIES__YEAR"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "QUERIES__ID"
+            },
+            {
+              "value": "NPV__ID"
+            }
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "NPV__NPV"
+            },
+            0
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1421.csv",
+      "index": 21,
+      "pair": [
+        "SELECT Q.ID, Q.YEAR, IFNULL(N.NPV,0) AS NPV FROM QUERIES Q LEFT JOIN NPV N ON Q.ID = N.ID AND Q.YEAR = N.YEAR",
+        "SELECT QUERIES.ID, QUERIES.YEAR, COALESCE(NPV.NPV, 0) AS NPV FROM NPV RIGHT JOIN QUERIES ON (NPV.ID, NPV.YEAR) = (QUERIES.ID, QUERIES.YEAR)"
+      ],
+      "schema": {
+        "NPV": {
+          "ID": "INT",
+          "NPV": "INT",
+          "YEAR": "INT"
+        },
+        "QUERIES": {
+          "ID": "INT",
+          "YEAR": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+      "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+    ],
+    "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+    "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+      "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+      "table_count": 2,
+      "column_count": 5,
+      "schema_type_counts": {
+        "INT": 5
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 4,
+      "operator_counts": {
+        "foreign": 1,
+        "gte": 1,
+        "primary": 2,
+        "value": 7
+      },
+      "reference_counts": {
+        "NPV__ID": 2,
+        "NPV__NPV": 1,
+        "NPV__YEAR": 1,
+        "QUERIES__ID": 2,
+        "QUERIES__YEAR": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_FOREIGN_REQUIRES_NON_NULL_SOURCE_AND_TARGET_MATCH"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.0042997500859200954,
+        "actual_check_cpu_seconds": 0.004305999999999921,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.031799832824617624,
+        "actual_check_cpu_seconds": 0.031806,
+        "timeout_ms": 700
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.03609958291053772,
+    "solver_cumulative_cpu_seconds": 0.03611199999999992,
+    "query_solver_called": true,
+    "hardness_claim": "NOT_ESTABLISHED_SINGLE_ATTEMPT",
+    "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+  },
+  "worker_result_unmodified": {
+    "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+    "record": {
+      "id": "dev03_15_exact2",
+      "source_case_id": "dev03_15",
+      "case_index": 6,
+      "status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "attempts": [
+        {
+          "id": "dev03_15",
+          "attempt": 1,
+          "status": "RETURNED",
+          "stages": [
+            {
+              "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+              "status": "RETURNED",
+              "wall_seconds": 0.0014514578506350517,
+              "cpu_seconds": 0.0014520000000001199
+            },
+            {
+              "name": "FULL_ORIGINAL_IC_ADMISSION",
+              "status": "RETURNED",
+              "original_clause_count": 4,
+              "base_fact_count": 34,
+              "admitted_delta_facts": 4,
+              "full_fact_count": 38,
+              "wall_seconds": 0.0018493328243494034,
+              "cpu_seconds": 0.0018489999999998785
+            },
+            {
+              "name": "FULL_C_SOLVER_SETUP",
+              "status": "RETURNED",
+              "wall_seconds": 0.0032357918098568916,
+              "cpu_seconds": 0.003234999999999988
+            },
+            {
+              "name": "FULL_C_NONEMPTY_CHECK",
+              "status": "RETURNED",
+              "timeout_ms": 100,
+              "attempt": 1,
+              "stage": "FULL_C_NONEMPTY_CHECK",
+              "actual_check_wall_seconds": 0.0042997500859200954,
+              "actual_check_cpu_seconds": 0.004305999999999921,
+              "answer": "sat",
+              "wall_seconds": 0.006532083265483379,
+              "cpu_seconds": 0.006506000000000012
+            },
+            {
+              "name": "FULL_C_SAT_MODEL_VALIDATION",
+              "status": "RETURNED",
+              "wall_seconds": 0.0003850003704428673,
+              "cpu_seconds": 0.0003850000000000797
+            },
+            {
+              "name": "C_MODEL_SANITY_RAW_EXPORT",
+              "status": "RETURNED",
+              "wall_seconds": 0.00022241706028580666,
+              "cpu_seconds": 0.00022200000000005549
+            },
+            {
+              "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+              "status": "RETURNED",
+              "wall_seconds": 0.0034832917153835297,
+              "cpu_seconds": 0.003483000000000014
+            },
+            {
+              "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+              "status": "RETURNED",
+              "formula_counts": [
+                19,
+                19
+              ],
+              "output_tuple_counts": [
+                6,
+                6
+              ],
+              "wall_seconds": 0.07738895807415247,
+              "cpu_seconds": 0.07731900000000003
+            },
+            {
+              "name": "OFFICIAL_PARSE_QUERY_0",
+              "status": "RETURNED",
+              "ast_json_lossless": true,
+              "ast_sha256": "89f5502283453f1ae2ddb83b6c4d5f586d1fddffc53d610b1f7b3ceb0e19ee4d",
+              "ast_hash_scope": "lossless canonical JSON",
+              "wall_seconds": 0.05789929209277034,
+              "cpu_seconds": 0.05789599999999995
+            },
+            {
+              "name": "OFFICIAL_PARSE_QUERY_1",
+              "status": "RETURNED",
+              "ast_json_lossless": true,
+              "ast_sha256": "5c7ad538c2fe2b18d961133ca78e13bad298c5f3ef676e612b4f79eaebab65d6",
+              "ast_hash_scope": "lossless canonical JSON",
+              "wall_seconds": 0.0026307497173547745,
+              "cpu_seconds": 0.00262999999999991
+            },
+            {
+              "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+              "status": "RETURNED",
+              "timeout_ms": 700,
+              "attempt": 1,
+              "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+              "actual_check_wall_seconds": 0.031799832824617624,
+              "actual_check_cpu_seconds": 0.031806,
+              "answer": "unsat",
+              "wall_seconds": 0.03428112482652068,
+              "cpu_seconds": 0.03425
+            }
+          ],
+          "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+          "exact_rows": {
+            "NPV": 2,
+            "QUERIES": 2
+          },
+          "raw_query_verdict": "unsat",
+          "full_C_nonempty": "sat",
+          "contract_model_sanity": {
+            "status": "RETURNED",
+            "model_origin": "FULL_C_NONEMPTY_CHECK",
+            "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+            "query_sat_witness": false,
+            "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY",
+            "witness": {
+              "all_physical_raw_values": {
+                "NPV": [
+                  {
+                    "ID": 1,
+                    "NPV": 0,
+                    "YEAR": 0
+                  },
+                  {
+                    "ID": 0,
+                    "NPV": 0,
+                    "YEAR": 1
+                  }
+                ],
+                "QUERIES": [
+                  {
+                    "ID": 1,
+                    "YEAR": 0
+                  },
+                  {
+                    "ID": 1,
+                    "YEAR": 1
+                  }
+                ]
+              },
+              "decoded_values": {
+                "NPV": [
+                  {
+                    "ID": 1,
+                    "NPV": 0,
+                    "YEAR": 0
+                  },
+                  {
+                    "ID": 0,
+                    "NPV": 0,
+                    "YEAR": 1
+                  }
+                ],
+                "QUERIES": [
+                  {
+                    "ID": 1,
+                    "YEAR": 0
+                  },
+                  {
+                    "ID": 1,
+                    "YEAR": 1
+                  }
+                ]
+              },
+              "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+            },
+            "replay": {
+              "status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+              "full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+              "original_sql_unchanged": true,
+              "query_rewrites": 0,
+              "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+              "independent_full_C": {
+                "status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+                "original_clause_count": 4,
+                "checked_clause_count": 4,
+                "semantics": "Pinned official operational C, including Cartesian column comparisons; not business-completeness proof."
+              },
+              "concrete_database": {
+                "NPV": [
+                  {
+                    "ID": 1,
+                    "NPV": 0,
+                    "YEAR": 0
+                  },
+                  {
+                    "ID": 0,
+                    "NPV": 0,
+                    "YEAR": 1
+                  }
+                ],
+                "QUERIES": [
+                  {
+                    "ID": 1,
+                    "YEAR": 0
+                  },
+                  {
+                    "ID": 1,
+                    "YEAR": 1
+                  }
+                ]
+              },
+              "original_sql_sha256": [
+                "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+                "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+              ],
+              "admission": "INT-only outer joins, equality and row equality, IFNULL/COALESCE; RIGHT JOIN requires SQLite >=3.39.",
+              "sqlite_version": "3.53.3",
+              "original_sql_results": [
+                [
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    0
+                  ]
+                ],
+                [
+                  [
+                    1,
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    1,
+                    0
+                  ]
+                ]
+              ],
+              "comparison": "bag multiplicities, exact INT/NULL equality",
+              "generated_official_model": true,
+              "phase_costs": [
+                {
+                  "name": "INDEPENDENT_FULL_C_CHECK",
+                  "status": "RETURNED",
+                  "wall_seconds": 3.570783883333206e-05,
+                  "cpu_seconds": 3.4999999999896225e-05
+                },
+                {
+                  "name": "SQLITE_LOAD_GENERATED_DATABASE",
+                  "status": "RETURNED",
+                  "wall_seconds": 0.00019841594621539116,
+                  "cpu_seconds": 0.00019700000000004436
+                },
+                {
+                  "name": "SQLITE_ORIGINAL_QUERY_0",
+                  "status": "RETURNED",
+                  "wall_seconds": 2.9875431209802628e-05,
+                  "cpu_seconds": 2.9000000000084514e-05
+                },
+                {
+                  "name": "SQLITE_ORIGINAL_QUERY_1",
+                  "status": "RETURNED",
+                  "wall_seconds": 1.966673880815506e-05,
+                  "cpu_seconds": 1.8999999999935735e-05
+                }
+              ],
+              "model_origin": "FULL_C_NONEMPTY_CHECK",
+              "query_sat_witness": false
+            }
+          },
+          "active_stage": null,
+          "latest_stage": "CLEANUP",
+          "full_contract_fact_sha256": "1ad99ac0a91f7d2c514e89fc6104e25ff3958f626fbe5de92ec3e9458846490f",
+          "solver_cumulative_wall_seconds": 0.03609958291053772,
+          "solver_cumulative_cpu_seconds": 0.03611199999999992,
+          "parsed_asts": [
+            {
+              "select": [
+                {
+                  "value": "Q__ID"
+                },
+                {
+                  "value": "Q__YEAR"
+                },
+                {
+                  "value": {
+                    "ifnull": [
+                      "N__NPV",
+                      0
+                    ]
+                  },
+                  "name": "NPV"
+                }
+              ],
+              "from": [
+                {
+                  "value": "QUERIES",
+                  "name": "Q"
+                },
+                {
+                  "left join": {
+                    "value": "NPV",
+                    "name": "N"
+                  },
+                  "on": {
+                    "and": [
+                      {
+                        "eq": [
+                          "Q__ID",
+                          "N__ID"
+                        ]
+                      },
+                      {
+                        "eq": [
+                          "Q__YEAR",
+                          "N__YEAR"
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "select": [
+                {
+                  "value": "QUERIES__ID"
+                },
+                {
+                  "value": "QUERIES__YEAR"
+                },
+                {
+                  "value": {
+                    "coalesce": [
+                      "NPV__NPV",
+                      0
+                    ]
+                  },
+                  "name": "NPV"
+                }
+              ],
+              "from": [
+                "NPV",
+                {
+                  "right join": "QUERIES",
+                  "on": {
+                    "eq": [
+                      [
+                        "NPV__ID",
+                        "NPV__YEAR"
+                      ],
+                      [
+                        "QUERIES__ID",
+                        "QUERIES__YEAR"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "comparison_formula_encode": {
+            "wall_seconds": 0.00852037500590086,
+            "cpu_seconds": 0.008504999999999874
+          },
+          "submitted_query_assertion_count": 1,
+          "official_compare_return": true,
+          "engineering_class": "QUERY_RETURNED",
+          "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+          "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+          "cleanup_cost": {
+            "wall_seconds": 0.007960291113704443,
+            "cpu_seconds": 0.007960999999999996
+          },
+          "exclusive_phase_cpu": {
+            "parse": 0.06052599999999986,
+            "scope_encode": 0.01679300000000017,
+            "compare_encode": 0.008504999999999874,
+            "query_check": 0.031806
+          },
+          "attempt_cost": {
+            "cpu_seconds": 0.1592960000000001,
+            "wall_seconds": 0.15979712503030896,
+            "worker_peak_rss_bytes_macos": 107233280
+          }
+        }
+      ],
+      "active_stage": null,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 15534,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "31255142400af226ca6a2fc91b35d2a3585d81ee318af4348e70012e15d1eb48",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "provenance_class": "PRESENT_JSON",
+      "original_source_record": {
+        "constraint": [
+          {
+            "primary": [
+              {
+                "value": "NPV__ID"
+              },
+              {
+                "value": "NPV__YEAR"
+              }
+            ]
+          },
+          {
+            "primary": [
+              {
+                "value": "QUERIES__ID"
+              },
+              {
+                "value": "QUERIES__YEAR"
+              }
+            ]
+          },
+          {
+            "foreign": [
+              {
+                "value": "QUERIES__ID"
+              },
+              {
+                "value": "NPV__ID"
+              }
+            ]
+          },
+          {
+            "gte": [
+              {
+                "value": "NPV__NPV"
+              },
+              0
+            ]
+          }
+        ],
+        "file": "benchmark/leetcode/raw_data/1421.csv",
+        "index": 21,
+        "pair": [
+          "SELECT Q.ID, Q.YEAR, IFNULL(N.NPV,0) AS NPV FROM QUERIES Q LEFT JOIN NPV N ON Q.ID = N.ID AND Q.YEAR = N.YEAR",
+          "SELECT QUERIES.ID, QUERIES.YEAR, COALESCE(NPV.NPV, 0) AS NPV FROM NPV RIGHT JOIN QUERIES ON (NPV.ID, NPV.YEAR) = (QUERIES.ID, QUERIES.YEAR)"
+        ],
+        "schema": {
+          "NPV": {
+            "ID": "INT",
+            "NPV": "INT",
+            "YEAR": "INT"
+          },
+          "QUERIES": {
+            "ID": "INT",
+            "YEAR": "INT"
+          }
+        }
+      },
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "semantic_admission": {},
+      "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+      "original_sql_sha256": [
+        "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+        "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+      ],
+      "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+      "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+      "structural_admission": {
+        "status": "ADMITTED_STRUCTURALLY",
+        "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+        "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+        "table_count": 2,
+        "column_count": 5,
+        "schema_type_counts": {
+          "INT": 5
+        },
+        "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+        "original_clause_count": 4,
+        "operator_counts": {
+          "foreign": 1,
+          "gte": 1,
+          "primary": 2,
+          "value": 7
+        },
+        "reference_counts": {
+          "NPV__ID": 2,
+          "NPV__NPV": 1,
+          "NPV__YEAR": 1,
+          "QUERIES__ID": 2,
+          "QUERIES__YEAR": 1
+        },
+        "full_preservation": true,
+        "dropped_tables": 0,
+        "dropped_fields": 0,
+        "dropped_clauses": 0,
+        "rewrites": 0,
+        "operational_notes": [
+          "OFFICIAL_FOREIGN_REQUIRES_NON_NULL_SOURCE_AND_TARGET_MATCH"
+        ],
+        "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+      },
+      "latest_stage": "CLEANUP",
+      "repeat_triggered": false,
+      "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.0042997500859200954,
+          "actual_check_cpu_seconds": 0.004305999999999921,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.031799832824617624,
+          "actual_check_cpu_seconds": 0.031806,
+          "timeout_ms": 700
+        }
+      ],
+      "solver_cumulative_wall_seconds": 0.03609958291053772,
+      "solver_cumulative_cpu_seconds": 0.03611199999999992,
+      "query_solver_called": true,
+      "hardness_claim": "NOT_ESTABLISHED_SINGLE_ATTEMPT",
+      "result_scope": "Exposed development case; exact N, full operational C; not natural SAT/UNSAT gold or hardness."
+    },
+    "scope": "Registered input only; registered exact N official semantics, no business or cross-dialect gold",
+    "protocol_sha256": "7a5c6fd9a38f59529031d8c6f475e9b2dacebb274474e8993f1d8dd188421f36",
+    "input": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+      "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+    },
+    "code_sha256": {
+      "official_generation_worker.py": "001ad93abc7d06313faf7267a47ca928f4e213a7733a75de8692bd1f3f66ec7b",
+      "official_generation_backend.py": "5fcb3935218d954f728607c0da44617f5f5bec26c4f6e331baf738a106bbfc18",
+      "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+      "generation_common.py": "74df9d61a87be8fabe311e96d8418e9704baa8e1292ff97a1a5ccf9334265863",
+      "safe_sqlite_replay.py": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5"
+    },
+    "registered_group_count": 4,
+    "registered_slot": {
+      "id": "dev03_15_exact2",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 2
+    },
+    "denominator_unchanged": true,
+    "last_event": {
+      "event": "SINGLE_ATTEMPT_COMPLETE",
+      "id": "dev03_15_exact2",
+      "attempt": null,
+      "active_stage": null
+    },
+    "runtime": {
+      "id": "runtime",
+      "stages": [
+        {
+          "name": "LOCK_AND_DEPENDENCY_HASH",
+          "status": "RETURNED",
+          "checked_files": 848,
+          "wall_seconds": 0.03860729234293103,
+          "cpu_seconds": 0.03860699999999999
+        },
+        {
+          "name": "NATIVE_AND_OFFICIAL_IMPORT",
+          "status": "RETURNED",
+          "version": [
+            4,
+            12,
+            0,
+            0
+          ],
+          "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+          "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+          "wall_seconds": 0.5867087091319263,
+          "cpu_seconds": 0.585164
+        }
+      ],
+      "active_stage": null,
+      "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+    },
+    "latest_attempt_snapshot": {
+      "id": "dev03_15",
+      "attempt": 1,
+      "status": "RETURNED",
+      "stages": [
+        {
+          "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+          "status": "RETURNED",
+          "wall_seconds": 0.0014514578506350517,
+          "cpu_seconds": 0.0014520000000001199
+        },
+        {
+          "name": "FULL_ORIGINAL_IC_ADMISSION",
+          "status": "RETURNED",
+          "original_clause_count": 4,
+          "base_fact_count": 34,
+          "admitted_delta_facts": 4,
+          "full_fact_count": 38,
+          "wall_seconds": 0.0018493328243494034,
+          "cpu_seconds": 0.0018489999999998785
+        },
+        {
+          "name": "FULL_C_SOLVER_SETUP",
+          "status": "RETURNED",
+          "wall_seconds": 0.0032357918098568916,
+          "cpu_seconds": 0.003234999999999988
+        },
+        {
+          "name": "FULL_C_NONEMPTY_CHECK",
+          "status": "RETURNED",
+          "timeout_ms": 100,
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.0042997500859200954,
+          "actual_check_cpu_seconds": 0.004305999999999921,
+          "answer": "sat",
+          "wall_seconds": 0.006532083265483379,
+          "cpu_seconds": 0.006506000000000012
+        },
+        {
+          "name": "FULL_C_SAT_MODEL_VALIDATION",
+          "status": "RETURNED",
+          "wall_seconds": 0.0003850003704428673,
+          "cpu_seconds": 0.0003850000000000797
+        },
+        {
+          "name": "C_MODEL_SANITY_RAW_EXPORT",
+          "status": "RETURNED",
+          "wall_seconds": 0.00022241706028580666,
+          "cpu_seconds": 0.00022200000000005549
+        },
+        {
+          "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+          "status": "RETURNED",
+          "wall_seconds": 0.0034832917153835297,
+          "cpu_seconds": 0.003483000000000014
+        },
+        {
+          "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+          "status": "RETURNED",
+          "formula_counts": [
+            19,
+            19
+          ],
+          "output_tuple_counts": [
+            6,
+            6
+          ],
+          "wall_seconds": 0.07738895807415247,
+          "cpu_seconds": 0.07731900000000003
+        },
+        {
+          "name": "OFFICIAL_PARSE_QUERY_0",
+          "status": "RETURNED",
+          "ast_json_lossless": true,
+          "ast_sha256": "89f5502283453f1ae2ddb83b6c4d5f586d1fddffc53d610b1f7b3ceb0e19ee4d",
+          "ast_hash_scope": "lossless canonical JSON",
+          "wall_seconds": 0.05789929209277034,
+          "cpu_seconds": 0.05789599999999995
+        },
+        {
+          "name": "OFFICIAL_PARSE_QUERY_1",
+          "status": "RETURNED",
+          "ast_json_lossless": true,
+          "ast_sha256": "5c7ad538c2fe2b18d961133ca78e13bad298c5f3ef676e612b4f79eaebab65d6",
+          "ast_hash_scope": "lossless canonical JSON",
+          "wall_seconds": 0.0026307497173547745,
+          "cpu_seconds": 0.00262999999999991
+        },
+        {
+          "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "status": "RETURNED",
+          "timeout_ms": 700,
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.031799832824617624,
+          "actual_check_cpu_seconds": 0.031806,
+          "answer": "unsat",
+          "wall_seconds": 0.03428112482652068,
+          "cpu_seconds": 0.03425
+        }
+      ],
+      "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+      "exact_rows": {
+        "NPV": 2,
+        "QUERIES": 2
+      },
+      "raw_query_verdict": "unsat",
+      "full_C_nonempty": "sat",
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "model_origin": "FULL_C_NONEMPTY_CHECK",
+        "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+        "query_sat_witness": false,
+        "method_claim": "EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY",
+        "witness": {
+          "all_physical_raw_values": {
+            "NPV": [
+              {
+                "ID": 1,
+                "NPV": 0,
+                "YEAR": 0
+              },
+              {
+                "ID": 0,
+                "NPV": 0,
+                "YEAR": 1
+              }
+            ],
+            "QUERIES": [
+              {
+                "ID": 1,
+                "YEAR": 0
+              },
+              {
+                "ID": 1,
+                "YEAR": 1
+              }
+            ]
+          },
+          "decoded_values": {
+            "NPV": [
+              {
+                "ID": 1,
+                "NPV": 0,
+                "YEAR": 0
+              },
+              {
+                "ID": 0,
+                "NPV": 0,
+                "YEAR": 1
+              }
+            ],
+            "QUERIES": [
+              {
+                "ID": 1,
+                "YEAR": 0
+              },
+              {
+                "ID": 1,
+                "YEAR": 1
+              }
+            ]
+          },
+          "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+        },
+        "replay": {
+          "status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+          "full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+          "original_sql_unchanged": true,
+          "query_rewrites": 0,
+          "scope": "C_MODEL_SANITY_ONLY_NOT_QUERY_SAT",
+          "independent_full_C": {
+            "status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+            "original_clause_count": 4,
+            "checked_clause_count": 4,
+            "semantics": "Pinned official operational C, including Cartesian column comparisons; not business-completeness proof."
+          },
+          "concrete_database": {
+            "NPV": [
+              {
+                "ID": 1,
+                "NPV": 0,
+                "YEAR": 0
+              },
+              {
+                "ID": 0,
+                "NPV": 0,
+                "YEAR": 1
+              }
+            ],
+            "QUERIES": [
+              {
+                "ID": 1,
+                "YEAR": 0
+              },
+              {
+                "ID": 1,
+                "YEAR": 1
+              }
+            ]
+          },
+          "original_sql_sha256": [
+            "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+            "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+          ],
+          "admission": "INT-only outer joins, equality and row equality, IFNULL/COALESCE; RIGHT JOIN requires SQLite >=3.39.",
+          "sqlite_version": "3.53.3",
+          "original_sql_results": [
+            [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ]
+            ],
+            [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0
+              ]
+            ]
+          ],
+          "comparison": "bag multiplicities, exact INT/NULL equality",
+          "generated_official_model": true,
+          "phase_costs": [
+            {
+              "name": "INDEPENDENT_FULL_C_CHECK",
+              "status": "RETURNED",
+              "wall_seconds": 3.570783883333206e-05,
+              "cpu_seconds": 3.4999999999896225e-05
+            },
+            {
+              "name": "SQLITE_LOAD_GENERATED_DATABASE",
+              "status": "RETURNED",
+              "wall_seconds": 0.00019841594621539116,
+              "cpu_seconds": 0.00019700000000004436
+            },
+            {
+              "name": "SQLITE_ORIGINAL_QUERY_0",
+              "status": "RETURNED",
+              "wall_seconds": 2.9875431209802628e-05,
+              "cpu_seconds": 2.9000000000084514e-05
+            },
+            {
+              "name": "SQLITE_ORIGINAL_QUERY_1",
+              "status": "RETURNED",
+              "wall_seconds": 1.966673880815506e-05,
+              "cpu_seconds": 1.8999999999935735e-05
+            }
+          ],
+          "model_origin": "FULL_C_NONEMPTY_CHECK",
+          "query_sat_witness": false
+        }
+      },
+      "active_stage": null,
+      "latest_stage": "CLEANUP",
+      "full_contract_fact_sha256": "1ad99ac0a91f7d2c514e89fc6104e25ff3958f626fbe5de92ec3e9458846490f",
+      "solver_cumulative_wall_seconds": 0.03609958291053772,
+      "solver_cumulative_cpu_seconds": 0.03611199999999992,
+      "parsed_asts": [
+        {
+          "select": [
+            {
+              "value": "Q__ID"
+            },
+            {
+              "value": "Q__YEAR"
+            },
+            {
+              "value": {
+                "ifnull": [
+                  "N__NPV",
+                  0
+                ]
+              },
+              "name": "NPV"
+            }
+          ],
+          "from": [
+            {
+              "value": "QUERIES",
+              "name": "Q"
+            },
+            {
+              "left join": {
+                "value": "NPV",
+                "name": "N"
+              },
+              "on": {
+                "and": [
+                  {
+                    "eq": [
+                      "Q__ID",
+                      "N__ID"
+                    ]
+                  },
+                  {
+                    "eq": [
+                      "Q__YEAR",
+                      "N__YEAR"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "select": [
+            {
+              "value": "QUERIES__ID"
+            },
+            {
+              "value": "QUERIES__YEAR"
+            },
+            {
+              "value": {
+                "coalesce": [
+                  "NPV__NPV",
+                  0
+                ]
+              },
+              "name": "NPV"
+            }
+          ],
+          "from": [
+            "NPV",
+            {
+              "right join": "QUERIES",
+              "on": {
+                "eq": [
+                  [
+                    "NPV__ID",
+                    "NPV__YEAR"
+                  ],
+                  [
+                    "QUERIES__ID",
+                    "QUERIES__YEAR"
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "comparison_formula_encode": {
+        "wall_seconds": 0.00852037500590086,
+        "cpu_seconds": 0.008504999999999874
+      },
+      "submitted_query_assertion_count": 1,
+      "official_compare_return": true,
+      "engineering_class": "QUERY_RETURNED",
+      "result_scope": "official encoding at registered exact N live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+      "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+      "cleanup_cost": {
+        "wall_seconds": 0.007960291113704443,
+        "cpu_seconds": 0.007960999999999996
+      },
+      "exclusive_phase_cpu": {
+        "parse": 0.06052599999999986,
+        "scope_encode": 0.01679300000000017,
+        "compare_encode": 0.008504999999999874,
+        "query_check": 0.031806
+      },
+      "attempt_cost": {
+        "cpu_seconds": 0.1592960000000001,
+        "wall_seconds": 0.15979712503030896,
+        "worker_peak_rss_bytes_macos": 107233280
+      }
+    },
+    "worker_usage": {
+      "cpu_user_seconds": 0.7646839999999999,
+      "cpu_system_seconds": 0.065243,
+      "peak_rss_bytes_macos": 107282432,
+      "wall_from_main_seconds": 0.8093085419386625
+    }
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.17032999999999998,
+    "parent_system_cpu_seconds": 0.166901,
+    "all_reaped_children_user_cpu_seconds": 7.709087,
+    "all_reaped_children_system_cpu_seconds": 2.008469,
+    "supervisor_plus_reaped_cpu_seconds": 10.054787,
+    "observed_total_cpu_seconds": 20.054786999999997,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 20.254786999999997,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  }
+}

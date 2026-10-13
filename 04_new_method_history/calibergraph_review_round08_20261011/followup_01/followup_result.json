@@ -1,0 +1,86 @@
+{
+  "artifact_version": 1,
+  "round": "08",
+  "followup": "01",
+  "date": "2026-10-11",
+  "role": "INDEPENDENT_REVIEWER_OF_AUTHOR_AMENDMENTS",
+  "verdict": "FOUR_FINDINGS_RESOLVED__NULL_NOVELTY__RETAIN_AS_MATURE_STRONG_CONTROL",
+  "specification_hold_on_combined_revised_version": "CLEARED",
+  "initial_review_historical_verdict_preserved": true,
+  "new_validated_mechanism": null,
+  "initial_review_manifest_sha256": "e8ae5d5f9206c0be618bd2be9dcd3b521b7d8810b97a6bd3d44815fcd4840097",
+  "revision02_manifest_sha256": "433ae73a67c1903f7b3b84cdcaccdef53f42a3962cd9de4eb6804efadc51eef5",
+  "revision03_manifest_sha256": "fe781f55001ad3dc60f1a3377ac78538008d6ad2363bf6b03ffffefd29e2766e",
+  "author_original_manifest_sha256": "68caf1ade4c4d98cff5ae86e6f5f8ff3ce140392d4cb46d2b832297df9268033",
+  "repairs": [
+    {
+      "finding": "P1-01",
+      "status": "RESOLVED",
+      "evidence": ["revision_02/SCOPE_AND_COST_CORRECTION.md:7-9", "revision_03/theory_result.corrected.json:fragment.domain_and_typing", "revision_03/theory_result.corrected.json:hypothesis_math_result", "revision_03/theory_result.corrected.json:theorem.legal_for"],
+      "judgment": "Common infinite opaque equality domain and well typing now explicit. Finite databases only. Both all-positive-n construction and distinct canonical freezing are conditional on this domain. Finite SQL types and extra domain constraints remain outside scope."
+    },
+    {
+      "finding": "P1-02",
+      "status": "RESOLVED",
+      "evidence": ["revision_02/SCOPE_AND_COST_CORRECTION.md:13-17", "revision_03/REPAIR_ACCEPTANCE.md:7", "revision_03/theory_result.corrected.json:fragment.input_representation", "revision_03/theory_result.corrected.json:theorem.construction_cost", "revision_03/theory_result.corrected.json:theorem.output_bit_cost"],
+      "judgment": "Full schema including unused tables, repeated ordered head, compact counted sets, and actual noncompact counted-set length are charged. Full word cost O(S+L+h+v), or O(S+L+h+j+v). Witness-cell bit cost is explicitly separate. Same-body bound excludes hidden chase and isomorphism discovery."
+    },
+    {
+      "finding": "P2-01",
+      "status": "RESOLVED_BY_AUTHORITATIVE_AMENDMENT",
+      "evidence": ["revision_02/SCOPE_AND_COST_CORRECTION.md:21-23", "revision_03/REPAIR_ACCEPTANCE.md:9"],
+      "judgment": "Parallel FKs use one undirected simple adjacency. Full FK and explicit-closure checks remain. The old applicability files are unchanged historical records; the combined amendment overrides the stale ambiguity. Original aggregate syntax still rejects dev03_06 and 0/21 is unchanged."
+    },
+    {
+      "finding": "P2-02",
+      "status": "RESOLVED",
+      "evidence": ["revision_03/references.corrected.json", "revision_03/REPAIR_ACCEPTANCE.md:11", "../PRIMARY_ANCHOR_CHECK.json"],
+      "judgment": "Author-linked BDFS PDF and proof distinction, DeHaan page corrections, and Chirkova HTML/PDF numbering plus support limits match the initial frozen primary-source audit. FewRows restrictions and reviewer-inference attribution are preserved. No new literature-wide novelty claim."
+    }
+  ],
+  "precedence": {
+    "effective_specification": "Original immutable author proof read together with revision_02 and revision_03 as authoritative amendments",
+    "machine_readable_theory": "calibergraph_next_20261011_08/revision_03/theory_result.corrected.json",
+    "corrected_references": "calibergraph_next_20261011_08/revision_03/references.corrected.json",
+    "old_snapshot_alone_is_current_specification": false
+  },
+  "integrity": {
+    "initial_review_files_unchanged": 4,
+    "initial_review_all_files_unchanged": true,
+    "original_author_files_unchanged": 11,
+    "original_author_manifest_unchanged": true,
+    "revision_manifest_hashes_exact": true,
+    "amendment_payload_hashes_and_recorded_sizes_match": true,
+    "JSON_format_checks_passed": true,
+    "reviewer_note_hashes_checked": true,
+    "original_paper_byte_hashes_claimed": false
+  },
+  "retained_claims": {
+    "core_theorem": "HAND_PROOF_RETAINED_ONLY_ON_REPAIRED_FRAGMENT",
+    "different_body_application": "Requires supplied and validated head-preserving transport of counted sets",
+    "novelty": "NULL",
+    "confirmed_applicable_original_development_pairs": 0,
+    "original_development_pair_denominator": 21,
+    "coverage_evidence": "Inherited frozen initial manual-static audit; dataset not reread in this followup",
+    "fixed_fixtures": 7,
+    "fixed_ablations": 3,
+    "fixture_execution": "NOT_EXECUTED",
+    "empirical_or_fair_baseline_advantage": "NOT_ESTABLISHED_NOT_CLAIMED"
+  },
+  "execution": {
+    "scientific_programs": 0,
+    "SQL": 0,
+    "SQL_parsers": 0,
+    "SMT_or_solvers": 0,
+    "models_or_GPU": 0,
+    "queued_jobs": 0,
+    "fixtures_or_ablations_run": 0,
+    "new_tests": 0,
+    "new_web_browsing": false,
+    "corpora_or_development_data_reread": false,
+    "allowed_operations": "Read amendment text and frozen review metadata; hash immutable author/review/amendment files; standard-library JSON syntax/serialization; manual proof reasoning."
+  },
+  "open_findings_in_followup_scope": {"P0": 0, "P1": 0, "P2": 0},
+  "remaining_boundaries": ["No implementation or fixture execution verified", "No natural coverage or novelty promotion", "DATAHUB_REGISTRATION_BLOCKED inherited and not resolved by this followup", "Private backup delegated to parent; no backup-completion claim"],
+  "write_scope": "calibergraph_review_round08_20261011/followup_01 only"
+}

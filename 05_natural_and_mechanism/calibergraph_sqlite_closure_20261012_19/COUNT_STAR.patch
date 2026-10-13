@@ -1,0 +1,11 @@
+--- a/polygon/visitors/expression_encoder.py
++++ b/polygon/visitors/expression_encoder.py
+@@ -495,7 +495,7 @@
+                             filter_val, filter_null = agg_exp_encoder.expression_for_tuple(node.filter_clause, tuple_id)
+                             filter_val = EnsureBool(filter_val)
+                             deleted = Or([deleted, filter_null, And([Not(filter_null), Not(filter_val)])])
+-                            indicators.append(Not(deleted))
++                        indicators.append(If(Not(deleted), Int(1), Int(0)))
+                     return Sum(indicators), Bool(False)
+ 
+                 to_be_aggregated = []

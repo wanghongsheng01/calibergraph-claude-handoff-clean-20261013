@@ -1,0 +1,142 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/worker.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py
+@@ -20,7 +20,7 @@
+ 
+ HERE = Path(__file__).resolve().parent
+ sys.path.insert(0, str(HERE))
+-from common import sha, save, verify_lock, load_runtime, new_env, cpu_seconds, budget_ms, solver, guard, decode, replay, jobs_for, ensure_raw_frontend, guarded_replay, canonicalize_conjunctions, verifier_semantics
++from common import sha, save, verify_lock, load_runtime, new_env, cpu_seconds, budget_ms, solver, guard, decode, replay, jobs_for, ensure_raw_frontend, guarded_replay, canonicalize_conjunctions, verifier_semantics, apply_contract_bridge, require_contract_bridge, ContractStop
+ 
+ 
+ def main():
+@@ -51,6 +51,23 @@
+         print(json.dumps({"phase": phase, "job_index": args.job_index}), flush=True)
+ 
+     env = None
++    semantic_start = semantic_cpu_start = None
++
++    def cleanup_environment():
++        nonlocal env
++        try:
++            if env is not None:
++                report["environment_cleanup"] = "ATTEMPTED_EFFECT_UNKNOWN"
++                checkpoint("ENVIRONMENT_CLEANUP_ATTEMPT")
++                env.__exit__(None, None, None)
++                env = None
++                report["environment_cleanup"] = "COMPLETE"
++        finally:
++            if semantic_start is not None:
++                report.update(semantic_e2e_wall_seconds=time.monotonic() - semantic_start,
++                              semantic_e2e_cpu_seconds=cpu_seconds() - semantic_cpu_start,
++                              cost_scope="raw frontend/AST bridge/base nonvacuity/normalized upstream C XOR audit/contract guard/query work/fallback/oracle/cleanup; cold import/hash/startup/reap additionally measured by supervisor")
++
+     try:
+         if not (sys.flags.isolated and sys.flags.no_site and sys.dont_write_bytecode):
+             raise ValueError("-B -I -S required")
+@@ -89,6 +106,11 @@
+         checkpoint("RAW_FRONTEND_GUARD_ADMITTED")
+         env = new_env(case, Environment, constants)
+         report["actual_verifier_semantics"] = verifier_semantics(env, lock)
++        report["contract_bridge"] = {}
++        checkpoint("CONTRACT_BRIDGE_BEGIN")
++        apply_contract_bridge(env, case, z3, constants, START, checkpoint, report["contract_bridge"])
++        require_contract_bridge(env, report["contract_bridge"])
++        report["contract_adapter_label"] = "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR"
+         facts, contract = guard(env, z3, constants, START)
+         report["contract_guard"] = contract
+         checkpoint("CONTRACT_GUARD_RETURNED")
+@@ -102,30 +124,11 @@
+         elif contract["any_base_row_deleted"] != "unsat":
+             contract_stop = ("COMPLETE_CONTRACT_UNVERIFIED", "EXACT_ROW_CONTRACT_UNVERIFIED")
+         if contract_stop is not None:
+-            # Guard work happened, but no query-pair analysis may start. Keep the
+-            # raw guard evidence and distinguish rejection from an unrun job.
+-            report.update(final_decision=contract_stop[1],
+-                          scientific_result="NO_PAIR_EQUIVALENCE_RESULT_CONTRACT_NOT_ESTABLISHED",
+-                          pair_parse_status="NOT_RUN_CONTRACT_STOP",
+-                          pair_solver_status="NOT_RUN_CONTRACT_STOP",
+-                          environment_cleanup="ATTEMPTED_EFFECT_UNKNOWN")
+-            checkpoint("CONTRACT_STOP_CLEANUP_ATTEMPT")
+-            try:
+-                env.__exit__(None, None, None)
+-                env = None
+-                report["environment_cleanup"] = "COMPLETE"
+-            finally:
+-                # Preserve charged semantic work even if cleanup itself fails;
+-                # the existing error handler will retain the attempted effect.
+-                report.update(semantic_e2e_wall_seconds=time.monotonic() - semantic_start,
+-                              semantic_e2e_cpu_seconds=cpu_seconds() - semantic_cpu_start,
+-                              cost_scope="common raw frontend gate/fresh Environment/schema/IC/contract guard/cleanup; cold process startup/import/hash cost additionally captured by supervisor")
+-            report["status"] = contract_stop[0]
+-            checkpoint("FINAL_CONTRACT_STOP")
+-            sys.stdout.flush(); sys.stderr.flush()
+-            os._exit(2)
++            raise ContractStop(contract_stop[1], "common actual-contract guard did not establish a usable nonvacuous exact-row contract")
++        require_contract_bridge(env, report["contract_bridge"])
+ 
+         def official(generic=False, reason=None):
++            require_contract_bridge(env, report["contract_bridge"])
+             attempt = {"route": "official_generic_smt" if generic else "official", "reason": reason,
+                        "status": "ATTEMPTED_EFFECT_UNKNOWN"}
+             report["attempts"].append(attempt)
+@@ -170,6 +173,9 @@
+             checkpoint("OFFICIAL_RETURNED")
+             return attempt
+ 
++        report["pair_work_started"] = True
++        report["pair_work_status"] = "ATTEMPTED_EFFECT_UNKNOWN"
++        checkpoint("QUERY_WORK_BEGIN")
+         if args.kind == "differential":
+             from query_differential import compare_query
+             report["differential"] = {}
+@@ -177,7 +183,7 @@
+             report["differential"] = compare_query(env=env, sql=case["pair"][job["query_index"]], schema=case["schema"],
+                                                   mode=job["arm"], z3=z3, constants=constants, kernel=kernel,
+                                                   solver_ms=lambda: budget_ms(START), checkpoint=checkpoint,
+-                                                  record=report["differential"])
++                                                  record=report["differential"], contract_bridge=report["contract_bridge"])
+             differential = report["differential"]
+             if differential.get("witness") is not None:
+                 differential["solver_differential_status"] = differential["status"]
+@@ -315,11 +321,7 @@
+                         report["final_decision"] = result["status"]
+                     else:
+                         report["fallback"] = {"status": "NOT_RUN_BUDGET_EXHAUSTED", "reason": "candidate_unknown"}
+-        env.__exit__(None, None, None)
+-        env = None
+-        report["semantic_e2e_wall_seconds"] = time.monotonic() - semantic_start
+-        report["semantic_e2e_cpu_seconds"] = cpu_seconds() - semantic_cpu_start
+-        report["cost_scope"] = "common raw frontend gate/fresh Environment/schema/IC/guard/parse/recognize/encode/solve/AND normalization/oracle-domain audit/SAT replay/fallback/cleanup; cold process startup/import/hash cost additionally captured by supervisor"
++        cleanup_environment()
+         if args.kind == "cost":
+             report["scientific_result"] = "COST_RECORDED_REQUIRES_SEPARATE_SEMANTIC_VALIDATION_AND_PAIRED_ANALYSIS"
+         if args.kind == "cost" and "expected" in case:
+@@ -328,8 +330,28 @@
+         checkpoint("FINAL_COMPLETE")
+         sys.stdout.flush(); sys.stderr.flush()
+         os._exit(0 if report["final_decision"] in {"sat", "unsat", "UNSAT_DIFFERENTIAL", "PASS_UNSAT_DIFFERENTIAL"} else 2)
++    except ContractStop as exc:
++        report.update(status="COMPLETE_CONTRACT_REJECTED" if exc.decision == "CONTRACT_UNSAT_REJECTED" else "COMPLETE_CONTRACT_UNVERIFIED",
++                      final_decision=exc.decision, reason=str(exc),
++                      scientific_result="NO_PAIR_EQUIVALENCE_RESULT_CONTRACT_NOT_ESTABLISHED",
++                      fallback={"status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"})
++        if not report.get("pair_work_started", False):
++            report.update(pair_work_status="NOT_RUN_CONTRACT_STOP", pair_parse_status="NOT_RUN_CONTRACT_STOP", pair_solver_status="NOT_RUN_CONTRACT_STOP")
++        else:
++            report["pair_work_status"] = "ATTEMPTED_EFFECTS_RETAINED_SEE_LEDGER"
++        try:
++            cleanup_environment()
++        except BaseException as cleanup_error:
++            report.update(status="BLOCKED_OR_ERROR", cleanup_error_type=type(cleanup_error).__name__, cleanup_error=str(cleanup_error))
++        checkpoint("FINAL_CONTRACT_STOP")
++        sys.stdout.flush(); sys.stderr.flush()
++        os._exit(2)
+     except BaseException as exc:
+         report.update(status="BLOCKED_OR_ERROR", error_type=type(exc).__name__, reason=str(exc), traceback=traceback.format_exc())
++        try:
++            cleanup_environment()
++        except BaseException as cleanup_error:
++            report.update(cleanup_error_type=type(cleanup_error).__name__, cleanup_error=str(cleanup_error))
+         checkpoint("ERROR")
+         sys.stdout.flush(); sys.stderr.flush()
+         os._exit(2)

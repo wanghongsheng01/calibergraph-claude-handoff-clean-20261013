@@ -1,0 +1,712 @@
+{
+  "schema": "round16-private-author-backup-selection-v1",
+  "created_utc": "2026-10-11T17:17:33.477958+00:00",
+  "status": "SELECTION_READY_COPY_COMMIT_PUSH_AND_REMOTE_VERIFICATION_NOT_PERFORMED",
+  "round_relative_root": "calibergraph_next_20261011_16",
+  "selection_mode": "EXACT_REGULAR_FILE_WHITELIST_NO_RECURSIVE_DEPENDENCIES",
+  "selection_is_scientific_independent_review": false,
+  "independent_result_review_status": "PENDING_SEPARATE_REPORT_AT_SELECTION_CREATION",
+  "allowed_existing_file_count": 70,
+  "allowed_existing_bytes": 1551334,
+  "category_definitions": {
+    "AUTHOR_STATE_AND_ONCE_EVIDENCE": "作者状态、单次执行已消耗证据和最终化收据；不授权再次运行。",
+    "AUTHOR_IMPLEMENTATION": "作者编写的源代码、差异、说明和静态检查；运行时依赖不随文件引用递归纳入。",
+    "AUTHOR_DISABLED_SNAPSHOT": "最终化前禁用执行的作者快照；保留历史版本，不能与当前启用版本混同。",
+    "AUTHOR_PROTOCOL_AND_PROVENANCE": "作者预注册协议、分析计划、路径和哈希；引用原SQL/schema/C/native/upstream的路径不是纳入其字节。",
+    "SYSTEM_RESOURCE_METADATA": "已逐文检查的观察与外层收据/输出；只有CPU、内存、load、时刻、状态、路径和哈希等系统元数据。",
+    "AUTHOR_SCHEDULING_AND_LEDGER": "作者观察器源码、等待规则与封账；只备份既有文件，不创建或启用调度。",
+    "AUTHOR_ANALYSIS_AND_PROVENANCE": "作者聚合器、结果解释、静态核验和原证据路径/哈希；不复制这些路径指向的原证据。",
+    "SANITIZED_DERIVED_RESULTS": "派生状态、数值成本、引用哈希和计数；递归检查未发现完整原SQL、schema/fullC对象、数据库值或查询输出明文。",
+    "AUTHOR_SEMANTIC_RECONSTRUCTION": "作者事实映射分析；含完整17列表列类型清单和/或11条C的语义信息，可重建schema/C；不是纯哈希元数据。依据本轮明确授权纳入，不含原source_record对象、完整原SQL或模型数据。",
+    "AUTHOR_SEMANTICS_PROVENANCE": "作者语义分析的输入/输出哈希清单；不递归复制被引用输入。",
+    "AUTHOR_WAITING_ANALYSIS": "作者静态边界诊断、数学证明及出处；可能含小段表达式、字段名或追踪摘录，不含完整原SQL或具体数据库/查询输出值。"
+  },
+  "files": [
+    {
+      "relative_path": "CHECKPOINT.json",
+      "bytes": 10033,
+      "sha256": "d31071a07c5397f109e97fe6ce82d06bbdffd38e90101d9f96a83e8e7a948294",
+      "category": "AUTHOR_STATE_AND_ONCE_EVIDENCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "EXECUTION_ONCE.lock",
+      "bytes": 468,
+      "sha256": "16fb748c76e28de7cec3b3d274e372fa7d4d6207314b38706cf0d3af75fa3b7e",
+      "category": "AUTHOR_STATE_AND_ONCE_EVIDENCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "FINALIZATION_RECEIPT.json",
+      "bytes": 864,
+      "sha256": "6c764b0fad1a332be0c6f1f2ba985e37cbe84df2802a608003cb056057714e14",
+      "category": "AUTHOR_STATE_AND_ONCE_EVIDENCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/AGGREGATOR_STATIC_VALIDATION.json",
+      "bytes": 1792,
+      "sha256": "4258b2e27c1127d2cd5fa9d9b1c9e1539e0d7ff887e0c1e93c07702be4d15eaa",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/AUTHOR_RESULTS_MANIFEST.json",
+      "bytes": 1767,
+      "sha256": "76be43aff6f662cf913f9a4695ba36ad0d0fa43ceb5dcda0db8a341756726107",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/POSTRUN_HASH_AUDIT.json",
+      "bytes": 1219,
+      "sha256": "cb28259b2c6b4e6a19a1203f51373b12736e43618c202ee20bba025ac008bc18",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/RAW_EVIDENCE_PROVENANCE.json",
+      "bytes": 54332,
+      "sha256": "3a6047eb4cab4470c7e95eb671f716e8adb5c3719b791a9cf1d96f083e373b32",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/README.zh.md",
+      "bytes": 4343,
+      "sha256": "6b331704c610322d34ede5d85e223d2e8d785fb3ede86fe3dee5b17d25667a18",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/RESULTS.zh.md",
+      "bytes": 8051,
+      "sha256": "d2609b50971c9237eb00fd8c07ecd2f0c8bed82d09942419c6adfbbdcd5728f8",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/SHA256SUMS.outputs",
+      "bytes": 527,
+      "sha256": "68df178adc53d53ba147f0862f9545b2bbf464a5b4cd6ce91dff84a857387343",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/aggregate_results.py",
+      "bytes": 28855,
+      "sha256": "ee1a223630d6c2bf3c61ff75d8f0798e1482e854ff66e8e0a55b389cf98c2d19",
+      "category": "AUTHOR_ANALYSIS_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/derived_once/RESULTS.zh.md",
+      "bytes": 3128,
+      "sha256": "d4020da284f1397b110f7e9933d0efcccdbce570c20d5b10549f8e312b071c62",
+      "category": "SANITIZED_DERIVED_RESULTS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "analysis/derived_once/derived_results.json",
+      "bytes": 483519,
+      "sha256": "4e3f26724c0c702f20ed6233bcd29162866d58ad9dd9b7e673222179b5738414",
+      "category": "SANITIZED_DERIVED_RESULTS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/generation_replay.draft.json",
+      "bytes": 11810,
+      "sha256": "64bf3f54077888baca66439f10c35b77c4853015a516732a57bb3d15c44ec0ce",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/AUTHOR_DISABLED_MANIFEST.json",
+      "bytes": 5105,
+      "sha256": "5cdb99e32522017e837e8b47925a6236c33e10236451102128c1a6dfd7a517a5",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/README.zh.md",
+      "bytes": 5476,
+      "sha256": "00b4c257deebf8ac31d88bfc6effd2ef4be7c0fbf66c54832dbc5c38b7a09adc",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/SHA256SUMS.outputs",
+      "bytes": 2396,
+      "sha256": "e1a27f763af4ed3251dab2f8ce769c6a225a2d12a40ed7a4510b8ef567c891ea",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/STATIC_VALIDATION.json",
+      "bytes": 11833,
+      "sha256": "7b624de08c6c7b2a7fbd9a11291153fdec64fc67a96ff27698eaa6316e511a8b",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/generation_common.py",
+      "bytes": 6124,
+      "sha256": "8a3ec2eefeb08d978ab7e11224ae33a30e768b4c41883220e2df7e1c13aeca44",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/generation_supervisor.py",
+      "bytes": 35398,
+      "sha256": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/official_contract_admission.py",
+      "bytes": 11192,
+      "sha256": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/official_generation_backend.py",
+      "bytes": 25892,
+      "sha256": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/official_generation_worker.py",
+      "bytes": 9010,
+      "sha256": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/round15_to_round16.diff",
+      "bytes": 22137,
+      "sha256": "4dcee4dc5c44927d36dad7a0a4513bfb6935a26778c3118efd3b49e1f738c0eb",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "author_snapshot_disabled/implementation/safe_sqlite_replay.py",
+      "bytes": 11474,
+      "sha256": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+      "category": "AUTHOR_DISABLED_SNAPSHOT",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/AUTHOR_DISABLED_MANIFEST.json",
+      "bytes": 5105,
+      "sha256": "5cdb99e32522017e837e8b47925a6236c33e10236451102128c1a6dfd7a517a5",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/README.zh.md",
+      "bytes": 5476,
+      "sha256": "00b4c257deebf8ac31d88bfc6effd2ef4be7c0fbf66c54832dbc5c38b7a09adc",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/SHA256SUMS.outputs",
+      "bytes": 2396,
+      "sha256": "e1a27f763af4ed3251dab2f8ce769c6a225a2d12a40ed7a4510b8ef567c891ea",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/STATIC_VALIDATION.json",
+      "bytes": 11833,
+      "sha256": "7b624de08c6c7b2a7fbd9a11291153fdec64fc67a96ff27698eaa6316e511a8b",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/generation_common.py",
+      "bytes": 6123,
+      "sha256": "2fd58f41e25c59d0842bfecaa90edd5f62162a8e3b7d86ff8b117646f6492d6b",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/generation_supervisor.py",
+      "bytes": 35398,
+      "sha256": "d5a8c236fefb03df4a53bfae20d903085a63d1e8c500879f059cfbe9f6ce32b2",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/official_contract_admission.py",
+      "bytes": 11192,
+      "sha256": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/official_generation_backend.py",
+      "bytes": 25892,
+      "sha256": "c0513cc5a0e9bb0867ae5782e8ad51ae99d9f417fdc0b4fffbdbb740cb04a70b",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/official_generation_worker.py",
+      "bytes": 9010,
+      "sha256": "df152ed3caeb741005b2ce57464507d6024da3cb37ba5fc2630c186e830847c9",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/round15_to_round16.diff",
+      "bytes": 22137,
+      "sha256": "4dcee4dc5c44927d36dad7a0a4513bfb6935a26778c3118efd3b49e1f738c0eb",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "implementation/safe_sqlite_replay.py",
+      "bytes": 11474,
+      "sha256": "4eeb3de996f8785bd0f34674555d49e7b7f5587ac9ecc69a98ad1a7127f6aac5",
+      "category": "AUTHOR_IMPLEMENTATION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "observer_outer/obs_0001.outer.json",
+      "bytes": 569,
+      "sha256": "d13496b260e38ea669e4ed37b84cdce74820ec7cd9db28ffa6a1f1797b1e38da",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "observer_outer/obs_0001.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "observer_outer/obs_0001.stdout.txt",
+      "bytes": 1005,
+      "sha256": "b670a9948f46c48b794ac3f3e93bd8db8cb2e012f718cdfd6616d91cdde57028",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "observer_outer/obs_0002.outer.json",
+      "bytes": 564,
+      "sha256": "a2826b9c2f7caed8ba9b56ac7a42683cb4fdb0656a5e130e0df534cc0c911330",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "observer_outer/obs_0002.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "observer_outer/obs_0002.stdout.txt",
+      "bytes": 1060,
+      "sha256": "2869e7698824ca42165f0dc990c5f4c37d8e9a9713f75848f76cb7b541270bb2",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "outer_launch/OUTER_RECEIPT.json",
+      "bytes": 1890,
+      "sha256": "f8928f3112f19155264c3de35cc2abdd21bb83c973c64191f66202c15a118f13",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "outer_launch/stderr.txt",
+      "bytes": 777,
+      "sha256": "9e7b72b9e4cd6be0a2dbf42b36878011c99bb0b16888c216a348ba074ebbec1a",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "outer_launch/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/ANALYSIS_PLAN.zh.md",
+      "bytes": 2319,
+      "sha256": "a533eac9199c6a7b51f4700527e537d7f1cdf9fff96de815eaae40c6937e3231",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/ANALYTIC_CONTROLS.round06_verbatim.zh.md",
+      "bytes": 2587,
+      "sha256": "5e17ccc2ba68eda7797dca2aa93072a46a3ae1af5a753fb392ca12a97ca31f8c",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/ANALYTIC_CONTROLS.zh.md",
+      "bytes": 1031,
+      "sha256": "019243f8ff1d66ef3e670ad04a50c4cf32c12ce8a56cce3e3d5d96b44238019e",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/RUNTIME_INPUT_CARRY_FORWARD.json",
+      "bytes": 235478,
+      "sha256": "a92219e65f12bf01953011f7853a6faefc4b6be53ad68703d49760cc818eb0fa",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/generation_replay.draft.json",
+      "bytes": 11810,
+      "sha256": "64bf3f54077888baca66439f10c35b77c4853015a516732a57bb3d15c44ec0ce",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/generation_replay.freeze.json",
+      "bytes": 241874,
+      "sha256": "d4ceea578897f81d0a7043040216965698ce19c0c16d422321259d7c76ea2388",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "protocols/generation_replay.registered.json",
+      "bytes": 11854,
+      "sha256": "6d4f9bfb6939bf4af5f94b0813c303f9aaa30617cb197b16605b7683b6d0ff87",
+      "category": "AUTHOR_PROTOCOL_AND_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "resource_observations/obs_0001/receipt.json",
+      "bytes": 1103,
+      "sha256": "a6e8d1d593ccf361e583ec11398d4924d7e9cedf112d7bd79845285b0f29b68a",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "resource_observations/obs_0002/receipt.json",
+      "bytes": 1158,
+      "sha256": "938ddcfad2fedfbb42b8e71e5ff4ce8a37d3bf4fb200700408f33faffde8de20",
+      "category": "SYSTEM_RESOURCE_METADATA",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "scheduling/CLOSED_OBSERVATION_LEDGER.json",
+      "bytes": 2802,
+      "sha256": "1090a0c310e65687602e343c8abef876a1eaa0495864352ba3802b7bd1e1fd45",
+      "category": "AUTHOR_SCHEDULING_AND_LEDGER",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "scheduling/OBSERVER_STATIC_FREEZE.json",
+      "bytes": 285,
+      "sha256": "5ab9f78f36746ea4ff89deed4e4f286f67aa5bcf453b1767bb9d7af10ef04aa5",
+      "category": "AUTHOR_SCHEDULING_AND_LEDGER",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "scheduling/WAITING_RULES.zh.md",
+      "bytes": 2765,
+      "sha256": "10044dcd309b0c480693c6b7185d7dfaeaadd46bfc838888682405ceee239f5d",
+      "category": "AUTHOR_SCHEDULING_AND_LEDGER",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "scheduling/resource_observer.py",
+      "bytes": 4785,
+      "sha256": "d1b3df4ce504b3496e4a873f1fe33e6a192f8f22a201e864089493779af61894",
+      "category": "AUTHOR_SCHEDULING_AND_LEDGER",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "scheduling/waiting_schedule.json",
+      "bytes": 597,
+      "sha256": "ac48f60868e24805456c1978c09b5c2db240e31bd7fdceab9220482e1294be12",
+      "category": "AUTHOR_SCHEDULING_AND_LEDGER",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "semantics/SEMANTICS_AUDIT.zh.md",
+      "bytes": 11818,
+      "sha256": "797cb30735667c29bcea0819fceb27576bc863a23ec89d17794dc5ad20eb57ee",
+      "category": "AUTHOR_SEMANTIC_RECONSTRUCTION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "semantics/SHA256SUMS.inputs",
+      "bytes": 2687,
+      "sha256": "6562e40324b5c581e0b6b05ac81b3750a8f84cd3e3741b998138a84b55f5109b",
+      "category": "AUTHOR_SEMANTICS_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "semantics/SHA256SUMS.outputs",
+      "bytes": 532,
+      "sha256": "da7373b7551c278827cfe1dcfb8b1c1a7836b3fcccf9080655ef01bf1071b1a2",
+      "category": "AUTHOR_SEMANTICS_PROVENANCE",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "semantics/constraint_mapping_evidence.json",
+      "bytes": 6880,
+      "sha256": "4037ec2af833fc55e28bfd723b327929b67f6ca7b30fc0fe3c777d1c1eb1f8db",
+      "category": "AUTHOR_SEMANTIC_RECONSTRUCTION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "semantics/four_source_identity_evidence.json",
+      "bytes": 29471,
+      "sha256": "25477b49ed68ccaa33a77456ae1c4837b3778db16349a144356d3526aef464c0",
+      "category": "AUTHOR_SEMANTIC_RECONSTRUCTION",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "waiting_audit/BASELINE_IDENTITY_PROOF.SHA256SUMS.inputs",
+      "bytes": 1175,
+      "sha256": "e7d46312ca40e025827f33f08dab93a8c7a95f71de5d18fcf327a78ba535848a",
+      "category": "AUTHOR_WAITING_ANALYSIS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "waiting_audit/BASELINE_IDENTITY_PROOF.SHA256SUMS.outputs",
+      "bytes": 440,
+      "sha256": "59339664347e05b14067a0dda6bf7054c14e86c38b0f47790b483122a2a60148",
+      "category": "AUTHOR_WAITING_ANALYSIS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "waiting_audit/BASELINE_IDENTITY_PROOF.metadata.json",
+      "bytes": 5965,
+      "sha256": "401fdfb5cf39eb8225dfffdb5a18b2351c3b233b549ccb10cd48e9ecf1aa2cbd",
+      "category": "AUTHOR_WAITING_ANALYSIS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "waiting_audit/BASELINE_IDENTITY_PROOF.zh.md",
+      "bytes": 14863,
+      "sha256": "8e5c1b79395a3bd9d7ab0d965503dfc16af6afc94b9212611c485d1637b4d76a",
+      "category": "AUTHOR_WAITING_ANALYSIS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "waiting_audit/ENGINEERING_BOUNDARY_DIAGNOSIS.json",
+      "bytes": 40805,
+      "sha256": "64ce352c0f9ea63bf9e5cc191cc14c229ea6840c86c6e092ba10425070931751",
+      "category": "AUTHOR_WAITING_ANALYSIS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    },
+    {
+      "relative_path": "waiting_audit/ENGINEERING_BOUNDARY_DIAGNOSIS.zh.md",
+      "bytes": 7604,
+      "sha256": "eff03a97f9c90083f533c2346519f09e2986c93a69e7c888cadf21b9e586390c",
+      "category": "AUTHOR_WAITING_ANALYSIS",
+      "hash_scope": "POINT_IN_TIME_BYTES_ONLY",
+      "must_rehash_before_copy": true
+    }
+  ],
+  "selection_artifacts_to_include": [
+    {
+      "relative_path": "analysis/BACKUP_SELECTION.json",
+      "category": "AUTHOR_BACKUP_SELECTION",
+      "sha256": null,
+      "reason": "本选择文件也可纳入；由root在最终复制清单中计算字节哈希，避免自指哈希。"
+    },
+    {
+      "relative_path": "analysis/BACKUP_SELECTION.zh.md",
+      "category": "AUTHOR_BACKUP_SELECTION",
+      "sha256": null,
+      "reason": "本选择文件也可纳入；由root在最终复制清单中计算字节哈希，避免自指哈希。"
+    }
+  ],
+  "derived_payload_screen": {
+    "relative_path": "analysis/derived_once/derived_results.json",
+    "sha256": "4e3f26724c0c702f20ed6233bcd29162866d58ad9dd9b7e673222179b5738414",
+    "bytes": 483519,
+    "method": "标准库JSON递归读取全部节点、键、值类型与字符串；人工核对replay字段；另由只读子审查交叉核对。不运行聚合器或科学代码。",
+    "node_type_counts": {
+      "NoneType": 3181,
+      "bool": 392,
+      "dict": 1362,
+      "float": 2083,
+      "int": 663,
+      "list": 406,
+      "str": 2905
+    },
+    "total_nodes": 10992,
+    "distinct_key_count": 201,
+    "forbidden_raw_payload_keys_checked": [
+      "all_physical_raw_values",
+      "concrete_database",
+      "constraint",
+      "counterexample",
+      "counterexample_dict",
+      "decoded_values",
+      "original_source_record",
+      "original_sql_results",
+      "pair",
+      "parsed_asts",
+      "source_record",
+      "witness"
+    ],
+    "forbidden_raw_payload_key_paths": [],
+    "complete_sql_pattern_hit_paths": [],
+    "schema_object_or_array_paths": [],
+    "nested_array_paths": [
+      "$.paired_diagnostics[0].comparisons[0].repeat_case_ids",
+      "$.paired_diagnostics[0].comparisons[1].repeat_case_ids",
+      "$.paired_diagnostics[0].comparisons[2].repeat_case_ids",
+      "$.paired_diagnostics[1].comparisons[0].repeat_case_ids",
+      "$.paired_diagnostics[1].comparisons[1].repeat_case_ids",
+      "$.paired_diagnostics[1].comparisons[2].repeat_case_ids",
+      "$.paired_diagnostics[2].comparisons[0].repeat_case_ids",
+      "$.paired_diagnostics[2].comparisons[1].repeat_case_ids",
+      "$.paired_diagnostics[2].comparisons[2].repeat_case_ids",
+      "$.paired_diagnostics[3].comparisons[0].repeat_case_ids",
+      "$.paired_diagnostics[3].comparisons[1].repeat_case_ids",
+      "$.paired_diagnostics[3].comparisons[2].repeat_case_ids"
+    ],
+    "nested_array_interpretation": "全部仅两遍case_id字符串配对，无数据库行矩阵。",
+    "replay_fields_retained": "原SQL哈希、输出哈希、输出行数、bags是否不同、模型是否存在、status及成本；不含原SQL/模型单元格/查询输出明文。",
+    "conclusion": "ELIGIBLE_AS_SANITIZED_AUTHOR_DERIVED_RESULT",
+    "scope_limit": "该检查决定本次私有作者备份载荷，不证明科学结论、完整许可证审计或全系统秘密不存在。"
+  },
+  "semantic_content_disclosure": {
+    "authorization": "root明确允许semantics与waiting_audit作者分析进入本轮私有作者备份，并在得知schema/C可重建后确认保留该标注。",
+    "records": [
+      {
+        "relative_path": "semantics/four_source_identity_evidence.json",
+        "information": "records[*].schema_field_inventory含4来源完整表列类型清单，共17列；可重建schema。"
+      },
+      {
+        "relative_path": "semantics/constraint_mapping_evidence.json",
+        "information": "clauses[0..10]包含全部11条C的operator/字段/literal信息；可重建C。"
+      },
+      {
+        "relative_path": "semantics/SEMANTICS_AUDIT.zh.md",
+        "information": "作者完整C解释及字段名，包含同类schema/C语义信息。"
+      }
+    ],
+    "not_claimed": "不能称这三份仅含哈希、路径和计数；其作者事实映射不等于第三方原source_record或数据集字节。"
+  },
+  "exclusions": [
+    {
+      "relative_pattern": "runs/**",
+      "file_count_at_selection": 170,
+      "reason": "整棵原始运行证据树排除：包含原SQL、原schema/C/source_record、具体模型、查询输出及其复制/嵌套版本；即使单个日志看似仅元数据，也不从此树局部挑选。只保存作者派生与RAW_EVIDENCE_PROVENANCE路径/哈希。"
+    },
+    {
+      "relative_pattern": ".pilot_single_worker.lock",
+      "reason": "空的临时flock标记；不能作为历史可恢复或一次执行消耗证据。永久EXECUTION_ONCE.lock另在白名单中保留。"
+    },
+    {
+      "relative_pattern": "<paths referenced inside manifests, code, receipts or hash lists>",
+      "reason": "所有第三方upstream源码、论文/数据集、原SQL/schema/C数据对象、native二进制、.venv/site-packages和下载依赖本体均不递归复制；仅保留既有作者路径/哈希/版本出处。"
+    },
+    {
+      "relative_pattern": "<all unlisted, future, symlink or binary payload files>",
+      "reason": "默认排除；root逐文件检查内容并追加精确相对路径/哈希之后才能纳入。目录名称或json扩展名不是纳入凭据。"
+    }
+  ],
+  "unlisted_nonraw_files_at_snapshot": [
+    "ROUND16_REVIEWED_MANIFEST.json"
+  ],
+  "root_finalization_required": [
+    "最终复制前逐文件重算SHA256；任何已变字节需重新核对内容并更新清单。CHECKPOINT和root结果报告可能在最终收尾时更新。",
+    "root完成最终结果报告及独审后，按精确文件路径追加获准的作者报告/审核文件；本清单不提前断言独审通过。",
+    "不修改冻结实现、协议、聚合器、派生结果或历史run来匹配本清单；差异应如实记录。",
+    "复制/commit/push与确认私有远端状态和SHA由root完成。本产物不代表BACKUP_OK。",
+    "作者文件备份不解除历史原始证据和精确native环境清洁恢复未验证的BACKUP_BLOCKED，也不解除DATAHUB_REGISTRATION_BLOCKED。"
+  ],
+  "operations_performed": {
+    "local_text_json_hash_read": true,
+    "selection_files_written": [
+      "analysis/BACKUP_SELECTION.json",
+      "analysis/BACKUP_SELECTION.zh.md"
+    ],
+    "copied_files": false,
+    "git_commit": false,
+    "git_push": false,
+    "aggregator_executed": false,
+    "scientific_backend_imported": false,
+    "sql_or_smt_executed": false
+  }
+}

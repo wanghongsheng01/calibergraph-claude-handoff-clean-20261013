@@ -1,0 +1,535 @@
+{
+  "case_id": "superhero__750",
+  "source_ddl_sha256": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae",
+  "tables": [
+    {
+      "table": "alignment",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "alignment",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "attribute",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "attribute_name",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "colour",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "colour",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "gender",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "gender",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "publisher",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "publisher_name",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "race",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "race",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "superhero",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "superhero_name",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "full_name",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "gender_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "eye_colour_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "hair_colour_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "skin_colour_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "race_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "publisher_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "alignment_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "height_cm",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "weight_kg",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": [
+        {
+          "columns": [
+            "alignment_id"
+          ],
+          "target_table": "alignment",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "eye_colour_id"
+          ],
+          "target_table": "colour",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "gender_id"
+          ],
+          "target_table": "gender",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "hair_colour_id"
+          ],
+          "target_table": "colour",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "publisher_id"
+          ],
+          "target_table": "publisher",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "race_id"
+          ],
+          "target_table": "race",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "skin_colour_id"
+          ],
+          "target_table": "colour",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        }
+      ]
+    },
+    {
+      "table": "hero_attribute",
+      "columns": [
+        {
+          "name": "hero_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "attribute_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "attribute_value",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [],
+      "foreign_keys": [
+        {
+          "columns": [
+            "attribute_id"
+          ],
+          "target_table": "attribute",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "hero_id"
+          ],
+          "target_table": "superhero",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        }
+      ]
+    },
+    {
+      "table": "superpower",
+      "columns": [
+        {
+          "name": "id",
+          "source_type": "INTEGER",
+          "explicit_not_null": true,
+          "default_null": false
+        },
+        {
+          "name": "power_name",
+          "source_type": "TEXT",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [
+        "id"
+      ],
+      "foreign_keys": []
+    },
+    {
+      "table": "hero_power",
+      "columns": [
+        {
+          "name": "hero_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        },
+        {
+          "name": "power_id",
+          "source_type": "INTEGER",
+          "explicit_not_null": false,
+          "default_null": true
+        }
+      ],
+      "primary_key": [],
+      "foreign_keys": [
+        {
+          "columns": [
+            "hero_id"
+          ],
+          "target_table": "superhero",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        },
+        {
+          "columns": [
+            "power_id"
+          ],
+          "target_table": "superpower",
+          "target_columns": [
+            "id"
+          ],
+          "actions": ""
+        }
+      ]
+    }
+  ],
+  "proposed_polygon_constraint_entries": [
+    {
+      "primary": [
+        "alignment.id"
+      ]
+    },
+    {
+      "not_null": "alignment.id"
+    },
+    {
+      "primary": [
+        "attribute.id"
+      ]
+    },
+    {
+      "not_null": "attribute.id"
+    },
+    {
+      "primary": [
+        "colour.id"
+      ]
+    },
+    {
+      "not_null": "colour.id"
+    },
+    {
+      "primary": [
+        "gender.id"
+      ]
+    },
+    {
+      "not_null": "gender.id"
+    },
+    {
+      "primary": [
+        "publisher.id"
+      ]
+    },
+    {
+      "not_null": "publisher.id"
+    },
+    {
+      "primary": [
+        "race.id"
+      ]
+    },
+    {
+      "not_null": "race.id"
+    },
+    {
+      "primary": [
+        "superhero.id"
+      ]
+    },
+    {
+      "not_null": "superhero.id"
+    },
+    {
+      "eq": [
+        "superhero.alignment_id",
+        "alignment.id"
+      ]
+    },
+    {
+      "eq": [
+        "superhero.eye_colour_id",
+        "colour.id"
+      ]
+    },
+    {
+      "eq": [
+        "superhero.gender_id",
+        "gender.id"
+      ]
+    },
+    {
+      "eq": [
+        "superhero.hair_colour_id",
+        "colour.id"
+      ]
+    },
+    {
+      "eq": [
+        "superhero.publisher_id",
+        "publisher.id"
+      ]
+    },
+    {
+      "eq": [
+        "superhero.race_id",
+        "race.id"
+      ]
+    },
+    {
+      "eq": [
+        "superhero.skin_colour_id",
+        "colour.id"
+      ]
+    },
+    {
+      "eq": [
+        "hero_attribute.attribute_id",
+        "attribute.id"
+      ]
+    },
+    {
+      "eq": [
+        "hero_attribute.hero_id",
+        "superhero.id"
+      ]
+    },
+    {
+      "primary": [
+        "superpower.id"
+      ]
+    },
+    {
+      "not_null": "superpower.id"
+    },
+    {
+      "eq": [
+        "hero_power.hero_id",
+        "superhero.id"
+      ]
+    },
+    {
+      "eq": [
+        "hero_power.power_id",
+        "superpower.id"
+      ]
+    }
+  ],
+  "status": "STATIC_MAPPING_INVENTORY_NOT_EXECUTABLE_ADAPTER",
+  "bound": {
+    "live_rows_per_table": "0..1",
+    "no_forced_nonempty_tables": true
+  },
+  "update_delete_actions": "Retained in source and inventory; must exist on original replay DDL, do not affect validity of a static instance without UPDATE/DELETE",
+  "unresolved": [
+    "SQLite type affinities versus symbolic integer domain",
+    "Range-safe and equality-preserving model concretization",
+    "Complete runnable pinned source/dependencies",
+    "Owned process-tree RSS and kill/reap protection"
+  ]
+}

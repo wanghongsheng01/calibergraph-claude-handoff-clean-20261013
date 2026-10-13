@@ -1,0 +1,45 @@
+{
+  "id": "round06-independent-primary-sources-and-fragment-audit",
+  "retrieval_date_utc": "2026-10-11",
+  "method": "Independent reviewer and literature-review subagent read the cited primary-source sections and round06 denominator as text only; no SQL, parser or SMT execution.",
+  "external_source_identity_limit": "Official URLs, explicit preprint version and section anchors are retained. Full remote response bytes are not preserved or assigned a misleading local-file hash.",
+  "sources": [
+    {"id":"S3", "url":"https://arxiv.org/html/2601.04757v1", "anchors":["Theorem 3.3", "Section 5.2", "Lemma 5.5", "count recurrence and full-CQ case"], "verified_claim":"The class-size and neighbor-degree tree count recurrence is a direct precedent. The theorem indexes a given database; it does not solve unknown counterexample synthesis."},
+    {"id":"S2", "url":"https://drops.dagstuhl.de/storage/00lipics/lipics-vol345-mfcs2025/html/LIPIcs.MFCS.2025.88/LIPIcs.MFCS.2025.88.html", "anchors":["Theorems A and C", "Types in Section 2", "Section 3.1", "Section 4"], "verified_claim":"RCR characterizes connected acyclic homomorphism counts using atomic and tuple similarity/overlap types. Its stronger joint type information cannot be replaced by independent FK marginal degrees."},
+    {"id":"SQLite_CASE", "url":"https://www.sqlite.org/lang_expr.html#the_case_expression", "anchors":["Section 7"], "verified_claim":"A searched CASE without a matching branch or ELSE returns NULL."},
+    {"id":"SQLite_ROW", "url":"https://www.sqlite.org/rowvalue.html#row_value_comparisons", "anchors":["Section 2.1"], "verified_claim":"Tuple equality follows the described component comparison and NULL uncertainty; it supports the limited INT row-equality control."},
+    {"id":"SQLite_IFNULL", "url":"https://www.sqlite.org/lang_corefunc.html#ifnull", "anchors":["ifnull(X,Y)"], "verified_claim":"IFNULL is equivalent to two-argument COALESCE."}
+  ],
+  "denominator_audit": {
+    "input":"calibergraph_next_20261011_06/data/structure_denominator.jsonl",
+    "groups":21,
+    "original_pairs_in_strict_fragment":0,
+    "selected_original_pairs_in_strict_fragment":0,
+    "scope":"Both complete original SQL statements must literally fit F_tree-single-edge COUNT(*); no rewrites, added constraints or lifting from subexpressions to the full pair.",
+    "records":[
+      {"id":"dev03_01","line":1,"source":"1127.csv","decisive_exclusion":"LEFT JOIN; grouped SUM/COUNT with multiple output columns."},
+      {"id":"dev03_02","line":2,"source":"584.csv","decisive_exclusion":"NAME projection and key literal/NULL tests; other side UNION ALL."},
+      {"id":"dev03_03","line":3,"source":"1693.csv","decisive_exclusion":"Grouped COUNT(DISTINCT), with grouped SUM/UNION ALL on other side."},
+      {"id":"dev03_04","line":4,"source":"1468.csv","decisive_exclusion":"MAX/GROUP BY derived table and ROUND/CASE output; UNION/IN on other side."},
+      {"id":"dev03_05","line":5,"source":"1132.csv","decisive_exclusion":"Second query alone has LEFT JOIN, COUNT(DISTINCT), GROUP BY, outer AVG/ROUND; does not rely on first-query malformedness."},
+      {"id":"dev03_06","line":6,"source":"1783.csv","decisive_exclusion":"CROSS JOIN plus multiple FK CASE comparisons in SUM, grouped and filtered; no single FK=PK COUNT(*) output."},
+      {"id":"dev03_07","line":7,"source":"1173.csv","decisive_exclusion":"Rounded SUM/COUNT ratio or ratio of two scalar count subqueries; neither full statement is the required single count."},
+      {"id":"dev03_08","line":8,"source":"183.csv","decisive_exclusion":"NOT IN and NAME output; outer join/group/HAVING on other side."},
+      {"id":"dev03_09","line":9,"source":"1747.csv","decisive_exclusion":"DISTINCT with cross-alias inequality and time-range conditions."},
+      {"id":"dev03_10","line":10,"source":"1264.csv","decisive_exclusion":"DISTINCT, NOT IN and derived CASE join keys."},
+      {"id":"dev03_11","line":11,"source":"511.csv","decisive_exclusion":"Grouped MIN/PLAYER_ID output; row-value IN and grouped MIN subquery."},
+      {"id":"dev03_12","line":12,"source":"577.csv","decisive_exclusion":"LEFT JOIN and NAME/BONUS projection, including null-extension tests."},
+      {"id":"dev03_13","line":13,"source":"1677.csv","decisive_exclusion":"Outer join, GROUP BY and several SUM/IFNULL outputs."},
+      {"id":"dev03_14","line":14,"source":"613.csv","decisive_exclusion":"Cross-alias key inequality and subtraction under MIN/ABS; other side LEFT JOIN."},
+      {"id":"dev03_15","line":15,"source":"1421.csv","decisive_exclusion":"Outer join, ID/YEAR/value projection and two column equalities on one alias pair."},
+      {"id":"dev03_16","line":16,"source":"1777.csv","decisive_exclusion":"Grouped SUM(CASE); other side DISTINCT CTE and multiple LEFT JOINs."},
+      {"id":"dev03_17","line":17,"source":"1211.csv","decisive_exclusion":"Grouped AVG and SUM/COUNT ratio; other side correlated scalar count."},
+      {"id":"dev03_18","line":18,"source":"596.csv","decisive_exclusion":"CLASS projection with grouped HAVING COUNT threshold; other side correlated COUNT(DISTINCT)."},
+      {"id":"dev03_19","line":19,"source":"1683.csv","decisive_exclusion":"TWEET_ID projection rather than COUNT(*); other side grouped/HAVING derived table."},
+      {"id":"dev03_20","line":20,"source":"1149.csv","decisive_exclusion":"DISTINCT/GROUP/HAVING COUNT(DISTINCT); other side DISTINCT with cross-alias inequality. Does not rely on null C."},
+      {"id":"dev03_21","line":21,"source":"607.csv","decisive_exclusion":"NAME output with correlated zero-count condition; other side anti-existence NOT IN."}
+    ],
+    "limitations":["Self joins/repeated table occurrences alone are not exclusions from the formal alias-tree fragment.","This is syntactic coverage of complete original statements, not proof that wider quotient techniques or separately proved compositions are unusable.","No quotient was constructed, no compression was measured, and no business-contract truth was certified."]
+  },
+  "not_fully_rechecked":["S1 original full theorem and appendix", "S4 complete realization theorem", "S5 full published-version/preprint comparison", "Exhaustive novelty search"]
+}

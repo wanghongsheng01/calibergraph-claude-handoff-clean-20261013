@@ -1,0 +1,24 @@
+--- /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/query_differential.py
++++ /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/query_differential.py
+@@ -34,7 +34,7 @@
+ 
+ 
+ def compare_query(env, sql, schema, mode, z3, constants, kernel, solver_ms,
+-                  checkpoint, *, record=None):
++                  checkpoint, *, record=None, contract_bridge=None):
+     """Compare the same SQL through actual Scope and the candidate kernel.
+ 
+     Pass a mutable ``record`` already attached to the caller's report so its
+@@ -166,6 +166,12 @@
+         return found
+ 
+     try:
++        from common import require_contract_bridge
++        if contract_bridge is None:
++            raise UnsafeComparison("explicit verified same-Environment original-AST contract bridge required")
++        require_contract_bridge(env, contract_bridge)
++        result["source_ast_bridge"] = {key: contract_bridge[key] for key in
++            ("status", "original_ast_sha256", "normalized_ast_sha256", "complete_facts_sha256")}
+         kernel.ensure_raw_identifiers(schema, sql)
+         result["raw_frontend_guard"] = "ADMITTED"
+         if not callable(solver_ms) and (type(solver_ms) is not int or not 1 <= solver_ms <= 60000):

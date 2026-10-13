@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "data_role": "EXPOSED_ANALYTICAL_DEV_STRUCTURE_STRESS_NOT_EXTERNAL_OR_HELDOUT",
+  "registered_utc": "2026-10-11T02:41:23.736025+00:00",
+  "source_provenance": {
+    "fixture": "runtime/smoke_cases.json",
+    "sha256": "b3be16fd0f2c5a03513363c907d773e3087bbab16c2633ca4a4656ec256f4918",
+    "transformation": "Preserve complete schema, queries, constraints and analytical expectations; vary each relation exact positive cardinality uniformly N=2,4,8. All cases reused DEV, no natural defect label."
+  },
+  "cases": [
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S01_reordered_conjunction_N2",
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S02_nullable_count_N2",
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official"
+      ]
+    },
+    {
+      "constraint": [
+        {
+          "not_null": "F__V"
+        }
+      ],
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S03_full_not_null_IC_N2",
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S04_sum_vs_count_N2",
+      "arm_order": [
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>1 AND F.V<0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>2 AND F.V<0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S05_empty_SUM_NULL_N2",
+      "arm_order": [
+        "selector",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "id": "S06_all_NULL_SUM_N2",
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S01_reordered_conjunction_N4",
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S02_nullable_count_N4",
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt"
+      ]
+    },
+    {
+      "constraint": [
+        {
+          "not_null": "F__V"
+        }
+      ],
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S03_full_not_null_IC_N4",
+      "arm_order": [
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S04_sum_vs_count_N4",
+      "arm_order": [
+        "selector",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>1 AND F.V<0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>2 AND F.V<0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S05_empty_SUM_NULL_N4",
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 4,
+        "D": 4,
+        "E": 4
+      },
+      "id": "S06_all_NULL_SUM_N4",
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 8,
+        "D": 8,
+        "E": 8
+      },
+      "id": "S01_reordered_conjunction_N8",
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 8,
+        "D": 8,
+        "E": 8
+      },
+      "id": "S02_nullable_count_N8",
+      "arm_order": [
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt",
+        "flat"
+      ]
+    },
+    {
+      "constraint": [
+        {
+          "not_null": "F__V"
+        }
+      ],
+      "pair": [
+        "SELECT COUNT(*) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 8,
+        "D": 8,
+        "E": 8
+      },
+      "id": "S03_full_not_null_IC_N8",
+      "arm_order": [
+        "selector",
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID"
+      ],
+      "expected": "sat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 8,
+        "D": 8,
+        "E": 8
+      },
+      "id": "S04_sum_vs_count_N8",
+      "arm_order": [
+        "official",
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>1 AND F.V<0",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V>2 AND F.V<0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 8,
+        "D": 8,
+        "E": 8
+      },
+      "id": "S05_empty_SUM_NULL_N8",
+      "arm_order": [
+        "official_generic_smt",
+        "flat",
+        "product",
+        "selector",
+        "official"
+      ]
+    },
+    {
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE F.V IS NULL AND D.P>0"
+      ],
+      "expected": "unsat",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 8,
+        "D": 8,
+        "E": 8
+      },
+      "id": "S06_all_NULL_SUM_N8",
+      "arm_order": [
+        "flat",
+        "product",
+        "selector",
+        "official",
+        "official_generic_smt"
+      ]
+    }
+  ],
+  "cost_full_denominator": 90,
+  "differential_full_denominator": 108,
+  "analysis_rules": [
+    "Retain every status/error/resource stop and actual fallback cost.",
+    "One measured pass establishes diagnostic costs only, not stable speedup.",
+    "Official, generic SMT, flat, known-product, selector same complete input, native, resources.",
+    "Compare selected costs only after per-query mapping checks; no majority oracle.",
+    "Pair expected answers are analytical checks, not business or human labels.",
+    "Empty-output SUM cases retained; zero-base-row cardinalities excluded explicitly.",
+    "Current original public461 no join-eligible pairs must remain in paper."
+  ]
+}

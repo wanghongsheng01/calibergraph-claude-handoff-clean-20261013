@@ -1,0 +1,30 @@
+--- adapter15/slot_worker.py
++++ case1261_17/slot_worker.py
+@@ -12,15 +12,15 @@
+ PILOT=HERE.parent/'calibergraph_polygon_pilot_20261012_13'
+ sys.path[:0]=[str(PILOT/'runtime_local'),str(PILOT/'dependencies_local'),str(PILOT)]
+ from owned_processes import OwnedCase, Stopped
+-from case1172_adapter import load_contract, replay_lifted
++from case1261_adapter import load_contract, replay_lifted
+ 
+ 
+ def main():
+     if not json.loads((HERE/'FREEZE.json').read_text())['solver_execution_authorized']:
+         raise RuntimeError('Prepared adapter only; scientific execution not authorized in this batch')
+     case_id,mode,fd,outpath,deadline=sys.argv[1:]
+-    if case_id != 'thrombosis_prediction__1172' or mode not in ('UA','precise'):
+-        raise ValueError('Only frozen #1172 UA/precise allowed')
++    if case_id != 'thrombosis_prediction__1261' or mode not in ('UA','precise'):
++        raise ValueError('Only frozen #1261 UA/precise allowed')
+     out=Path(outpath);sock=socket.socket(fileno=int(fd))
+     stages={k:None for k in ['imports','schema_C','parse','encode','search_including_solver','solver_calls','decode','replay']}
+     nesting={};calls=[];protocol=[];proxies=[]
+@@ -112,7 +112,7 @@
+                         result['status']='VALIDATED_NEQ' if result['replay']['different'] else 'WITNESS_NOT_DISTINGUISHING'
+                     except Exception as e:
+                         result['replay_error']=repr(e);result['status']='WITNESS_REPLAY_INVALID'
+-                result['interpretation']='Frozen #1172 N=1 observation quotient; original SQL/DDL retained; adapter is not generic REAL/DATE support or unmodified baseline'
++                result['interpretation']='Frozen #1261 N=1 observation quotient; original SQL/DDL retained; adapter is not generic REAL/DATE support or unmodified baseline'
+                 result['countermodel_lifting']='Validate abstract C first, apply frozen quotient lift, then original full-C replay; no repairs or retries'
+     except Stopped as e:result.update(status='CASE_STOP',error=str(e))
+     except NotImplementedError as e:result.update(status='UNSUPPORTED',error=repr(e))

@@ -1,0 +1,47 @@
+{
+  "id": "calibergraph-02-official-smoke-v1",
+  "status": "PREPARED_NOT_EXECUTED_REQUIRES_PARENT_SOURCE_FREEZE_AND_RSS_WALL_GUARD",
+  "scope": "Engineering dependency gate on six exposed original development pairs. Full official query encoder and full original operational contract; no novelty, natural-defect gold, speedup or up-to-bound equivalence claim.",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/data/development.jsonl",
+    "sha256": "a51307167fb80e5caaf83b18fcd929e8781183fd7130821134eae18782e32430"
+  },
+  "runtime_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+    "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+  },
+  "case_ids": ["dev_01", "dev_02", "dev_03", "dev_04", "dev_05", "dev_06"],
+  "exact_rows_per_table": 2,
+  "row_bound_semantics": "Every physical table has exactly two live rows; not each table at most two, not an unbounded equivalence result.",
+  "contract_profile": "OFFICIAL_OPERATIONAL_IC_V1",
+  "contract_definition": {
+    "primary": "All key components non-NULL; tuples of key values unique.",
+    "foreign": "Each source value has a target match under strict non-NULL equality; nullable SQL FK semantics are not substituted.",
+    "gte_column_integer": "All source rows have a non-NULL value at least the literal.",
+    "neq_column_column": "Every Cartesian pair across the two entire columns is non-NULL and unequal; not a same-row SQL CHECK."
+  },
+  "dialect": "Official DIALECT.ALL for original query compilation; concrete replay is explicitly SQLite only.",
+  "solver_stage_timeout_ms": 500,
+  "worker_cpu_limit_seconds": 10,
+  "worker_wall_limit_seconds": 25,
+  "external_rss_limit_bytes": 268435456,
+  "internal_z3_memory_parameter_mb": 128,
+  "maximum_active_workers": 1,
+  "external_guard_requirement": "Parent enforces monotonic whole-process wall deadline <=25s with termination independent of Python callbacks, sampled RSS <=256 MiB, and single worker. Python SIGALRM may be delayed inside native code. Parent records complete process wall and resource/termination outcomes, including startup before Budget creation and all failed/incomplete attempts.",
+  "cleanup_accounting": "cleanup COMPLETE means official __exit__ returned, not proof all objects were freed. Local references can survive until run_case returns; total worker CPU/RSS and parent process accounting cover them.",
+  "baseline": "Unmodified official Environment/Scope/Verifier/compare from locked source, with complete original schema/C; old v5 narrow bridge and aggregate recognizer are not involved.",
+  "instrumentation": "Official analyze temporarily captures its compare inputs; the original compare is then invoked with a transparent solver delegate that records the actual check and enforces timeout. No official formula rewriting, IC removal or query rewriting.",
+  "nonempty_gate": "A separate 500ms solver checks the entire exact-shape original operational C before query encoding; UNSAT/UNKNOWN stop query work and are not equivalence successes.",
+  "sat_validation": "Check model satisfies all original submitted facts and official query assertions; decode complete physical database; independently validate full operational C; replay both unchanged SQL in SQLite. Only registered semantic intersection can yield VALIDATED_SAT_SQLITE_INTERSECTION.",
+  "sqlite_replay_intersection": {
+    "dev_01": {"eligible": false, "reason": "Bare columns/SELECT * under GROUP BY have implementation-dependent representative semantics; keep SQLite replay and reverse insertion control, mark DIALECT_UNKNOWN."},
+    "dev_02": {"eligible": true, "reason": "Equality/group/count/distinct with non-NULL strings and explicit official all-cross neq profile; compare result bags, retain original ORDER BY."},
+    "dev_03": {"eligible": false, "reason": "AVG vs integer SUM/COUNT division and ROUND is the already exposed dialect control; any difference is DIALECT_UNKNOWN, never an advantage or natural-defect success."},
+    "dev_04": {"eligible": true, "reason": "INT32 keys, strict non-NULL FK, NOT IN vs natural-left-join/count; a nullable FK poison witness is invalid under this profile."},
+    "dev_05": {"eligible": true, "reason": "Account and name are separate PKs, so bare name grouping is functionally determined; equality/group/INT32 SUM under exact two rows remains within int64."},
+    "dev_06": {"eligible": true, "reason": "Strict FK excludes unmatched BOXES; nonnegative INT32 counts with two rows and SUM/add/IFNULL remain int64 safe."}
+  },
+  "failure_policy": "All parse/unsupported/IC/nonempty/query-unknown/replay/dialect/budget/monitor failures and remaining NOT_RUN slots retain denominator and all incurred costs. ALL_SIX_ATTEMPTS_RETURNED is execution status, never semantic PASS.",
+  "optional_calcite149_control": "Not registered or executed in this six-case worker. A separate explicit exposed engineering-control protocol is required, full six-table schema/C intact, exact n=1; its existing eager aggregation rewrite is not a new natural test.",
+  "future_fusion_gate": "Run and inspect this official baseline before implementing or evaluating shared legal probe pool ordering plus official fallback. All fused/baseline arms must share identical legal probe pool and total budget; dev03 excluded from success metrics."
+}

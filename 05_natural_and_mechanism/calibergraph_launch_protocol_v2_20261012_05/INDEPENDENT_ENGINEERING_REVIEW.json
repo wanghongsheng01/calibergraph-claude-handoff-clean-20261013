@@ -1,0 +1,43 @@
+{
+  "review_type": "INDEPENDENT_STATIC_ENGINEERING_REVIEW",
+  "reviewer": "/root/v2_resource_engineering_review",
+  "verdict": "PASS_STATIC_PROTOCOL_HOLD",
+  "execution_approved": false,
+  "runtime_validation_performed": false,
+  "science_executed": false,
+  "reviewed_author_sha256": {
+    "PROTOCOL.zh.md": "d09386675fed28ec4859eb373f743a36d0669deca665f4ffd2775ecccf91af9d",
+    "PROTOCOL.json": "d845ded267b9c59a227330f3704375b1262eb0c84ca81f56249d8e8bc5964de7",
+    "EVIDENCE.json": "dd8932faade0ea41001bbd4109510fabc82fad620ac03273e7a6a605a2aa6637",
+    "RECOVERY.zh.md": "929d85b32dbb0dc70b587c6d9fe2ad3be2b01bb9cf920d71825c32f846fd9054"
+  },
+  "blocking_document_findings": [],
+  "actual_execution_blockers": [
+    "WAIT_FOR_unrelated_project_COMPLETION",
+    "MEMORY_ENFORCEMENT_UNVERIFIED",
+    "LAUNCHER_NOT_IMPLEMENTED_OR_VALIDATED"
+  ],
+  "findings": {
+    "duplicate_prevention": "Sufficient static design for cooperative canonical protocol entrants: stable flock plus durable exclusive attempt marker before spawn. Does not prove whole-host absence. Popen handle and logs provide owned-child lifecycle evidence, not independent mutual exclusion.",
+    "time_protection": "60 s common monotonic deadline and per-process RLIMIT_CPU are reasonable bounded execution design, subject to implementation, scheduling, parent survival and confirmed child reaping. Not literal 60.000 s wall guarantee or aggregate process-tree CPU cap.",
+    "memory": "Polling ru_maxrss is delayed retrospective peak telemetry. RLIMIT_DATA covers data segment, not all allocations. SDK RLIMIT_RSS alias and setter success do not establish hard 1 GiB RSS enforcement. No allowed validated replacement established.",
+    "permission_boundary": "No full-system ps is required for scoped lock/owned-child lifecycle. Granting ps would not establish hard memory enforcement. No evidence that blocked permission is inherently necessary; actual missing capability remains worker-wide memory enforcement."
+  },
+  "implementation_notes": [
+    "Retain inherited lock descriptor via an explicit descriptor-passing path; never unlock or replace its inode while owned worker may be alive.",
+    "A worker must not reach SCIENCE_STARTED unless limits acknowledgement and remaining common deadline are valid.",
+    "At deadline terminate only the owned live child, follow with bounded escalation/reaping as needed, and record any unconfirmed stop as unresolved; never reuse persisted PID for cleanup.",
+    "Parent-death behavior and no-descendant path remain unvalidated; permanent attempt marker prevents restart but does not terminate an orphan.",
+    "Do not import scientific libraries or exercise solver/query workloads under the label of future engineering validation."
+  ],
+  "review_evidence_scope": {
+    "read_old_worker_and_launcher_code": true,
+    "read_local_sdk_header_and_manpages": true,
+    "network_used": false,
+    "independently_verified_author_web_source": false,
+    "resource_probes": 0,
+    "worker_tests": 0,
+    "permission_escalations": 0,
+    "author_files_modified": false
+  }
+}

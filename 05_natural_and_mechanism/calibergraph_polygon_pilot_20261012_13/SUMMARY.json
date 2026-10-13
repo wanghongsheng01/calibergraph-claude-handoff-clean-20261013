@@ -1,0 +1,110 @@
+{
+  "rows": [
+    {
+      "case": "superhero__750",
+      "mode": "UA",
+      "status": "VALIDATED_NEQ",
+      "wall_seconds": 0.8162775002419949,
+      "native_calls": 2,
+      "imports_seconds": 0.3557822504080832,
+      "schema_C_seconds": 0.0007947920821607113,
+      "parse_seconds": 0.2592797498218715,
+      "encode_seconds": 0.006659707985818386,
+      "search_including_solver_seconds": 0.05505733285099268,
+      "solver_calls_seconds": 0.03794854134321213,
+      "decode_seconds": 0.008757333736866713,
+      "replay_seconds": 0.0074119591154158115,
+      "replay_full_C_valid": true,
+      "gold": [
+        [
+          null
+        ]
+      ],
+      "predicted": [
+        [
+          -54.0
+        ]
+      ]
+    },
+    {
+      "case": "superhero__750",
+      "mode": "precise",
+      "status": "VALIDATED_NEQ",
+      "wall_seconds": 0.5875289998948574,
+      "native_calls": 1,
+      "imports_seconds": 0.20968687487766147,
+      "schema_C_seconds": 0.0008868328295648098,
+      "parse_seconds": 0.20709512569010258,
+      "encode_seconds": 0.00236837612465024,
+      "search_including_solver_seconds": 0.017338292207568884,
+      "solver_calls_seconds": 0.009068208280950785,
+      "decode_seconds": 0.0016714995726943016,
+      "replay_seconds": 0.0009085419587790966,
+      "replay_full_C_valid": true,
+      "gold": [
+        [
+          -55.0
+        ]
+      ],
+      "predicted": [
+        [
+          null
+        ]
+      ]
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_seconds": 0.43461791705340147,
+      "native_calls": 3,
+      "imports_seconds": 0.12781249964609742,
+      "schema_C_seconds": 0.003075624816119671,
+      "parse_seconds": 0.205676581710577,
+      "encode_seconds": 0.0018004989251494408,
+      "search_including_solver_seconds": 0.02829704200848937,
+      "solver_calls_seconds": 0.02714487537741661,
+      "decode_seconds": null,
+      "replay_seconds": null,
+      "replay_full_C_valid": null,
+      "gold": null,
+      "predicted": null
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_seconds": 0.4091591672040522,
+      "native_calls": 1,
+      "imports_seconds": 0.10714354226365685,
+      "schema_C_seconds": 0.0006840000860393047,
+      "parse_seconds": 0.2066626250743866,
+      "encode_seconds": 0.005563667509704828,
+      "search_including_solver_seconds": 0.00887629110366106,
+      "solver_calls_seconds": 0.008526583202183247,
+      "decode_seconds": null,
+      "replay_seconds": null,
+      "replay_full_C_valid": null,
+      "gold": null,
+      "predicted": null
+    }
+  ],
+  "total_batch_wall_seconds": 2.249685457907617,
+  "budget_seconds": 60,
+  "slots_started": 4,
+  "slots_completed": 4,
+  "native_Z3_calls": 7,
+  "owned_handles": 11,
+  "all_reaped": true,
+  "outcome_counts": {
+    "VALIDATED_NEQ": 2,
+    "BOUNDED_SYMBOLIC_UNSAT": 2,
+    "UNKNOWN": 0,
+    "UNSUPPORTED": 0,
+    "TIMEOUT": 0,
+    "ERROR": 0,
+    "INVALID_WITNESS": 0
+  },
+  "scientific_retries": 0,
+  "no_new_method_advantage_claim": true
+}

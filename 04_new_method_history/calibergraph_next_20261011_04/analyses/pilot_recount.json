@@ -1,0 +1,420 @@
+{
+  "id": "round04-author-recount-v1",
+  "status": "COMPLETED_PROBLEM_PILOT_NO_METHOD_PROMOTION",
+  "rows": [
+    {
+      "id": "dev04_N1_concrete",
+      "kind": "concrete",
+      "N": 1,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.044303999999999996,
+      "worker_peak_rss_bytes": 20054016,
+      "lifecycle_wall_seconds": 0.11147233285009861,
+      "violations": [],
+      "fixtures": {
+        "all_null_class": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        },
+        "nonnull_class_control": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        }
+      },
+      "full_C_validated": true,
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N1_official",
+      "kind": "official",
+      "N": 1,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.8282959999999999,
+      "worker_peak_rss_bytes": 107937792,
+      "lifecycle_wall_seconds": 0.9751777499914169,
+      "violations": [],
+      "raw_engineering_class": "INCONCLUSIVE",
+      "raw_query_verdict": null,
+      "C_result": "sat",
+      "error_type": "CorrelatedQueryError",
+      "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+      "exclusive_phase_cpu": {
+        "parse": 0.06212700000000004,
+        "scope_encode": 0.004006999999999983,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004905667155981064,
+          "actual_check_cpu_seconds": 0.0049120000000000275,
+          "timeout_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "dev04_N2_concrete",
+      "kind": "concrete",
+      "N": 2,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.042914999999999995,
+      "worker_peak_rss_bytes": 19447808,
+      "lifecycle_wall_seconds": 0.11159133305773139,
+      "violations": [],
+      "fixtures": {
+        "all_null_class": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        },
+        "nonnull_class_control": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        }
+      },
+      "full_C_validated": true,
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N2_official",
+      "kind": "official",
+      "N": 2,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.83147,
+      "worker_peak_rss_bytes": 108822528,
+      "lifecycle_wall_seconds": 0.8635207088664174,
+      "violations": [],
+      "raw_engineering_class": "INCONCLUSIVE",
+      "raw_query_verdict": null,
+      "C_result": "sat",
+      "error_type": "CorrelatedQueryError",
+      "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+      "exclusive_phase_cpu": {
+        "parse": 0.06065899999999991,
+        "scope_encode": 0.00473800000000002,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004181291908025742,
+          "actual_check_cpu_seconds": 0.004189000000000109,
+          "timeout_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "dev04_N3_concrete",
+      "kind": "concrete",
+      "N": 3,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.041351,
+      "worker_peak_rss_bytes": 19791872,
+      "lifecycle_wall_seconds": 0.11155787529423833,
+      "violations": [],
+      "fixtures": {
+        "all_null_class": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        },
+        "nonnull_class_control": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        }
+      },
+      "full_C_validated": true,
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N3_official",
+      "kind": "official",
+      "N": 3,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.923918,
+      "worker_peak_rss_bytes": 110886912,
+      "lifecycle_wall_seconds": 0.9648214587941766,
+      "violations": [],
+      "raw_engineering_class": "INCONCLUSIVE",
+      "raw_query_verdict": null,
+      "C_result": "sat",
+      "error_type": "CorrelatedQueryError",
+      "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+      "exclusive_phase_cpu": {
+        "parse": 0.0634229999999999,
+        "scope_encode": 0.005848999999999993,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004278500098735094,
+          "actual_check_cpu_seconds": 0.004284999999999983,
+          "timeout_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "dev04_N4_concrete",
+      "kind": "concrete",
+      "N": 4,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.041930999999999996,
+      "worker_peak_rss_bytes": 19775488,
+      "lifecycle_wall_seconds": 0.10825258400291204,
+      "violations": [],
+      "fixtures": {
+        "all_null_class": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        },
+        "nonnull_class_control": {
+          "bag_equal": true,
+          "outputs": [
+            [],
+            []
+          ]
+        }
+      },
+      "full_C_validated": true,
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N4_official",
+      "kind": "official",
+      "N": 4,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.8316609999999999,
+      "worker_peak_rss_bytes": 103038976,
+      "lifecycle_wall_seconds": 0.9294217498973012,
+      "violations": [],
+      "raw_engineering_class": "INCONCLUSIVE",
+      "raw_query_verdict": null,
+      "C_result": "sat",
+      "error_type": "CorrelatedQueryError",
+      "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+      "exclusive_phase_cpu": {
+        "parse": 0.062397000000000036,
+        "scope_encode": 0.0068749999999998535,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004380083177238703,
+          "actual_check_cpu_seconds": 0.004388999999999865,
+          "timeout_ms": 100
+        }
+      ]
+    },
+    {
+      "id": "dev04_N5_concrete",
+      "kind": "concrete",
+      "N": 5,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.045807999999999995,
+      "worker_peak_rss_bytes": 19349504,
+      "lifecycle_wall_seconds": 0.11182766733691096,
+      "violations": [],
+      "fixtures": {
+        "all_null_class": {
+          "bag_equal": false,
+          "outputs": [
+            [
+              [
+                null
+              ]
+            ],
+            []
+          ]
+        },
+        "nonnull_class_control": {
+          "bag_equal": true,
+          "outputs": [
+            [
+              [
+                "same_nonnull_class"
+              ]
+            ],
+            [
+              [
+                "same_nonnull_class"
+              ]
+            ]
+          ]
+        }
+      },
+      "full_C_validated": true,
+      "sqlite_version": "3.53.3"
+    },
+    {
+      "id": "dev04_N5_official",
+      "kind": "official",
+      "N": 5,
+      "launch_status": "RETURNED",
+      "worker_cpu_seconds": 0.7976329999999999,
+      "worker_peak_rss_bytes": 100188160,
+      "lifecycle_wall_seconds": 0.8565799170173705,
+      "violations": [],
+      "raw_engineering_class": "INCONCLUSIVE",
+      "raw_query_verdict": null,
+      "C_result": "sat",
+      "error_type": "CorrelatedQueryError",
+      "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+      "exclusive_phase_cpu": {
+        "parse": 0.061687999999999854,
+        "scope_encode": 0.008612000000000286,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "derived_class": "FRONTEND_CORRELATED_SUBQUERY_REJECTION",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.00425404217094183,
+          "actual_check_cpu_seconds": 0.004256999999999955,
+          "timeout_ms": 100
+        }
+      ]
+    }
+  ],
+  "registered_slots": 10,
+  "recovery_returned_slots": 10,
+  "initial_failed_preexec_attempts": 1,
+  "initial_scientific_executions": 0,
+  "actual_concrete_SQL_pair_executions": 10,
+  "actual_original_SQL_query_executions": 20,
+  "official_environment_attempts": 5,
+  "official_C_checks": 5,
+  "official_query_checks": 0,
+  "official_query_verdicts": [],
+  "official_error_counts": {
+    "CorrelatedQueryError": 5
+  },
+  "solver_calls": [
+    {
+      "attempt": 1,
+      "stage": "FULL_C_NONEMPTY_CHECK",
+      "actual_check_wall_seconds": 0.004905667155981064,
+      "actual_check_cpu_seconds": 0.0049120000000000275,
+      "timeout_ms": 100
+    },
+    {
+      "attempt": 1,
+      "stage": "FULL_C_NONEMPTY_CHECK",
+      "actual_check_wall_seconds": 0.004181291908025742,
+      "actual_check_cpu_seconds": 0.004189000000000109,
+      "timeout_ms": 100
+    },
+    {
+      "attempt": 1,
+      "stage": "FULL_C_NONEMPTY_CHECK",
+      "actual_check_wall_seconds": 0.004278500098735094,
+      "actual_check_cpu_seconds": 0.004284999999999983,
+      "timeout_ms": 100
+    },
+    {
+      "attempt": 1,
+      "stage": "FULL_C_NONEMPTY_CHECK",
+      "actual_check_wall_seconds": 0.004380083177238703,
+      "actual_check_cpu_seconds": 0.004388999999999865,
+      "timeout_ms": 100
+    },
+    {
+      "attempt": 1,
+      "stage": "FULL_C_NONEMPTY_CHECK",
+      "actual_check_wall_seconds": 0.00425404217094183,
+      "actual_check_cpu_seconds": 0.004256999999999955,
+      "timeout_ms": 100
+    }
+  ],
+  "recovery_accounting": {
+    "pre_registered_prior_cpu_seconds": 3.408329,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.158222,
+    "parent_system_cpu_seconds": 0.143461,
+    "all_reaped_children_user_cpu_seconds": 4.236164,
+    "all_reaped_children_system_cpu_seconds": 1.38971,
+    "supervisor_plus_reaped_cpu_seconds": 5.927556999999999,
+    "observed_total_cpu_seconds": 9.335885999999999,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 9.535885999999998,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "worker_cpu_sum_seconds": 4.4292869999999995,
+  "recovery_monitor_children_cpu_seconds": 1.196587,
+  "max_worker_cpu_seconds": 0.923918,
+  "max_worker_peak_rss_bytes": 110886912,
+  "all_gate_loads": [
+    3.21484375,
+    3.21484375,
+    3.21484375,
+    3.21484375,
+    3.21484375,
+    3.21484375,
+    3.21484375,
+    3.21484375,
+    3.197265625,
+    3.197265625
+  ],
+  "all_gate_memory_available_percentages": [
+    33,
+    33,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32,
+    32
+  ],
+  "violations": [],
+  "supported_claims": [
+    "Constructed SQLite fixture demonstrates original pair difference at5 NULL CLASS rows under full explicit PK C",
+    "Matched nonnull CLASS control equal on these five fixtures",
+    "Static proof gives EQ iff n_NULL<5 under stated standard SQL and explicit C",
+    "Frozen official frontend rejects correlated query at eachN; no query SMT cost evidence"
+  ],
+  "unsupported_claims": [
+    "natural business bug label",
+    "independent final test",
+    "new mechanism",
+    "official N5 counterexample",
+    "SMT hardness or speedup",
+    "all SQL easy",
+    "novelty from known cardinality/key/multiplicity rules"
+  ]
+}

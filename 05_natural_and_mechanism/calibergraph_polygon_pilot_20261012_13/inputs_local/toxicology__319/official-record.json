@@ -1,0 +1,11 @@
+{
+  "dbid": "toxicology",
+  "index": "319",
+  "difficulty": "challenging",
+  "verdict": "EQ",
+  "reason": null,
+  "results": null,
+  "end_to_end_s": 1.727,
+  "gold": "SELECT COUNT(DISTINCT T1.element) FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR001_3_4'",
+  "predicted": "SELECT COUNT(DISTINCT T1.element) FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR001_3_4'"
+}

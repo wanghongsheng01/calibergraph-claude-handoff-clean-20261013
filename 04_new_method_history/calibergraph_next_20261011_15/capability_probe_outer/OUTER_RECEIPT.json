@@ -1,0 +1,29 @@
+{
+  "id": "round15-capability-outer-receipt-v1",
+  "recorded_utc": "2026-10-11T16:27:42.395418+00:00",
+  "request_mode": "require_escalated",
+  "tool_returned_exit_code": 1,
+  "tool_execution_chunk_id": "666973",
+  "approval_disposition": "EXECUTED_NOT_APPROVAL_REJECTED",
+  "attempts": 1,
+  "retries": 0,
+  "probe_source_sha256": "89610d812d9aba116c56cb65f8f96b38ea2cb7d930b420866849b0dd8cc5d94b",
+  "receipt_sha256": "cc2bf51fdabab3cd1d84bdcce534e7ab9f8e54b6e99388ef371d449d6616f580",
+  "stdout_sha256": "066d8503ee8870262969ace24da921abcf2a3241ebfda007f8af44c1e505d797",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_matches_receipt": true,
+  "resource_stop_reason": "LOAD_1M_4.6015625_EXCEEDS_PREDECLARED_4",
+  "observed_capabilities": [
+    "nice15",
+    "RLIMIT_CPU_1s",
+    "memory_pressure_read",
+    "own_process_ps",
+    "fork_wait4_accounting"
+  ],
+  "scientific_batch_launched": false,
+  "scientific_source_enabled": false,
+  "scientific_protocol_registered": false,
+  "permanent_disposition": "THIS_ROUND_STOPPED_NO_PROBE_RETRY_NO_BATCH_LAUNCH",
+  "final_receipt_tail_cpu_measured": null,
+  "final_receipt_tail_policy": "Covered by conservative preparation 10s reserve, not an exact measurement."
+}

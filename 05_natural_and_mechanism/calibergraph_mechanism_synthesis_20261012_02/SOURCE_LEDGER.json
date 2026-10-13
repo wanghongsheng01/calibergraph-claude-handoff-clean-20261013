@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-12",
+  "method": "READ_ONLY_PRIMARY_SOURCE_AND_STATIC_CODE_ANALYSIS",
+  "no_scientific_execution": true,
+  "official_sources": [
+    {
+      "id": "P2025",
+      "url": "https://dbgroup.cs.tsinghua.edu.cn/jnwang/papers/vldb2025-parseval.pdf",
+      "version": "PVLDB 18(11), 2025",
+      "sections": [
+        "4.3",
+        "5.3",
+        "5.4 Table5",
+        "5.5"
+      ],
+      "locally_recomputed": false
+    },
+    {
+      "id": "POLY2025",
+      "url": "https://arxiv.org/html/2504.06542v1",
+      "version": "arXiv v1, 2025-04-09",
+      "sections": [
+        "3",
+        "4.3"
+      ],
+      "published_pdf_identity_verified": false,
+      "locally_recomputed": false
+    },
+    {
+      "id": "XDATA2024",
+      "url": "https://arxiv.org/html/2409.18821v1",
+      "version": "v1 only; no assertion about later final-paper changes",
+      "evidence_detail": "XDATA_EVIDENCE.json",
+      "locally_recomputed": false
+    },
+    {
+      "id": "PARSEVAL_ISSUE9",
+      "url": "https://github.com/sfu-db/ParSEval/issues/9",
+      "read_scope": "issue and all returned comments",
+      "facts": [
+        "Author pointed to Actions and noted removed BIRD special cases",
+        "Requester distinguished manually annotated labels from execution outputs",
+        "Final returned author comment says email provided"
+      ],
+      "inference_limit": "No public manual-label artifact recovered this pass; does not imply labels unavailable or nonexistent"
+    }
+  ],
+  "local_provenance": [
+    {
+      "label": "prior_scientific_decision",
+      "path": "calibergraph_scientific_decision_20261012_01/DECISION.zh.md",
+      "sha256": "0d9ef9477d338cabf969ded93123bee1ffed359bb4fe5d549cbe166cf4bf8540",
+      "bytes": 4675,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "discourse_actual_result",
+      "path": "calibergraph_real_task_screen_20261011_05/runs/baseline_01/RESULT.json",
+      "sha256": "3eb182fc6f21f82bc0326c2cabb8c78f5e556412b90442611502ec4562d7c340",
+      "bytes": 13806,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "gitlab_actual_report",
+      "path": "calibergraph_parseval_admission_20261011_04/FINAL_RESULT.zh.md",
+      "sha256": "2678bb6b8d14bb7cbb599657f781751f953a0032364ae8e1500716a261a54dc3",
+      "bytes": 5060,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "polygon_static_audit",
+      "path": "calibergraph_strong_baseline_prep_20261011_02/literature/POLYGON_STATIC_AUDIT.zh.md",
+      "sha256": "24fd1741a3b5211dba073d909d4780c556d9e6cc63d1b80828a8e9b644796bfd",
+      "bytes": 9905,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "parseval_main",
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/main.py",
+      "sha256": "771c58bb1acee1cf00075e56308167cea711e3e799bed262c8eb5e519697957e",
+      "bytes": 7970,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "parseval_generate",
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/generator/generate.py",
+      "sha256": "2e9200c322868de266ffe9ac8768e0462720b26d07180884017f3f5e3dd7ee6d",
+      "bytes": 24064,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "parseval_speculate",
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/src/parseval/speculate/speculate.py",
+      "sha256": "8bf29d54c9c58a6a0e00a104e2e5946db5ca24c04054143a4068c3c41f7f8ba0",
+      "bytes": 57893,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "parseval_readme",
+      "path": "calibergraph_parseval_admission_20261011_03/sources_local/parseval_official/README.md",
+      "sha256": "550b8c17e48b73c98a5e24a9bca2c3d7fcf2a7da6aa84d539d976bffa84cd85a",
+      "bytes": 6443,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "polygon_formula",
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/smt/formula.py.txt",
+      "sha256": "ecdc290227e8c717fa20065313331b605fd54566a844ec9ce88c6d99190207cc",
+      "bytes": 22778,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    },
+    {
+      "label": "polygon_environment",
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/environment.py.txt",
+      "sha256": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+      "bytes": 21383,
+      "scope": "saved local UTF-8 bytes, not necessarily raw HTTP payload"
+    }
+  ],
+  "upstream_bytes_redistributed": false,
+  "review": "independent author-separated files",
+  "private_repository": "wanghongsheng01/calibergraph-method-research-20261011",
+  "prior_verified_main": "2ae81946cf67f3262fec4a1a425460b29ebd9467"
+}

@@ -1,0 +1,58 @@
+{
+  "stage": "OFFICIAL_BASELINE_DIAGNOSTIC",
+  "attempts": 2,
+  "failed_attempts_retained": 1,
+  "failed_attempt_slots_not_run": 6,
+  "completed_attempt_pairs": 6,
+  "completed_query_slots": 12,
+  "full_C_nonempty_sat": 6,
+  "official_query_check_counts": {
+    "sat": 1,
+    "unsat": 5,
+    "unknown": 0
+  },
+  "validated_scientific_sat": 0,
+  "semantics_excluded_ids": [
+    "dev_01",
+    "dev_03"
+  ],
+  "scope": "exactly2 live rows per physical table, complete official operational C; no upto2/unbounded equivalence or SQLite-equivalence inference",
+  "cpu_worker_seconds_sum": 1.6594589999999998,
+  "guard_wall_seconds_sum": 1.9935820003516929,
+  "max_worker_rss_bytes": 118849536,
+  "worker_reports": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/runs/official_smoke_01/official_smoke_report.json",
+      "sha256": "50ea712917568348639559d0c6caea71a2d271e230c1d17f12df76909cf53769"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/runs/official_smoke_02/official_smoke_report.json",
+      "sha256": "c319ed2832408050ad99f13eabb30952aa6977981191b60368adb6ce0f48f3cd"
+    }
+  ],
+  "preflight": [
+    {
+      "utc": "2026-10-11T11:52:36.982814+00:00",
+      "load": [
+        2.994140625,
+        3.29248046875,
+        3.32080078125
+      ],
+      "memory_available_percentage": 33,
+      "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 33%\n",
+      "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                               10287.\nPages active:                            166834.\nPages inactive:                          149635.\nPages speculative:                        16054.\nPages throttled:                              0.\nPages wired down:                        196094.\nPages purgeable:                              2.\n\"Translation faults\":               30501007254.\nPages copy-on-write:                  700201489.\nPages zero filled:                  13055519006.\nPages reactivated:                   5565632275.\nPages purged:                         298414314.\nFile-backed pages:                       121474.\nAnonymous pages:                         211049.\nPages stored in compressor:             3520119.\nPages occupied by compressor:            469879.\nDecompressions:                      7503801655.\nCompressions:                        7808126991.\nPageins:                             8231370161.\nPageouts:                              12420681.\nSwapins:                               67256442.\nSwapouts:                              75730118.\n"
+    },
+    {
+      "utc": "2026-10-11T11:54:29.334931+00:00",
+      "load": [
+        3.0390625,
+        3.25927734375,
+        3.3056640625
+      ],
+      "memory_available_percentage": 34,
+      "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 34%\n",
+      "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                2962.\nPages active:                            174505.\nPages inactive:                          172262.\nPages speculative:                          975.\nPages throttled:                              0.\nPages wired down:                        206572.\nPages purgeable:                              2.\n\"Translation faults\":               30504853139.\nPages copy-on-write:                  700228775.\nPages zero filled:                  13057807364.\nPages reactivated:                   5566409763.\nPages purged:                         298420870.\nFile-backed pages:                       105780.\nAnonymous pages:                         241962.\nPages stored in compressor:             3507754.\nPages occupied by compressor:            451671.\nDecompressions:                      7504723547.\nCompressions:                        7809041594.\nPageins:                             8231744840.\nPageouts:                              12421088.\nSwapins:                               67258316.\nSwapouts:                              75740222.\n"
+    }
+  ],
+  "verdict": "NO_SOLVER_BOTTLENECK_OBSERVED_ON_THIS_EXPOSED_DEVELOPMENT_SET"
+}

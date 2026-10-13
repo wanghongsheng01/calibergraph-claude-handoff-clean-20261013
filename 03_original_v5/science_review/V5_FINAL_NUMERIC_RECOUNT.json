@@ -1,0 +1,700 @@
+{
+  "reviewer": "/root/support_closure",
+  "created_utc": "2026-10-11T06:34:10.920140+00:00",
+  "method": "stdlib-only read/recount saved final observations; no target runs and no claim of rederiving original classification logic",
+  "cuts": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/FINAL_V5_EXECUTION_CUT.json",
+      "sha256": "1d6d0291fda36937a26da6b46c9d07b18899a21686708fa4279c7a814e48b95c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/PUBLIC_APPLICABILITY_FINAL_CUT.json",
+      "sha256": "0e8535436be62cc08bc545391e64eec4e64ce4a05aa48e40b3c09dab14b38764"
+    }
+  ],
+  "checks": [
+    {
+      "check": "main_cost.raw_final_decisions",
+      "actual": {
+        "unsat": 78,
+        "sat": 52,
+        "unknown": 8,
+        "UNKNOWN_ORACLE_DOMAIN": 6,
+        "CONTRACT_UNSAT_REJECTED": 18,
+        "UNVERIFIED_CONTRACT": 6
+      },
+      "expected": {
+        "unsat": 78,
+        "sat": 52,
+        "unknown": 8,
+        "UNKNOWN_ORACLE_DOMAIN": 6,
+        "CONTRACT_UNSAT_REJECTED": 18,
+        "UNVERIFIED_CONTRACT": 6
+      },
+      "pass": true
+    },
+    {
+      "check": "main_cost.derived_categories",
+      "actual": {
+        "STRICT_VALID_PAIR_RESULT": 127,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 4,
+        "SOLVER_UNKNOWN": 7,
+        "ORACLE_DOMAIN_UNPROVEN": 6,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 24
+      },
+      "expected": {
+        "STRICT_VALID_PAIR_RESULT": 127,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 4,
+        "SOLVER_UNKNOWN": 7,
+        "ORACLE_DOMAIN_UNPROVEN": 6,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 24
+      },
+      "pass": true
+    },
+    {
+      "check": "main_cost.selected",
+      "actual": 168,
+      "expected": 168,
+      "pass": true
+    },
+    {
+      "check": "main_cost.returned",
+      "actual": 168,
+      "expected": 168,
+      "pass": true
+    },
+    {
+      "check": "main_cost.monitor_reason",
+      "actual": [
+        "RSS_OBSERVATION_UNAVAILABLE"
+      ],
+      "expected": [
+        "RSS_OBSERVATION_UNAVAILABLE"
+      ],
+      "pass": true
+    },
+    {
+      "check": "main_cost.base_SAT",
+      "actual": 162,
+      "expected": 162,
+      "pass": true
+    },
+    {
+      "check": "main_cost.XOR_UNSAT",
+      "actual": 162,
+      "expected": 162,
+      "pass": true
+    },
+    {
+      "check": "cost.strict_split",
+      "actual": {
+        "unsat": 77,
+        "sat": 50
+      },
+      "expected": {
+        "unsat": 77,
+        "sat": 50
+      },
+      "pass": true
+    },
+    {
+      "check": "cost.SATreplay",
+      "actual": 52,
+      "expected": 52,
+      "pass": true
+    },
+    {
+      "check": "cost.monitor_split",
+      "actual": {
+        "sat": 2,
+        "unsat": 1,
+        "unknown": 1
+      },
+      "expected": {
+        "sat": 2,
+        "unsat": 1,
+        "unknown": 1
+      },
+      "pass": true
+    },
+    {
+      "check": "main_differential.raw_final_decisions",
+      "actual": {
+        "UNSAT_DIFFERENTIAL": 120,
+        "UNKNOWN_OUTPUT_DIFFERENCE": 24,
+        "CONTRACT_UNSAT_REJECTED": 18,
+        "UNVERIFIED_CONTRACT": 6
+      },
+      "expected": {
+        "UNSAT_DIFFERENTIAL": 120,
+        "UNKNOWN_OUTPUT_DIFFERENCE": 24,
+        "CONTRACT_UNSAT_REJECTED": 18,
+        "UNVERIFIED_CONTRACT": 6
+      },
+      "pass": true
+    },
+    {
+      "check": "main_differential.derived_categories",
+      "actual": {
+        "STRICT_VALID_BOUNDED_DIFFERENTIAL_AGREEMENT": 115,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 6,
+        "SOLVER_UNKNOWN": 23,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 24
+      },
+      "expected": {
+        "STRICT_VALID_BOUNDED_DIFFERENTIAL_AGREEMENT": 115,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 6,
+        "SOLVER_UNKNOWN": 23,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 24
+      },
+      "pass": true
+    },
+    {
+      "check": "main_differential.selected",
+      "actual": 168,
+      "expected": 168,
+      "pass": true
+    },
+    {
+      "check": "main_differential.returned",
+      "actual": 168,
+      "expected": 168,
+      "pass": true
+    },
+    {
+      "check": "main_differential.monitor_reason",
+      "actual": [
+        "RSS_OBSERVATION_UNAVAILABLE"
+      ],
+      "expected": [
+        "RSS_OBSERVATION_UNAVAILABLE"
+      ],
+      "pass": true
+    },
+    {
+      "check": "main_differential.base_SAT",
+      "actual": 162,
+      "expected": 162,
+      "pass": true
+    },
+    {
+      "check": "main_differential.XOR_UNSAT",
+      "actual": 162,
+      "expected": 162,
+      "pass": true
+    },
+    {
+      "check": "diff.monitor_split",
+      "actual": {
+        "UNSAT_DIFFERENTIAL": 5,
+        "UNKNOWN_OUTPUT_DIFFERENCE": 1
+      },
+      "expected": {
+        "UNSAT_DIFFERENTIAL": 5,
+        "UNKNOWN_OUTPUT_DIFFERENCE": 1
+      },
+      "pass": true
+    },
+    {
+      "check": "spotit_cost.raw_final_decisions",
+      "actual": {
+        "unsat": 12,
+        "sat": 9,
+        "unknown": 2,
+        "UNKNOWN_ORACLE_DOMAIN": 1,
+        "CONTRACT_UNSAT_REJECTED": 3,
+        "UNVERIFIED_CONTRACT": 1
+      },
+      "expected": {
+        "unsat": 12,
+        "sat": 9,
+        "unknown": 2,
+        "UNKNOWN_ORACLE_DOMAIN": 1,
+        "CONTRACT_UNSAT_REJECTED": 3,
+        "UNVERIFIED_CONTRACT": 1
+      },
+      "pass": true
+    },
+    {
+      "check": "spotit_cost.derived_categories",
+      "actual": {
+        "STRICT_VALID_PAIR_RESULT": 21,
+        "SOLVER_UNKNOWN": 2,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 3
+      },
+      "expected": {
+        "STRICT_VALID_PAIR_RESULT": 21,
+        "SOLVER_UNKNOWN": 2,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 3
+      },
+      "pass": true
+    },
+    {
+      "check": "spotit_cost.selected",
+      "actual": 28,
+      "expected": 28,
+      "pass": true
+    },
+    {
+      "check": "spotit_cost.returned",
+      "actual": 28,
+      "expected": 28,
+      "pass": true
+    },
+    {
+      "check": "spotit_cost.monitor_reason",
+      "actual": [
+        "RSS_OBSERVATION_UNAVAILABLE"
+      ],
+      "expected": [
+        "RSS_OBSERVATION_UNAVAILABLE"
+      ],
+      "pass": true
+    },
+    {
+      "check": "spotit.AUTO_SET_keepNULL",
+      "actual": 28,
+      "expected": 28,
+      "pass": true
+    },
+    {
+      "check": "Table3.official",
+      "actual": [
+        20,
+        2,
+        1,
+        "62.612",
+        "1.315"
+      ],
+      "expected": [
+        20,
+        2,
+        1,
+        "62.612",
+        "1.315"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Table3.official.domain",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Table3.official.typed",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Table3.official_generic_smt",
+      "actual": [
+        21,
+        2,
+        0,
+        "63.180",
+        "1.354"
+      ],
+      "expected": [
+        21,
+        2,
+        0,
+        "63.180",
+        "1.354"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Table3.official_generic_smt.domain",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Table3.official_generic_smt.typed",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Table3.flat",
+      "actual": [
+        23,
+        0,
+        0,
+        "37.110",
+        "1.314"
+      ],
+      "expected": [
+        23,
+        0,
+        0,
+        "37.110",
+        "1.314"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Table3.flat.domain",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Table3.flat.typed",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Table3.product",
+      "actual": [
+        19,
+        3,
+        1,
+        "73.661",
+        "1.336"
+      ],
+      "expected": [
+        19,
+        3,
+        1,
+        "73.661",
+        "1.336"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Table3.product.domain",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Table3.product.typed",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Table3.selector",
+      "actual": [
+        22,
+        0,
+        1,
+        "36.793",
+        "1.333"
+      ],
+      "expected": [
+        22,
+        0,
+        1,
+        "36.793",
+        "1.333"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Table3.selector.domain",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Table3.selector.typed",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Table3.official_canonical_sql",
+      "actual": [
+        22,
+        0,
+        1,
+        "50.485",
+        "1.332"
+      ],
+      "expected": [
+        22,
+        0,
+        1,
+        "50.485",
+        "1.332"
+      ],
+      "pass": true
+    },
+    {
+      "check": "Table3.official_canonical_sql.domain",
+      "actual": 1,
+      "expected": 1,
+      "pass": true
+    },
+    {
+      "check": "Table3.official_canonical_sql.typed",
+      "actual": 4,
+      "expected": 4,
+      "pass": true
+    },
+    {
+      "check": "Table4.sources",
+      "actual": {
+        "calcite": {
+          "INELIGIBLE": 548,
+          "UNKNOWN": 38,
+          "FRONTEND_UNSUPPORTED": 188,
+          "PARSE_OR_AST_RECORD_ERROR": 16,
+          "ELIGIBLE": 4
+        },
+        "literature": {
+          "INELIGIBLE": 125,
+          "PARSE_OR_AST_RECORD_ERROR": 1,
+          "ELIGIBLE": 2
+        },
+        "leetcode": {
+          "INELIGIBLE": 46758,
+          "PARSE_OR_AST_RECORD_ERROR": 1229,
+          "FRONTEND_UNSUPPORTED": 1
+        }
+      },
+      "expected": {
+        "calcite": {
+          "INELIGIBLE": 548,
+          "UNKNOWN": 38,
+          "FRONTEND_UNSUPPORTED": 188,
+          "PARSE_OR_AST_RECORD_ERROR": 16,
+          "ELIGIBLE": 4
+        },
+        "literature": {
+          "INELIGIBLE": 125,
+          "PARSE_OR_AST_RECORD_ERROR": 1,
+          "ELIGIBLE": 2
+        },
+        "leetcode": {
+          "INELIGIBLE": 46758,
+          "PARSE_OR_AST_RECORD_ERROR": 1229,
+          "FRONTEND_UNSUPPORTED": 1
+        }
+      },
+      "pass": true
+    },
+    {
+      "check": "Table4.total",
+      "actual": {
+        "INELIGIBLE": 47431,
+        "UNKNOWN": 38,
+        "FRONTEND_UNSUPPORTED": 189,
+        "PARSE_OR_AST_RECORD_ERROR": 1246,
+        "ELIGIBLE": 6
+      },
+      "expected": {
+        "INELIGIBLE": 47431,
+        "UNKNOWN": 38,
+        "FRONTEND_UNSUPPORTED": 189,
+        "PARSE_OR_AST_RECORD_ERROR": 1246,
+        "ELIGIBLE": 6
+      },
+      "pass": true
+    },
+    {
+      "check": "Table4.denominator",
+      "actual": 48910,
+      "expected": 48910,
+      "pass": true
+    },
+    {
+      "check": "public.pairs",
+      "actual": [
+        24455,
+        2,
+        24412,
+        41,
+        0
+      ],
+      "expected": [
+        24455,
+        2,
+        24412,
+        41,
+        0
+      ],
+      "pass": true
+    },
+    {
+      "check": "public.zeroLeaves",
+      "actual": {
+        "0": 6
+      },
+      "expected": {
+        "0": 6
+      },
+      "pass": true
+    },
+    {
+      "check": "leet.distinct",
+      "actual": [
+        56,
+        24050
+      ],
+      "expected": [
+        56,
+        24050
+      ],
+      "pass": true
+    },
+    {
+      "check": "public.resumes",
+      "actual": [
+        [
+          1973,
+          27,
+          true
+        ],
+        [
+          1978,
+          22,
+          true
+        ]
+      ],
+      "expected": [
+        [
+          1973,
+          27,
+          true
+        ],
+        [
+          1978,
+          22,
+          true
+        ]
+      ],
+      "pass": true
+    },
+    {
+      "check": "cost.attempts",
+      "actual": 169,
+      "expected": 169,
+      "pass": true
+    },
+    {
+      "check": "spotit.cpu",
+      "actual": "63.881",
+      "expected": "63.881",
+      "pass": true
+    }
+  ],
+  "checks_passed": 51,
+  "failed": [],
+  "summaries": {
+    "main_cost": {
+      "full_registered_denominator": 168,
+      "selected_denominator": 168,
+      "unselected_registered_slots": 0,
+      "started_attempt_denominator": 169,
+      "raw_final_decisions": {
+        "unsat": 78,
+        "sat": 52,
+        "unknown": 8,
+        "UNKNOWN_ORACLE_DOMAIN": 6,
+        "CONTRACT_UNSAT_REJECTED": 18,
+        "UNVERIFIED_CONTRACT": 6
+      },
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 127,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 4,
+        "SOLVER_UNKNOWN": 7,
+        "ORACLE_DOMAIN_UNPROVEN": 6,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 24
+      }
+    },
+    "main_differential": {
+      "full_registered_denominator": 168,
+      "selected_denominator": 168,
+      "unselected_registered_slots": 0,
+      "started_attempt_denominator": 168,
+      "raw_final_decisions": {
+        "UNSAT_DIFFERENTIAL": 120,
+        "UNKNOWN_OUTPUT_DIFFERENCE": 24,
+        "CONTRACT_UNSAT_REJECTED": 18,
+        "UNVERIFIED_CONTRACT": 6
+      },
+      "derived_categories": {
+        "STRICT_VALID_BOUNDED_DIFFERENTIAL_AGREEMENT": 115,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 6,
+        "SOLVER_UNKNOWN": 23,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 24
+      }
+    },
+    "spotit_cost": {
+      "full_registered_denominator": 168,
+      "selected_denominator": 28,
+      "unselected_registered_slots": 140,
+      "started_attempt_denominator": 28,
+      "raw_final_decisions": {
+        "unsat": 12,
+        "sat": 9,
+        "unknown": 2,
+        "UNKNOWN_ORACLE_DOMAIN": 1,
+        "CONTRACT_UNSAT_REJECTED": 3,
+        "UNVERIFIED_CONTRACT": 1
+      },
+      "derived_categories": {
+        "STRICT_VALID_PAIR_RESULT": 21,
+        "SOLVER_UNKNOWN": 2,
+        "ORACLE_DOMAIN_UNPROVEN": 1,
+        "RESOURCE_STOP_OR_BUDGET_FAILURE": 1,
+        "EXPECTED_TYPED_NO_QUERY_REJECTION": 3
+      }
+    }
+  },
+  "table3": {
+    "official": [
+      20,
+      2,
+      1,
+      "62.612",
+      "1.315"
+    ],
+    "official_generic_smt": [
+      21,
+      2,
+      0,
+      "63.180",
+      "1.354"
+    ],
+    "flat": [
+      23,
+      0,
+      0,
+      "37.110",
+      "1.314"
+    ],
+    "product": [
+      19,
+      3,
+      1,
+      "73.661",
+      "1.336"
+    ],
+    "selector": [
+      22,
+      0,
+      1,
+      "36.793",
+      "1.333"
+    ],
+    "official_canonical_sql": [
+      22,
+      0,
+      1,
+      "50.485",
+      "1.332"
+    ]
+  },
+  "boundary": "Frozen final values only; historical v4 results retain separately sourced evidence. Scientific NO_GO."
+}

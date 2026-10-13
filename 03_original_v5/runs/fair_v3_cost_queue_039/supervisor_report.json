@@ -1,0 +1,1310 @@
+{
+  "status": "SELECTED_JOBS_COMPLETE",
+  "kind": "cost",
+  "data_role": "EXPOSED_ANALYTICAL_DEV_STRUCTURE_STRESS_NOT_EXTERNAL_OR_HELDOUT",
+  "source_provenance": {
+    "fixture": "runtime/smoke_cases.json",
+    "sha256": "b3be16fd0f2c5a03513363c907d773e3087bbab16c2633ca4a4656ec256f4918",
+    "transformation": "Preserve complete schema, queries, constraints and analytical expectations; vary each relation exact positive cardinality uniformly N=2,4,8. All cases reused DEV, no natural defect label."
+  },
+  "suite_sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4",
+  "runtime_lock_sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7",
+  "program_sha256": {
+    "common.py": "9bf9830f5884d0342174a43bec9ad93889102bb67e290c2961ef345f8564585a",
+    "worker.py": "bf2c8ba1f674f7185a87238356afc27131dbe653d4f6649d06b37e848c486afa",
+    "supervisor.py": "49a8682b74728c61b2180de57cf65f5d2fe284b040e9e1688b40acd2a6588f42",
+    "query_differential.py": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+  },
+  "full_case_denominator": 18,
+  "full_job_denominator": 90,
+  "selected_job_start": 39,
+  "selected_job_limit": 3,
+  "jobs": [
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "sat",
+      "attempts": [
+        {
+          "route": "official_generic_smt",
+          "reason": null,
+          "status": "sat",
+          "tactic_pipeline": [
+            "simplify",
+            "propagate-values",
+            "solve-eqs",
+            "smt"
+          ],
+          "solver_timeout_ms": 12450,
+          "witness": {
+            "F": [
+              [
+                0,
+                -1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                null
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "D": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                -1,
+                0
+              ]
+            ],
+            "E": [
+              [
+                2,
+                0
+              ],
+              [
+                -1,
+                null
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                0,
+                null
+              ]
+            ]
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  4
+                ]
+              ],
+              [
+                [
+                  3
+                ]
+              ]
+            ],
+            "sqlite_version": "3.53.3",
+            "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+            "unequal_as_bags": true
+          }
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v3_cost_queue_039/job_0039",
+      "sampled_peak_rss_bytes": 107937792,
+      "sampled_max_kernel_threads": 2,
+      "pid": 90456,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.50722266593948,
+      "full_process_cpu_user_seconds": 1.347165,
+      "full_process_cpu_system_seconds": 0.10029099999999999,
+      "full_process_cpu_seconds": 1.4474559999999999,
+      "worker_report_sha256": "69f5141515afb6fdc7720556800cb238250cbb4d9e31f1c6429933ac3763cb7a",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.2720129583030939,
+      "semantic_e2e_cpu_seconds": 0.2716940000000001,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "product",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 32,
+              "flat_rows": 0,
+              "selectors": 0
+            },
+            {
+              "match_terms": 32,
+              "flat_rows": 0,
+              "selectors": 0
+            }
+          ],
+          "auxiliary_definition_count": 32
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v3_cost_queue_039/job_0040",
+      "sampled_peak_rss_bytes": 109592576,
+      "sampled_max_kernel_threads": 2,
+      "pid": 90460,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.395061458926648,
+      "full_process_cpu_user_seconds": 1.1855470000000001,
+      "full_process_cpu_system_seconds": 0.10239699999999999,
+      "full_process_cpu_seconds": 1.2879440000000002,
+      "worker_report_sha256": "e760b67e9cbe1dd793a0972b20b352bf63362fb260101ab7b529f98889feb143",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.11011670809239149,
+      "semantic_e2e_cpu_seconds": 0.10986899999999977,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "PROCESS_EXITED",
+      "final_decision": "unsat",
+      "attempts": [
+        {
+          "route": "selector",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 32,
+              "flat_rows": 0,
+              "selectors": 40
+            },
+            {
+              "match_terms": 32,
+              "flat_rows": 0,
+              "selectors": 40
+            }
+          ],
+          "auxiliary_definition_count": 32
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v3_cost_queue_039/job_0041",
+      "sampled_peak_rss_bytes": 110379008,
+      "sampled_max_kernel_threads": 2,
+      "pid": 90474,
+      "exit_code": 0,
+      "full_process_wall_seconds": 1.2930471659637988,
+      "full_process_cpu_user_seconds": 1.1529669999999999,
+      "full_process_cpu_system_seconds": 0.10961900000000002,
+      "full_process_cpu_seconds": 1.2625859999999998,
+      "worker_report_sha256": "bee9eb2cb90b561141c0a9212ca38ad2c540b0d90eaad056ac315f3f3e783aa8",
+      "worker_status": "COMPLETE",
+      "semantic_e2e_wall_seconds": 0.11288358317688107,
+      "semantic_e2e_cpu_seconds": 0.11259799999999998,
+      "analytical_expectation_match": true,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "valid_completed_result": true
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "S01_reordered_conjunction_N8",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "S01_reordered_conjunction_N8",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "S01_reordered_conjunction_N8",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "S01_reordered_conjunction_N8",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "S01_reordered_conjunction_N8",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "S02_nullable_count_N8",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "S02_nullable_count_N8",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "S02_nullable_count_N8",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "S02_nullable_count_N8",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "S02_nullable_count_N8",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "S03_full_not_null_IC_N8",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "S03_full_not_null_IC_N8",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "S03_full_not_null_IC_N8",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "S03_full_not_null_IC_N8",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "S03_full_not_null_IC_N8",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "S04_sum_vs_count_N8",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "S04_sum_vs_count_N8",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "S04_sum_vs_count_N8",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "S04_sum_vs_count_N8",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "S04_sum_vs_count_N8",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "S05_empty_SUM_NULL_N8",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "S05_empty_SUM_NULL_N8",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "S05_empty_SUM_NULL_N8",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "S05_empty_SUM_NULL_N8",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "S05_empty_SUM_NULL_N8",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "S06_all_NULL_SUM_N8",
+      "arm": "flat",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "S06_all_NULL_SUM_N8",
+      "arm": "product",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "S06_all_NULL_SUM_N8",
+      "arm": "selector",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "S06_all_NULL_SUM_N8",
+      "arm": "official",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "S06_all_NULL_SUM_N8",
+      "arm": "official_generic_smt",
+      "kind": "cost",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    }
+  ],
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_supervisor_seconds": 25,
+    "per_child_wall_alarm_seconds": 24,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Fresh process/Environment per admitted arm. Full schema, exact rows and IC unchanged. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+  "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate Ineligible -> raw official; candidate unknown -> raw official only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+  "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+  "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+  "clock_boundary": "89s guard starts after initial stdlib time import; per-child supervisor wall includes spawn/startup through reap. Worker final checkpoint excludes final write, full process wall/CPU measured here.",
+  "wall_seconds_before_final_write": 4.2378830830566585
+}

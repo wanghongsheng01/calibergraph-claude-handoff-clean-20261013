@@ -1,0 +1,93 @@
+{
+  "artifact_version": 3,
+  "round": "08",
+  "date": "2026-10-11",
+  "role": "root_author_revision_after_independent_initial_review",
+  "status": "NULL_NOVELTY_WITH_COMPLETE_SPECIALIZATION_PROOF",
+  "new_validated_mechanism": null,
+  "hypotheses_examined": 1,
+  "hypothesis": "One legal collision-preserving dependency template completely separates a same-body self-join-free combined-query pair when their counted-variable closures differ.",
+  "hypothesis_math_result": "PROVED_BY_HAND_ONLY_ON_EXPLICIT_COMMON_INFINITE_EQUALITY_DOMAIN_AND_WELL_TYPED_FRAGMENT",
+  "hypothesis_novelty_result": "NULL: standard FD projection bijection and Armstrong two-tuple nonimplication construction cover the mechanism",
+  "scientific_execution": false,
+  "sql_execution": false,
+  "solver_execution": false,
+  "gpu_or_model_execution": false,
+  "queued_jobs": 0,
+  "benchmark_or_reserve_access": false,
+  "fragment": {
+    "schema": "set-valued relations; exactly one nonempty possibly composite PK per table; every column NOT NULL; complete-PK FKs only; directed FK graph acyclic and underlying undirected simple graph a forest; no other constraints",
+    "body": "one common nonempty safe relational conjunction B with identical variable naming; each predicate occurs at most once; variables only; equalities represented by repeated variables; explicitly FK-closed with matching variable tuples",
+    "queries": "same ordered head H; different counted-variable sets M,N disjoint from H; all other variables existential; multiplicity equals count of projected satisfying assignments",
+    "reject": [
+      "self_join",
+      "different_body_without_proven_variable_transport",
+      "missing_explicit_fk_target",
+      "nullable_column",
+      "comparison",
+      "constant_predicate",
+      "union_or_negation",
+      "outer_join",
+      "base_bag",
+      "additional_constraints",
+      "general_aggregation"
+    ],
+    "strict_outside_key_anchorability_example": "F1 and F2",
+    "strictness_caution": "Contains cases outside key-anchorability; does not contain the entire FewRows fragment",
+    "domain_and_typing": "Every relation position and variable uses one common infinite opaque equality domain. Queries are well typed. No coercions, finite-width SQL types, enumerations, NULL, or additional domain constraints are admitted. Finite databases over this infinite domain only.",
+    "input_representation": "Explicit integer IDs; M and N each encoded as duplicate-free subsets of body variables. Any noncompact or duplicate representation has its actual encoded read length charged separately."
+  },
+  "theorem": {
+    "fd_system": "For each atom A, PK-variable-set K_A -> vars(A)",
+    "equivalence_iff": "closure(H union M) = closure(H union N)",
+    "inequivalence_direction": "Pick m in M minus closure(H union N), exchanging M,N if needed",
+    "template": "Let C=closure(H union N). Let S be the component containing m in the atom-incidence hypergraph induced on V minus C. Freeze variables outside S; synchronously assign n pairwise tagged values to all variables of S; materialize each atom under every shared index.",
+    "legal_for": "all positive integers n, only under the explicit common infinite opaque equality-domain and well-typed fragment",
+    "separation": "exactly n versus 1 copies of the fixed head tuple",
+    "number_of_templates": 1,
+    "optional_corner_family": [
+      1,
+      2
+    ],
+    "required_materialization_parameter": 2,
+    "max_rows_per_table": 2,
+    "total_row_bound": "2 * number_of_body_atoms",
+    "exact_row_formula": "a + (n-1)*s, where s is the number of atoms intersecting S",
+    "construction_cost": "O(S+L+h+v) word operations for a fixed T(2) with compact M,N: S full schema encoding including unused tables/columns and every constraint, L explicit body variable occurrences, h complete ordered head length including repeated positions, v distinct body variables. More generally add actual counted-set encoding length j, O(S+L+h+j+v).",
+    "search_cost": "no equality-type enumeration, no database enumeration, no solver, no PIT; closure comparison and one component choice",
+    "assignment_safety": "Self-join-freeness enforces each variable's local tagged domain; one varying component enforces one shared index, hence exactly n full satisfying assignments.",
+    "fk_caution": "Input includes already FK-closed body; no hidden chase-size claim",
+    "evaluation_caution": "Linear exact output derivation holds for this proven template, not generic SQL evaluation",
+    "output_bit_cost": "O(L log(v+1)) concerns only witness tagged data cells. Complete delivery and input cost additionally charge schema/table identifiers, head/certificate materialization, encoded input and parsing. No generic SQL evaluator or implicit chase cost claim."
+  },
+  "counterexamples": {
+    "dropping_self_join_free": "R(x,y) AND R(y,x), full-tuple PK, count x vs count y: closures differ but queries always equivalent; naive two-index template yields 3 vs 3",
+    "dropping_aligned_common_body": "R(k,x,y) vs R(k,y,x), key k, count x on both: identical FDs and closure{x}, but R={(1,7,8),(2,7,9)} gives 1 vs 2. Any body alignment must transport the counted set.",
+    "first_failed_proof_step": "The two count projections no longer originate from one common satisfying-assignment relation",
+    "set_equivalent_boundary_lemma": "Under all the other pure-variable, self-join-free, explicitly FK-closed restrictions, set-equivalent bodies must be head-preserving renaming-isomorphic. Each canonical DB is already legal and yields a reverse homomorphism; self-join-free endomorphisms fix every positional variable, so the maps are inverses. Transport counted sets along the isomorphism before closure comparison.",
+    "boundary_lemma_novelty": "NULL: standard canonical-database set-containment specialization, not a new mechanism or a fixture-scope change"
+  },
+  "fixed_fixture_protocol": {
+    "file": "fixtures.json",
+    "status": "PLANNED_NOT_EXECUTED",
+    "denominator": 7,
+    "in_fragment": 3,
+    "in_fragment_inequivalent": 2,
+    "in_fragment_equivalent": 1,
+    "must_reject": 4,
+    "optional_future_total_wall_seconds": 1,
+    "processes": 1,
+    "retries": 0,
+    "baseline": "ordinary FD closure plus Armstrong two-tuple witness under identical combined semantics",
+    "stop_rule": "Stop on any misclassification, illegal witness, wrong output, accepted out-of-fragment input, or timeout. Do not revise fixtures or select more favorable inputs.",
+    "inference_limit": "Passing fixtures supports implementation conformance only, never novelty, natural coverage, or performance superiority"
+  },
+  "remaining_blockers": [
+    "Independent followup review of revisions 02 and 03 pending",
+    "Seven fixtures and three ablations remain unexecuted; no empirical advantage",
+    "Private authored backup pending; overall historical full recovery remains BACKUP_BLOCKED"
+  ],
+  "next_action": "Retain as a mature strong control; do not promote mechanism or launch natural performance experiments",
+  "input_treatment": "Round 07 inputs were unreviewed hypotheses; weak computability and overstrong H2 probability claims were not inherited",
+  "revision_precedence": "This file replaces theory/theory_result.json as the authoritative machine-readable theorem scope and cost. Original 11-file author snapshot remains unchanged; revision_02 applies together with revision_03."
+}

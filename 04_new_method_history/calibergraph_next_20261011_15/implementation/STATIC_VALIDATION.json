@@ -1,0 +1,461 @@
+{
+  "schema": "calibergraph.round15.author_static_validation.v1",
+  "status": "PASS_STATIC_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "created_utc": "2026-10-11T16:24:06.781995+00:00",
+  "checks": [
+    {
+      "name": "six_source_AST_syntax",
+      "status": "PASS",
+      "detail": "ast.parse only; no compile, import, exec or evaluation of scientific code"
+    },
+    {
+      "name": "official_contract_admission.py_byte_identical",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "safe_sqlite_replay.py_byte_identical",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_gate_literal_false",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "common_guard_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "REGISTRY_SHA256_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "RUNTIME_SHA256_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "common_repeat_orders",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_POLICY_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_utc_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_request_stop_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_require_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_number_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_read_json_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_atomic_json_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_event_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_accounting_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_precheck_guard_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_digest_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_verify_manifest_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_machine_probe_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_ps_seconds_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_group_sample_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_progress_snapshot_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_child_setup_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_reap_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_resource_status_in_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_run_slot_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_preplanned_denominator24",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_repeat_orders",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_preplanned_slot_fields_match_common",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_BudgetStop_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_SolverBudgetOverrun_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_cpu_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_sha_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_objsha_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_Budget_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_stage_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_load_runtime_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_source_class_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_evidence_complete_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_check_solver_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_formula_sha_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_verify_facts_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_export_complete_model_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_run_case_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_check_solver_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 2,
+        "new": 2
+      }
+    },
+    {
+      "name": "backend_original_compare_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_parse_sql_query_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 0,
+        "new": 0
+      }
+    },
+    {
+      "name": "backend_replay_generated_witness_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 2,
+        "new": 2
+      }
+    },
+    {
+      "name": "backend_create_database_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_add_constraints_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "worker_load_runtime_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "worker_run_case_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "worker_validate_schema_and_contract_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "worker_source_class_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "draft_protocol_disabled",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_24_exact_predeclared_slots",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_index_allowlist_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_worker_cpu_limit_seconds_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_worker_wall_limit_seconds_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_external_rss_limit_bytes_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_contract_check_timeout_ms_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_query_check_timeout_ms_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_maximum_independent_environment_attempts_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_maximum_active_workers_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_nice_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_total_parent_cpu_limit_seconds_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_solver_cumulative_wall_limit_seconds_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_solver_timeout_reserve_seconds_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_supervisor_solver_stop_seconds_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_internal_z3_memory_parameter_mb_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_input_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_runtime_lock_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_supervisor_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_artifacts_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_known_replay_profiles_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_contract_model_sanity_control_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_control_scope_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_semantics_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "maximum_batch_attempts_one",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old_analytic_controls_verbatim",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "six_source_paths_only",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "source_files": [
+    "generation_common.py",
+    "generation_supervisor.py",
+    "official_generation_worker.py",
+    "official_generation_backend.py",
+    "official_contract_admission.py",
+    "safe_sqlite_replay.py"
+  ],
+  "syntax_method": "ast.parse; constant AST nodes via ast.literal_eval; JSON and bytes/hash only",
+  "no_scientific_execution": true,
+  "no_scientific_import": true,
+  "no_compile_pycompile_exec_eval": true,
+  "no_capability_probe": true,
+  "no_priority_change": true,
+  "limitations": [
+    "Static call count and AST preservation are supporting evidence, not a runtime or semantic correctness proof.",
+    "Hard signal/kill can bypass timing finally and receipts; missing durations remain unknown/censored.",
+    "Boundary logs and earlier startup are not a partitioned phase cost; full-process accounting remains authoritative.",
+    "Root external once-lock remains required; flock is mutual exclusion only.",
+    "No new analyzer or result forecast is asserted."
+  ]
+}

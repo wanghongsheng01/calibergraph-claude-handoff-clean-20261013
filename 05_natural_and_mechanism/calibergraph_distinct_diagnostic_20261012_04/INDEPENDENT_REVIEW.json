@@ -1,0 +1,53 @@
+{
+  "verdict": "PASS",
+  "scope": "Independent read-only review of prelaunch stop reporting and evidence boundaries; not a full scientific or method review",
+  "case": "thrombosis_prediction/1172",
+  "reviewed_files_sha256": {
+    "RESULT.zh.md": "ea51dbedda784bf1dac83a1015ca95d91af15ea0d84bad22f58730048413101e",
+    "RESULT.json": "8a62e2d57dd23ea70322eab7436d2e1e984b0be46003cca01cdc4d265823f56c",
+    "RUN_CONFIG.json": "49b96b729af214a0e0fd73931a98ecfc47185907e46e6a2d2bfeb4aa6ae31a23",
+    "INPUT_FREEZE.json": "f489ab4e6128a872e231750714f906d1775f99e278283a364c0dad3ab4de8ce3",
+    "STAGES.jsonl": "9aedae2484aa0f93ec3802c78d4c1feaae5c5cdfc7eac7fc240a3be6b154ea1a",
+    "precheck_initial.txt": "59efecd1246bf78af8898eb440d5bc4c0fdbd1862ce84468279a6bad71c7f35c",
+    "precheck_ps.txt": "ea9625ebac126d01bb05ead0e1d75d2b7cada56aaae01a9dbbcd803f8dc6f235",
+    "precheck_vm_stat.txt": "3de475cd3a861d3b48aa4ca4c6327a97e368cf04351f788ad2c39855093b1dc2",
+    "CLOSED_NO_SCIENTIFIC_LAUNCH.lock": "ac3d22b87aece9f7d457ce3be2e9a5ea534605d87fbeca4a4e0de4a1c4e98cdf"
+  },
+  "previous_gate_file": "../calibergraph_distinct_evidence_20261012_03/NEXT_DIAGNOSTIC.json",
+  "checks": {
+    "observed_load_2_57_exceeds_frozen_gate_2_0": true,
+    "no_launch_no_queue_no_retry_consistent": true,
+    "sandbox_ps_denial_recorded_as_unknown_not_no_duplicates": true,
+    "sandbox_denial_not_misrepresented_as_auto_review_rejection": true,
+    "available_memory_not_certified_from_vm_stat": true,
+    "prelaunch_stop_not_algorithm_failure_or_reproduced_EQ": true,
+    "static_countermodel_not_claimed_as_executed_or_author_witness": true,
+    "all_eight_scientific_stages_NOT_RUN": true,
+    "recorded_disprove_SQL_solver_counts_zero": true,
+    "configured_single_worker_60s_1GiB_zero_retries": true,
+    "result_to_freeze_to_config_hashes_match": true,
+    "config_to_previous_gate_hash_matches": true,
+    "manifest_has_126_unique_entries": true
+  },
+  "blocking_findings": [],
+  "nonblocking_notes": [
+    "RESULT.zh.md says previous-round two-row database was constructed this round; prefer previous-round locally constructed static countermodel to remove temporal ambiguity. Its explicit NOT_RUN / not-author-witness qualifiers already prevent a validation overclaim.",
+    "RESULT.json independent_review=PENDING is the author snapshot before this independent review; this separate review supplies the verdict without editing author files."
+  ],
+  "uncompleted_user_goals": [
+    "One actual official #1172 bounded diagnostic run",
+    "Runtime compatibility, original SQL parsing, and full constraint loading",
+    "Independent constraint validation and original-query replay of the static countermodel",
+    "Observed lowering/CSP/Z3/SQLite or generation/difference-check runtime evidence",
+    "Reproduction or non-reproduction of historical EQ and internal root-cause localization",
+    "Verified absence of duplicate workers and certified available-memory admission"
+  ],
+  "evidence_limits": [
+    "Review verifies consistency of supplied records, not independent host execution attestation.",
+    "Only listed artifacts and prior gate were substantively reviewed. No underlying SQL or 126 source files were rescanned or executed.",
+    "Input/source verification claims remain author static-check records; manifest cardinality and document hash links were independently checked.",
+    "No renewed load/process probe, scientific import, SQL, solver, network, installation, privilege request, or unrelated_project interaction was performed."
+  ],
+  "batch_closed": true,
+  "next_action": "Keep this batch closed; no automatic retry. Parent owns any separately decided future diagnostic and backup."
+}

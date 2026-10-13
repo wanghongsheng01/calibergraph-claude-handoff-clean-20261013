@@ -1,0 +1,7 @@
+nice: setpriority: Operation not permitted
+Traceback (most recent call last):
+  File "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_13/code/replay.py", line 34, in <module>
+    os.nice(15 - priority)
+PermissionError: [Errno 1] Operation not permitted
+        0.05 real         0.01 user         0.01 sys
+time: sysctl kern.clockrate: Operation not permitted

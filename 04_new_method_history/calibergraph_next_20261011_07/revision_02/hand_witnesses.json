@@ -1,0 +1,146 @@
+{
+  "provenance": "original hand construction, not benchmark data",
+  "validation": "manual derivation only; no SQL engine executed",
+  "witnesses": [
+    {
+      "id": "A_collision",
+      "schema": {
+        "WitnessP": {
+          "columns": [
+            "k",
+            "v"
+          ],
+          "pk": [
+            "k"
+          ],
+          "not_null": [
+            "k",
+            "v"
+          ]
+        }
+      },
+      "rows": {
+        "WitnessP": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "expected_outputs": {
+        "distinct_v": [
+          [
+            0
+          ]
+        ],
+        "bag_v": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      },
+      "iid_two_row_success_probability": "1/q for independent uniform v values in a q-element domain and distinct fixed keys"
+    },
+    {
+      "id": "B_nonanchorable",
+      "schema": {
+        "WitnessCustomer": {
+          "columns": [
+            "cid"
+          ],
+          "pk": [
+            "cid"
+          ]
+        },
+        "WitnessOrders": {
+          "columns": [
+            "oid",
+            "cid"
+          ],
+          "pk": [
+            "oid"
+          ],
+          "not_null": [
+            "oid",
+            "cid"
+          ],
+          "fk": {
+            "cid": "WitnessCustomer.cid"
+          }
+        }
+      },
+      "rows": {
+        "WitnessCustomer": [
+          [
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "WitnessOrders": [
+          [
+            11,
+            1
+          ],
+          [
+            22,
+            2
+          ]
+        ]
+      },
+      "expected_outputs": {
+        "counted_distinct_customer_projection": [
+          [
+            1
+          ],
+          [
+            1
+          ]
+        ],
+        "distinct_unit": [
+          [
+            1
+          ]
+        ]
+      },
+      "manual_legality": "Each primary key is unique; both child foreign keys have parent rows; every value is nonnull; relation dependency graph is acyclic."
+    },
+    {
+      "id": "C_modular_alias",
+      "uses_rows_from": "A_collision",
+      "expected_outputs": {
+        "count_rows": [
+          [
+            2
+          ]
+        ],
+        "count_cross_product": [
+          [
+            4
+          ]
+        ]
+      },
+      "residues_mod_2": {
+        "count_rows": [
+          [
+            0
+          ]
+        ],
+        "count_cross_product": [
+          [
+            0
+          ]
+        ]
+      },
+      "semantic_layer": "COUNT queries are observers; constant-head bag-query cores have multiplicities 2 and 4 and lie in C. No SQL was executed."
+    }
+  ]
+}

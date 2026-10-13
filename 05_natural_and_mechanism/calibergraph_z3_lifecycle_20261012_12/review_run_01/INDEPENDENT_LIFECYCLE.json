@@ -1,0 +1,233 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "reason": "CASE_DEADLINE",
+      "elapsed_s": 0.40586600033566356,
+      "wall_seconds": 0.25,
+      "handle_count": 2,
+      "all_reaped": true,
+      "returncodes": [
+        -15,
+        -9
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.456826208,
+          "bytes": 17022976
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333221.457909833,
+          "index": 0,
+          "pid_for_logging_only": 40730
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333221.471855375,
+          "index": 1,
+          "pid_for_logging_only": 40731
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.482737208,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.509049125,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.537860666,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.567910208,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.596277083,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.626330083,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.656369125,
+          "bytes": 17039360
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.686408791,
+          "bytes": 17039360
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2333221.709410416,
+          "pid_for_logging_only": 40731
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2333221.709457875,
+          "pid_for_logging_only": 40730
+        },
+        {
+          "kind": "kill",
+          "monotonic": 2333221.860981416,
+          "pid_for_logging_only": 40731
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333221.862322916,
+          "pid_for_logging_only": 40731,
+          "returncode": -9
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333221.862350375,
+          "pid_for_logging_only": 40730,
+          "returncode": -15
+        }
+      ],
+      "test": "deadline_blocked_read_two_owned_handles",
+      "measured_elapsed_s": 0.40586391743272543,
+      "signal_state_restored": true,
+      "watchdog_joined": true,
+      "streams_closed": true
+    },
+    {
+      "reason": "SELF_RSS_SAMPLED_STOP",
+      "elapsed_s": 0.19361145794391632,
+      "wall_seconds": 2,
+      "handle_count": 1,
+      "all_reaped": true,
+      "returncodes": [
+        -9
+      ],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 17219583,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.863146375,
+          "bytes": 17104896
+        },
+        {
+          "kind": "spawn",
+          "monotonic": 2333221.866453541,
+          "index": 0,
+          "pid_for_logging_only": 40732
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.868481583,
+          "bytes": 17219584
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.874430333,
+          "bytes": 17219584
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.880711416,
+          "bytes": 17219584
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.886982666,
+          "bytes": 17219584
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.893260083,
+          "bytes": 17219584
+        },
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333221.899528875,
+          "bytes": 17219584
+        },
+        {
+          "kind": "stop",
+          "monotonic": 2333221.899538708,
+          "reason": "SELF_RSS_SAMPLED_STOP"
+        },
+        {
+          "kind": "terminate",
+          "monotonic": 2333221.899571666,
+          "pid_for_logging_only": 40732
+        },
+        {
+          "kind": "kill",
+          "monotonic": 2333222.05467625,
+          "pid_for_logging_only": 40732
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333222.056135,
+          "pid_for_logging_only": 40732,
+          "returncode": -9
+        },
+        {
+          "kind": "wait",
+          "monotonic": 2333222.056314375,
+          "pid_for_logging_only": 40732,
+          "returncode": -9
+        }
+      ],
+      "test": "automatic_self_rss_stop_blocked_read",
+      "measured_elapsed_s": 0.1937550837174058,
+      "signal_state_restored": true,
+      "watchdog_joined": true,
+      "streams_closed": true
+    },
+    {
+      "reason": null,
+      "elapsed_s": 0.0005027502775192261,
+      "wall_seconds": 1,
+      "handle_count": 0,
+      "all_reaped": true,
+      "returncodes": [],
+      "cleanup_errors": [],
+      "self_rss_stop_bytes": 1073741824,
+      "rss_scope": "own Python high-water RSS only; excludes all children",
+      "events": [
+        {
+          "kind": "self_rss_peak",
+          "monotonic": 2333222.056991083,
+          "bytes": 17252352
+        }
+      ],
+      "test": "science_gate_before_launch",
+      "measured_elapsed_s": 0.0005915830843150616,
+      "signal_state_restored": true,
+      "watchdog_joined": true,
+      "streams_closed": true
+    }
+  ],
+  "science_admission": {
+    "admitted": false,
+    "reason": "EXTERNAL_Z3_RSS_COVERAGE_UNAVAILABLE",
+    "forbidden_process_probe_retried": false,
+    "native_memory_parameter_substitutes_for_rss": false,
+    "science_threshold_bytes": 1073741824
+  },
+  "source_sha256": "217bbbbac7e0ae39cd19ee905c2a0c13a247888463e3b42132f8a2b246dbcb8b",
+  "owned_fixture_children": 3,
+  "scientific_calls": 0,
+  "allocated_test_buffer_bytes": 0,
+  "process_enumeration_or_foreign_rss_queries": 0
+}

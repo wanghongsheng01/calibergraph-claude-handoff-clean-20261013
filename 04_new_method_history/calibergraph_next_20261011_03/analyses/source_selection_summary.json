@@ -1,0 +1,1656 @@
+{
+  "artifact_type": "READ_ONLY_FROZEN_SELECTION_ACCOUNTING",
+  "status": "COMPLETE_STATIC_SELECTION_SUMMARY",
+  "scope": "Only source_inventory_01 ledgers and selected results; no source snapshots or reserve files reopened; no SQL, parser, or solver execution.",
+  "scan_report_status": "COMPLETE_STATIC_SELECTION_NOT_EXECUTED",
+  "scan_status_interpretation": "Selection completed. NOT_EXECUTED describes parser/SQL/solver execution, not a failed or unrun inventory scan. This summary makes no statement about other runs.",
+  "evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/report.json",
+      "sha256": "ec9fd74bc79cd24acd5eb4f011bdc58a0cdb9650d132b4d97603127674c00d97"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/inventory.jsonl",
+      "sha256": "6e8e5e081146cc0a20589892ec65eb92c28bc5fb1a634714d58df063c12d2033"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/selection_attempts.jsonl",
+      "sha256": "6affc8432f6f428eac62359e5c05a8f971eda4b036557b54c0a98bf2a929d753"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/source_groups.json",
+      "sha256": "f1a83c2f3e38cc44370ad33100b0740b06da8289d406f3f311e79b4c4917e777"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/selected.jsonl",
+      "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/runs/source_inventory_01/receipt.json",
+      "sha256": "3c41dbdfdaad84ba8dc494593ca46e3cfe2ed25ee9e5df3869be33af7e5ebff0"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+      "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+    }
+  ],
+  "frozen_protocol_sha256": "7ec169d8764209be57a533cde6fd0a2dd425814b5772678d692820361534e121",
+  "source_snapshots": [
+    {
+      "dataset": "calcite",
+      "sha256": "5fc6e0740134220856e93743147038cacaf22cb9d9823e7d6b8da2b461939ac4",
+      "bytes": 1060379,
+      "pairs": 397,
+      "matches_frozen": true
+    },
+    {
+      "dataset": "literature",
+      "sha256": "4c5e2661797177fd865a3f57c887376cb01bcbeec57ec77a032124e04c77f42f",
+      "bytes": 42046,
+      "pairs": 64,
+      "matches_frozen": true
+    },
+    {
+      "dataset": "leetcode",
+      "sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "bytes": 22995478,
+      "pairs": 23994,
+      "matches_frozen": true
+    }
+  ],
+  "source_denominators": {
+    "calcite_pairs": 397,
+    "literature_pairs": 64,
+    "leetcode_pairs": 23994,
+    "all_pairs": 24455,
+    "all_query_slots": 48910,
+    "expected_previously_reported_LeetCode_null_contract_rows": 957
+  },
+  "inventory_status_counts": {
+    "SOURCE_GROUP_NOT_ESTABLISHED": 397,
+    "UPSTREAM_REWRITTEN_NONNATURAL_CONTROL_NOT_PRIMARY": 64,
+    "STRATUM_CANDIDATE_BEFORE_GROUP_MEDIAN_AND_DEDUP": 16095,
+    "PREVIOUS_DEVELOPMENT_GROUP_EXCLUDED": 3256,
+    "NO_REGISTERED_LEXICAL_STRATUM": 2495,
+    "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT": 16,
+    "KNOWN_RESERVE_GROUP_EXCLUDED_BEFORE_SQL_DECODE": 2132
+  },
+  "inventory_status_count_sum": 24455,
+  "contract_source_counts": {
+    "calcite": {
+      "PRESENT_JSON": 397
+    },
+    "literature": {
+      "PRESENT_JSON": 6,
+      "NULL_UNSPECIFIED": 58
+    },
+    "leetcode": {
+      "PRESENT_JSON": 23037,
+      "NULL_UNSPECIFIED": 957
+    }
+  },
+  "contract_source_by_inventory_status": {
+    "SOURCE_GROUP_NOT_ESTABLISHED": {
+      "PRESENT_JSON": 397
+    },
+    "UPSTREAM_REWRITTEN_NONNATURAL_CONTROL_NOT_PRIMARY": {
+      "PRESENT_JSON": 6,
+      "NULL_UNSPECIFIED": 58
+    },
+    "STRATUM_CANDIDATE_BEFORE_GROUP_MEDIAN_AND_DEDUP": {
+      "PRESENT_JSON": 15441,
+      "NULL_UNSPECIFIED": 654
+    },
+    "PREVIOUS_DEVELOPMENT_GROUP_EXCLUDED": {
+      "PRESENT_JSON": 3256
+    },
+    "NO_REGISTERED_LEXICAL_STRATUM": {
+      "PRESENT_JSON": 2192,
+      "NULL_UNSPECIFIED": 303
+    },
+    "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT": {
+      "PRESENT_JSON": 16
+    },
+    "KNOWN_RESERVE_GROUP_EXCLUDED_BEFORE_SQL_DECODE": {
+      "PRESENT_JSON": 2132
+    }
+  },
+  "source_label_accounting": {
+    "leetcode_total_labels": 56,
+    "previous_dev_labels_excluded": 6,
+    "known_reserve_opaque_groups_excluded": 4,
+    "remaining_source_labels": 46,
+    "remaining_labels_with_stratum_candidates": 44,
+    "remaining_labels_without_stratum_candidates": [
+      "leetcode:benchmark/leetcode/raw_data/610.csv",
+      "leetcode:benchmark/leetcode/raw_data/627.csv"
+    ],
+    "group_stratum_attempts": 122,
+    "selected_distinct_source_labels": 21,
+    "selected_pairs": 21,
+    "selected_query_slots": 42,
+    "unique_selected_sql_hashes": 42,
+    "target_maximum_groups": 32,
+    "shortfall_total": 11,
+    "statistical_or_semantic_independence_established": false
+  },
+  "failure_count": 16,
+  "failure_reason_counts": {
+    "UNBALANCED_LEXICAL_PARENTHESES": 7,
+    "UNSUPPORTED_LEXICAL_CHARACTER": 9
+  },
+  "failures": [
+    {
+      "byte_length": 965,
+      "byte_offset": 1104479,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 1682,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/550.csv",
+        "index": 326
+      },
+      "original_sql_sha256": [
+        "ccd577e5c6682f5edef1526a9e4e256535a357b6fd803781e57c2c4f6f52a96c",
+        "47195bec70bb57b1a9ab03834d33ec01baa57320a7a7ec8abbc038ad980d2820"
+      ],
+      "raw_line_sha256": "d6f1541ed25e6a64e4621bff236317f6a0310a0ded0b35a7e1f561146a0d3b52",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/550.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 719,
+      "byte_offset": 3731484,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 4593,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/613.csv",
+        "index": 125
+      },
+      "original_sql_sha256": [
+        "d95ce8a5047c801b269f3f39c0f20d8fa88e5a173414708d14e1b39b6396658b",
+        "6308e70e1e6da128731a2d6dddc74bf5c67689a7a287e763ed386e387dbcb8cd"
+      ],
+      "raw_line_sha256": "96784d7454b1c814085984b88fb0ca8b7226e7adacc71121e2812e24f9a4a636",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/613.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 470,
+      "byte_offset": 4283334,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 5717,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/627.csv",
+        "index": 15
+      },
+      "original_sql_sha256": [
+        "578ffed22ecfa20b4fa9a3eee0073df6e0d104f78a45d81d3059e9c8da176083",
+        "e20ee61ae8c5b1c580c09e84206c3cb980d7ea18e19f747ca94b8043d92f53ef"
+      ],
+      "raw_line_sha256": "90907eda0463ad617daf31d37684e14a4d04e6219a11e8fe588f711b40b97eeb",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/627.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 470,
+      "byte_offset": 4287110,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 5725,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/627.csv",
+        "index": 23
+      },
+      "original_sql_sha256": [
+        "578ffed22ecfa20b4fa9a3eee0073df6e0d104f78a45d81d3059e9c8da176083",
+        "1909fed394a366fdff4d4accbaaf9e0fe4fab368f19dfe71413f5aeeadee1d3c"
+      ],
+      "raw_line_sha256": "2668e4cdd6e9ab5ad4891c93c6a5649a74e17d4bbe1d5b6ab45651393230a957",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/627.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 470,
+      "byte_offset": 4295125,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 5742,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/627.csv",
+        "index": 40
+      },
+      "original_sql_sha256": [
+        "578ffed22ecfa20b4fa9a3eee0073df6e0d104f78a45d81d3059e9c8da176083",
+        "bad8b84ea0d2b1b10997bd94eba8de2f37df85cc0565cc65a619572712260b4d"
+      ],
+      "raw_line_sha256": "23041487974f0443fbb1b71a91c7f388cedcd68f410e636fc46c107ac03a3936",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/627.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 507,
+      "byte_offset": 4568317,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 6136,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1050.csv",
+        "index": 0
+      },
+      "original_sql_sha256": [
+        "86a9614e6c27a6dba6ec48bd2830d12ee1888f2de3fecfa55dd8092163f70355",
+        "5953d20a0f87c7c4aab8fe8cf59064782f44c5346d7873997e0fe5a7b262fc2e"
+      ],
+      "raw_line_sha256": "914610713912c619ba88f4ff45bd8ac8f8646b3568c35ca878f2c2436471cc02",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1050.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1077,
+      "byte_offset": 7062402,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 8537,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1097.csv",
+        "index": 0
+      },
+      "original_sql_sha256": [
+        "73572b87dec41fe1f842b7479d00e20392c7ee27d12713b7aad05cbffc5df36d",
+        "50d243718354f55e102dd6a22d6e64142061f1942b811627698e95ff75d2440c"
+      ],
+      "raw_line_sha256": "54d13b2ae610c2d25016af25e13f806f709c463513e96821adeab4544d79d7d9",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1097.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1529,
+      "byte_offset": 8826800,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 9858,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1132.csv",
+        "index": 129
+      },
+      "original_sql_sha256": [
+        "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+        "bbcd41bb1ecf78a8b2b90df4ebf266bad26b9fd5eeb96208d5f95ceaf7d29862"
+      ],
+      "raw_line_sha256": "0e1703e687383da75433f3674d777b1c3cf3a8ae9e4631dc08b2cdfb1f802bfa",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1352,
+      "byte_offset": 8828329,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 9859,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1132.csv",
+        "index": 130
+      },
+      "original_sql_sha256": [
+        "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+        "0586297297ffea997ef312bf7396e9d798dcff3a2f1315a76314bb20db048817"
+      ],
+      "raw_line_sha256": "8119a063b770341ea63a646e7dc2aea26f992f7cd9b1f6e30c10d39e6278b5ab",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 636,
+      "byte_offset": 10470566,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 11695,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1173.csv",
+        "index": 314
+      },
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "4c369308c1c451ec1a7a7d4e08833e2f39ba3acbba42206ec4d5b40c26d9eef7"
+      ],
+      "raw_line_sha256": "b8d60e1cd863031b948348d620a991e0bf6b3b68410853964bfe6dc18624ef49",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1066,
+      "byte_offset": 11750657,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 13051,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1264.csv",
+        "index": 35
+      },
+      "original_sql_sha256": [
+        "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+        "8a41af2b7e4a0a2516e6a52bbbd497662a7225c64867b0552188f6ff34eb23f3"
+      ],
+      "raw_line_sha256": "a7144b383e7bf24960f11f6a73dc756af557705d3582ae97fb4d0e3d141daf17",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1170,
+      "byte_offset": 14040051,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNBALANCED_LEXICAL_PARENTHESES",
+      "error_type": "ValueError",
+      "line_1based": 15047,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1398.csv",
+        "index": 168
+      },
+      "original_sql_sha256": [
+        "6946a067a76377ffa7a4264d65a4d0849520b1c9e005b3c89077a97ddf8c5d8e",
+        "f48fb314f63eb50b1d9e6871364ff618cf27c373321d02406ed4a57a2175ab4c"
+      ],
+      "raw_line_sha256": "9809336a08abf1fa68de490aa472e6863e954e10378764000bbbd9b8a2b20c7a",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1398.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1221,
+      "byte_offset": 14415665,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 15381,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1398.csv",
+        "index": 502
+      },
+      "original_sql_sha256": [
+        "6946a067a76377ffa7a4264d65a4d0849520b1c9e005b3c89077a97ddf8c5d8e",
+        "e96a3c976964b43d637a5807d96dc3dd33c16a89dd6f1e43eb48e470b59a24fb"
+      ],
+      "raw_line_sha256": "4a5c30a6014cf8bb8459ef26142b87a1b3c10de5a1ac7ad9b8f985a53df28919",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1398.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1125,
+      "byte_offset": 14558441,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 15509,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1398.csv",
+        "index": 630
+      },
+      "original_sql_sha256": [
+        "6946a067a76377ffa7a4264d65a4d0849520b1c9e005b3c89077a97ddf8c5d8e",
+        "6a53020b01685cfd52fcecfd20621692a2a75f190c79ebf19034a381c7c3cf8e"
+      ],
+      "raw_line_sha256": "a8d9aa320a5754640f7188cd67b34e40926fc9d66fd2c07c1a371a26cf33d346",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1398.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 1328,
+      "byte_offset": 16110384,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 16883,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1440.csv",
+        "index": 612
+      },
+      "original_sql_sha256": [
+        "1069e0382d8195d8fc1a77559e3477b1597177bcb36de7b4ae94d8bacc26bdff",
+        "fff13a1488b962e9023a1ce10d1b811952929e345608564fa7f8f65f14cea5d9"
+      ],
+      "raw_line_sha256": "f90eb0e825c42ed90a0f5be5de99561a43fa2a28d5d5266919eabbc5055e3f9d",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1440.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    },
+    {
+      "byte_length": 334,
+      "byte_offset": 19020231,
+      "contract_source": "PRESENT_JSON",
+      "dataset": "leetcode",
+      "error": "UNSUPPORTED_LEXICAL_CHARACTER",
+      "error_type": "ValueError",
+      "line_1based": 20037,
+      "original_source_labels": {
+        "file": "benchmark/leetcode/raw_data/1683.csv",
+        "index": 29
+      },
+      "original_sql_sha256": [
+        "e057101a88d2425b0bf7d2d89216d44cd5e1371ed4cf48e8e7d46dd6b235c1fa",
+        "f2e80cd94de7164260c32ec57d1a62c792afc69cd205f78c1994162f1a3aa939"
+      ],
+      "raw_line_sha256": "617396440db312e3b40fc673d19051911c18df54c761a262486bf6d97aaa5f5c",
+      "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1683.csv",
+      "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "status": "INVENTORY_FAILURE_RETAINED_NO_REPLACEMENT"
+    }
+  ],
+  "failure_interpretation": {
+    "UNBALANCED_LEXICAL_PARENTHESES": "Frozen approximate lexical checker reported unmatched parentheses; not proof that the original SQL is invalid under its dialect.",
+    "UNSUPPORTED_LEXICAL_CHARACTER": "Frozen approximate lexer rejected a character; ledger does not retain character, offset, or which query failed. No inference about the exact symbol or SQL validity is made.",
+    "retention": "All 16 remain in the 24,455-pair denominator. No repairs, rescans, or pair replacements were performed in this summary.",
+    "no_natural_defect_inference": true
+  },
+  "strata": [
+    {
+      "stratum": "S1_SET_OPERATION",
+      "candidate_source_labels": 29,
+      "selected_groups": 4,
+      "shortfall_from_four": 0,
+      "candidate_pairs": 2374,
+      "attempt_status_counts": {
+        "SELECTED_PRE_REPLAY_NO_OUTCOMES": 4,
+        "STRATUM_CAP_NOT_SELECTED": 25
+      },
+      "source_group_dedup_count": 0,
+      "stratum_cap_not_selected": 25,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "4/4，预定顺序先选4组，余25组记达上限；不对余项再次判组重复。"
+    },
+    {
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "candidate_source_labels": 30,
+      "selected_groups": 4,
+      "shortfall_from_four": 0,
+      "candidate_pairs": 5756,
+      "attempt_status_counts": {
+        "SELECTED_PRE_REPLAY_NO_OUTCOMES": 4,
+        "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 1,
+        "STRATUM_CAP_NOT_SELECTED": 25
+      },
+      "source_group_dedup_count": 1,
+      "stratum_cap_not_selected": 25,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "4/4；达上限前1组已在S1选中，另25组达上限未选。"
+    },
+    {
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "candidate_source_labels": 30,
+      "selected_groups": 4,
+      "shortfall_from_four": 0,
+      "candidate_pairs": 4385,
+      "attempt_status_counts": {
+        "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 1,
+        "SELECTED_PRE_REPLAY_NO_OUTCOMES": 4,
+        "STRATUM_CAP_NOT_SELECTED": 25
+      },
+      "source_group_dedup_count": 1,
+      "stratum_cap_not_selected": 25,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "4/4；达上限前1组已在S1选中，另25组达上限未选。"
+    },
+    {
+      "stratum": "S4_OUTER_JOIN",
+      "candidate_source_labels": 18,
+      "selected_groups": 4,
+      "shortfall_from_four": 0,
+      "candidate_pairs": 2199,
+      "attempt_status_counts": {
+        "SELECTED_PRE_REPLAY_NO_OUTCOMES": 4,
+        "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 3,
+        "STRATUM_CAP_NOT_SELECTED": 11
+      },
+      "source_group_dedup_count": 3,
+      "stratum_cap_not_selected": 11,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "4/4；达上限前3组已在前层选中，另11组达上限未选。"
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "candidate_source_labels": 13,
+      "selected_groups": 4,
+      "shortfall_from_four": 0,
+      "candidate_pairs": 1377,
+      "attempt_status_counts": {
+        "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 5,
+        "SELECTED_PRE_REPLAY_NO_OUTCOMES": 4,
+        "STRATUM_CAP_NOT_SELECTED": 4
+      },
+      "source_group_dedup_count": 5,
+      "stratum_cap_not_selected": 4,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "4/4；达上限前5组已在前层选中，另4组达上限未选。"
+    },
+    {
+      "stratum": "S6_MULTI_JOIN_3_TABLES",
+      "candidate_source_labels": 1,
+      "selected_groups": 1,
+      "shortfall_from_four": 3,
+      "candidate_pairs": 3,
+      "attempt_status_counts": {
+        "SELECTED_PRE_REPLAY_NO_OUTCOMES": 1
+      },
+      "source_group_dedup_count": 0,
+      "stratum_cap_not_selected": 0,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "只有607.csv这1个来源标签的3个候选pair，按下中位数选1个；缺3。"
+    },
+    {
+      "stratum": "S7_JOIN_AGGREGATE",
+      "candidate_source_labels": 1,
+      "selected_groups": 0,
+      "shortfall_from_four": 4,
+      "candidate_pairs": 1,
+      "attempt_status_counts": {
+        "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 1
+      },
+      "source_group_dedup_count": 1,
+      "stratum_cap_not_selected": 0,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "唯一候选是1149.csv的1个pair，该标签已在S5选中；去重后0，缺4。"
+    },
+    {
+      "stratum": "S8_PURE_JOIN_NONAGGREGATE",
+      "candidate_source_labels": 0,
+      "selected_groups": 0,
+      "shortfall_from_four": 4,
+      "candidate_pairs": 0,
+      "attempt_status_counts": {},
+      "source_group_dedup_count": 0,
+      "stratum_cap_not_selected": 0,
+      "cross_group_exact_sql_duplicate_exclusions": 0,
+      "explanation_zh": "前置排除和互斥首匹配后没有候选pair；缺4。这不证明原数据没有非聚合JOIN。"
+    }
+  ],
+  "selection_attempt_status_counts": {
+    "SELECTED_PRE_REPLAY_NO_OUTCOMES": 21,
+    "STRATUM_CAP_NOT_SELECTED": 90,
+    "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 11
+  },
+  "cross_stratum_dedup_events": [
+    {
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+      "earlier_selected_stratum": "S1_SET_OPERATION",
+      "earlier_selected_case": "dev03_04",
+      "candidate_line_1based": 17417
+    },
+    {
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "earlier_selected_stratum": "S1_SET_OPERATION",
+      "earlier_selected_case": "dev03_03",
+      "candidate_line_1based": 20118
+    },
+    {
+      "stratum": "S4_OUTER_JOIN",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "earlier_selected_stratum": "S1_SET_OPERATION",
+      "earlier_selected_case": "dev03_03",
+      "candidate_line_1based": 20066
+    },
+    {
+      "stratum": "S4_OUTER_JOIN",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+      "earlier_selected_stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "earlier_selected_case": "dev03_09",
+      "candidate_line_1based": 21495
+    },
+    {
+      "stratum": "S4_OUTER_JOIN",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "earlier_selected_stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "earlier_selected_case": "dev03_07",
+      "candidate_line_1based": 11459
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+      "earlier_selected_stratum": "S1_SET_OPERATION",
+      "earlier_selected_case": "dev03_02",
+      "candidate_line_1based": 2416
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+      "earlier_selected_stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "earlier_selected_case": "dev03_09",
+      "candidate_line_1based": 21643
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1777.csv",
+      "earlier_selected_stratum": "S4_OUTER_JOIN",
+      "earlier_selected_case": "dev03_16",
+      "candidate_line_1based": 21733
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "earlier_selected_stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "earlier_selected_case": "dev03_07",
+      "candidate_line_1based": 11469
+    },
+    {
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "earlier_selected_stratum": "S1_SET_OPERATION",
+      "earlier_selected_case": "dev03_03",
+      "candidate_line_1based": 20102
+    },
+    {
+      "stratum": "S7_JOIN_AGGREGATE",
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1149.csv",
+      "earlier_selected_stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "earlier_selected_case": "dev03_20",
+      "candidate_line_1based": 11223
+    }
+  ],
+  "cross_selected_group_sql_hash_overlap": 0,
+  "dedup_limitations": "The 11 events are actual first applicable status assignments before a stratum filled; 90 cap-rejected representatives were not additionally classified for group or SQL overlap. Exact-byte SQL hash uniqueness does not prove semantic or statistical independence.",
+  "selected_cases": [
+    {
+      "id": "dev03_01",
+      "case_index_0based": 0,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1127.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1127.csv",
+      "upstream_index": 171,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 9581,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "3a089d4292cd95de6a725b163704249d3b39f6424d348a8ebcc70e2f6839a405",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "c54a2812b9846f26b468cb13e43212b7ac003218e995ccccad8dfa0f2473841d",
+      "schema_sha256": "91e4e9a0a027377fd0b1eccf4a0923378d0c4e11d5136bc9aa7bd635fba1e41b",
+      "original_sql_sha256": [
+        "8ea23f976781dd631b981a28009e1dc189085374724c205fa1b89c3007174f88",
+        "3a963258edc1d58e51defbcb2793830e8a86c92bbbc9bcd771851a48a634f234"
+      ],
+      "token_complexity": 474,
+      "group_stratum_pair_count": 319,
+      "median_rank_1based": 160,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_02",
+      "case_index_0based": 1,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/584.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/584.csv",
+      "upstream_index": 48,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 2421,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "2cb3e05c18bacb7f7de7d3a4f55612b5bad8a42925ab2e12a2a41ed90d59748c",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "06192a2824767adf627b125b99e2b7de612737dcf02773ebf96484403e1b1ff8",
+      "schema_sha256": "64f3d1ffcc7106d7b2692f9ce04090c436dca76301f62ac3bfd953d4100845ef",
+      "original_sql_sha256": [
+        "04cda1c9e559e788fef7dbd228b1c0474d6d569a253cc19dcc551ef468eec094",
+        "19d98e29bcb66f151d8bec6ddecdfd9f2b06a41dd5cc6f55bcd8e26a75dc8d89"
+      ],
+      "token_complexity": 44,
+      "group_stratum_pair_count": 1,
+      "median_rank_1based": 1,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_03",
+      "case_index_0based": 2,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1693.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1693.csv",
+      "upstream_index": 64,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 20110,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "f69a9ad4bdd9e7d6ad758d49a7b4df270890225769fea205081ef7411c2d3b6e",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "40938c14c002183689969499a12c9ba16ea13f792896c07e84ad001488174750",
+      "schema_sha256": "e4b9fe65ad755094147fb2df581a11aa29e84ea0d4953325f1b2bf2e779ec999",
+      "original_sql_sha256": [
+        "378117929088bd0c082838758804d2c88beacc5ff435cd237b845143ae2aeea7",
+        "606e5b40b18575253eaa035d37a28f9ddafece41b0e49da495d1952fc9db1266"
+      ],
+      "token_complexity": 161,
+      "group_stratum_pair_count": 1,
+      "median_rank_1based": 1,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_04",
+      "case_index_0based": 3,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1468.csv",
+      "upstream_index": 250,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 17255,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S1_SET_OPERATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "7649cf2fdfb924e153454d6b2af32580a7dc9852473ae7c0a81cca115c108850",
+      "schema_sha256": "ffc10e15b114fe0550dc29ee4a3c314f84c1fdc91a5cbaa2710122d720729d48",
+      "original_sql_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "token_complexity": 262,
+      "group_stratum_pair_count": 2,
+      "median_rank_1based": 1,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_05",
+      "case_index_0based": 4,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1132.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1132.csv",
+      "upstream_index": 292,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 10021,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "8a168706ea27e0cc41fa411ec5bd4d777cbe39503454fe178e949d0666494381",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "561da2a4582eae44870e212a6e7c58aee0d710b321cde24b3623f5006c76800c",
+      "schema_sha256": "c67daa15c7f3b2b0a28a0bc9b3d3e8f31a16af90e04a08988cb8e95b0cffc0f8",
+      "original_sql_sha256": [
+        "e589f4a8ea64d01d46a664eb541847a04c3b5f7166d22a357bd7f1c0649cfcf3",
+        "71edda688f50325688171de2489d473d742dd33ea626082b6b7e6d82821bbf83"
+      ],
+      "token_complexity": 170,
+      "group_stratum_pair_count": 768,
+      "median_rank_1based": 384,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_06",
+      "case_index_0based": 5,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1783.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1783.csv",
+      "upstream_index": 41,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 21931,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "ce6c505cf246071049892963acba9d7c7f3cc21f96d8a31e2934c4ffb13b7d43",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "47aabdb0fb1c94b19f69163b6a2919d0590701ec3a80e9772c0c3f732654043c",
+      "schema_sha256": "54bd3fbe590503737af37a83554faf1e2fd722e2d0c5058c445afb65dce71e3b",
+      "original_sql_sha256": [
+        "6ef8deb357ca91dfdd59c03c0816445da350543af7c9be3eb284193d9929a1da",
+        "4a1782d4f51e94c004c3c3eda7a98e44fbb640874332139c594d5df94fa2e436"
+      ],
+      "token_complexity": 193,
+      "group_stratum_pair_count": 280,
+      "median_rank_1based": 140,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_07",
+      "case_index_0based": 6,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1173.csv",
+      "upstream_index": 34,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11415,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+      "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "token_complexity": 104,
+      "group_stratum_pair_count": 39,
+      "median_rank_1based": 20,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_08",
+      "case_index_0based": 7,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/183.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/183.csv",
+      "upstream_index": 197,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 580,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "7ed141033282d3954db5d36ee1c1cf2bedffee61a70bfe309a3466506ec3032d",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "e86179f7aa1688a09e1bb8560b118db6a098c85fa6500ed7bccfbcafbfb2fc97",
+      "schema_sha256": "de7e4d1cd8eacce9811e0a13368ea62b0ef3a90711214f328aa2b7978ce88740",
+      "original_sql_sha256": [
+        "e73a11a070d6c4283a46066bb9a1166ab5fe45b48386fb2036f9273f53096b11",
+        "eeb41b0721c6ea3bbc000931983be3aa1ede7a85c7974c765cd89eb590be4c9e"
+      ],
+      "token_complexity": 86,
+      "group_stratum_pair_count": 3,
+      "median_rank_1based": 2,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_09",
+      "case_index_0based": 8,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1747.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1747.csv",
+      "upstream_index": 410,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 21639,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "9bef71d705d82831ac86ebde606cb03ca6e8b5ab4fd2d471fd4e49825515362d",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "d21bc20d716fcb63eff9438a29f9e9a61c79b08bae433fe39c81a1e289f2c12a",
+      "schema_sha256": "423d47cef78387ad930de974bb56b4a458e0c6614319ab356190d0ebaaa08609",
+      "original_sql_sha256": [
+        "3547132979f80e460543f1caf9f8509649e4b2018674e1d82942bacca0f19379",
+        "6ce2ba0c792d8f1b4aa23c48f085ab83e25f7f6523cfedc886003992101705f6"
+      ],
+      "token_complexity": 123,
+      "group_stratum_pair_count": 9,
+      "median_rank_1based": 5,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_10",
+      "case_index_0based": 9,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1264.csv",
+      "upstream_index": 25,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 13041,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+      "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+      "original_sql_sha256": [
+        "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+        "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+      ],
+      "token_complexity": 151,
+      "group_stratum_pair_count": 222,
+      "median_rank_1based": 111,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_11",
+      "case_index_0based": 10,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/511.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/511.csv",
+      "upstream_index": 67,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 673,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "a0c5d2e61deeed9a2dbf0660134714fdab0362d45e080efb3dc9975d929d8fca",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "530894fb8012ab930d1a4d135993da11fe618f9543e1045a6a94d8a08af8c3c9",
+      "schema_sha256": "b6696b2f50432ac9fb785874aac32b0f5321c0cd879cbca9b72f08b153b03c11",
+      "original_sql_sha256": [
+        "3512eea31beeaa1be5d7ad138291728024e4ba15de29a1fc9f0b64925149666a",
+        "31fa22189249592a63d2519c5715c3029cd59bd00ac9390e7e2cdf3ed6af83f7"
+      ],
+      "token_complexity": 61,
+      "group_stratum_pair_count": 5,
+      "median_rank_1based": 3,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_12",
+      "case_index_0based": 11,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/577.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/577.csv",
+      "upstream_index": 88,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 2173,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "aafb8cc31d19aacf836ece7b4402189e272305c6784bb528c3fad8579399839f",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "4a13716ee23878fccb511fc8842d00ae4c97ce82ea91c889e05336bf301b34f0",
+      "schema_sha256": "0730302af135c41a115c1f84911bcc0524efa6b55d166d23961cb60513ead6c4",
+      "original_sql_sha256": [
+        "afdaa0bc9bfbd9e2de238cae495b5bc6a99924f3a665cb500adfe69763a6b05b",
+        "80736bec695a246422a9f37276b6ba1129c33c89ab2b16335c0c20593332c4b5"
+      ],
+      "token_complexity": 84,
+      "group_stratum_pair_count": 11,
+      "median_rank_1based": 6,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_13",
+      "case_index_0based": 12,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1677.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1677.csv",
+      "upstream_index": 344,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 19915,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "3c10936a9ace16d97a74fb1b755dacbcb620c092303435dd6e47ba4cc76c0459",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "a219ca9ec6b3bf14cfb4088801a5dcde679318546f2355188ab5344bbc307fbc",
+      "schema_sha256": "6132679fc718e3c83bd63706b565350f418162239710b7b45da7ecfacb346c21",
+      "original_sql_sha256": [
+        "736171b3b2b779b54c3db66e67103a090cb1a0ac0b9b01eb61de6c98570f81dc",
+        "d1002ce35fa0017f17b6a61422147b2d5fb9e644c0f6fb540dcd519e1d6ba48c"
+      ],
+      "token_complexity": 194,
+      "group_stratum_pair_count": 404,
+      "median_rank_1based": 202,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_14",
+      "case_index_0based": 13,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/613.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/613.csv",
+      "upstream_index": 45,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 4513,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "5741930550dd51f86c0b0fbc68ad84571d28712cd4082d648c7eeb9d61111ee6",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "5b37363b7c23c660961d44ba7d5f65c478a7c76cbd8a608012ebca189358b936",
+      "schema_sha256": "f72b45f187ae5c8f4fb495fe22e227483d978549f0a2bb2e9a706a85b3345c1e",
+      "original_sql_sha256": [
+        "d95ce8a5047c801b269f3f39c0f20d8fa88e5a173414708d14e1b39b6396658b",
+        "c0a6f047e26f8293c1acdc0f197cc99557d07a84009f50da6a753e7a4aadeff9"
+      ],
+      "token_complexity": 79,
+      "group_stratum_pair_count": 10,
+      "median_rank_1based": 5,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_15",
+      "case_index_0based": 14,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1421.csv",
+      "upstream_index": 21,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 15534,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "31255142400af226ca6a2fc91b35d2a3585d81ee318af4348e70012e15d1eb48",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+      "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+      "original_sql_sha256": [
+        "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+        "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+      ],
+      "token_complexity": 94,
+      "group_stratum_pair_count": 396,
+      "median_rank_1based": 198,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_16",
+      "case_index_0based": 15,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1777.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1777.csv",
+      "upstream_index": 95,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 21819,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "d96038667ed9d7c2f6c3deaee15fed2836f5e587a558baa3006317ecd3949034",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S4_OUTER_JOIN",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "8a90940e1f438ffe5566a0dcb3ebabd4dce884b1927b80e7d6090aa18672fbe8",
+      "schema_sha256": "89fb7b5e889cac853461b4c876949c497462ea07cce5b072e839b68d48e8d79b",
+      "original_sql_sha256": [
+        "c3d7e166826e7907bc3acad604f96a6318004c1b783a96c9fa8b8b922e2d6137",
+        "f8f4b2f7bdaeecc60d92fd309474f126d089ac28ea8035d32a3b380ba45c6fae"
+      ],
+      "token_complexity": 205,
+      "group_stratum_pair_count": 35,
+      "median_rank_1based": 18,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_17",
+      "case_index_0based": 16,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1211.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1211.csv",
+      "upstream_index": 390,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 12206,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "8ec1202fde53fb8e0668e9db0a82a7f532c1de35a577c11e2c3687a37d964657",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "392d43c0e112da27b44be381b2fd03e427850b4b717a6e8462c5bc479049e429",
+      "schema_sha256": "707318b12dde4a451ec90ab551060553ba2cc1726ce212b88823e4cda8300864",
+      "original_sql_sha256": [
+        "996ed54205f380d691e691a3d0bc1b184d144704ff18b236042bc4cd6893233a",
+        "8b3b84992c3bbb8a38b1ed1b7b616554e2c134e1bfe98f53d842066186d24c31"
+      ],
+      "token_complexity": 156,
+      "group_stratum_pair_count": 6,
+      "median_rank_1based": 3,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_18",
+      "case_index_0based": 17,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/596.csv",
+      "upstream_index": 73,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 2924,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "fe3f09e4498474f0b399abe5efd9fc74844d4e08d93395384d21e554e941a0a4",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+      "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+      "original_sql_sha256": [
+        "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+        "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+      ],
+      "token_complexity": 63,
+      "group_stratum_pair_count": 1,
+      "median_rank_1based": 1,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_19",
+      "case_index_0based": 18,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1683.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1683.csv",
+      "upstream_index": 14,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 20022,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "8acfa01d6800a31552ab3a4a6aeb4ada0660da4cac2d559aca3fd79480dadaee",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "3265604aefdac56c94efe20bb0db8265b4f96ecc9426c30a50851f4337d8f041",
+      "schema_sha256": "c695f34c4b86a2680f77c5c92d4087467e3f0ea5b6122c68b3a2957ab6dad439",
+      "original_sql_sha256": [
+        "e057101a88d2425b0bf7d2d89216d44cd5e1371ed4cf48e8e7d46dd6b235c1fa",
+        "62e6b097f92b9eaaba20adfb9f3cf82ce11f71d6c2b7ce9e2b7c585feae9259e"
+      ],
+      "token_complexity": 60,
+      "group_stratum_pair_count": 1,
+      "median_rank_1based": 1,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_20",
+      "case_index_0based": 19,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1149.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/1149.csv",
+      "upstream_index": 221,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11280,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "4fd0ba3f6d21714e8ecfd1ff7a8d28973a0e939b1257b54ce2f259d7bdb26667",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S5_SELF_OR_REPEATED_RELATION",
+      "contract_source": "NULL_UNSPECIFIED",
+      "constraint_field_present": true,
+      "constraint_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+      "schema_sha256": "a82fb5dfe46597ea5c37887454bd0f1dddcd6326123cb37a7f0fbe8a0de6b0f9",
+      "original_sql_sha256": [
+        "9221c85d94ad224064ac34787ca9d188f130b338f07b67c73d3d8a9a3cd322b7",
+        "454aa925cc3eaf30e699059350e10a690018de29368069cbb1d585d4c21b96c4"
+      ],
+      "token_complexity": 74,
+      "group_stratum_pair_count": 22,
+      "median_rank_1based": 11,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "NULL_UNSPECIFIED",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    },
+    {
+      "id": "dev03_21",
+      "case_index_0based": 20,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/607.csv",
+      "original_source_file_label": "benchmark/leetcode/raw_data/607.csv",
+      "upstream_index": 751,
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 4241,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "9f699d7e49f5f8b0ba2dd67fc943b5b770927d289a20adb3ae13fbf00c6a76e5",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "stratum": "S6_MULTI_JOIN_3_TABLES",
+      "contract_source": "PRESENT_JSON",
+      "constraint_field_present": true,
+      "constraint_sha256": "45b452542f61513f25bf272a2e9cf730fdc50fe98f4b350d0c67f5dc55b2f0f0",
+      "schema_sha256": "6558cc47020a9d84ce6a11540d192995ebd3c008bd52c80593209aef35dcf5f9",
+      "original_sql_sha256": [
+        "a01a96264e8c0c19533dff8b5638992a40ec7fad8eec56df033ae03868e81875",
+        "f23aba77910c7854bd2f1cd5db862157aabb5cbe28cd0c52d32f706b2fd02a56"
+      ],
+      "token_complexity": 113,
+      "group_stratum_pair_count": 3,
+      "median_rank_1based": 2,
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ]
+    }
+  ],
+  "selected_contract_state_counts": {
+    "PRESENT_JSON": 20,
+    "NULL_UNSPECIFIED": 1
+  },
+  "selection_mechanism": {
+    "label": "Frozen lexical first-match stratification and result-independent representative selection",
+    "seed": "calibergraph-03-source-strata-v1-20261011",
+    "pair_rule": "For each source-label group x stratum sort by token complexity, stable tie hash, rawline hash, and use lower median.",
+    "group_rule": "Stable seeded group hash within fixed S1..S8 priority; at most four per stratum, one pair per source label, exclude exact SQL hash overlap.",
+    "semantic_ast_validation": false,
+    "read_solver_labels_for_selection": false,
+    "empty_strata_filled_from_controls": false,
+    "ordered_strata": [
+      "S1_SET_OPERATION",
+      "S2_DERIVED_TABLE_AGGREGATE",
+      "S3_IN_EXISTS_OR_CORRELATED_HINT",
+      "S4_OUTER_JOIN",
+      "S5_SELF_OR_REPEATED_RELATION",
+      "S6_MULTI_JOIN_3_TABLES",
+      "S7_JOIN_AGGREGATE",
+      "S8_PURE_JOIN_NONAGGREGATE"
+    ]
+  },
+  "provenance_limits": {
+    "leetcode": "Original file labels provide engineering grouping only. Source business origin, gold validity, and semantic independence remain unknown/unverified.",
+    "calcite": "397 optimizer benchmark pairs counted; benchmark/index lacks independent rule/test provenance, excluded from primary selection as SOURCE_GROUP_NOT_ESTABLISHED.",
+    "literature": "64 upstream rewritten pairs in 63 name-label groups; nonnatural controls, not used to fill primary strata.",
+    "contract": "PRESENT_JSON only means a nonempty benchmark-declared list of clause objects. It does not validate real business constraints. NULL_UNSPECIFIED is not absence of constraints.",
+    "pair_labels": "Selected original records have only constraint/file/index/pair/schema keys; a public pair is not evidence of natural correct-vs-defective SQL or a trusted hidden gold label.",
+    "exposure": "All 48,910 query slots were previously exposed by applicability scans. This round adds lexical development selection. Neither selected cases nor previously known reserve can be called a wholly unseen final test.",
+    "reserve": "Only existing scan ledger opaque exclusions summarized; no reserve file opened, identities reconstructed, or reserve SQL decoded in this task.",
+    "science_status": "HOLD; no automatic promotion or natural-defect claim."
+  },
+  "resource_evidence": {
+    "worker_exit_code": 0,
+    "guard_status": "RETURNED",
+    "guard_wall_seconds": 6.41118483338505,
+    "observed_total_cpu_at_report": 6.608655,
+    "worker_peak_rss_bytes_macos": 34799616
+  },
+  "independent_recount": {
+    "reviewer": "/root/natural_dataset/probe_checker_review",
+    "scope": "report.json, inventory.jsonl, selection_attempts.jsonl only",
+    "result": "MATCH",
+    "failure_count": 16,
+    "selected_distinct_source_labels": 21,
+    "selected_unique_sql_hashes": 42,
+    "selection_attempts": 122,
+    "status_counts": {
+      "SELECTED_PRE_REPLAY_NO_OUTCOMES": 21,
+      "STRATUM_CAP_NOT_SELECTED": 90,
+      "SOURCE_GROUP_ALREADY_SELECTED_IN_PRIOR_STRATUM": 11
+    }
+  },
+  "new_execution": {
+    "SQL": false,
+    "parser": false,
+    "solver": false,
+    "source_scan": false,
+    "reserve_file_read": false,
+    "reserve_sql_decode": false
+  },
+  "frozen_artifacts_modified": false
+}

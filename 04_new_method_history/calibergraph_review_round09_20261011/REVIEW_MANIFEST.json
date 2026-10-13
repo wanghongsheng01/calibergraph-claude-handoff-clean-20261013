@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "round": "09",
+  "date": "2026-10-11",
+  "status": "INITIAL_REVIEW_FROZEN",
+  "reviewer_role": "independent reviewer; distinct from author",
+  "write_scope": "calibergraph_review_round09_20261011 only",
+  "author_input_manifest_sha256": "9c80428df9d799510c9681e6553212e52e31c1a186f5894f7efc24ef28237707",
+  "author_input_theory_sha256": "e6cab30e1d9f06f619edcde7997f9a9e304ea8cc271ac69c94eb316a4bbee03a",
+  "decision": {
+    "mechanism": "NULL",
+    "general_theory_gate": "HOLD",
+    "literature_exclusion_claim": "WITHDRAWN_PENDING_REPAIR"
+  },
+  "deliverables": [
+    "REVIEW.zh.md",
+    "findings.json",
+    "sources.json",
+    "INPUT_MANIFEST.json",
+    "REVIEW_MANIFEST.json",
+    "SHA256SUMS.outputs"
+  ],
+  "integrity": {
+    "hash_list": "SHA256SUMS.outputs",
+    "hash_base": "workspace root /Users/loctek/Documents/Codex/2026-10-11/task-3",
+    "self_reference": "Hash list covers five content files including this manifest; excludes itself to avoid a cycle. Hash of hash list is delivered externally.",
+    "author_snapshot_rechecked_before_freeze": true
+  },
+  "validation": [
+    "JSON syntax by Python standard library",
+    "SHA-256 input/output metadata",
+    "manual mathematical reasoning",
+    "primary-source reading"
+  ],
+  "prohibited_execution_used": false,
+  "author_files_modified": false,
+  "prior_or_subsequent_reviews_or_revisions_read": false,
+  "backup": "PARENT_UNIFIED_BACKUP_PENDING",
+  "datahub": "DATAHUB_REGISTRATION_BLOCKED: no matching module per parent; canonical registry outside permitted write scope",
+  "recovery": "Restore this directory and author round09 theory snapshot from the parent-approved private backup. At workspace root, run shasum -a 256 -c calibergraph_review_round09_20261011/SHA256SUMS.outputs; read REVIEW.zh.md and findings.json. No scientific execution is required."
+}

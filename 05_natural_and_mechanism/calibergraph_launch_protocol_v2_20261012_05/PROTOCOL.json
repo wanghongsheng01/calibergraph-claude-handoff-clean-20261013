@@ -1,0 +1,47 @@
+{
+  "protocol_version": 2,
+  "status": "HOLD_unrelated_project_AND_MEMORY_ENFORCEMENT",
+  "execution_enabled": false,
+  "runner_implemented": false,
+  "old_batch_modified": false,
+  "load1_hard_gate": null,
+  "uncalibrated_available_memory_gate_gib": null,
+  "system_process_listing_required": false,
+  "automatic_retry": false,
+  "automatic_scheduling": false,
+  "science_attempts_this_turn": 0,
+  "worker_limit": 1,
+  "worker_wall_deadline_s": 60,
+  "worker_cpu_limit_s": 60,
+  "worker_rss_budget_bytes": 1073741824,
+  "supervisor_overhead": "Reported separately; not falsely included in per-worker limits",
+  "memory_enforcement": "UNVERIFIED; self-RSS polling, RLIMIT_DATA and solver-local limits are insufficient proof",
+  "duplicate_protection": {
+    "scope": "All future callers of this protocol only; not whole-host process absence",
+    "canonical_runtime_dir": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_launch_protocol_v2_20261012_05/runtime",
+    "lock": "Nonblocking flock on stable inode; parent and direct child retain shared inherited descriptor",
+    "one_shot": "Durable O_EXCL ATTEMPT_STARTED.json before spawn; never automatically deleted or reset",
+    "process_identity": "Live Popen handle only; never signals from persisted PID",
+    "stale_or_unresolved_job": "STOP; no PID guessing, lock removal, new runtime path, or retry",
+    "validated_at_runtime": false
+  },
+  "activation_prerequisites": [
+    "Parent verifies unrelated_project computation completed using unrelated_project task completion evidence",
+    "No unresolved owned prior job in task launch/reap records",
+    "Implement and validate scoped lock, launch-once record, deadline and direct-child cleanup",
+    "Establish effective worker-wide hard memory enforcement within existing permissions or report concrete blocker",
+    "Parent records a new runnability decision; no automatic activation"
+  ],
+  "remaining_blockers": [
+    "WAIT_FOR_unrelated_project_COMPLETION",
+    "MEMORY_ENFORCEMENT_UNVERIFIED",
+    "LAUNCHER_NOT_IMPLEMENTED_OR_VALIDATED"
+  ],
+  "forbidden": [
+    "Retry denied ps/sysctl or use alternate enumeration to bypass sandbox",
+    "Stop or alter unrelated_project/other tasks",
+    "Claim sampled RSS as hard 1 GiB enforcement",
+    "Modify closed batch or scientific inputs",
+    "Start reproduction, install tools, or request new execution privileges this turn"
+  ]
+}

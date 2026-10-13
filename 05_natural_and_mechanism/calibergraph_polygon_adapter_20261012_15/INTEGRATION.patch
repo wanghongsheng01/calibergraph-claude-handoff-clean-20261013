@@ -1,0 +1,65 @@
+--- pilot13/slot_worker.py
++++ adapter15/slot_worker.py
+@@ -9,13 +9,18 @@
+ import traceback
+ 
+ HERE=Path(__file__).resolve().parent
+-sys.path[:0]=[str(HERE/'runtime_local'),str(HERE/'dependencies_local')]
++PILOT=HERE.parent/'calibergraph_polygon_pilot_20261012_13'
++sys.path[:0]=[str(PILOT/'runtime_local'),str(PILOT/'dependencies_local'),str(PILOT)]
+ from owned_processes import OwnedCase, Stopped
+-from replay import replay
++from case1172_adapter import load_contract, replay_lifted
+ 
+ 
+ def main():
++    if not json.loads((HERE/'FREEZE.json').read_text())['solver_execution_authorized']:
++        raise RuntimeError('Prepared adapter only; scientific execution not authorized in this batch')
+     case_id,mode,fd,outpath,deadline=sys.argv[1:]
++    if case_id != 'thrombosis_prediction__1172' or mode not in ('UA','precise'):
++        raise ValueError('Only frozen #1172 UA/precise allowed')
+     out=Path(outpath);sock=socket.socket(fileno=int(fd))
+     stages={k:None for k in ['imports','schema_C','parse','encode','search_including_solver','solver_calls','decode','replay']}
+     nesting={};calls=[];protocol=[];proxies=[]
+@@ -85,32 +90,30 @@
+                     finally:row['elapsed_s']=time.monotonic()-t
+                 smt.SMTLIBv2.check=timed('solver_calls',check)
+                 smt.SMTLIBv2.evaluate_table=timed('decode',smt.SMTLIBv2.evaluate_table)
+-                inventory=json.loads((HERE/'inputs_local'/f'{case_id}.json').read_text())
+-                schema=[]
+-                for table in inventory['tables']:
+-                    schema.append({'TableName':table['table'],'PKeys':[],'FKeys':[],
+-                                   'Others':[{'Name':c['name'],'Type':{'INTEGER':'int','TEXT':'varchar'}[c['source_type']]} for c in table['columns']]})
+-                constraints=inventory['proposed_polygon_constraint_entries']
+-                t=time.monotonic();env=environment.Environment(schema,constraints,bound=1,time_budget=3)
++                t=time.monotonic();contract=load_contract(HERE.parent/'calibergraph_coverage_boundary_20261012_09/sources_local'/case_id)
++                schema=contract['schema'];constraints=contract['constraints']
++                env=environment.Environment(schema,constraints,bound=1,time_budget=3)
+                 stages['schema_C']=time.monotonic()-t
+                 result['schema_C']={'tables':len(schema),'columns':sum(len(t['Others']) for t in schema),
+                                     'constraints':len(constraints),'all_source_columns_kept':True,
+                                     'constraint_kinds':sorted({next(iter(c)) for c in constraints}),
+                                     'auxiliary_integrity_list_not_appended':True}
+-                case_dir=HERE/'inputs_local'/case_id
++                case_dir=contract['source']
+                 gold=(case_dir/'gold.sql').read_text();pred=(case_dir/'predicted.sql').read_text()
+                 raw=env.check(gold,pred,use_precise_encoding=mode=='precise',solver_timeout_seconds=3)
+                 result['raw_return']=raw;result['status']='PIPELINE_'+str(raw[4].get('status'))
+                 if protocol:result['status']='Z3_'+protocol[-1].upper()
+                 elif raw[4].get('status')=='EQU':result['status']='BOUNDED_SYMBOLIC_UNSAT'
+                 elif raw[4].get('status')=='NEQ':
+-                    (out/'witness.json').write_text(json.dumps(raw[1],indent=2)+'\n')
++                    (out/'abstract_witness.json').write_text(json.dumps(raw[1],indent=2)+'\n')
+                     try:
+-                        result['replay']=timed('replay',replay)(case_dir,inventory,raw[1])
++                        result['replay']=timed('replay',replay_lifted)(contract,raw[1])
++                        (out/'witness.json').write_text(json.dumps(result['replay']['concrete'],indent=2)+'\n')
+                         result['status']='VALIDATED_NEQ' if result['replay']['different'] else 'WITNESS_NOT_DISTINGUISHING'
+                     except Exception as e:
+                         result['replay_error']=repr(e);result['status']='WITNESS_REPLAY_INVALID'
+-                result['interpretation']='N=1 symbolic typed fragment; no whole SQLite-domain equivalence claim'
++                result['interpretation']='Frozen #1172 N=1 observation quotient; original SQL/DDL retained; adapter is not generic REAL/DATE support or unmodified baseline'
++                result['countermodel_lifting']='Validate abstract C first, apply frozen quotient lift, then original full-C replay; no repairs or retries'
+     except Stopped as e:result.update(status='CASE_STOP',error=str(e))
+     except NotImplementedError as e:result.update(status='UNSUPPORTED',error=repr(e))
+     except BaseException as e:result.update(status='ERROR',error=repr(e),traceback=traceback.format_exc())

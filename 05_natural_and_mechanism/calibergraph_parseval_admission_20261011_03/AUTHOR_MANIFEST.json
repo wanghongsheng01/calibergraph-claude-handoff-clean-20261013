@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "scope": "Authored admission probe code, source/constraint metadata, bounded run facts and recovery instructions; no raw upstream payload/runtime/log exports",
+  "file_count": 26,
+  "files": [
+    {
+      "path": "ADMISSION_RUN.lock",
+      "sha256": "3c223d69d85aec34d857c7af3e496db43475801645c9777e866938bda9fa1faf",
+      "bytes": 304
+    },
+    {
+      "path": "ADMISSION_RUN_v2.lock",
+      "sha256": "94dac3217621f25029a970c29614cb837ebb35ae73a6f7a16a1421287bec7dcc",
+      "bytes": 305
+    },
+    {
+      "path": "RECOVERY.zh.md",
+      "sha256": "4f99c639dc5d87776b52be85186bebc0631c9fc772919e6c8f9dfc594f043d77",
+      "bytes": 3495
+    },
+    {
+      "path": "analysis/ADMISSION_RESULT.zh.md",
+      "sha256": "fde86d0ae1b4848fd96fa161915577a6aa086117135171936c4e04ed51699b11",
+      "bytes": 4431
+    },
+    {
+      "path": "analysis/BACKEND_METADATA_DIAGNOSIS.json",
+      "sha256": "2de2fedcc5f8ab72e6d20e7db34c640776b69f977e84bc95e64b788f863ea362",
+      "bytes": 9480
+    },
+    {
+      "path": "analysis/BOOLEAN_ADMISSION.md",
+      "sha256": "d8a338a2572ff839608377569f831e765be9893cdd6f8fcfd96849a702953e09",
+      "bytes": 10688
+    },
+    {
+      "path": "analysis/BOOLEAN_SOURCE_LOCK.json",
+      "sha256": "15a3f19c2f20fad346a23296b1e1d326a020bfff9c1452cfc3675888604d4b14",
+      "bytes": 5388
+    },
+    {
+      "path": "analysis/FULLC_MAPPING.json",
+      "sha256": "6b2486d05a25739f5ad7c15528d12a1071ff5d7a6857092e2ceb394bfc5a3a83",
+      "bytes": 52824
+    },
+    {
+      "path": "governance/DEPENDENCY_ACQUISITION_RECEIPT.json",
+      "sha256": "cfcbb5af286d95e0a7bb6448793f7871a7ffbdc4a7b52abad535ad2341f6b3e5",
+      "bytes": 87454
+    },
+    {
+      "path": "governance/OFFICIAL_DEPENDENCY_LOCK.json",
+      "sha256": "9a260366730cb024027be747d4bd226c568b593c6176e1a8e1a995f81c1dcb31",
+      "bytes": 3064
+    },
+    {
+      "path": "governance/OFFICIAL_SOURCE_LOCK.json",
+      "sha256": "72c22151c377f0c1fc812324882742c3726c53032bd4d265ad69cb27837d7676",
+      "bytes": 29355
+    },
+    {
+      "path": "governance/PRE_EXEC_FREEZE.json",
+      "sha256": "8c8321ec44728cdce5fd0571fa1dee8e2933fcfb77b48577644cfd91c37e1bae",
+      "bytes": 2379
+    },
+    {
+      "path": "governance/PRE_EXEC_FREEZE_v2.json",
+      "sha256": "6a795c4d77d01d067ec0f34e30094a9ba0524140a699b3e0f42e64c8fd605180",
+      "bytes": 2597
+    },
+    {
+      "path": "governance/RESOURCE_PRECHECK.json",
+      "sha256": "8930082a890537c2b55d07433978e0600146f8e14faff1c36ff83de5e064740d",
+      "bytes": 747
+    },
+    {
+      "path": "implementation/boolean_adapter.py",
+      "sha256": "ef951eb238c81e9a323d8ffbce5613d25d0906580e7c35e5b0fc8d53ef70ada7",
+      "bytes": 1970
+    },
+    {
+      "path": "implementation/fetch_locked_wheels.py",
+      "sha256": "c59b79b893a719f3a85c20dade94c712ccfae01df68ebabfc9b76c278c96c873",
+      "bytes": 2212
+    },
+    {
+      "path": "implementation/gitlab_schema.py",
+      "sha256": "9f4dbb57fae7c6dabd97504532d3b466cfedcef471c296b5c65b980bfa2f6316",
+      "bytes": 16174
+    },
+    {
+      "path": "implementation/probe_worker.py",
+      "sha256": "3d52722b9338934a2a0afb9f6c78928b0bbe7ce5033ba60660e67cb7b78635a2",
+      "bytes": 18277
+    },
+    {
+      "path": "implementation/probe_worker_v2.py",
+      "sha256": "10e86a926164ed789e55f26706fb42d1e6ee9db9c2a849f826723dc3c8505933",
+      "bytes": 18971
+    },
+    {
+      "path": "implementation/run_probe.py",
+      "sha256": "bf29d1e2db56dcc67a9b019fd8fd745a785474678086567faf385d68e69fab89",
+      "bytes": 6815
+    },
+    {
+      "path": "implementation/run_probe_v2.py",
+      "sha256": "3290329f50a11755445c55e3c7aa875e06ecc3aca0cb41c04ae9431b3b6c3bb5",
+      "bytes": 6858
+    },
+    {
+      "path": "protocols/PROBE_PROTOCOL.json",
+      "sha256": "534147e30bbff3e3086dc96fba90ecf6de64a042ea6019efd2d12eda6f801388",
+      "bytes": 4522
+    },
+    {
+      "path": "protocols/PROBE_PROTOCOL_v2.json",
+      "sha256": "ccae0cb2c78351808228135e6b6ad5d47f2ab8e9a3181a989e8b85084a66de4b",
+      "bytes": 5481
+    },
+    {
+      "path": "runs/admission_01/LAUNCH_RECEIPT.json",
+      "sha256": "43e788d8cdb1d064d921fe1efb898fe5454adb2595e29c8c2d9dc211b25278a7",
+      "bytes": 1246
+    },
+    {
+      "path": "runs/admission_02/LAUNCH_RECEIPT.json",
+      "sha256": "204b4df497dba458442f9966f015f9bc0889679da4d5b40f5749093163b1c0a4",
+      "bytes": 1271
+    },
+    {
+      "path": "runs/admission_02/RESULT.json",
+      "sha256": "f8bdb89ef159ed1b6b34560e22f42558e06f7f0ec6c41d1385361296b8733405",
+      "bytes": 2470
+    }
+  ],
+  "scientific_status": "NO_GO_NEW_MECHANISM_CLAIM",
+  "admission_status": "INCOMPLETE_AUTHOR_HARNESS_ERROR",
+  "launches": 2,
+  "generation_calls": 0,
+  "solver_checks": 0,
+  "original_replays": 0,
+  "new_test_count": 0,
+  "third_probe_started": false
+}

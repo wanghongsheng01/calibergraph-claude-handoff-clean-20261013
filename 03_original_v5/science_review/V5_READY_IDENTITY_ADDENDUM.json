@@ -1,0 +1,54 @@
+{
+  "review_utc": "2026-10-11T04:15:21.427706+00:00",
+  "status": "READY_IDENTITY_VERIFIED_NO_NEW_EXECUTION",
+  "prior_review": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/V5_MAINFLOW_IDENTITY_REVIEW.json",
+    "sha256": "443731d8b9cd13d584d9ca2540253d331b25f02b42d6a621c514990b03f371d6"
+  },
+  "locks": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "final_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "ready_status": "STATIC_REVIEWED_READY_FOR_LOCAL_RUN",
+      "pending_hash_preserved": "99e3e167b0c719c519dfb7131d1f29befb36a5592326ee02f885cc36991f4c77",
+      "original_v4_lock": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json",
+      "original_v4_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+      "files_exact_old_lock_plus_five_v5_sources": true,
+      "unchanged_runtime_path_fields": [
+        "source_root",
+        "binding_root",
+        "support_root",
+        "dependency_roots",
+        "native_path",
+        "expected_native_version",
+        "kernel_path"
+      ],
+      "five_sources_same_as_review": true,
+      "review_links_hash_verified": true
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+      "final_sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+      "ready_status": "STATIC_REVIEWED_READY_FOR_LOCAL_RUN",
+      "pending_hash_preserved": "5cdd4008c8fc2ae606e7570c210f53fa5cde6d9d42d76cf5735d2f5dd22848a4",
+      "original_v4_lock": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/spotit_engine_runtime_paths_v4.json",
+      "original_v4_lock_sha256": "a49d32c0c4719fa7121ed5b9e1a03f9a91e6ef55920e119ff7618afacb0eaa6d",
+      "files_exact_old_lock_plus_five_v5_sources": true,
+      "unchanged_runtime_path_fields": [
+        "source_root",
+        "binding_root",
+        "support_root",
+        "dependency_roots",
+        "native_path",
+        "expected_native_version",
+        "kernel_path"
+      ],
+      "five_sources_same_as_review": true,
+      "review_links_hash_verified": true
+    }
+  ],
+  "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+  "executed_target": false,
+  "changed_locked_sources": false,
+  "scope": "Append-only final READY metadata/source identity supplement. It is not included in either lock, avoiding circular hash dependencies. No claim of actual v5 execution or new mathematical coverage."
+}

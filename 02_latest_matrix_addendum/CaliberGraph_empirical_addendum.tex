@@ -1,0 +1,102 @@
+\documentclass[10pt]{article}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,tabularx,array,hyperref}
+\hypersetup{hidelinks,pdftitle={CaliberGraph: independent empirical addendum, Matrix 29},pdfauthor={Internal author review}}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\newcommand{\head}[1]{\medskip\textbf{#1}\par}
+\begin{document}
+{\Large\bfseries CaliberGraph: empirical addendum}\par
+12 October 2026. Private author-review material. Matrix 29; independent of the delivered candidate.
+
+\head{Fixed sample and comparison boundary}
+From the frozen BIRD corpus of 1,534 pairs and 11 schemas, select three pairs per schema, one from each lexical stratum: VALUE, AGG\_BAG and OTHER. Rank by SHA-256 of a UTF-8 string joining the prefix \texttt{cg-empirical29-v1}, database ID and pair index with vertical bars. Select the first in each nonempty stratum, then fill by overall rank if needed. All 11 schemas have all three strata. Selection uses no tool outcome or support result, and no pair is replaced. The complete rule and token sets are bound in PROTOCOL.json and prepare.py. All source material was previously exposed: this is a development audit, not a new held-out test.
+
+Original SQL and full source DDL are retained. Independent review approved the frozen protocol and execution before the single run. Both systems use resource-adapted paths. Their row bounds, semantic coverage and comparison domains are unmatched: \textbf{18 versus 1 is not a ranking}.
+
+\begin{center}
+\begin{tabularx}{\textwidth}{Xrr}
+\toprule
+Final disposition; each denominator is 33 & ParSEval & Polygon UA\\
+\midrule
+Valid original-SQL distinguishing witness & 18 & 1\\
+Sampled agreement; not an equivalence proof & 8 & 0\\
+Bounded encoded UNSAT; not general SQLite EQ & 0 & 1\\
+Invalid original input & 3 & 3\\
+Existing full-schema mapping unavailable & 0 & 25\\
+Conservative query-semantic gate refusal & 0 & 2\\
+Native UNKNOWN with compiler limitation reason & 1 & 0\\
+System--pair deadline, 10 seconds & 3 & 0\\
+Constraint-valid candidate with equal row outputs & 0 & 1\\
+\midrule
+All registered system--pair slots & 33 & 33\\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\head{Replay, versions and failures}
+All 116 saved candidates satisfy the complete source DDL constraints. ParSEval has 114 candidates, 18 distinguishing; Polygon has two, one distinguishing. An independent SQLite implementation replayed all 116 in 0.176 seconds, with no solver and no disagreement. Full C means source-declared constraints, not inferred business rules. Candidates are not independent query samples. No asymmetric query-execution error or full-C violation was observed.
+
+ParSEval is pinned at \texttt{88cfe245}; Polygon at \texttt{5e182373}, using the existing pilot13 UA runtime and the previously audited superhero and toxicology mappings. COUNT patches P1--P3 were not loaded. Both paths use Z3 4.16.0 and share audit infrastructure; they are not independent truth oracles. The 25 missing mappings describe this adapter's coverage, not native Polygon incapability.
+
+\head{Resource receipt and scope}
+The 66 slots finished in 54.687 seconds with one worker. Budgets were 3 seconds per solver call, 10 seconds per slot and 1,200 seconds per batch; Z3's internal limit was 512 MiB, not aggregate RSS. There were 355 recorded ParSEval checks and seven Polygon checks. All 73 owned process handles were reaped. Thirty workers exited normally; 36 were terminated during cleanup, including 33 with saved final results and three correctly retained as timeouts. Timed-out slots, including cleanup, took up to 10.017 seconds. No retry or new solver run is part of this addendum.
+
+\newpage
+{\Large\bfseries Candidate consistency and evidence binding}\par
+Recommendations only. The delivered candidate and its Library identities remain unchanged.
+
+\head{Precisely scoped manuscript amendments}
+The target is the delivered \texttt{calibergraph\_candidate\_dke\_20261012\_24} source. Exact original and replacement strings, file hashes and line numbers are supplied in PROPOSED\_AMENDMENTS.json and the accompanying Chinese note. No amendment has been applied.
+
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{.26\textwidth}X}
+\toprule
+Frozen source location & Required scope or addition\\
+\midrule
+main.tex, line 22 & Retain the earlier ten-pair counts; append the separate 33-pair audit and prohibit ranking 18 versus 1.\\
+main.tex, lines 36, 68 & Restrict zero eligible JOIN and INT-only claims to the original recognizer and controlled v5 harness. Concrete later DDL replay does not extend that encoder.\\
+main.tex, line 211 & Keep the original v5 budgets; list this audit's distinct budgets and absence of an aggregate RSS hard cap.\\
+sqlite\_case\_study.tex, lines 33, 55, 103 & Limit statements about Polygon resolving admitted examples to the earlier four pairs and their adapters.\\
+sqlite\_case\_study.tex, line 100 & ``No new experiment'' applies to the original manuscript-integration phase; this later audit was actually executed.\\
+main.tex, line 235 & Add concrete later evidence without claiming a matched comparison, cross-schema failure law or new mechanism.\\
+GO\_NO\_GO.tex, line 34 & Date-limit ``no external upload''; later private Library deliveries are separately recorded. No push or submission follows.\\
+\bottomrule
+\end{tabularx}
+
+The original numerical results are not contradicted: selector 22 versus flat 23, the six eligible cached-AST query slots without JOIN, and the earlier ten-pair diagnostics retain their own protocols. The two samples must not be pooled as independent replicates. A matched Polygon performance comparison remains absent.
+
+\head{Localized diagnosis, not a new method}
+For toxicology pair 223, the queries return one and two columns. Polygon's saved database satisfies full C but produces two empty row sets in SQLite. The preregistered row-bag contract therefore does not accept it as distinguishing. The pinned runtime and upstream unequal-arity equality branch return ``either output is nonempty''; the calling context negates that condition. Saved SMT consequently requires both outputs empty. Independent review verified this local direction issue. No fix, new SQL, solver rerun, defect prevalence estimate or novelty claim is made here.
+
+\head{Bound evidence package}
+The ZIP includes the original 33-pair selection, population inventory, protocol, code fingerprints, 99 unchanged input files, all 66 raw slot records, 116 candidates, saved SMT, complete matrix CSV and the non-author pre-execution and final reviews. CSV is byte-identical to Matrix 29. SOURCE\_BINDING.json identifies the candidate and Matrix 29 hashes; the archive manifest binds each packaged member. External dependency binaries are fingerprinted, not bundled. The package is private, not a public reproducibility release.
+
+\head{Use of generative AI tools}
+OpenAI Codex assisted with code, execution, analysis and this addendum. A separate GPT-6-astra agent with high reasoning effort audited Matrix 29 and independently replayed saved candidates. Separate AI review is not human peer review. Human technical verification, final authorship declarations and submission approval remain outstanding; this note does not assert they occurred.
+
+\newpage
+{\Large\bfseries One-page final scientific judgment}\par
+\textbf{HOLD: this round is complete; the overall submission task is not.}
+
+\head{What the new evidence establishes}
+A preregistered small audit now has actual end-to-end records, complete denominators and independent witness replay. ParSEval's 18 distinguishing witnesses span all 11 schemas. Polygon's existing path gives one distinguishing witness and a localized non-distinguishing candidate with source-code and saved-formula support. These are concrete additions to the evidence, not promises of later experiments.
+
+\head{Why the paper remains on hold}
+The audit does not yet establish a transferable SQL-specific reliability finding. Witness generation across 11 schemas is not 11 replications of the same failure mechanism. Only three valid pairs enter Polygon's symbolic path. Different row bounds, schema adapters, semantic gates and generation strategies prevent matched cross-tool inference. Eight sampled agreements do not prove equivalence; one bounded UNSAT does not prove unbounded SQLite equivalence. All material is development-exposed, with no independent final validation set.
+
+The original selector mechanism still has no demonstrated advantage over flat or cheap conjunction normalization. Reframing the work as an empirical paper avoids no evidence obligation, but an empirical paper does not inherently require a new algorithm.
+
+\head{The missing systematic finding}
+Evidence capable of changing this judgment would identify a prespecified SQL semantic obligation and a repeatable relationship between that obligation and observed declarations or witnesses across several schemas and genuinely comparable implementation domains. It would separate invalid inputs, frontend refusal, encoding or decoding mismatch, search budget and output-comparison contracts, and use targeted falsification to rule out confounding explanations.
+
+A well-supported negative result could also qualify: a useful, explicitly scoped boundary where a proposed risk does not arise, with transparent denominators and uncertainty. Either direction needs known-defect and prior-work checks, clear tool lineage and versions, and separately reserved validation material not repeatedly used for development. These are evidence requirements, not authorization to launch a new campaign.
+
+\head{No requirement to defeat every baseline}
+Scientific value may lie in explaining when existing methods suffice, when differences disappear, or where a reproducible semantic boundary occurs. A method need not win against every baseline. The missing contribution is reusable new knowledge beyond additional logs, one engineering repair or adapter-dependent coverage. Contracts, checker design, hashing and refusal accounting already overlap P19 and cannot simply be reported again as new contributions. This addendum does not complete an exhaustive novelty or overlap review.
+
+\head{Morning acceptance boundary}
+Accept this round as a completed, independently audited development record with a separate addendum, full CSV, evidence ZIP and exact proposed source amendments. Preserve the delivered manuscript. Private Library delivery does not authorize publication, push or submission. Pending approval is not approval. Overall scientific readiness and human author confirmations remain open.
+
+\smallskip
+\textit{No new SQL execution, solver call, bug search, method expansion or manuscript overwrite was performed to prepare this addendum.}
+\end{document}

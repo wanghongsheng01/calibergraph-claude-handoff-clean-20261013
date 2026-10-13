@@ -1,0 +1,59 @@
+{
+  "verdict": "PASS_WITH_LIMITS",
+  "scope": "Independent static review of admission stop, saved evidence, frozen source and constraint inventories; not scientific admission approval",
+  "must_fix": [],
+  "resource_probe_independently_replayed": false,
+  "historical_zero_calls_independently_observed": false,
+  "reviewer_SQL_calls": 0,
+  "reviewer_solver_calls": 0,
+  "reviewer_resource_probes": 0,
+  "reviewer_research_package_imports": 0,
+  "input_marker_hashes_verified": 9,
+  "inventory_hashes_verified": 2,
+  "source_anchor_hashes_verified": 8,
+  "polygon_provenance_content_files_verified": 24,
+  "all_checked_hashes_match": true,
+  "case_counts": {
+    "superhero__750": {
+      "tables": 10,
+      "columns": 31,
+      "PK_declarations": 8,
+      "PK_columns": 8,
+      "explicit_not_null": 8,
+      "FK": 11
+    },
+    "toxicology__319": {
+      "tables": 4,
+      "columns": 11,
+      "PK_declarations": 4,
+      "PK_columns": 5,
+      "explicit_not_null": 5,
+      "FK": 5
+    }
+  },
+  "not_run_slots_verified": 4,
+  "limits": [
+    "External probe and historical zero-science claims reviewed from saved records only; no independent replay",
+    "Old RUSAGE_SELF and direct-child kill/wait do not prove full descendant-tree guard",
+    "Precise solver hardcodes 300 seconds and does not inherit UA timeout",
+    "N=1 conditional reasoning does not validate full SQLite value-domain and model decoding",
+    "Nullable-FK auxiliary nonempty implication is stored separately; no active incorporation found in read snapshot; future adapters must preserve this boundary",
+    "Restricted text extractor verified only against these two frozen DDLs; not a general fail-closed SQL validator",
+    "26 snapshot files comprise 24 provenance content files plus two metadata files",
+    "Static inventory does not constitute executed full-C adapter validation"
+  ],
+  "reviewed_batch_file_sha256": {
+    "RESULT.zh.md": "16fea87c8620dbfc3c788eb8d4376c134edd4387d3cb2d3fbaf4a7d98461c7bc",
+    "INPUT_FREEZE.json": "f3dba06b138e250d5a00eb20cb38be7c26c7641ae8be9ace0373a7cb3a594077",
+    "RESOURCE_PROBE.json": "db3eac44c3d228ec80b08afd2a77cff1f549b0e78b5a2610a3616133e953f42c",
+    "C_MAPPING_SUMMARY.json": "c11d12ee1755c6f8520d70eea8e986851b85b33455e110478a927267f5befa3d",
+    "map_source_constraints.py": "3247963b53fe95c29aba56f4901339f64b8989fe031afff4ec7ad99ea6e2688d",
+    "admission_local/superhero__750.json": "5a7983aa73fc41990ef0b87437e0f2af882fd02cebbe052dec80955c9d4d7e04",
+    "admission_local/toxicology__319.json": "9baaba895dae9ac5e1f4a2dbe433d7847f6d5eb5f12ee038812d2507a855dc72",
+    "STAGE_RESULTS.json": "1085da1c5fe5bb3f1cac5ae33213d138fd45ecef3155bf83d6af9a106ced7a9c",
+    "SOURCE_ANCHORS.json": "7ff75bb45fad13be7bc62893519f4d872be57df30ad51914927eea13a347b85a"
+  },
+  "review_markdown_sha256": "072197a71da9d9e0f6b9ee6b682c5b09cfdec00208964a873577494a3565b21e",
+  "backup_owner": "root task",
+  "final_RESULT_addenda_reviewed": true
+}

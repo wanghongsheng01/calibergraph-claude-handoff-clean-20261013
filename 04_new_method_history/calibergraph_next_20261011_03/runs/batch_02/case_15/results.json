@@ -1,0 +1,121 @@
+{
+  "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev03_16",
+    "case_index": 15,
+    "status": "RETURNED",
+    "engineering_class": "SCHEMA_UNSUPPORTED",
+    "strict_class": "SCHEMA_UNSUPPORTED",
+    "attempts": [],
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/1777.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 21819,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "d96038667ed9d7c2f6c3deaee15fed2836f5e587a558baa3006317ecd3949034",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "PRODUCTS__PRODUCT_ID"
+            },
+            {
+              "value": "PRODUCTS__STORE"
+            }
+          ]
+        },
+        {
+          "in": [
+            {
+              "value": "PRODUCTS__STORE"
+            },
+            [
+              {
+                "literal": "STORE1"
+              },
+              {
+                "literal": "STORE2"
+              },
+              {
+                "literal": "STORE3"
+              }
+            ]
+          ]
+        },
+        {
+          "gt": [
+            {
+              "value": "PRODUCTS__PRICE"
+            },
+            0
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/1777.csv",
+      "index": 95,
+      "pair": [
+        "SELECT PRODUCT_ID, SUM(CASE WHEN STORE = 'STORE1' THEN PRICE ELSE NULL END) AS STORE1, SUM(CASE WHEN STORE = 'STORE2' THEN PRICE ELSE NULL END) AS STORE2, SUM(CASE WHEN STORE = 'STORE3' THEN PRICE ELSE NULL END) AS STORE3 FROM PRODUCTS GROUP BY 1",
+        "WITH T0 AS (SELECT DISTINCT PRODUCT_ID FROM PRODUCTS), T1 AS (SELECT PRODUCT_ID, PRICE AS STORE1 FROM PRODUCTS WHERE STORE = 'STORE1'), T2 AS (SELECT PRODUCT_ID, PRICE AS STORE2 FROM PRODUCTS WHERE STORE = 'STORE2'), T3 AS (SELECT PRODUCT_ID, PRICE AS STORE3 FROM PRODUCTS WHERE STORE = 'STORE3') SELECT T0.PRODUCT_ID, STORE1, STORE2, STORE3 FROM T0 LEFT JOIN T1 USING (PRODUCT_ID) LEFT JOIN T2 USING (PRODUCT_ID) LEFT JOIN T3 USING (PRODUCT_ID)"
+      ],
+      "schema": {
+        "PRODUCTS": {
+          "PRICE": "INT",
+          "PRODUCT_ID": "INT",
+          "STORE": "ENUM,STORE1,STORE2,STORE3"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "c3d7e166826e7907bc3acad604f96a6318004c1b783a96c9fa8b8b922e2d6137",
+      "f8f4b2f7bdaeecc60d92fd309474f126d089ac28ea8035d32a3b380ba45c6fae"
+    ],
+    "schema_sha256": "89fb7b5e889cac853461b4c876949c497462ea07cce5b072e839b68d48e8d79b",
+    "constraint_sha256": "8a90940e1f438ffe5566a0dcb3ebabd4dce884b1927b80e7d6090aa18672fbe8",
+    "failure_stage": "SOURCE_AND_STRUCTURE_ADMISSION",
+    "reason": "schema.PRODUCTS.STORE: official create_database does not encode this type: 'ENUM,STORE1,STORE2,STORE3'",
+    "solver_calls": [],
+    "solver_cumulative_wall_seconds": 0.0,
+    "solver_cumulative_cpu_seconds": 0.0
+  },
+  "scope": "Registered input only; exact2 official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "065f8574563a3cb0fab2dd98a4e64fd44fe17f66f4b32ec73a2bee9bb39b8a55",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_diagnostic_worker.py": "c8c9ffcc2d22807ef4333d43ebdc11dc08b64f54956a00ce1dc0f2675b9bb1ec",
+    "official_diagnostic_backend.py": "b599f04890b8d7cbf5b12b872a8cbf8a97a0fa74f2ac49ec9eb88fa48e115e5e",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d"
+  },
+  "registered_group_count": 21,
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "STAGE_START",
+    "id": "dev03_16",
+    "attempt": null,
+    "active_stage": "SOURCE_AND_STRUCTURE_ADMISSION"
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.028728,
+    "cpu_system_seconds": 0.008145,
+    "peak_rss_bytes_macos": 20316160,
+    "wall_from_main_seconds": 0.015486750286072493
+  }
+}

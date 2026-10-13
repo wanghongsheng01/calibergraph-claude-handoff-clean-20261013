@@ -1,0 +1,233 @@
+\documentclass[3p,times,authoryear]{elsarticle}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,tabularx}
+\usepackage{graphicx,url,xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\renewcommand{\qedsymbol}{}
+\newcommand{\ind}[1]{\mathbf{1}[#1]}
+\newcommand{\NULL}{\mathrm{NULL}}
+\newcommand{\ite}{\operatorname{If}}
+\newcommand{\sat}{\textsc{sat}}
+\newcommand{\unsat}{\textsc{unsat}}
+\journal{Data \& Knowledge Engineering --- internal working draft}
+\begin{document}
+\begin{frontmatter}
+\title{CaliberGraph: Bounded Verification of Scalar Aggregates through Join-Multiplicity Encodings}
+\author{Hongsheng Wang}
+\author{Dazhen Deng}
+\begin{abstract}
+For bounded verification of scalar SUM/COUNT over separable inner-star joins, we implement known aggregate factorization with exact leaf-match counts and compare products with finite-domain selectors. The fragment admits root-only integer arithmetic and BETWEEN with explicit NULL semantics. Assignment-wise derivations cover the abstract transformation; a common adapter separately audits a narrow source-contract AST, while query parsing remains a trust boundary. Across 28 exposed configurations, 168 six-arm cost slots yield 127 strictly accepted pair decisions, and 168 individual-query checks yield 115 strict bounded agreements. Unknowns, contract refusals, replay-domain uncertainty and monitoring failures retain their denominators. Flat and selector costs are close, and simple conjunction normalization also resolves a case missed by two official controls; no selector-specific advantage is established. A complete cached-AST scan admits only six of 48,910 public query slots, all without joins. An executed constraint-direction counterexample motivates the adapter but does not measure natural defect prevalence. The evidence establishes a restricted implementation and its unresolved boundaries, not a new factorization identity, general correctness proof or broadly useful optimization.
+\end{abstract}
+\begin{keyword}
+SQL equivalence \sep bounded verification \sep bag semantics \sep scalar aggregation \sep SMT encoding
+\end{keyword}
+\end{frontmatter}
+
+\noindent\textbf{Internal integration draft, 11 October 2026.} The ten-page working target is an author planning choice, not a verified journal limit. The final v5 evidence cut is integrated; compilation and independent page review are recorded separately. Scientific readiness remains \textbf{NO-GO}: novelty and a useful comparative benefit are not established. No submission is authorized.
+
+\section{Introduction}
+Nullable arguments distinguish \texttt{COUNT(x)} from \texttt{COUNT(*)}; duplicate joins multiply measures; empty scalar SUM returns NULL. Testing one database can miss these differences. Bounded equivalence verification instead searches a declared tuple domain under supplied constraints, as implemented for complex SQL by VeriEQL \citep{he2024verieql}.
+
+For a root tuple joined independently to several leaves, exact leaf-match counts multiply its contribution. We implement this known factorization as a product and compare a selector that substitutes guarded constant multiples with shared variables. Selectors remove one source of variable multiplication but add branches; measures and ICs can remain nonlinear. Benefits must survive known-factorization and preprocessing controls, including frontend, fallback and witness-checking costs.
+
+Our object is fixed-query verification over a constructed INT-schema star fragment, not end-to-end NL2Metric or business-intent certification. Earlier CaliberGraph metadata scores do not validate it. We provide assignment-wise derivations, code using official base variables, a narrow contract-AST adapter and failure-preserving evidence. None certifies the text parser or the complete implementation. Public eligible pairs contain no join, so applicability and a useful new contribution remain open. Sections~\ref{sec:related}--\ref{sec:method} define prior work and the method; Sections~\ref{sec:system}--\ref{sec:results} report implementation and evidence.
+
+\section{Related work and contribution boundary}\label{sec:related}
+\paragraph{SQL equivalence and counterexamples}
+VeriEQL encodes bounded SQL and integrity constraints, returning a counterexample or a verdict within that domain \citep{he2024verieql}. Its official path is our baseline; a local Cartesian emitter is only a diagnostic control. Cosette already combines symbolic tuple multiplicities, counterexamples and proof-oriented reasoning \citep{chu2017cosette}. SQLSolver reasons about unbounded summations using an extension of linear integer arithmetic \citep{ding2023sqlsolver}; our finite tuple domain offers a different, narrower guarantee, not demonstrated superiority.
+
+\paragraph{Factorized aggregates}
+Factorized representations exploit distributivity and sharing \citep{olteanu2016factorized}. \citet{bakibayev2013aggregation} explicitly describe count products and partial-count/partial-sum combinations; FAQ also folds common factors \citep{abo2023faq}. Neither factorization nor finite-domain case splitting is new. The candidate contribution is their integration and measured tradeoff under a common bounded contract, requiring known-product and preprocessing controls.
+
+\paragraph{Bounded under-approximation search}
+Polygon uses conflict-driven under-approximation search \citep{zhao2025polygon}. A completed full search returning no input for unequal outputs establishes bounded equivalence over its at-most-row domain; timeout or one UNSAT under-approximation does not. Its search/precise modes support ICs. Our exact positive cardinalities differ, but this is not novelty; a matched performance comparison remains open.
+
+\paragraph{Measurement semantics}
+Thanisch et al. analyze measurement issues in SQL arithmetic and aggregation \citep{thanisch2019measurement}. The available abstract describes numerical properties including units, scales and grouping, making it a relevant DKE semantic-error precedent. We instead study bounded relational-result equivalence under supplied constraints. These objects may be complementary. Having inspected the abstract rather than the full paper, we cannot claim absent NULL rules, relational analyses or optimizations, or describe its checks as merely syntactic.
+
+\paragraph{Text-to-SQL verification}
+SpotIt+ searches for distinguishing databases and mines constraints for text-to-SQL evaluation \citep{tremante2026spotit}. Our fixed-constraint runs do not reproduce its complete pipeline or model calls. The historical direct-engine adapter's automatic route uses \texttt{SetSemanticsVerifier}. One-row scalar equality coincides with bag equality when NULL and row preservation agree; this does not make that route a bag implementation. Unverified comparison details remain unknown rather than absent capabilities.
+
+\section{Task, domain, and supported SQL}\label{sec:task}
+\subsection{The fixed verification contract}
+An input is $\mathcal I=(Q_1,Q_2,\mathcal S,\mathcal C,\mathbf N,\delta)$: two original SQL strings, the complete schema including type spellings, the complete registered integrity-constraint AST, an exact table-size vector, and the dialect/configuration. Let $\mathcal D(\mathcal I)$ denote the databases represented by the verifier's emitted base facts. This encoded domain need not equal the intended source-constraint domain; Section~\ref{sec:icdiagnostic} gives an executed v4 counterexample. V5 adds the bounded AST bridge in Section~\ref{sec:bridge}, with a narrower explicit IC grammar. It does not certify the preceding text parser. The current Environment asserts every created tuple live, so $N_T$ means exactly $N_T$ rows, not at most $N_T$. One vector does not establish smaller or unequal vectors.
+
+The verification goal is
+\begin{equation}
+ \exists D\in\mathcal D(\mathcal I):\quad Q_1(D)\ne_{\mathrm{bag}}Q_2(D).
+ \label{eq:goal}
+\end{equation}
+A satisfiable result supplies a candidate distinguishing database. An unsatisfiable result excludes a difference only in this declared domain, subject to faithful encoding. We first require the complete base contract to be satisfiable, so an inconsistent specification is not reported as useful evidence of equivalence. Failure to establish that guard is retained as a distinct outcome.
+
+Type strings remain unchanged. The executed harness requires every physical schema column to be \texttt{INT}, whose inspected official encoding bounds inputs to signed 32-bit integers. Other integer spellings are recognized in some code paths but are not interchangeable experimental contracts. Aggregate expressions use mathematical integers. Even INT32 inputs can overflow a concrete expression or aggregate; Section~\ref{sec:oracle} gives the separate SQLite replay guard. Full mixed-type schemas and general DBMS overflow semantics are not supported by these experiments.
+
+\subsection{Recognized fragment}
+Runtime-v4 accepts one scalar output, \texttt{SUM(e)}, \texttt{COUNT(e)}, or \texttt{COUNT(*)}. The root-only expression $e$ is built from integer literals, root columns, binary $+,-,*$, and unary signs. FROM has a first root relation and zero or more distinct physical leaves; every leaf needs a column equality to the root. ON/WHERE is a conjunction of integer comparisons, NULL tests, and BETWEEN, with each atom reading at most the root and one leaf. Predicate operands are columns or integer literals; arithmetic predicate operands and NULL literals are not admitted. Runtime-v2/v3 accepted only a root-column aggregate argument, so their recorded public coverage cannot be transferred to v4.
+
+Aliases must be unique after case folding; repeated physical relations, including self-joins under different aliases, are rejected. Under the official double-underscore encoding, we enumerate schema-backed interpretations of both \texttt{alias\_\_column} and unqualified columns and require exactly one match in their union. We also reject unsupported types/expressions, multiple outputs, GROUP BY, DISTINCT, outer joins, windows, correlated subqueries, cross-leaf predicates and OR. A no-leaf query has empty product one; both eligible public pairs have this form. Empty joined results are supported, but v5 rejects nonpositive base-row counts before any arm rather than using fallback.
+
+SQL predicate truth is three-valued. Only TRUE admits a tuple. BETWEEN$(a,b,c)$ is TRUE exactly when all three operands are non-NULL and $b\le a\le c$; reversed bounds admit no row. For arithmetic, the result NULL flag is the disjunction of operand flags and the payload uses the corresponding mathematical integer operation. Structural induction gives strict NULL propagation, including $0\cdot\NULL=\NULL$; a non-NULL zero still contributes to COUNT. No key, uniqueness, join truth, or non-NULL fact is inferred from names or data.
+
+\subsection{Scalar result representation}
+An encoded scalar aggregate is $(z,v,A)$, where $z$ is its NULL flag, $v$ is its integer payload, and $A$ contains fresh-variable definitions. The numeric payload of a NULL result is semantically irrelevant. Two one-row scalar outputs differ exactly when
+\begin{equation}
+ (z_1\ne z_2)\ \lor\ (\neg z_1\land\neg z_2\land v_1\ne v_2).
+ \label{eq:neq}
+\end{equation}
+The result row is preserved even when the aggregate input is empty. COUNT is never NULL; SUM is NULL when there is no non-NULL contributing tuple. Equating NULL with zero, or dropping that scalar row, changes the verification target.
+
+\section{Three join-multiplicity encodings}\label{sec:method}
+\subsection{Flat reference semantics}
+Fix a database assignment $D$, root row $f$, and leaf row $d\in D_j$. Let $R(f)$ indicate root liveness and TRUE evaluation of all root-only predicates. Let $I_j(f,d)$ indicate leaf liveness and TRUE evaluation of every predicate assigned to leaf $j$. Define
+\begin{equation}
+ C_j(f)=\sum_{d\in D_j}\ind{I_j(f,d)},\qquad 0\le C_j(f)\le N_j.
+ \label{eq:counts}
+\end{equation}
+These are exact expressions over the same database variables, not free symbolic counts or estimates. Repeated rows occupy different tuple positions and contribute separately.
+
+Let the root expression evaluate to $(z_e(f),v_e(f))$ and set $u(f)=\ind{R(f)\land\neg z_e(f)}$. For COUNT(*) or a non-NULL literal use $u(f)=\ind{R(f)}$. A local flat emitter enumerates every $(f,d_1,\ldots,d_k)$ and guards its contribution with all predicates. It shares the candidate recognizer, so it is not a fully independent semantic oracle.
+
+\subsection{Exact factorization}
+For every fixed root tuple, the separability condition makes the admitted leaf combinations a Cartesian product. Define $M(f)=\prod_{j=1}^{k}C_j(f)$, with $M(f)=1$ when $k=0$. The non-NULL contributing count is
+\begin{equation}
+ n=\sum_{f\in F}u(f)M(f).
+ \label{eq:n}
+\end{equation}
+COUNT returns $(\mathrm{false},n)$. For SUM the numeric payload and NULL flag are
+\begin{equation}
+ v=\sum_{f\in F}u(f)v_e(f)M(f),\qquad z=(n=0),
+ \label{eq:sum}
+\end{equation}
+where guarded expressions ensure that a NULL payload is not treated as a real value.
+
+\begin{lemma}[Assignment-wise bag multiplicity]
+For a query in the stated fragment and any fixed database assignment, the flat join enumeration and Equations~\eqref{eq:n}--\eqref{eq:sum} have identical scalar NULL flags and integer payloads.
+\end{lemma}
+\begin{proof}
+Fix $f$. For each leaf $j$, form the list of tuple positions satisfying $I_j(f,d)$. A joined tuple with root $f$ selects exactly one position from each list, and every such selection satisfies the conjunction because no atom refers to two leaves. There are therefore $\prod_j C_j(f)$ selections, including duplicate-valued positions. Each has the same root aggregate argument. Multiplying its non-NULL indicator and value by that count equals summing the corresponding flat contributions. Summing over root positions yields the equations. The contributing count is zero exactly when no non-NULL argument survives, establishing SUM's NULL flag and COUNT's non-NULL count.
+\end{proof}
+
+This proof needs no probabilistic independence. Integrity constraints may correlate different leaves; for each database satisfying them, the query's fixed-root predicate still separates. Constraints remain in the solver and restrict which assignments are admitted. A query predicate such as $D_1.a=D_2.b$ destroys this Cartesian argument even if the schema is called a star, so the recognizer rejects it.
+
+\subsection{Products and bounded selectors}
+The product emitter introduces fresh variables for successive accumulators. For a current value $a$ and an exact match count $C\in[0,N]$, it adds $a'=aC$. For SUM it propagates both a value accumulator and a contribution-count accumulator; COUNT needs only the latter. Definitions reference previous fresh variables rather than repeatedly inlining their expression trees.
+
+The selector emitter instead binds
+\begin{equation}
+ a'=\sum_{c=0}^{N}\ite(C=c,c\cdot a,0).
+ \label{eq:selector}
+\end{equation}
+The count definition in Equation~\eqref{eq:counts} supplies the finite range. An additional unconstrained count variable with a range assertion would not preserve the original query unless it were also bound to that exact sum.
+
+\begin{lemma}[Selector identity and conservative extension]
+If $C$ is the exact integer count in Equation~\eqref{eq:counts}, Equation~\eqref{eq:selector} equals $aC$. With globally fresh auxiliary variables and every defining equality asserted, introducing the count and accumulator definitions neither removes nor adds assignments of the original database variables.
+\end{lemma}
+\begin{proof}
+Exactly one integer $c\in\{0,\ldots,N\}$ equals $C$. Its branch contributes $Ca$ and every other branch contributes zero. For a fixed original assignment, evaluate count definitions and then accumulator definitions in order. This gives a unique value to each auxiliary variable. Conversely, the equalities force those values in every satisfying extension. Projecting away auxiliaries therefore recovers precisely the original assignment domain.
+\end{proof}
+
+Induction across leaves, followed by Lemma 1, establishes equality of the abstract selector and flat scalar results. The argument includes negative values, duplicate matches, empty matching sets, and all-NULL aggregate arguments. It does not establish that the actual parser, name mapping, or emitter implements the premises correctly. Those are separate obligations in Section~\ref{sec:mapping}.
+
+The selector removes variable products introduced by match multiplicities. Variable products inside $e(f)$ remain nonlinear, as may the unchanged constraints and official premises. Neither the full formula nor even the aggregate is automatically linear. No solver-complexity or termination improvement follows from the identity.
+
+\subsection{Local construction cost and a worked example}
+For $N_F$ root rows and leaf sizes $N_1,\ldots,N_k$, local flat construction enumerates $N_F\prod_jN_j$ joined positions. Both factored forms construct $N_F\sum_jN_j$ leaf-match indicator terms. The selector adds $N_F\sum_j(N_j+1)$ guarded branches for one accumulator and twice that many for SUM's two accumulators. Predicate size, complete constraint cost, parser work, and all other verifier costs are additional. The bound assumes explicit shared definitions; recursively substituting the previous accumulator into every branch invalidates the intended sharing argument.
+
+A root value 3 with two matches in one leaf and three in another contributes 18: flat emits six threes, product computes $3\cdot2\cdot3$, and selectors choose the 2 and 3 branches. With no match in one leaf, the contribution count is zero and SUM is NULL, regardless of its payload. This is an analytical example, not a workload. At the executed two-root/two-leaf/two-row size, SUM has eight flat positions, eight factored match terms and 24 selector branches: there is no measured term-count reduction at that size, and asymptotics alone imply no speedup.
+
+\section{Implementation and failure contract}\label{sec:system}
+\subsection{Frontend and complete fallback}
+The implementation uses VeriEQL v1.0, commit \texttt{3b99928b}, its original fast Z3 Python bindings, and a locally verified Z3 4.12.0.0 library. Runtime-v4 extends the candidate expression evaluator; v5 adds the common contract adapter below while preserving that kernel and the official source. The recognizer, three emitters, and scalar comparison reuse the official base variables and asserted facts. Fact hashes establish byte/formula identity, not faithful translation of raw integrity constraints or business meaning.
+
+Figure~\ref{fig:interface} gives the routing boundary. Before parsing, the raw guard rejects any double quote, backtick or dollar sign anywhere in SQL, including literals and comments; this conservative refusal has no fallback. V5's physical table/column names must be uppercase ASCII identifiers without double underscores, with unique table--column encoding and first-separator roundtrip. Unsupported or unverified ICs also stop both routes. After admission, candidate ineligibility uses the complete official query path on the same schema, rows and audited contract. Solver unknown falls back only with at least 500 ms remaining; otherwise it stays unknown. Exceptions and invalid witnesses remain explicit.
+
+The cost harness constructs its common Environment with the MYSQL dialect. Public applicability instead uses previously stored ALL-dialect ASTs. These are separate configurations, not evidence of cross-dialect equivalence. The earlier unequal-budget runtime-v2 ran official first; later independent-process versions retain separate result identities.
+
+\begin{figure}[!htbp]
+\centering
+\begin{tikzpicture}[font=\small,>=Latex,
+ box/.style={draw,align=center,minimum height=11mm,inner sep=2mm}]
+\node[box,text width=61mm] (rec) at (-41mm,0)
+ {Admitted frontend, IC, schema and rows\\Restricted recognizer};
+\node[box,text width=61mm] (official) at (41mm,0)
+ {Candidate unsupported\\Complete official query path};
+\node[box,text width=83mm] (counts) at (0,-19mm)
+ {Eligible: exact leaf counts $C_j=\sum_d\ind{I_j(f,d)}$\\Illustrative root measure $3$, $C=(2,3)$, $N=(2,3)$};
+\node[box,text width=61mm] (product) at (-41mm,-42mm)
+ {Known product\\$w=C_1C_2=2\cdot3=6$\\Value $v=3w=18$; count $n=w=6$};
+\node[box,text width=65mm] (selector) at (41mm,-42mm)
+ {Bounded selector\\$S_N(a,C)=\sum_{c=0}^{N}\ite(C=c,c\cdot a,0)$\\Value: $3\xrightarrow{C_1=2}6\xrightarrow{C_2=3}18$\\Count: $1\xrightarrow{C_1=2}2\xrightarrow{C_2=3}6$};
+\node[box,text width=70mm] (scalar) at (0,-66mm)
+ {Same example scalar: $(z,v)=(\mathrm{false},18)$\\SUM uses $z=(n=0)$; empty contribution is NULL};
+\draw[->] (rec)--node[above]{ineligible}(official);
+\draw[->] (rec.south)--node[left]{eligible}(counts.north west);
+\draw[->] (counts.south west)--(product.north);
+\draw[->] (counts.south east)--(selector.north);
+\draw[->] (product.south)--(scalar.north west);
+\draw[->] (selector.south)--(scalar.north east);
+\end{tikzpicture}
+\caption{Alternative encodings for one illustrative, non-NULL root value with $R(f)=\mathrm{true}$. Exact $C_j$ counts actual leaf positions with TRUE predicates, not free variables. The leaf sizes/count bounds $N=(2,3)$ are illustrative, not the executed two-leaf/two-row setup. Product and selector produce the same SUM value and non-NULL contribution count; local flat enumerates six joined positions. NULL arguments contribute nothing, and zero contributions yield NULL SUM. Unsafe frontend normalization or an unverified IC stops before both routes; only candidate ineligibility uses the official fallback. The example supplies no measured cost or speed claim.}\label{fig:interface}
+\end{figure}
+
+\input{contract_bridge_v5}
+
+\subsection{Mapping obligations}\label{sec:mapping}
+Constructed column pairs \texttt{V\$X}/\texttt{V\_DOLLAR\_X} and \texttt{A.B}/\texttt{A\_\_\_\_B} produced identical ASTs/plans although original SQL returned 2 and 7. No solver ran in these diagnostics: they expose lossy parsing, not an observed solver verdict. Ten later guarded slots rejected both cases before fallback; 35 unselected routing slots remain not run. An earlier six-slot name-mapping rejection is also retained.
+
+Table~\ref{tab:mapping} maps definitions to code. Differentials check consistency, exact-row liveness, scalar shape, fresh definitions and NULL/value difference. Their common query encoding remains a trust boundary despite the separately audited IC AST.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabularx}{\textwidth}{p{.18\textwidth}p{.27\textwidth}X}
+\toprule
+Object & Implementation & Boundary\\
+\midrule
+Fragment, $e$ & \texttt{recognize}, \texttt{value} & Root arithmetic, strict NULL; complete INT schema\\
+$R,I_j$ & \texttt{true\_predicate} & TRUE-only atoms; no cross-leaf predicate\\
+$C_j,M$ & \texttt{encode} & Exact row indicators and match-count products\\
+Fresh definitions & Query/mode-specific prefix & Acyclic total definitions; differential checks\\
+Scalar difference & \texttt{unequal} & NULL payload ignored; result row preserved\\
+Contract AST & Common bridge + reference & Base SAT; contract XOR UNSAT; source AST only\\
+Concrete witness & Original IC + domain + SQL & Original IC, integer domain, then raw SQL; common-plan oracle boundary\\
+\bottomrule
+\end{tabularx}
+\caption{Definition-to-code map. Local checks do not promote the abstract lemmas into a theorem of the complete SQL implementation.}\label{tab:mapping}
+\end{table}
+
+\subsection{Concrete replay domain}\label{sec:oracle}
+SMT uses mathematical integers; SQLite may promote overflowing expressions to REAL or reject overflowing SUM. Before replay, the common auditor checks base values, expression intermediates and weighted aggregates. For flattened associative expressions it bounds positive/negative addition totals and absolute nonzero products across parenthesizations; SUM is checked across row orders. Unsafe or unproved cases remain \texttt{UNKNOWN\_ORACLE\_DOMAIN}, without clipping, rounding or changed constraints. This conservative check can reject a safe concrete order. Only admitted witnesses replay the complete original SQL, preserving duplicates and NULL. The auditor shares the candidate plan and is not an independent semantic oracle.
+
+All raw outcomes and separately derived acceptance categories retain their denominators. Contradictory contracts stop before query comparison; concrete replays and finite differentials do not prove parser totality or complete compiler correctness.
+
+\section{Evaluation design}\label{sec:evaluation}
+All cases are exposed development material, without held-out data or human gold. Six original cases cover conjunction order, nullable COUNT, non-NULL ICs, SUM/COUNT differences, empty SUM and all-NULL SUM. At two row bounds they give twelve configurations; ten v4 expression controls and six v5 IC-adapter controls yield 28 configurations but only 22 logical cases. Six cost arms register 168 slots; two queries times three encoders separately register 168 differential slots. These repetitions are not independent samples. V4 and v5 remain separate contract versions.
+
+The six arms are official, official with generic SMT preprocessing, local flat, known product, selector, and official with cheap AND normalization. The last recursively sorts admitted conjunction operands: identical normalized ASTs give a conditional result; otherwise official fallback runs. It is not a full optimizer and shares the frontend boundary. Each arm uses a fresh process/Environment, common native library and complete input, CPU soft/hard limits of 14/15 seconds, a 25-second supervised wall limit and 1 GiB RSS limit. Startup, IC audits, all query work, fallback, replay and cleanup count toward cost. Solver threads are one; auxiliary monitoring threads exist. One pass does not establish statistical speedup.
+
+Applicability covers 397 Calcite, 64 literature and 23,994 LeetCode pairs, retaining all 48,910 query slots and duplicates. The v4 recognizer consumes saved official ALL-dialect ASTs and errors. It does not reparse SQL, reconstruct missing ASTs, assert ICs, encode, solve or execute queries. This is a cached recognizer scan, not parser validation or equivalence accuracy. Original unequal-budget runs and fixed-point checks remain separate diagnostics.
+
+\section{Results and retained failures}\label{sec:results}
+\input{results_current}
+
+\section{Limitations, lineage, and reproducibility}
+\paragraph{Guarantees and lineage}
+The lemmas cover the stated finite relational fragment, excluding general grouping, outer joins, cross-leaf filters and unbounded equivalence. The IC adapter excludes foreign keys and functional dependencies and does not infer business intent, authorization or temporal correctness. Exact-row and at-most-row domains differ. Post-hoc fragment changes require new versioned evidence; known factorization and simple preprocessing remain essential controls.
+
+Historical governance prompting scored 156/159 against CaliberGraph's 147/159; a dbt-derived result tied at 122/122 only with longest-alias linking, versus 120/122 for another linker. These do not evaluate this module. The legacy 1,108 distinct SQL attempts contain 1,074 connection/query timeouts and 34 cached first scalars; without complete same-snapshot references, all 1,488 model records remain semantically unknown, not 34/1,108 accuracy. No new business gold or human annotation is inferred.
+
+The author states that this contribution does not duplicate SIGMOD847. Its inspected formal materials concern typed-delta refresh, reuse and version-consistent switchover. We do not borrow its algorithms, proofs or experimental numbers; ordinary additive aggregation and typed certificates are shared background. This records the author statement and inspected distinction, not an exhaustive originality proof.
+
+\paragraph{Evidence}
+The local package retains original inputs, raw reports and decoded databases, with hashes, interrupted attempts and complete denominators. A claim ledger links paper values to saved rows. No live production system, external model API or GPU was used for this manuscript task; local historical artifacts were read. Third-party source identities remain recorded; the package is not a public release.
+
+AI assistants performed code work, mathematical drafting, local experiment execution and orchestration, evidence analysis and manuscript preparation. Separate AI review is not human peer review. Author verification, affiliations, contribution/funding/conflict statements require actual confirmation. The official author order is Hongsheng Wang, then Dazhen Deng; no correspondence details are invented.
+
+\section{Conclusion}
+CaliberGraph implements known factorization and bounded selectors for a restricted scalar language. Abstract identities, IC audits, differentials and replays cover distinct conditional guarantees. Complete failure accounting and public exclusions leave novelty, useful applicability and selector benefit unresolved; the current evidence does not establish submission readiness.
+
+\bibliographystyle{elsarticle-harv}
+\bibliography{references}
+\end{document}

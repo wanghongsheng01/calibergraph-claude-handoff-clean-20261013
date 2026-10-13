@@ -1,0 +1,1183 @@
+{
+  "status": "FIXED_WITH_EXECUTED_EVIDENCE_FOR_REGISTERED_14_SLOT_SUPERVISOR_INTEGRATION",
+  "reviewed_utc": "2026-10-11T06:32:43.785971+00:00",
+  "reviewer": "Different AI reviewer, not human; earlier narrow reference module coauthorship disclosed; not author/executor of this statusfix integration.",
+  "scope": "Only this separate exposed logging/supervisor integration, not a new scientific cohort; no timings pooled with or replacing frozen main168.",
+  "root_reaped_confirmation": "ROOT confirms session 56495 reaped exit2; receipt c6f70a9942508dfee0d2f16136fd8086c2018830f17158e2a8412a278563c201",
+  "external_execution_receipt": {
+    "status": "SUPERVISOR_SESSION_REAPED",
+    "session_id": 56495,
+    "observed_exit_code": 2,
+    "observed_output_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN",
+    "reported_full_denominator": 24,
+    "selected_start": 5,
+    "selected_limit": 14,
+    "actual_observation_utc": "2026-10-11T06:30:40.422345+00:00",
+    "supervisor_report": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/supervisor_report.json",
+    "supervisor_report_sha256": "ec1836bdab9b3f7980fb7a209a9a9d83bc1ddcd575e4b9e354633987197605de",
+    "interpretation": "Exit2 expected for typed contract stops plus ten not-selected slots; per-slot correctness/resource/cleanup requires independent review; no scientific or timing replacement inferred."
+  },
+  "execution_by_reviewer": "No target/native/solver/SQLite execution; only stdlib JSON/hash and registered concrete arithmetic.",
+  "locked_file_count": 854,
+  "locked_mismatches": [],
+  "program_hashes": {
+    "common.py": "aad39a0fe6eeb0dbafbc949a16c81cda1aa5268f7b519dedf6275e46acc10576",
+    "worker.py": "5848538a168495d3a336afedd5d1efe696d43eea8a15d353679b905be7ecc320",
+    "supervisor.py": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "pair_status.py": "65edfe932aee49a64f3986d420eb3115bb71d271d3ac402e039052ea5826ca5f"
+  },
+  "counts": {
+    "registered_cost_slots": 24,
+    "selected_reviewed": 14,
+    "unselected_NOT_RUN": 10,
+    "decisions": {
+      "sat": 1,
+      "unsat": 6,
+      "CONTRACT_UNSAT_REJECTED": 6,
+      "UNVERIFIED_CONTRACT": 1
+    },
+    "work_states": {
+      "RETURNED": 7,
+      "NOT_RUN_CONTRACT_STOP": 7
+    },
+    "exit_codes": {
+      "0": 7,
+      "2": 7
+    },
+    "resource_stops": 0
+  },
+  "supervisor_status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN",
+  "supervisor_wall_before_final_write": 18.63190387468785,
+  "limitations": [
+    "RETURNED is a dispatch receipt, not solver validity or scientific acceptance.",
+    "Typed child exits2 and aggregate negative status are deliberate controls, not all-zero-exit PASS.",
+    "RSS is sampled and soft; no continuous hard RSS or single-OS-thread claim.",
+    "No fault injection, resource-stop race coverage, or reachability proof of incomplete-receipt states.",
+    "Recorded solver XOR obligations are not portable proof certificates or general SQL correctness.",
+    "No improvement in novelty, natural defect prevalence, held-out generalization, or selector advantage established."
+  ],
+  "issues": [],
+  "slots": [
+    {
+      "job_index": 5,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "official_canonical_sql",
+      "worker_sha256": "2867c6a86ea2f89ccd6069c2523ea912a2370dc3cfc389f3564a0227c6f21af1",
+      "decision": "sat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "sat",
+        "reported_outcome_kind": "SAT_REPORTED_ORACLE_AND_CONTRACT_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "official_canonical_sql",
+          "status": "NORMALIZED_AST_NOT_IDENTICAL",
+          "normalization": "recursively sort AND children only; preserve all other AST components",
+          "stage_costs": {
+            "parse": {
+              "wall_seconds": 0.06006845785304904,
+              "cpu_seconds": 0.05993399999999993
+            },
+            "recognize": {
+              "wall_seconds": 4.1082967072725296e-05,
+              "cpu_seconds": 4.100000000017978e-05
+            },
+            "normalize": {
+              "wall_seconds": 5.166977643966675e-06,
+              "cpu_seconds": 4.999999999810711e-06
+            }
+          },
+          "expression_contains_variable_product": [
+            false,
+            false
+          ],
+          "canonical_asts": [
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T",
+              "where": {
+                "lt": [
+                  "T__A",
+                  5
+                ]
+              }
+            },
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T"
+            }
+          ]
+        },
+        {
+          "route": "official",
+          "reason": "canonical_asts_not_identical",
+          "status": "sat",
+          "solver_timeout_ms": 12398,
+          "witness": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "solver_decision": "sat",
+          "oracle_validation": {
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN",
+            "domain_audits": [
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "0",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "0",
+                "mathematical_result_diagnostic_only": null
+              },
+              {
+                "status": "SAFE_FOR_SQLITE_INT64",
+                "issues": [],
+                "oracle": "SQLite signed int64",
+                "expression_contains_variable_product": false,
+                "purpose": "domain guard only; not an independent SQL correctness oracle",
+                "conservative_order_policy": "every associative root subexpression and every SUM row order must be safe",
+                "arithmetic_semantics": "mathematical integers; no wrap, rounding, truncation or float tolerance",
+                "issue_count": 0,
+                "positive_sum": "6",
+                "negative_sum": "0",
+                "nonnull_joined_row_count": "1",
+                "mathematical_result_diagnostic_only": "6"
+              }
+            ],
+            "queries": [
+              "SELECT SUM(T.A) FROM T WHERE T.A < 5",
+              "SELECT SUM(T.A) FROM T"
+            ],
+            "sqlite": {
+              "relations": [
+                [
+                  [
+                    null
+                  ]
+                ],
+                [
+                  [
+                    6
+                  ]
+                ]
+              ],
+              "sqlite_version": "3.53.3",
+              "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+              "unequal_as_bags": true,
+              "matches_audited_mathematical_values": [
+                true,
+                true
+              ],
+              "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+            },
+            "original_ast_contract_validation": {
+              "status": "EVALUATED_SUPPORTED_REFERENCE",
+              "holds": true,
+              "clauses": [
+                {
+                  "source_path": "$/0",
+                  "row_results": [
+                    true
+                  ],
+                  "all_rows": true
+                },
+                {
+                  "source_path": "$/1",
+                  "row_results": [
+                    true
+                  ],
+                  "all_rows": true
+                }
+              ],
+              "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred",
+              "original_ast_sha256": "61927b12ad05b7085c30e76505eb493e1bc2c1dcdcea5454f951ae22e92fb91e"
+            }
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  null
+                ]
+              ],
+              [
+                [
+                  6
+                ]
+              ]
+            ],
+            "sqlite_version": "3.53.3",
+            "scope": "current scalar INT32 diagnostic domain, complete relation and duplicate rows retained",
+            "unequal_as_bags": true,
+            "matches_audited_mathematical_values": [
+              true,
+              true
+            ],
+            "status": "REPLAYED_WITHIN_INT64_DOMAIN"
+          }
+        }
+      ],
+      "fallback": {
+        "status": "RETURNED",
+        "reason": "canonical_asts_not_identical",
+        "complete_input_preserved": true
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [
+        {
+          "database": {
+            "T": [
+              [
+                6
+              ]
+            ]
+          },
+          "original_C_independent_arithmetic": true,
+          "independently_calculated_SQL_values": [
+            null,
+            6
+          ],
+          "recorded_SQLite_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                6
+              ]
+            ]
+          ],
+          "SQLite_reexecuted_here": false
+        }
+      ],
+      "full_process_wall_seconds": 1.389663000125438,
+      "full_process_cpu_seconds": 1.2781289999999998,
+      "sampled_peak_rss_bytes": 111443968,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.3656375422142446,
+        "cpu_seconds": 1.277361,
+        "maxrss_bytes_darwin": 112705536,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 6,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official",
+      "worker_sha256": "431baaa2b4e455df07dbfe099001fe471de7141bc4d1683d41bb7e81b5041432",
+      "decision": "unsat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "official",
+          "reason": null,
+          "status": "unsat",
+          "solver_timeout_ms": 12403
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.3901266250759363,
+      "full_process_cpu_seconds": 1.328627,
+      "sampled_peak_rss_bytes": 113836032,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.320294292178005,
+        "cpu_seconds": 1.32785,
+        "maxrss_bytes_darwin": 113950720,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 7,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_generic_smt",
+      "worker_sha256": "7fad1e98ac5fba33c84a429633f21820de566d7df4218f1332365727f068d797",
+      "decision": "unsat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "official_generic_smt",
+          "reason": null,
+          "status": "unsat",
+          "tactic_pipeline": [
+            "simplify",
+            "propagate-values",
+            "solve-eqs",
+            "smt"
+          ],
+          "solver_timeout_ms": 12454
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.286335458047688,
+      "full_process_cpu_seconds": 1.267836,
+      "sampled_peak_rss_bytes": 108314624,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2575035421177745,
+        "cpu_seconds": 1.267057,
+        "maxrss_bytes_darwin": 111181824,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 8,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "worker_sha256": "7dd4b049fef6bf251238a1a1e5666e9779d13fcd096b3bd5dffc95cb7cae4d8a",
+      "decision": "unsat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "flat",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 1,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "flat",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 1,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "flat",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.4928985419683158,
+      "full_process_cpu_seconds": 1.385514,
+      "sampled_peak_rss_bytes": 113639424,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.376385792158544,
+        "cpu_seconds": 1.382237,
+        "maxrss_bytes_darwin": 113639424,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 9,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "worker_sha256": "8b51b7419591f0bdaec21059f21217392410771163a7d44622dd02dec1392507",
+      "decision": "unsat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "product",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "product",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "product",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2869540420360863,
+      "full_process_cpu_seconds": 1.2168610000000002,
+      "sampled_peak_rss_bytes": 118423552,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2262121671810746,
+        "cpu_seconds": 1.213395,
+        "maxrss_bytes_darwin": 118685696,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 10,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "worker_sha256": "0d795adde694d7a974ca85bc02404c23ccf407f4f5613048ccfd30803491e811",
+      "decision": "unsat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "SOLVER_UNSAT_REPORTED_VALIDATION_SEPARATE",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "selector",
+          "status": "unsat",
+          "encoding_counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "selector",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 0,
+              "selectors": 0,
+              "expression_contains_variable_product": false,
+              "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+              "multiplicity_encoding": "selector",
+              "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+            }
+          ],
+          "auxiliary_definition_count": 0
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.4038906251080334,
+      "full_process_cpu_seconds": 1.290927,
+      "sampled_peak_rss_bytes": 112984064,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.28189712530002,
+        "cpu_seconds": 1.290201,
+        "maxrss_bytes_darwin": 112984064,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 11,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "official_canonical_sql",
+      "worker_sha256": "25c774a97ef2439a5cfd02f90c91fdc4e11233bafc1addc77fdd24b4d15f8d97",
+      "decision": "unsat",
+      "worker_status": "COMPLETE",
+      "exit_code": 0,
+      "stop_reason_present": false,
+      "work_state": "RETURNED",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "DISPATCH_RETURNED",
+        "execution_state": "RETURNED",
+        "pair_dispatch_started": true,
+        "raw_final_decision_at_receipt": "unsat",
+        "reported_outcome_kind": "CANONICAL_AST_IDENTITY_REPORTED_NO_PAIR_SOLVER",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_COMPLETE",
+      "cleanup": "COMPLETE",
+      "attempts": [
+        {
+          "route": "official_canonical_sql",
+          "status": "unsat",
+          "normalization": "recursively sort AND children only; preserve all other AST components",
+          "stage_costs": {
+            "parse": {
+              "wall_seconds": 0.06030325032770634,
+              "cpu_seconds": 0.06016699999999986
+            },
+            "recognize": {
+              "wall_seconds": 3.587501123547554e-05,
+              "cpu_seconds": 3.500000000000725e-05
+            },
+            "normalize": {
+              "wall_seconds": 5.375128239393234e-06,
+              "cpu_seconds": 5.000000000032756e-06
+            }
+          },
+          "expression_contains_variable_product": [
+            false,
+            false
+          ],
+          "canonical_asts": [
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T"
+            },
+            {
+              "select": {
+                "value": {
+                  "sum": "T__A"
+                }
+              },
+              "from": "T"
+            }
+          ],
+          "decision_source": "PURE_FRAGMENT_AND_COMMUTATIVITY",
+          "soundness": "Only order of pure admitted Boolean AND operands changed; three-valued AND is commutative; every other AST component and complete input contract are identical.",
+          "proof_boundary": "conditional on admitted raw frontend and AST semantics; no IC inference and no pair-equivalence oracle pre-run"
+        }
+      ],
+      "fallback": {
+        "status": "NOT_NEEDED"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "sat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "55532d7b19e1fb4599345ee23dc9fc7c080d4689971fd079f04977bad21ce621"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2779162088409066,
+      "full_process_cpu_seconds": 1.2412750000000008,
+      "sampled_peak_rss_bytes": 107102208,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2263295412994921,
+        "cpu_seconds": 1.2392130000000001,
+        "maxrss_bytes_darwin": 110919680,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 12,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official",
+      "worker_sha256": "4db16ed4a07dcaaf768f243f0415254378400d5aafa0d145b468be053d53f70f",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.279806667007506,
+      "full_process_cpu_seconds": 1.2643139999999988,
+      "sampled_peak_rss_bytes": 97026048,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.252987083978951,
+        "cpu_seconds": 1.262211,
+        "maxrss_bytes_darwin": 110329856,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 13,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_generic_smt",
+      "worker_sha256": "4c4874462b269e1aefd2cfd3c71b0729af808836ba2d5e347c27a1550dec2c46",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2870795829221606,
+      "full_process_cpu_seconds": 1.2102120000000003,
+      "sampled_peak_rss_bytes": 103464960,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2015626248903573,
+        "cpu_seconds": 1.209506,
+        "maxrss_bytes_darwin": 111837184,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 14,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "worker_sha256": "0c0c39cdc4f9f55e43807c41d815cb9d8466dae6c28d3ba2a7e86c630735459e",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2836306248791516,
+      "full_process_cpu_seconds": 1.2350529999999997,
+      "sampled_peak_rss_bytes": 102367232,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2228075838647783,
+        "cpu_seconds": 1.234474,
+        "maxrss_bytes_darwin": 112902144,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 15,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "worker_sha256": "76ecd6ae41ea72eb941412d0839a08a3ede10ba7b48454a39888d87f0254c4ec",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2961331247352064,
+      "full_process_cpu_seconds": 1.2203080000000006,
+      "sampled_peak_rss_bytes": 94978048,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2084539588540792,
+        "cpu_seconds": 1.21959,
+        "maxrss_bytes_darwin": 103448576,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 16,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "worker_sha256": "272d09218788d46e8ee676c1f5bb12b6e1641773dd7eaae963db6bef92a937a4",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2714430829510093,
+      "full_process_cpu_seconds": 1.2329209999999993,
+      "sampled_peak_rss_bytes": 97894400,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2267539161257446,
+        "cpu_seconds": 1.230347,
+        "maxrss_bytes_darwin": 110133248,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 17,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "official_canonical_sql",
+      "worker_sha256": "8f684a0a3ed5ae274a1e77398485e8932c41a379d209de4bfe3072d4932f81c2",
+      "decision": "CONTRACT_UNSAT_REJECTED",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "CONTRACT_UNSAT_REJECTED",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "guard": {
+        "full_base_fact_count": 6,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "8cc947400286c8dcd6fa531c533ef4c76d0f9a403ab4a983f67fe54e3f933dcc"
+      },
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.294420124962926,
+      "full_process_cpu_seconds": 1.2124920000000003,
+      "sampled_peak_rss_bytes": 101728256,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2000165418721735,
+        "cpu_seconds": 1.210319,
+        "maxrss_bytes_darwin": 105988096,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    },
+    {
+      "job_index": 18,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "official",
+      "worker_sha256": "95a40d1e03cf3c3a8ead49cef3b165ffc29a50ef5e8aea2e7dbe3ffdfc5e74a4",
+      "decision": "UNVERIFIED_CONTRACT",
+      "worker_status": "COMPLETE_CONTRACT_UNVERIFIED",
+      "exit_code": 2,
+      "stop_reason_present": false,
+      "work_state": "NOT_RUN_CONTRACT_STOP",
+      "receipt": {
+        "rule_version": "pair-work-receipt-v1",
+        "event": "CONTRACT_STOP",
+        "execution_state": "NOT_RUN_CONTRACT_STOP",
+        "pair_dispatch_started": false,
+        "raw_final_decision_at_receipt": "UNVERIFIED_CONTRACT",
+        "reported_outcome_kind": "NO_VALIDATED_PAIR_DECISION_INFERRED",
+        "unclosed_outcome_paths": [],
+        "scientific_validation": "NOT_INFERRED_FROM_EXECUTION_RECEIPT",
+        "worker_completion": "SEPARATE_FINAL_CHECKPOINT_REQUIRED",
+        "process_and_resource_validation": "PENDING_SUPERVISOR_ACKNOWLEDGEMENT"
+      },
+      "phase": "FINAL_CONTRACT_STOP",
+      "cleanup": "COMPLETE",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "bridge_status": "UNVERIFIED_CONTRACT",
+      "guard": null,
+      "witness_checks": [],
+      "full_process_wall_seconds": 1.2723849997855723,
+      "full_process_cpu_seconds": 1.215027000000001,
+      "sampled_peak_rss_bytes": 92897280,
+      "sampled_max_kernel_threads": 2,
+      "worker_resource_last_checkpoint": {
+        "worker_wall_seconds": 1.2045979578979313,
+        "cpu_seconds": 1.214255,
+        "maxrss_bytes_darwin": 98713600,
+        "python_threads": [
+          {
+            "name": "MainThread",
+            "daemon": false
+          }
+        ]
+      }
+    }
+  ],
+  "raw_evidence_sha256": {
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/runtime_paths_statusfix_reviewed_main_01.json": "16c76c134cdca4ef9461506968cecbbdb73ce6bc6304acdbeb7e878f19613d18",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_14_SLOTS_01.json": "84b1077a998a5cac1d05e6ad5631fc3f6b0f6a618f0e228402c2eb70c08f12e9",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/registration/SUPERVISOR_INTEGRATION_REGISTRATION_01.json": "298ffb2598506f3a9df5a69b3e6fffcbeda59529349bdfd7084f3331b88570d0",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/common.py": "aad39a0fe6eeb0dbafbc949a16c81cda1aa5268f7b519dedf6275e46acc10576",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/worker.py": "5848538a168495d3a336afedd5d1efe696d43eea8a15d353679b905be7ecc320",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/supervisor.py": "5f78c98371ba255dcf97c46f298c23ae9af0fcbb2861d7e1745052be06e6b295",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5_statusfix/pair_status.py": "65edfe932aee49a64f3986d420eb3115bb71d271d3ac402e039052ea5826ca5f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/supervisor_report.json": "ec1836bdab9b3f7980fb7a209a9a9d83bc1ddcd575e4b9e354633987197605de",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/initial_not_run.json": "116a8e427a94fd0d84c89921a73c240448e3f2091af1c5e6ea6dabe37b872914",
+    "calibergraph_revision_20261009/today_20261011/experiments/STATUSFIX_SUPERVISOR_SESSION56495_REAP_RECEIPT.json": "c6f70a9942508dfee0d2f16136fd8086c2018830f17158e2a8412a278563c201",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/emergency.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0005/worker_report.json": "2867c6a86ea2f89ccd6069c2523ea912a2370dc3cfc389f3564a0227c6f21af1",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0005/stdout.log": "b04d0fce7d85ee389c50ac04231175211f4ae5c357a22077920c794e2160f269",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0005/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0006/worker_report.json": "431baaa2b4e455df07dbfe099001fe471de7141bc4d1683d41bb7e81b5041432",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0006/stdout.log": "c7a200779c82af147bc818c3d62849a38c50a5ea263ff9a64f5cd306ac48cf86",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0006/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0007/worker_report.json": "7fad1e98ac5fba33c84a429633f21820de566d7df4218f1332365727f068d797",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0007/stdout.log": "9f03677bed4a86027a3ad646f03c9d13ef369d9711f0b2df60237894f865040d",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0007/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0008/worker_report.json": "7dd4b049fef6bf251238a1a1e5666e9779d13fcd096b3bd5dffc95cb7cae4d8a",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0008/stdout.log": "f5cf31312cf179bdc1e0f5bc3203c7028aae961ce45ab9a4424d01308800d37e",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0008/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0009/worker_report.json": "8b51b7419591f0bdaec21059f21217392410771163a7d44622dd02dec1392507",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0009/stdout.log": "8d6958aef7bbddeafaab2f80006a857dc2bbca6ab3223f237e7e6df1134dc87b",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0009/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0010/worker_report.json": "0d795adde694d7a974ca85bc02404c23ccf407f4f5613048ccfd30803491e811",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0010/stdout.log": "a724505428b04604aed17334b590bcf5a4de743b8bf69dfdacd984687f67e146",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0010/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0011/worker_report.json": "25c774a97ef2439a5cfd02f90c91fdc4e11233bafc1addc77fdd24b4d15f8d97",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0011/stdout.log": "819541fecaee60d075f5baf4d04ee32df4f5500aa529d338572d4a30a530122f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0011/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0012/worker_report.json": "4db16ed4a07dcaaf768f243f0415254378400d5aafa0d145b468be053d53f70f",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0012/stdout.log": "3807fd151a6c745ef30eef0bc6d22cddd7290c63352b333cc92cba59b898c3c4",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0012/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0013/worker_report.json": "4c4874462b269e1aefd2cfd3c71b0729af808836ba2d5e347c27a1550dec2c46",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0013/stdout.log": "4d40a124267efbee3c97bba32e21cd6eafb50e6f98c2ccf24b2dd9a05ee319d7",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0013/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0014/worker_report.json": "0c0c39cdc4f9f55e43807c41d815cb9d8466dae6c28d3ba2a7e86c630735459e",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0014/stdout.log": "f23b579fb1bf012824c651f4243a37397ef4f28b25250d639fec0cf6aa7f96b8",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0014/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0015/worker_report.json": "76ecd6ae41ea72eb941412d0839a08a3ede10ba7b48454a39888d87f0254c4ec",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0015/stdout.log": "5e6b43f250e71122adb7f8252d382c125cd4797b574e5276920fe7fe807a1abe",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0015/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0016/worker_report.json": "272d09218788d46e8ee676c1f5bb12b6e1641773dd7eaae963db6bef92a937a4",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0016/stdout.log": "a18dff8807fa927af11aea42b064b863cbf446e453c73c6ef07419dc176d1439",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0016/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0017/worker_report.json": "8f684a0a3ed5ae274a1e77398485e8932c41a379d209de4bfe3072d4932f81c2",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0017/stdout.log": "a1866bb4d0dfa5958f13f172b9cce4ce65c213378f5ecf1ef1161a2f9415c303",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0017/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0018/worker_report.json": "95a40d1e03cf3c3a8ead49cef3b165ffc29a50ef5e8aea2e7dbe3ffdfc5e74a4",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0018/stdout.log": "003e0e3c50dbd8e62119c4531a80688de7c3aceb8ac068f1aee5a72c0bd0c772",
+    "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/statusfix_supervisor_integration_01/job_0018/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "audit_script_sha256": "a1224fafa7dff6481ed0e432d1c3327885ee311e763dee2aa213e81a72b57bfd"
+}

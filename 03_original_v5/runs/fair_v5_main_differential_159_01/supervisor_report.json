@@ -1,0 +1,2696 @@
+{
+  "status": "COMPLETED_WITH_FAILURES_OR_NOT_RUN",
+  "kind": "differential",
+  "data_role": "EXPOSED_DEV_PLUS_CONSTRUCTED_ANALYTICAL_CONTROLS_NOT_HELDOUT",
+  "source_provenance": {
+    "inherited_registration_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "inherited_registration_sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746",
+    "original_22_cases_preserved_exactly": true,
+    "inherited_original_provenance": {
+      "original_stress_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+      "sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4",
+      "original_N2_N4_cases_preserved": 12,
+      "new_constructed_cases": 10,
+      "N8": "not in this suite; prior N8 registration remains separate, no claim of running it"
+    },
+    "bridge_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py",
+    "bridge_source_sha256": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "new_controls": "Six source-derived constructed repair controls D01-D06; expected labels analytical only, not measured."
+  },
+  "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+  "runtime_lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+  "program_sha256": {
+    "common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+    "worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+    "supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+    "query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+    "contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+  },
+  "full_case_denominator": 28,
+  "full_job_denominator": 168,
+  "selected_job_start": 159,
+  "selected_job_limit": 3,
+  "jobs": [
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 0,
+      "case_id": "S01_reordered_conjunction_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 1,
+      "case_id": "S02_nullable_count_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 2,
+      "case_id": "S03_full_not_null_IC_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 3,
+      "case_id": "S04_sum_vs_count_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 4,
+      "case_id": "S05_empty_SUM_NULL_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 5,
+      "case_id": "S06_all_NULL_SUM_N2",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 6,
+      "case_id": "S01_reordered_conjunction_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 7,
+      "case_id": "S02_nullable_count_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 8,
+      "case_id": "S03_full_not_null_IC_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 9,
+      "case_id": "S04_sum_vs_count_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 10,
+      "case_id": "S05_empty_SUM_NULL_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 11,
+      "case_id": "S06_all_NULL_SUM_N4",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 12,
+      "case_id": "E01_add_sub_nonnull_identity",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 13,
+      "case_id": "E02_add_sub_nullable_negative",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 14,
+      "case_id": "E03_variable_product_commutativity",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 15,
+      "case_id": "E04_root_between_inclusive",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 16,
+      "case_id": "E05_leaf_between_boundary_negative",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 17,
+      "case_id": "E06_null_times_zero_negative",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 18,
+      "case_id": "E07_count_zero_expression",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 19,
+      "case_id": "E08_empty_sum_not_vacuous_contract",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 20,
+      "case_id": "E09_fixed_sum_overflow_domain",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 21,
+      "case_id": "E10_inconsistent_contract_not_pair_unsat",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 22,
+      "case_id": "D01_literal_left_forced_A6",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 23,
+      "case_id": "D02_same_SQL_same_C",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 24,
+      "case_id": "D03_no_C_same_pair",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 25,
+      "case_id": "D04_contradictory_literal_left",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_159_01/job_0159",
+      "sampled_peak_rss_bytes": 97288192,
+      "sampled_max_kernel_threads": 2,
+      "pid": 14051,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.286638458725065,
+      "full_process_cpu_user_seconds": 1.122626,
+      "full_process_cpu_system_seconds": 0.10575599999999999,
+      "full_process_cpu_seconds": 1.2283819999999999,
+      "worker_report_sha256": "82fb1b61a5397f79a8702457f34e7e021556118ced0bbd5184d4f428680c6039",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.049777583219110966,
+      "semantic_e2e_cpu_seconds": 0.04952700000000032,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "between": [
+              {
+                "value": "T__A"
+              },
+              6,
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "b9ce356c179b5d0b927ceefebfec1f476c1abd8c08325ff4777773d1bde80514"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 1,
+          "actual_formula": "(and (<= 6 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String)) (<= 6 (T__A t1)) (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "and": [
+              {
+                "gte": [
+                  {
+                    "value": "T__A"
+                  },
+                  6
+                ]
+              },
+              {
+                "lte": [
+                  {
+                    "value": "T__A"
+                  },
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "between": [
+                {
+                  "value": "T__A"
+                },
+                6,
+                5
+              ]
+            },
+            "normalized_ast": {
+              "and": [
+                {
+                  "gte": [
+                    {
+                      "value": "T__A"
+                    },
+                    6
+                  ]
+                },
+                {
+                  "lte": [
+                    {
+                      "value": "T__A"
+                    },
+                    5
+                  ]
+                }
+              ]
+            },
+            "source_operator": "between",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_159_01/job_0160",
+      "sampled_peak_rss_bytes": 100433920,
+      "sampled_max_kernel_threads": 2,
+      "pid": 14052,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.278899250086397,
+      "full_process_cpu_user_seconds": 1.0838360000000002,
+      "full_process_cpu_system_seconds": 0.10619700000000001,
+      "full_process_cpu_seconds": 1.1900330000000003,
+      "worker_report_sha256": "4efaf3b5538788886d2501b55de6418b0b8cda4ef46f9f1d35c18566f383ea37",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.04936237493529916,
+      "semantic_e2e_cpu_seconds": 0.04906800000000011,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "between": [
+              {
+                "value": "T__A"
+              },
+              6,
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "b9ce356c179b5d0b927ceefebfec1f476c1abd8c08325ff4777773d1bde80514"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 1,
+          "actual_formula": "(and (<= 6 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String)) (<= 6 (T__A t1)) (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "and": [
+              {
+                "gte": [
+                  {
+                    "value": "T__A"
+                  },
+                  6
+                ]
+              },
+              {
+                "lte": [
+                  {
+                    "value": "T__A"
+                  },
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "between": [
+                {
+                  "value": "T__A"
+                },
+                6,
+                5
+              ]
+            },
+            "normalized_ast": {
+              "and": [
+                {
+                  "gte": [
+                    {
+                      "value": "T__A"
+                    },
+                    6
+                  ]
+                },
+                {
+                  "lte": [
+                    {
+                      "value": "T__A"
+                    },
+                    5
+                  ]
+                }
+              ]
+            },
+            "source_operator": "between",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 26,
+      "case_id": "D05_inverted_BETWEEN_contract",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "PROCESS_EXITED",
+      "final_decision": "CONTRACT_UNSAT_REJECTED",
+      "attempts": [],
+      "fallback": {
+        "status": "FORBIDDEN_UNVERIFIED_OR_REJECTED_CONTRACT"
+      },
+      "output_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v5_main_differential_159_01/job_0161",
+      "sampled_peak_rss_bytes": 108724224,
+      "sampled_max_kernel_threads": 2,
+      "pid": 14061,
+      "exit_code": 2,
+      "full_process_wall_seconds": 1.2918119998648763,
+      "full_process_cpu_user_seconds": 1.0966179999999999,
+      "full_process_cpu_system_seconds": 0.106939,
+      "full_process_cpu_seconds": 1.203557,
+      "worker_report_sha256": "aec9df5977c78a220ce40c71686dc38c4cb0f2f6f0978d159847d0649bff38d9",
+      "worker_status": "COMPLETE_CONTRACT_REJECTED",
+      "semantic_e2e_wall_seconds": 0.04772366676479578,
+      "semantic_e2e_cpu_seconds": 0.04733200000000015,
+      "raw_frontend_guard": {
+        "status": "ADMITTED",
+        "query_count": 2,
+        "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+        "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+      },
+      "actual_verifier_semantics": {
+        "requested_semantics": null,
+        "observed_wrapper_class": "verifiers.verifier.Verifier",
+        "actual_run_method": "verifiers.verifier.Verifier.run",
+        "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+        "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+        "dispatch_constructors_in_locked_run_ast": [
+          "BagSemanticsVerifier",
+          "ListSemanticsVerifier"
+        ],
+        "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+        "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+        "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+        "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+      },
+      "contract_bridge": {
+        "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+        "original_ast": [
+          {
+            "between": [
+              {
+                "value": "T__A"
+              },
+              6,
+              5
+            ]
+          }
+        ],
+        "original_ast_sha256": "69ef5c11afa3ae0e33f00dc5e62eedc992b255ad108b7806aab363d84de774ce",
+        "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+        "base_only_sat": {
+          "status": "sat",
+          "assertion_count": 4,
+          "assertion_sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe"
+        },
+        "normalized_vs_reference": {
+          "status": "unsat",
+          "assertion_count": 5,
+          "assertion_sha256": "b9ce356c179b5d0b927ceefebfec1f476c1abd8c08325ff4777773d1bde80514"
+        },
+        "compilation": {
+          "status": "COMPILED_NORMALIZED_COPY",
+          "original_ast_passed_to_upstream": false,
+          "delta_fact_count": 1,
+          "actual_formula": "(and (<= 6 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 5 (T__A t1))\n     (not (NULL t1 T__A__String)))",
+          "reference_formula": "(and (not (NULL t1 T__A__String)) (<= 6 (T__A t1)) (>= 5 (T__A t1)))"
+        },
+        "normalized_ast": [
+          {
+            "and": [
+              {
+                "gte": [
+                  {
+                    "value": "T__A"
+                  },
+                  6
+                ]
+              },
+              {
+                "lte": [
+                  {
+                    "value": "T__A"
+                  },
+                  5
+                ]
+              }
+            ]
+          }
+        ],
+        "normalized_ast_sha256": "f35ddcbe17b5be43806bb0c482e0fb37658a38d5796df40da01f49f955931c64",
+        "ledger": [
+          {
+            "source_path": "$/0",
+            "source_ast": {
+              "between": [
+                {
+                  "value": "T__A"
+                },
+                6,
+                5
+              ]
+            },
+            "normalized_ast": {
+              "and": [
+                {
+                  "gte": [
+                    {
+                      "value": "T__A"
+                    },
+                    6
+                  ]
+                },
+                {
+                  "lte": [
+                    {
+                      "value": "T__A"
+                    },
+                    5
+                  ]
+                }
+              ]
+            },
+            "source_operator": "between",
+            "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+          }
+        ],
+        "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+        "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+        "base_only": {
+          "facts": [
+            "(not (DELETED t1))",
+            "(= (T__A t1) String_x1__Int)",
+            "(<= (- 2147483648) (T__A t1))",
+            "(>= 2147483647 (T__A t1))"
+          ],
+          "sha256": "ca1285149de243eedc9b95273f69250b963f3493676e5dd36bd292152278a0fe",
+          "tested_ic_included": false,
+          "exact_rows": {
+            "T": 1
+          }
+        },
+        "complete_facts_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31",
+        "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+        "no_pair_oracle_run": true
+      },
+      "contract_guard": {
+        "full_base_fact_count": 5,
+        "consistency": "unsat",
+        "any_base_row_deleted": "unsat",
+        "base_fact_sha256": "def332e035e08706e8f48c5e240e0a5ccbe74053543de8c7a7408f4962f98a31"
+      },
+      "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+      "environment_cleanup": "COMPLETE",
+      "valid_completed_result": false
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "query_index": 0,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "flat",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "product",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    },
+    {
+      "case_index": 27,
+      "case_id": "D06_unsupported_whole_C",
+      "arm": "selector",
+      "query_index": 1,
+      "kind": "differential",
+      "status": "NOT_RUN",
+      "final_decision": "NOT_RUN",
+      "attempts": [],
+      "fallback": {
+        "status": "NOT_RUN"
+      }
+    }
+  ],
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_supervisor_seconds": 25,
+    "per_child_wall_alarm_seconds": 24,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "cost_contract": "Common raw-identifier gate for all arms; rejected input stays in denominator without equivalence decision. Six arms include pure-fragment AND canonicalization. Fresh process/Environment per admitted arm. Full schema/exact rows preserved. Original source-AST IC normalized on a copy; common base-only SAT and XOR(normalized upstream C, independent original-AST C) UNSAT audit precedes all six arms and per-query differential. Whole unsupported/unknown contracts stop without fallback. Common SAT/exact-row guard. Uniform remaining-budget policy. All failures and fallback costs retained.",
+  "fallback_policy": "FrontendUnsupported -> no parser/solver/fallback; admitted Candidate or canonical Ineligible/normalization miss -> official with same audited normalized C; candidate unknown -> official with same audited normalized C only if >=500ms remains; exceptions or invalid witnesses are errors, not silently erased.",
+  "oracle_domain_policy": "SAT replay requires common int64-domain audit; out-of-domain/errors retain witnesses and denominator and cannot count as success or a win.",
+  "correctness_requirement": "Cost numbers alone do not establish equal guarantees. Per-query mapping validation/proof and replay checks must be assessed separately before comparative claims.",
+  "thread_observation": "One computation child. Solver threads=1/parallel disabled; temporary mo-imports Python monitor threads recorded.",
+  "clock_boundary": "89s guard starts after initial stdlib time import; per-child supervisor wall includes spawn/startup through reap. Worker final checkpoint excludes final write, full process wall/CPU measured here.",
+  "wall_seconds_before_final_write": 3.9019073750823736
+}

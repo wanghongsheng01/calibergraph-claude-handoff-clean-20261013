@@ -1,0 +1,501 @@
+{
+  "status": "UNVERIFIED_CONTRACT",
+  "pid": 6635,
+  "case_id": "unverified_or_N2",
+  "native_load": "NOT_RUN",
+  "environment_import": "NOT_RUN",
+  "checks": [
+    {
+      "label": "base_only_sat",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "base_exact_rows",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "original_vs_reference",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "normalized_vs_reference",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "fixed_4",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "fixed_5",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "fixed_6",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "fixed_NULL",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "fixed_mixed_4_6",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "fixed_mixed_6_NULL",
+      "status": "NOT_RUN"
+    },
+    {
+      "label": "reference_contract_sat",
+      "status": "NOT_RUN"
+    }
+  ],
+  "source_parser": {
+    "status": "NOT_RUN"
+  },
+  "pair_check": {
+    "status": "NOT_RUN"
+  },
+  "limits": {
+    "cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "wall_alarm_seconds": 24,
+    "rss_soft_bytes": 1073741824,
+    "external_supervisor_required": true
+  },
+  "manifest_sha256": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd",
+  "runtime_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+  "not_claimed": [
+    "general certificate",
+    "natural defect incidence",
+    "novelty",
+    "performance advantage"
+  ],
+  "input": {
+    "id": "unverified_or_N2",
+    "schema": {
+      "T": {
+        "A": "INT"
+      }
+    },
+    "exact_rows": {
+      "T": 2
+    },
+    "constraint": [
+      {
+        "or": [
+          {
+            "lt": [
+              5,
+              {
+                "value": "T__A"
+              }
+            ]
+          },
+          {
+            "gt": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          }
+        ]
+      }
+    ],
+    "source_contract_text": null,
+    "expected_parser_ast": null,
+    "parser_scope": "REGISTERED_JSON_API_INPUT",
+    "expected_admission": "UNVERIFIED_CONTRACT",
+    "expected_original_xor": "NOT_RUN",
+    "expected_normalized_xor": "NOT_RUN",
+    "pair_check": false,
+    "fixed_databases": [
+      {
+        "id": "4",
+        "database": {
+          "T": [
+            [
+              4
+            ],
+            [
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "database": {
+          "T": [
+            [
+              5
+            ],
+            [
+              5
+            ]
+          ]
+        }
+      },
+      {
+        "id": "6",
+        "database": {
+          "T": [
+            [
+              6
+            ],
+            [
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "id": "NULL",
+        "database": {
+          "T": [
+            [
+              null
+            ],
+            [
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "id": "mixed_4_6",
+        "database": {
+          "T": [
+            [
+              4
+            ],
+            [
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "id": "mixed_6_NULL",
+        "database": {
+          "T": [
+            [
+              6
+            ],
+            [
+              null
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "data_role": "CONSTRUCTED_EXPOSED_DIAGNOSTIC_NOT_NATURAL_DEFECT_OR_HELDOUT",
+  "full_case_denominator": 34,
+  "cases": [
+    {
+      "id": "lt_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lt_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "none_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "not_null_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "and_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unverified_or_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unverified_primary_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lt_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lt_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "none_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "not_null_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "and_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unverified_or_N2",
+      "status": "UNVERIFIED_CONTRACT"
+    },
+    {
+      "id": "unverified_primary_N2",
+      "status": "NOT_RUN"
+    }
+  ],
+  "fixed_databases": [
+    {
+      "id": "4",
+      "database": {
+        "T": [
+          [
+            4
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "5",
+      "database": {
+        "T": [
+          [
+            5
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "6",
+      "database": {
+        "T": [
+          [
+            6
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "NULL",
+      "database": {
+        "T": [
+          [
+            null
+          ],
+          [
+            null
+          ]
+        ]
+      },
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "mixed_4_6",
+      "database": {
+        "T": [
+          [
+            4
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "mixed_6_NULL",
+      "database": {
+        "T": [
+          [
+            6
+          ],
+          [
+            null
+          ]
+        ]
+      },
+      "status": "NOT_RUN"
+    }
+  ],
+  "phase": "FINAL_BEFORE_WRITE_EXIT",
+  "resource_last_checkpoint": {
+    "wall_seconds": 0.028054166119545698,
+    "cpu_seconds": 0.04063699999999999,
+    "peak_rss_bytes_darwin": 21364736,
+    "python_threads": [
+      {
+        "name": "MainThread",
+        "daemon": false
+      }
+    ]
+  },
+  "admission_regressions": [
+    {
+      "id": "cross_table_encoding_collision",
+      "schema": {
+        "A_": {
+          "B": "INT"
+        },
+        "A": {
+          "_B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "status": "EVALUATED_PURE_ADMISSION_ONLY",
+      "reason": "nonunique or noninvertible upstream column encoding: A___B",
+      "observed_admission": "UNVERIFIED_CONTRACT",
+      "expected_match": true
+    },
+    {
+      "id": "single_table_noninvertible_encoding",
+      "schema": {
+        "A_": {
+          "B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "status": "EVALUATED_PURE_ADMISSION_ONLY",
+      "reason": "nonunique or noninvertible upstream column encoding: A___B",
+      "observed_admission": "UNVERIFIED_CONTRACT",
+      "expected_match": true
+    },
+    {
+      "id": "leading_column_underscore_unambiguous",
+      "schema": {
+        "A": {
+          "_B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "status": "EVALUATED_PURE_ADMISSION_ONLY",
+      "observed_admission": "SUPPORTED_REFERENCE",
+      "expected_match": true
+    }
+  ],
+  "reason": "$/0: unsupported operator or",
+  "solver_status": "NOT_RUN",
+  "expected_admission_match": true
+}

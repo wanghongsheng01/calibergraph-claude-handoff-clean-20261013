@@ -1,0 +1,928 @@
+{
+  "status": "COMPLETE_SELECTED_DEV_AGREEMENT",
+  "data_role": "EXISTING_EXPOSED_ANALYTICAL_DEV_NOT_NEW_TEST",
+  "performance_claim": false,
+  "fixture_sha256": "b3be16fd0f2c5a03513363c907d773e3087bbab16c2633ca4a4656ec256f4918",
+  "runtime_lock_sha256": "ed5a8d080c97f07b0484dd44c4956e067e6c1d36bd36beb4eb7ca0c69b64fa0b",
+  "worker_sha256": "45eb4f5207a86660dacc2e22198c1dca8cdaace73821a54474c4bd138e50991e",
+  "supervisor_sha256": "2b2e7df5c84512d54de2a82564d199d9fed343d3289aab1a878a8ab8aee63a72",
+  "limits": {
+    "per_child_cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "per_child_wall_seconds": 25,
+    "total_internal_wall_seconds": 89,
+    "child_rss_soft_bytes": 1073741824,
+    "solver_threads": 1
+  },
+  "thread_note": "One computation child at a time; mo-imports temporary monitor threads are observed, not mislabeled as solver workers.",
+  "full_case_denominator": 6,
+  "full_arm_denominator": 24,
+  "scheduled_case_start": 2,
+  "scheduled_case_limit": 4,
+  "cases": [
+    {
+      "id": "S01_reordered_conjunction",
+      "expected": "unsat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S02_nullable_count",
+      "expected": "sat",
+      "status": "NOT_RUN",
+      "arms": {
+        "official": {
+          "status": "NOT_RUN"
+        },
+        "flat": {
+          "status": "NOT_RUN"
+        },
+        "product": {
+          "status": "NOT_RUN"
+        },
+        "selector": {
+          "status": "NOT_RUN"
+        }
+      }
+    },
+    {
+      "id": "S03_full_not_null_IC",
+      "expected": "unsat",
+      "status": "PROCESS_EXITED",
+      "arms": {
+        "official": {
+          "status": "unsat",
+          "resource_wall_seconds": 0.10725891683250666
+        },
+        "flat": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            }
+          ],
+          "resource_wall_seconds": 0.009057707618921995
+        },
+        "product": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            }
+          ],
+          "resource_wall_seconds": 0.008458749856799841
+        },
+        "selector": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 12
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 12
+            }
+          ],
+          "resource_wall_seconds": 0.008725583087652922
+        }
+      },
+      "case_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/dev_remaining4_01/case_02",
+      "sampled_peak_rss_bytes": 111656960,
+      "sampled_max_kernel_threads": 2,
+      "pid": 87933,
+      "exit_code": 0,
+      "supervised_wall_seconds": 1.5083308746106923,
+      "worker_status": "COMPLETE_DEV_AGREEMENT",
+      "point_checks": {
+        "flat": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                2
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                2
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.008192374836653471
+        },
+        "product": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                2
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                2
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.008469624910503626
+        },
+        "selector": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                2
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                2
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.00850366661325097
+        }
+      },
+      "worker_report_sha256": "e315ba405b5eeef987299273690a021ea2053c006e869084194bc88f583b302e",
+      "success": true
+    },
+    {
+      "id": "S04_sum_vs_count",
+      "expected": "sat",
+      "status": "PROCESS_EXITED",
+      "arms": {
+        "official": {
+          "status": "sat",
+          "witness": {
+            "F": [
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "D": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "E": [
+              [
+                0,
+                0
+              ],
+              [
+                null,
+                0
+              ]
+            ]
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  null
+                ]
+              ],
+              [
+                [
+                  0
+                ]
+              ]
+            ],
+            "unequal_as_bags": true,
+            "sqlite_version": "3.53.3",
+            "scope": "fixed scalar INT32 constructed DEV"
+          },
+          "resource_wall_seconds": 0.09792225016281009
+        },
+        "flat": {
+          "status": "sat",
+          "counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            }
+          ],
+          "witness": {
+            "F": [
+              [
+                -1,
+                0,
+                -2
+              ],
+              [
+                0,
+                1,
+                0
+              ]
+            ],
+            "D": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "E": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  0
+                ]
+              ],
+              [
+                [
+                  4
+                ]
+              ]
+            ],
+            "unequal_as_bags": true,
+            "sqlite_version": "3.53.3",
+            "scope": "fixed scalar INT32 constructed DEV"
+          },
+          "resource_wall_seconds": 0.011142584029585123
+        },
+        "product": {
+          "status": "sat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            }
+          ],
+          "witness": {
+            "F": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                null
+              ]
+            ],
+            "D": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ],
+            "E": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  0
+                ]
+              ],
+              [
+                [
+                  1
+                ]
+              ]
+            ],
+            "unequal_as_bags": true,
+            "sqlite_version": "3.53.3",
+            "scope": "fixed scalar INT32 constructed DEV"
+          },
+          "resource_wall_seconds": 0.020752999931573868
+        },
+        "selector": {
+          "status": "sat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 24
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 12
+            }
+          ],
+          "witness": {
+            "F": [
+              [
+                0,
+                -1,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "D": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ],
+            "E": [
+              [
+                0,
+                0
+              ],
+              [
+                -1,
+                0
+              ]
+            ]
+          },
+          "sqlite": {
+            "relations": [
+              [
+                [
+                  0
+                ]
+              ],
+              [
+                [
+                  4
+                ]
+              ]
+            ],
+            "unequal_as_bags": true,
+            "sqlite_version": "3.53.3",
+            "scope": "fixed scalar INT32 constructed DEV"
+          },
+          "resource_wall_seconds": 0.013364499900490046
+        }
+      },
+      "case_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/dev_remaining4_01/case_03",
+      "sampled_peak_rss_bytes": 122568704,
+      "sampled_max_kernel_threads": 2,
+      "pid": 87938,
+      "exit_code": 0,
+      "supervised_wall_seconds": 1.5143400421366096,
+      "worker_status": "COMPLETE_DEV_AGREEMENT",
+      "point_checks": {
+        "flat": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                5
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                5
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.0080855842679739
+        },
+        "product": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                5
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                5
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.00803566724061966
+        },
+        "selector": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                5
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                5
+              ]
+            ],
+            [
+              [
+                2
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.007983208168298006
+        }
+      },
+      "worker_report_sha256": "8fbe648d0a14117a4c5d52f482e4d310c4cf7ce917c963b5b692848a2724f2cd",
+      "success": true
+    },
+    {
+      "id": "S05_empty_SUM_NULL",
+      "expected": "unsat",
+      "status": "PROCESS_EXITED",
+      "arms": {
+        "official": {
+          "status": "unsat",
+          "resource_wall_seconds": 0.10064979083836079
+        },
+        "flat": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            }
+          ],
+          "resource_wall_seconds": 0.01061750017106533
+        },
+        "product": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            }
+          ],
+          "resource_wall_seconds": 0.015346375294029713
+        },
+        "selector": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 24
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 24
+            }
+          ],
+          "resource_wall_seconds": 0.013511082623153925
+        }
+      },
+      "case_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/dev_remaining4_01/case_04",
+      "sampled_peak_rss_bytes": 114442240,
+      "sampled_max_kernel_threads": 2,
+      "pid": 87939,
+      "exit_code": 0,
+      "supervised_wall_seconds": 1.4063221672549844,
+      "worker_status": "COMPLETE_DEV_AGREEMENT",
+      "point_checks": {
+        "flat": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.0080525828525424
+        },
+        "product": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.008480666670948267
+        },
+        "selector": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.008305083028972149
+        }
+      },
+      "worker_report_sha256": "05ac013d766903b5b8734326e2e6a7d2f602c6444c93b7d894a361aabb54a1a3",
+      "success": true
+    },
+    {
+      "id": "S06_all_NULL_SUM",
+      "expected": "unsat",
+      "status": "PROCESS_EXITED",
+      "arms": {
+        "official": {
+          "status": "unsat",
+          "resource_wall_seconds": 0.10420650010928512
+        },
+        "flat": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            },
+            {
+              "match_terms": 0,
+              "flat_rows": 8,
+              "selectors": 0
+            }
+          ],
+          "resource_wall_seconds": 0.008594166953116655
+        },
+        "product": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 0
+            }
+          ],
+          "resource_wall_seconds": 0.008364624809473753
+        },
+        "selector": {
+          "status": "unsat",
+          "counts": [
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 24
+            },
+            {
+              "match_terms": 8,
+              "flat_rows": 0,
+              "selectors": 24
+            }
+          ],
+          "resource_wall_seconds": 0.009747208096086979
+        }
+      },
+      "case_directory": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/dev_remaining4_01/case_05",
+      "sampled_peak_rss_bytes": 107462656,
+      "sampled_max_kernel_threads": 2,
+      "pid": 87940,
+      "exit_code": 0,
+      "supervised_wall_seconds": 1.3879291247576475,
+      "worker_status": "COMPLETE_DEV_AGREEMENT",
+      "point_checks": {
+        "flat": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.009665249846875668
+        },
+        "product": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.00937429117038846
+        },
+        "selector": {
+          "status": "POINT_VALUES_MATCH",
+          "relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "expected_relations": [
+            [
+              [
+                null
+              ]
+            ],
+            [
+              [
+                null
+              ]
+            ]
+          ],
+          "resource_wall_seconds": 0.008888999931514263
+        }
+      },
+      "worker_report_sha256": "2b92f7ee239043845ba8256d2c6176b72acb1ba88028083f52af9dffe03abe00",
+      "success": true
+    }
+  ],
+  "rejection_queries": [
+    {
+      "id": "R01_outer_join",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R02_cross_leaf",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R03_leaf_SUM",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R04_DISTINCT",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R05_nonlinear_root",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R06_GROUP_BY",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    },
+    {
+      "id": "R07_non_equi_join",
+      "status": "NOT_RUN",
+      "reason": "outside this finite diagnostic"
+    }
+  ],
+  "spotit_status": "NOT_RUN_LOCAL_SOURCE_CLOSURE_INCOMPLETE_NOT_FULL_SPOTIT_PLUS_REPRODUCTION",
+  "resource_wall_seconds_before_final_write": 5.8675463339313865,
+  "scientific_limitations": [
+    "Exposed constructed DEV; no new held-out test or human gold.",
+    "Shared Environment facts and unequal solver sub-budgets: timings are resource audits, not fair comparative cost results.",
+    "No full SpotIt+ reproduction, generic strong rewrite baseline, novelty or SIGMOD847 overlap clearance."
+  ]
+}

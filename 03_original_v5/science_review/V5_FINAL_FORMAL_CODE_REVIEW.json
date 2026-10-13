@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-10-11T06:10:07.787281+00:00",
+  "status": "FINAL_STATIC_FORMAL_CODE_REVIEW_NO_OPEN_P0_P1_P2_IN_REVIEWED_SCOPE",
+  "reviewer": "/root/support_closure",
+  "role_disclosure": "AI internal reviewer separate from manuscript author. I did not author main.tex/contract_bridge_v5.tex or runtime_fair_v5/kernel. I previously prepared support/dependency and public-scanner/isolated-diagnostic work and reviewed the v5 runtime, contract bridge and fixed oracle code. This is not a fresh blind code review, human gold, or human peer review.",
+  "secondary_reader": {
+    "agent": "/root/support_closure/spotit_semantics_correction",
+    "scope": "Contribution/known-baseline/SpotIt prose on initial version only",
+    "role": "AI reader who previously reviewed contract-reference module, not human/blind review",
+    "result": "No P0/P1; P2-03 suggested. Main reviewer re-read final compressed prose and verified closure."
+  },
+  "method": "Read manuscript/source/existing local evidence; stdlib SHA/JSON/AST only. No target/native/solver import or execution, network, manuscript/source edits. Initial output attempt stopped on changed-manuscript hash before writing anything; final manuscript was then fully re-read.",
+  "files_actually_read": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/manuscript_v2/main.tex",
+      "sha256": "d3581eca84bb69ada554db367c51265d5f0263286cf546dc7caef4ca2fb81b8c",
+      "read_scope": "Complete initial source and complete compressed/revised final source; numerical outcomes not certified here."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/manuscript_v2/contract_bridge_v5.tex",
+      "sha256": "4bcdbc6117f7fa768e298282e2a961dc66487f6d69569cd51d6d2216a1c3f7e5",
+      "read_scope": "Complete source."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+      "sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+      "read_scope": "Complete 548-line source, including recognizer, NULL/arithmetic semantics, emitters and concrete domain audit."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py",
+      "sha256": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+      "read_scope": "Bridge, fact-identity, exact-row/schema gates and witness replay reread; prior full static review reused."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py",
+      "sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+      "read_scope": "Complete grammar, normalizer, independent SMT and concrete evaluator."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py",
+      "sha256": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+      "read_scope": "All arm dispatch, fallback, contract/row gates and witness paths reread; prior full review reused."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/query_differential.py",
+      "sha256": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+      "read_scope": "Contract binding, complete mapping, solver gates, auxiliary-freshness audit and output comparison reread."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+      "sha256": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+      "read_scope": "Frozen identity and prior complete resource/cost static review reused."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+      "sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "read_scope": "Actual kernel/program pin read and hashes checked."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+      "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8",
+      "read_scope": "Selected create_database and IC-compiler lines 515-593,679-726; prior checkpoint/Scope trace reused."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/constants.py",
+      "sha256": "c7c9f759d33a1b96d8cfefa9407effb26edffddb1799d2259939d98f1fe22fa5",
+      "read_scope": "Selected INT32 bounds and wrapper declarations."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/parsers/sql_parser.py",
+      "sha256": "21867cb828df1ab5aa5b360874f93768e5fcfb7a902b1989b16ddd8fa6fd3200",
+      "read_scope": "Selected lines95-170: uppercase, dot and literal rewriting."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py",
+      "sha256": "ad9558583ad88f62c8dce7630bd4b09dc794d174083a3b3209c958d73786e614",
+      "read_scope": "Selected alias/name-resolution lines728-795 and occurrence search."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/related_work/POLYGON_SCOPE_CHECK.zh.md",
+      "sha256": "6fd19587ec38fcfa8c26fffe089dfed9f917cbd19bd25f00c382e95e8e4ee8ea",
+      "read_scope": "Existing local literature/source-evidence report; primary URLs not re-fetched."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/related_work/LITERATURE_SOURCES.json",
+      "sha256": "e29734fa827da51fc077bad3af28266f9fdaa867e4f0f1fe85c9006750f3e312",
+      "read_scope": "Existing read-scope/provenance inventory, not a fresh literature search."
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/manuscript_v2/evidence/BIBLIOGRAPHY_VERIFICATION.md",
+      "sha256": "b5b49478ae4a775bce3fab9b533a0cc68be3dbaaf775849c4380c81174ca1fd0",
+      "read_scope": "Existing correction provenance, not complete bibliography revalidation."
+    }
+  ],
+  "runtime_identity": {
+    "lock_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+    "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+    "kernel_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+    "kernel_sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+    "programs_all_match_lock": true,
+    "program_sha256": {
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/query_differential.py": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c",
+      "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+    }
+  },
+  "mapping_checks": [
+    {
+      "topic": "Recognized root-only arithmetic",
+      "manuscript_locations": "main.tex:70-74",
+      "code_or_evidence_locations": "aggregate_kernel.py:113-150,192-268",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "One scalar SUM/COUNT, root-only integer columns/literals, unary signs, binary subtraction and flattened n-ary add/mul. Bool/float/NULL literals and arithmetic predicate operands rejected. Every distinct leaf requires root-column equality; cross-leaf atoms rejected."
+    },
+    {
+      "topic": "NULL and COUNT(expr)",
+      "manuscript_locations": "main.tex:74-82,93-106",
+      "code_or_evidence_locations": "aggregate_kernel.py:308-343,361-400",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Arithmetic NULL is OR of children. Contribution requires root live, root predicates TRUE, non-NULL argument. Non-NULL zero counts. COUNT has false NULL flag; SUM NULL iff non-NULL contribution count zero. Scalar difference ignores NULL payload; empty input keeps conceptual one output row."
+    },
+    {
+      "topic": "Query BETWEEN and narrower IC BETWEEN",
+      "manuscript_locations": "main.tex:70-74; contract_bridge_v5.tex:4-6",
+      "code_or_evidence_locations": "aggregate_kernel.py:242-246,337-343; contract_reference.py:96-106,175-185,214-223",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Query operands may be columns/int literals under locality restrictions; IC accepts a physical column with two integer bounds only. Both use inclusive original order and strict TRUE/non-NULL. Inverted IC interval is contradictory with positive exact rows, not reordered or dropped."
+    },
+    {
+      "topic": "Flat/product/selector equations",
+      "manuscript_locations": "main.tex:86-139",
+      "code_or_evidence_locations": "aggregate_kernel.py:348-393; query_differential.py:333-364",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Counts are exact leaf truth/liveness sums. Flat enumerates Cartesian positions; product/selector bind exact counts and sequential accumulators. No leaves gives product1. SUM uses count and value accumulators, COUNT returns count. Selector identity follows finite exact count and total acyclic fresh definitions; differential explicitly checks freshness/dependencies. No full implementation theorem inferred."
+    },
+    {
+      "topic": "Nonlinearity and local cost",
+      "manuscript_locations": "main.tex:136-143",
+      "code_or_evidence_locations": "aggregate_kernel.py:76-82,285-293,353-358,375-387",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Selector removes multiplicity-variable products only; root arithmetic/C can remain nonlinear. NF*product(Nj), NF*sum(Nj), one/two accumulator NF*sum(Nj+1) construction counts match loops. No solver-complexity guarantee or measured speedup follows."
+    },
+    {
+      "topic": "Exact rows, INT32 and full schema",
+      "manuscript_locations": "main.tex:58-72",
+      "code_or_evidence_locations": "common.py:164-170,269-280,311-324; environment.py:569-589; constants.py:50-51",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Every schema table, including unused ones, is created with original type strings at positive exact N. Schema spellings must uppercase to INT; original code asserts signed32 payload bounds and every physical row live. Full actual C SAT and no-deletion UNSAT gates separate nonvacuity from equivalence. No at-most-N or zero-row extrapolation."
+    },
+    {
+      "topic": "Complete original C and XOR guard",
+      "manuscript_locations": "main.tex:58-65; contract_bridge_v5.tex:4-16",
+      "code_or_evidence_locations": "common.py:137-224; contract_reference.py:57-133,153-230",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Original AST retained before prepare, copied normalized AST/leaf ledger retained. Unsupported anywhere stops entire C. Base captured before C; base SAT first. Upstream sees normalized copy only; XOR solved with saved B+[XOR], not C+[XOR]. Later B+C satisfiability separate. This matches formula and conditional source-AST guarantee, not text parser/business truth."
+    },
+    {
+      "topic": "Common arms/fallback/differential and dialect",
+      "manuscript_locations": "main.tex:147-162; contract_bridge_v5.tex:14",
+      "code_or_evidence_locations": "worker.py:107-183,203-323; common.py:126,227-247; query_differential.py:169-226,285-330",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Six arms/fallback share same Environment and corrected C. Bridge binds object identity and complete-fact digest; differential preserves facts/mapping. FrontendUnsupported no fallback; candidate Ineligible can use official, unknown requires >=500ms remaining. Revised151 correctly separates MYSQL cost/differential from ALL cached ASTs."
+    },
+    {
+      "topic": "Aliases and qualifiers",
+      "manuscript_locations": "main.tex:72,149-151,168; contract_bridge_v5.tex:4",
+      "code_or_evidence_locations": "aggregate_kernel.py:24-51,131-170; contract_reference.py:42-70",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Revised prose matches unique case-folded aliases/no repeated physical table; union of alias__column and unqualified schema-backed candidates must resolve uniquely. Raw whole SQL rejects quote/backtick/dollar even in literals/comments. Physical schema uppercase ASCII/no doubleunderscore plus unique first-separator roundtrip. This is conservative admission, not a complete raw SQL parser-faithfulness guarantee."
+    },
+    {
+      "topic": "Witness and oracle evidence hierarchy",
+      "manuscript_locations": "main.tex:170-193; contract_bridge_v5.tex:14-16",
+      "code_or_evidence_locations": "common.py:238-247,383-437; aggregate_kernel.py:403-548; query_differential.py:62-68",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "SAT complete decoded DB must satisfy original AST before integer-domain audit and unchanged SQL replay. Conservative all-subset/intermediate checks may reject safe orders; no clipping/rounding. Shared plan not independent oracle. Differential is official-encoder-relative and does not prove official auxiliary totality or general SQL correctness."
+    },
+    {
+      "topic": "Novelty and baseline boundaries",
+      "manuscript_locations": "main.tex:29-54,210-228; contract_bridge_v5.tex:14-16",
+      "code_or_evidence_locations": "aggregate_kernel.py:1-9,274-278; existing local literature inventory",
+      "verdict": "CONSISTENT_WITH_STATED_CONDITIONAL_SCOPE",
+      "analysis": "Known factorization/count products/finite-domain splitting acknowledged. Flat diagnostic not renamed strong baseline. Polygon positive bounded and IC paths acknowledged; exact/at-most difference not novelty. Historical SpotIt direct-engine auto/set is not full SpotIt+ or general bag semantics. New contribution, broad applicability, selector benefit and submission readiness explicitly remain unestablished."
+    }
+  ],
+  "P0": [],
+  "P1": [],
+  "P2_open": [],
+  "closed_findings": [
+    {
+      "id": "FORMAL-P2-01",
+      "severity_at_detection": "P2",
+      "detected_in_main_sha256": "1c0a46eff4866ecc46db70ac2e80d785ba29265998a0130a93db5fb87790db5a",
+      "issue": "Identifier/alias boundary was too general to reproduce admission precisely.",
+      "status": "CLOSED_BY_MANUSCRIPT_AUTHOR_AND_STATICALLY_RECHECKED",
+      "final_locations": [
+        "main.tex:72",
+        "main.tex:149"
+      ],
+      "resolution": "Alias/schema-backed union matching and whole-string raw refusals plus physical roundtrip now explicit."
+    },
+    {
+      "id": "FORMAL-P2-02",
+      "severity_at_detection": "P2",
+      "issue": "Dialect delta was defined but actual MYSQL cost versus ALL cached applicability not explicit.",
+      "status": "CLOSED_BY_MANUSCRIPT_AUTHOR_AND_STATICALLY_RECHECKED",
+      "final_locations": [
+        "main.tex:151"
+      ],
+      "resolution": "Both configurations and absence of cross-dialect guarantee explicit."
+    },
+    {
+      "id": "FORMAL-P2-03",
+      "severity_at_detection": "P2",
+      "issue": "The executed tool could over-broaden SpotIt direct-engine auto/set scope.",
+      "status": "CLOSED_BY_MANUSCRIPT_AUTHOR_AND_STATICALLY_RECHECKED",
+      "final_locations": [
+        "main.tex:54"
+      ],
+      "resolution": "Now names historical direct-engine adapter automatic route and retains conditional scalar bag coincidence."
+    }
+  ],
+  "excluded": [
+    "Pending final numeric tables and live campaign92082; no new result/timing totals certified.",
+    "Fresh systematic novelty search, primary-source re-fetch and full bibliography metadata revalidation.",
+    "Exhaustive SIGMOD847 overlap, author or venue eligibility determination.",
+    "Full parser/official compiler/solver correctness proof or target execution certification."
+  ],
+  "scientific_open_items": [
+    "Novel publishable contribution remains unestablished despite static consistency.",
+    "Useful join-bearing natural applicability and selector-specific benefit remain unestablished; constructed diagnostics do not replace them.",
+    "Final cut must retain actual unknown/error/rejection/NOT_RUN and keep v4/v5 guarantees separate.",
+    "Subsequent manuscript changes require targeted difference review."
+  ],
+  "files_modified": [
+    "science_review/V5_FINAL_FORMAL_CODE_REVIEW.json",
+    "science_review/V5_FINAL_FORMAL_CODE_REVIEW.zh.md"
+  ],
+  "backup_status": "BACKUP_BLOCKED_BY_USER_NO_UPLOAD_NO_PUSH"
+}

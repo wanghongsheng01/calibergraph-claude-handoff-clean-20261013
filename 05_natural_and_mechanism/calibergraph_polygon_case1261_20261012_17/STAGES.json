@@ -1,0 +1,75 @@
+{
+  "rows": [
+    {
+      "case": "thrombosis_prediction__1261",
+      "mode": "UA",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.9519907077774405,
+      "solver_call_states": [
+        "SAT",
+        "UNSAT",
+        "UNSAT"
+      ],
+      "solver_call_count": 3,
+      "stages_seconds": {
+        "imports": 0.12341749994084239,
+        "schema_C": 0.004054332617670298,
+        "parse": 0.1767680011689663,
+        "encode": 0.011331001296639442,
+        "search_including_solver": 0.5420532082207501,
+        "solver_calls": 0.5391908739693463,
+        "decode": null,
+        "replay": null
+      },
+      "schema_C": {
+        "tables": 3,
+        "columns": 64,
+        "constraints": 7,
+        "all_source_columns_kept": true,
+        "constraint_kinds": [
+          "eq",
+          "not_null",
+          "primary"
+        ],
+        "auxiliary_integrity_list_not_appended": true
+      },
+      "witness_generated": false,
+      "original_SQLite_witness_replay": "NOT_APPLICABLE_NO_COUNTERMODEL"
+    },
+    {
+      "case": "thrombosis_prediction__1261",
+      "mode": "precise",
+      "status": "BOUNDED_SYMBOLIC_UNSAT",
+      "wall_elapsed_s": 0.36981416679918766,
+      "solver_call_states": [
+        "UNSAT"
+      ],
+      "solver_call_count": 1,
+      "stages_seconds": {
+        "imports": 0.09909074986353517,
+        "schema_C": 0.0011935420334339142,
+        "parse": 0.17449645791202784,
+        "encode": 0.011343833524733782,
+        "search_including_solver": 0.012942957691848278,
+        "solver_calls": 0.011893666815012693,
+        "decode": null,
+        "replay": null
+      },
+      "schema_C": {
+        "tables": 3,
+        "columns": 64,
+        "constraints": 7,
+        "all_source_columns_kept": true,
+        "constraint_kinds": [
+          "eq",
+          "not_null",
+          "primary"
+        ],
+        "auxiliary_integrity_list_not_appended": true
+      },
+      "witness_generated": false,
+      "original_SQLite_witness_replay": "NOT_APPLICABLE_NO_COUNTERMODEL"
+    }
+  ],
+  "nesting": "solver_calls is included in search_including_solver; stage totals are not additive; schema_C includes adapter construction"
+}

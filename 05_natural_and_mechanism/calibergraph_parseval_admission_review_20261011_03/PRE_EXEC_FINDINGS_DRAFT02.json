@@ -1,0 +1,35 @@
+{
+  "reviewer_role": "INDEPENDENT_PRE_EXECUTION_REVIEWER",
+  "freeze_sha256": "c5d038d2a7bf402bc7ff91d9e2d2f033587d7df02f05dbc2fcdd905f8ae8d00d",
+  "execution_approved": false,
+  "status": "MUST_FIX_CLEANUP_RECEIPT",
+  "must_fix": [
+    {
+      "id": "R1",
+      "file": "implementation/run_probe.py",
+      "lines": "62-75",
+      "finding": "The stop subprocess and subsequent cleanup can raise inside finally before LAUNCH_RECEIPT is written. A pg_ctl stop timeout therefore both loses the final error record and may leave this task PostgreSQL running.",
+      "required": "Always persist final receipt after an independently caught cleanup error; make bounded task-owned shutdown fallback or explicitly record confirmed still-running/unknown status and block any further scientific work. Never report stopped absent confirmation."
+    }
+  ],
+  "requested_accounting_improvements": [
+    {
+      "id": "R2",
+      "file": "implementation/probe_worker.py",
+      "finding": "Record over-row-bound callbacks before BudgetStop rather than losing their candidate row count/status."
+    },
+    {
+      "id": "R3",
+      "file": "implementation/probe_worker.py",
+      "finding": "Count compiler/parser calls or explicitly declare not measured. On hard termination record counters as incomplete/censored, not complete zero from a previous checkpoint."
+    }
+  ],
+  "accepted_scope": [
+    "Generate/lower only original AFTER; replay both original byte-preserved SQL in PostgreSQL. Do not claim ParSEval BEFORE lowering support.",
+    "Native boolean t/f adapter is one-instance ordinary engineering compatibility, not a new method.",
+    "New PostgreSQL16 C-locale relational replay remains separate from unknown historical engine/session.",
+    "No counterexample or both-empty is not a mechanism failure."
+  ],
+  "hash_checks": "PRE_EXEC_HASH_CHECKS_DRAFT02.json",
+  "reviewer_SQL_parser_SMT_import_service_install_runs": 0
+}

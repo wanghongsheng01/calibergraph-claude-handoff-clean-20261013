@@ -1,0 +1,11 @@
+{
+  "dbid": "thrombosis_prediction",
+  "index": "1261",
+  "difficulty": "simple",
+  "verdict": "EQ",
+  "reason": null,
+  "results": null,
+  "end_to_end_s": 4.95,
+  "gold": "SELECT COUNT(DISTINCT T1.ID) FROM Examination AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.RF < 20 AND T1.Thrombosis = 0",
+  "predicted": "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T1.ID = T3.ID WHERE T2.RF < 20 AND T3.Thrombosis = 0"
+}

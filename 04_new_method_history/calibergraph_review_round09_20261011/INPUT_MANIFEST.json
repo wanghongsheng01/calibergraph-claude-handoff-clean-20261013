@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "review_round": "09",
+  "review_date": "2026-10-11",
+  "snapshot_status": "INITIAL_AUTHOR_FREEZE_MATCHED",
+  "required_author_manifest_sha256": "9c80428df9d799510c9681e6553212e52e31c1a186f5894f7efc24ef28237707",
+  "required_theory_sha256": "e6cab30e1d9f06f619edcde7997f9a9e304ea8cc271ac69c94eb316a4bbee03a",
+  "inputs": [
+    {
+      "path": "calibergraph_next_20261011_09/theory/AUTHOR_MANIFEST.json",
+      "sha256": "9c80428df9d799510c9681e6553212e52e31c1a186f5894f7efc24ef28237707",
+      "bytes": 2144,
+      "role": "reviewed author text or integrity metadata"
+    },
+    {
+      "path": "calibergraph_next_20261011_09/theory/SHA256SUMS.outputs",
+      "sha256": "55c00daf77770b99dfa8d53c0ac00a6c09aa33e959afd0edee7d5de47542d6f6",
+      "bytes": 600,
+      "role": "reviewed author text or integrity metadata"
+    },
+    {
+      "path": "calibergraph_next_20261011_09/theory/THEORY.zh.md",
+      "sha256": "e6cab30e1d9f06f619edcde7997f9a9e304ea8cc271ac69c94eb316a4bbee03a",
+      "bytes": 15975,
+      "role": "reviewed author text or integrity metadata"
+    },
+    {
+      "path": "calibergraph_next_20261011_09/theory/hand_cases.json",
+      "sha256": "f423d7c38286ebf2f5595bcfc06375bcbc7acc44dcaf1839e6459ec69d7207ab",
+      "bytes": 4201,
+      "role": "reviewed author text or integrity metadata"
+    },
+    {
+      "path": "calibergraph_next_20261011_09/theory/references.json",
+      "sha256": "c3dc4e4381edfd04428c659f2d90504e0c5e3cfacf30256421fd67a1be114920",
+      "bytes": 4808,
+      "role": "reviewed author text or integrity metadata"
+    },
+    {
+      "path": "calibergraph_next_20261011_09/theory/theory_result.json",
+      "sha256": "670098dd414268c5f0601d0c35737e715578bef9bfe073982a8fa11ea0678e9e",
+      "bytes": 3358,
+      "role": "reviewed author text or integrity metadata"
+    },
+    {
+      "path": "/Users/loctek/AGENTS.md",
+      "sha256": "dc921d7cccc6e5f2776dd5bab0e66f3ffe33ccbc950406a10cb3a46bd32980b9",
+      "bytes": 4585,
+      "role": "applicable instruction"
+    },
+    {
+      "path": "/Users/loctek/.codex/skills/paper-review/SKILL.md",
+      "sha256": "acf0b712fc37f74bb5ca7e0308f211d0ab918cd5a9601cd38db2ee4690ca7b58",
+      "bytes": 10815,
+      "role": "review skill instruction"
+    },
+    {
+      "path": "/Users/loctek/.codex/skills/paper-review/references/protocol.md",
+      "sha256": "4a72ca40de14e336557359951b88a35f01aa5c88da600bde4a3476d01bd58f61",
+      "bytes": 7210,
+      "role": "review skill instruction"
+    },
+    {
+      "path": "/Users/loctek/.codex/skills/paper-review/references/red-flags.md",
+      "sha256": "420eb7fd27ceca1e37e4d2fb0b419af0c808007a5655f2fe746b2a5761f62dca",
+      "bytes": 6716,
+      "role": "review skill instruction"
+    },
+    {
+      "path": "/Users/loctek/.codex/skills/paper-review/references/worked-example.md",
+      "sha256": "f1b37e78d14c7a2dddc3c4b57ff33e57b9ee46095bb948665fb537dfd25b49d4",
+      "bytes": 5019,
+      "role": "review skill instruction"
+    },
+    {
+      "path": "/Users/loctek/.codex/skills/paper-review/assets/review-template.md",
+      "sha256": "6f948fa42727c5007a4f1e431812676f2266ef0652c5a86ab1fd1e60a41c8389",
+      "bytes": 5588,
+      "role": "review skill instruction"
+    }
+  ],
+  "prior_round_files_read": [],
+  "excluded_inputs": [
+    "old reviews",
+    "old manuscript",
+    "submission files",
+    "scientific results",
+    "tests",
+    "fixtures executed",
+    "natural or protected corpora",
+    "credentials"
+  ],
+  "integrity_note": "SHA256SUMS.outputs content is metadata, not mathematical evidence; prior-round hashes mentioned by author are not independently revalidated here.",
+  "subsequent_revision_files_read": []
+}

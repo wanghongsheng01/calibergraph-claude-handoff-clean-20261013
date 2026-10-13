@@ -1,0 +1,17 @@
+{
+  "elapsed_s": 0.09664837500000001,
+  "cumulative_s": 0.09664837500000001,
+  "budget_s": 60,
+  "results": [
+    {
+      "script": "parser_test.py",
+      "status": "ERROR",
+      "error": "TypeError(\"unsupported operand type(s) for |: 'type' and 'type'\")",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_count_parser_closure_20261012_20/run_budget.py\", line 32, in main\n    try:runpy.run_path(str(H/script),run_name='__main__');results.append({'script':script,'status':'RETURNED'})\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py\", line 268, in run_path\n    return _run_module_code(code, init_globals, run_name,\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py\", line 97, in _run_module_code\n    _run_code(code, mod_globals, init_globals,\n  File \"/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py\", line 87, in _run_code\n    exec(code, run_globals)\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_count_parser_closure_20261012_20/parser_test.py\", line 17, in <module>\n    from polygon.sql_parser import SQLParser\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/sql_parser.py\", line 13, in <module>\n    from polygon.ast.expressions.case_when import CaseWhen\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/ast/expressions/case_when.py\", line 6, in <module>\n    from polygon.ast.expressions.expression import Expression\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/ast/expressions/expression.py\", line 39, in <module>\n    class Expression(Node):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/ast/expressions/expression.py\", line 42, in Expression\n    args: List[Literal | Attribute | Self | 'Query'],\nTypeError: unsupported operand type(s) for |: 'type' and 'type'\n"
+    }
+  ],
+  "events": [],
+  "thread_count": 1,
+  "RSS_peak_bytes": 51281920,
+  "solver_calls": 0
+}

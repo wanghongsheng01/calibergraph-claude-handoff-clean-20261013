@@ -1,0 +1,27 @@
+{
+  "decision": "STOP_RESEARCH_PROBLEM_NOT_ESTABLISHED",
+  "created_utc": "2026-10-11T12:46:18.303019+00:00",
+  "evidence": {
+    "execution_recount_path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/analyses/execution_recount.json",
+    "sha256": "b4451c14a4c8d652047a4bd6c5bd4cf6a21365683a54b9fd0aed1b0a6449109d",
+    "registered_groups": 21,
+    "completed_workers": 17,
+    "known_query_checks": 10,
+    "max_query_CPU_seconds": 0.06063799999999997,
+    "pre_registered_cost_threshold_seconds": 0.25,
+    "stable_cost_candidates": 0,
+    "real_business_contract_provenance_verified_groups": 0,
+    "query_unknown_or_timeout_count": 0,
+    "recovery_batch_halt": "MONITOR_OR_LAUNCH_EXCEPTION, ps timed out during dev03_18 import",
+    "retained_unstarted_groups": 3
+  },
+  "scope": "Evidence is insufficient to establish a research problem; this does not prove no difficult original queries exist, including censored/unstarted groups or larger row bounds.",
+  "actions": [
+    "Keep both previously rejected mechanisms stopped",
+    "No new mechanism proposed",
+    "No third recovery, replacement group, new experiment, larger queue or finaltest",
+    "Preserve all launch failures, unsupported inputs, uncertainty and source denominators",
+    "Keep manuscript, previous frozen work and reserve files unchanged"
+  ],
+  "review_status_at_authoring": "Final independent review pending; receive separately without rewriting experiment history"
+}

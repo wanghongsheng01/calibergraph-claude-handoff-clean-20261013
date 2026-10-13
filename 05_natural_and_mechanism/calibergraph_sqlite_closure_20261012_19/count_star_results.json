@@ -1,0 +1,764 @@
+{
+  "status": "BUG_CONFIRMED_PATCH_UNIT_PASS",
+  "source_sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+  "patch_sha256": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+  "patched_source_sha256": "9e142a350da2489252d8532d37329aae7326ac521b70bdbc90a683ae61fa7b3f",
+  "parsed_paths": [],
+  "parser_path_status": "NOT_TESTED_IMPORT_BLOCKED_IN_FIRST_ATTEMPT",
+  "original_rows": [
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "absent",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "true",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "absent",
+      "sqlite_expected": 1,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": false
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "true",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "absent",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "true",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "absent",
+      "sqlite_expected": 2,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": false
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "true",
+      "sqlite_expected": 2,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))) + Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "absent",
+      "sqlite_expected": 1,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": false
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "true",
+      "sqlite_expected": 1,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))) + Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "absent",
+      "sqlite_expected": 1,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": false
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "true",
+      "sqlite_expected": 1,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))) + Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "absent",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "true",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))) + Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))) + Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0))))",
+      "null_AST": "FALSE",
+      "well_sorted": false,
+      "matches": false,
+      "error": "AssertionError(('ill-sorted Plus', 'Bool', 'Bool'))"
+    }
+  ],
+  "patched_rows": [
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "absent",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "true",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 0,
+      "deleted": [],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "0",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "absent",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Deleted(0, 0)), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "true",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        false
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "absent",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Deleted(0, 0)), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "true",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 1,
+      "deleted": [
+        true
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "absent",
+      "sqlite_expected": 2,
+      "value_AST": "ITE(Not(Deleted(0, 0)), 1, 0) + ITE(Not(Deleted(0, 1)), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 2,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "true",
+      "sqlite_expected": 2,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 2,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        false
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "absent",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Deleted(0, 0)), 1, 0) + ITE(Not(Deleted(0, 1)), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "true",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        false,
+        true
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "absent",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Deleted(0, 0)), 1, 0) + ITE(Not(Deleted(0, 1)), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "true",
+      "sqlite_expected": 1,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 1,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        false
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "absent",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Deleted(0, 0)), 1, 0) + ITE(Not(Deleted(0, 1)), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "true",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(TRUE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "false",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), FALSE, And(Not(FALSE), Not(ITE(FALSE, 1, 0) != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    },
+    {
+      "bound": 2,
+      "deleted": [
+        true,
+        true
+      ],
+      "filter": "null",
+      "sqlite_expected": 0,
+      "value_AST": "ITE(Not(Or(Deleted(0, 0), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0) + ITE(Not(Or(Deleted(0, 1), TRUE, And(Not(TRUE), Not(0 != 0)))), 1, 0)",
+      "null_AST": "FALSE",
+      "actual": 0,
+      "well_sorted": true,
+      "matches": true
+    }
+  ],
+  "cases_per_version": 28,
+  "original_value_mismatches": 4,
+  "original_sort_errors": 12,
+  "patched_all_pass": true,
+  "old_source_unchanged": true,
+  "solver_calls": 0,
+  "complete_natural_query_pipeline_tested": false,
+  "elapsed_s": 0.00867612473666668
+}

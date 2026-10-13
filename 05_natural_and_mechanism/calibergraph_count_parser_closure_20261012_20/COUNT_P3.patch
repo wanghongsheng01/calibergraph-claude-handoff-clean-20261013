@@ -1,0 +1,71 @@
+--- a/polygon/sql_parser.py
++++ b/polygon/sql_parser.py
+@@ -389,7 +389,7 @@
+                         exp = self.parse_expression(attr['value'])
+                         exp.alias = alias
+                         if 'filter' in attr:
+-                            exp.filter_clause = self.parse_expression(attr['filter'])
++                            exp.filter_clause = self.parse_aggregate_filter(attr['filter'])
+                         target_list.append(exp)
+                     else:
+                         # select target is an attribute
+@@ -411,7 +411,7 @@
+                     exp = self.parse_expression(select_clause['value'])
+                     exp.alias = alias
+                     if 'filter' in select_clause:
+-                        exp.filter_clause = self.parse_expression(select_clause['filter'])
++                        exp.filter_clause = self.parse_aggregate_filter(select_clause['filter'])
+                     target_list.append(exp)
+                 else:
+                     # select target is an attribute
+@@ -492,13 +492,17 @@
+                 sort_orders.append('asc')
+         return OrderBy(order_by_expressions, sort_orders)
+ 
++    def parse_aggregate_filter(self, predicate):
++        # Bare FILTER strings are column references; quoted literals remain dicts.
++        return Attribute(predicate) if isinstance(predicate, str) else self.parse_expression(predicate)
++
+     def parse_expression(self, exp) -> Expression | Literal:
+         if isinstance(exp, int | bool | str | float):
+             return Literal(exp)
+ 
+         # FILTER clause
+         if 'filter' in exp and isinstance(exp['value'], dict):
+-            filter_clause = self.parse_expression(exp['filter'])
++            filter_clause = self.parse_aggregate_filter(exp['filter'])
+             exp = self.parse_expression(exp['value'])
+             exp.filter_clause = filter_clause
+             return exp
+--- a/polygon/visitors/expression_encoder.py
++++ b/polygon/visitors/expression_encoder.py
+@@ -495,7 +495,7 @@
+                             filter_val, filter_null = agg_exp_encoder.expression_for_tuple(node.filter_clause, tuple_id)
+                             filter_val = EnsureBool(filter_val)
+                             deleted = Or([deleted, filter_null, And([Not(filter_null), Not(filter_val)])])
+-                            indicators.append(Not(deleted))
++                        indicators.append(If(Not(deleted), Int(1), Int(0)))
+                     return Sum(indicators), Bool(False)
+ 
+                 to_be_aggregated = []
+--- a/polygon/visitors/group_expression_encoder.py
++++ b/polygon/visitors/group_expression_encoder.py
+@@ -247,9 +247,15 @@
+ 
+             if node.operator in ['min', 'max', 'count', 'sum', 'avg']:
+                 if node.operator == 'count' and not node.args[0] and isinstance(node.args[1], Attribute) and node.args[1].name == '*':
+-                    in_groups = [SMTGrouping(self.groupby_table.table_id, tuple_id, self.group_id)
+-                                 for tuple_id in range(self.input_table.bound)]
+-                    return Sum([If(in_group, Int(1), Int(0)) for in_group in in_groups]), Bool(False)
++                    indicators = []
++                    agg_exp_encoder = ExpressionEncoder(self.input_table, self.env)
++                    for tuple_id in range(self.input_table.bound):
++                        in_group = SMTGrouping(self.groupby_table.table_id, tuple_id, self.group_id)
++                        if node.filter_clause is not None:
++                            filter_val, filter_null = agg_exp_encoder.expression_for_tuple(node.filter_clause, tuple_id)
++                            in_group = And([in_group, Not(filter_null), EnsureBool(filter_val)])
++                        indicators.append(If(in_group, Int(1), Int(0)))
++                    return Sum(indicators), Bool(False)
+ 
+                 agg_exp_encoder = ExpressionEncoder(self.input_table, self.env)
+ 

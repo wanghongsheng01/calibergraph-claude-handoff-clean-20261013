@@ -1,0 +1,751 @@
+{
+  "version": "1",
+  "pip_version": "26.1",
+  "install": [
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/b4/a9/507755a026dea854098fa9c6f806a6dd6a5fb9c8b463312b391a469f4c16/mo_sql_parsing-11.699.26234-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "b6870253593670074e91a2656b5558983befb22f77cee15fd4b26ec4ad031220"
+          },
+          "hash": "sha256=b6870253593670074e91a2656b5558983befb22f77cee15fd4b26ec4ad031220"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "mo-sql-parsing",
+        "version": "11.699.26234",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "description-content-type",
+          "home-page",
+          "license",
+          "license-file",
+          "provides-extra",
+          "requires-dist",
+          "summary"
+        ],
+        "summary": "More SQL Parsing! Parse SQL into JSON parse tree",
+        "description": "# More SQL Parsing!\n\n[![PyPI Latest Release](https://img.shields.io/pypi/v/mo-sql-parsing.svg)](https://pypi.org/project/mo-sql-parsing/)\n[![Build Status](https://app.travis-ci.com/klahnakoski/mo-sql-parsing.svg?branch=master)](https://travis-ci.com/github/klahnakoski/mo-sql-parsing)\n[![PyPI Downloads](https://static.pepy.tech/badge/mo-sql-parsing/month)](https://www.pepy.tech/projects/mo-sql-parsing)\n\nParse SQL into JSON so we can translate it for other datastores!\n\n[See changes](https://github.com/klahnakoski/mo-sql-parsing#version-changes-features)\n\n## Objective\n\nThe objective is to convert SQL queries to JSON-izable parse trees. This originally targeted MySQL, but has grown to include other database engines. *Please [paste some SQL into a new issue](https://github.com/klahnakoski/mo-sql-parsing/issues) if it does not work for you*\n\n\n## Project Status\n\nOctober 2024 -  I continue to resolve issues as they are raised. There are [over 1200 tests](https://app.travis-ci.com/github/klahnakoski/mo-sql-parsing), that cover most SQL for most databases, with limited DML and UDF support, including:\n\n  * inner queries, \n  * with clauses, \n  * window functions\n  * create/drop/alter tables and views\n  * insert/update/delete statements\n  * create procedure and function statements (MySQL only)\n\n\n## Install\n\n    pip install mo-sql-parsing\n\n## Parsing SQL\n\n    >>> from mo_sql_parsing import parse\n    >>> parse(\"select count(1) from jobs\")\n    {'select': {'value': {'count': 1}}, 'from': 'jobs'}\n    \nEach SQL query is parsed to an object: Each clause is assigned to an object property of the same name. \n\n    >>> parse(\"select a as hello, b as world from jobs\")\n    {'select': [{'value': 'a', 'name': 'hello'}, {'value': 'b', 'name': 'world'}], 'from': 'jobs'}\n\nThe `SELECT` clause is an array of objects containing `name` and `value` properties. \n\n\n### SQL Flavours \n\nThere are a few parsing modes you may be interested in:\n\n#### Double-quotes for literal strings\n\nMySQL uses both double quotes and single quotes to declare literal strings.  This is not ansi behaviour, but it is more forgiving for programmers coming from other languages. A specific parse function is provided: \n\n    result = parse_mysql(sql)\n\n#### SQLServer Identifiers (`[]`)\n\nSQLServer uses square brackets to delimit identifiers. For example\n\n    SELECT [Timestamp] FROM [table]\n    \nwhich conflicts with BigQuery array constructor (eg `[1, 2, 3, 4]`). You may use the SqlServer flavour with \n    \n    from mo_sql_parsing import parse_sqlserver as parse\n\n#### NULL is None\n\nThe default output for this parser is to emit a null function `{\"null\":{}}` wherever `NULL` is encountered in the SQL.  If you would like something different, you can replace nulls with `None` (or anything else for that matter):\n\n    result = parse(sql, null=None)\n    \nthis has been implemented with a post-parse rewriting of the parse tree.\n\n\n#### Normalized function call form\n\nThe default behaviour of the parser is to output function calls in `simple_op` format: The operator being a key in the object; `{op: params}`.  This form can be difficult to work with because the object must be scanned for known operators, or possible optional arguments, or at least distinguished from a query object.\n\nYou can have the parser emit function calls in `normal_op` format\n\n    >>> from mo_sql_parsing import parse, normal_op\n    >>> parse(\"select trim(' ' from b+c)\", calls=normal_op)\n    \nwhich produces calls in a normalized format\n\n    {\"op\": op, \"args\": args, \"kwargs\": kwargs}\n\nhere is the pretty-printed JSON from the example above:\n\n```\n{'select': {'value': {\n    'op': 'trim', \n    'args': [{'op': 'add', 'args': ['b', 'c']}], \n    'kwargs': {'characters': {'literal': ' '}}\n}}}\n```\n\n\n## Generating SQL\n\nYou may also generate SQL from a given JSON document. This is done by the formatter, which is usually lagging the parser (Dec2023).\n\n    >>> from mo_sql_parsing import format\n    >>> format({\"from\":\"test\", \"select\":[\"a.b\", \"c\"]})\n    'SELECT a.b, c FROM test'\n\n## Contributing\n\nIn the event that the parser is not working for you, you can help make this better but simply pasting your sql (or JSON) into a new issue. Extra points if you describe the problem. Even more points if you submit a PR with a test.  If you also submit a fix, then you also have my gratitude. \n\n\n### Run Tests\n\nSee [the tests directory](https://github.com/klahnakoski/mo-sql-parsing/tree/dev/tests) for instructions running tests, or writing new ones.\n\n## More about implementation\n\nSQL queries are translated to JSON objects: Each clause is assigned to an object property of the same name.\n\n    \n    # SELECT * FROM dual WHERE a>b ORDER BY a+b\n    {\n        \"select\": {\"all_columns\": {}} \n        \"from\": \"dual\", \n        \"where\": {\"gt\": [\"a\", \"b\"]}, \n        \"orderby\": {\"value\": {\"add\": [\"a\", \"b\"]}}\n    }\n        \nExpressions are also objects, but with only one property: The name of the operation, and the value holding (an array of) parameters for that operation. \n\n    {op: parameters}\n\nand you can see this pattern in the previous example:\n\n    {\"gt\": [\"a\",\"b\"]}\n    \n## Array Programming\n\nThe `mo-sql-parsing.scrub()` method is used liberally throughout the code, and it \"simplifies\" the JSON.  You may find this form a bit tedious to work with because the JSON property values can be values, lists of values, or missing.  Please consider converting everything to arrays: \n\n\n```\ndef listwrap(value):\n    if value is None:\n        return []\n    elif isinstance(value, list)\n        return value\n    else:\n        return [value]\n```  \n\nthen you may avoid all the is-it-a-list checks :\n\n```\nfor select in listwrap(parsed_result.get('select')):\n    do_something(select)\n```\n\n## Version Changes, Features\n\n### Version 11\n\n*October 2024*\n\nThe `PIVOT` clause has been promoted to top-level. Instead of being part of the joins found in the `FROM` clause, it is now a sibling to `SELECT`.\n\n```\n>>> from mo_sql_parsing import parse\n>>> parse(\"SELECT * FROM table PIVOT (SUM(x) FOR y IN (1, 2, 3))\")\n```\n\nnow emits\n\n```\n{\n    'select': {'all_columns': {}}, \n    'from': 'table', \n    'pivot': {'sum': 'x', 'for': 'y', 'in': [1, 2, 3]}\n}\n```\n\ninstead of\n\n```\n{\n    'select': {'all_columns': {}}, \n    'from': [\n        'table', \n        'pivot': {'sum': 'x', 'for': 'y', 'in': [1, 2, 3]}\n    ]\n}\n```\n\n\n\n### Version 10\n\n*December 2023*\n\n`SELECT *` now emits an `all_columns` call instead of plain star (`*`).  \n\n```\n>>> from mo_sql_parsing import parse\n>>> parse(\"SELECT * FROM table\")\n{'select': {'all_columns': {}}, 'from': 'table'}\n```\n\nThis works better with the `except` clause, and is more explicit when selecting all child properties.\n\n``` \n>>> parse(\"SELECT a.* EXCEPT b FROM table\")\n>>> {\"select\": {\"all_columns\": \"a\", \"except\": \"b\"}, \"from\": \"table\"}\n```\n\nYou may get the original behaviour by staying with version 9, or by using `all_columns=\"*\"`:\n\n```\n>>> parse(\"SELECT * FROM table\", all_columns=\"*\")\n{'select': \"*\", 'from': 'table'}\n```\n\n\n### Version 9\n\n*November 2022*\n\nOutput for `COUNT(DISTINCT x)` has changed from function composition\n\n    {\"count\": {\"distinct\": x}}\n\nto named parameters\n\n    {\"count\": x, \"distinct\": true}\n     \nThis was part of a bug fix [issue142](https://github.com/klahnakoski/mo-sql-parsing/issues/142) - realizing `distinct` is just one parameter of many in an aggregate function. Specifically, using the `calls=normal_op` for clarity:\n    \n    >>> from mo_sql_parsing import parse, normal_op\n    >>> parse(\"select count(distinct x)\", calls=normal_op)\n    \n    {'select': {'value': {\n        'op': 'count', \n        'args': [x], \n        'kwargs': {'distinct': True}\n    }}}\n\n### Version 8.200+\n\n*September 2022*\n\n* Added `ALTER TABLE` and `COPY` command parsing for Snowflake \n\n\n### Version 8\n \n*November 2021*\n\n* Prefer BigQuery `[]` (create array) over SQLServer `[]` (identity) \n* Added basic DML (`INSERT`/`UPDATE`/`DELETE`)              \n* flatter `CREATE TABLE` structures. The `option` list in column definition has been flattened:<br>\n    **Old column format**\n    \n        {\"create table\": {\n            \"columns\": {\n                \"name\": \"name\",\n                \"type\": {\"decimal\": [2, 3]},\n                \"option\": [\n                    \"not null\",\n                    \"check\": {\"lt\": [{\"length\": \"name\"}, 10]}\n                ]\n            }\n        }}\n        \n    **New column format**\n                \n        {\"create table\": {\n            \"columns\": {\n                \"name\": \"name\", \n                \"type\": {\"decimal\": [2, 3]}\n                \"nullable\": False,\n                \"check\": {\"lt\": [{\"length\": \"name\"}, 10]} \n            }\n        }}\n\n### Version 7 \n\n*October 2021*\n\n* changed error reporting; still terrible\n* upgraded mo-parsing library which forced version change\n\n### Version 6 \n\n*October 2021*\n\n* fixed `SELECT DISTINCT` parsing\n* added `DISTINCT ON` parsing\n\n### Version 5 \n\n*August 2021*\n\n* remove inline module `mo-parsing`\n* support `CREATE TABLE`, add SQL \"flavours\" emit `{null:{}}` for None\n\n### Version 4\n\n*November 2021*\n\n* changed parse result of `SELECT DISTINCT`\n* simpler `ORDER BY` clause in window functions\n",
+        "description_content_type": "text/markdown",
+        "home_page": "https://github.com/klahnakoski/mo-sql-parsing",
+        "author": "Kyle Lahnakoski",
+        "author_email": "kyle@lahnakoski.com",
+        "license": "MPL 2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+          "Programming Language :: SQL",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.15"
+        ],
+        "requires_dist": [
+          "mo-dots==10.688.26234",
+          "mo-future==7.687.26234",
+          "mo-imports==7.687.26234",
+          "mo-parsing==9.3.26234",
+          "mo-testing==8.674.25037; extra == \"tests\"",
+          "mo-threads==6.672.25036; extra == \"tests\"",
+          "mo-files>=6.672.25036; extra == \"tests\"",
+          "mo-streams==1.673.25037; extra == \"tests\"",
+          "zstandard>=0.23.0; extra == \"tests\"",
+          "psutil>=7.2.2; extra == \"tests\"",
+          "objgraph>=3.6.2; extra == \"tests\"",
+          "pympler; extra == \"tests\""
+        ],
+        "provides_extra": [
+          "tests"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/d5/0c/fdb876c193e3888ff8cd0824eef66596f1e6c7d80bff9e9bd4537556edd7/mo_dots-10.688.26234-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "72d5125c0b114b88cbcf6bcd3cf2afd035a14dac44bae06bbc73e0e7042dba59"
+          },
+          "hash": "sha256=72d5125c0b114b88cbcf6bcd3cf2afd035a14dac44bae06bbc73e0e7042dba59"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "mo-dots",
+        "version": "10.688.26234",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "description-content-type",
+          "home-page",
+          "license",
+          "license-file",
+          "provides-extra",
+          "requires-dist",
+          "summary"
+        ],
+        "summary": "More Dots! Dot-access to Python dicts like Javascript",
+        "description": "\n# More Dots!\n\n[![PyPI Latest Release](https://img.shields.io/pypi/v/mo-dots.svg)](https://pypi.org/project/mo-dots/)\n[![Build Status](https://github.com/klahnakoski/mo-dots/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/klahnakoski/mo-dots/actions/workflows/build.yml)\n[![Coverage Status](https://coveralls.io/repos/github/klahnakoski/mo-dots/badge.svg?branch=dev)](https://coveralls.io/github/klahnakoski/mo-dots?branch=dev)\n[![Downloads](https://static.pepy.tech/badge/mo-dots/month)](https://pepy.tech/project/mo-dots)\n\n## Overview\n\nBox your JSON-like data in a `Data` object to get null-safe dot access.  This library is a replacement for `dict` that is more consistent and easier to use.\n\n> See [full documentation](https://github.com/klahnakoski/mo-dots/tree/dev/docs) for all the features of `mo-dots`\n\n> See [change log](https://github.com/klahnakoski/mo-dots/tree/dev/docs/CHANGELOG.md) to read about major changes\n\n### Create instances\n\nDefine `Data` using named parameters, just like you would a `dict`\n\n    >>> from mo_dots import Data\n    >>> Data(b=42, c=\"hello world\")\n    Data({'b': 42, 'c': 'hello world'})\n\nYou can also box an existing `dict`s so they can be used like `Data`\n\n    >>> from mo_dots import to_data\n    >>> to_data({'b': 42, 'c': 'hello world'})\n    Data({'b': 42, 'c': 'hello world'})\n\n### Dot Access\n\nAccess properties with attribute dots: `a.b == a[\"b\"]`. You have probably seen this before.\n\n### Path Access\n\nAccess properties by dot-delimited path.\n\n\t>>> a = to_data({\"b\": {\"c\": 42}})\n\t>>> a[\"b.c\"] == 42\n\tTrue\n\n### Null-Safe Access\n\nIf a property does not exist then return `Null` rather than raising an error.\n\n\t>>> a = Data()\n\t>>> a.b == Null\n\tTrue\n\t>>> a.b.c == Null\n\tTrue\n\t>>> a[None] == Null\n\tTrue\n\n### Path assignment\n\nNo need to make intermediate `dicts`\n\n    >>> a = Data()\n    >>> a[\"b.c\"] = 42   # same as a.b.c = 42\n    a == {\"b\": {\"c\": 42}}\n\n### Path accumulation\n\nUse `+=` to add to a property; default zero (`0`)\n\n    >>> a = Data()\n    a == {}\n    >>> a.b.c += 1\n    a == {\"b\": {\"c\": 1}}\n    >>> a.b.c += 42\n    a == {\"b\": {\"c\": 43}}\n\nUse `+=` with a list (`[]`) to append to a list; default empty list (`[]`)\n\n    >>> a = Data()\n    a == {}\n    >>> a.b.c += [1]\n    a == {\"b\": {\"c\": [1]}}\n    >>> a.b.c += [42]\n    a == {\"b\": {\"c\": [1, 42]}}\n\n## Serializing to JSON\n\nThe standard Python JSON library does not recognize `Data` as serializable.  You may overcome this by providing `default=from_data`; which converts the data structures in this module into Python primitives of the same. \n\n    from mo_dots import from_data, to_data\n    \n    s = to_data({\"a\": [\"b\", 1]})\n    result = json.dumps(s, default=from_data)  \n\nAlternatively, you may consider [mo-json](https://pypi.org/project/mo-json/) which has a function `value2json` that converts a larger number of data structures into JSON.\n\n\n## Summary\n\nThis library is the basis for a data transformation algebra: We want a succinct way of transforming data in Python. We want operations on data to result in yet more data. We do not want data operations to raise exceptions. This library also solves Python's lack of consistency (lack of closure) under the dot (`.`) and slice `[::]` operators when operating on data objects. \n\n[Full documentation](https://github.com/klahnakoski/mo-dots/tree/dev/docs)\n",
+        "description_content_type": "text/markdown",
+        "home_page": "https://github.com/klahnakoski/mo-dots",
+        "author": "Kyle Lahnakoski",
+        "author_email": "kyle@lahnakoski.com",
+        "license": "MPL 2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.15"
+        ],
+        "requires_dist": [
+          "mo-future==7.687.26234",
+          "mo-imports==7.687.26234",
+          "mo-logs>=8.678.25061; extra == \"tests\"",
+          "mo-json>=6.682.25104; extra == \"tests\"",
+          "mo-threads>=6.682.25104; extra == \"tests\"",
+          "mo-testing>=8.685.25166; extra == \"tests\"",
+          "pyLibrary>=3.264.22338; extra == \"tests\"",
+          "mo-math>=7.678.25061; extra == \"tests\"",
+          "mo-times>=5.682.25104; extra == \"tests\"",
+          "jx-elasticsearch>=3.99.20292; extra == \"tests\"",
+          "beautifulsoup4>=4.15.0; extra == \"tests\""
+        ],
+        "provides_extra": [
+          "tests"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/85/d4/38726838be7785b5b59e96ef627baea2f40fa43bc31d5bea8862505f14c3/mo_future-7.687.26234-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "0dcc914da04ad4068b2d5b90e5c5d50ae25e4b92a62723b1f2840b1963f1dff3"
+          },
+          "hash": "sha256=0dcc914da04ad4068b2d5b90e5c5d50ae25e4b92a62723b1f2840b1963f1dff3"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "mo-future",
+        "version": "7.687.26234",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "description-content-type",
+          "home-page",
+          "license",
+          "license-file",
+          "summary"
+        ],
+        "summary": "More future! Make Python 2/3 compatibility a bit easier",
+        "description": "# More Future!\n\nFor old code written against Python2, plus some tiny useful functions\n\n## Recent Changes\n\n**December 2022** - No longer points to Python2 modules. \n\n\n## Description\n\n### Problem \n\n`future` or `six` are hard to use: It is easy to google how to import an object in Python2, or Python3, but finding the full path to the same in these compatibility libraries is difficult. \n\n## Solution\n\nAll the modules and types required for compatibility are put into the `mo-future` top-level module so they are  easy to find.\n\n\n### Flat namespace\n\nInstead of \n\n```python\n    from future.utils import text\n```\n\nyou get the same, but without having to discover what sub-module the `text` is hiding:  \n\n```python\n    from mo_future import text\n```\n\n\n### Simpler imports\n\nInstead of writing conditional imports like \n\n```python\n    try:\n        from io import StringIO\n    except:\n        from StringIO import StringIO\n```\n\nor \n\n```python\n    if PY3:\n        from io import StringIO\n    else:\n        from StringIO import StringIO\n```\n\nyou can use `mo-future`:\n\n```python\n    from mo_future import StringIO\n```\n\n\n",
+        "description_content_type": "text/markdown",
+        "home_page": "https://github.com/klahnakoski/mo-future",
+        "author": "Kyle Lahnakoski",
+        "author_email": "kyle@lahnakoski.com",
+        "license": "MPL 2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.15"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/44/2a/257aa0d928d03943727b130abbce6f87517eb4c8cfd54df3a49d6b88c9e9/mo_imports-7.687.26234-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "4aae6340e918d018d419a54bbe8f103ad4beb6e78dd7749f19950da72ba17be6"
+          },
+          "hash": "sha256=4aae6340e918d018d419a54bbe8f103ad4beb6e78dd7749f19950da72ba17be6"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "mo-imports",
+        "version": "7.687.26234",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "description-content-type",
+          "home-page",
+          "license",
+          "license-file",
+          "provides-extra",
+          "requires-dist",
+          "summary"
+        ],
+        "summary": "More Imports! - Delayed importing",
+        "description": "# More Imports! - Delayed importing \n\nA few methods to make late importing cleaner\n\n\n|Branch      |Status   |\n|------------|---------|\n|master      |  [![Build Status](https://github.com/klahnakoski/mo-imports/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/klahnakoski/mo-imports/actions/workflows/build.yml) |\n|dev         | [![Build Status](https://app.travis-ci.com/klahnakoski/mo-imports.svg?branch=dev)](https://travis-ci.com/github/klahnakoski/mo-imports)    |\n\n\n\n## Problem\n\nSplitting code into modules is nice, but it can result in cyclic dependencies.  \n\n\n**foos.py**\n\n```python\nfrom bars import bar\n\ndef foo():\n    bar()\n```\n\n**bars.py**\n\n```python\nfrom foos import foo\n\ndef bar():\n    foo()\n```\n\n> We are not concerned with the infinite recursion; this is only for demonstrating cyclic dependencies. \n\n\n## More Imports!\n\n### Solution #1: Use `expect`/`export` pattern\n\nAll your cyclic dependencies are covered with this one pattern: Break cycles by `expect`ing a name in the first module, and let the second module `export` to the first when the value is available\n\n**foos.py**\n\n```python\nfrom mo_imports import expect\n\nbar = expect(\"bar\")\n\ndef foo():\n    bar()\n```\n\n**bars.py**\n\n```python\nfrom mo_imports import export\nfrom foos import foo\n\ndef bar():\n    foo()\n\nexport(\"bars\", bar)\n```\n\n**Benefits**\n  \n \n* every `expect` is verified to match with an `export` (and visa-versa)\n* using an expected variable before `export` raises an error     \n* code is run only once, at module load time, not later\n* methods do not run import code\n* all \"imports\" are at the top of the file\n\n\n### Solution #2: Use `delay_import`\n\nProvide a proxy which is responsible for import upon first use of the module variable.\n\n**foos.py**\n\n```python\nfrom mo_imports import delay_import\n\nbar = delay_import(\"bars.bar\")\n\ndef foo():\n    bar()\n\n```\n\n**bars.py**\n\n```python\nfrom foos import foo\n\ndef bar():\n    foo()\n```\n\n\n**Benefits**\n  \n* cleaner code \n* costly imports are delayed until first use\n\n\n> WARNING\n> \n> Requires any of `__call__`, `__getitem__`, `__getattr__` to be called to trigger the\n> import.  This means sentinals, placeholders, and default values can NOT be imported \n> using `delay_import()`\n\n\n## Other solutions\n\nIf you do not use `mo-imports` your import cycles can be broken using one of the following common patterns:\n\n\n### Bad Solution: Keep in single file\n\nYou can declare yet-another-module that holds the cycles\n\n**foosbars.py**\n\n```python\n    def foo():\n        bar()\n\n    def bar():\n        foo()\n```\n\nbut this breaks the code modularity\n\n\n### Bad Solution: Use end-of-file imports\n\nDuring import, setup of the first module is paused while it imports a second. A bottom-of-file import will ensure the first module is mostly setup to be used by the second. \n\n**foos.py**\n\n```python\ndef foo():\n    bar()\n\nfrom bars import bar\n```\n\n**bars.py**\n\n```python\ndef bar():\n    foo()\n\nfrom foos import foo\n```\n\nLinters do not like this pattern: You may miss imports, since these are hiding at the bottom.\n    \n\n\n### Bad Solution: Inline import\n\nImport the name only when it is needed\n\n**foos.py**\n\n```python\ndef foo():\n    from bars import bar\n    bar()\n```\n    \n**bars.py**\n\n\n```python\ndef bar():\n    from foos import foo\n    foo()\n```\n\nThis is fine for rarely run code, but there is an undesirable overhead because import is checked everytime the method is run. You may miss imports because they are hiding inline rather than at the top of the file.\n  \n\n\n### Bad Solution: Use the `_late_import()` pattern\n\nWhen other bad solutions do not work work, then importing late is the remaining option\n\n**foos.py**\n\n```python\nfrom bars import bar\n\ndef foo():\n    bar()\n```\n\n**bars.py**\n\n```python\nfoo = None\n\ndef _late_import():\n    global foo\n    from foos import foo\n    _ = foo\n\ndef bar():\n    if not foo:\n        _late_import()\n    foo()\n```\n\nPlaceholders variables are added, which linters complain about type. There is the added `_late_import()` method. You risk it is not run everywhere as needed. This has less overhead than an inline import, but there is still a check.\n \n\n## More on importing\n\nImporting a complex modular library is still hard; the complexity comes from the the order *other modules* declare their imports; you have no control over which of your modules will be imported first.  For example, one module may \n\n```python\nfrom my_lib.bars import bar\nfrom my_lib.foos import foo\n```\n\nanother module may choose the opposite order\n\n```python\nfrom my_lib.foos import foo\nfrom my_lib.bars import bar\n```\n\n### Ordering imports\n\nWith cyclic dependencies, ordering the imports can get tricky.  Here are some rules \n\n* choose your principle modules and the order you want them imported.\n* your remaining modules are assumed to be imported in alphabetical order (as most linters prefer)\n* **use top level `__init__.py` to control the order of imports**\n* encourage third party modules to use this top level module.  for example\n  ```python\n  from my_lib import foo, bar\n  ```\n* finally, use `mo_imports` to break cycles\n",
+        "description_content_type": "text/markdown",
+        "home_page": "https://github.com/klahnakoski/mo-imports",
+        "author": "Kyle Lahnakoski",
+        "author_email": "kyle@lahnakoski.com",
+        "license": "MPL 2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 4 - Beta",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.15"
+        ],
+        "requires_dist": [
+          "mo-future==7.687.26234",
+          "mo-logs>=8.703.26061; extra == \"tests\""
+        ],
+        "provides_extra": [
+          "tests"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/6f/ea/f3f7de9690f0f71e6be232dd90a58c28f06b7dc9280f786e886901489962/mo_parsing-9.3.26234-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "4566f6d5b0c95edf067b68f3ca8d387ab6d92a97be51630ea7c9256f8f607fbd"
+          },
+          "hash": "sha256=4566f6d5b0c95edf067b68f3ca8d387ab6d92a97be51630ea7c9256f8f607fbd"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "mo-parsing",
+        "version": "9.3.26234",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "description-content-type",
+          "home-page",
+          "license",
+          "license-file",
+          "provides-extra",
+          "requires-dist",
+          "summary"
+        ],
+        "summary": "Another PEG Parsing Tool",
+        "description": "# More Parsing!\n\n[![PyPI Latest Release](https://img.shields.io/pypi/v/mo-parsing.svg)](https://pypi.org/project/mo-parsing/)\n [![Build Status](https://github.com/klahnakoski/mo-parsing/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/klahnakoski/mo-parsing/actions/workflows/build.yml)\n[![Coverage Status](https://coveralls.io/repos/github/klahnakoski/mo-parsing/badge.svg?branch=master)](https://coveralls.io/github/klahnakoski/mo-parsing?branch=master)\n\nA fork of [pyparsing](https://github.com/pyparsing/pyparsing) for faster parsing\n\n\n## Installation\n\nThis is a pypi package\n\n    pip install mo-parsing\n    \n## Usage\n\nThis module allows you to define a PEG parser using predefined patterns and Python operators.  Here is an example \n\n```\n>>> from mo_parsing import Word\n>>> from mo_parsing.utils import alphas\n>>>\n>>> greet = Word(alphas)(\"greeting\") + \",\" + Word(alphas)(\"person\") + \"!\"\n>>> result = greet.parse_string(\"Hello, World!\")\n```\n\nThe `result` can be accessed as a nested list\n\n```\n>>> list(result)\n['Hello', ',', 'World', '!']\n```\n\nThe `result` can also be accessed as a dictionary\n\n```\n>>> dict(result)\n{'greeting': 'Hello', 'person': 'World'}\n```\n\nRead the [pyparsing documentation](https://github.com/pyparsing/pyparsing/#readme) for more\n\n### The `Whitespace` Context\n\nThe `mo_parsing.whitespaces.CURRENT` is used during parser creation: It is effectively defines what \"whitespace\" to skip during parsing, with additional features to simplify the language definition.  You declare \"standard\" `Whitespace` like so:\n\n    with Whitespace() as whitespace:\n        # PUT YOUR LANGUAGE DEFINITION HERE (space, tab and CR are \"whitespace\")\n\nIf you are declaring a large language, and you want to minimize indentation, and you are careful, you may also use this pattern:\n\n    whitespace = Whitespace().use()\n    # PUT YOUR LANGUAGE DEFINITION HERE\n    whitespace.release()\n\nThe whitespace can be used to set global parsing parameters, like\n\n* `set_whitespace()` - set the ignored characters (default: `\"\\t\\n \"`)\n* `add_ignore()` - include whole patterns that are ignored (like comments)\n* `set_literal()` - Set the definition for what `Literal()` means\n* `set_keyword_chars()` - For default `Keyword()` (important for defining word boundary)\n\n\n### Navigating ParseResults\n\nThe results of parsing are in `ParseResults` and are in the form of an n-ary tree; with the children found in `ParseResults.tokens`.  Each `ParseResult.type` points to the `ParserElement` that made it.  In general, if you want to get fancy with post processing (or in a `parse_action`), you will be required to navigate the raw `tokens` to generate a final result\n\nThere are some convenience methods;  \n* `__iter__()` - allows you to iterate through parse results in **depth first search**. Empty results are skipped, and `Group`ed results are treated as atoms (which can be further iterated if required) \n* `name` is a convenient property for `ParseResults.type.token_name`\n* `__getitem__()` - allows you to jump into the parse tree to the given `name`. This is blocked by any names found inside `Group`ed results (because groups are considered atoms).      \n\n### Parse Actions\n\nParse actions are methods that run after a ParserElement found a match. \n\n* Parameters must be accepted in `(tokens, index, string)` order (the opposite of pyparsing)\n* Parse actions are wrapped to ensure the output is a legitimate ParseResult\n  * If your parse action returns `None` then the result is the original `tokens`\n  * If your parse action returns an object, or list, or tuple, then it will be packaged in a `ParseResult` with same type as `tokens`.\n  * If your parse action returns a `ParseResult` then it is accepted ***even if is belongs to some other pattern***\n  \n#### Simple example:\n\n```\ninteger = Word(\"0123456789\").add_parse_action(lambda t, i, s: int(t[0]))\nresult = integer.parse_string(\"42\")\nassert (result[0] == 42)\n```\n\nFor slightly shorter specification, you may use the `/` operator and only parameters you need:\n\n```\ninteger = Word(\"0123456789\") / (lambda t: int(t[0]))\nresult = integer.parse_string(\"42\")\nassert (result[0] == 42)\n```\n\n### Debugging\n\nThe PEG-style of mo-parsing (from pyparsing) makes a very expressible and readable specification, but debugging a parser is still hard.  To look deeper into what the parser is doing use the `Debugger`:\n\n```\nwith Debugger():\n    expr.parse_string(\"my new language\")\n```\n\nThe debugger will print out details of what's happening\n\n* Each attempt, and if it matched or failed\n* A small number of bytes to show you the current position\n* location, line and column for more info about the current position\n* whitespace indicating stack depth\n* print out of the ParserElement performing the attempt\n\nThis should help to isolate the exact position your grammar is failing. \n\n### Regular Expressions\n\n`mo-parsing` can parse and generate regular expressions. `ParserElement` has a `__regex__()` function that returns the regular expression for the given grammar; which works up to a limit, and is used internally to accelerate parsing.  The `Regex` class parses regular expressions into a grammar; it is used to optimize parsing, and you may find it useful to decompose regular expressions that look like line noise.\n\n\n## Differences from PyParsing\n\nThis fork was originally created to support faster parsing for [mo-sql-parsing](https://github.com/klahnakoski/moz-sql-parser).  Since then it has deviated sufficiently to be it's own collection of parser specification functions.  Here are the differences:\n\n* Added `Whitespace`, which controls parsing context and whitespace.  It replaces the whitespace modifying methods of pyparsing\n* the wildcard (\"`*`\") could be used in pyparsing to indicate multi-values are expected; this is not allowed in `mo-parsing`: all values are multi-values\n* ParserElements are static: For example, `expr.add_parse_action(action)` creates a new ParserElement, so must be assigned to variable or it is lost. **This is the biggest source of bugs when converting from pyparsing**\n* removed all backward-compatibility settings\n* no support for binary serialization (no pickle)\n\nFaster Parsing\n\n* faster infix operator parsing (main reason for this fork)\n* ParseResults point to ParserElement for reduced size\n* regex used to reduce the number of failed parse attempts  \n* packrat parser is not need\n* less stack used \n\n\n\n## Contributing\n\nIf you plan to extend or enhance this code, please [see the README in the tests directory](https://github.com/klahnakoski/mo-parsing/blob/dev/tests/README.md)\n",
+        "description_content_type": "text/markdown",
+        "home_page": "https://github.com/klahnakoski/mo-parsing",
+        "author": "Various",
+        "author_email": "kyle@lahnakoski.com",
+        "license": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 4 - Beta",
+          "License :: OSI Approved :: MIT License",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Topic :: Software Development :: Libraries",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.15"
+        ],
+        "requires_dist": [
+          "mo-dots==10.688.26234",
+          "mo-future==7.687.26234",
+          "mo-testing>=8.685.25166; extra == \"tests\"",
+          "mo-threads>=6.704.26062; extra == \"tests\"",
+          "mo-logs>=8.703.26061; extra == \"tests\"",
+          "mo-files>=7.709.26123; extra == \"tests\""
+        ],
+        "provides_extra": [
+          "tests"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/71/70/38998b950a97ea279e6bd657575d22d1a2047256caf707d9a10fbce4f065/multiprocess-0.70.19-py312-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "3a56c0e85dd5025161bac5ce138dcac1e49174c7d8e74596537e729fd5c53c28"
+          },
+          "hash": "sha256=3a56c0e85dd5025161bac5ce138dcac1e49174c7d8e74596537e729fd5c53c28"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "multiprocess",
+        "version": "0.70.19",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "download-url",
+          "home-page",
+          "license",
+          "license-file",
+          "maintainer",
+          "maintainer-email",
+          "platform",
+          "project-url",
+          "requires-dist",
+          "requires-python",
+          "summary"
+        ],
+        "platform": [
+          "Linux",
+          "Windows",
+          "Mac"
+        ],
+        "summary": "better multiprocessing and multithreading in Python",
+        "description": "-----------------------------------------------------------------\nmultiprocess: better multiprocessing and multithreading in Python\n-----------------------------------------------------------------\n\nAbout Multiprocess\n==================\n\n``multiprocess`` is a fork of ``multiprocessing``. ``multiprocess`` extends ``multiprocessing`` to provide enhanced serialization, using ``dill``. ``multiprocess`` leverages ``multiprocessing`` to support the spawning of processes using the API of the Python standard library's ``threading`` module. ``multiprocessing`` has been distributed as part of the standard library since Python 2.6.\n\n``multiprocess`` is part of ``pathos``,  a Python framework for heterogeneous computing.\n``multiprocess`` is in active development, so any user feedback, bug reports, comments,\nor suggestions are highly appreciated.  A list of issues is located at https://github.com/uqfoundation/multiprocess/issues, with a legacy list maintained at https://uqfoundation.github.io/project/pathos/query.\n\n\nMajor Features\n==============\n\n``multiprocess`` enables:\n\n    - objects to be transferred between processes using pipes or multi-producer/multi-consumer queues\n    - objects to be shared between processes using a server process or (for simple data) shared memory\n\n``multiprocess`` provides:\n\n    - equivalents of all the synchronization primitives in ``threading``\n    - a ``Pool`` class to facilitate submitting tasks to worker processes\n    - enhanced serialization, using ``dill``\n\n\nCurrent Release\n===============\n\nThe latest released version of ``multiprocess`` is available from:\n\n    https://pypi.org/project/multiprocess\n\n``multiprocess`` is distributed under a 3-clause BSD license, and is a fork of ``multiprocessing``.\n\n\nDevelopment Version\n===================\n\nYou can get the latest development version with all the shiny new features at:\n\n    https://github.com/uqfoundation\n\nIf you have a new contribution, please submit a pull request.\n\n\nInstallation\n============\n\n``multiprocess`` can be installed with ``pip``::\n\n    $ pip install multiprocess\n\nFor Python 2, a C compiler is required to build the included extension module from source. Python 3 and binary installs do not require a C compiler.\n\n\nRequirements\n============\n\n``multiprocess`` requires:\n\n    - ``python`` (or ``pypy``), **>=3.9**\n    - ``setuptools``, **>=42**\n    - ``dill``, **>=0.4.1**\n\n\nBasic Usage\n===========\n\nThe ``multiprocess.Process`` class follows the API of ``threading.Thread``.\nFor example ::\n\n    from multiprocess import Process, Queue\n\n    def f(q):\n        q.put('hello world')\n\n    if __name__ == '__main__':\n        q = Queue()\n        p = Process(target=f, args=[q])\n        p.start()\n        print (q.get())\n        p.join()\n\nSynchronization primitives like locks, semaphores and conditions are\navailable, for example ::\n\n    >>> from multiprocess import Condition\n    >>> c = Condition()\n    >>> print (c)\n    <Condition(<RLock(None, 0)>), 0>\n    >>> c.acquire()\n    True\n    >>> print (c)\n    <Condition(<RLock(MainProcess, 1)>), 0>\n\nOne can also use a manager to create shared objects either in shared\nmemory or in a server process, for example ::\n\n    >>> from multiprocess import Manager\n    >>> manager = Manager()\n    >>> l = manager.list(range(10))\n    >>> l.reverse()\n    >>> print (l)\n    [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]\n    >>> print (repr(l))\n    <Proxy[list] object at 0x00E1B3B0>\n\nTasks can be offloaded to a pool of worker processes in various ways,\nfor example ::\n\n    >>> from multiprocess import Pool\n    >>> def f(x): return x*x\n    ...\n    >>> p = Pool(4)\n    >>> result = p.map_async(f, range(10))\n    >>> print (result.get(timeout=1))\n    [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]\n\nWhen ``dill`` is installed, serialization is extended to most objects,\nfor example ::\n\n    >>> from multiprocess import Pool\n    >>> p = Pool(4)\n    >>> print (p.map(lambda x: (lambda y:y**2)(x) + x, xrange(10)))\n    [0, 2, 6, 12, 20, 30, 42, 56, 72, 90]\n\n\nMore Information\n================\n\nProbably the best way to get started is to look at the documentation at\nhttp://multiprocess.rtfd.io. Also see ``multiprocess.tests`` for scripts that\ndemonstrate how ``multiprocess`` can be used to leverge multiple processes\nto execute Python in parallel. You can run the test suite with\n``python -m multiprocess.tests``. As ``multiprocess`` conforms to the\n``multiprocessing`` interface, the examples and documentation found at\nhttp://docs.python.org/library/multiprocessing.html also apply to\n``multiprocess`` if one will ``import multiprocessing as multiprocess``.\nSee https://github.com/uqfoundation/multiprocess/tree/master/py3.12/examples\nfor a set of examples that demonstrate some basic use cases and benchmarking\nfor running Python code in parallel. Please feel free to submit a ticket on\ngithub, or ask a question on stackoverflow (**@Mike McKerns**). If you would\nlike to share how you use ``multiprocess`` in your work, please send an email\n(to **mmckerns at uqfoundation dot org**).\n\n\nCitation\n========\n\nIf you use ``multiprocess`` to do research that leads to publication, we ask that you\nacknowledge use of ``multiprocess`` by citing the following in your publication::\n\n    M.M. McKerns, L. Strand, T. Sullivan, A. Fang, M.A.G. Aivazis,\n    \"Building a framework for predictive science\", Proceedings of\n    the 10th Python in Science Conference, 2011;\n    http://arxiv.org/pdf/1202.1056\n\n    Michael McKerns and Michael Aivazis,\n    \"pathos: a framework for heterogeneous computing\", 2010- ;\n    https://uqfoundation.github.io/project/pathos\n\nPlease see https://uqfoundation.github.io/project/pathos or\nhttp://arxiv.org/pdf/1202.1056 for further information.\n",
+        "home_page": "https://github.com/uqfoundation/multiprocess",
+        "download_url": "https://pypi.org/project/multiprocess/#files",
+        "author": "Mike McKerns",
+        "author_email": "mmckerns@uqfoundation.org",
+        "maintainer": "Mike McKerns",
+        "maintainer_email": "mmckerns@uqfoundation.org",
+        "license": "BSD-3-Clause",
+        "license_file": [
+          "LICENSE",
+          "COPYING"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "Intended Audience :: Science/Research",
+          "License :: OSI Approved :: BSD License",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Programming Language :: Python :: Implementation :: PyPy",
+          "Topic :: Scientific/Engineering",
+          "Topic :: Software Development"
+        ],
+        "requires_dist": [
+          "dill>=0.4.1"
+        ],
+        "requires_python": ">=3.9",
+        "project_url": [
+          "Documentation, http://multiprocess.rtfd.io",
+          "Source Code, https://github.com/uqfoundation/multiprocess",
+          "Bug Tracker, https://github.com/uqfoundation/multiprocess/issues"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/97/53/2a3c7d562271ec6b6e38e7216b3104899f8aa4180c0713cb8aaf69e29cd5/bidict-0.24.1-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "fd3eaa737917d8a14f4baa391670c433c4e3f6f5fd2cd99d4bf436437f432364"
+          },
+          "hash": "sha256=fd3eaa737917d8a14f4baa391670c433c4e3f6f5fd2cd99d4bf436437f432364"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "bidict",
+        "version": "0.24.1",
+        "summary": "The bidirectional mapping library for Python.",
+        "description": ".. role:: doc\n.. (Forward declaration for the \"doc\" role that Sphinx defines for interop with renderers that\n   are often used to show this doc and that are unaware of Sphinx (GitHub.com, PyPI.org, etc.).\n   Use :doc: rather than :ref: here for better interop as well.)\n\n\nbidict\n======\n\n*The bidirectional mapping library for Python.*\n\n\nStatus\n------\n\n.. image:: https://img.shields.io/pypi/v/bidict.svg\n   :target: https://pypi.org/project/bidict\n   :alt: Latest release\n\n.. image:: https://img.shields.io/readthedocs/bidict/main.svg\n   :target: https://bidict.readthedocs.io/en/main/\n   :alt: Documentation\n\n.. image:: https://github.com/jab/bidict/actions/workflows/test.yml/badge.svg\n   :target: https://github.com/jab/bidict/actions/workflows/test.yml?query=branch%3Amain\n   :alt: GitHub Actions CI status\n\n.. image:: https://img.shields.io/pypi/l/bidict.svg\n   :target: https://raw.githubusercontent.com/jab/bidict/main/LICENSE\n   :alt: License\n\n.. image:: https://static.pepy.tech/badge/bidict\n   :target: https://pepy.tech/project/bidict\n   :alt: PyPI Downloads\n\n.. image:: https://img.shields.io/badge/GitHub-sponsor-ff69b4\n   :target: https://github.com/sponsors/jab\n   :alt: Sponsor\n\n\nFeatures\n--------\n\n- Mature: Depended on by\n  Google, Venmo, CERN, Baidu, Tencent,\n  and teams across the world since 2009\n\n- Familiar, Pythonic APIs\n  that are carefully designed for\n  safety, simplicity, flexibility, and ergonomics\n\n- Lightweight, with no runtime dependencies\n  outside Python's standard library\n\n- Implemented in\n  concise, well-factored, fully type-hinted Python code\n  that is optimized for running efficiently\n  as well as for long-term maintenance and stability\n  (as well as `joy <#learning-from-bidict>`__)\n\n- Extensively `documented <https://bidict.readthedocs.io>`__\n\n- 100% test coverage\n  running continuously across all supported Python versions\n  (including property-based tests and benchmarks)\n\n\nInstallation\n------------\n\n``pip install bidict``\n\n\nQuick Start\n-----------\n\n.. code:: python\n\n   >>> from bidict import bidict\n   >>> element_by_symbol = bidict({'H': 'hydrogen'})\n   >>> element_by_symbol['H']\n   'hydrogen'\n   >>> element_by_symbol.inverse['hydrogen']\n   'H'\n\n\nFor more usage documentation,\nhead to the :doc:`intro` [#fn-intro]_\nand proceed from there.\n\n\nEnterprise Support\n------------------\n\nEnterprise-level support for bidict can be obtained via the\n`Tidelift subscription <https://tidelift.com/subscription/pkg/pypi-bidict?utm_source=pypi-bidict&utm_medium=referral&utm_campaign=readme>`__\nor by `contacting me directly <mailto:jabronson@gmail.com>`__.\n\nI have a US-based LLC set up for invoicing,\nand I have over 20 years of professional experience\ndelivering software and support to companies successfully.\n\nYou can also sponsor my work through several platforms, including GitHub Sponsors.\nSee the `Sponsoring <#sponsoring>`__ section below for details,\nincluding rationale and examples of companies\nsupporting the open source projects they depend on.\n\n\nVoluntary Community Support\n---------------------------\n\nPlease search through already-asked questions and answers\nin `GitHub Discussions <https://github.com/jab/bidict/discussions>`__\nand the `issue tracker <https://github.com/jab/bidict/issues?q=is%3Aissue>`__\nin case your question has already been addressed.\n\nOtherwise, please feel free to\n`start a new discussion <https://github.com/jab/bidict/discussions>`__\nor `create a new issue <https://github.com/jab/bidict/issues/new>`__ on GitHub\nfor voluntary community support.\n\n\nNotice of Usage\n---------------\n\nIf you use bidict,\nand especially if your usage or your organization is significant in some way,\nplease let me know in any of the following ways:\n\n- `star bidict on GitHub <https://github.com/jab/bidict>`__\n- post in `GitHub Discussions <https://github.com/jab/bidict/discussions>`__\n- `email me <mailto:jabronson@gmail.com>`__\n\n\nChangelog\n---------\n\nFor bidict release notes, see the :doc:`changelog`. [#fn-changelog]_\n\n\nRelease Notifications\n---------------------\n\n.. duplicated in CHANGELOG.rst:\n   (Would use `.. include::` but GitHub's renderer doesn't support it.)\n\nWatch `bidict releases on GitHub <https://github.com/jab/bidict/releases>`__\nto be notified when new versions of bidict are published.\nClick the \"Watch\" dropdown, choose \"Custom\", and then choose \"Releases\".\n\n\nLearning from bidict\n--------------------\n\nOne of the best things about bidict\nis that it touches a surprising number of\ninteresting Python corners,\nespecially given its small size and scope.\n\nCheck out :doc:`learning-from-bidict` [#fn-learning]_\nif you're interested in learning more.\n\n\nContributing\n------------\n\nI have been bidict's sole maintainer\nand `active contributor <https://github.com/jab/bidict/graphs/contributors>`__\nsince I started the project ~15 years ago.\n\nYour help would be most welcome!\nSee the :doc:`contributors-guide` [#fn-contributing]_\nfor more information.\n\n\nSponsoring\n----------\n\n.. duplicated in CONTRIBUTING.rst\n   (Would use `.. include::` but GitHub's renderer doesn't support it.)\n\n.. image:: https://img.shields.io/badge/GitHub-sponsor-ff69b4\n  :target: https://github.com/sponsors/jab\n  :alt: Sponsor through GitHub\n\nBidict is the product of thousands of hours of my unpaid work\nover the 15+ years that I've been the sole maintainer.\n\nIf bidict has helped you or your company accomplish your work,\nplease sponsor my work through one of the following,\nand/or ask your company to do the same:\n\n- `GitHub <https://github.com/sponsors/jab>`__\n- `PayPal <https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=jabronson%40gmail%2ecom&lc=US&item_name=Sponsor%20bidict>`__\n- `Tidelift <https://tidelift.com>`__\n- `thanks.dev <https://thanks.dev>`__\n- `Gumroad <https://gumroad.com/l/bidict>`__\n- `a support engagement with my LLC <#enterprise-support>`__\n\nIf you're not sure which to use, GitHub is an easy option,\nespecially if you already have a GitHub account.\nJust choose a monthly or one-time amount, and GitHub handles everything else.\nYour bidict sponsorship on GitHub will automatically go\non the same regular bill as any other GitHub charges you pay for.\nPayPal is another easy option for one-time contributions.\n\nSee the following for rationale and examples of companies\nsupporting the open source projects they depend on\nin this manner:\n\n- `<https://engineering.atspotify.com/2022/04/announcing-the-spotify-foss-fund/>`__\n- `<https://blog.sentry.io/2021/10/21/we-just-gave-154-999-dollars-and-89-cents-to-open-source-maintainers>`__\n- `<https://engineering.indeedblog.com/blog/2019/07/foss-fund-six-months-in/>`__\n\n.. - `<https://sethmlarson.dev/blog/people-in-your-software-supply-chain>`__\n.. - `<https://www.cognitect.com/blog/supporting-open-source-developers>`__\n.. - `<https://vorpus.org/blog/the-unreasonable-effectiveness-of-investment-in-open-source-infrastructure/>`__\n\n\nFinding Documentation\n---------------------\n\nIf you're viewing this on `<https://bidict.readthedocs.io>`__,\nnote that multiple versions of the documentation are available,\nand you can choose a different version using the popup menu at the bottom-right.\nPlease make sure you're viewing the version of the documentation\nthat corresponds to the version of bidict you'd like to use.\n\nIf you're viewing this on GitHub, PyPI, or some other place\nthat can't render and link this documentation properly\nand are seeing broken links,\ntry these alternate links instead:\n\n.. [#fn-intro] `<https://bidict.readthedocs.io/intro.html>`__ | `<docs/intro.rst>`__\n\n.. [#fn-changelog] `<https://bidict.readthedocs.io/changelog.html>`__ | `<CHANGELOG.rst>`__\n\n.. [#fn-learning] `<https://bidict.readthedocs.io/learning-from-bidict.html>`__ | `<docs/learning-from-bidict.rst>`__\n\n.. [#fn-contributing] `<https://bidict.readthedocs.io/contributors-guide.html>`__ | `<CONTRIBUTING.rst>`__\n",
+        "description_content_type": "text/x-rst",
+        "keywords": [
+          "bidict",
+          "bimap",
+          "bidirectional",
+          "dict",
+          "dictionary",
+          "mapping",
+          "collections"
+        ],
+        "author": "Joshua Bronson",
+        "author_email": "Joshua Bronson <jabronson@gmail.com>",
+        "license_expression": "MPL-2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Programming Language :: Python :: Implementation :: PyPy",
+          "Typing :: Typed"
+        ],
+        "requires_dist": [
+          "typing-extensions>=4.0 ; python_full_version < '3.12'"
+        ],
+        "requires_python": ">=3.11",
+        "project_url": [
+          "Changelog, https://bidict.readthedocs.io/changelog.html",
+          "Documentation, https://bidict.readthedocs.io",
+          "Sponsor, https://bidict.readthedocs.io/#sponsoring",
+          "Repository, https://github.com/jab/bidict"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/82/3d/14ce75ef66813643812f3093ab17e46d3a206942ce7376d31ec2d36229e7/lark-1.3.1-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "c629b661023a014c37da873b4ff58a817398d12635d3bbb2c5a03be7fe5d1e12"
+          },
+          "hash": "sha256=c629b661023a014c37da873b4ff58a817398d12635d3bbb2c5a03be7fe5d1e12"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "lark",
+        "version": "1.3.1",
+        "dynamic": [
+          "license-file"
+        ],
+        "summary": "a modern parsing library",
+        "description": "Lark is a modern general-purpose parsing library for Python.\nWith Lark, you can parse any context-free grammar, efficiently, with very little code.\nMain Features:\n- Builds a parse-tree (AST) automagically, based on the structure of the grammar\n- Earley parser\n- Can parse all context-free grammars\n- Full support for ambiguous grammars\n- LALR(1) parser\n- Fast and light, competitive with PLY\n- Can generate a stand-alone parser\n- CYK parser, for highly ambiguous grammars\n- EBNF grammar\n- Unicode fully supported\n- Automatic line & column tracking\n- Standard library of terminals (strings, numbers, names, etc.)\n- Import grammars from Nearley.js\n- Extensive test suite\n- And much more!\nSince version 1.2, only Python versions 3.8 and up are supported.\n",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "Earley",
+          "LALR",
+          "parser",
+          "parsing",
+          "ast"
+        ],
+        "author_email": "Erez Shinan <erezshin@gmail.com>",
+        "license": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "Programming Language :: Python :: 3",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "Topic :: Text Processing :: General",
+          "Topic :: Text Processing :: Linguistic",
+          "License :: OSI Approved :: MIT License"
+        ],
+        "requires_dist": [
+          "regex; extra == \"regex\"",
+          "js2py; extra == \"nearley\"",
+          "atomicwrites; extra == \"atomic-cache\"",
+          "interegular<0.4.0,>=0.3.1; extra == \"interegular\""
+        ],
+        "requires_python": ">=3.8",
+        "project_url": [
+          "Homepage, https://github.com/lark-parser/lark",
+          "Download, https://github.com/lark-parser/lark/tarball/master"
+        ],
+        "provides_extra": [
+          "regex",
+          "nearley",
+          "atomic-cache",
+          "interegular"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/89/a0/6cf41a19a1f2f3feab0e9c0b74134aa2ce6849093d5517a0c550fe37a648/pyyaml-6.0.3-cp312-cp312-macosx_11_0_arm64.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0"
+          },
+          "hash": "sha256=fc09d0aa354569bc501d4e787133afc08552722d3ab34836a80547331bb5d4a0"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "PyYAML",
+        "version": "6.0.3",
+        "dynamic": [
+          "author",
+          "author-email",
+          "classifier",
+          "description",
+          "download-url",
+          "home-page",
+          "license",
+          "license-file",
+          "platform",
+          "project-url",
+          "requires-python",
+          "summary"
+        ],
+        "platform": [
+          "Any"
+        ],
+        "summary": "YAML parser and emitter for Python",
+        "description": "YAML is a data serialization format designed for human readability\nand interaction with scripting languages.  PyYAML is a YAML parser\nand emitter for Python.\n\nPyYAML features a complete YAML 1.1 parser, Unicode support, pickle\nsupport, capable extension API, and sensible error messages.  PyYAML\nsupports standard YAML tags and provides Python-specific tags that\nallow to represent an arbitrary Python object.\n\nPyYAML is applicable for a broad range of tasks from complex\nconfiguration files to object serialization and persistence.\n",
+        "home_page": "https://pyyaml.org/",
+        "download_url": "https://pypi.org/project/PyYAML/",
+        "author": "Kirill Simonov",
+        "author_email": "xi@resolvent.net",
+        "license": "MIT",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "License :: OSI Approved :: MIT License",
+          "Operating System :: OS Independent",
+          "Programming Language :: Cython",
+          "Programming Language :: Python",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.8",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Programming Language :: Python :: Implementation :: PyPy",
+          "Topic :: Software Development :: Libraries :: Python Modules",
+          "Topic :: Text Processing :: Markup"
+        ],
+        "requires_python": ">=3.8",
+        "project_url": [
+          "Bug Tracker, https://github.com/yaml/pyyaml/issues",
+          "CI, https://github.com/yaml/pyyaml/actions",
+          "Documentation, https://pyyaml.org/wiki/PyYAMLDocumentation",
+          "Mailing lists, http://lists.sourceforge.net/lists/listinfo/yaml-core",
+          "Source Code, https://github.com/yaml/pyyaml"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+          },
+          "hash": "sha256=481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": true,
+      "metadata": {
+        "metadata_version": "2.4",
+        "name": "typing_extensions",
+        "version": "4.16.0",
+        "summary": "Backported and Experimental Type Hints for Python 3.9+",
+        "description": "# Typing Extensions\n\n[![Chat at https://gitter.im/python/typing](https://badges.gitter.im/python/typing.svg)](https://gitter.im/python/typing)\n\n[Documentation](https://typing-extensions.readthedocs.io/en/latest/#) –\n[PyPI](https://pypi.org/project/typing-extensions/)\n\n## Overview\n\nThe `typing_extensions` module serves two related purposes:\n\n- Enable use of new type system features on older Python versions. For example,\n  `typing.TypeGuard` is new in Python 3.10, but `typing_extensions` allows\n  users on previous Python versions to use it too.\n- Enable experimentation with new type system PEPs before they are accepted and\n  added to the `typing` module.\n\n`typing_extensions` is treated specially by static type checkers such as\nmypy and pyright. Objects defined in `typing_extensions` are treated the same\nway as equivalent forms in `typing`.\n\n`typing_extensions` uses\n[Semantic Versioning](https://semver.org/). The\nmajor version will be incremented only for backwards-incompatible changes.\nTherefore, it's safe to depend\non `typing_extensions` like this: `typing_extensions ~=x.y`,\nwhere `x.y` is the first version that includes all features you need.\n[This](https://packaging.python.org/en/latest/specifications/version-specifiers/#compatible-release)\nis equivalent to `typing_extensions >=x.y, <(x+1)`. Do not depend on `~= x.y.z`\nunless you really know what you're doing; that defeats the purpose of\nsemantic versioning.\n\n## Included items\n\nSee [the documentation](https://typing-extensions.readthedocs.io/en/latest/#) for a\ncomplete listing of module contents.\n\n## Contributing\n\nSee [CONTRIBUTING.md](https://github.com/python/typing_extensions/blob/main/CONTRIBUTING.md)\nfor how to contribute to `typing_extensions`.\n\n",
+        "description_content_type": "text/markdown",
+        "keywords": [
+          "annotations",
+          "backport",
+          "checker",
+          "checking",
+          "function",
+          "hinting",
+          "hints",
+          "type",
+          "typechecking",
+          "typehinting",
+          "typehints",
+          "typing"
+        ],
+        "author_email": "\"Guido van Rossum, Jukka Lehtosalo, Łukasz Langa, Michael Lee\" <levkivskyi@gmail.com>",
+        "license_expression": "PSF-2.0",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Environment :: Console",
+          "Intended Audience :: Developers",
+          "Operating System :: OS Independent",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3 :: Only",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: 3.15",
+          "Topic :: Software Development"
+        ],
+        "requires_python": ">=3.9",
+        "project_url": [
+          "Bug Tracker, https://github.com/python/typing_extensions/issues",
+          "Changes, https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+          "Documentation, https://typing-extensions.readthedocs.io/",
+          "Home, https://github.com/python/typing_extensions",
+          "Q & A, https://github.com/python/typing/discussions",
+          "Repository, https://github.com/python/typing_extensions"
+        ]
+      }
+    },
+    {
+      "download_info": {
+        "url": "https://files.pythonhosted.org/packages/1e/77/dc8c558f7593132cf8fefec57c4f60c83b16941c574ac5f619abb3ae7933/dill-0.4.1-py3-none-any.whl",
+        "archive_info": {
+          "hashes": {
+            "sha256": "1e1ce33e978ae97fcfcff5638477032b801c46c7c65cf717f95fbc2248f79a9d"
+          },
+          "hash": "sha256=1e1ce33e978ae97fcfcff5638477032b801c46c7c65cf717f95fbc2248f79a9d"
+        }
+      },
+      "is_direct": false,
+      "is_yanked": false,
+      "requested": false,
+      "metadata": {
+        "metadata_version": "2.1",
+        "name": "dill",
+        "version": "0.4.1",
+        "platform": [
+          "Linux",
+          "Windows",
+          "Mac"
+        ],
+        "summary": "serialize all of Python",
+        "description": "-----------------------------\ndill: serialize all of Python\n-----------------------------\n\nAbout Dill\n==========\n\n``dill`` extends Python's ``pickle`` module for serializing and de-serializing\nPython objects to the majority of the built-in Python types. Serialization\nis the process of converting an object to a byte stream, and the inverse\nof which is converting a byte stream back to a Python object hierarchy.\n\n``dill`` provides the user the same interface as the ``pickle`` module, and\nalso includes some additional features. In addition to pickling Python\nobjects, ``dill`` provides the ability to save the state of an interpreter\nsession in a single command.  Hence, it would be feasible to save an\ninterpreter session, close the interpreter, ship the pickled file to\nanother computer, open a new interpreter, unpickle the session and\nthus continue from the 'saved' state of the original interpreter\nsession.\n\n``dill`` can be used to store Python objects to a file, but the primary\nusage is to send Python objects across the network as a byte stream.\n``dill`` is quite flexible, and allows arbitrary user defined classes\nand functions to be serialized.  Thus ``dill`` is not intended to be\nsecure against erroneously or maliciously constructed data. It is\nleft to the user to decide whether the data they unpickle is from\na trustworthy source.\n\n``dill`` is part of ``pathos``, a Python framework for heterogeneous computing.\n``dill`` is in active development, so any user feedback, bug reports, comments,\nor suggestions are highly appreciated.  A list of issues is located at\nhttps://github.com/uqfoundation/dill/issues, with a legacy list maintained at\nhttps://uqfoundation.github.io/project/pathos/query.\n\n\nMajor Features\n==============\n\n``dill`` can pickle the following standard types:\n\n    - none, type, bool, int, float, complex, bytes, str,\n    - tuple, list, dict, file, buffer, builtin,\n    - Python classes, namedtuples, dataclasses, metaclasses,\n    - instances of classes,\n    - set, frozenset, array, functions, exceptions\n\n``dill`` can also pickle more 'exotic' standard types:\n\n    - functions with yields, nested functions, lambdas,\n    - cell, method, unboundmethod, module, code, methodwrapper,\n    - methoddescriptor, getsetdescriptor, memberdescriptor, wrapperdescriptor,\n    - dictproxy, slice, notimplemented, ellipsis, quit\n\n``dill`` cannot yet pickle these standard types:\n\n    - frame, generator, traceback\n\n``dill`` also provides the capability to:\n\n    - save and load Python interpreter sessions\n    - save and extract the source code from functions and classes\n    - interactively diagnose pickling errors\n\n\nCurrent Release\n===============\n\nThe latest released version of ``dill`` is available from:\n\n    https://pypi.org/project/dill\n\n``dill`` is distributed under a 3-clause BSD license.\n\n\nDevelopment Version\n===================\n\nYou can get the latest development version with all the shiny new features at:\n\n    https://github.com/uqfoundation\n\nIf you have a new contribution, please submit a pull request.\n\n\nInstallation\n============\n\n``dill`` can be installed with ``pip``::\n\n    $ pip install dill\n\nTo optionally include the ``objgraph`` diagnostic tool in the install::\n\n    $ pip install dill[graph]\n\nTo optionally include the ``gprof2dot`` diagnostic tool in the install::\n\n    $ pip install dill[profile]\n\nFor windows users, to optionally install session history tools::\n\n    $ pip install dill[readline]\n\n\nRequirements\n============\n\n``dill`` requires:\n\n    - ``python`` (or ``pypy``), **>=3.9**\n    - ``setuptools``, **>=42**\n\nOptional requirements:\n\n    - ``objgraph``, **>=1.7.2**\n    - ``gprof2dot``, **>=2022.7.29**\n    - ``pyreadline``, **>=1.7.1** (on windows)\n\n\nBasic Usage\n===========\n\n``dill`` is a drop-in replacement for ``pickle``. Existing code can be\nupdated to allow complete pickling using::\n\n    >>> import dill as pickle\n\nor::\n\n    >>> from dill import dumps, loads\n\n``dumps`` converts the object to a unique byte string, and ``loads`` performs\nthe inverse operation::\n\n    >>> squared = lambda x: x**2\n    >>> loads(dumps(squared))(3)\n    9\n\nThere are a number of options to control serialization which are provided\nas keyword arguments to several ``dill`` functions:\n\n* with *protocol*, the pickle protocol level can be set. This uses the\n  same value as the ``pickle`` module, *DEFAULT_PROTOCOL*.\n* with *byref=True*, ``dill`` to behave a lot more like pickle with\n  certain objects (like modules) pickled by reference as opposed to\n  attempting to pickle the object itself.\n* with *recurse=True*, objects referred to in the global dictionary are\n  recursively traced and pickled, instead of the default behavior of\n  attempting to store the entire global dictionary.\n* with *fmode*, the contents of the file can be pickled along with the file\n  handle, which is useful if the object is being sent over the wire to a\n  remote system which does not have the original file on disk. Options are\n  *HANDLE_FMODE* for just the handle, *CONTENTS_FMODE* for the file content\n  and *FILE_FMODE* for content and handle.\n* with *ignore=False*, objects reconstructed with types defined in the\n  top-level script environment use the existing type in the environment\n  rather than a possibly different reconstructed type.\n\nThe default serialization can also be set globally in *dill.settings*.\nThus, we can modify how ``dill`` handles references to the global dictionary\nlocally or globally::\n\n    >>> import dill.settings\n    >>> dumps(absolute) == dumps(absolute, recurse=True)\n    False\n    >>> dill.settings['recurse'] = True\n    >>> dumps(absolute) == dumps(absolute, recurse=True)\n    True\n\n``dill`` also includes source code inspection, as an alternate to pickling::\n\n    >>> import dill.source\n    >>> print(dill.source.getsource(squared))\n    squared = lambda x:x**2\n\nTo aid in debugging pickling issues, use *dill.detect* which provides\ntools like pickle tracing::\n\n    >>> import dill.detect\n    >>> with dill.detect.trace():\n    >>>     dumps(squared)\n    ┬ F1: <function <lambda> at 0x7fe074f8c280>\n    ├┬ F2: <function _create_function at 0x7fe074c49c10>\n    │└ # F2 [34 B]\n    ├┬ Co: <code object <lambda> at 0x7fe07501eb30, file \"<stdin>\", line 1>\n    │├┬ F2: <function _create_code at 0x7fe074c49ca0>\n    ││└ # F2 [19 B]\n    │└ # Co [87 B]\n    ├┬ D1: <dict object at 0x7fe0750d4680>\n    │└ # D1 [22 B]\n    ├┬ D2: <dict object at 0x7fe074c5a1c0>\n    │└ # D2 [2 B]\n    ├┬ D2: <dict object at 0x7fe074f903c0>\n    │├┬ D2: <dict object at 0x7fe074f8ebc0>\n    ││└ # D2 [2 B]\n    │└ # D2 [23 B]\n    └ # F1 [180 B]\n\nWith trace, we see how ``dill`` stored the lambda (``F1``) by first storing\n``_create_function``, the underlying code object (``Co``) and ``_create_code``\n(which is used to handle code objects), then we handle the reference to\nthe global dict (``D2``) plus other dictionaries (``D1`` and ``D2``) that\nsave the lambda object's state. A ``#`` marks when the object is actually stored.\n\n\nMore Information\n================\n\nProbably the best way to get started is to look at the documentation at\nhttp://dill.rtfd.io. Also see ``dill.tests`` for a set of scripts that\ndemonstrate how ``dill`` can serialize different Python objects. You can\nrun the test suite with ``python -m dill.tests``. The contents of any\npickle file can be examined with ``undill``.  As ``dill`` conforms to\nthe ``pickle`` interface, the examples and documentation found at\nhttp://docs.python.org/library/pickle.html also apply to ``dill``\nif one will ``import dill as pickle``. The source code is also generally\nwell documented, so further questions may be resolved by inspecting the\ncode itself. Please feel free to submit a ticket on github, or ask a\nquestion on stackoverflow (**@Mike McKerns**).\nIf you would like to share how you use ``dill`` in your work, please send\nan email (to **mmckerns at uqfoundation dot org**).\n\n\nCitation\n========\n\nIf you use ``dill`` to do research that leads to publication, we ask that you\nacknowledge use of ``dill`` by citing the following in your publication::\n\n    M.M. McKerns, L. Strand, T. Sullivan, A. Fang, M.A.G. Aivazis,\n    \"Building a framework for predictive science\", Proceedings of\n    the 10th Python in Science Conference, 2011;\n    http://arxiv.org/pdf/1202.1056\n\n    Michael McKerns and Michael Aivazis,\n    \"pathos: a framework for heterogeneous computing\", 2010- ;\n    https://uqfoundation.github.io/project/pathos\n\nPlease see https://uqfoundation.github.io/project/pathos or\nhttp://arxiv.org/pdf/1202.1056 for further information.\n",
+        "home_page": "https://github.com/uqfoundation/dill",
+        "download_url": "https://pypi.org/project/dill/#files",
+        "author": "Mike McKerns",
+        "author_email": "mmckerns@uqfoundation.org",
+        "maintainer": "Mike McKerns",
+        "maintainer_email": "mmckerns@uqfoundation.org",
+        "license": "BSD-3-Clause",
+        "license_file": [
+          "LICENSE"
+        ],
+        "classifier": [
+          "Development Status :: 5 - Production/Stable",
+          "Intended Audience :: Developers",
+          "Intended Audience :: Science/Research",
+          "License :: OSI Approved :: BSD License",
+          "Programming Language :: Python :: 3",
+          "Programming Language :: Python :: 3.9",
+          "Programming Language :: Python :: 3.10",
+          "Programming Language :: Python :: 3.11",
+          "Programming Language :: Python :: 3.12",
+          "Programming Language :: Python :: 3.13",
+          "Programming Language :: Python :: 3.14",
+          "Programming Language :: Python :: Implementation :: CPython",
+          "Programming Language :: Python :: Implementation :: PyPy",
+          "Topic :: Scientific/Engineering",
+          "Topic :: Software Development"
+        ],
+        "requires_dist": [
+          "objgraph>=1.7.2; extra == \"graph\"",
+          "gprof2dot>=2022.7.29; extra == \"profile\""
+        ],
+        "requires_python": ">=3.9",
+        "project_url": [
+          "Documentation, http://dill.rtfd.io",
+          "Source Code, https://github.com/uqfoundation/dill",
+          "Bug Tracker, https://github.com/uqfoundation/dill/issues"
+        ],
+        "provides_extra": [
+          "readline",
+          "graph",
+          "profile"
+        ]
+      }
+    }
+  ],
+  "environment": {
+    "implementation_name": "cpython",
+    "implementation_version": "3.12.13",
+    "os_name": "posix",
+    "platform_machine": "arm64",
+    "platform_release": "24.0.0",
+    "platform_system": "Darwin",
+    "platform_version": "Darwin Kernel Version 24.0.0: Mon Aug 12 20:52:12 PDT 2024; root:xnu-11215.1.10~2/RELEASE_ARM64_T6020",
+    "python_full_version": "3.12.13",
+    "platform_python_implementation": "CPython",
+    "python_version": "3.12",
+    "sys_platform": "darwin"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "reviewer": "independent polygon14 coverage reviewer",
+  "verdict": "ACCEPT_STATIC_CLOSURE_WITH_STATED_TYPE_AND_DEVELOPMENT_BOUNDARIES",
+  "denominators": {
+    "frozen_cases": 10,
+    "valid_SQL_pairs": 8,
+    "invalid_SQL_pairs": 2,
+    "typed_full_C_admitted_cases": 2,
+    "other_valid_not_admitted_cases": 6,
+    "potential_case_modes": 20,
+    "prior_executed_case_modes": 4,
+    "new_executed_case_modes": 0,
+    "static_NOT_RUN_case_modes": 16
+  },
+  "case_mode_status_counts": {
+    "NOT_RUN_TYPE_SEMANTICS_NOT_ADMITTED": 12,
+    "BOUNDED_SYMBOLIC_UNSAT": 2,
+    "VALIDATED_NEQ": 2,
+    "NOT_RUN_INVALID_INPUT": 4
+  },
+  "original_10_order_and_membership_verified": true,
+  "all_40_source_hashes_verified": true,
+  "full_metadata_matches_independent_audit": true,
+  "full_metadata_comparison": "Table names, all columns/defaults/PK/NN, FK actions, unique/index metadata; type spelling case-normalized only for comparing metadata, no runtime mapping extended.",
+  "author_sqlite_version": "3.53.3",
+  "reviewer_sqlite_version": "3.43.2",
+  "opcode_counts_not_expected_identical_across_versions": true,
+  "additional_admitted_cases": [],
+  "new_scientific_slots": 0,
+  "new_solver_calls": 0,
+  "frozen_empty_run_list_and_batch_closure_verified": true,
+  "old_saved_witnesses_independently_replayed_this_round": 2,
+  "original_queries_executed_in_saved_replay_only": 4,
+  "new_witnesses_generated": 0,
+  "pilot_frozen_file_hashes_verified": 336,
+  "preserved_old_file_hashes_verified": 11,
+  "remaining_valid_not_admitted_cases_are_not_solver_failures": true,
+  "valid_input_support_fraction": "2/8 (25%), descriptive of this frozen exposed development package only",
+  "all_cases_development_only": true,
+  "full_sqlite_type_domain_semantics_closed": false,
+  "novelty_or_method_superiority_supported": false,
+  "memory_contract": "512 MiB per Z3 internal allocation, not aggregate RSS; no new Z3 launched.",
+  "process_RSS_queries": 0,
+  "unrelated_project_operations": 0,
+  "findings_resolved": [
+    "#45 N=1 limit separated from actual full-schema type admission blocker.",
+    "Secondary static tags distinguish implementation/semantic gaps from full-C mapping; no dynamic Unsupported result asserted.",
+    "Future question no longer presumes a prior solver failure in six unrun valid cases."
+  ],
+  "one_supported_followup_question": "After preserving original SQLite types, original SQL and complete C and completing faithful modeling/concretization, do existing strong baselines exhibit independently verifiable failures on the remaining six valid inputs?",
+  "reviewed_documents": [
+    {
+      "path": "RESULT.zh.md",
+      "sha256": "520931674a2fce6c5101853704977b0e3ab147f5873b99471f91b79168ebd56e",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "RECOVERY.zh.md",
+      "sha256": "7c87932ab767aae6b3b3d8e4ac709bb7704974d53f5b592f84d82ff1ba199b07",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "STATIC_CLASSIFICATION.json",
+      "sha256": "e1640ca875de7a7ff97ff746f12750573d8d57cde4e77d17fbbd2f542e7e64f1",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "COVERAGE_MATRIX.json",
+      "sha256": "3d56f020bc59e285e5bf2214e612151ebcd87a2f51f8e2ed96c4b70b6887fb11",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "COVERAGE_MATRIX.csv",
+      "sha256": "40d18d520afff7f7240d3998840afc6f7240b7e794a9cf4c329503bfdfb93835",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "PRE_RUN_DECISION.json",
+      "sha256": "875168cf0a77726d7d5a7e1d28c61a07da75c9c587c2fe8f7dcff5c1bba59287",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "SOURCE_HASHES.json",
+      "sha256": "6b52edd554f392b5535b05bc67d9e94105111a978bb4eb96ad8cb24d3f5552d5",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "CODE_EVIDENCE.json",
+      "sha256": "92409d6143f349fb3644bb03f2b742bb972ab8ee52ad7075d0dc4c757177ef3b",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "CLASSIFICATION_REFINEMENT.json",
+      "sha256": "1fda3c2c4696f0e04e3da95d8204526376049ca54b3b99135c80745b333e8f87",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "classify_static.py",
+      "sha256": "dde1256803b7d30043393e26bb078855e6618374fcd515ae954fc6d24251d443",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "OLD_PRESERVATION.json",
+      "sha256": "bb3dbbdb87f4899e8953ae4037d580d2d921470e2cbbd90ad4a881df8a91dbed",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "FREEZE.json",
+      "sha256": "b84860c04428805fb47c795efcfb6d95fa3c9699a7524fc12e2031d27b8804e5",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "BATCH_CLOSED.json",
+      "sha256": "63e50bdacc158ef31b8402644f09cebfcf0e36831aa9a2a1e72767d4072e5695",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    },
+    {
+      "path": "PRESERVATION_FINAL.json",
+      "sha256": "059aed2ec77c5570782d4c82bccca0af6f45ca9db1e0ac4affa3de36f5b42c65",
+      "verdict": "ACCEPT_WITH_STATED_BOUNDARIES"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "review_local/STATIC_AUDIT.json",
+      "sha256": "0eaa929189f7620507ca114c38c07d8f214c991f0324fd61336b36761ec77d86"
+    },
+    {
+      "path": "review_local/SAVED_WITNESS_REPLAY.json",
+      "sha256": "e0ec6b763a729348c38f6a92a42962eb62de6c81af7d1990c0296b4ae3c1c1d1"
+    },
+    {
+      "path": "review_local/STATIC_REVIEW.zh.md",
+      "sha256": "df4409caabf54feea6e48733fe43ba1be28413d407be7e8137f0c6f0d6c316e4"
+    },
+    {
+      "path": "review_local/independent_static_audit.py",
+      "sha256": "c1422910cd3ab1aae41d16fed258dcefe00e2fabb220ffe8498b3146677e6c2c"
+    },
+    {
+      "path": "review_local/independent_saved_replay.py",
+      "sha256": "66718b40c48b393861df7dc55b931002bae63f68322c8df18e2eb9f076715339"
+    }
+  ],
+  "recovery_review_scope": "Static instructions and path contract only. No source/dependency reacquisition, new scientific run, remote backup verification or DataHub registry operation.",
+  "remaining_external_blockers": [
+    "Historical external artifact availability and DataHub canonical registration limitations are preserved, not solved by this audit."
+  ],
+  "author_deliverable_blockers": [],
+  "reviewer_script_sha256": "55819f845c68d7c82c6e54074eb1f2f1ec7d41450924f0244d6a36b2b6492340"
+}

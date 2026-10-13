@@ -1,0 +1,138 @@
+{
+  "status": "NO_P0_P1_FOUND_FOR_FROZEN_12_REGISTERED_CASES_STATIC_ONLY",
+  "reviewer": "/root/support_closure",
+  "supporting_static_reviewer": "/root/support_closure/spotit_semantics_correction",
+  "target_executed": false,
+  "target_imported": false,
+  "native_loaded": false,
+  "reviewed_sha256": {
+    "experiments/v4_registration_01/fixed_oracle_check.py": "8c03887df0f80e284695ea9485970deeac5d1a834bf9ec289c3ba4690fe30adb",
+    "experiments/v4_registration_01/REGISTERED_FIXED_DATABASE_ORACLES.json": "a664a9d74b2ee4b3845edeb6a396a56b0942b58d601b9b2f28bad7e45898246e",
+    "experiments/v4_registration_01/runtime_paths_v4.json": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+    "runtime_fair_v4/common.py": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8",
+    "runtime_v4/aggregate_kernel.py": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78"
+  },
+  "scope": "Read-only implementation/registration review for pinned bindings/context, complete fixed database/schema/IC guard, pre-SQLite overflow audit, original SQL preservation, and external resource supervision. Not an execution result or a general proof of upstream IC translation.",
+  "denominator": {
+    "cases": 12,
+    "queries": 21,
+    "expected_safe": 18,
+    "expected_unknown_domain": 3
+  },
+  "evidence": [
+    {
+      "file": "experiments/v4_registration_01/fixed_oracle_check.py",
+      "lines": [
+        95,
+        119
+      ],
+      "finding": "All schema tables retained, including unused E; full official facts plus bound constraints guard; exact concrete row counts/widths; each physical cell NULL or explicit integer binding; fixed full database must be SAT before replay. Fixed IntVal uses str(value) and Boolean wrapper supplies context."
+    },
+    {
+      "file": "runtime_fair_v4/common.py",
+      "lines": [
+        251,
+        281
+      ],
+      "finding": "For unchanged SQL string, raw frontend gate precedes parse/recognize; integer domain audit runs before replay. Any status other than SAFE_FOR_SQLITE_INT64 returns without SQLite."
+    },
+    {
+      "file": "runtime_fair_v4/common.py",
+      "lines": [
+        164,
+        180
+      ],
+      "finding": "SQLite executes the supplied original query strings against every schema table; complete relations and duplicate rows retained."
+    },
+    {
+      "file": "runtime_v4/aggregate_kernel.py",
+      "lines": [
+        403,
+        560
+      ],
+      "finding": "Concrete input and every expression child checked using Python integers; conservative associative-intermediate and SUM-order bounds reject possible overflow, including zero-masked intermediate overflow."
+    },
+    {
+      "file": "experiments/v4_registration_01/fixed_oracle_check.py",
+      "lines": [
+        61,
+        65,
+        155,
+        173,
+        184,
+        190
+      ],
+      "finding": "Child CPU14/15 seconds, child alarm24, supervisor child25, total89; sampled RSS1GiB and unavailable observation stop; process wait/reap and complete child costs recorded. RSS is a sampled soft bound."
+    }
+  ],
+  "registration_manual_checks": {
+    "E01": [
+      7,
+      7
+    ],
+    "E02": [
+      3,
+      5
+    ],
+    "E03": [
+      26,
+      26
+    ],
+    "E04": [
+      2,
+      2
+    ],
+    "E05": [
+      7,
+      null
+    ],
+    "E06": [
+      null,
+      0
+    ],
+    "E07": [
+      1,
+      1
+    ],
+    "E08": [
+      null,
+      null
+    ],
+    "E09": [
+      "2^63: UNKNOWN_ORACLE_DOMAIN",
+      "2^63-2: SAFE, 9223372036854775806"
+    ],
+    "O10": "2^62: SAFE, 4611686018427387904",
+    "O11": "intermediate product outside int64: UNKNOWN_ORACLE_DOMAIN",
+    "O12": "outer zero does not erase risky intermediate: UNKNOWN_ORACLE_DOMAIN"
+  },
+  "nonblocking_findings": [
+    {
+      "severity": "P2",
+      "file": "experiments/v4_registration_01/fixed_oracle_check.py",
+      "lines": [
+        108,
+        110
+      ],
+      "finding": "zip relies on pinned create_database producing full row/attribute counts in schema order. Current locked source and registered inputs satisfy it.",
+      "suggestion": "In a future version assert symbolic row/attribute lengths and preserve physical column mapping before zip."
+    },
+    {
+      "severity": "P2",
+      "file": "experiments/v4_registration_01/fixed_oracle_check.py",
+      "lines": [
+        186,
+        190,
+        192
+      ],
+      "finding": "control_expectation_match checks exit0/worker flag but does not explicitly exclude stop_reason or require worker.status COMPLETE. A rare exit/kill observation race could produce a contradictory RESOURCE_STOP with matched=true.",
+      "suggestion": "For future hardening require no stop_reason and worker.status COMPLETE. For current reports, parent should independently reject any stop_reason/resource-stop result."
+    }
+  ],
+  "boundary_notes": [
+    "All control expectations are constructed analytical predictions, not human gold or natural benchmark cases.",
+    "A SAT check verifies the actually emitted official premise, not an independent proof of arbitrary raw IC translation. Registered cases use column-left comparisons/equalities, not the known literal-left direction issue.",
+    "No query-pair equivalence solving occurs in this fixed checker. Expected overflow rejection is a control match, not algorithm success or a performance win.",
+    "No inspected file was changed by this review."
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "method": "AST parse and file metadata only; no candidate import, calls, scientific enumeration, or test execution",
+  "files": {
+    "code/finite_core.py": {
+      "sha256": "599bee07c1aa6e43cc4fd5656e6a5f7e32e5feb3408846d313eba01692c4afa9",
+      "ast_parse": "PASS",
+      "imports_read_not_performed": [
+        "itertools",
+        "hashlib",
+        "json"
+      ],
+      "top_level_literal_constants": {
+        "VARIABLES": [
+          "x",
+          "y",
+          "z"
+        ],
+        "DOMAIN": [
+          0,
+          1,
+          2
+        ],
+        "KEY_CHOICES": [
+          -1,
+          0,
+          1,
+          2
+        ],
+        "EXPECTED_BODIES": 129,
+        "EXPECTED_PAIRS": 2739,
+        "EXPECTED_MODELS": 64,
+        "EXPECTED_COMPARISONS": 175296
+      },
+      "top_level_node_types": [
+        "Expr",
+        "ImportFrom",
+        "Import",
+        "Import",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef"
+      ]
+    },
+    "code/run_probe.py": {
+      "sha256": "20ebe5e77696bbd2b8e5fbe007e13796b4ed20a1e6fcce8d728b1be63b8dce16",
+      "ast_parse": "PASS",
+      "imports_read_not_performed": [
+        "argparse",
+        "contextlib",
+        "ctypes",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "resource",
+        "signal",
+        "sys",
+        "time",
+        "finite_core"
+      ],
+      "top_level_literal_constants": {
+        "EXECUTION_ENABLED": false,
+        "SUPERVISOR_CPU_HARD_S": 1,
+        "WORKER_CPU_HARD_S": 1,
+        "WALL_HARD_S": 3.0,
+        "MAX_LOAD_1M": 4.0,
+        "MIN_AVAILABLE_FRACTION": 0.25,
+        "NICE": 15,
+        "POLL_SECONDS": 0.01,
+        "RUN_LABEL": "only_attempt"
+      },
+      "top_level_node_types": [
+        "Expr",
+        "Import",
+        "ImportFrom",
+        "Import",
+        "Import",
+        "Import",
+        "Import",
+        "ImportFrom",
+        "Import",
+        "Import",
+        "Import",
+        "Import",
+        "ImportFrom",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "Assign",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "ClassDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "FunctionDef",
+        "If"
+      ]
+    }
+  },
+  "execution_enabled_is_false": true,
+  "run_artifacts_present": false,
+  "execution_freeze_present": false
+}

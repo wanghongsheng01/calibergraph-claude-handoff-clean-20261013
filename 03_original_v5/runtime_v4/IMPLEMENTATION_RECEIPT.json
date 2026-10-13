@@ -1,0 +1,49 @@
+{
+  "status": "IMPLEMENTED_AST_CHECKED_NOT_EXECUTED",
+  "source_v3_sha256": "defa1812ec36c91a23d428f8d71d2070f808eddeb5f473748d3e7ac09fdfe5f3",
+  "kernel_sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78",
+  "semantic_derivation_sha256": "f85ea5ce23093845c68230cb7b92538f946fef57db2623248bc16554290b3a7e",
+  "code_map": {
+    "Ineligible": 16,
+    "FrontendUnsupported": 20,
+    "ensure_raw_identifiers": 24,
+    "Column": 55,
+    "IntegerExpression": 61,
+    "expression_aliases": 66,
+    "expression_contains_variable_product": 76,
+    "Plan": 86,
+    "identifier": 97,
+    "conjunction": 103,
+    "recognize": 113,
+    "encode": 271,
+    "unequal": 396,
+    "sqlite_integer_domain_audit": 403
+  },
+  "api": {
+    "recognize": "unchanged v3 signature; Plan.argument also IntegerExpression; Plan.expression_contains_variable_product bool",
+    "encode": "unchanged 4-tuple return; encoding_counts includes expression_contains_variable_product/arithmetic_semantics/full_formula_logic",
+    "oracle_domain": "sqlite_integer_domain_audit(plan, schema, database) -> JSON status SAFE_FOR_SQLITE_INT64 | UNKNOWN_ORACLE_DOMAIN | ERROR_ORACLE_INPUT"
+  },
+  "syntax": [
+    "root-only add/mul n-ary >=2; binary sub; unary neg/pos; strict nullable integer SUM/COUNT expressions",
+    "BETWEEN exactly 3 plain integer/column operands; same existing per-root/per-leaf predicate routing"
+  ],
+  "preserved": [
+    "raw frontend guard",
+    "unknown/ambiguous column rejection",
+    "complete schema, exact row and IC ownership by harness",
+    "classic product baseline",
+    "flat mode",
+    "selector multiplicity identity",
+    "all frozen v3/fair/run files"
+  ],
+  "not_claimed": [
+    "whole-formula LIA",
+    "new factorization baseline",
+    "SSB execution/coverage",
+    "official semantic totality",
+    "novelty/speedup"
+  ],
+  "required_before_accepting_v4_sat": "copy fair harness to a NEW directory and integrate common overflow-domain gate for official, candidate, and differential SAT replay; original runtime_fair unchanged",
+  "execution": "None; parent controls sole actual run"
+}

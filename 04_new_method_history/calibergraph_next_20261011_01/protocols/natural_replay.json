@@ -1,0 +1,35 @@
+{
+  "id": "natural-replay-feasibility-v1",
+  "created_utc": "2026-10-11T11:20:50.089689+00:00",
+  "kind": "ENGINEERING_FEASIBILITY_NOT_METHOD_COMPARISON",
+  "identities": "data/development.jsonl; all six preselected upstream groups, no replacement after failures",
+  "legacy_contract_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py",
+  "hypothesis": "Original upstream JOIN SQL can be replayed by an independent relational engine even when the old complete contract rejects it; this does not establish scientific benefit.",
+  "controls": [
+    "Old unchanged v5 complete contract prepare (no solver)",
+    "Original unchanged SQL on SQLite, same full schema and separately checked complete source constraints for each fixed no-NULL fixture"
+  ],
+  "fixtures": [
+    "empty",
+    "tiny_synthetic (explicitly artificial rows, original queries unmodified)"
+  ],
+  "denominator": {
+    "groups": 6,
+    "pairs": 6,
+    "query_slots": 12,
+    "query_attempts": 24,
+    "contract_attempts": 6
+  },
+  "primary_observation": "Count returned/error/contract rejected; outputs retained without semantic gold inference",
+  "failure_policy": "Retain all failures. No parser repair, no source SQL rewriting, no dropping columns/constraints, no reselecting easier examples.",
+  "dialect_cautions": [
+    "SQLite integer division differs from MySQL decimal division",
+    "Non-grouped selected columns may be nondeterministic or invalid under other modes",
+    "SQLite return/difference never supplies upstream natural-defect label"
+  ],
+  "time_budget_seconds": 10,
+  "worker_budget_cpu_seconds": 30,
+  "worker_budget_rss_mib": 256,
+  "stop": "Any source hash mismatch before starting; resource stop means all unreturned slots NOT_RUN; no retry or escalation to large run",
+  "confirmation": "NOT_RUN; reserve contains previously screened material and is not pristine final test"
+}

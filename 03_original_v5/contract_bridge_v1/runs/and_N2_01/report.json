@@ -1,0 +1,1063 @@
+{
+  "status": "COMPLETE_REGISTERED_DIAGNOSTIC",
+  "pid": 6632,
+  "case_id": "and_N2",
+  "native_load": "LOADED",
+  "environment_import": "IMPORTED",
+  "checks": [
+    {
+      "label": "base_only_sat",
+      "status": "sat",
+      "assertion_count": 8,
+      "assertion_sha256": "9c50fb67be5484e5af8fc0ec9df1e79500e493afabe4f6d11a1b803c92be0b96",
+      "witness": {
+        "T": [
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "label": "base_exact_rows",
+      "status": "unsat",
+      "assertion_count": 9,
+      "assertion_sha256": "76240980435c2abe27f11f399902a4ae310b279388887dac33cbc6189a2fe77e"
+    },
+    {
+      "label": "original_vs_reference",
+      "status": "unsat",
+      "assertion_count": 9,
+      "assertion_sha256": "fba098907b62c3c9eb6eff08c510114b5ec65b6ad01195a8cb534e83ac1bb9fc",
+      "mathematical_expectation": "unsat",
+      "expectation_match": true
+    },
+    {
+      "label": "normalized_vs_reference",
+      "status": "unsat",
+      "assertion_count": 9,
+      "assertion_sha256": "fba098907b62c3c9eb6eff08c510114b5ec65b6ad01195a8cb534e83ac1bb9fc",
+      "mathematical_expectation": "unsat",
+      "expectation_match": true
+    },
+    {
+      "label": "fixed_4",
+      "status": "sat",
+      "assertion_count": 12,
+      "assertion_sha256": "2ed7f5f31e5350682ac39aac6f5dc90873d18118fbdc0db48b754c7c537b04ec",
+      "witness": {
+        "T": [
+          [
+            4
+          ],
+          [
+            4
+          ]
+        ]
+      }
+    },
+    {
+      "label": "fixed_5",
+      "status": "sat",
+      "assertion_count": 12,
+      "assertion_sha256": "f0ac96a64b0b04faf61a1a180c02b3cd316e84aa93b668cdaba88f7a58356e5d",
+      "witness": {
+        "T": [
+          [
+            5
+          ],
+          [
+            5
+          ]
+        ]
+      }
+    },
+    {
+      "label": "fixed_6",
+      "status": "sat",
+      "assertion_count": 12,
+      "assertion_sha256": "96b3b4e01769c7fe131029a8b5ca92470a5b48aa19b4cbcae16f2dc0916dffec",
+      "witness": {
+        "T": [
+          [
+            6
+          ],
+          [
+            6
+          ]
+        ]
+      }
+    },
+    {
+      "label": "fixed_NULL",
+      "status": "sat",
+      "assertion_count": 10,
+      "assertion_sha256": "897eef1f2aa6cbd43d2ef2a021682f354d8c4e0045f376cc203cf48006eee3ba",
+      "witness": {
+        "T": [
+          [
+            null
+          ],
+          [
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "label": "fixed_mixed_4_6",
+      "status": "sat",
+      "assertion_count": 12,
+      "assertion_sha256": "4cf00692d4728a522c41c978266ba00abbfebc79cdc553c007af93510079b6b5",
+      "witness": {
+        "T": [
+          [
+            4
+          ],
+          [
+            6
+          ]
+        ]
+      }
+    },
+    {
+      "label": "fixed_mixed_6_NULL",
+      "status": "sat",
+      "assertion_count": 11,
+      "assertion_sha256": "d21a936ee843a4e09bdb414c99bc4cc4f9307a15246bfcca1b141d79a2e8c596",
+      "witness": {
+        "T": [
+          [
+            6
+          ],
+          [
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "label": "reference_contract_sat",
+      "status": "sat",
+      "assertion_count": 9,
+      "assertion_sha256": "c11b542877727268cb37d79e29209874d1cf2c018a187b5a6ed42a3b0caca21f",
+      "witness": {
+        "T": [
+          [
+            4
+          ],
+          [
+            4
+          ]
+        ]
+      }
+    }
+  ],
+  "source_parser": {
+    "status": "NOT_APPLICABLE_JSON_API_CONTROL",
+    "scope": "REGISTERED_JSON_API_INPUT"
+  },
+  "pair_check": {
+    "status": "NOT_REGISTERED_FOR_THIS_CASE"
+  },
+  "limits": {
+    "cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "wall_alarm_seconds": 24,
+    "rss_soft_bytes": 1073741824,
+    "external_supervisor_required": true
+  },
+  "manifest_sha256": "32ee11faea4fee939964cd4ae03a9435d2ebe35877cecd221d7e65b2da30f3dd",
+  "runtime_lock_sha256": "29220d333a6a3f9812ab2c24aecd7877f7cf5c9e919e80b612f880bf1dc92f1f",
+  "not_claimed": [
+    "general certificate",
+    "natural defect incidence",
+    "novelty",
+    "performance advantage"
+  ],
+  "input": {
+    "id": "and_N2",
+    "schema": {
+      "T": {
+        "A": "INT"
+      }
+    },
+    "exact_rows": {
+      "T": 2
+    },
+    "constraint": [
+      {
+        "and": [
+          {
+            "gte": [
+              {
+                "value": "T__A"
+              },
+              4
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          },
+          {
+            "not_null": {
+              "value": "T__A"
+            }
+          }
+        ]
+      }
+    ],
+    "source_contract_text": null,
+    "expected_parser_ast": null,
+    "parser_scope": "REGISTERED_JSON_API_INPUT",
+    "expected_admission": "SUPPORTED_REFERENCE",
+    "expected_original_xor": "unsat",
+    "expected_normalized_xor": "unsat",
+    "pair_check": false,
+    "fixed_databases": [
+      {
+        "id": "4",
+        "database": {
+          "T": [
+            [
+              4
+            ],
+            [
+              4
+            ]
+          ]
+        }
+      },
+      {
+        "id": "5",
+        "database": {
+          "T": [
+            [
+              5
+            ],
+            [
+              5
+            ]
+          ]
+        }
+      },
+      {
+        "id": "6",
+        "database": {
+          "T": [
+            [
+              6
+            ],
+            [
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "id": "NULL",
+        "database": {
+          "T": [
+            [
+              null
+            ],
+            [
+              null
+            ]
+          ]
+        }
+      },
+      {
+        "id": "mixed_4_6",
+        "database": {
+          "T": [
+            [
+              4
+            ],
+            [
+              6
+            ]
+          ]
+        }
+      },
+      {
+        "id": "mixed_6_NULL",
+        "database": {
+          "T": [
+            [
+              6
+            ],
+            [
+              null
+            ]
+          ]
+        }
+      }
+    ]
+  },
+  "data_role": "CONSTRUCTED_EXPOSED_DIAGNOSTIC_NOT_NATURAL_DEFECT_OR_HELDOUT",
+  "full_case_denominator": 34,
+  "cases": [
+    {
+      "id": "lt_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lt_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_literal_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_column_left_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "none_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "not_null_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "and_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unverified_or_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unverified_primary_N1",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lt_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lt_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "lte_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gt_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "gte_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "eq_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_literal_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "neq_column_left_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "none_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "not_null_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "and_N2",
+      "status": "COMPLETE_REGISTERED_DIAGNOSTIC"
+    },
+    {
+      "id": "unverified_or_N2",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "unverified_primary_N2",
+      "status": "NOT_RUN"
+    }
+  ],
+  "fixed_databases": [
+    {
+      "id": "4",
+      "database": {
+        "T": [
+          [
+            4
+          ],
+          [
+            4
+          ]
+        ]
+      },
+      "status": "EVALUATED",
+      "reference_concrete": {
+        "status": "EVALUATED_SUPPORTED_REFERENCE",
+        "holds": true,
+        "clauses": [
+          {
+            "source_path": "$/0/and/0",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/1",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/2",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          }
+        ],
+        "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred"
+      },
+      "reference_smt": true,
+      "original_smt": true,
+      "normalized_smt": true,
+      "reference_agrees": true,
+      "normalized_agrees": true
+    },
+    {
+      "id": "5",
+      "database": {
+        "T": [
+          [
+            5
+          ],
+          [
+            5
+          ]
+        ]
+      },
+      "status": "EVALUATED",
+      "reference_concrete": {
+        "status": "EVALUATED_SUPPORTED_REFERENCE",
+        "holds": true,
+        "clauses": [
+          {
+            "source_path": "$/0/and/0",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/1",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/2",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          }
+        ],
+        "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred"
+      },
+      "reference_smt": true,
+      "original_smt": true,
+      "normalized_smt": true,
+      "reference_agrees": true,
+      "normalized_agrees": true
+    },
+    {
+      "id": "6",
+      "database": {
+        "T": [
+          [
+            6
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "status": "EVALUATED",
+      "reference_concrete": {
+        "status": "EVALUATED_SUPPORTED_REFERENCE",
+        "holds": true,
+        "clauses": [
+          {
+            "source_path": "$/0/and/0",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/1",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/2",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          }
+        ],
+        "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred"
+      },
+      "reference_smt": true,
+      "original_smt": true,
+      "normalized_smt": true,
+      "reference_agrees": true,
+      "normalized_agrees": true
+    },
+    {
+      "id": "NULL",
+      "database": {
+        "T": [
+          [
+            null
+          ],
+          [
+            null
+          ]
+        ]
+      },
+      "status": "EVALUATED",
+      "reference_concrete": {
+        "status": "EVALUATED_SUPPORTED_REFERENCE",
+        "holds": false,
+        "clauses": [
+          {
+            "source_path": "$/0/and/0",
+            "row_results": [
+              false,
+              false
+            ],
+            "all_rows": false
+          },
+          {
+            "source_path": "$/0/and/1",
+            "row_results": [
+              false,
+              false
+            ],
+            "all_rows": false
+          },
+          {
+            "source_path": "$/0/and/2",
+            "row_results": [
+              false,
+              false
+            ],
+            "all_rows": false
+          }
+        ],
+        "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred"
+      },
+      "reference_smt": false,
+      "original_smt": false,
+      "normalized_smt": false,
+      "reference_agrees": true,
+      "normalized_agrees": true
+    },
+    {
+      "id": "mixed_4_6",
+      "database": {
+        "T": [
+          [
+            4
+          ],
+          [
+            6
+          ]
+        ]
+      },
+      "status": "EVALUATED",
+      "reference_concrete": {
+        "status": "EVALUATED_SUPPORTED_REFERENCE",
+        "holds": true,
+        "clauses": [
+          {
+            "source_path": "$/0/and/0",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/1",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          },
+          {
+            "source_path": "$/0/and/2",
+            "row_results": [
+              true,
+              true
+            ],
+            "all_rows": true
+          }
+        ],
+        "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred"
+      },
+      "reference_smt": true,
+      "original_smt": true,
+      "normalized_smt": true,
+      "reference_agrees": true,
+      "normalized_agrees": true
+    },
+    {
+      "id": "mixed_6_NULL",
+      "database": {
+        "T": [
+          [
+            6
+          ],
+          [
+            null
+          ]
+        ]
+      },
+      "status": "EVALUATED",
+      "reference_concrete": {
+        "status": "EVALUATED_SUPPORTED_REFERENCE",
+        "holds": false,
+        "clauses": [
+          {
+            "source_path": "$/0/and/0",
+            "row_results": [
+              true,
+              false
+            ],
+            "all_rows": false
+          },
+          {
+            "source_path": "$/0/and/1",
+            "row_results": [
+              true,
+              false
+            ],
+            "all_rows": false
+          },
+          {
+            "source_path": "$/0/and/2",
+            "row_results": [
+              true,
+              false
+            ],
+            "all_rows": false
+          }
+        ],
+        "scope": "explicit narrow reference contract only; no SQL CHECK/DDL convention inferred"
+      },
+      "reference_smt": false,
+      "original_smt": false,
+      "normalized_smt": false,
+      "reference_agrees": true,
+      "normalized_agrees": true
+    }
+  ],
+  "phase": "FINAL_BEFORE_WRITE_EXIT",
+  "resource_last_checkpoint": {
+    "wall_seconds": 1.2956155422143638,
+    "cpu_seconds": 1.298567,
+    "peak_rss_bytes_darwin": 117260288,
+    "python_threads": [
+      {
+        "name": "MainThread",
+        "daemon": false
+      }
+    ]
+  },
+  "admission_regressions": [
+    {
+      "id": "cross_table_encoding_collision",
+      "schema": {
+        "A_": {
+          "B": "INT"
+        },
+        "A": {
+          "_B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "status": "EVALUATED_PURE_ADMISSION_ONLY",
+      "reason": "nonunique or noninvertible upstream column encoding: A___B",
+      "observed_admission": "UNVERIFIED_CONTRACT",
+      "expected_match": true
+    },
+    {
+      "id": "single_table_noninvertible_encoding",
+      "schema": {
+        "A_": {
+          "B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "UNVERIFIED_CONTRACT",
+      "status": "EVALUATED_PURE_ADMISSION_ONLY",
+      "reason": "nonunique or noninvertible upstream column encoding: A___B",
+      "observed_admission": "UNVERIFIED_CONTRACT",
+      "expected_match": true
+    },
+    {
+      "id": "leading_column_underscore_unambiguous",
+      "schema": {
+        "A": {
+          "_B": "INT"
+        }
+      },
+      "constraint": [
+        {
+          "not_null": {
+            "value": "A___B"
+          }
+        }
+      ],
+      "expected_admission": "SUPPORTED_REFERENCE",
+      "status": "EVALUATED_PURE_ADMISSION_ONLY",
+      "observed_admission": "SUPPORTED_REFERENCE",
+      "expected_match": true
+    }
+  ],
+  "bridge": {
+    "original_ast": [
+      {
+        "and": [
+          {
+            "gte": [
+              {
+                "value": "T__A"
+              },
+              4
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          },
+          {
+            "not_null": {
+              "value": "T__A"
+            }
+          }
+        ]
+      }
+    ],
+    "normalized_ast": [
+      {
+        "and": [
+          {
+            "gte": [
+              {
+                "value": "T__A"
+              },
+              4
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "T__A"
+              },
+              6
+            ]
+          },
+          {
+            "not_null": {
+              "value": "T__A"
+            }
+          }
+        ]
+      }
+    ],
+    "ledger": [
+      {
+        "source_path": "$/0/and/0",
+        "source_ast": {
+          "gte": [
+            {
+              "value": "T__A"
+            },
+            4
+          ]
+        },
+        "normalized_ast": {
+          "gte": [
+            {
+              "value": "T__A"
+            },
+            4
+          ]
+        },
+        "source_operator": "gte",
+        "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+      },
+      {
+        "source_path": "$/0/and/1",
+        "source_ast": {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            6
+          ]
+        },
+        "normalized_ast": {
+          "lte": [
+            {
+              "value": "T__A"
+            },
+            6
+          ]
+        },
+        "source_operator": "lte",
+        "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+      },
+      {
+        "source_path": "$/0/and/2",
+        "source_ast": {
+          "not_null": {
+            "value": "T__A"
+          }
+        },
+        "normalized_ast": {
+          "not_null": {
+            "value": "T__A"
+          }
+        },
+        "source_operator": "not_null",
+        "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+      }
+    ],
+    "status": "PREPARED_NOT_CERTIFIED"
+  },
+  "native_identity": {
+    "pinned_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+    "sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+    "version": [
+      4,
+      12,
+      0,
+      0
+    ],
+    "binding_pointer": 4347219380,
+    "pinned_pointer": 4347219380,
+    "method": "same_process_function_identity_plus_locked_source"
+  },
+  "module_origins": {
+    "pkg_resources": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support/pkg_resources/__init__.py",
+    "z3.z3types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3types.py",
+    "z3.z3consts": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3consts.py",
+    "z3.z3core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3core.py",
+    "z3.z3printer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3printer.py",
+    "z3.z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3.py",
+    "z3.z3num": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3num.py",
+    "z3.z3poly": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3poly.py",
+    "z3.z3rcf": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3rcf.py",
+    "z3.z3util": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3util.py",
+    "z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/__init__.py",
+    "ordered_set": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0/ordered_set/__init__.py",
+    "ujson": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0/ujson.cpython-312-darwin.so",
+    "constants": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/constants.py",
+    "yaml.error": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/error.py",
+    "yaml.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/tokens.py",
+    "yaml.events": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/events.py",
+    "yaml.nodes": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/nodes.py",
+    "yaml.reader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/reader.py",
+    "yaml.scanner": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/scanner.py",
+    "yaml.parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/parser.py",
+    "yaml.composer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/composer.py",
+    "yaml.constructor": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/constructor.py",
+    "yaml.resolver": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/resolver.py",
+    "yaml.loader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/loader.py",
+    "yaml.emitter": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/emitter.py",
+    "yaml.serializer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/serializer.py",
+    "yaml.representer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/representer.py",
+    "yaml.dumper": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/dumper.py",
+    "yaml._yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/_yaml.cpython-312-darwin.so",
+    "yaml.cyaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/cyaml.py",
+    "yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/__init__.py",
+    "lark.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/utils.py",
+    "lark.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/exceptions.py",
+    "lark.grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/grammar.py",
+    "lark.lexer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lexer.py",
+    "lark.tree": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/tree.py",
+    "lark.visitors": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/visitors.py",
+    "lark.parse_tree_builder": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parse_tree_builder.py",
+    "lark.parsers": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/__init__.py",
+    "lark.common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/common.py",
+    "lark.parsers.grammar_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/grammar_analysis.py",
+    "lark.parsers.earley_common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_common.py",
+    "lark.parsers.earley_forest": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_forest.py",
+    "lark.parsers.earley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley.py",
+    "lark.parsers.xearley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/xearley.py",
+    "lark.parsers.cyk": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/cyk.py",
+    "lark.parsers.lalr_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_analysis.py",
+    "lark.parsers.lalr_interactive_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_interactive_parser.py",
+    "lark.parsers.lalr_parser_state": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser_state.py",
+    "lark.parsers.lalr_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser.py",
+    "lark.parser_frontends": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parser_frontends.py",
+    "lark.load_grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/load_grammar.py",
+    "lark.lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lark.py",
+    "lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/__init__.py",
+    "mo_future": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303/mo_future/__init__.py",
+    "mo_imports": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201/mo_imports/__init__.py",
+    "mo_dots.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/utils.py",
+    "mo_dots.lists": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/lists.py",
+    "mo_dots.nones": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/nones.py",
+    "mo_dots.datas": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/datas.py",
+    "mo_dots.objects": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/objects.py",
+    "mo_dots": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/__init__.py",
+    "mo_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/utils.py",
+    "mo_parsing.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/exceptions.py",
+    "mo_parsing.results": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/results.py",
+    "mo_parsing.core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py",
+    "mo_parsing.whitespaces": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/whitespaces.py",
+    "mo_parsing.enhancement": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/enhancement.py",
+    "mo_parsing.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/tokens.py",
+    "mo_parsing.expressions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/expressions.py",
+    "mo_parsing.infix": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/infix.py",
+    "mo_parsing.regex": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/regex.py",
+    "mo_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/__init__.py",
+    "mo_sql_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/utils.py",
+    "mo_sql_parsing.keywords": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/keywords.py",
+    "mo_sql_parsing.types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/types.py",
+    "mo_sql_parsing.windows": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/windows.py",
+    "mo_sql_parsing.sql_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/sql_parser.py",
+    "mo_sql_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py",
+    "environment": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py"
+  },
+  "base_only": {
+    "facts": [
+      "(not (DELETED t1))",
+      "(= (T__A t1) String_x1__Int)",
+      "(not (DELETED t2))",
+      "(= (T__A t2) String_x2__Int)",
+      "(<= (- 2147483648) (T__A t1))",
+      "(>= 2147483647 (T__A t1))",
+      "(<= (- 2147483648) (T__A t2))",
+      "(>= 2147483647 (T__A t2))"
+    ],
+    "sha256": "29244bb01b48e3942c1c3d4778e7679216c458352278b66649d183d15d2ec207",
+    "tested_ic_included": false,
+    "exact_rows": {
+      "T": 2
+    }
+  },
+  "formulas": {
+    "reference": "(and (not (NULL t1 T__A__String))\n     (<= 4 (T__A t1))\n     (not (NULL t2 T__A__String))\n     (<= 4 (T__A t2))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t2 T__A__String))\n     (>= 6 (T__A t2))\n     (not (NULL t1 T__A__String))\n     (not (NULL t2 T__A__String)))",
+    "original_emitted": "(and (<= 4 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (<= 4 (T__A t2))\n     (not (NULL t2 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t2))\n     (not (NULL t2 T__A__String))\n     (not (NULL t1 T__A__String))\n     (not (NULL t2 T__A__String)))",
+    "normalized_emitted": "(and (<= 4 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (<= 4 (T__A t2))\n     (not (NULL t2 T__A__String))\n     (>= 6 (T__A t1))\n     (not (NULL t1 T__A__String))\n     (>= 6 (T__A t2))\n     (not (NULL t2 T__A__String))\n     (not (NULL t1 T__A__String))\n     (not (NULL t2 T__A__String)))",
+    "base_restored_after_each_compilation": true
+  },
+  "scope": "exact registered bounded bridge diagnostic; not a general certificate or novelty result",
+  "environment_cleanup": "COMPLETE"
+}

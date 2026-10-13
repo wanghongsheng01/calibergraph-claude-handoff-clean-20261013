@@ -1,0 +1,245 @@
+{
+  "id": "calibergraph-04-pilot-supervisor-receipt-v1",
+  "status": "STOPPED_REMAINDER_NOT_RUN",
+  "created_utc": "2026-10-11T13:28:32.990511+00:00",
+  "registered_denominator": 10,
+  "slots": [
+    {
+      "slot": 0,
+      "case_id": "dev04_N1_concrete",
+      "status": "MONITOR_OR_LAUNCH_EXCEPTION",
+      "registered_slot": {
+        "id": "dev04_N1_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 1,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "gate_probe": {
+        "started_utc": "2026-10-11T13:28:33.186432+00:00",
+        "status": "RETURNED",
+        "load": [
+          1.92919921875,
+          2.6259765625,
+          2.74365234375
+        ],
+        "memory_pressure_exit_code": 0,
+        "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 34%\n",
+        "memory_pressure_stderr": "",
+        "memory_available_percentage": 34,
+        "admitted": true,
+        "cpu_accounting_after_probe": {
+          "pre_registered_prior_cpu_seconds": 1.0,
+          "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+          "parent_user_cpu_seconds": 0.11061399999999999,
+          "parent_system_cpu_seconds": 0.092787,
+          "all_reaped_children_user_cpu_seconds": 0.000556,
+          "all_reaped_children_system_cpu_seconds": 0.001161,
+          "supervisor_plus_reaped_cpu_seconds": 0.205118,
+          "observed_total_cpu_seconds": 1.205118,
+          "reserved_final_report_exit_tail_seconds": 0.2,
+          "conservative_charged_total_seconds": 1.4051179999999999,
+          "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+        }
+      },
+      "receipt": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00/supervisor_receipt.json",
+      "worker_exit_code": null,
+      "worker_wait4_usage": null,
+      "worker_report_status": null,
+      "observed_stage_sequence": [],
+      "stop_remainder": "MONITOR_OR_LAUNCH_EXCEPTION",
+      "violations": []
+    },
+    {
+      "slot": 1,
+      "case_id": "dev04_N1_official",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N1_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 1,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 2,
+      "case_id": "dev04_N2_concrete",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N2_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 2,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 3,
+      "case_id": "dev04_N2_official",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N2_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 2,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 4,
+      "case_id": "dev04_N3_concrete",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N3_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 3,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 5,
+      "case_id": "dev04_N3_official",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N3_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 3,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 6,
+      "case_id": "dev04_N4_concrete",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N4_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 4,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 7,
+      "case_id": "dev04_N4_official",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N4_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 4,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 8,
+      "case_id": "dev04_N5_concrete",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N5_concrete",
+        "source_case_id": "dev03_18",
+        "exact_rows": 5,
+        "kind": "concrete",
+        "fixture": "all_null_class_and_nonnull_control"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    },
+    {
+      "slot": 9,
+      "case_id": "dev04_N5_official",
+      "status": "NOT_RUN",
+      "registered_slot": {
+        "id": "dev04_N5_official",
+        "source_case_id": "dev03_18",
+        "exact_rows": 5,
+        "kind": "official",
+        "fixture": "unconstrained_original_C"
+      },
+      "not_run_reason": "MONITOR_OR_LAUNCH_EXCEPTION"
+    }
+  ],
+  "violations": [],
+  "fixed_policy": {
+    "worker_cpu_hard_seconds": 3,
+    "worker_wall_seconds": 4.0,
+    "worker_rss_bytes": 268435456,
+    "batch_cpu_seconds": 60.0,
+    "prior_preflight_cpu_charge_seconds": 1.0,
+    "final_report_exit_tail_reserve_seconds": 0.2,
+    "start_new_slot_max_charged_cpu_seconds": 50.0,
+    "active_parent_and_reaped_stop_seconds": 56.0,
+    "solver_watchdog_trigger_seconds": 1.5,
+    "solver_cumulative_wall_seconds": 2.0,
+    "maximum_checks_per_case": 2,
+    "max_1min_load": 4.0,
+    "min_memory_available_percentage": 25,
+    "machine_probe_timeout_seconds": 0.5,
+    "ps_timeout_seconds": 0.3,
+    "poll_target_seconds": 0.1,
+    "initial_progress_grace_seconds": 0.5,
+    "maximum_workers": 1,
+    "nice_minimum": 15
+  },
+  "maximum_workers": 1,
+  "read_reserve": false,
+  "automatic_retries": 0,
+  "registered_case_ids": [
+    "dev04_N1_concrete",
+    "dev04_N1_official",
+    "dev04_N2_concrete",
+    "dev04_N2_official",
+    "dev04_N3_concrete",
+    "dev04_N3_official",
+    "dev04_N4_concrete",
+    "dev04_N4_official",
+    "dev04_N5_concrete",
+    "dev04_N5_official"
+  ],
+  "protocol_sha256": "942a64add3043b5f12be8dd16132cab455247e899fd992ad5fe08cc9a621f0cd",
+  "freeze_sha256": "9f731374103804dd06eb09774f6b82ec05d5b16cd15e4a0390137458e4a81d1a",
+  "supervisor_sha256": "52f8fb02829e4ef31129af234f75afc85469dd4c23ddc83e5d27cbc598dba62a",
+  "frozen_file_count": 861,
+  "interpreter": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "interpreter_sha256": "d67ff65d8cbe8e6f40d5e7bcf8d9978e935d571907316c5ce6670181951db324",
+  "clean_worker_environment": {
+    "PATH": "/usr/bin:/bin",
+    "LANG": "C",
+    "LC_ALL": "C",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "NUMEXPR_MAX_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "BLIS_NUM_THREADS": "1",
+    "TBB_NUM_THREADS": "1"
+  },
+  "cpu_accounting": {
+    "pre_registered_prior_cpu_seconds": 1.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.11160199999999999,
+    "parent_system_cpu_seconds": 0.094529,
+    "all_reaped_children_user_cpu_seconds": 0.000645,
+    "all_reaped_children_system_cpu_seconds": 0.001553,
+    "supervisor_plus_reaped_cpu_seconds": 0.20832900000000001,
+    "observed_total_cpu_seconds": 1.208329,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 1.408329,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "halt_reason": "MONITOR_OR_LAUNCH_EXCEPTION",
+  "finished_utc": "2026-10-11T13:28:33.193557+00:00",
+  "registered_attempts": 1,
+  "measurement_note": "RSS, solver and wall checks are sampled and can overshoot; actual wait4 usage, all violations and censored timings are preserved. The 1.0s prior and 0.2s tail are charged reserves, not measurements."
+}

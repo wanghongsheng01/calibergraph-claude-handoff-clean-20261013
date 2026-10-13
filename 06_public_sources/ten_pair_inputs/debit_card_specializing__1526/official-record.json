@@ -1,0 +1,11 @@
+{
+  "dbid": "debit_card_specializing",
+  "index": "1526",
+  "difficulty": "challenging",
+  "verdict": "UNKNOWN",
+  "reason": "q2: A sum does not bind its row variable",
+  "results": null,
+  "end_to_end_s": 3.79,
+  "gold": "SELECT CAST(SUM(IIF(SUBSTRING(Date, 1, 4) = '2012', Consumption, 0)) - SUM(IIF(SUBSTRING(Date, 1, 4) = '2013', Consumption, 0)) AS FLOAT) / SUM(IIF(SUBSTRING(Date, 1, 4) = '2012', Consumption, 0)) FROM yearmonth WHERE CustomerID = ( SELECT T1.CustomerID FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.Date = '2012-08-25' AND T1.Price = 634.8 )",
+  "predicted": "SELECT (CAST((SELECT Consumption FROM yearmonth WHERE CustomerID = (SELECT CustomerID FROM transactions_1k WHERE Date = '2012-08-24' AND Price = 634.8) AND Date LIKE '2012%') AS REAL) - (SELECT Consumption FROM yearmonth WHERE CustomerID = (SELECT CustomerID FROM transactions_1k WHERE Date = '2012-08-24' AND Price = 634.8) AND Date LIKE '2013%')) / (SELECT Consumption FROM yearmonth WHERE CustomerID = (SELECT CustomerID FROM transactions_1k WHERE Date = '2012-08-24' AND Price = 634.8) AND Date LIKE '2012%') AS DecreaseRate"
+}

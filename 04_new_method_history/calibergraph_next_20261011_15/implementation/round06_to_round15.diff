@@ -1,0 +1,323 @@
+--- calibergraph_next_20261011_06/code/generation_common.py
++++ calibergraph_next_20261011_15/implementation/generation_common.py
+@@ -1,4 +1,4 @@
+-"""Round 06 frozen input admission and stdlib guards; no SQL/target imports."""
++"""Round 15 frozen input admission and stdlib guards; no SQL/target imports."""
+ from pathlib import Path
+ import hashlib
+ import json
+@@ -9,9 +9,9 @@
+ import time
+ 
+ 
+-PROTOCOL_ID = 'calibergraph-06-generation-replay-v1'
++PROTOCOL_ID = 'calibergraph-15-generation-replay-v1'
+ # Root must independently review, amend, and freeze before enabling execution.
+-EXECUTION_ENABLED = True
++EXECUTION_ENABLED = False
+ REGISTRY_SHA256 = 'ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb'
+ RUNTIME_SHA256 = '505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7'
+ 
+@@ -81,6 +81,7 @@
+         'maximum_active_workers': 1, 'nice': 15, 'total_parent_cpu_limit_seconds': 60,
+         'solver_cumulative_wall_limit_seconds': 2.0, 'solver_timeout_reserve_seconds': 0.1,
+         'supervisor_solver_stop_seconds': 1.5, 'internal_z3_memory_parameter_mb': 128,
++        'maximum_batch_attempts': 1,
+     }
+     if any(protocol.get(key) != value for key, value in required.items()):
+         raise ValueError('REGISTERED_RESOURCE_BUDGET_MISMATCH')
+@@ -95,11 +96,15 @@
+     if indices != [6, 9, 14, 3] or any(type(i) is not int for i in indices):
+         raise ValueError('ONLY_FROZEN_EXPOSED_03_DEVELOPMENT_INDICES_ALLOWED')
+     slots = protocol['registered_cases']
+-    expected = [{'id': f'dev03_{i + 1:02d}_exact{n}', 'kind': 'official',
++    expected = [{'id': f'dev03_{i + 1:02d}_exact{n}_rep{repeat_id}', 'kind': 'official',
+                  'source_case_index': i, 'source_case_id': f'dev03_{i + 1:02d}',
+-                 'exact_rows': n} for i in indices for n in (2, 4, 8)]
++                 'exact_rows': n, 'repeat_id': repeat_id}
++                for repeat_id, source_order, bounds in (
++                    (1, (6, 9, 14, 3), (2, 3, 4)),
++                    (2, (3, 14, 9, 6), (4, 3, 2)))
++                for i in source_order for n in bounds]
+     if (slots != expected or any(type(s.get('source_case_index')) is not int or
+-            type(s.get('exact_rows')) is not int for s in slots)):
++            type(s.get('exact_rows')) is not int or type(s.get('repeat_id')) is not int for s in slots)):
+         raise ValueError('CASE_BOUND_DENOMINATOR_OR_ORDER_CHANGED')
+     if (not 0 <= case_index < len(slots) or len({s['id'] for s in slots}) != len(slots)
+             or any(s.get('kind') != 'official' for s in slots)):
+--- calibergraph_next_20261011_06/code/generation_supervisor.py
++++ calibergraph_next_20261011_15/implementation/generation_supervisor.py
+@@ -1,7 +1,7 @@
+-"""Frozen round06 single-worker supervisor; importing this file runs no work.
+-
+-CLI: frozen-python3.12 -B -I -S pilot_supervisor.py --protocol FILE
+-     --freeze FILE --out NEW_DIRECTORY_UNDER_ROUND06_RUNS
++"""Frozen round15 single-worker supervisor; importing this file runs no work.
++
++CLI: frozen-python3.12 -B -I -S generation_supervisor.py --protocol FILE
++     --freeze FILE --out NEW_DIRECTORY_UNDER_ROUND15_RUNS
+ All resource probes and workers run only inside main(). No automatic retries.
+ """
+ from __future__ import annotations
+@@ -139,7 +139,7 @@
+             "REQUIRES_-B_-I_-S")
+     protocol = read_json(args.protocol)
+     freeze = read_json(args.freeze)
+-    require(protocol.get("id") == "calibergraph-06-generation-replay-v1", "PROTOCOL_ID_MISMATCH")
++    require(protocol.get("id") == "calibergraph-15-generation-replay-v1", "PROTOCOL_ID_MISMATCH")
+     require(isinstance(protocol.get("status"), str) and protocol["status"].startswith("REGISTERED")
+             and isinstance(protocol.get("registered_utc"), str) and protocol["registered_utc"],
+             "EXECUTION_REQUIRES_REGISTERED_PROTOCOL_NOT_TEMPLATE")
+@@ -150,11 +150,12 @@
+         "maximum_active_workers": 1, "nice": 15, "total_parent_cpu_limit_seconds": 60,
+         "contract_check_timeout_ms": 100, "query_check_timeout_ms": 700,
+         "solver_timeout_reserve_seconds": 0.1, "internal_z3_memory_parameter_mb": 128,
++        "maximum_batch_attempts": 1,
+     }
+     require(all(protocol.get(k) == v for k, v in expected.items()), "FIXED_BUDGET_MISMATCH")
+     require(protocol.get("artifacts") == {"result": "results.json", "events": "events.jsonl",
+                                          "progress": "progress.json"}, "ARTIFACT_NAMES_CHANGED")
+-    sys.path.insert(0, str(ROOT / 'code'))
++    sys.path.insert(0, str(ROOT / 'implementation'))
+     from generation_common import load_registered
+     # This also denies execution while PREPARATION_ONLY remains enabled.
+     _, _, _ = load_registered(args.protocol, 0)
+@@ -171,7 +172,7 @@
+     require(python_path == Path(sys.executable).resolve(), "FROZEN_INTERPRETER_MISMATCH")
+     require(protocol["supervisor"].get("required_flags") == ["-B", "-I", "-S"], "FLAGS_CHANGED")
+     workers = {kind: Path(protocol["worker_paths"][kind]).resolve() for kind in ("official",)}
+-    require(workers == {kind: ROOT / "code" / "official_generation_worker.py"
++    require(workers == {kind: ROOT / "implementation" / "official_generation_worker.py"
+                         for kind in workers}, "UNREGISTERED_WORKER_PATH")
+     entries = freeze.get("files")
+     require(isinstance(entries, list) and entries, "FREEZE_FILES_MISSING")
+@@ -186,7 +187,7 @@
+     required = {Path(__file__).resolve(), args.protocol, python_path,
+                 Path(protocol["input"]["path"]).resolve(),
+                 Path(protocol["runtime_lock"]["path"]).resolve(), *workers.values()}
+-    required.update(p.resolve() for p in (ROOT / "code").glob("*.py"))
++    required.update(p.resolve() for p in (ROOT / "implementation").glob("*.py"))
+     require(required <= manifest.keys(), "CODE_PROTOCOL_INPUT_RUNTIME_INTERPRETER_MISSING_FROM_FREEZE")
+     verify_manifest(manifest)
+     for name in ("input", "runtime_lock"):
+@@ -513,18 +514,21 @@
+     args.freeze = args.freeze.resolve()
+     output = args.out.resolve()
+     runs = ROOT / "runs"
+-    require(output.parent == runs.resolve() and not output.exists(), "OUTPUT_MUST_BE_FRESH_DIRECT_CHILD_OF_ROUND06_RUNS")
++    require(output.parent == runs.resolve() and not output.exists(), "OUTPUT_MUST_BE_FRESH_DIRECT_CHILD_OF_ROUND15_RUNS")
+     runs.mkdir(exist_ok=True)
+     output.mkdir()
+-    report = {"id": "calibergraph-06-generation-supervisor-receipt-v1", "status": "REGISTERING",
++    report = {"id": "calibergraph-15-generation-supervisor-receipt-v1", "status": "REGISTERING",
+               "created_utc": utc(), "registered_denominator": None,
+-              "planned_denominator": 12, "registration_validated": False,
+-              "slots": [{"slot": position, "case_id": None, "status": "NOT_RUN",
+-                         "planned_slot": {"source_case_index": source_index,
++              "planned_denominator": 24, "registration_validated": False,
++              "slots": [{"slot": position, "case_id": f'dev03_{source_index + 1:02d}_exact{exact_rows}_rep{repeat_id}', "status": "NOT_RUN",
++                         "planned_slot": {"id": f'dev03_{source_index + 1:02d}_exact{exact_rows}_rep{repeat_id}', "source_case_index": source_index,
+                              "source_case_id": "dev03_" + str(source_index + 1).zfill(2),
+-                             "exact_rows": exact_rows, "kind": "official"}}
+-                        for position, (source_index, exact_rows) in enumerate(
+-                            (i, n) for i in (6, 9, 14, 3) for n in (2, 4, 8))],
++                             "exact_rows": exact_rows, "repeat_id": repeat_id, "kind": "official"}}
++                        for position, (repeat_id, source_index, exact_rows) in enumerate(
++                            (r, i, n) for r, source_order, bounds in (
++                                (1, (6, 9, 14, 3), (2, 3, 4)),
++                                (2, (3, 14, 9, 6), (4, 3, 2)))
++                            for i in source_order for n in bounds)],
+               "violations": [], "fixed_policy": dict(POLICY), "maximum_workers": 1,
+               "read_reserve": False, "automatic_retries": 0}
+     atomic_json(output / "batch_receipt.json", report)
+--- calibergraph_next_20261011_06/code/official_generation_worker.py
++++ calibergraph_next_20261011_15/implementation/official_generation_worker.py
+@@ -22,8 +22,8 @@
+     protocol = dict(protocol, exact_rows_per_table=slot['exact_rows'])
+     args.out.mkdir(parents=True, exist_ok=True)
+     events = (args.out/'events.jsonl').open('x')
+-    record = {'id':slot['id'],'source_case_id':case['id'],'case_index':args.case_index,'status':'NOT_RUN','engineering_class':'NOT_RUN',
+-        'strict_class':'NOT_RUN','attempts':[],'active_stage':'WORKER_STARTUP'}
++    record = {'id':slot['id'],'source_case_id':case['id'],'repeat_id':slot['repeat_id'],'case_index':args.case_index,'status':'NOT_RUN','engineering_class':'NOT_RUN',
++        'strict_class':'NOT_RUN','attempts':[],'active_stage':'WORKER_STARTUP','source_and_structure_admission_cost':None}
+     report = {'status':'STARTED','record':record,'scope':'Registered input only; registered exact N official semantics, no business or cross-dialect gold'}
+     def save():
+         p = args.out/'results.json'; temp = p.with_suffix('.tmp')
+@@ -58,47 +58,65 @@
+         save()
+     exit_code = 2
+     try:
+-        src = case.get('source_record',{})
+-        record.update(id=slot['id'],source_group_id=case['source_group_id'],source=case.get('source',{}),
+-            provenance_class=source_class(case),original_source_record=src,
+-            provenance_eligibility=case.get('provenance_eligibility'),
+-            semantic_admission=case.get('semantic_admission',{}),status='STARTED',
+-            natural_contract_provenance='BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED')
+-        registered_provenance = case.get('provenance_eligibility',{})
+-        if not isinstance(registered_provenance,dict) or registered_provenance.get('contract_source') != record['provenance_class']:
+-            raise ValueError('REGISTRAR_CONTRACT_PROVENANCE_MISMATCH')
+-        report.update(protocol_sha256=sha(args.protocol),input=protocol['input'],
+-            code_sha256={name:sha(Path(__file__).with_name(name)) for name in (
+-                'official_generation_worker.py','official_generation_backend.py','official_contract_admission.py',
+-                'generation_common.py','safe_sqlite_replay.py')},
+-            registered_group_count=len(protocol['source_case_indices']),registered_slot=slot,denominator_unchanged=True)
+-        save()
+-        budget = Budget(protocol, process_start)
+         record['active_stage'] = 'SOURCE_AND_STRUCTURE_ADMISSION'
+         emit('STAGE_START',record)
+-        if 'constraint' not in src or src.get('constraint') is None or 'schema' not in src:
+-            record.update(status='RETURNED',engineering_class='CONTRACT_SOURCE_INSUFFICIENT',strict_class='CONTRACT_SOURCE_INSUFFICIENT')
+-        else:
+-            if not isinstance(src.get('pair'),list) or len(src['pair'])!=2 or not all(isinstance(q,str) and q.strip() for q in src['pair']):
+-                raise ValueError('ORIGINAL_PAIR_SOURCE_INSUFFICIENT')
+-            import hashlib
+-            sqlhash = [hashlib.sha256(q.encode()).hexdigest() for q in src['pair']]
+-            if sqlhash != case.get('original_sql_sha256'):
+-                raise ValueError('ORIGINAL_SQL_HASH_MISMATCH')
+-            record.update(original_sql_sha256=sqlhash,schema_sha256=objsha(src['schema']),constraint_sha256=objsha(src['constraint']))
+-            for key in ('schema_sha256','constraint_sha256'):
+-                if case.get(key) is not None and case[key]!=record[key]:
+-                    raise ValueError('ORIGINAL_'+key.upper()+'_MISMATCH')
+-            try:
+-                record['structural_admission'] = validate_schema_and_contract(src['schema'],src['constraint'])
+-            except AdmissionError as exc:
+-                record.update(status='RETURNED',engineering_class=exc.kind,strict_class=exc.kind,
+-                    failure_stage='SOURCE_AND_STRUCTURE_ADMISSION',reason=exc.reason)
++        admission_wall, admission_cpu = time.monotonic(), cpu()
++        admission_status = 'STARTED'
++        structurally_admitted = False
++        try:
++            src = case.get('source_record',{})
++            record.update(id=slot['id'],source_group_id=case['source_group_id'],source=case.get('source',{}),
++                provenance_class=source_class(case),original_source_record=src,
++                provenance_eligibility=case.get('provenance_eligibility'),
++                semantic_admission=case.get('semantic_admission',{}),status='STARTED',
++                natural_contract_provenance='BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED')
++            registered_provenance = case.get('provenance_eligibility',{})
++            if not isinstance(registered_provenance,dict) or registered_provenance.get('contract_source') != record['provenance_class']:
++                raise ValueError('REGISTRAR_CONTRACT_PROVENANCE_MISMATCH')
++            report.update(protocol_sha256=sha(args.protocol),input=protocol['input'],
++                code_sha256={name:sha(Path(__file__).with_name(name)) for name in (
++                    'official_generation_worker.py','official_generation_backend.py','official_contract_admission.py',
++                    'generation_common.py','safe_sqlite_replay.py')},
++                registered_group_count=len(protocol['source_case_indices']),registered_slot=slot,denominator_unchanged=True)
++            save()
++            budget = Budget(protocol, process_start)
++            if 'constraint' not in src or src.get('constraint') is None or 'schema' not in src:
++                record.update(status='RETURNED',engineering_class='CONTRACT_SOURCE_INSUFFICIENT',strict_class='CONTRACT_SOURCE_INSUFFICIENT')
+             else:
+-                emit('STRUCTURAL_ADMISSION_COMPLETE',record)
+-                rt = load_runtime(protocol,budget,emit)
+-                report['runtime'] = rt.initialization
+-                run_case(rt,case,protocol,budget,emit,record)
++                if not isinstance(src.get('pair'),list) or len(src['pair'])!=2 or not all(isinstance(q,str) and q.strip() for q in src['pair']):
++                    raise ValueError('ORIGINAL_PAIR_SOURCE_INSUFFICIENT')
++                import hashlib
++                sqlhash = [hashlib.sha256(q.encode()).hexdigest() for q in src['pair']]
++                if sqlhash != case.get('original_sql_sha256'):
++                    raise ValueError('ORIGINAL_SQL_HASH_MISMATCH')
++                record.update(original_sql_sha256=sqlhash,schema_sha256=objsha(src['schema']),constraint_sha256=objsha(src['constraint']))
++                for key in ('schema_sha256','constraint_sha256'):
++                    if case.get(key) is not None and case[key]!=record[key]:
++                        raise ValueError('ORIGINAL_'+key.upper()+'_MISMATCH')
++                try:
++                    record['structural_admission'] = validate_schema_and_contract(src['schema'],src['constraint'])
++                except AdmissionError as exc:
++                    record.update(status='RETURNED',engineering_class=exc.kind,strict_class=exc.kind,
++                        failure_stage='SOURCE_AND_STRUCTURE_ADMISSION',reason=exc.reason)
++                else:
++                    emit('STRUCTURAL_ADMISSION_COMPLETE',record)
++                    structurally_admitted = True
++            admission_status = 'RETURNED'
++        except BaseException:
++            admission_status = 'RAISED'
++            raise
++        finally:
++            record['source_and_structure_admission_cost'] = {
++                'status':admission_status,'wall_seconds':time.monotonic()-admission_wall,
++                'cpu_seconds':cpu()-admission_cpu,
++                'scope':'Source/provenance/hash/structural admission plus in-phase persistence; excludes boundary event writes and earlier worker/registry startup. Hard termination may censor this phase.'}
++            record['latest_stage'] = 'SOURCE_AND_STRUCTURE_ADMISSION'
++            record['active_stage'] = None
++            emit('STAGE_END',record)
++        if structurally_admitted:
++            rt = load_runtime(protocol,budget,emit)
++            report['runtime'] = rt.initialization
++            run_case(rt,case,protocol,budget,emit,record)
+         report['status'] = 'REGISTERED_GROUP_ATTEMPT_RETURNED'
+         exit_code = 0
+     except BaseException as exc:
+--- calibergraph_next_20261011_06/code/official_generation_backend.py
++++ calibergraph_next_20261011_15/implementation/official_generation_backend.py
+@@ -1,6 +1,6 @@
+-"""Round 06 official generation preparation; no target imports at module import.
+-
+-One registered pair per process, complete input, independent Environment on retry.
++"""Round 15 official generation preparation; no target imports at module import.
++
++One registered pair per process, complete input, one independent Environment only.
+ The caller must enforce external process wall/RSS and global CPU accounting.
+ """
+ from contextlib import contextmanager
+@@ -235,6 +235,7 @@
+         self.target, self.rec, self.protocol, self.budget, self.emit = target, rec, protocol, budget, emit
+         self.answer = None
+         self.started_wall, self.started_cpu = time.monotonic(), cpu()
++        self.rec['comparison_formula_encode_status'] = 'STARTED'
+ 
+     def __getattr__(self, name):
+         return getattr(self.target, name)
+@@ -244,6 +245,7 @@
+             raise ValueError('UNEXPECTED_OFFICIAL_CHECK_ASSUMPTIONS')
+         self.rec['comparison_formula_encode'] = {'wall_seconds':time.monotonic()-self.started_wall,
+             'cpu_seconds':cpu()-self.started_cpu}
++        self.rec['comparison_formula_encode_status'] = 'REACHED_QUERY_CHECK'
+         self.rec['submitted_query_assertion_count'] = len(self.target.assertions())
+         self.answer = check_solver(self.target, self.rec, 'OFFICIAL_QUERY_SOLVER_CHECK',
+             self.protocol['query_check_timeout_ms'], self.budget, self.emit)
+@@ -257,6 +259,8 @@
+         'environment_identity':'new independent Environment and Solver; full schema/C/query re-encoded',
+         'exact_rows':{t:protocol['exact_rows_per_table'] for t in src['schema']},
+         'raw_query_verdict':None, 'full_C_nonempty':None,
++        'comparison_formula_encode':None,
++        'comparison_formula_encode_status':'NOT_REACHED',
+         'contract_model_sanity': {'status': 'NOT_REACHED' if case['id'] in ('dev03_10', 'dev03_15') else 'NOT_ADMITTED',
+             'model_origin': 'FULL_C_NONEMPTY_CHECK', 'scope': 'C_MODEL_SANITY_ONLY_NOT_QUERY_SAT',
+             'query_sat_witness': False, 'method_claim': 'EXISTING_C_SAMPLING_SANITY_CONTROL_ONLY'}}
+@@ -350,11 +354,23 @@
+         env.solver = tap
+         rec['active_stage'] = 'OFFICIAL_COMPARISON_FORMULA_ENCODING'
+         emit('STAGE_START', rec)
++        comparison_returned = False
+         try:
+-            rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])
+-        except Exception:
+-            if str(tap.answer) != 'unknown':
+-                raise
++            try:
++                rec['official_compare_return'] = original_compare(captured['tables'], captured['result_formulas'])
++            except Exception:
++                if str(tap.answer) != 'unknown':
++                    raise
++            comparison_returned = True
++        finally:
++            # Pure measurement: no added solver call or budget extension. If a
++            # hard signal prevents finally, STARTED remains censored, not zero.
++            if rec.get('comparison_formula_encode') is None:
++                rec['comparison_formula_encode'] = {
++                    'wall_seconds':time.monotonic()-tap.started_wall,
++                    'cpu_seconds':cpu()-tap.started_cpu}
++                rec['comparison_formula_encode_status'] = (
++                    'RETURNED_WITHOUT_QUERY_CHECK' if comparison_returned else 'RAISED_BEFORE_QUERY_CHECK')
+         rec['latest_stage'] = 'OFFICIAL_COMPARISON_FORMULA_ENCODING_AND_CHECK_RETURNED'
+         rec['active_stage'] = None
+         emit('OFFICIAL_COMPARE_END',rec)
+@@ -417,7 +433,7 @@
+         parse_cpu = sum(s.get('cpu_seconds',0) for s in rec['stages'] if s['name'].startswith('OFFICIAL_PARSE_QUERY_'))
+         analyze_cpu = sum(s.get('cpu_seconds',0) for s in rec['stages'] if s['name']=='OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE')
+         rec['exclusive_phase_cpu'] = {'parse':parse_cpu,'scope_encode':max(0,analyze_cpu-parse_cpu),
+-            'compare_encode':rec.get('comparison_formula_encode',{}).get('cpu_seconds'),
++            'compare_encode':(rec.get('comparison_formula_encode') or {}).get('cpu_seconds'),
+             'query_check':sum(s.get('actual_check_cpu_seconds',0) for s in rec['stages'] if s['name']=='OFFICIAL_QUERY_SOLVER_CHECK')}
+         rec['attempt_cost'] = {'cpu_seconds':cpu()-c, 'wall_seconds':time.monotonic()-w,
+             'worker_peak_rss_bytes_macos':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss}

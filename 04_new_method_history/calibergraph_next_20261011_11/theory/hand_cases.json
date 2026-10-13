@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "evidence_type": "HAND_DERIVATION_ONLY; NO_PROGRAM_EXECUTION",
+  "cases": [
+    {
+      "id": "H11_ONE_WAY_CLOSURE_IMAGE_NOT_IMAGE_CLOSURE",
+      "schema": "R(k,v), PK k, no FK",
+      "body": ["R(a,b)", "R(b,c)", "R(d,e)"],
+      "head": [],
+      "M": ["e"],
+      "N": ["b"],
+      "C": ["e"],
+      "D": ["b","c"],
+      "endomorphism": {"a":"a","b":"b","c":"c","d":"a","e":"b"},
+      "weak_forward": true,
+      "literal_forward_for_this_map": false,
+      "legal_instance": {"R":[[1,2],[2,3]]},
+      "counts": {"M":2,"N":1},
+      "purpose": "Shows why P11 requires both directions; not a counterexample to P11."
+    },
+    {
+      "id": "H11_NONANCHORABLE_SELFJOIN_EXPANSION",
+      "schema": "X(x,y) PK x; C(c,x) PK c, FK x to X.x",
+      "body": ["X(x,y)","C(c,x)","C(d,x)"],
+      "head": [],
+      "M": ["x"],
+      "N": ["x","y"],
+      "closed_indices_both": ["x","y"],
+      "witness_maps": "identity in both directions after FD index expansion",
+      "legal_instance": {"X":[[11,7],[12,7]],"C":[[21,11],[22,12],[23,11]]},
+      "counts": {"M":2,"N":2,"full_assignments":5},
+      "purpose": "Exact CEQ embedding, FD expansion, existential deduplication, and a concrete case outside counted-only-key anchorability."
+    },
+    {
+      "id": "H11_DIVERSIFICATION_BREAKS_PK",
+      "schema": "R(k,v), PK k",
+      "legal_original": {"R":[["a","b"]]},
+      "colors": {"a":1,"b":2},
+      "diversified": {"R":[["a","b1"],["a","b2"]]},
+      "diversified_is_legal": false,
+      "purpose": "Explains why the unconstrained necessity database cannot simply be substituted into a constrained-equivalence premise; does not refute repaired completeness."
+    },
+    {
+      "id": "H11_CYCLIC_FK_NONTERMINATING_STANDARD_CHASE",
+      "schema": "R(k,next), PK k, FK next to R.k",
+      "initial_body": ["R(x,y)"],
+      "fresh_witness_chase_prefix": ["R(x,y)","R(y,z1)","R(z1,z2)","R(z2,z3)"],
+      "chase_continues_indefinitely": true,
+      "finite_legal_instance": {"R":[["a","a"]]},
+      "purpose": "Distinguishes ordinary chase termination from decidability and finite-model existence."
+    },
+    {
+      "id": "H11_NESTED_CORE_DEFINITION_CAVEAT",
+      "schema": "R(A,B,C); general FDs A->B and B->A; not the PK-only target schema",
+      "CEQ": "Q(A,B;C;C) <- R(A,B,C)",
+      "signature": "sb",
+      "inner_core": ["C"],
+      "incomparable_minimal_outer_candidates_under_Sigma_MVD_test": [["A"],["B"]],
+      "empty_outer_candidate_countermodel": {"R":[["a1","b1","c1"],["a2","b2","c2"]]},
+      "unchanged_unconstrained_hypergraph_outer_core": ["A","B"],
+      "purpose": "Literal general-FD nested normalization needs a candidate-closure/uniqueness clarification. Does not refute depth-one bag branch or any repaired normalization."
+    }
+  ]
+}

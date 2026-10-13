@@ -1,0 +1,43 @@
+{
+  "verdict": "ACCEPTED_WITH_STATED_SCOPE",
+  "must_fix": [],
+  "final_documents_consistent": true,
+  "independent_original_SQL_replay_passed": true,
+  "original_constraints": 7,
+  "original_tables": 3,
+  "original_columns": 64,
+  "denominator_slots": 2,
+  "validated_NEQ": 2,
+  "distinct_concrete_databases": 1,
+  "native_solver_checks": 3,
+  "review_solver_calls": 0,
+  "review_foreign_process_probes": 0,
+  "owned_handles_reaped": 5,
+  "batch_elapsed_s": 1.292468209285289,
+  "frozen_hashes_checked": 353,
+  "preserved_hashes_checked": 351,
+  "old_15_gate": false,
+  "new_16_gate": true,
+  "aggregate_RSS_verified": false,
+  "coverage": {
+    "valid_inputs": 8,
+    "invalid_inputs": 2,
+    "with_run_evidence": 3,
+    "not_admitted": 5
+  },
+  "interpretation": "Exposed development case solved under specific N<=1 observation quotient; no unmodified baseline, generic types, novelty, superiority, or independent-test claim.",
+  "backup_completion_verified": false,
+  "reviewed_document_sha256": {
+    "calibergraph_polygon_case1172_20261012_16/RESULT.zh.md": "1712a2ab29ae89cd026fc95039403e0937c6eed637e21462b9af44a23b69cca5",
+    "calibergraph_polygon_case1172_20261012_16/RECOVERY.zh.md": "30e997c837a2918f51b81ef5d8773a18169a5972de4c7ba5ae05963e9b05be81",
+    "calibergraph_polygon_case1172_20261012_16/SUMMARY.json": "ba3b361aad7b6d2725cc4c2efb41ca3e390e33c95b75253df3d6d6a61db6659f",
+    "calibergraph_polygon_case1172_20261012_16/STAGES.csv": "f54f1bcd7e7d7c74318b8d02d82514d32c0dd3f875ca3fc8a707c8c3b8738251",
+    "calibergraph_polygon_case1172_20261012_16/BATCH_CLOSED.json": "4413a73e128634ea1e8fbdf529d0ee75b21a317203d25cc3d66c3aa48af78ab0",
+    "calibergraph_polygon_case1172_20261012_16/review_local/independent_replay.py": "b7ee44d4248df8bbc3900e1f4e84f621031683cd3ee64d7143e495dc47a4a65c",
+    "calibergraph_polygon_case1172_20261012_16/review_local/independent_replay.json": "c681de1f2df6dec96e10d53de3dfe8c25135fc990d75ace69c2a5c4792761d06",
+    "calibergraph_polygon_case1172_20261012_16/review_local/final_document_check.py": "98c3acf4c7c2b8f7c3a287bab5887b0bb5c0b3d7dcb2500b23ec6b6bb7f7b954",
+    "calibergraph_polygon_case1172_20261012_16/review_local/INDEPENDENT_REVIEW.zh.md": "98d92b9a53313ef7029e617f524d598d50c6036c6473d71b87549d06757e7b13",
+    "calibergraph_polygon_pilot_20261012_13/RESULT.zh.md": "f4919ade2bd18541495f1ebd2a1f30129de1d99f6d7769d97a8d5dfdcf09257e",
+    "calibergraph_polygon_coverage_20261012_14/RESULT.zh.md": "520931674a2fce6c5101853704977b0e3ab147f5873b99471f91b79168ebd56e"
+  }
+}

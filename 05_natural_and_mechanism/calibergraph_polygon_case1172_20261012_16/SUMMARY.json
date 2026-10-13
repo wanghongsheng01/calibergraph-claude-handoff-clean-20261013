@@ -1,0 +1,112 @@
+{
+  "case": "thrombosis_prediction__1172",
+  "batch_wall_s": 1.292468209285289,
+  "wall_budget_s": 60,
+  "source_rows_bound": 1,
+  "slots": [
+    {
+      "mode": "UA",
+      "status": "VALIDATED_NEQ",
+      "original_outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "z3_calls": 2,
+      "z3_states": [
+        "SAT",
+        "SAT"
+      ],
+      "wall_s": 0.8917383328080177,
+      "stages_seconds": {
+        "imports": 0.13259620778262615,
+        "schema_C": 0.003769457805901766,
+        "parse": 0.18914433242753148,
+        "encode": 0.010519834235310555,
+        "search_including_solver": 0.45583924977108836,
+        "solver_calls": 0.45305349910631776,
+        "decode": 0.002951208967715502,
+        "replay": 0.0012452080845832825
+      },
+      "abstract_witness_sha256": "f8e6bc1f98c0f73d432316590e654a2e69821efe41a4ce068d7d468272c07201",
+      "concrete_witness_sha256": "9bb3e2ccc0ea6afd2447020234e7ab26e9f52a7f7a7b430a2882bbdd9c47ceb6",
+      "source_row_counts": {
+        "Examination": 1,
+        "Patient": 1,
+        "Laboratory": 1
+      },
+      "model_ID": 58,
+      "model_TBIL": 2,
+      "model_Date": 59,
+      "concrete_TBIL": 2.0,
+      "native_stderr_empty": true
+    },
+    {
+      "mode": "precise",
+      "status": "VALIDATED_NEQ",
+      "original_outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "z3_calls": 1,
+      "z3_states": [
+        "SAT"
+      ],
+      "wall_s": 0.39941275026649237,
+      "stages_seconds": {
+        "imports": 0.10255549987778068,
+        "schema_C": 0.001345749944448471,
+        "parse": 0.1864709579385817,
+        "encode": 0.010681250598281622,
+        "search_including_solver": 0.010517042130231857,
+        "solver_calls": 0.009031749796122313,
+        "decode": 0.0009991670958697796,
+        "replay": 0.0005559171549975872
+      },
+      "abstract_witness_sha256": "f8e6bc1f98c0f73d432316590e654a2e69821efe41a4ce068d7d468272c07201",
+      "concrete_witness_sha256": "9bb3e2ccc0ea6afd2447020234e7ab26e9f52a7f7a7b430a2882bbdd9c47ceb6",
+      "source_row_counts": {
+        "Examination": 1,
+        "Patient": 1,
+        "Laboratory": 1
+      },
+      "model_ID": 58,
+      "model_TBIL": 2,
+      "model_Date": 59,
+      "concrete_TBIL": 2.0,
+      "native_stderr_empty": true
+    }
+  ],
+  "counts": {
+    "planned": 2,
+    "attempted": 2,
+    "validated_NEQ": 2,
+    "bounded_UNSAT": 0,
+    "unknown": 0,
+    "timeout": 0,
+    "error": 0,
+    "invalid_witness": 0,
+    "not_run": 0,
+    "scientific_retries": 0
+  },
+  "owned_handles": 5,
+  "all_reaped": true,
+  "new_control_seed_used": false,
+  "development_only": true,
+  "interpretation": "Source-specific N=1 observation quotient adaptation; no scientific superiority evidence and no unmodified baseline timing claim"
+}

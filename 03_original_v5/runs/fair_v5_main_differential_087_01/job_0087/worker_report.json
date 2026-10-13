@@ -1,0 +1,701 @@
+{
+  "status": "COMPLETE",
+  "native_load": "LOADED",
+  "environment_import": "IMPORTED",
+  "pid": 13684,
+  "kind": "differential",
+  "job_index": 87,
+  "runtime_lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+  "suite_sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485",
+  "solver_threads": 1,
+  "attempts": [],
+  "fallback": {
+    "status": "NOT_NEEDED"
+  },
+  "job": {
+    "case_index": 14,
+    "case_id": "E03_variable_product_commutativity",
+    "arm": "flat",
+    "query_index": 1,
+    "kind": "differential"
+  },
+  "input": {
+    "id": "E03_variable_product_commutativity",
+    "schema": {
+      "F": {
+        "K": "INT",
+        "L": "INT",
+        "V": "INT"
+      },
+      "D": {
+        "ID": "INT",
+        "P": "INT"
+      },
+      "E": {
+        "ID": "INT",
+        "Q": "INT"
+      }
+    },
+    "exact_rows": {
+      "F": 2,
+      "D": 2,
+      "E": 2
+    },
+    "constraint": [
+      {
+        "between": [
+          "F__V",
+          -8,
+          8
+        ]
+      },
+      {
+        "between": [
+          "F__L",
+          -8,
+          8
+        ]
+      }
+    ],
+    "pair": [
+      "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID",
+      "SELECT SUM(F.L*F.V) FROM F JOIN D ON F.K=D.ID"
+    ],
+    "arm_order": [
+      "flat",
+      "product",
+      "selector",
+      "official_canonical_sql",
+      "official",
+      "official_generic_smt"
+    ],
+    "origin": {
+      "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+      "author": "AI-authored analytical control; no human gold",
+      "purpose": "Root variable product; predeclared bounded constructed ICs, still nonlinear syntax; no global LIA claim."
+    },
+    "contract_expectation": {
+      "satisfiability": "sat",
+      "basis": "analytical; runtime must establish independently",
+      "pair_unsat_must_not_substitute_for_contract_sat": true
+    },
+    "point_database": {
+      "F": [
+        [
+          1,
+          3,
+          2
+        ],
+        [
+          2,
+          4,
+          5
+        ]
+      ],
+      "D": [
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "E": [
+        [
+          10,
+          0
+        ],
+        [
+          20,
+          1
+        ]
+      ]
+    },
+    "point_expected_relations": [
+      [
+        [
+          26
+        ]
+      ],
+      [
+        [
+          26
+        ]
+      ]
+    ],
+    "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+    "expected": "unsat"
+  },
+  "data_role": "EXPOSED_DEV_PLUS_CONSTRUCTED_ANALYTICAL_CONTROLS_NOT_HELDOUT",
+  "source_provenance": {
+    "inherited_registration_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "inherited_registration_sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746",
+    "original_22_cases_preserved_exactly": true,
+    "inherited_original_provenance": {
+      "original_stress_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/REGISTERED_STRESS_01.json",
+      "sha256": "f79f1495e72c3dd99721e27bb69ff1bdfa8415dd1e335b5f96fa8c5b3cb2ccd4",
+      "original_N2_N4_cases_preserved": 12,
+      "new_constructed_cases": 10,
+      "N8": "not in this suite; prior N8 registration remains separate, no claim of running it"
+    },
+    "bridge_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/contract_bridge_v1/contract_reference.py",
+    "bridge_source_sha256": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "new_controls": "Six source-derived constructed repair controls D01-D06; expected labels analytical only, not measured."
+  },
+  "final_decision": "UNSAT_DIFFERENTIAL",
+  "scientific_result": "PER_QUERY_MAPPING_DIAGNOSTIC_NOT_FULL_GENERAL_PROOF",
+  "phase": "FINAL_COMPLETE",
+  "resource_last_checkpoint": {
+    "worker_wall_seconds": 1.4556332090869546,
+    "cpu_seconds": 1.452132,
+    "maxrss_bytes_darwin": 114245632,
+    "python_threads": [
+      {
+        "name": "MainThread",
+        "daemon": false
+      }
+    ]
+  },
+  "native_identity": {
+    "pinned_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+    "sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+    "version": [
+      4,
+      12,
+      0,
+      0
+    ],
+    "binding_pointer": 4356394420,
+    "pinned_pointer": 4356394420,
+    "method": "same_process_function_identity_plus_locked_source"
+  },
+  "module_origins": {
+    "pkg_resources": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support/pkg_resources/__init__.py",
+    "z3.z3types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3types.py",
+    "z3.z3consts": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3consts.py",
+    "z3.z3core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3core.py",
+    "z3.z3printer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3printer.py",
+    "z3.z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3.py",
+    "z3.z3num": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3num.py",
+    "z3.z3poly": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3poly.py",
+    "z3.z3rcf": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3rcf.py",
+    "z3.z3util": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/z3util.py",
+    "z3": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official/z3/__init__.py",
+    "ordered_set": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0/ordered_set/__init__.py",
+    "ujson": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0/ujson.cpython-312-darwin.so",
+    "constants": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/constants.py",
+    "yaml.error": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/error.py",
+    "yaml.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/tokens.py",
+    "yaml.events": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/events.py",
+    "yaml.nodes": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/nodes.py",
+    "yaml.reader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/reader.py",
+    "yaml.scanner": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/scanner.py",
+    "yaml.parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/parser.py",
+    "yaml.composer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/composer.py",
+    "yaml.constructor": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/constructor.py",
+    "yaml.resolver": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/resolver.py",
+    "yaml.loader": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/loader.py",
+    "yaml.emitter": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/emitter.py",
+    "yaml.serializer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/serializer.py",
+    "yaml.representer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/representer.py",
+    "yaml.dumper": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/dumper.py",
+    "yaml._yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/_yaml.cpython-312-darwin.so",
+    "yaml.cyaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/cyaml.py",
+    "yaml": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2/yaml/__init__.py",
+    "lark.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/utils.py",
+    "lark.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/exceptions.py",
+    "lark.grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/grammar.py",
+    "lark.lexer": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lexer.py",
+    "lark.tree": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/tree.py",
+    "lark.visitors": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/visitors.py",
+    "lark.parse_tree_builder": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parse_tree_builder.py",
+    "lark.parsers": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/__init__.py",
+    "lark.common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/common.py",
+    "lark.parsers.grammar_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/grammar_analysis.py",
+    "lark.parsers.earley_common": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_common.py",
+    "lark.parsers.earley_forest": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley_forest.py",
+    "lark.parsers.earley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/earley.py",
+    "lark.parsers.xearley": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/xearley.py",
+    "lark.parsers.cyk": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/cyk.py",
+    "lark.parsers.lalr_analysis": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_analysis.py",
+    "lark.parsers.lalr_interactive_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_interactive_parser.py",
+    "lark.parsers.lalr_parser_state": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser_state.py",
+    "lark.parsers.lalr_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parsers/lalr_parser.py",
+    "lark.parser_frontends": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/parser_frontends.py",
+    "lark.load_grammar": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/load_grammar.py",
+    "lark.lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/lark.py",
+    "lark": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9/lark/__init__.py",
+    "mo_future": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303/mo_future/__init__.py",
+    "mo_imports": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201/mo_imports/__init__.py",
+    "mo_dots.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/utils.py",
+    "mo_dots.lists": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/lists.py",
+    "mo_dots.nones": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/nones.py",
+    "mo_dots.datas": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/datas.py",
+    "mo_dots.objects": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/objects.py",
+    "mo_dots": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201/mo_dots/__init__.py",
+    "mo_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/utils.py",
+    "mo_parsing.exceptions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/exceptions.py",
+    "mo_parsing.results": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/results.py",
+    "mo_parsing.core": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/core.py",
+    "mo_parsing.whitespaces": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/whitespaces.py",
+    "mo_parsing.enhancement": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/enhancement.py",
+    "mo_parsing.tokens": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/tokens.py",
+    "mo_parsing.expressions": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/expressions.py",
+    "mo_parsing.infix": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/infix.py",
+    "mo_parsing.regex": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/regex.py",
+    "mo_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252/mo_parsing/__init__.py",
+    "mo_sql_parsing.utils": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/utils.py",
+    "mo_sql_parsing.keywords": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/keywords.py",
+    "mo_sql_parsing.types": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/types.py",
+    "mo_sql_parsing.windows": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/windows.py",
+    "mo_sql_parsing.sql_parser": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/sql_parser.py",
+    "mo_sql_parsing": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260/mo_sql_parsing/__init__.py",
+    "environment": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py"
+  },
+  "raw_frontend_guard": {
+    "status": "ADMITTED",
+    "query_count": 2,
+    "contract": "ASCII simple schema names without __ or case-fold collisions; raw SQL without backticks, double quotes or dollars",
+    "scope": "conservative identifier-safety gate, not a proof of all upstream SQL semantics"
+  },
+  "actual_verifier_semantics": {
+    "requested_semantics": null,
+    "observed_wrapper_class": "verifiers.verifier.Verifier",
+    "actual_run_method": "verifiers.verifier.Verifier.run",
+    "run_source": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/verifiers/verifier.py",
+    "run_source_sha256": "9c8e51d9623ee8109afb7737e12446d7241b38c78e3723e0c13235ea4481aa07",
+    "dispatch_constructors_in_locked_run_ast": [
+      "BagSemanticsVerifier",
+      "ListSemanticsVerifier"
+    ],
+    "implemented_auto_policy": "AUTO_BAG_UNORDERED_LIST_ORDERED",
+    "evidence_kind": "runtime wrapper identity plus static locked dispatch; local dispatch instance is not instrumented",
+    "all_null_is_deleted": "ATTRIBUTE_NOT_PRESENT",
+    "scalar_boundary": "Set and bag comparison agree for one live scalar output; this does not mean the engine implements bag semantics."
+  },
+  "contract_bridge": {
+    "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+    "original_ast": [
+      {
+        "between": [
+          "F__V",
+          -8,
+          8
+        ]
+      },
+      {
+        "between": [
+          "F__L",
+          -8,
+          8
+        ]
+      }
+    ],
+    "original_ast_sha256": "a434e53097b1c3085c3d227fbdb613b14060d05aaa4aca5e4f23cb2c2faed0d9",
+    "scope": "registered source AST faithfulness; no source-text parser completeness claim",
+    "base_only_sat": {
+      "status": "sat",
+      "assertion_count": 48,
+      "assertion_sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa"
+    },
+    "normalized_vs_reference": {
+      "status": "unsat",
+      "assertion_count": 49,
+      "assertion_sha256": "d45dd6970dd9932e737d9d5e76acde45aca2813d3353af9781bb1ff314e731ff"
+    },
+    "compilation": {
+      "status": "COMPILED_NORMALIZED_COPY",
+      "original_ast_passed_to_upstream": false,
+      "delta_fact_count": 2,
+      "actual_formula": "(and (<= (- 8) (F__V t1))\n     (not (NULL t1 F__V__String))\n     (<= (- 8) (F__V t2))\n     (not (NULL t2 F__V__String))\n     (>= 8 (F__V t1))\n     (not (NULL t1 F__V__String))\n     (>= 8 (F__V t2))\n     (not (NULL t2 F__V__String))\n     (<= (- 8) (F__L t1))\n     (not (NULL t1 F__L__String))\n     (<= (- 8) (F__L t2))\n     (not (NULL t2 F__L__String))\n     (>= 8 (F__L t1))\n     (not (NULL t1 F__L__String))\n     (>= 8 (F__L t2))\n     (not (NULL t2 F__L__String)))",
+      "reference_formula": "(and (not (NULL t1 F__V__String))\n     (<= (- 8) (F__V t1))\n     (>= 8 (F__V t1))\n     (not (NULL t2 F__V__String))\n     (<= (- 8) (F__V t2))\n     (>= 8 (F__V t2))\n     (not (NULL t1 F__L__String))\n     (<= (- 8) (F__L t1))\n     (>= 8 (F__L t1))\n     (not (NULL t2 F__L__String))\n     (<= (- 8) (F__L t2))\n     (>= 8 (F__L t2)))"
+    },
+    "normalized_ast": [
+      {
+        "and": [
+          {
+            "gte": [
+              {
+                "value": "F__V"
+              },
+              -8
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "F__V"
+              },
+              8
+            ]
+          }
+        ]
+      },
+      {
+        "and": [
+          {
+            "gte": [
+              {
+                "value": "F__L"
+              },
+              -8
+            ]
+          },
+          {
+            "lte": [
+              {
+                "value": "F__L"
+              },
+              8
+            ]
+          }
+        ]
+      }
+    ],
+    "normalized_ast_sha256": "b302a2006cdc307f9fe00b9bb661536190be9ba09175c5729d2bf0450f589de8",
+    "ledger": [
+      {
+        "source_path": "$/0",
+        "source_ast": {
+          "between": [
+            "F__V",
+            -8,
+            8
+          ]
+        },
+        "normalized_ast": {
+          "and": [
+            {
+              "gte": [
+                {
+                  "value": "F__V"
+                },
+                -8
+              ]
+            },
+            {
+              "lte": [
+                {
+                  "value": "F__V"
+                },
+                8
+              ]
+            }
+          ]
+        },
+        "source_operator": "between",
+        "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+      },
+      {
+        "source_path": "$/1",
+        "source_ast": {
+          "between": [
+            "F__L",
+            -8,
+            8
+          ]
+        },
+        "normalized_ast": {
+          "and": [
+            {
+              "gte": [
+                {
+                  "value": "F__L"
+                },
+                -8
+              ]
+            },
+            {
+              "lte": [
+                {
+                  "value": "F__L"
+                },
+                8
+              ]
+            }
+          ]
+        },
+        "source_operator": "between",
+        "null_policy": "STRICT_TRUE_ALL_ROWS_OF_REFERENCED_TABLE"
+      }
+    ],
+    "schema_roundtrip": "SUPPORTED_UNIQUE_UPPERCASE_ENCODING",
+    "reference_source_sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "base_only": {
+      "facts": [
+        "(not (DELETED t1))",
+        "(= (F__K t1) String_x1__Int)",
+        "(= (F__L t1) String_x2__Int)",
+        "(= (F__V t1) String_x3__Int)",
+        "(not (DELETED t2))",
+        "(= (F__K t2) String_x4__Int)",
+        "(= (F__L t2) String_x5__Int)",
+        "(= (F__V t2) String_x6__Int)",
+        "(<= (- 2147483648) (F__K t1))",
+        "(>= 2147483647 (F__K t1))",
+        "(<= (- 2147483648) (F__L t1))",
+        "(>= 2147483647 (F__L t1))",
+        "(<= (- 2147483648) (F__V t1))",
+        "(>= 2147483647 (F__V t1))",
+        "(<= (- 2147483648) (F__K t2))",
+        "(>= 2147483647 (F__K t2))",
+        "(<= (- 2147483648) (F__L t2))",
+        "(>= 2147483647 (F__L t2))",
+        "(<= (- 2147483648) (F__V t2))",
+        "(>= 2147483647 (F__V t2))",
+        "(not (DELETED t3))",
+        "(= (D__ID t3) String_x7__Int)",
+        "(= (D__P t3) String_x8__Int)",
+        "(not (DELETED t4))",
+        "(= (D__ID t4) String_x9__Int)",
+        "(= (D__P t4) String_x10__Int)",
+        "(<= (- 2147483648) (D__ID t3))",
+        "(>= 2147483647 (D__ID t3))",
+        "(<= (- 2147483648) (D__P t3))",
+        "(>= 2147483647 (D__P t3))",
+        "(<= (- 2147483648) (D__ID t4))",
+        "(>= 2147483647 (D__ID t4))",
+        "(<= (- 2147483648) (D__P t4))",
+        "(>= 2147483647 (D__P t4))",
+        "(not (DELETED t5))",
+        "(= (E__ID t5) String_x11__Int)",
+        "(= (E__Q t5) String_x12__Int)",
+        "(not (DELETED t6))",
+        "(= (E__ID t6) String_x13__Int)",
+        "(= (E__Q t6) String_x14__Int)",
+        "(<= (- 2147483648) (E__ID t5))",
+        "(>= 2147483647 (E__ID t5))",
+        "(<= (- 2147483648) (E__Q t5))",
+        "(>= 2147483647 (E__Q t5))",
+        "(<= (- 2147483648) (E__ID t6))",
+        "(>= 2147483647 (E__ID t6))",
+        "(<= (- 2147483648) (E__Q t6))",
+        "(>= 2147483647 (E__Q t6))"
+      ],
+      "sha256": "d23bd3ad743ec9beadc6428e5d2f83a9fb971a1aa14e9d923e6f5a0b304c34aa",
+      "tested_ic_included": false,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      }
+    },
+    "complete_facts_sha256": "920168090f232943e0642d90944ea76ee8da834d38ed2ff6edb310b8fd190653",
+    "actual_contract": "upstream compiler of normalized copy; same verified C for all six arms and differential",
+    "no_pair_oracle_run": true
+  },
+  "contract_adapter_label": "CONTROLLED_NORMALIZED_SOURCE_AST_IC_ADAPTER_NOT_UNMODIFIED_UPSTREAM_IC_BEHAVIOR",
+  "contract_guard": {
+    "full_base_fact_count": 50,
+    "consistency": "sat",
+    "any_base_row_deleted": "unsat",
+    "base_fact_sha256": "920168090f232943e0642d90944ea76ee8da834d38ed2ff6edb310b8fd190653"
+  },
+  "pair_work_started": true,
+  "pair_work_status": "ATTEMPTED_EFFECT_UNKNOWN",
+  "differential": {
+    "status": "UNSAT_DIFFERENTIAL",
+    "sql": "SELECT SUM(F.L*F.V) FROM F JOIN D ON F.K=D.ID",
+    "mode": "flat",
+    "correctness_only": true,
+    "solver_timeout_ms": "DYNAMIC_REMAINING_BUDGET",
+    "solver_threads": 1,
+    "gates": {
+      "full_contract_sat": {
+        "status": "sat",
+        "premise_count": 50,
+        "timeout_ms": 12386,
+        "goal": null,
+        "assertions_sha256": "4e680644c2d709b034daa8666003fbe702f2b26419877ace37131458e7b8ccf5",
+        "check_wall_seconds": 0.004178875125944614,
+        "model_satisfies_all_submitted_formulas": true
+      },
+      "exact_rows_no_deletion": {
+        "status": "unsat",
+        "premise_count": 50,
+        "timeout_ms": 12375,
+        "goal": "(or (DELETED t1)\n    (DELETED t2)\n    (DELETED t3)\n    (DELETED t4)\n    (DELETED t5)\n    (DELETED t6))",
+        "assertions_sha256": "b04aa8762678ea5c1bc669c71d6485dcf35aafb176bc7e6dde57278d71d7fb09",
+        "check_wall_seconds": 0.0034728748723864555
+      },
+      "official_premise_sat": {
+        "status": "sat",
+        "premise_count": 60,
+        "timeout_ms": 12292,
+        "goal": null,
+        "assertions_sha256": "08bed1c7142eb0b2ed18746a7f298a528adf6a43e76b5976877fb1c4b1fb7aff",
+        "check_wall_seconds": 0.005612624809145927,
+        "model_satisfies_all_submitted_formulas": true
+      },
+      "official_scalar_shape": {
+        "status": "unsat",
+        "premise_count": 60,
+        "timeout_ms": 12275,
+        "goal": "(let ((a!1 (+ (ite (not (DELETED t15)) 1 0)\n              (ite (not (DELETED pity_tuple_of_Table6)) 1 0))))\n  (distinct 1 a!1))",
+        "assertions_sha256": "9df1ac2e450405df9250fb47ab42618c9b777f9e7aade51439b15b810fd918b3",
+        "check_wall_seconds": 0.00513633294031024
+      },
+      "joint_premise_sat": {
+        "status": "sat",
+        "premise_count": 60,
+        "timeout_ms": 12247,
+        "goal": null,
+        "assertions_sha256": "08bed1c7142eb0b2ed18746a7f298a528adf6a43e76b5976877fb1c4b1fb7aff",
+        "check_wall_seconds": 0.005435042083263397,
+        "model_satisfies_all_submitted_formulas": true
+      },
+      "output_mismatch": {
+        "status": "unsat",
+        "premise_count": 60,
+        "timeout_ms": 12230,
+        "goal": "(let ((a!1 (or (and (not (DELETED t15))\n                    (NULL t15 TABLE5__SUM_MUL_F__L_F__V__String))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (NULL pity_tuple_of_Table6\n                          TABLE5__SUM_MUL_F__L_F__V__String))))\n      (a!2 (and (not (DELETED t1))\n                (not (or (NULL t1 F__L__String) (NULL t1 F__V__String)))))\n      (a!5 (and (not (DELETED t2))\n                (not (or (NULL t2 F__L__String) (NULL t2 F__V__String)))))\n      (a!9 (ite (and (not (DELETED t15))\n                     (not (NULL t15 TABLE5__SUM_MUL_F__L_F__V__String)))\n                (TABLE5__SUM_MUL_F__L_F__V t15)\n                0))\n      (a!10 (ite (and (not (DELETED pity_tuple_of_Table6))\n                      (not (NULL pity_tuple_of_Table6\n                                 TABLE5__SUM_MUL_F__L_F__V__String)))\n                 (TABLE5__SUM_MUL_F__L_F__V pity_tuple_of_Table6)\n                 0)))\n(let ((a!3 (and a!2\n                (not (DELETED t3))\n                (not (NULL t1 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t1) (D__ID t3))))\n      (a!4 (and a!2\n                (not (DELETED t4))\n                (not (NULL t1 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t1) (D__ID t4))))\n      (a!6 (and a!5\n                (not (DELETED t3))\n                (not (NULL t2 F__K__String))\n                (not (NULL t3 D__ID__String))\n                (= (F__K t2) (D__ID t3))))\n      (a!7 (and a!5\n                (not (DELETED t4))\n                (not (NULL t2 F__K__String))\n                (not (NULL t4 D__ID__String))\n                (= (F__K t2) (D__ID t4)))))\n(let ((a!8 (= 0 (+ (ite a!3 1 0) (ite a!4 1 0) (ite a!6 1 0) (ite a!7 1 0))))\n      (a!11 (+ (ite a!3 (* (F__L t1) (F__V t1)) 0)\n               (ite a!4 (* (F__L t1) (F__V t1)) 0)\n               (ite a!6 (* (F__L t2) (F__V t2)) 0)\n               (ite a!7 (* (F__L t2) (F__V t2)) 0))))\n  (or (distinct a!1 a!8) (and (not a!1) (not a!8) (distinct (+ a!9 a!10) a!11))))))",
+        "assertions_sha256": "2a19342232da1f95ba5c26553a6a9a04f7d7f793bb2299e28de1bec44c1826ba",
+        "check_wall_seconds": 0.01143437484279275
+      }
+    },
+    "counts": {
+      "planned_solver_checks": 6,
+      "attempted_solver_checks": 6,
+      "completed_solver_checks": 6,
+      "not_run_solver_checks": 0
+    },
+    "candidate_auxiliary_extension": {
+      "status": "CHECKED_ACYCLIC_FRESH_TOTAL_INT_DEFINITIONS",
+      "method": "Quantifier-free AST audit, not a quantified SMT proof or SAT-only inference.",
+      "definition_count": 0,
+      "ordered_definitions": [],
+      "obligation": "Every interpretation of the original base symbols uniquely extends to these auxiliary constants.",
+      "scope": "Emitted definitions only; does not establish aggregate expression semantics."
+    },
+    "sqlite_replay": {
+      "status": "NOT_RUN_BY_THIS_MODULE",
+      "required_for_sat_witness": true
+    },
+    "proof_boundary": [
+      "Same full DBMS_facts, existing bound_constraints and base mappings; no IC inferred or removed.",
+      "Exact row counts mean the caller-created physical slots, independently checked all alive.",
+      "Joint SAT demonstrates nonvacuity only; auxiliary totality uses a separate acyclic fresh-definition check.",
+      "Official encoding totality/correctness for every base model is not established by this diagnostic.",
+      "An UNSAT difference is bounded encoder-relative agreement, not unbounded SQL correctness.",
+      "No q1/q2 equivalence result, cost measurement or SQLite oracle is substituted for this single-query comparison."
+    ],
+    "source_ast_bridge": {
+      "status": "VERIFIED_BOUNDED_AST_BRIDGE",
+      "original_ast_sha256": "a434e53097b1c3085c3d227fbdb613b14060d05aaa4aca5e4f23cb2c2faed0d9",
+      "normalized_ast_sha256": "b302a2006cdc307f9fe00b9bb661536190be9ba09175c5729d2bf0450f589de8",
+      "complete_facts_sha256": "920168090f232943e0642d90944ea76ee8da834d38ed2ff6edb310b8fd190653"
+    },
+    "raw_frontend_guard": "ADMITTED",
+    "contract": {
+      "dbms_fact_count": 50,
+      "bound_constraint_count": 0,
+      "facts_sha256": "4e680644c2d709b034daa8666003fbe702f2b26419877ace37131458e7b8ccf5",
+      "bounds_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "base_mapping_sha256": "530a0e95ca146f26c757303f402c56bdf005e9d7bb0b432c8fcec55a7d9dea56",
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "column_order": {
+        "F": [
+          "K",
+          "L",
+          "V"
+        ],
+        "D": [
+          "ID",
+          "P"
+        ],
+        "E": [
+          "ID",
+          "Q"
+        ]
+      },
+      "unchanged_after_both_encoders": true
+    },
+    "phase": "FINISHED",
+    "elapsed_wall_seconds_before_checkpoint": 0.18155758315697312,
+    "parsed_ast": {
+      "select": {
+        "value": {
+          "sum": {
+            "mul": [
+              "F__L",
+              "F__V"
+            ]
+          }
+        }
+      },
+      "from": [
+        "F",
+        {
+          "join": "D",
+          "on": {
+            "eq": [
+              "F__K",
+              "D__ID"
+            ]
+          }
+        }
+      ]
+    },
+    "official": {
+      "physical_output_slots": 2,
+      "column_count_per_slot": 1,
+      "result_formula_count": 10,
+      "result_formulas": [
+        "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t3)))\n               (and (not (DELETED t7))\n                    (= (NULL t7 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t7) (F__K t1))\n                    (= (NULL t7 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t7) (F__L t1))\n                    (= (NULL t7 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t7) (F__V t1))\n                    (= (NULL t7 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t7) (D__ID t3))\n                    (= (NULL t7 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t7) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t7))))",
+        "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t3)))\n               (and (not (DELETED t8))\n                    (= (NULL t8 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t8) (F__K t2))\n                    (= (NULL t8 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t8) (F__L t2))\n                    (= (NULL t8 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t8) (F__V t2))\n                    (= (NULL t8 D__ID__String) (NULL t3 D__ID__String))\n                    (= (D__ID t8) (D__ID t3))\n                    (= (NULL t8 D__P__String) (NULL t3 D__P__String))\n                    (= (D__P t8) (D__P t3)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t3))))))\n  (and a!1 (=> a!2 (DELETED t8))))",
+        "(let ((a!1 (=> (and (not (DELETED t1)) (not (DELETED t4)))\n               (and (not (DELETED t9))\n                    (= (NULL t9 F__K__String) (NULL t1 F__K__String))\n                    (= (F__K t9) (F__K t1))\n                    (= (NULL t9 F__L__String) (NULL t1 F__L__String))\n                    (= (F__L t9) (F__L t1))\n                    (= (NULL t9 F__V__String) (NULL t1 F__V__String))\n                    (= (F__V t9) (F__V t1))\n                    (= (NULL t9 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t9) (D__ID t4))\n                    (= (NULL t9 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t9) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t1)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t9))))",
+        "(let ((a!1 (=> (and (not (DELETED t2)) (not (DELETED t4)))\n               (and (not (DELETED t10))\n                    (= (NULL t10 F__K__String) (NULL t2 F__K__String))\n                    (= (F__K t10) (F__K t2))\n                    (= (NULL t10 F__L__String) (NULL t2 F__L__String))\n                    (= (F__L t10) (F__L t2))\n                    (= (NULL t10 F__V__String) (NULL t2 F__V__String))\n                    (= (F__V t10) (F__V t2))\n                    (= (NULL t10 D__ID__String) (NULL t4 D__ID__String))\n                    (= (D__ID t10) (D__ID t4))\n                    (= (NULL t10 D__P__String) (NULL t4 D__P__String))\n                    (= (D__P t10) (D__P t4)))))\n      (a!2 (not (and (not (DELETED t2)) (not (DELETED t4))))))\n  (and a!1 (=> a!2 (DELETED t10))))",
+        "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t7)) a!1)\n               (and (not (DELETED t11)) (= t11 t7))))\n      (a!3 (not (and (not (DELETED t7)) a!1))))\n  (and a!2 (=> a!3 (DELETED t11)))))",
+        "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t3 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3))))))\n(let ((a!2 (=> (and (not (DELETED t8)) a!1)\n               (and (not (DELETED t12)) (= t12 t8))))\n      (a!3 (not (and (not (DELETED t8)) a!1))))\n  (and a!2 (=> a!3 (DELETED t12)))))",
+        "(let ((a!1 (ite (or (NULL t1 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t9)) a!1)\n               (and (not (DELETED t13)) (= t13 t9))))\n      (a!3 (not (and (not (DELETED t9)) a!1))))\n  (and a!2 (=> a!3 (DELETED t13)))))",
+        "(let ((a!1 (ite (or (NULL t2 F__K__String) (NULL t4 D__ID__String))\n                false\n                (and (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4))))))\n(let ((a!2 (=> (and (not (DELETED t10)) a!1)\n               (and (not (DELETED t14)) (= t14 t10))))\n      (a!3 (not (and (not (DELETED t10)) a!1))))\n  (and a!2 (=> a!3 (DELETED t14)))))",
+        "(let ((a!1 (or (not (DELETED t11))\n               (not (DELETED t12))\n               (not (DELETED t13))\n               (not (DELETED t14))))\n      (a!2 (ite (and (DELETED _find_1st_non_deleted_t17)\n                     (not (DELETED _find_1st_non_deleted_t18)))\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t18)\n                (= _find_1st_non_deleted_t21 _find_1st_non_deleted_t17)))\n      (a!3 (ite (and (DELETED _find_1st_non_deleted_t21)\n                     (not (DELETED _find_1st_non_deleted_t19)))\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t19)\n                (= _find_1st_non_deleted_t22 _find_1st_non_deleted_t21)))\n      (a!4 (ite (and (DELETED _find_1st_non_deleted_t22)\n                     (not (DELETED _find_1st_non_deleted_t20)))\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t20)\n                (= _find_1st_non_deleted_t23 _find_1st_non_deleted_t22)))\n      (a!5 (and (or (DELETED t11)\n                    (NULL t11 F__L__String)\n                    (NULL t11 F__V__String))\n                (or (DELETED t12)\n                    (NULL t12 F__L__String)\n                    (NULL t12 F__V__String))\n                (or (DELETED t13)\n                    (NULL t13 F__L__String)\n                    (NULL t13 F__V__String))\n                (or (DELETED t14)\n                    (NULL t14 F__L__String)\n                    (NULL t14 F__V__String))))\n      (a!6 (+ (ite (or (DELETED t11)\n                       (NULL t11 F__L__String)\n                       (NULL t11 F__V__String))\n                   0\n                   (* (F__L t11) (F__V t11)))\n              (ite (or (DELETED t12)\n                       (NULL t12 F__L__String)\n                       (NULL t12 F__V__String))\n                   0\n                   (* (F__L t12) (F__V t12)))\n              (ite (or (DELETED t13)\n                       (NULL t13 F__L__String)\n                       (NULL t13 F__V__String))\n                   0\n                   (* (F__L t13) (F__V t13)))\n              (ite (or (DELETED t14)\n                       (NULL t14 F__L__String)\n                       (NULL t14 F__V__String))\n                   0\n                   (* (F__L t14) (F__V t14))))))\n(let ((a!7 (=> a!1\n               (and (not (DELETED t15))\n                    (= _find_1st_non_deleted_t17 t11)\n                    (= _find_1st_non_deleted_t18 t12)\n                    (= _find_1st_non_deleted_t19 t13)\n                    (= _find_1st_non_deleted_t20 t14)\n                    a!2\n                    a!3\n                    a!4\n                    (= (NULL t15 TABLE5__SUM_MUL_F__L_F__V__String) a!5)\n                    (= (TABLE5__SUM_MUL_F__L_F__V t15) (ite a!5 (- 10) a!6))))))\n  (and a!7 (=> (not a!1) (DELETED t15)))))",
+        "(let ((a!1 (and (or (DELETED t11)\n                    (NULL t11 F__L__String)\n                    (NULL t11 F__V__String))\n                (or (DELETED t12)\n                    (NULL t12 F__L__String)\n                    (NULL t12 F__V__String))\n                (or (DELETED t13)\n                    (NULL t13 F__L__String)\n                    (NULL t13 F__V__String))\n                (or (DELETED t14)\n                    (NULL t14 F__L__String)\n                    (NULL t14 F__V__String))))\n      (a!2 (+ (ite (or (DELETED t11)\n                       (NULL t11 F__L__String)\n                       (NULL t11 F__V__String))\n                   0\n                   (* (F__L t11) (F__V t11)))\n              (ite (or (DELETED t12)\n                       (NULL t12 F__L__String)\n                       (NULL t12 F__V__String))\n                   0\n                   (* (F__L t12) (F__V t12)))\n              (ite (or (DELETED t13)\n                       (NULL t13 F__L__String)\n                       (NULL t13 F__V__String))\n                   0\n                   (* (F__L t13) (F__V t13)))\n              (ite (or (DELETED t14)\n                       (NULL t14 F__L__String)\n                       (NULL t14 F__V__String))\n                   0\n                   (* (F__L t14) (F__V t14)))))\n      (a!4 (=> (not (and (DELETED t11)\n                         (DELETED t12)\n                         (DELETED t13)\n                         (DELETED t14)))\n               (DELETED pity_tuple_of_Table6))))\n(let ((a!3 (=> (and (DELETED t11) (DELETED t12) (DELETED t13) (DELETED t14))\n               (and (not (DELETED pity_tuple_of_Table6))\n                    (= (NULL pity_tuple_of_Table6\n                             TABLE5__SUM_MUL_F__L_F__V__String)\n                       a!1)\n                    (= (TABLE5__SUM_MUL_F__L_F__V pity_tuple_of_Table6)\n                       (ite a!1 (- 10) a!2))))))\n  (and a!3 a!4)))"
+      ],
+      "result_formulas_sha256": "e454e81eeacf070ed0f63679669f632d0bd296716e3a71a3abc8a3d2cfe31308",
+      "slots": [
+        {
+          "key": "t15",
+          "tuple": "t15",
+          "deleted": "(DELETED t15)",
+          "is_null": "(NULL t15 TABLE5__SUM_MUL_F__L_F__V__String)",
+          "value": "(TABLE5__SUM_MUL_F__L_F__V t15)"
+        },
+        {
+          "key": "pity_tuple_of_Table6",
+          "tuple": "pity_tuple_of_Table6",
+          "deleted": "(DELETED pity_tuple_of_Table6)",
+          "is_null": "(NULL pity_tuple_of_Table6 TABLE5__SUM_MUL_F__L_F__V__String)",
+          "value": "(TABLE5__SUM_MUL_F__L_F__V pity_tuple_of_Table6)"
+        }
+      ]
+    },
+    "candidate": {
+      "prefix": "CALIBER_QUERY_DIFF_8d3f410f1e4523ab_flat_1",
+      "encoding_counts": {
+        "match_terms": 0,
+        "flat_rows": 4,
+        "selectors": 0,
+        "expression_contains_variable_product": true,
+        "arithmetic_semantics": "MATHEMATICAL_INTEGERS_STRICT_NULL",
+        "multiplicity_encoding": "flat",
+        "full_formula_logic": "NOT_CLASSIFIED_IC_AND_ROOT_MEASURE_PRESERVED"
+      },
+      "is_null": "(let ((a!1 (and (not (DELETED t1))\n                (not (or (NULL t1 F__L__String) (NULL t1 F__V__String)))))\n      (a!4 (and (not (DELETED t2))\n                (not (or (NULL t2 F__L__String) (NULL t2 F__V__String))))))\n(let ((a!2 (ite (and a!1\n                     (not (DELETED t3))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3)))\n                1\n                0))\n      (a!3 (ite (and a!1\n                     (not (DELETED t4))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4)))\n                1\n                0))\n      (a!5 (ite (and a!4\n                     (not (DELETED t3))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3)))\n                1\n                0))\n      (a!6 (ite (and a!4\n                     (not (DELETED t4))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4)))\n                1\n                0)))\n  (= 0 (+ a!2 a!3 a!5 a!6))))",
+      "value": "(let ((a!1 (and (not (DELETED t1))\n                (not (or (NULL t1 F__L__String) (NULL t1 F__V__String)))))\n      (a!4 (and (not (DELETED t2))\n                (not (or (NULL t2 F__L__String) (NULL t2 F__V__String))))))\n(let ((a!2 (ite (and a!1\n                     (not (DELETED t3))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t1) (D__ID t3)))\n                (* (F__L t1) (F__V t1))\n                0))\n      (a!3 (ite (and a!1\n                     (not (DELETED t4))\n                     (not (NULL t1 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t1) (D__ID t4)))\n                (* (F__L t1) (F__V t1))\n                0))\n      (a!5 (ite (and a!4\n                     (not (DELETED t3))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t3 D__ID__String))\n                     (= (F__K t2) (D__ID t3)))\n                (* (F__L t2) (F__V t2))\n                0))\n      (a!6 (ite (and a!4\n                     (not (DELETED t4))\n                     (not (NULL t2 F__K__String))\n                     (not (NULL t4 D__ID__String))\n                     (= (F__K t2) (D__ID t4)))\n                (* (F__L t2) (F__V t2))\n                0)))\n  (+ a!2 a!3 a!5 a!6)))",
+      "definition_count": 0,
+      "definitions": []
+    },
+    "agreement_scope": "BOUNDED_ENCODER_RELATIVE_NULL_AND_NON_NULL_INTEGER_VALUE"
+  },
+  "environment_cleanup": "COMPLETE",
+  "semantic_e2e_wall_seconds": 0.2522432077676058,
+  "semantic_e2e_cpu_seconds": 0.2505290000000002,
+  "cost_scope": "raw frontend/AST bridge/base nonvacuity/normalized upstream C XOR audit/contract guard/query work/fallback/oracle/cleanup; cold import/hash/startup/reap additionally measured by supervisor"
+}

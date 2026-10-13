@@ -1,0 +1,225 @@
+{
+  "status": "LOCAL_EVIDENCE_CLOSURE_COMPLETE",
+  "independent_review": "PASS",
+  "scientific_novelty_supported": false,
+  "anti_masking_reopened": false,
+  "natural_pairs": 3,
+  "synthetic_witnesses": 8,
+  "witnesses": [
+    {
+      "candidate_id": "1073_invalid_date",
+      "case_id": "european_football_2__1073",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            1
+          ]
+        ],
+        "predicted": [
+          [
+            0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "1073_nullable_pk",
+      "case_id": "european_football_2__1073",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            0
+          ]
+        ],
+        "predicted": [
+          [
+            1
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_text_N1",
+      "case_id": "california_schools__45",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            "x"
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            0.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_large_int_N1",
+      "case_id": "california_schools__45",
+      "N": 1,
+      "total_source_rows": 2,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            9007199254740993
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            9007199254740992.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_group_N2",
+      "case_id": "california_schools__45",
+      "N": 2,
+      "total_source_rows": 4,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            1
+          ],
+          [
+            "S",
+            3
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            2.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "45_bag_N2",
+      "case_id": "california_schools__45",
+      "N": 2,
+      "total_source_rows": 4,
+      "outputs": {
+        "gold": [
+          [
+            "S",
+            0
+          ],
+          [
+            "S",
+            0
+          ]
+        ],
+        "predicted": [
+          [
+            "S",
+            0.0
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "1526_N1",
+      "case_id": "debit_card_specializing__1526",
+      "N": 1,
+      "total_source_rows": 4,
+      "outputs": {
+        "gold": [
+          [
+            1.0
+          ]
+        ],
+        "predicted": [
+          [
+            null
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    },
+    {
+      "candidate_id": "1526_sum_scalar",
+      "case_id": "debit_card_specializing__1526",
+      "N": 3,
+      "total_source_rows": 7,
+      "outputs": {
+        "gold": [
+          [
+            0.8333333333333334
+          ]
+        ],
+        "predicted": [
+          [
+            0.5
+          ]
+        ]
+      },
+      "independently_replayed_NEQ": true,
+      "full_C_verified": true
+    }
+  ],
+  "count_star": {
+    "original_numeric_mismatches": 4,
+    "original_Bool_plus_type_errors": 12,
+    "patched_boundary_cases_passed": 28,
+    "patch_exactly_one_statement": true,
+    "patch_sha256": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+    "original_encoder_sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb",
+    "original_encoder_unchanged": true,
+    "patch_applied_to_baseline": false,
+    "parser_path_dynamically_validated": false,
+    "end_to_end_natural_query_pipeline_validated": false,
+    "independent_matrix_agrees_author_SQLite_oracle": true
+  },
+  "resource": {
+    "windows": 2,
+    "cumulative_actual_execution_wall_s": 0.14994229143485427,
+    "total_budget_s": 60,
+    "one_continuous_batch": false,
+    "thread_count_at_each_end": 1,
+    "solver_calls": 0,
+    "subprocess_or_network_events": [],
+    "plan_revision_basis": "Trusted user requirement total60s/one thread; original continuous one-shot was an author-added execution plan, explicitly revised while preserving failed first segment."
+  },
+  "coverage": {
+    "valid_development_cases": 8,
+    "Polygon_bounded_run_completed": 4,
+    "invalid_development_cases_retained": 2,
+    "new_final_tests": 0
+  },
+  "commit_push_performed": false,
+  "backup_status": "BLOCKED_BY_EXPLICIT_NO_PUSH",
+  "remaining_unknown": [
+    "full parser path",
+    "end-to-end natural query pipeline after patch",
+    "official database counterexamples/minimality",
+    "business validity of synthetic boundary values",
+    "method improvement"
+  ],
+  "evidence_note": "First batch partial failure remains; COUNT completion is separate. No prefreeze edited retroactively."
+}

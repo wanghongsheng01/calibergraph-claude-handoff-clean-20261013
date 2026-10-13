@@ -1,0 +1,150 @@
+{
+  "worker_cpu_limit_seconds": 3,
+  "worker_wall_limit_seconds": 4,
+  "external_rss_limit_bytes": 268435456,
+  "contract_check_timeout_ms": 100,
+  "query_check_timeout_ms": 700,
+  "maximum_independent_environment_attempts": 1,
+  "maximum_active_workers": 1,
+  "nice": 15,
+  "total_parent_cpu_limit_seconds": 60,
+  "solver_cumulative_wall_limit_seconds": 2.0,
+  "solver_timeout_reserve_seconds": 0.1,
+  "supervisor_solver_stop_seconds": 1.5,
+  "internal_z3_memory_parameter_mb": 128,
+  "runtime_lock": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v3/runtime_paths.json",
+    "sha256": "505e59253be72e73edf236efe647d84cfcebffe15980517072ae20230bdc38d7"
+  },
+  "id": "calibergraph-06-generation-replay-v1",
+  "status": "DRAFT_NOT_REGISTERED",
+  "registered_utc": null,
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "source_case_indices": [
+    6,
+    9,
+    14,
+    3
+  ],
+  "registered_cases": [
+    {
+      "id": "dev03_07_exact2",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 2
+    },
+    {
+      "id": "dev03_07_exact4",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 4
+    },
+    {
+      "id": "dev03_07_exact8",
+      "kind": "official",
+      "source_case_index": 6,
+      "source_case_id": "dev03_07",
+      "exact_rows": 8
+    },
+    {
+      "id": "dev03_10_exact2",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 2
+    },
+    {
+      "id": "dev03_10_exact4",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 4
+    },
+    {
+      "id": "dev03_10_exact8",
+      "kind": "official",
+      "source_case_index": 9,
+      "source_case_id": "dev03_10",
+      "exact_rows": 8
+    },
+    {
+      "id": "dev03_15_exact2",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 2
+    },
+    {
+      "id": "dev03_15_exact4",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 4
+    },
+    {
+      "id": "dev03_15_exact8",
+      "kind": "official",
+      "source_case_index": 14,
+      "source_case_id": "dev03_15",
+      "exact_rows": 8
+    },
+    {
+      "id": "dev03_04_exact2",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 2
+    },
+    {
+      "id": "dev03_04_exact4",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 4
+    },
+    {
+      "id": "dev03_04_exact8",
+      "kind": "official",
+      "source_case_index": 3,
+      "source_case_id": "dev03_04",
+      "exact_rows": 8
+    }
+  ],
+  "worker_paths": {
+    "official": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_06/code/official_generation_worker.py"
+  },
+  "supervisor": {
+    "python_executable": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+    "required_flags": [
+      "-B",
+      "-I",
+      "-S"
+    ],
+    "prior_preparation_cpu_charge_seconds": 10.0
+  },
+  "artifacts": {
+    "result": "results.json",
+    "events": "events.jsonl",
+    "progress": "progress.json"
+  },
+  "purpose": "Bounded development-only baseline generation/replay and all-phase cost feasibility. Six eligible INT C-model sanity replays are explicitly separate from later query-SAT counterexample replays. No novel method, distinguishing-success, speedup or independent-test claim.",
+  "semantics": "Exactly N live rows per original table; unchanged original SQL and complete operational C. Not at-most-N or business-complete semantics.",
+  "preparation_charge_note": "10 seconds conservative reserve for author-side source/AST/hash/preparation commands, not measured CPU. Measured parent and every reaped child/probe charged separately from supervisor start.",
+  "selection": "Previously exposed 21 source groups; design-time structural rule, not blind preregistered test. Fixed 4 groups, no replacements.",
+  "failure_denominator": "12 registered cells. All front-end/refused/unknown/timeout/not-run retained; no automatic retry or enlargement.",
+  "promotion": "This experiment cannot promote a new method; actual SAT export+full independent C+original-query replay is required for generated-witness claim. UNSAT is exact-N official encoding only.",
+  "known_replay_profiles": [
+    "dev03_10",
+    "dev03_15"
+  ],
+  "stopping": "Any supervisor resource/probe/integrity failure stops remainder. Query UNKNOWN retained. No increase in bounds/time budget after outcomes.",
+  "independent_final_test": "Never read or used.",
+  "contract_model_sanity_control": true,
+  "control_scope": "For dev03_10 and dev03_15 at each exact bound, export the same validated C-check model, independently verify full operational C and execute identical original SQL. Always label C_MODEL_SANITY_ONLY_NOT_QUERY_SAT; no influence on official later query-SAT classification. All costs charged.",
+  "analytic_strong_controls": "protocols/ANALYTIC_CONTROLS.zh.md; known CASE default-NULL/inner-join commutation and outer-join reversal/IFNULL-COALESCE identities may already discharge the two INT pairs. Not an implemented timed baseline, so no runtime superiority claim."
+}

@@ -1,0 +1,179 @@
+{
+  "decision": "ACCEPT_CONTENT_WITH_LIMITATIONS",
+  "reviewer": "independent_non_author_matrix29_protocol_review",
+  "reviewed_utc": "2026-10-12T15:48:29.037595+00:00",
+  "scope": "Read-only factual/source-anchor/claim-boundary review of private standalone addendum and proposed manuscript amendments. No SQL, solver, new defect search, or author-file mutation. Author owns final PDF rendering, packaging and Library delivery.",
+  "reviewed_files_sha256": {
+    "CaliberGraph_empirical_addendum.tex": "43abbd550a5658d5ec2e11b7f4c8ab7a2b2ab3baef5d458fc658f67a1781045d",
+    "PROPOSED_AMENDMENTS.json": "f99644e1ca6a47f037f5929ab10c8e032bd4709e6e403b3fb8b09eacaa6091be",
+    "PROPOSED_AMENDMENTS.zh.md": "2c970498b06c2f7d945a1a3bc29455576855b5aa663f6f881d0ded5d3b2b4194",
+    "FINAL_SCIENTIFIC_JUDGMENT.zh.md": "87553ee1968b97b6b9d0a670717e4ac7a10a78481b9c069fe404066adea151b6",
+    "SOURCE_BINDING.json": "5d05c05d72bf8c674deeda64485ab6796016ac9dab6ed7d98647e6f0cc9d4d96",
+    "CaliberGraph_33pair_matrix.csv": "8de102c1987833ee52432336a0ee20902ec863362e1fe928b614acb0f688e51f"
+  },
+  "blocking_content_issues": [],
+  "source_anchor_checks": [
+    {
+      "id": 1,
+      "source_file": "manuscript/main.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 22,
+      "actual_line": 22,
+      "not_applied": true
+    },
+    {
+      "id": 2,
+      "source_file": "manuscript/main.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 36,
+      "actual_line": 36,
+      "not_applied": true
+    },
+    {
+      "id": 3,
+      "source_file": "manuscript/main.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 68,
+      "actual_line": 68,
+      "not_applied": true
+    },
+    {
+      "id": 4,
+      "source_file": "manuscript/main.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 68,
+      "actual_line": 68,
+      "not_applied": true
+    },
+    {
+      "id": 5,
+      "source_file": "manuscript/main.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 211,
+      "actual_line": 211,
+      "not_applied": true
+    },
+    {
+      "id": 6,
+      "source_file": "manuscript/sqlite_case_study.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 33,
+      "actual_line": 33,
+      "not_applied": true
+    },
+    {
+      "id": 7,
+      "source_file": "manuscript/sqlite_case_study.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 55,
+      "actual_line": 55,
+      "not_applied": true
+    },
+    {
+      "id": 8,
+      "source_file": "manuscript/sqlite_case_study.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 100,
+      "actual_line": 100,
+      "not_applied": true
+    },
+    {
+      "id": 9,
+      "source_file": "manuscript/sqlite_case_study.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 103,
+      "actual_line": 103,
+      "not_applied": true
+    },
+    {
+      "id": 10,
+      "source_file": "manuscript/main.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 235,
+      "actual_line": 235,
+      "not_applied": true
+    },
+    {
+      "id": 11,
+      "source_file": "GO_NO_GO.tex",
+      "hash_matches": true,
+      "exact_anchor_occurrences": 1,
+      "registered_line": 34,
+      "actual_line": 34,
+      "not_applied": true
+    }
+  ],
+  "candidate_files_hash_verified": 8,
+  "matrix_bindings_verified": [
+    "matrix_freeze_sha256",
+    "matrix_delivery_manifest_sha256",
+    "matrix_csv_sha256",
+    "independent_review_sha256"
+  ],
+  "csv_byte_identical": true,
+  "empirical_numbers": "All current-round counts agree with independently audited Matrix29:33 pairs,11schemas,66slots,116full-C-valid saved candidates,18/33 ParSEval and1/33 Polygon witnesses, all disposition counts,54.687s batch,355+7 solver checks,73reaped handles,30normal+36SIGTERM workers including3timeouts.",
+  "amendment_assessment": "Eleven exact replacements preserve earlier numerical results and restrict time/contract/version scope. None applied. Historical v5, cached-AST scan, ten-pair diagnostics, and current33-pair audit remain separate.",
+  "resolved_findings": [
+    {
+      "id": "R1",
+      "old": "Cleanup tails reached 10.017 seconds.",
+      "correction": "Timed-out slots, including cleanup, took up to 10.017 seconds.",
+      "status": "VERIFIED_FIXED"
+    },
+    {
+      "id": "R2",
+      "old": "two resource-adapted paths yielding18 and1 respectively without named ordering",
+      "correction": "The ParSEval and Polygon pilot13 UA resource-adapted paths are now explicitly named in amendment1.",
+      "status": "VERIFIED_FIXED"
+    },
+    {
+      "id": "R3",
+      "old": "First-paragraph unbreakable hash input caused57.9579pt overfull hbox",
+      "correction": "Exact ranking ingredients and separator described in breakable prose; new log has no overfull/underfull/missing-character/undefined warnings.",
+      "status": "SOURCE_AND_LOG_FIXED_FINAL_VISUAL_OWNED_BY_AUTHOR"
+    }
+  ],
+  "claim_boundary_checks": {
+    "18_vs1_ranking_prohibited": true,
+    "adapter_coverage_not_native_tool_unsupported": true,
+    "cross_round_independent_sample_pooling_prohibited": true,
+    "candidate_count_not_independent_sample_count": true,
+    "shared_Z3_and_AI_review_disclosed": true,
+    "independent_review_not_human_peer_review": true,
+    "HOLD_and_no_submission_authorization_explicit": true,
+    "new_algorithm_or_all_baselines_must_lose_not_required": true,
+    "no_new_experiment_authorized_by_future_evidence_requirements": true,
+    "no_exhaustive_novelty_or_P19_overlap_review_claimed": true
+  },
+  "scientific_judgment": "HOLD is consistent with the audited evidence limits: no matched cross-tool domain, no repeatable multi-schema failure mechanism demonstrated, development exposure, and a localized diagnosed example. This accepts the rationale as a scoped author judgment, not a new exhaustive novelty assessment or venue acceptance prediction.",
+  "surface_scope": {
+    "skill": "toppaperos-submission-surface-audit",
+    "template": "Private standalone article/A4/23mm; not a venue submission template",
+    "compiled_page_count_reported": 3,
+    "final_log_counts": {
+      "overfull": 0,
+      "underfull": 0,
+      "missing_character": 0,
+      "undefined_reference_or_citation": 0
+    },
+    "visual_inspection": "Not performed by this content reviewer; parent author is responsible and retains page renders.",
+    "automated_surface_limit": "Parent reports bbox extraction SIGABRT; must be recorded as automation failure and not a clean automated PDF audit.",
+    "delivery_ready_certification": false
+  },
+  "remaining_actions": [
+    "Author complete/document final three-page visual/font check and disclose failed bbox automation.",
+    "Author bind final PDF/ZIP member hashes and private Library delivery; those future artifacts are not certified by this source-only review."
+  ],
+  "author_files_edited": false,
+  "new_SQL_or_solver_calls": 0
+}

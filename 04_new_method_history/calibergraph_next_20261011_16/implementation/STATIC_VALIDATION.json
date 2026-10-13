@@ -1,0 +1,492 @@
+{
+  "schema": "calibergraph.round16.author_static_validation.v1",
+  "status": "PASS_STATIC_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "created_utc": "2026-10-11T16:40:36.758436+00:00",
+  "checks": [
+    {
+      "name": "six_source_AST_syntax",
+      "status": "PASS",
+      "detail": "ast.parse only; no imports, compile, exec or evaluation of author scientific code"
+    },
+    {
+      "name": "old15_generation_common.py_hash_matches_existing_freeze",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old15_generation_supervisor.py_hash_matches_existing_freeze",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old15_official_generation_worker.py_hash_matches_existing_freeze",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old15_official_generation_backend.py_hash_matches_existing_freeze",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old15_official_contract_admission.py_hash_matches_existing_freeze",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "old15_safe_sqlite_replay.py_hash_matches_existing_freeze",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "official_generation_worker.py_byte_identical",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "official_contract_admission.py_byte_identical",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "safe_sqlite_replay.py_byte_identical",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "common_only_round_identity_changed",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_gate_literal_false",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "source_scientific_pins_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_one_new_timing_only_function",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_BudgetStop_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_SolverBudgetOverrun_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_cpu_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_sha_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_objsha_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_Budget_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_stage_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_load_runtime_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_source_class_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_evidence_complete_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_check_solver_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_formula_sha_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_verify_facts_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_export_complete_model_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_SolverTap_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_run_case_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_run_attempt_except_pure_phase_derivation_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "phase_empty_stage_branch_returns_null_NOT_REACHED",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "phase_missing_field_branch_returns_null_censored",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "phase_no_zero_default_gets",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "phase_scope_requires_two_measured_dependencies",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "backend_check_solver_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 2,
+        "new": 2
+      }
+    },
+    {
+      "name": "backend_check_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 8,
+        "new": 8
+      }
+    },
+    {
+      "name": "backend_solver_timeout_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_original_compare_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_replay_generated_witness_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 2,
+        "new": 2
+      }
+    },
+    {
+      "name": "backend_Environment_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_create_database_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_add_constraints_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "backend_formula_sha_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": {
+        "old": 1,
+        "new": 1
+      }
+    },
+    {
+      "name": "supervisor_utc_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_request_stop_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_require_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_number_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_read_json_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_atomic_json_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_event_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_digest_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_verify_manifest_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_machine_probe_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_ps_seconds_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_group_sample_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_progress_snapshot_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_child_setup_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_reap_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_resource_status_in_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_preparation_reserve_entry10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_observation_ledger_defaults_unknown",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_all_other_policy_values_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_run_slot_only_tightens_two56_gates",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_two56_gates_include_batchtail",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "observation_ledger_admitted_before_freeze_and_scientific_import",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "observation_charge_sum_tolerance_registered",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "preparation_protocol_must_equal10",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "accounting_unknown_total_not_guessed_zero",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_Popen_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_run_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_machine_probe_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_run_slot_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_sleep_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_setpriority_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_nice_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_setrlimit_static_call_count_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_THREAD_ENV_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "supervisor_CLEAN_ENV_AST_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "all_other_protocol_fields_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "draft_protocol_disabled",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_old_supervisor_fields_unchanged",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_observation_unknown",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "protocol_exact24_order_and_strict_int_identity",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "maximum_batch_attempts_one",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "historical_analytic_controls_verbatim",
+      "status": "PASS",
+      "detail": null
+    },
+    {
+      "name": "six_source_files_only",
+      "status": "PASS",
+      "detail": null
+    }
+  ],
+  "source_files": [
+    "generation_common.py",
+    "generation_supervisor.py",
+    "official_generation_worker.py",
+    "official_generation_backend.py",
+    "official_contract_admission.py",
+    "safe_sqlite_replay.py"
+  ],
+  "syntax_method": "ast.parse; constant AST nodes via ast.literal_eval; JSON and bytes/hash only",
+  "no_scientific_execution": true,
+  "no_scientific_import": true,
+  "no_compile_pycompile_exec_eval": true,
+  "no_capability_probe": true,
+  "no_priority_change": true,
+  "author_actual_scientific_launches": 0,
+  "limitations": [
+    "Static AST preservation and call counts are supporting evidence, not a runtime proof.",
+    "Missing/hard-censored phase receipts remain unknown, never zero.",
+    "The 56-second active gate is tightened by including the unchanged 0.2-second batch-tail reserve.",
+    "Resource observation ledger is root-owned and remains null until closed; author freeze does not enable execution.",
+    "Root external once-lock remains mandatory; no scheduler or retry added.",
+    "Old Round15 remains permanently stopped; no historical source edits."
+  ]
+}

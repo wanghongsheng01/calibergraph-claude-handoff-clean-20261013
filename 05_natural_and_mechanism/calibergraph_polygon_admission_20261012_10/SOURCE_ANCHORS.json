@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/environment.py.txt",
+      "sha256": "9f8ddd7a61368cc8b14155ad0aa6f94b3a699e494143b16004cca64e3ac0742a",
+      "anchor": "274-285",
+      "meaning": "Manager, computing Process and single-process terminate; same check UA/precise"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/smt/provers/smtlibv2.py.txt",
+      "sha256": "b0b6afd7bca13a964c639120699b68eb101be13fd18d768e9f36eec2e3b97bdc",
+      "anchor": "101-102,156-163,171-177,240-296",
+      "meaning": "Integer SMT values/div, external Z3, concrete decoding"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/smt/formula.py.txt",
+      "sha256": "ecdc290227e8c717fa20065313331b605fd54566a844ec9ce88c6d99190207cc",
+      "anchor": "137-142,490-501",
+      "meaning": "UA timeout variable versus precise300"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/visitors/expression_encoder.py.txt",
+      "sha256": "904e2654d2709a12f009d7ffa4fbbfebbb211dea665b29cf0bca548a77035c91",
+      "anchor": "95-117,145-155,611-612",
+      "meaning": "COUNT DISTINCT, AVG and CAST"
+    },
+    {
+      "path": "calibergraph_strong_baseline_prep_20261011_02/sources_local/polygon/polygon/formulas/integrity_constraint.py.txt",
+      "sha256": "6a81b8600cf781574b0e04e12979bd6155f6e7f78f3ef271f9fbc8e437512fa1",
+      "anchor": "15-87,204-271",
+      "meaning": "Primary/non-null/FK source mapping boundaries"
+    },
+    {
+      "path": "calibergraph_sampled_diagnostic_20261012_07/guard.py",
+      "sha256": "1de9c86c3860f3bf9d6defe40c7c7917168ef64e893b4236aeb367b9bf5e7ffc",
+      "anchor": "sample,watch",
+      "meaning": "Own-process RSS peak only"
+    },
+    {
+      "path": "calibergraph_sampled_diagnostic_20261012_07/supervisor.py",
+      "sha256": "53009f1a1de934a7be23911156743d40f526bc58286b1cded1ce74a1e2cc72d4",
+      "anchor": "run",
+      "meaning": "Owned child kill/wait; no process-group tree guard"
+    },
+    {
+      "path": "calibergraph_sampled_diagnostic_20261012_07/VALIDATION.json",
+      "sha256": "78d51a752c20f36430f0c7cd376ccae8ea83a154de836fd9e02f3376b289f5ca",
+      "anchor": "prior results",
+      "meaning": "Prior fixtures validate old single-worker path only"
+    }
+  ],
+  "source_downloads": 0,
+  "package_imports": 0
+}

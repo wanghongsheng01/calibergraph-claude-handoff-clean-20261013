@@ -1,0 +1,19 @@
+{
+  "status": "IMPLEMENTED_STATIC_ONLY",
+  "entrypoint": "Environment.check",
+  "fresh_exclusive_environment_per_case": true,
+  "discard_environment_and_exclusive_execution_context_after_case": true,
+  "solver_timeout_seconds": 3,
+  "solver_timeout_scope": "each SMTLIBv2 invocation, not whole case",
+  "original_precise_solver_timeout_seconds": 300,
+  "outer_case_deadline_provided_by_patch": false,
+  "manager_created_by_check": false,
+  "computation_process_created_by_check": false,
+  "external_z3_process_preserved": true,
+  "external_z3_lifecycle_and_memory_protection_implemented": false,
+  "full_runtime_equivalence_verified": false,
+  "random_flow_claim": "unchanged calls given same task-entry interpreter/hash/module/RNG state; historical child state not recovered",
+  "scientific_claim": null,
+  "scientific_calls": 0,
+  "runtime_launch_authorized_by_this_package": false
+}

@@ -1,0 +1,5 @@
+Run only after checking the new output directory does not already exist. No old cohort rerun.
+
+python3 -B -I -S /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/supervisor.py --runtime-lock /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/runtime_paths_v4.json --suite /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4_02/registration/E10_SIX_ARM_STATUS_ONLY.json --out-dir /Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runs/fair_v4_02_e10_contract_status_01 --kind cost --job-start 0 --job-limit 6
+
+Expected intentional rejection: child exit2, raw worker status COMPLETE_CONTRACT_REJECTED and final_decision CONTRACT_UNSAT_REJECTED; supervisor remains COMPLETED_WITH_FAILURES_OR_NOT_RUN. This is not pair UNSAT.

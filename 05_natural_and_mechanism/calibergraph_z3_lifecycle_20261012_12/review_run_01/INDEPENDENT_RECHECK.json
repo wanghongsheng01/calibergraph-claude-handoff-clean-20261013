@@ -1,0 +1,55 @@
+{
+  "all_regression_assertions_passed": true,
+  "source_sha256": {
+    "owned_processes.py": "217bbbbac7e0ae39cd19ee905c2a0c13a247888463e3b42132f8a2b246dbcb8b",
+    "fixtures.py": "fea09c9cbc5f13c45cb67bb421ff43bba9c60ddf9e87cac72eedf614a5906104",
+    "validate.py": "d676a0ff38815db10f2a067e88328ede0bdcc9193991326f1b44ddc330c523bc"
+  },
+  "results": [
+    {
+      "test": "alarm_registration_window",
+      "error": "Stopped: CASE_DEADLINE",
+      "created": 1,
+      "registered": 1,
+      "unregistered_handles": 0,
+      "unregistered_still_running": 0
+    },
+    {
+      "test": "cleanup_kill_exception",
+      "error": "RuntimeError: owned process cleanup unconfirmed: [\"OSError('controlled owned-handle kill failure')\"]",
+      "handler_restored": true,
+      "cleanup_errors": [
+        "OSError('controlled owned-handle kill failure')"
+      ],
+      "wait_events": 2,
+      "handle_count": 2
+    },
+    {
+      "test": "stream_close_exception",
+      "error": "RuntimeError: owned process cleanup unconfirmed: [\"OSError('controlled close failure')\"]",
+      "handler_restored": true,
+      "cleanup_errors": [
+        "OSError('controlled close failure')"
+      ]
+    },
+    {
+      "test": "enter_deadline_exception",
+      "error": "Stopped: CASE_DEADLINE",
+      "handler_restored": true,
+      "closed": true,
+      "thread_created": true
+    }
+  ],
+  "science_admission": {
+    "admitted": false,
+    "reason": "EXTERNAL_Z3_RSS_COVERAGE_UNAVAILABLE",
+    "forbidden_process_probe_retried": false,
+    "native_memory_parameter_substitutes_for_rss": false,
+    "science_threshold_bytes": 1073741824
+  },
+  "scientific_calls": 0,
+  "process_enumeration_or_foreign_rss_queries": 0,
+  "owned_fixture_children": 4,
+  "allocated_test_buffer_bytes": 0,
+  "emergency_reap_completed": true
+}

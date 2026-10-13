@@ -1,0 +1,261 @@
+{
+  "schema_version": 1,
+  "data_role": "DEVELOPMENT_ROUTING_AND_ADVERSARIAL_FRONTEND_CHECKS_NOT_NATURAL_BUGS_OR_PERFORMANCE",
+  "source_provenance": {
+    "rejection_sql": "runtime/smoke_cases.json seven existing rejection cases",
+    "frontend_sql": "frontend_diagnostic/RESULT.json two independently proposed and parent-reproduced cases"
+  },
+  "cases": [
+    {
+      "id": "R01_outer_join",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(F.V) FROM F LEFT JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V) FROM F LEFT JOIN D ON F.K=D.ID"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "R02_cross_leaf",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P=E.Q",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P=E.Q"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "R03_leaf_SUM",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(D.P) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(D.P) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "R04_DISTINCT",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(DISTINCT F.V) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(DISTINCT F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "R05_nonlinear_root",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(F.V*F.K) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V*F.K) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "R06_GROUP_BY",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID GROUP BY F.K",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID GROUP BY F.K"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "R07_non_equi_join",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K>D.ID",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K>D.ID"
+      ],
+      "expected": "unsat"
+    },
+    {
+      "id": "F_V$X",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "V$X": "INT",
+          "V_DOLLAR_X": "INT"
+        },
+        "D": {
+          "K": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 1,
+        "D": 1
+      },
+      "pair": [
+        "SELECT SUM(F.`V$X`) FROM F JOIN D ON F.K=D.K",
+        "SELECT SUM(F.V_DOLLAR_X) FROM F JOIN D ON F.K=D.K"
+      ],
+      "expected": "FRONTEND_UNSUPPORTED"
+    },
+    {
+      "id": "F_A.B",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "A.B": "INT",
+          "A____B": "INT"
+        },
+        "D": {
+          "K": "INT"
+        }
+      },
+      "constraint": null,
+      "exact_rows": {
+        "F": 1,
+        "D": 1
+      },
+      "pair": [
+        "SELECT SUM(F.`A.B`) FROM F JOIN D ON F.K=D.K",
+        "SELECT SUM(F.A____B) FROM F JOIN D ON F.K=D.K"
+      ],
+      "expected": "FRONTEND_UNSUPPORTED"
+    }
+  ],
+  "cost_full_denominator": 45,
+  "analysis_note": "Seven original algorithm-rejection queries are paired with themselves only to test faithful routing and unchanged full contract. Two raw frontend collisions must be explicitly refused across all arms; never accept shared-parser equality."
+}

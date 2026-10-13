@@ -1,0 +1,152 @@
+{
+  "id": "calibergraph-round06-independent-results-review-v1",
+  "created_utc": "2026-10-11T14:47:08.046695+00:00",
+  "decision": "ACCEPT_NO_NEW_METHOD_CONCLUSION_WITH_THEORY_CORRECTIONS",
+  "results_audit": "PASS",
+  "full_theory_manuscript_audit": "P1_REPAIR_REQUIRED",
+  "accept_NO_NEW_METHOD": true,
+  "accept_NO_FAIR_SUPERIORITY": true,
+  "accept_query_SAT_counterexample_claim": false,
+  "new_validated_mechanism": null,
+  "candidate_algorithm_present": false,
+  "ablation_present": false,
+  "fair_baseline_win_present": false,
+  "author_snapshot_sha256": "ab22d1fcb9ec4964441c6b6f5b316b23a3978c094298b9d25bbc26d17a3e8b57",
+  "author_snapshot_members": 115,
+  "integrity": {
+    "author_snapshot_member_mismatches": 0,
+    "frozen_paths_hashed": 880,
+    "frozen_hash_mismatches": 0,
+    "historical_manifest_identities_hashed": 3,
+    "historical_manifests_entire_members_reaudited": false,
+    "exact_allowed_enable_and_registration_changes_only": true,
+    "preexecution_analytic_controls_frozen": true
+  },
+  "independent_readonly_checks": {
+    "checks": 1288,
+    "failures": 0,
+    "local_inputs_recorded_by_checker": 976,
+    "denominator_metadata_crosscheck": true,
+    "selected_source_records_equal_denominator": true
+  },
+  "observed_totals": {
+    "registered": 12,
+    "returned": 12,
+    "C_checks": 12,
+    "query_checks": 9,
+    "query_counts": {
+      "unsat": 5,
+      "unknown": 4,
+      "NO_QUERY_CHECK": 3
+    },
+    "unknown_reasons": {
+      "timeout": 2,
+      "out of memory": 2
+    },
+    "solver_checks_total": 21,
+    "models_replayed": 6,
+    "recorded_SQL_executions": 12,
+    "physical_rows": 56,
+    "input_NULL_cells": 0,
+    "output_NULL_cells": 0,
+    "worker_cpu_total": 14.442653,
+    "worker_cpu_max": 2.166776,
+    "worker_peak_rss_max": 258162688,
+    "worker_main_wall_max": 2.147482041269541,
+    "worker_lifecycle_wall_max": 2.239919625222683,
+    "query_check_cpu": 2.500993,
+    "C_check_cpu": 0.06303999999999998,
+    "import_cpu": 7.6201110000000005,
+    "measured_supervisor_children_cpu": 18.274636,
+    "charged_cpu": 28.474636,
+    "load_gate_range": [
+      2.576171875,
+      2.7138671875
+    ],
+    "memory_gate_range": [
+      34,
+      36
+    ],
+    "monitor_samples": 140
+  },
+  "P0": [],
+  "P1": [
+    {
+      "id": "P1-01",
+      "title": "P_lift needs explicit FK/PK source-column disjointness",
+      "locations": [
+        "literature/EQUITABLE_QUOTIENT_FALSIFICATION.zh.md:9",
+        "literature/EQUITABLE_QUOTIENT_FALSIFICATION.zh.md:33"
+      ],
+      "status": "OPEN_IN_REVIEWED_SNAPSHOT",
+      "blocks": "Certification of the unrestricted P_lift proposition, not the negative research conclusion",
+      "evidence": "One table T has id as both PK and self-FK to T.id. Two distinct-payload singleton classes cross-point with degree one; the stated balance equations hold but physical id-to-id references necessarily point to the same row.",
+      "repair": "In a new version require FK source columns to be disjoint from PK and each other, with payload fields separate, or provide joint realization conditions for overlap."
+    }
+  ],
+  "P2": [
+    {
+      "id": "P2-01",
+      "title": "Selection rule and formal alias-tree fragment differ",
+      "locations": [
+        "data/selection_rules.zh.md:19",
+        "literature/EQUITABLE_QUOTIENT_FALSIFICATION.zh.md:17",
+        "data/structure_denominator.jsonl"
+      ],
+      "status": "OPEN_IN_REVIEWED_SNAPSHOT",
+      "evidence": "Selection uses table-forest/one-use and COUNT/tree aggregate; formal fragment allows ordinary self joins on an alias simple tree and requires COUNT(*).",
+      "repair": "Identify the old rule as a stricter selection subset or align definitions; use decisive non-fragment constructs for every excluded pair.",
+      "corrected_strict_literal_original_pair_coverage": "0/21, selected 0/4",
+      "blocks_negative_conclusion": false
+    }
+  ],
+  "primary_source_audit": {
+    "S3_direct_count_recurrence_precedent": true,
+    "S3_solves_unknown_synthesis": false,
+    "S2_joint_type_precedent": true,
+    "P_count_limited_fragment": "No issue found in stated single-edge alias-tree recurrence",
+    "P_lift_as_written": "Not certified; P1-01",
+    "literature_exhaustiveness_claim": false,
+    "source_notes": "source_audit.json"
+  },
+  "independence": {
+    "target_code_imported": false,
+    "author_analyzer_executed": false,
+    "SQL_executed": false,
+    "SMT_executed": false,
+    "scientific_experiments_rerun": false,
+    "author_files_modified": false,
+    "independent_C_arithmetic_on_saved_models": true,
+    "saved_SQL_output_bags_recompared": true,
+    "SQLite_version": "3.53.3 as recorded; not independently executed",
+    "credentials_or_unseen_corpus_accessed": false
+  },
+  "limitations": [
+    "C SAT and query SMT verdicts are checked as consistent recorded executions, not independently resolved formulas.",
+    "Saved C-model input/output NULL cells are zero; generic dynamic NULL coverage is not established.",
+    "No complete official-encoder soundness or cross-dialect semantics proof.",
+    "Business contract truth, natural bug labels and complete literature novelty are unverified.",
+    "S1/S4/S5 full texts were not fully reaudited in this results review.",
+    "No arbitrary-failure fault injection or historical whole-host access audit.",
+    "Official webpage URLs and version/section anchors are preserved, not byte hashes of full remote HTML."
+  ],
+  "research_continues": true,
+  "overall_research_task_complete": false,
+  "submission_or_new_method_promotion_allowed": false,
+  "backup": {
+    "responsibility": "root agent unified backup",
+    "performed_by_this_reviewer": false,
+    "inherited_author_gate": "BACKUP_BLOCKED",
+    "datahub_registration_gate": "DATAHUB_REGISTRATION_BLOCKED",
+    "gates_cleared_by_review": false
+  },
+  "deliverables": [
+    "REVIEW.zh.md",
+    "review_result.json",
+    "REVIEW_MANIFEST.json",
+    "REVIEW_MANIFEST.sha256",
+    "independent_readonly_check.py",
+    "independent_evidence.json",
+    "source_audit.json"
+  ]
+}

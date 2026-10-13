@@ -1,0 +1,75 @@
+{
+  "status": "PROBE_ERROR",
+  "stage": "WORKER_FINISHED",
+  "counters_complete": true,
+  "parser_internal_calls": "NOT_COLLECTED; explicit lowering invocations are counted; generator internal lowering is included in generation cost only",
+  "case": "gitlab#47",
+  "historical_server_reproduction": false,
+  "counters": {
+    "generation_calls": 0,
+    "solver_checks": 0,
+    "solver_results": {},
+    "candidate_callbacks": 0,
+    "original_query_replays": 0,
+    "confirmation_query_replays": 0,
+    "driver_execute_calls": 1,
+    "explicit_lowering_calls": 1
+  },
+  "calibration": [],
+  "lowering": [
+    {
+      "variant": "stock",
+      "side": "after",
+      "status": "ERROR",
+      "error": {
+        "type": "ValueError",
+        "raw_local_path": "error_1.txt",
+        "raw_sha256": "e19222796a0dd6379be0c960bc4a875f142dd4460546aa5fab2a8523f87f3a06",
+        "message_sha256": "d13138dd4a7b2c35638548087ae7a95bcc3c7b794fdf3f503be2a494ed14771c"
+      }
+    }
+  ],
+  "candidates": [],
+  "attempts": [],
+  "new_test": false,
+  "elapsed_wall_s": 2.4462431673891842,
+  "cpu_s": 0.5395989999999999,
+  "worker_peak_rss_bytes": 87277568,
+  "rss_guard": {
+    "threshold_MiB": 512,
+    "sample_interval_s": 0.05,
+    "scope": "Own worker peak RSS only; sampled guard may overshoot, not an OS hard RSS limit"
+  },
+  "versions": {
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "sqlglot": "23.12.1",
+    "z3": "4.16.0",
+    "psycopg2": "2.9.13 (dt dec pq3 ext lo64)"
+  },
+  "derived_ddl_sha256": "c5d4304aa8b0719e998c0f424bec0c91344b933dcb1ac47b827bd3005dcd0dac",
+  "query_hashes": {
+    "before": "36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7",
+    "after": "1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2"
+  },
+  "catalog_audit": {
+    "status": "FULL_DECLARED_C_ACTIVE",
+    "columns": 117,
+    "constraints": {
+      "NotNullDecl": 32,
+      "PrimaryKeyDecl": 3,
+      "UniqueDecl": 6,
+      "ForeignKeyDecl": 2
+    },
+    "proof_active_count": 43,
+    "inactive_count": 0,
+    "historical_engine_replay": false,
+    "source_collation": "UNSPECIFIED_UNKNOWN"
+  },
+  "adapter": "postgres_boolean_tf_literal_aliases_v1",
+  "error": {
+    "type": "UndefinedObject",
+    "raw_local_path": "error_2.txt",
+    "raw_sha256": "c47188eb1a701d01f60f318bce43bdc25e410a8de577c62b7ec3bfdfcb4b7cd3",
+    "message_sha256": "973ea66dcead1d326af68dc92bb4dac5239aa365f0c343c54f410e597a4dd893"
+  }
+}

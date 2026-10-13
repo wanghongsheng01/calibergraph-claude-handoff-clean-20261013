@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-10-11T03:28:54.657069+00:00",
+  "reviewer": "Independent distinct AI agent /root/independent_review; not human review",
+  "status": "STATIC_REVIEW_NO_NEW_P0_P1_FOUND_WITHIN_DECLARED_FRAGMENT",
+  "scope": {
+    "kernel": "full source 548 lines",
+    "derivation": "full source 94 lines",
+    "fair": "incremental diff versus previously reviewed v3 fair, all four hashes checked",
+    "target_execution": false,
+    "target_import": false,
+    "sql_execution": false,
+    "solver_execution": false,
+    "network": false,
+    "candidate_modification": false
+  },
+  "checks": {
+    "strict_null_root_arithmetic": "no defect found",
+    "count_nonnull_zero": "counted correctly",
+    "sum_empty_or_all_null": "NULL based on contribution count, not numeric total",
+    "between": "three nonnull operands, inclusive limits, one-leaf/root routing",
+    "selector": "multiplicity identity retained, full logic not classified as LIA",
+    "sqlite_int64_guard": "conservative full concrete-input/intermediate/positive-negative SUM checks; no false-safe case found in static reasoning",
+    "sat_integration": "all official/candidate/differential SAT routes use common guard before raw SQLite; noninteger/shape/value mismatch errors retained",
+    "canonical_arm": "only admitted pure-fragment AND ordering, else same-budget official fallback",
+    "semantics_record": "runtime wrapper plus static locked dispatch correctly distinguished from actual local callee instrumentation"
+  },
+  "concrete_static_traces": [
+    {
+      "input": "NULL*0 or NULL-NULL",
+      "expected": "NULL expression, COUNT contribution 0, all-null SUM NULL",
+      "executed": false
+    },
+    {
+      "input": "nonnull 0 expression",
+      "expected": "COUNT contribution 1; SUM may be nonnull 0",
+      "executed": false
+    },
+    {
+      "input": "root X=Y=-2^31 and two matching leaf rows",
+      "expected": "SUM(X*Y)=2^63; domain auditor UNKNOWN_ORACLE_DOMAIN at positive_sum",
+      "executed": false
+    },
+    {
+      "input": "root X=Y=-2^31, Z=2, expression X*Y*Z*0",
+      "expected": "possible intermediate overflow rejected despite mathematical final zero",
+      "executed": false
+    }
+  ],
+  "remaining_boundaries": [
+    "Actual fair_v4 execution not reviewed",
+    "raw SQL parser correctness and official auxiliary totality not proved",
+    "concrete int64 witness audit does not prove universal SQL overflow freedom",
+    "canonical AND arm is not a comprehensive SQL optimizer baseline",
+    "candidate-plan mathematical audit is not an independent oracle",
+    "syntax variable-product flag does not classify resulting COUNT or full-IC formula theory",
+    "N4 seven additional unknown reported by parent not reread here; must retain all failures and no same-expected correctness claim",
+    "No performance, generalization, novelty or submission acceptance claim"
+  ],
+  "evidence": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+      "sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/SEMANTIC_DERIVATION.txt",
+      "sha256": "f85ea5ce23093845c68230cb7b92538f946fef57db2623248bc16554290b3a7e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/IMPLEMENTATION_RECEIPT.json",
+      "sha256": "51c594b1b1ff0fd0302723e5af4ecb0641173ded1753eeb2781f5927bb27e301"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/common.py",
+      "sha256": "035f30492e9fc2f9a46247da0b7a35f5ecc645323f7b3aaec7a1b8a63d1a78e8"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/worker.py",
+      "sha256": "5baf3d5719db583abfc58553392ab4e711ee1c37ca8e0bdc1217dabd8f52efc1"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/supervisor.py",
+      "sha256": "c4bf0a1500198c3e709de8f2baa8eb6743fdca49e965cd7a9368590894c96479"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v4/query_differential.py",
+      "sha256": "da18141d16395d94c87c4f6b1b9bb1229290b7fd856b5683f5c1d103feffd74e"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/science_review/V4_ARITHMETIC_STATIC_REVIEW.zh.md",
+      "sha256": "966e011c9c39aadb0a411e138965ea98959cefef827b425d7d8d9085c0e6cb95"
+    }
+  ]
+}

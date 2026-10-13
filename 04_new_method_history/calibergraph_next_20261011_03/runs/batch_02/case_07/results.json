@@ -1,0 +1,585 @@
+{
+  "status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev03_08",
+    "case_index": 7,
+    "status": "RETURNED",
+    "engineering_class": "SUPPORTED_FAST",
+    "strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_08",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0013066669926047325,
+            "cpu_seconds": 0.0013070000000000581
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 3,
+            "base_fact_count": 26,
+            "admitted_delta_facts": 3,
+            "full_fact_count": 29,
+            "wall_seconds": 0.0015292498283088207,
+            "cpu_seconds": 0.0015300000000000313
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.0034856656566262245,
+            "cpu_seconds": 0.003485999999999989
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004300583153963089,
+            "actual_check_cpu_seconds": 0.0043079999999999785,
+            "answer": "sat",
+            "wall_seconds": 0.006738167256116867,
+            "cpu_seconds": 0.00670499999999985
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.00034070899710059166,
+            "cpu_seconds": 0.0003410000000000357
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              2,
+              26
+            ],
+            "output_tuple_counts": [
+              2,
+              6
+            ],
+            "wall_seconds": 0.07886875001713634,
+            "cpu_seconds": 0.07876000000000005
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "37ef30c8f4686542afdd6c720f8a795e77a6d58711e31773da4ec841e2618355",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.05928170774132013,
+            "cpu_seconds": 0.059257000000000004
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "8a398399589029cc2a24bfd56e4c50f06bff3ec27fd39bb8ce1f78464ca11954",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0030014170333743095,
+            "cpu_seconds": 0.0030009999999999204
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 800,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.01449195807799697,
+            "actual_check_cpu_seconds": 0.014500000000000068,
+            "answer": "unsat",
+            "wall_seconds": 0.017055958975106478,
+            "cpu_seconds": 0.016913999999999874
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "CUSTOMERS": 2,
+          "ORDERS": 2
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "65e94cee34fd5e4e08d8517fbc53a1317df01bd54052d8b2358174e9b41c50b4",
+        "solver_cumulative_wall_seconds": 0.018792541231960058,
+        "solver_cumulative_cpu_seconds": 0.018808000000000047,
+        "parsed_asts": [
+          {
+            "select": {
+              "value": "NAME",
+              "name": "CUSTOMERS"
+            },
+            "from": "CUSTOMERS",
+            "where": {
+              "nin": [
+                "ID",
+                {
+                  "select": {
+                    "value": "CUSTOMERID"
+                  },
+                  "from": "ORDERS"
+                }
+              ]
+            }
+          },
+          {
+            "select": {
+              "value": "T__NAME",
+              "name": "CUSTOMERS"
+            },
+            "from": {
+              "value": {
+                "select": [
+                  {
+                    "value": "NAME"
+                  },
+                  {
+                    "value": {
+                      "count": "O__ID"
+                    },
+                    "name": "FO"
+                  }
+                ],
+                "from": [
+                  {
+                    "value": "CUSTOMERS",
+                    "name": "C"
+                  },
+                  {
+                    "left join": {
+                      "value": "ORDERS",
+                      "name": "O"
+                    },
+                    "on": {
+                      "eq": [
+                        "C__ID",
+                        "O__CUSTOMERID"
+                      ]
+                    }
+                  }
+                ],
+                "groupby": {
+                  "value": "C__ID"
+                },
+                "having": {
+                  "eq": [
+                    "FO",
+                    0
+                  ]
+                }
+              },
+              "name": "T"
+            }
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.005391167011111975,
+          "cpu_seconds": 0.005377000000000076
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.008447291795164347,
+          "cpu_seconds": 0.008446999999999982
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.062257999999999925,
+          "scope_encode": 0.016502000000000128,
+          "compare_encode": 0.005377000000000076,
+          "query_check": 0.014500000000000068
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.13385999999999998,
+          "wall_seconds": 0.13447862537577748,
+          "worker_peak_rss_bytes_macos": 108707840
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/183.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 580,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "7ed141033282d3954db5d36ee1c1cf2bedffee61a70bfe309a3466506ec3032d",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "CUSTOMERS__ID"
+            }
+          ]
+        },
+        {
+          "primary": [
+            {
+              "value": "ORDERS__ID"
+            }
+          ]
+        },
+        {
+          "foreign": [
+            {
+              "value": "ORDERS__CUSTOMERID"
+            },
+            {
+              "value": "CUSTOMERS__ID"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/183.csv",
+      "index": 197,
+      "pair": [
+        "SELECT NAME AS CUSTOMERS FROM CUSTOMERS WHERE ID NOT IN (SELECT CUSTOMERID FROM ORDERS)",
+        "SELECT T.NAME AS CUSTOMERS FROM(SELECT NAME,COUNT(O.ID) AS FO FROM CUSTOMERS C LEFT JOIN ORDERS O ON C.ID=O.CUSTOMERID GROUP BY C.ID HAVING FO=0) AS T"
+      ],
+      "schema": {
+        "CUSTOMERS": {
+          "ID": "INT",
+          "NAME": "VARCHAR"
+        },
+        "ORDERS": {
+          "CUSTOMERID": "INT",
+          "ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "e73a11a070d6c4283a46066bb9a1166ab5fe45b48386fb2036f9273f53096b11",
+      "eeb41b0721c6ea3bbc000931983be3aa1ede7a85c7974c765cd89eb590be4c9e"
+    ],
+    "schema_sha256": "de7e4d1cd8eacce9811e0a13368ea62b0ef3a90711214f328aa2b7978ce88740",
+    "constraint_sha256": "e86179f7aa1688a09e1bb8560b118db6a098c85fa6500ed7bccfbcafbfb2fc97",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "de7e4d1cd8eacce9811e0a13368ea62b0ef3a90711214f328aa2b7978ce88740",
+      "constraint_sha256": "e86179f7aa1688a09e1bb8560b118db6a098c85fa6500ed7bccfbcafbfb2fc97",
+      "table_count": 2,
+      "column_count": 4,
+      "schema_type_counts": {
+        "INT": 3,
+        "VARCHAR": 1
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 3,
+      "operator_counts": {
+        "foreign": 1,
+        "primary": 2,
+        "value": 4
+      },
+      "reference_counts": {
+        "CUSTOMERS__ID": 2,
+        "ORDERS__CUSTOMERID": 1,
+        "ORDERS__ID": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [
+        "OFFICIAL_FOREIGN_REQUIRES_NON_NULL_SOURCE_AND_TARGET_MATCH"
+      ],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "fast_scope": "query check CPU below 250ms only; import/parse/encode/whole process costs remain separately reported",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004300583153963089,
+        "actual_check_cpu_seconds": 0.0043079999999999785,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.01449195807799697,
+        "actual_check_cpu_seconds": 0.014500000000000068,
+        "timeout_ms": 800
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.018792541231960058,
+    "solver_cumulative_cpu_seconds": 0.018808000000000047,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "scope": "Registered input only; exact2 official semantics, no business or cross-dialect gold",
+  "protocol_sha256": "065f8574563a3cb0fab2dd98a4e64fd44fe17f66f4b32ec73a2bee9bb39b8a55",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_diagnostic_worker.py": "c8c9ffcc2d22807ef4333d43ebdc11dc08b64f54956a00ce1dc0f2675b9bb1ec",
+    "official_diagnostic_backend.py": "b599f04890b8d7cbf5b12b872a8cbf8a97a0fa74f2ac49ec9eb88fa48e115e5e",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d"
+  },
+  "registered_group_count": 21,
+  "denominator_unchanged": true,
+  "last_event": {
+    "event": "FIRST_ATTEMPT_COMPLETE",
+    "id": "dev03_08",
+    "attempt": null,
+    "active_stage": null
+  },
+  "runtime": {
+    "id": "runtime",
+    "stages": [
+      {
+        "name": "LOCK_AND_DEPENDENCY_HASH",
+        "status": "RETURNED",
+        "checked_files": 848,
+        "wall_seconds": 0.03959616692736745,
+        "cpu_seconds": 0.03955499999999999
+      },
+      {
+        "name": "NATIVE_AND_OFFICIAL_IMPORT",
+        "status": "RETURNED",
+        "version": [
+          4,
+          12,
+          0,
+          0
+        ],
+        "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+        "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+        "wall_seconds": 0.6017282092943788,
+        "cpu_seconds": 0.600609
+      }
+    ],
+    "active_stage": null,
+    "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  },
+  "latest_attempt_snapshot": {
+    "id": "dev03_08",
+    "attempt": 1,
+    "status": "RETURNED",
+    "stages": [
+      {
+        "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+        "status": "RETURNED",
+        "wall_seconds": 0.0013066669926047325,
+        "cpu_seconds": 0.0013070000000000581
+      },
+      {
+        "name": "FULL_ORIGINAL_IC_ADMISSION",
+        "status": "RETURNED",
+        "original_clause_count": 3,
+        "base_fact_count": 26,
+        "admitted_delta_facts": 3,
+        "full_fact_count": 29,
+        "wall_seconds": 0.0015292498283088207,
+        "cpu_seconds": 0.0015300000000000313
+      },
+      {
+        "name": "FULL_C_SOLVER_SETUP",
+        "status": "RETURNED",
+        "wall_seconds": 0.0034856656566262245,
+        "cpu_seconds": 0.003485999999999989
+      },
+      {
+        "name": "FULL_C_NONEMPTY_CHECK",
+        "status": "RETURNED",
+        "timeout_ms": 100,
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004300583153963089,
+        "actual_check_cpu_seconds": 0.0043079999999999785,
+        "answer": "sat",
+        "wall_seconds": 0.006738167256116867,
+        "cpu_seconds": 0.00670499999999985
+      },
+      {
+        "name": "FULL_C_SAT_MODEL_VALIDATION",
+        "status": "RETURNED",
+        "wall_seconds": 0.00034070899710059166,
+        "cpu_seconds": 0.0003410000000000357
+      },
+      {
+        "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+        "status": "RETURNED",
+        "formula_counts": [
+          2,
+          26
+        ],
+        "output_tuple_counts": [
+          2,
+          6
+        ],
+        "wall_seconds": 0.07886875001713634,
+        "cpu_seconds": 0.07876000000000005
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_0",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "37ef30c8f4686542afdd6c720f8a795e77a6d58711e31773da4ec841e2618355",
+        "ast_hash_scope": "lossless canonical JSON",
+        "wall_seconds": 0.05928170774132013,
+        "cpu_seconds": 0.059257000000000004
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_1",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "8a398399589029cc2a24bfd56e4c50f06bff3ec27fd39bb8ce1f78464ca11954",
+        "ast_hash_scope": "lossless canonical JSON",
+        "wall_seconds": 0.0030014170333743095,
+        "cpu_seconds": 0.0030009999999999204
+      },
+      {
+        "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "status": "RETURNED",
+        "timeout_ms": 800,
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.01449195807799697,
+        "actual_check_cpu_seconds": 0.014500000000000068,
+        "answer": "unsat",
+        "wall_seconds": 0.017055958975106478,
+        "cpu_seconds": 0.016913999999999874
+      }
+    ],
+    "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+    "exact_rows": {
+      "CUSTOMERS": 2,
+      "ORDERS": 2
+    },
+    "raw_query_verdict": "unsat",
+    "full_C_nonempty": "sat",
+    "active_stage": null,
+    "latest_stage": "CLEANUP",
+    "full_contract_fact_sha256": "65e94cee34fd5e4e08d8517fbc53a1317df01bd54052d8b2358174e9b41c50b4",
+    "solver_cumulative_wall_seconds": 0.018792541231960058,
+    "solver_cumulative_cpu_seconds": 0.018808000000000047,
+    "parsed_asts": [
+      {
+        "select": {
+          "value": "NAME",
+          "name": "CUSTOMERS"
+        },
+        "from": "CUSTOMERS",
+        "where": {
+          "nin": [
+            "ID",
+            {
+              "select": {
+                "value": "CUSTOMERID"
+              },
+              "from": "ORDERS"
+            }
+          ]
+        }
+      },
+      {
+        "select": {
+          "value": "T__NAME",
+          "name": "CUSTOMERS"
+        },
+        "from": {
+          "value": {
+            "select": [
+              {
+                "value": "NAME"
+              },
+              {
+                "value": {
+                  "count": "O__ID"
+                },
+                "name": "FO"
+              }
+            ],
+            "from": [
+              {
+                "value": "CUSTOMERS",
+                "name": "C"
+              },
+              {
+                "left join": {
+                  "value": "ORDERS",
+                  "name": "O"
+                },
+                "on": {
+                  "eq": [
+                    "C__ID",
+                    "O__CUSTOMERID"
+                  ]
+                }
+              }
+            ],
+            "groupby": {
+              "value": "C__ID"
+            },
+            "having": {
+              "eq": [
+                "FO",
+                0
+              ]
+            }
+          },
+          "name": "T"
+        }
+      }
+    ],
+    "comparison_formula_encode": {
+      "wall_seconds": 0.005391167011111975,
+      "cpu_seconds": 0.005377000000000076
+    },
+    "submitted_query_assertion_count": 1,
+    "official_compare_return": true,
+    "engineering_class": "QUERY_RETURNED",
+    "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+    "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+    "cleanup_cost": {
+      "wall_seconds": 0.008447291795164347,
+      "cpu_seconds": 0.008446999999999982
+    },
+    "exclusive_phase_cpu": {
+      "parse": 0.062257999999999925,
+      "scope_encode": 0.016502000000000128,
+      "compare_encode": 0.005377000000000076,
+      "query_check": 0.014500000000000068
+    },
+    "attempt_cost": {
+      "cpu_seconds": 0.13385999999999998,
+      "wall_seconds": 0.13447862537577748,
+      "worker_peak_rss_bytes_macos": 108707840
+    }
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.7489319999999999,
+    "cpu_system_seconds": 0.065931,
+    "peak_rss_bytes_macos": 108756992,
+    "wall_from_main_seconds": 0.7967324582859874
+  }
+}

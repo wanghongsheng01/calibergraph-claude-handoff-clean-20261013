@@ -1,0 +1,685 @@
+{
+  "status": "REGISTERED_EXACT_SHAPE_ATTEMPT_RETURNED",
+  "record": {
+    "id": "dev04_N2_official",
+    "case_index": 3,
+    "status": "RETURNED",
+    "engineering_class": "INCONCLUSIVE",
+    "strict_class": "INCONCLUSIVE",
+    "attempts": [
+      {
+        "id": "dev03_18",
+        "attempt": 1,
+        "status": "STAGE_ERROR",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.0006641251966357231,
+            "cpu_seconds": 0.0006639999999999979
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 1,
+            "base_fact_count": 10,
+            "admitted_delta_facts": 1,
+            "full_fact_count": 11,
+            "wall_seconds": 0.0006380421109497547,
+            "cpu_seconds": 0.0006369999999999987
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.003065750002861023,
+            "cpu_seconds": 0.0030649999999999844
+          },
+          {
+            "name": "EXPORT_COMPLETE_C_ASSERTIONS",
+            "status": "RETURNED",
+            "wall_seconds": 0.0005700001493096352,
+            "cpu_seconds": 0.0005470000000000752
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004181291908025742,
+            "actual_check_cpu_seconds": 0.004189000000000109,
+            "answer": "sat",
+            "wall_seconds": 0.006594084203243256,
+            "cpu_seconds": 0.006481999999999988
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.000882208812981844,
+            "cpu_seconds": 0.0008360000000001699
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RAISED",
+            "error_type": "CorrelatedQueryError",
+            "error": "Not supported feature: CorrelatedQueryError {'select': {'value': {'count': {'distinct': 'STUDENT'}}}, 'from': {'value': 'COURSES', 'name': 'CP'}, 'where': {'eq': ['CP__CLASS', 'CS__CLASS']}}",
+            "wall_seconds": 0.06638291571289301,
+            "cpu_seconds": 0.06539699999999993
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "74ca503fab4460adef9d66a814992c307c5f87a3842d05a85d86691a56da7c75",
+            "ast_hash_scope": "lossless canonical JSON; actual AST passed unchanged to encoder",
+            "wall_seconds": 0.05784699972718954,
+            "cpu_seconds": 0.05781500000000006
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "82bc34e60d91d822dcc5de77fe229b3dfc4dc8e4149e44a7892221c52431f2b4",
+            "ast_hash_scope": "lossless canonical JSON; actual AST passed unchanged to encoder",
+            "wall_seconds": 0.0031458749435842037,
+            "cpu_seconds": 0.0028439999999998467
+          }
+        ],
+        "environment_identity": "one cold Environment and Solver; full original schema/C/query re-encoded; no repeat",
+        "exact_rows": {
+          "COURSES": 2
+        },
+        "raw_query_verdict": null,
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "a49a8c29e523b88e19e23cd12a56d405729aa2a4e3bfe91c815e81c7281ca968",
+        "exact_shape_semantics": {
+          "live_rows_per_table": 2,
+          "official_create_database_NotDeleted_facts_retained": true,
+          "is_up_to_bound": false,
+          "fixture_constraints_added": false
+        },
+        "evidence_artifacts": {
+          "contract_assertions.smt2": {
+            "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/contract_assertions.smt2",
+            "sha256": "0b1a5cf41f7d61abe4874030bdef40e9044fdfe333d6d2d24cdb7ac283ce82d6",
+            "bytes": 1048,
+            "complete": true
+          },
+          "contract_full_model.sexpr": {
+            "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/contract_full_model.sexpr",
+            "sha256": "4c6eb6898ffa66842f5e8f542734d9cd65ff07f8802b139c05b72bfdf34ad0c4",
+            "bytes": 1000,
+            "complete": true
+          },
+          "parsed_ast_1.json": {
+            "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/parsed_ast_1.json",
+            "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+            "bytes": 189,
+            "complete": true
+          },
+          "parsed_ast_2.json": {
+            "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/parsed_ast_2.json",
+            "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+            "bytes": 532,
+            "complete": true
+          }
+        },
+        "solver_cumulative_wall_seconds": 0.004181291908025742,
+        "solver_cumulative_cpu_seconds": 0.004189000000000109,
+        "C_SAT_all_original_facts_true": true,
+        "C_witness": {
+          "all_physical_raw_values": {
+            "COURSES": [
+              {
+                "CLASS": 2147483648,
+                "STUDENT": 2147483648
+              },
+              {
+                "CLASS": 2147483648,
+                "STUDENT": 2147483649
+              }
+            ]
+          },
+          "decoded_values": {
+            "COURSES": [
+              {
+                "CLASS": {
+                  "official_encoded_string_symbol": 2147483648
+                },
+                "STUDENT": {
+                  "official_encoded_string_symbol": 2147483648
+                }
+              },
+              {
+                "CLASS": {
+                  "official_encoded_string_symbol": 2147483648
+                },
+                "STUDENT": {
+                  "official_encoded_string_symbol": 2147483649
+                }
+              }
+            ]
+          },
+          "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+        },
+        "C_witness_independent_C_check": {
+          "status": "ALL_ORIGINAL_C_CHECKED_ON_ENCODED_MODEL",
+          "exact_rows": 2,
+          "student_nonnull": true,
+          "student_unique": true,
+          "checked_clause_count": 1,
+          "unknown_or_dropped_clauses": 0,
+          "scope": "Independent Python PK/exact-shape check on complete raw encoded values; no concrete VARCHAR decoding or SQL replay claim."
+        },
+        "parsed_asts": [
+          {
+            "select": {
+              "value": "CLASS"
+            },
+            "from": "COURSES",
+            "groupby": {
+              "value": "CLASS"
+            },
+            "having": {
+              "gte": [
+                {
+                  "count": "*"
+                },
+                5
+              ]
+            }
+          },
+          {
+            "select": {
+              "value": "CLASS"
+            },
+            "from": {
+              "value": "COURSES",
+              "name": "CS"
+            },
+            "groupby": {
+              "value": "CLASS"
+            },
+            "having": {
+              "gte": [
+                {
+                  "select": {
+                    "value": {
+                      "count": {
+                        "distinct": "STUDENT"
+                      }
+                    }
+                  },
+                  "from": {
+                    "value": "COURSES",
+                    "name": "CP"
+                  },
+                  "where": {
+                    "eq": [
+                      "CP__CLASS",
+                      "CS__CLASS"
+                    ]
+                  }
+                },
+                5
+              ]
+            }
+          }
+        ],
+        "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+        "engineering_class": "INCONCLUSIVE",
+        "error_type": "CorrelatedQueryError",
+        "error": "Not supported feature: CorrelatedQueryError {'select': {'value': {'count': {'distinct': 'STUDENT'}}}, 'from': {'value': 'COURSES', 'name': 'CP'}, 'where': {'eq': ['CP__CLASS', 'CS__CLASS']}}",
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 857, in parse_expression\n    correlated_subquery_ctx = self.analyze(expr)\n                              ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1966, in analyze\n    self.parse_where_clause(where_clause, ctx)\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1486, in parse_where_clause\n    conds = self.parse_case_condition_in_where_clause(cond, ctx)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1452, in parse_case_condition_in_where_clause\n    cond = self.parse_expression(cond, ctx)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1284, in parse_expression\n    operands = [self.parse_expression(opd, ctx, **kwargs) for opd in operands]\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 848, in parse_expression\n    new_expr = self._find_select_expressions(expr, ctx, **kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1636, in _find_select_expressions\n    raise UnknownColumnError(f'Unknown attribute {selected_attrs}')\nerrors.UnknownColumnError: UnknownColumnError: UnknownColumnError: unknown column `Unknown attribute CS__CLASS`\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/official_boundary_backend.py\", line 372, in run_attempt\n    env.analyze(*src['pair'])\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 893, in analyze\n    table, formulas = _analyze(query, idx)\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 866, in _analyze\n    ctx = scope.analyze(query)\n          ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/scope.py\", line 119, in analyze\n    ctx = self.encoder.analyze(query)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 2011, in analyze\n    having_clause = self._replace_clause(having_clause, ctx, having=True, outer_attrs=outer_attrs)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1847, in _replace_clause\n    parsed_clauses = self.parse_expression(clauses, ctx, **kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1396, in parse_expression\n    return [self.parse_expression(c, ctx, **kwargs) for c in expr]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1137, in parse_expression\n    expr = [self.parse_expression(opd, ctx, **kwargs) for opd in operands]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 860, in parse_expression\n    raise CorrelatedQueryError(expr)\nerrors.CorrelatedQueryError: Not supported feature: CorrelatedQueryError {'select': {'value': {'count': {'distinct': 'STUDENT'}}}, 'from': {'value': 'COURSES', 'name': 'CP'}, 'where': {'eq': ['CP__CLASS', 'CS__CLASS']}}\n",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.006429334171116352,
+          "cpu_seconds": 0.006429999999999936
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06065899999999991,
+          "scope_encode": 0.00473800000000002,
+          "compare_encode": null,
+          "query_check": 0
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.09627399999999997,
+          "wall_seconds": 0.09884633403271437,
+          "worker_peak_rss_bytes_macos": 108789760
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_case_id": "dev03_18",
+    "registered_slot": {
+      "id": "dev04_N2_official",
+      "source_case_id": "dev03_18",
+      "exact_rows": 2,
+      "kind": "official",
+      "fixture": "unconstrained_original_C"
+    },
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 2924,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "fe3f09e4498474f0b399abe5efd9fc74844d4e08d93395384d21e554e941a0a4",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "COURSES__STUDENT"
+            }
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/596.csv",
+      "index": 73,
+      "pair": [
+        "SELECT CLASS FROM COURSES GROUP BY CLASS HAVING COUNT(*)>=5",
+        "SELECT CLASS FROM COURSES AS CS GROUP BY CLASS HAVING (SELECT COUNT(DISTINCT STUDENT) FROM COURSES CP WHERE CP.CLASS= CS.CLASS) >=5"
+      ],
+      "schema": {
+        "COURSES": {
+          "CLASS": "VARCHAR",
+          "STUDENT": "VARCHAR"
+        }
+      }
+    },
+    "original_sql_sha256": [
+      "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+      "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+    ],
+    "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+    "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "source_exposure": "PRIOR_FULL_48910_QUERY_APPLICABILITY_SCAN_PLUS_CURRENT_LEXICAL_DEVELOPMENT_SELECTION",
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "exact_rows": {
+      "COURSES": 2
+    },
+    "full_C_checker_admission": {
+      "status": "COMPLETE_ORIGINAL_C_SUPPORTED",
+      "clause_count": 1,
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "COURSES__STUDENT"
+            }
+          ]
+        }
+      ],
+      "primary_key": [
+        "COURSES.STUDENT"
+      ],
+      "class_nullable": true,
+      "unknown_or_omitted_clauses": 0,
+      "scope": "Full explicit original operational C; natural/business completeness remains unverified."
+    },
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+      "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+      "table_count": 1,
+      "column_count": 2,
+      "schema_type_counts": {
+        "VARCHAR": 2
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 1,
+      "operator_counts": {
+        "primary": 1,
+        "value": 1
+      },
+      "reference_counts": {
+        "COURSES__STUDENT": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "maximum_attempts": 1,
+    "repeat_policy": "NO_INDEPENDENT_REPEAT_REGISTERED",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004181291908025742,
+        "actual_check_cpu_seconds": 0.004189000000000109,
+        "timeout_ms": 100
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.004181291908025742,
+    "solver_cumulative_cpu_seconds": 0.004189000000000109,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED",
+    "mechanism_or_competitive_win": "NOT_ESTABLISHED",
+    "stable_cost_evidence": "NOT_ESTABLISHED_SINGLE_ATTEMPT"
+  },
+  "scope": "Problem-evidence pilot on exposed dev03_18; exactly N official live rows; no new mechanism, natural label or competitive win.",
+  "protocol_sha256": "384fc9ea85f10da0b305d092c770d440661eb4bec26b03822909db851b024ac2",
+  "input": {
+    "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb"
+  },
+  "code_sha256": {
+    "official_boundary_worker.py": "74b9150ddb6a378c00059932c9616a564c7ed523025ebdab86dc7d159a51519c",
+    "official_boundary_backend.py": "32302da24200908e89f35fe0ae4213c4bf49296416f05b1889847f86ce5f4a34",
+    "official_contract_admission.py": "cdcf3473ede034a83064c3e5648569ad6aac76509f1caa7ef776d0ae1b5e515d",
+    "pilot_common.py": "197532f6b824a6f883db5e201a86f09050b420e092c1a102f2b3711e2d4e5822"
+  },
+  "registered_task_count": 10,
+  "denominator_unchanged": true,
+  "budget_policy": {
+    "worker_cpu_limit_seconds": 3,
+    "worker_wall_limit_seconds": 4,
+    "external_rss_limit_bytes": 268435456,
+    "contract_check_timeout_ms": 100,
+    "query_check_timeout_ms": 700,
+    "solver_cumulative_wall_limit_seconds": 2.0,
+    "supervisor_solver_stop_seconds": 1.5,
+    "maximum_independent_environment_attempts": 1
+  },
+  "last_event": {
+    "event": "SINGLE_ATTEMPT_COMPLETE",
+    "id": "dev04_N2_official",
+    "attempt": null,
+    "active_stage": null
+  },
+  "runtime": {
+    "id": "runtime",
+    "stages": [
+      {
+        "name": "LOCK_AND_DEPENDENCY_HASH",
+        "status": "RETURNED",
+        "checked_files": 848,
+        "wall_seconds": 0.04049041587859392,
+        "cpu_seconds": 0.04045399999999999
+      },
+      {
+        "name": "NATIVE_AND_OFFICIAL_IMPORT",
+        "status": "RETURNED",
+        "version": [
+          4,
+          12,
+          0,
+          0
+        ],
+        "native_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+        "native_sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+        "wall_seconds": 0.6496872082352638,
+        "cpu_seconds": 0.6472739999999999
+      }
+    ],
+    "active_stage": null,
+    "latest_stage": "NATIVE_AND_OFFICIAL_IMPORT"
+  },
+  "latest_attempt_snapshot": {
+    "id": "dev03_18",
+    "attempt": 1,
+    "status": "STAGE_ERROR",
+    "stages": [
+      {
+        "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+        "status": "RETURNED",
+        "wall_seconds": 0.0006641251966357231,
+        "cpu_seconds": 0.0006639999999999979
+      },
+      {
+        "name": "FULL_ORIGINAL_IC_ADMISSION",
+        "status": "RETURNED",
+        "original_clause_count": 1,
+        "base_fact_count": 10,
+        "admitted_delta_facts": 1,
+        "full_fact_count": 11,
+        "wall_seconds": 0.0006380421109497547,
+        "cpu_seconds": 0.0006369999999999987
+      },
+      {
+        "name": "FULL_C_SOLVER_SETUP",
+        "status": "RETURNED",
+        "wall_seconds": 0.003065750002861023,
+        "cpu_seconds": 0.0030649999999999844
+      },
+      {
+        "name": "EXPORT_COMPLETE_C_ASSERTIONS",
+        "status": "RETURNED",
+        "wall_seconds": 0.0005700001493096352,
+        "cpu_seconds": 0.0005470000000000752
+      },
+      {
+        "name": "FULL_C_NONEMPTY_CHECK",
+        "status": "RETURNED",
+        "timeout_ms": 100,
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004181291908025742,
+        "actual_check_cpu_seconds": 0.004189000000000109,
+        "answer": "sat",
+        "wall_seconds": 0.006594084203243256,
+        "cpu_seconds": 0.006481999999999988
+      },
+      {
+        "name": "FULL_C_SAT_MODEL_VALIDATION",
+        "status": "RETURNED",
+        "wall_seconds": 0.000882208812981844,
+        "cpu_seconds": 0.0008360000000001699
+      },
+      {
+        "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+        "status": "RAISED",
+        "error_type": "CorrelatedQueryError",
+        "error": "Not supported feature: CorrelatedQueryError {'select': {'value': {'count': {'distinct': 'STUDENT'}}}, 'from': {'value': 'COURSES', 'name': 'CP'}, 'where': {'eq': ['CP__CLASS', 'CS__CLASS']}}",
+        "wall_seconds": 0.06638291571289301,
+        "cpu_seconds": 0.06539699999999993
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_0",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "74ca503fab4460adef9d66a814992c307c5f87a3842d05a85d86691a56da7c75",
+        "ast_hash_scope": "lossless canonical JSON; actual AST passed unchanged to encoder",
+        "wall_seconds": 0.05784699972718954,
+        "cpu_seconds": 0.05781500000000006
+      },
+      {
+        "name": "OFFICIAL_PARSE_QUERY_1",
+        "status": "RETURNED",
+        "ast_json_lossless": true,
+        "ast_sha256": "82bc34e60d91d822dcc5de77fe229b3dfc4dc8e4149e44a7892221c52431f2b4",
+        "ast_hash_scope": "lossless canonical JSON; actual AST passed unchanged to encoder",
+        "wall_seconds": 0.0031458749435842037,
+        "cpu_seconds": 0.0028439999999998467
+      }
+    ],
+    "environment_identity": "one cold Environment and Solver; full original schema/C/query re-encoded; no repeat",
+    "exact_rows": {
+      "COURSES": 2
+    },
+    "raw_query_verdict": null,
+    "full_C_nonempty": "sat",
+    "active_stage": null,
+    "latest_stage": "CLEANUP",
+    "full_contract_fact_sha256": "a49a8c29e523b88e19e23cd12a56d405729aa2a4e3bfe91c815e81c7281ca968",
+    "exact_shape_semantics": {
+      "live_rows_per_table": 2,
+      "official_create_database_NotDeleted_facts_retained": true,
+      "is_up_to_bound": false,
+      "fixture_constraints_added": false
+    },
+    "evidence_artifacts": {
+      "contract_assertions.smt2": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/contract_assertions.smt2",
+        "sha256": "0b1a5cf41f7d61abe4874030bdef40e9044fdfe333d6d2d24cdb7ac283ce82d6",
+        "bytes": 1048,
+        "complete": true
+      },
+      "contract_full_model.sexpr": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/contract_full_model.sexpr",
+        "sha256": "4c6eb6898ffa66842f5e8f542734d9cd65ff07f8802b139c05b72bfdf34ad0c4",
+        "bytes": 1000,
+        "complete": true
+      },
+      "parsed_ast_1.json": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/parsed_ast_1.json",
+        "sha256": "d508e0517a6bec0476c502dc4833c013cab40c4a433b3b8daddee4e71d01476c",
+        "bytes": 189,
+        "complete": true
+      },
+      "parsed_ast_2.json": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_02/case_03/parsed_ast_2.json",
+        "sha256": "c118b3c5f18229a11e200bff99d39af9f52444e1aa453abc0d62dcef1ec202fa",
+        "bytes": 532,
+        "complete": true
+      }
+    },
+    "solver_cumulative_wall_seconds": 0.004181291908025742,
+    "solver_cumulative_cpu_seconds": 0.004189000000000109,
+    "C_SAT_all_original_facts_true": true,
+    "C_witness": {
+      "all_physical_raw_values": {
+        "COURSES": [
+          {
+            "CLASS": 2147483648,
+            "STUDENT": 2147483648
+          },
+          {
+            "CLASS": 2147483648,
+            "STUDENT": 2147483649
+          }
+        ]
+      },
+      "decoded_values": {
+        "COURSES": [
+          {
+            "CLASS": {
+              "official_encoded_string_symbol": 2147483648
+            },
+            "STUDENT": {
+              "official_encoded_string_symbol": 2147483648
+            }
+          },
+          {
+            "CLASS": {
+              "official_encoded_string_symbol": 2147483648
+            },
+            "STUDENT": {
+              "official_encoded_string_symbol": 2147483649
+            }
+          }
+        ]
+      },
+      "scope": "complete official model; VARCHAR stays encoded, literals/order/collation not decoded; no DBMS replay or business gold"
+    },
+    "C_witness_independent_C_check": {
+      "status": "ALL_ORIGINAL_C_CHECKED_ON_ENCODED_MODEL",
+      "exact_rows": 2,
+      "student_nonnull": true,
+      "student_unique": true,
+      "checked_clause_count": 1,
+      "unknown_or_dropped_clauses": 0,
+      "scope": "Independent Python PK/exact-shape check on complete raw encoded values; no concrete VARCHAR decoding or SQL replay claim."
+    },
+    "parsed_asts": [
+      {
+        "select": {
+          "value": "CLASS"
+        },
+        "from": "COURSES",
+        "groupby": {
+          "value": "CLASS"
+        },
+        "having": {
+          "gte": [
+            {
+              "count": "*"
+            },
+            5
+          ]
+        }
+      },
+      {
+        "select": {
+          "value": "CLASS"
+        },
+        "from": {
+          "value": "COURSES",
+          "name": "CS"
+        },
+        "groupby": {
+          "value": "CLASS"
+        },
+        "having": {
+          "gte": [
+            {
+              "select": {
+                "value": {
+                  "count": {
+                    "distinct": "STUDENT"
+                  }
+                }
+              },
+              "from": {
+                "value": "COURSES",
+                "name": "CP"
+              },
+              "where": {
+                "eq": [
+                  "CP__CLASS",
+                  "CS__CLASS"
+                ]
+              }
+            },
+            5
+          ]
+        }
+      }
+    ],
+    "failure_stage": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+    "engineering_class": "INCONCLUSIVE",
+    "error_type": "CorrelatedQueryError",
+    "error": "Not supported feature: CorrelatedQueryError {'select': {'value': {'count': {'distinct': 'STUDENT'}}}, 'from': {'value': 'COURSES', 'name': 'CP'}, 'where': {'eq': ['CP__CLASS', 'CS__CLASS']}}",
+    "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 857, in parse_expression\n    correlated_subquery_ctx = self.analyze(expr)\n                              ^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1966, in analyze\n    self.parse_where_clause(where_clause, ctx)\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1486, in parse_where_clause\n    conds = self.parse_case_condition_in_where_clause(cond, ctx)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1452, in parse_case_condition_in_where_clause\n    cond = self.parse_expression(cond, ctx)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1284, in parse_expression\n    operands = [self.parse_expression(opd, ctx, **kwargs) for opd in operands]\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 848, in parse_expression\n    new_expr = self._find_select_expressions(expr, ctx, **kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1636, in _find_select_expressions\n    raise UnknownColumnError(f'Unknown attribute {selected_attrs}')\nerrors.UnknownColumnError: UnknownColumnError: UnknownColumnError: unknown column `Unknown attribute CS__CLASS`\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/official_boundary_backend.py\", line 372, in run_attempt\n    env.analyze(*src['pair'])\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 893, in analyze\n    table, formulas = _analyze(query, idx)\n                      ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py\", line 866, in _analyze\n    ctx = scope.analyze(query)\n          ^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/scope.py\", line 119, in analyze\n    ctx = self.encoder.analyze(query)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 2011, in analyze\n    having_clause = self._replace_clause(having_clause, ctx, having=True, outer_attrs=outer_attrs)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1847, in _replace_clause\n    parsed_clauses = self.parse_expression(clauses, ctx, **kwargs)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1396, in parse_expression\n    return [self.parse_expression(c, ctx, **kwargs) for c in expr]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 1137, in parse_expression\n    expr = [self.parse_expression(opd, ctx, **kwargs) for opd in operands]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/encoder.py\", line 860, in parse_expression\n    raise CorrelatedQueryError(expr)\nerrors.CorrelatedQueryError: Not supported feature: CorrelatedQueryError {'select': {'value': {'count': {'distinct': 'STUDENT'}}}, 'from': {'value': 'COURSES', 'name': 'CP'}, 'where': {'eq': ['CP__CLASS', 'CS__CLASS']}}\n",
+    "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+    "cleanup_cost": {
+      "wall_seconds": 0.006429334171116352,
+      "cpu_seconds": 0.006429999999999936
+    },
+    "exclusive_phase_cpu": {
+      "parse": 0.06065899999999991,
+      "scope_encode": 0.00473800000000002,
+      "compare_encode": null,
+      "query_check": 0
+    },
+    "attempt_cost": {
+      "cpu_seconds": 0.09627399999999997,
+      "wall_seconds": 0.09884633403271437,
+      "worker_peak_rss_bytes_macos": 108789760
+    }
+  },
+  "worker_usage": {
+    "cpu_user_seconds": 0.7636529999999999,
+    "cpu_system_seconds": 0.066908,
+    "peak_rss_bytes_macos": 108822528,
+    "wall_from_main_seconds": 0.81269795820117
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "case_index": 0,
+  "case_id": "dev03_01",
+  "status": "MONITOR_OR_LAUNCH_EXCEPTION",
+  "started_utc": "2026-10-11T12:34:03.460256+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 0,
+  "sampled_peak_group_cpu_seconds": 0.0,
+  "sample_count": 0,
+  "stop_remainder": "MONITOR_OR_LAUNCH_EXCEPTION",
+  "monitor_error": {
+    "type": "SubprocessError",
+    "message": "Exception occurred in preexec_fn."
+  },
+  "wall_seconds": 0.0015445421449840069,
+  "worker_exit_code": null,
+  "final_progress": null,
+  "worker_results_missing_supervisor_placeholder": true,
+  "cpu_accounting_after_reap": {
+    "pre_registered_scan_cpu_seconds": 6.708654999999999,
+    "parent_user_cpu_seconds": 0.035863,
+    "parent_system_cpu_seconds": 0.028943999999999998,
+    "all_reaped_children_user_cpu_seconds": 0.000642,
+    "all_reaped_children_system_cpu_seconds": 0.001854,
+    "supervisor_plus_reaped_cpu_seconds": 0.067303,
+    "observed_total_cpu_seconds": 6.775957999999999,
+    "scan_charge_verified": true,
+    "scope": "Supervisor absolute SELF plus all reaped CHILDREN, including resource probes/ps; live worker separately sampled"
+  }
+}

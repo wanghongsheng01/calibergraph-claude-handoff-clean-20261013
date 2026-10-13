@@ -1,0 +1,306 @@
+{
+  "reviewer": "/root/v2_resource_engineering_review",
+  "verdict": "PASS_SAVED_DATA_REPLAY_WITH_DECLARED_LIMITS",
+  "baseline_rerun": false,
+  "independent_review_baseline_calls": 0,
+  "independent_review_generator_calls": 0,
+  "independent_review_solver_calls": 0,
+  "reviewed_input_sha256": {
+    "FREEZE.json": "aff584bff4c18e0741575ce20ee92feb8db7abe82e0ace2a0b387cbca5b4f6e6",
+    "worker.py": "4a427ad2ac43a548097b2629356aff76c05636e96c9cc9056cd3860dd22dc97f",
+    "guard.py": "1de9c86c3860f3bf9d6defe40c7c7917168ef64e893b4236aeb367b9bf5e7ffc",
+    "supervisor.py": "53009f1a1de934a7be23911156743d40f526bc58286b1cded1ce74a1e2cc72d4",
+    "VALIDATION.json": "78d51a752c20f36430f0c7cd376ccae8ea83a154de836fd9e02f3376b289f5ca",
+    "science/RESULT.json": "93e361d5955fe1b659e97d913c653b7b7f7b562df8dccffc458fb406f25a6e29",
+    "science/STAGES.jsonl": "32b8bd4a10b343ea08798dc4ee476ad3f3b6457732eddfb3f641d182fffabcd8",
+    "science/RECEIPT.json": "ae91116e756ca388e0d36d354ee440baf75feb762d6ddc2861b1d75f066084a3",
+    "science/telemetry.jsonl": "7b437c23ce76b7cf372de035d3808a91b17644c6ed8aa188c285f76b26197587",
+    "science/error.txt": "9dccced6431192359e745bdf646b263c91a89dbcfb04ea5c02b413717c3ad547",
+    "science/LOCK_CHECK.json": "bfe9ee2cd62c811ce169c87112b479592d92397c2ac631725e0115272173a97d"
+  },
+  "original_run_author_error_preserved": {
+    "type": "KeyError",
+    "message": "'Patient'",
+    "phase": "INDEPENDENT_CANDIDATE_REPLAY"
+  },
+  "original_run_status_preserved": "ERROR_NOT_ALGORITHM_FAILURE",
+  "freeze_files_match": {
+    "files": 588,
+    "all_match": true,
+    "freeze_sha256": "aff584bff4c18e0741575ce20ee92feb8db7abe82e0ace2a0b387cbca5b4f6e6"
+  },
+  "original_inputs": {
+    "case1172.gold.sql": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb",
+    "case1172.predicted.sql": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545",
+    "case1172.full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+  },
+  "control": {
+    "kind": "OUR_CONSTRUCTED_SAVED_CONTROL_NOT_AUTHOR_WITNESS",
+    "full_original_DDL_valid": true,
+    "original_query_outputs": [
+      [
+        [
+          1
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "supplied_to_generator": false
+  },
+  "candidate_denominator": {
+    "loaded_snapshots": 9,
+    "empty_snapshots": 1,
+    "nonempty_snapshots": 8
+  },
+  "all_9_candidates_valid_under_full_original_DDL": true,
+  "all_9_original_query_outputs_match_recorded_official_outputs": true,
+  "candidate_outputs": [
+    {
+      "candidate": 0,
+      "original_query_outputs": [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "male_boundary_ids": [],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 1,
+      "original_query_outputs": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "male_boundary_ids": [
+        1
+      ],
+      "boundary_ids_also_gt2": [
+        1
+      ],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 2,
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "male_boundary_ids": [
+        1
+      ],
+      "boundary_ids_also_gt2": [
+        1
+      ],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 3,
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "male_boundary_ids": [
+        1
+      ],
+      "boundary_ids_also_gt2": [
+        1
+      ],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 4,
+      "original_query_outputs": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "male_boundary_ids": [],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 5,
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "male_boundary_ids": [],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 6,
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "male_boundary_ids": [],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 7,
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "male_boundary_ids": [],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": []
+    },
+    {
+      "candidate": 8,
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "male_boundary_ids": [
+        38
+      ],
+      "boundary_ids_also_gt2": [
+        38
+      ],
+      "boundary_only_ids": []
+    }
+  ],
+  "localized_current_run": [
+    "Both original SQLs parsed and lowered; original full schema loaded",
+    "Two generation directions completed without reported unsupported/timeout",
+    "One empty plus eight nonempty candidate snapshots loaded and compared; no output difference",
+    "Every saved male equality-boundary ID also has a >2 joined row, so COUNT DISTINCT membership unchanged",
+    "Current run missed a known legal distinguishing database and returned EQ; EQ is documented heuristic evidence, not proof",
+    "Post-baseline KeyError is in author replay mapping and cannot cause the earlier baseline EQ"
+  ],
+  "not_established": [
+    "Exact same causal trace for historical official CI EQ (historical candidates unavailable)",
+    "Counterfactual generator-policy cause: no ablation, witness seeding, candidate deletion, new seed or rerun performed",
+    "General failure rate or novel method contribution from one previously selected development case",
+    "Uninstrumented timing equivalence, original Python3.11/Linux platform replication or speed advantage",
+    "Hard RSS limit, exact 50ms cadence or whole-machine absence of other processes"
+  ],
+  "resource_contract_audit": {
+    "sampled_stop_permitted": true,
+    "hard_cap_claim": false,
+    "baseline_receipt": {
+      "mode": "science",
+      "wall_budget_s": 60,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27587,
+      "reaped": true,
+      "returncode": 0,
+      "elapsed_s": 1.170365042053163,
+      "stop_reason": null,
+      "observed_peak_RSS_bytes": 107397120,
+      "max_observed_sample_gap_s": 0.06315545784309506,
+      "samples": 21
+    },
+    "separate_review_receipt": {
+      "mode": "audit",
+      "wall_budget_s": 60,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27662,
+      "reaped": true,
+      "returncode": 0,
+      "elapsed_s": 0.2645770409144461,
+      "stop_reason": null,
+      "observed_peak_RSS_bytes": 126615552,
+      "max_observed_sample_gap_s": 0.06009649997577071,
+      "samples": 6
+    },
+    "review_no_stop_and_reaped": true,
+    "sample_timestamps_and_peaks_match_receipts": true,
+    "synthetic_stop_tests": "64MiB sampled stop, parent deadline and telemetry-silence stop observed; not a 1GiB no-overshoot proof",
+    "parent_death_guard": "lifetime pipe and self-exit path present in source; parent crash not independently exercised; scheduling/GIL can delay guard",
+    "hash_limits": "Current hash matches plus saved launch marker support identity; not historical cryptographic attestation or proof of zero observer perturbation"
+  },
+  "audit_result_sha256": "56193cfdc6defb1a4a648b4a87d146e6d26904c6c046ac322769dc2027d0b664",
+  "audit_code_sha256": {
+    "audit_worker.py": "ee3703752b78de806b81faf6bcf0dfd9d50e39d0347373b9f39adf2bd6f9ca1e",
+    "audit_supervisor.py": "be7c287473922d46ba50571d9010e553e742ba4aa04f54c14cd16d7127d4e697"
+  },
+  "remaining_science_execution_authorized_by_this_review": false,
+  "private_backup": "Parent handles unified backup; no network used by reviewer"
+}

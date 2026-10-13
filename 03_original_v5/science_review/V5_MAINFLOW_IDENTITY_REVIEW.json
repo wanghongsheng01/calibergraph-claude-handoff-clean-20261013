@@ -1,0 +1,302 @@
+{
+  "review_utc": "2026-10-11T04:13:31.325663+00:00",
+  "status": "STATIC_MAINFLOW_IDENTITY_AND_NO_BYPASS_CHECK_COMPLETE_RUNTIME_PENDING",
+  "reviewer_role": "Independent reviewer of runtime_guard v5 integration; reviewer authored earlier narrow bridge, support_closure separately covers main static control review; AI review not human review",
+  "method": "Read source + stdlib AST/JSON/SHA256/inventory only; no target/reference/native/solver/SQLite execution",
+  "programs": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/common.py",
+      "sha256": "460b81bfb4c5534189ba091d16af53c9b60ceebbb09499d533cddf3d92df72c2"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/worker.py",
+      "sha256": "e4d6f8d0ea8da07d80b931db3ccf1f0a52ebf78868630de7164b76eeea5c7344"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/supervisor.py",
+      "sha256": "bde829b89b9e952ad85d51bd55a69bb615b36ba3d258a24179137deef2a2a3ea"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/query_differential.py",
+      "sha256": "747fcc77e874ae8a954b4fc00bdb27c9d0ea5a73dd565e78eb90a8bde5777a9c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_fair_v5/contract_reference.py",
+      "sha256": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0"
+    }
+  ],
+  "runtime_locks": [
+    {
+      "file": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/runtime_paths_v5.json",
+        "sha256": "99e3e167b0c719c519dfb7131d1f29befb36a5592326ee02f885cc36991f4c77"
+      },
+      "status_at_review": "PENDING_INDEPENDENT_STATIC_REVIEW",
+      "files_checked": 853,
+      "hashes_matched": 853,
+      "runtime_programs_exact5": true,
+      "inventories": [
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+          "exact_inventory_files": 159,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+          "exact_inventory_files": 11,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+          "exact_inventory_files": 503,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260",
+          "exact_inventory_files": 18,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252",
+          "exact_inventory_files": 24,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201",
+          "exact_inventory_files": 17,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201",
+          "exact_inventory_files": 11,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303",
+          "exact_inventory_files": 11,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0",
+          "exact_inventory_files": 5,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9",
+          "exact_inventory_files": 46,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0",
+          "exact_inventory_files": 6,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2",
+          "exact_inventory_files": 24,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        }
+      ],
+      "source_root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1",
+      "source_environment": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/sources/verieql_v1/environment.py",
+        "sha256": "99302725b9373ba91f72850790c7eb061e60d08ae1b1413f102c83bf334a9dc8"
+      },
+      "native_version_expected": [
+        4,
+        12,
+        0,
+        0
+      ],
+      "kernel": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+        "sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78"
+      }
+    },
+    {
+      "file": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/spotit_engine_runtime_paths_v5.json",
+        "sha256": "5cdd4008c8fc2ae606e7570c210f53fa5cde6d9d42d76cf5735d2f5dd22848a4"
+      },
+      "status_at_review": "PENDING_INDEPENDENT_STATIC_REVIEW",
+      "files_checked": 861,
+      "hashes_matched": 861,
+      "runtime_programs_exact5": true,
+      "inventories": [
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source",
+          "exact_inventory_files": 167,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/official",
+          "exact_inventory_files": 11,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/support",
+          "exact_inventory_files": 503,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-sql-parsing-8.205.22260/mo-sql-parsing-8.205.22260",
+          "exact_inventory_files": 18,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-parsing-8.204.22252/mo-parsing-8.204.22252",
+          "exact_inventory_files": 24,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-dots-9.189.22201/mo-dots-9.189.22201",
+          "exact_inventory_files": 17,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-imports-7.187.22201/mo-imports-7.187.22201",
+          "exact_inventory_files": 11,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/mo-future-6.2.21303/mo-future-6.2.21303",
+          "exact_inventory_files": 11,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ordered-set-4.1.0",
+          "exact_inventory_files": 5,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/lark-1.1.9",
+          "exact_inventory_files": 46,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/ujson-5.10.0",
+          "exact_inventory_files": 6,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        },
+        {
+          "root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/dependencies/extracted/PyYAML-6.0.2",
+          "exact_inventory_files": 24,
+          "unlisted_or_missing": 0,
+          "symlinks": 0
+        }
+      ],
+      "source_root": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source",
+      "source_environment": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/environment.py",
+        "sha256": "082b6c22c108295023201e099e32fea88b249c0b850f014ba21fe10a9e455816"
+      },
+      "native_version_expected": [
+        4,
+        12,
+        0,
+        0
+      ],
+      "kernel": {
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v4/aggregate_kernel.py",
+        "sha256": "17f652323839f0395e3224e5d82f646c143f34ff8245fb4d798724d3d7b9fa78"
+      }
+    }
+  ],
+  "suite": {
+    "file": {
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v5_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+      "sha256": "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+    },
+    "case_denominator": 28,
+    "first22_exact_old_case_dicts": true,
+    "new_controls": [
+      "D01_literal_left_forced_A6",
+      "D02_same_SQL_same_C",
+      "D03_no_C_same_pair",
+      "D04_contradictory_literal_left",
+      "D05_inverted_BETWEEN_contract",
+      "D06_unsupported_whole_C"
+    ],
+    "pending_runtime": true
+  },
+  "reference_versions": {
+    "earlier_externally_executed": "e57496ec0b1d1198370c0d96cb8891fad31a34ebfed4dd162c9738920cb9bdd1",
+    "current_bridge_v1": "781ce147e8bf9f8f8323621b745b30920df4da57e68f0c0daeab70387e990e7c",
+    "new_v5": "fdcee3a919930013945c571e64b7d4b478186c93ceee4546ff520879e99680e0",
+    "difference": "v5 adds explicit single-column integer BETWEEN, normalizes to >= and <=, independent strict-NULL ordered inclusive checks; not covered by prior bridge execution"
+  },
+  "mainflow_checks": [
+    {
+      "path": "common.py:123-221",
+      "result": "new_env empty; apply_contract_bridge rejects whole unsupported contract, creates all exact-N base tables; base-only SAT before normalized upstream compile; XOR against original AST independent emitter uses base only and must UNSAT; no raw IC passed upstream"
+    },
+    {
+      "path": "worker.py:107-131",
+      "result": "every six-arm/query path follows bridge+full-contract SAT+exact-row guard; unsatisfiable/unknown stops before pair dispatch"
+    },
+    {
+      "path": "worker.py:130-180,203-328",
+      "result": "official/generic/fallback require same Environment record and full facts hash; canonical and candidates entered only after common contract gate; fallback never constructs an unnormalized environment"
+    },
+    {
+      "path": "query_differential.py:169-173,285-330",
+      "result": "explicit caller record required, same Environment/fact hash checked before Scope; later facts/bounds/base-mapping invariants retained"
+    },
+    {
+      "path": "common.py:223-243,382-390",
+      "result": "all SAT replay uses original-AST concrete reference; supplied schema/AST digest must match audited input before int64-domain/SQLite gates"
+    },
+    {
+      "path": "common.py:35-62,144-146",
+      "result": "expected lock SHA, all file hashes and exact source inventories; five runtime programs in unified lock; actual reference import origin must be this directory"
+    },
+    {
+      "path": "worker.py:333-353",
+      "result": "ContractStop forbids fallback; late stop preserves prior pair attempts instead of falsely resetting them to NOT_RUN"
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P1",
+      "status": "FIXED_WITH_STATIC_EVIDENCE_RUNTIME_PENDING",
+      "location": "supervisor.py:151",
+      "problem": "initial candidate counted exit0 + worker COMPLETE as valid despite supervisor stop_reason; actual bridge observer anomalies showed this combination can occur",
+      "fix": "current source additionally requires no stop_reason, preventing RESOURCE_STOP from valid_completed_result/SELECTED_JOBS_COMPLETE",
+      "runtime_validation": "NOT_RUN in this review; no fresh resource-stop injection executed"
+    }
+  ],
+  "remaining_blockers": [
+    "Both reviewed locks are PENDING_INDEPENDENT_STATIC_REVIEW and intentionally fail runtime verify_lock; author/root must finalize reviewed metadata and record new exact lock hashes before execution.",
+    "Actual v5 entry/6-arm/fallback/differential behavior remains unexecuted at this review cutoff.",
+    "v5 BETWEEN reference is an extension with static review only; prior reference reports cannot be inherited as runtime coverage."
+  ],
+  "not_claimed": [
+    "Source-text parser preserves arbitrary contracts; supported input is explicit registered source AST.",
+    "General cryptographic certificate or general independent proof of upstream SQL semantics.",
+    "Unmodified upstream IC behavior: all arms use an explicitly labeled controlled normalized AST adapter.",
+    "Performance, novelty or broad generalization."
+  ]
+}

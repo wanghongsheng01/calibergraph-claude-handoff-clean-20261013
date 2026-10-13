@@ -1,0 +1,358 @@
+{
+  "status": "PASS_STATIC_IMPACT_REVIEW",
+  "utc": "2026-10-12T11:41:29.736018+00:00",
+  "must_fix_historical_results": [],
+  "cases": [
+    {
+      "case": "superhero__750",
+      "source_hashes": {
+        "gold.sql": "38c15c2084d1fc42087eb4f64f9119c6527043958aa5f0b2febd0601499e0513",
+        "predicted.sql": "f5c9d201cf3a407ec2a79fe2a7618a04e1d21a3343ec11ec098fc5b9022c0c32",
+        "full-schema.sql": "83bc9ae97cdf5d2cb94b74342f77848b6916bb7a300b7f9c5f6a7f5a70245bae"
+      },
+      "source_queries": [
+        "SELECT AVG(T1.weight_kg) FROM superhero AS T1 INNER JOIN gender AS T2 ON T1.gender_id = T2.id WHERE T2.gender = 'Female'",
+        "SELECT AVG(weight_kg) FROM superhero WHERE gender_id = 2"
+      ],
+      "historical_path": "AVG_SAFE_COUNT_HELPER",
+      "contains_COUNT_star": false,
+      "contains_GROUP_BY_or_FILTER": false,
+      "affected_by_P1_COUNT_star_patch": false,
+      "affected_by_proposed_P2_group_COUNT_star_FILTER_patch": false,
+      "retain_historical_result_with_existing_scope": true,
+      "historical_evidence": [
+        {
+          "mode": "UA",
+          "status": "VALIDATED_NEQ",
+          "saved_original_SQL_replay": {
+            "gold": [
+              [
+                null
+              ]
+            ],
+            "predicted": [
+              [
+                -54.0
+              ]
+            ]
+          },
+          "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_UA/RESULT.json",
+          "result_sha256": "563a41e6ce5b37826138cc38f8fc576fb732e1b514393967412418bc0e410031",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_UA/formula_0.smt2",
+              "sha256": "9deb065df08eaef79440b74cf2a40a20fba3e059256b690158509e3280b3906e",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (div (ite (and (not (deleted 13 0)) (not (null 13 0 11))) (cell 13 0 11) 0) (ite (and (not (deleted 13 0)) (not (null 13 0 11))) 1 0))) (= (null 14 0 0) (and (or (null 13 0 11) (deleted 13 0))))) (= (choice 14 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 16 0)) (and (= (cell 16 0 0) (div (ite (and (not (deleted 15 0)) (not (null 15 0 11))) (cell 15 0 11) 0) (ite (and (not (deleted 15 0)) (not (null 15 0 11))) 1 0))) (= (null 16 0 0) (and (or (null 15 0 11) (deleted 15 0))))) (= (choice 16 0) 1)) :named project$5))"
+              ]
+            },
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_UA/formula_1.smt2",
+              "sha256": "307fc54704d6f772f4a20b14d9334f615c4ce85902cb60721b22ffd48c70f524",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (div (ite (and (not (deleted 13 0)) (not (null 13 0 11))) (cell 13 0 11) 0) (ite (and (not (deleted 13 0)) (not (null 13 0 11))) 1 0))) (= (null 14 0 0) (and (or (null 13 0 11) (deleted 13 0))))) (= (choice 14 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 16 0)) (and (= (cell 16 0 0) (div (ite (and (not (deleted 15 0)) (not (null 15 0 11))) (cell 15 0 11) 0) (ite (and (not (deleted 15 0)) (not (null 15 0 11))) 1 0))) (= (null 16 0 0) (and (or (null 15 0 11) (deleted 15 0))))) (= (choice 16 0) 1)) :named project$5))"
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "precise",
+          "status": "VALIDATED_NEQ",
+          "saved_original_SQL_replay": {
+            "gold": [
+              [
+                -55.0
+              ]
+            ],
+            "predicted": [
+              [
+                null
+              ]
+            ]
+          },
+          "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_precise/RESULT.json",
+          "result_sha256": "f695aadd548b8edd8003193c589248612c4f934852f37f2c1f4dd9820c2562aa",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/superhero__750_precise/formula_0.smt2",
+              "sha256": "91f38287b9bd12ee19f924b611cfb544063f09c31aee42304f9942108e115a2b",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (div (ite (and (not (deleted 13 0)) (not (null 13 0 11))) (cell 13 0 11) 0) (ite (and (not (deleted 13 0)) (not (null 13 0 11))) 1 0))) (= (null 14 0 0) (and (or (null 13 0 11) (deleted 13 0))))) (= (choice 14 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 16 0)) (and (= (cell 16 0 0) (div (ite (and (not (deleted 15 0)) (not (null 15 0 11))) (cell 15 0 11) 0) (ite (and (not (deleted 15 0)) (not (null 15 0 11))) 1 0))) (= (null 16 0 0) (and (or (null 15 0 11) (deleted 15 0))))) (= (choice 16 0) 1)) :named project$5))"
+              ]
+            }
+          ]
+        }
+      ],
+      "byte_identical_query_pair": false
+    },
+    {
+      "case": "toxicology__319",
+      "source_hashes": {
+        "gold.sql": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca",
+        "predicted.sql": "25294c0cc527eca3413f6ae0f38c59a5686e101a0f2cbe8d156febcdf61e88ca",
+        "full-schema.sql": "33b439b05b6084604baa2b55dd02cc4f9452cc4910a186b58c6ecc4d0065874f"
+      },
+      "source_queries": [
+        "SELECT COUNT(DISTINCT T1.element) FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR001_3_4'",
+        "SELECT COUNT(DISTINCT T1.element) FROM atom AS T1 INNER JOIN connected AS T2 ON T1.atom_id = T2.atom_id WHERE T2.bond_id = 'TR001_3_4'"
+      ],
+      "historical_path": "COUNT_DISTINCT_HELPER",
+      "contains_COUNT_star": false,
+      "contains_GROUP_BY_or_FILTER": false,
+      "affected_by_P1_COUNT_star_patch": false,
+      "affected_by_proposed_P2_group_COUNT_star_FILTER_patch": false,
+      "retain_historical_result_with_existing_scope": true,
+      "historical_evidence": [
+        {
+          "mode": "UA",
+          "status": "BOUNDED_SYMBOLIC_UNSAT",
+          "saved_original_SQL_replay": null,
+          "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_UA/RESULT.json",
+          "result_sha256": "2714aa1c32d49f639265f91120031e0544b8aac900a5dc134439c58a6f03dc31",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_UA/formula_0.smt2",
+              "sha256": "0354151ff56e1654bfb5fb8d6842cc3a9a8289c24d9a40fb9d44e638e6ea77b1",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 8 0)) (and (= (cell 8 0 0) (ite (and (not (deleted 7 0)) (not (null 7 0 2)) true) 1 0)) (= (null 8 0 0) false)) (= (choice 8 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 13 0)) (and (= (cell 13 0 0) (ite (and (not (deleted 12 0)) (not (null 12 0 2)) true) 1 0)) (= (null 13 0 0) false)) (= (choice 13 0) 1)) :named project$6))"
+              ]
+            },
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_UA/formula_1.smt2",
+              "sha256": "396943861af7f2d980a002b705908b26a2d0fe2787b78c073c10589f149da1ea",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 8 0)) (and (= (cell 8 0 0) (ite (and (not (deleted 7 0)) (not (null 7 0 2)) true) 1 0)) (= (null 8 0 0) false)) (= (choice 8 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 13 0)) (and (= (cell 13 0 0) (ite (and (not (deleted 12 0)) (not (null 12 0 2)) true) 1 0)) (= (null 13 0 0) false)) (= (choice 13 0) 1)) :named project$6))"
+              ]
+            },
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_UA/formula_2.smt2",
+              "sha256": "14a22210b5df48dc2c515415217f76cf98b1ae49fb2c0e59e51c1c3bb8a45dd4",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 8 0)) (and (= (cell 8 0 0) (ite (and (not (deleted 7 0)) (not (null 7 0 2)) true) 1 0)) (= (null 8 0 0) false)) (= (choice 8 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 13 0)) (and (= (cell 13 0 0) (ite (and (not (deleted 12 0)) (not (null 12 0 2)) true) 1 0)) (= (null 13 0 0) false)) (= (choice 13 0) 1)) :named project$6))"
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "precise",
+          "status": "BOUNDED_SYMBOLIC_UNSAT",
+          "saved_original_SQL_replay": null,
+          "result_path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_precise/RESULT.json",
+          "result_sha256": "a2a69aa9b82c65dae16440037b902ce8eed6ff7c152e0d7d74d5579df7a64053",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_pilot_20261012_13/science_run_01/toxicology__319_precise/formula_0.smt2",
+              "sha256": "5a5c732e493de32bd47155826f7ac90b6b8091d27bb5d43f4b3db81e0a50d53f",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 8 0)) (and (= (cell 8 0 0) (ite (and (not (deleted 7 0)) (not (null 7 0 2)) true) 1 0)) (= (null 8 0 0) false)) (= (choice 8 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 13 0)) (and (= (cell 13 0 0) (ite (and (not (deleted 12 0)) (not (null 12 0 2)) true) 1 0)) (= (null 13 0 0) false)) (= (choice 13 0) 1)) :named project$6))"
+              ]
+            }
+          ]
+        }
+      ],
+      "byte_identical_query_pair": true
+    },
+    {
+      "case": "thrombosis_prediction__1172",
+      "source_hashes": {
+        "gold.sql": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb",
+        "predicted.sql": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545",
+        "full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+      },
+      "source_queries": [
+        "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.`T-BIL` >= 2.0 AND T1.SEX = 'M'",
+        "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T1.SEX = 'M' AND T2.`T-BIL` > 2.0"
+      ],
+      "historical_path": "COUNT_DISTINCT_HELPER",
+      "contains_COUNT_star": false,
+      "contains_GROUP_BY_or_FILTER": false,
+      "affected_by_P1_COUNT_star_patch": false,
+      "affected_by_proposed_P2_group_COUNT_star_FILTER_patch": false,
+      "retain_historical_result_with_existing_scope": true,
+      "historical_evidence": [
+        {
+          "mode": "UA",
+          "status": "VALIDATED_NEQ",
+          "saved_original_SQL_replay": [
+            [
+              [
+                1
+              ]
+            ],
+            [
+              [
+                0
+              ]
+            ]
+          ],
+          "result_path": "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/RESULT.json",
+          "result_sha256": "055d16e3cb33e19bcd7c6a18230613ad26d2513dbce4314f700c75bb22d4223e",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/formula_0.smt2",
+              "sha256": "2c23430d09ee48ed69ad6b03e19f210bcbf17bc519f4d68e309b4b394699f179",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 12 0)) (and (= (cell 12 0 0) (ite (and (not (deleted 11 0)) (not (null 11 0 0)) true) 1 0)) (= (null 12 0 0) false)) (= (choice 12 0) 1)) :named project$6))"
+              ]
+            },
+            {
+              "path": "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/formula_1.smt2",
+              "sha256": "d29169a76ff6d1d940a632b722a04b9e63d5682ba2a15a7aea9a039db0032aff",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 12 0)) (and (= (cell 12 0 0) (ite (and (not (deleted 11 0)) (not (null 11 0 0)) true) 1 0)) (= (null 12 0 0) false)) (= (choice 12 0) 1)) :named project$6))"
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "precise",
+          "status": "VALIDATED_NEQ",
+          "saved_original_SQL_replay": [
+            [
+              [
+                1
+              ]
+            ],
+            [
+              [
+                0
+              ]
+            ]
+          ],
+          "result_path": "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/RESULT.json",
+          "result_sha256": "155b8407c7e3d7781a9497bace6517ed544a0762df68561214435fa24eb897c5",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/formula_0.smt2",
+              "sha256": "6e081488c5f782833ca89856700465f58ca17aa566cf27a6514c6c4f4d548375",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 12 0)) (and (= (cell 12 0 0) (ite (and (not (deleted 11 0)) (not (null 11 0 0)) true) 1 0)) (= (null 12 0 0) false)) (= (choice 12 0) 1)) :named project$6))"
+              ]
+            }
+          ]
+        }
+      ],
+      "byte_identical_query_pair": false
+    },
+    {
+      "case": "thrombosis_prediction__1261",
+      "source_hashes": {
+        "gold.sql": "8ca50bee79653ca58e24c34a734ac718d0b09446486caadef8c513f64c638e82",
+        "predicted.sql": "c977e9d8fac35d63504c9cf9f2d84145a195974c58fde06640c4254b3c677028",
+        "full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+      },
+      "source_queries": [
+        "SELECT COUNT(DISTINCT T1.ID) FROM Examination AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.RF < 20 AND T1.Thrombosis = 0",
+        "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID INNER JOIN Examination AS T3 ON T1.ID = T3.ID WHERE T2.RF < 20 AND T3.Thrombosis = 0"
+      ],
+      "historical_path": "COUNT_DISTINCT_HELPER",
+      "contains_COUNT_star": false,
+      "contains_GROUP_BY_or_FILTER": false,
+      "affected_by_P1_COUNT_star_patch": false,
+      "affected_by_proposed_P2_group_COUNT_star_FILTER_patch": false,
+      "retain_historical_result_with_existing_scope": true,
+      "historical_evidence": [
+        {
+          "mode": "UA",
+          "status": "BOUNDED_SYMBOLIC_UNSAT",
+          "saved_original_SQL_replay": null,
+          "result_path": "calibergraph_polygon_case1261_20261012_17/science_run_01/thrombosis_prediction__1261_UA/RESULT.json",
+          "result_sha256": "9738acfc2ec54f5a6330016305661105263a29a1940e517e084c715d41f250f2",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_case1261_20261012_17/science_run_01/thrombosis_prediction__1261_UA/formula_0.smt2",
+              "sha256": "a28754115b95a4005a6173610d3f600be08c276f7c6f0094b19efe7b1fc5a48c",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (ite (and (not (deleted 13 0)) (not (null 13 0 0)) true) 1 0)) (= (null 14 0 0) false)) (= (choice 14 0) 1)) :named project$7))"
+              ]
+            },
+            {
+              "path": "calibergraph_polygon_case1261_20261012_17/science_run_01/thrombosis_prediction__1261_UA/formula_1.smt2",
+              "sha256": "396a757c182b840ac9f91b01c05448b1b8e35bd50334baa630e61df900afde7f",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (ite (and (not (deleted 13 0)) (not (null 13 0 0)) true) 1 0)) (= (null 14 0 0) false)) (= (choice 14 0) 1)) :named project$7))"
+              ]
+            },
+            {
+              "path": "calibergraph_polygon_case1261_20261012_17/science_run_01/thrombosis_prediction__1261_UA/formula_2.smt2",
+              "sha256": "3188e24d12cb9b355f367966d161f606374034df8e0aba382fc21843a9a44c64",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (ite (and (not (deleted 13 0)) (not (null 13 0 0)) true) 1 0)) (= (null 14 0 0) false)) (= (choice 14 0) 1)) :named project$7))"
+              ]
+            }
+          ]
+        },
+        {
+          "mode": "precise",
+          "status": "BOUNDED_SYMBOLIC_UNSAT",
+          "saved_original_SQL_replay": null,
+          "result_path": "calibergraph_polygon_case1261_20261012_17/science_run_01/thrombosis_prediction__1261_precise/RESULT.json",
+          "result_sha256": "d0b19ab32e11edf8f516f7c90da821a3552a940b4bf1b878d8345cd5c7de5ff1",
+          "saved_formulas": [
+            {
+              "path": "calibergraph_polygon_case1261_20261012_17/science_run_01/thrombosis_prediction__1261_precise/formula_0.smt2",
+              "sha256": "9a0c833e23679a390d365a7ca323e2aa5a72ac0b853b75a5b71a87c61a0da1e7",
+              "project_clauses": [
+                "(assert (! (and (not (deleted 7 0)) (and (= (cell 7 0 0) (ite (and (not (deleted 6 0)) (not (null 6 0 0)) true) 1 0)) (= (null 7 0 0) false)) (= (choice 7 0) 1)) :named project$3))",
+                "(assert (! (and (not (deleted 14 0)) (and (= (cell 14 0 0) (ite (and (not (deleted 13 0)) (not (null 13 0 0)) true) 1 0)) (= (null 14 0 0) false)) (= (choice 14 0) 1)) :named project$7))"
+              ]
+            }
+          ]
+        }
+      ],
+      "byte_identical_query_pair": false
+    }
+  ],
+  "code_evidence": {
+    "sql_parser.py": {
+      "path": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/sql_parser.py",
+      "sha256": "f3abcd137ad225a5f0577bb465fcb0ff7db53aaf56b5d257f4685dd6d9abf377"
+    },
+    "formulas/project.py": {
+      "path": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/formulas/project.py",
+      "sha256": "2cafa527856c65655349c7f24030f54123cfa53b2455befd7e5b2fc69dbf8343"
+    },
+    "visitors/expression_encoder.py": {
+      "path": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/visitors/expression_encoder.py",
+      "sha256": "38053187af3110c45ece5f7248a5f927e93e454a52e3619b28470653aaabf8cb"
+    },
+    "visitors/group_expression_encoder.py": {
+      "path": "calibergraph_polygon_pilot_20261012_13/runtime_local/polygon/visitors/group_expression_encoder.py",
+      "sha256": "ea1af6e7c483ec8e2e81aef250de631d7b3babf7cda18ce0e9f477269a4c7e4e"
+    }
+  },
+  "P1_patch_sha256": "76b80b04bfb55b7f0a3f788ce44744831c29adf17d14bf771bf0089e6189b4cf",
+  "group_COUNT_FILTER_finding": {
+    "status": "STATIC_CONFIRMED_NOT_RUN_BY_REVIEWER",
+    "filter_ignored": true,
+    "already_uses_integer_If_indicators": true,
+    "not_same_Bool_plus_defect": true,
+    "minimal_P2_scope": "COUNT(*) group branch only: gate group membership with NOT filter_null AND EnsureBool(filter_val); retain groups with zero qualifying members",
+    "other_group_aggregates_not_certified_fixed": true,
+    "P2_implementation_and_tests": "PENDING_AUTHOR_ARTIFACTS"
+  },
+  "coverage": "Existing4of8Polygonboundedruncoverageunchanged",
+  "scope": "Specific COUNT branch impact; not full Polygon correctness or new no-bound equivalence",
+  "actions": {
+    "SQL": 0,
+    "target_imports": 0,
+    "parser": 0,
+    "solver": 0,
+    "network": 0,
+    "push": 0,
+    "edits_old_packages": 0
+  }
+}

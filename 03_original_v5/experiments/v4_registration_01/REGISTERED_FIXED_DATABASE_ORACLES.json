@@ -1,0 +1,1074 @@
+{
+  "schema_version": 1,
+  "data_role": "CONSTRUCTED_FIXED_DATABASE_ORACLE_DOMAIN_TESTS_NOT_SOLVER_DISCOVERY",
+  "source_provenance": {
+    "suite_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/v4_registration_01/REGISTERED_SIX_ARM_SUITE.json",
+    "sha256": "6e35d15560e3175dad3ae717e9b14ed0736c8f4acf052bdaea98549be1acd746"
+  },
+  "case_denominator": 12,
+  "query_denominator": 21,
+  "cases": [
+    {
+      "id": "E01_add_sub_nonnull_identity",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": [
+        {
+          "not_null": "F__L"
+        }
+      ],
+      "pair": [
+        "SELECT SUM((F.V+F.L)-F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Root addition/subtraction cancellation with required non-null L; V may be NULL."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            7
+          ]
+        ],
+        [
+          [
+            7
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E02_add_sub_nullable_negative",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM((F.V+F.L)-F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Same cancellation is invalid with nullable L; preserve the negative control."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            null,
+            2
+          ],
+          [
+            2,
+            1,
+            3
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            5
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "sat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E03_variable_product_commutativity",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": [
+        {
+          "between": [
+            "F__V",
+            -8,
+            8
+          ]
+        },
+        {
+          "between": [
+            "F__L",
+            -8,
+            8
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.L*F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Root variable product; predeclared bounded constructed ICs, still nonlinear syntax; no global LIA claim."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            26
+          ]
+        ],
+        [
+          [
+            26
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E04_root_between_inclusive",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE F.V BETWEEN -2 AND 3",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE F.V>=-2 AND F.V<=3"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Inclusive root BETWEEN and SQL three-valued conjunction."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E05_leaf_between_boundary_negative",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE D.P BETWEEN 0 AND 1",
+        "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID WHERE D.P>0 AND D.P<1"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Leaf BETWEEN endpoints 0/1; second integer predicate admits no row."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            7
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "sat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E06_null_times_zero_negative",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V*0) FROM F JOIN D ON F.K=D.ID WHERE F.V IS NULL",
+        "SELECT SUM(0) FROM F JOIN D ON F.K=D.ID WHERE F.V IS NULL"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Strict NULL: NULL*0 remains NULL while literal zero is non-null."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            7,
+            null
+          ],
+          [
+            2,
+            4,
+            1
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "sat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E07_count_zero_expression",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT COUNT(F.V-F.V) FROM F JOIN D ON F.K=D.ID",
+        "SELECT COUNT(F.V) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "COUNT(expr) counts a non-null zero; excludes nullable V."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            null
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            1
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E08_empty_sum_not_vacuous_contract",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 2,
+        "D": 2,
+        "E": 2
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID WHERE F.V>3 AND F.V<0",
+        "SELECT SUM(F.V+F.L) FROM F JOIN D ON F.K=D.ID WHERE F.V>4 AND F.V<0"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Both query filters empty; database contract remains SAT and positive exact cardinalities remain."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            3,
+            2
+          ],
+          [
+            2,
+            4,
+            5
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ],
+          [
+            20,
+            1
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            null
+          ]
+        ],
+        [
+          [
+            null
+          ]
+        ]
+      ],
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "unsat",
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "E09_fixed_sum_overflow_domain",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 1,
+        "D": 2,
+        "E": 1
+      },
+      "constraint": [
+        {
+          "eq": [
+            "F__K",
+            1
+          ]
+        },
+        {
+          "eq": [
+            "F__L",
+            -2147483648
+          ]
+        },
+        {
+          "eq": [
+            "F__V",
+            -2147483648
+          ]
+        },
+        {
+          "eq": [
+            "D__ID",
+            1
+          ]
+        },
+        {
+          "eq": [
+            "D__P",
+            0
+          ]
+        },
+        {
+          "eq": [
+            "E__ID",
+            10
+          ]
+        },
+        {
+          "eq": [
+            "E__Q",
+            0
+          ]
+        }
+      ],
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID",
+        "SELECT SUM(F.V*F.L-1) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "origin": {
+        "role": "NEW_CONSTRUCTED_MECHANISTIC_DEV_NOT_NATURAL_DEFECT_NOT_HOLDOUT",
+        "author": "AI-authored analytical control; no human gold",
+        "purpose": "Exact fixed complete DB ensures overflow is tested without solver choosing extreme values."
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "analytical; runtime must establish independently",
+        "pair_unsat_must_not_substitute_for_contract_sat": true
+      },
+      "point_database": {
+        "F": [
+          [
+            1,
+            -2147483648,
+            -2147483648
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            0
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ]
+        ]
+      },
+      "point_expected_relations": null,
+      "point_expectation_status": "ANALYTICAL_NOT_EXECUTED",
+      "expected": "UNKNOWN_ORACLE_DOMAIN",
+      "oracle_expectation": {
+        "mathematical_pair_decision": "sat",
+        "per_query_domain": [
+          "UNKNOWN_ORACLE_DOMAIN",
+          "SAFE_FOR_SQLITE_INT64"
+        ],
+        "mathematical_relations_decimal_strings": [
+          [
+            [
+              "9223372036854775808"
+            ]
+          ],
+          [
+            [
+              "9223372036854775806"
+            ]
+          ]
+        ],
+        "safe_query_sqlite_relations": {
+          "1": [
+            [
+              9223372036854775806
+            ]
+          ]
+        },
+        "out_of_domain_is_not_success_or_algorithm_counterexample": true
+      },
+      "expected_domain": [
+        "UNKNOWN_ORACLE_DOMAIN",
+        "SAFE_FOR_SQLITE_INT64"
+      ]
+    },
+    {
+      "id": "O10_safe_root_product_single_match",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 1,
+        "D": 1,
+        "E": 1
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V*F.L) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            -2147483648,
+            -2147483648
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ]
+        ]
+      },
+      "point_expected_relations": [
+        [
+          [
+            4611686018427387904
+          ]
+        ]
+      ],
+      "expected_domain": [
+        "SAFE_FOR_SQLITE_INT64"
+      ],
+      "origin": {
+        "role": "CONSTRUCTED_FIXED_DATABASE_ORACLE_DOMAIN_CONTROL_NOT_BENCHMARK"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "fixed complete database to be checked"
+      }
+    },
+    {
+      "id": "O11_root_intermediate_overflow",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 1,
+        "D": 1,
+        "E": 1
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(F.V*F.L*F.L) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            -2147483648,
+            -2147483648
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ]
+        ]
+      },
+      "point_expected_relations": null,
+      "expected_domain": [
+        "UNKNOWN_ORACLE_DOMAIN"
+      ],
+      "origin": {
+        "role": "CONSTRUCTED_FIXED_DATABASE_ORACLE_DOMAIN_CONTROL_NOT_BENCHMARK"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "fixed complete database to be checked"
+      }
+    },
+    {
+      "id": "O12_zero_does_not_hide_intermediate_overflow",
+      "schema": {
+        "F": {
+          "K": "INT",
+          "L": "INT",
+          "V": "INT"
+        },
+        "D": {
+          "ID": "INT",
+          "P": "INT"
+        },
+        "E": {
+          "ID": "INT",
+          "Q": "INT"
+        }
+      },
+      "exact_rows": {
+        "F": 1,
+        "D": 1,
+        "E": 1
+      },
+      "constraint": null,
+      "pair": [
+        "SELECT SUM(0*(F.V*F.L*F.L)) FROM F JOIN D ON F.K=D.ID"
+      ],
+      "point_database": {
+        "F": [
+          [
+            1,
+            -2147483648,
+            -2147483648
+          ]
+        ],
+        "D": [
+          [
+            1,
+            0
+          ]
+        ],
+        "E": [
+          [
+            10,
+            0
+          ]
+        ]
+      },
+      "point_expected_relations": null,
+      "expected_domain": [
+        "UNKNOWN_ORACLE_DOMAIN"
+      ],
+      "origin": {
+        "role": "CONSTRUCTED_FIXED_DATABASE_ORACLE_DOMAIN_CONTROL_NOT_BENCHMARK"
+      },
+      "contract_expectation": {
+        "satisfiability": "sat",
+        "basis": "fixed complete database to be checked"
+      }
+    }
+  ]
+}

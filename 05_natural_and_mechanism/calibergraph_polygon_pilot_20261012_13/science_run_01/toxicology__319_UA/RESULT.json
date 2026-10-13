@@ -1,0 +1,144 @@
+{
+  "case": "toxicology__319",
+  "mode": "UA",
+  "status": "BOUNDED_SYMBOLIC_UNSAT",
+  "stages_seconds": {
+    "imports": 0.12781249964609742,
+    "schema_C": 0.003075624816119671,
+    "parse": 0.205676581710577,
+    "encode": 0.0018004989251494408,
+    "search_including_solver": 0.02829704200848937,
+    "solver_calls": 0.02714487537741661,
+    "decode": null,
+    "replay": null
+  },
+  "schema_C": {
+    "tables": 4,
+    "columns": 11,
+    "constraints": 14,
+    "all_source_columns_kept": true,
+    "constraint_kinds": [
+      "eq",
+      "not_null",
+      "primary"
+    ],
+    "auxiliary_integrity_list_not_appended": true
+  },
+  "raw_return": [
+    true,
+    null,
+    null,
+    0.030333,
+    {
+      "iters": 2,
+      "backtracks": 1,
+      "type_2_backtracks": 1,
+      "unsat_core_sizes": [
+        6
+      ],
+      "M_sizes": [
+        6
+      ],
+      "solving_time_per_iter": [
+        0.004346
+      ],
+      "num_nodes_changed": [],
+      "ast_size": 6,
+      "complete_time": "2026-10-12 10:11:38.732078",
+      "total_time": 0.030176,
+      "status": "EQU"
+    }
+  ],
+  "interpretation": "N=1 symbolic typed fragment; no whole SQLite-domain equivalence claim",
+  "solver_calls": [
+    {
+      "index": 0,
+      "state": "SAT",
+      "elapsed_s": 0.0066835833713412285
+    },
+    {
+      "index": 1,
+      "state": "UNSAT",
+      "elapsed_s": 0.013217166066169739
+    },
+    {
+      "index": 2,
+      "state": "UNSAT",
+      "elapsed_s": 0.006552250124514103
+    }
+  ],
+  "protocol_events": [],
+  "self_guard": {
+    "reason": null,
+    "elapsed_s": 0.3680172082968056,
+    "wall_seconds": 12,
+    "handle_count": 0,
+    "all_reaped": true,
+    "returncodes": [],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.535293708,
+        "bytes": 16646144
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.560958833,
+        "bytes": 26050560
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.588704083,
+        "bytes": 29032448
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.625013833,
+        "bytes": 31244288
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.655561458,
+        "bytes": 34832384
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.691863916,
+        "bytes": 35454976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.728167458,
+        "bytes": 36388864
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.762363083,
+        "bytes": 36978688
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.797431916,
+        "bytes": 37847040
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.831141791,
+        "bytes": 38420480
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.86720975,
+        "bytes": 39960576
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2336669.892309708,
+        "bytes": 40337408
+      }
+    ]
+  }
+}

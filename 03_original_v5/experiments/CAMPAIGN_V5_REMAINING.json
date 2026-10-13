@@ -1,0 +1,68 @@
+{
+  "status": "REGISTERED",
+  "queue_source_sha256": "56c5f768da28e35a3e796638b6754c6274a006eec4ca11331a7260fffa07a933",
+  "campaign_source_sha256": "dbaad3a7d49c7c7d92a1b37acfcf31887538cdd2dcfabf0c8d28c6b94f5e37b9",
+  "previous_cost_ranges": [
+    [
+      132,
+      168
+    ],
+    [
+      84,
+      90
+    ]
+  ],
+  "entries": [
+    {
+      "mode": "main",
+      "kind": "cost",
+      "start": 0,
+      "stop": 84,
+      "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "RUNNING",
+      "command": [
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/research_phase2/.venv/bin/python",
+        "-B",
+        "-I",
+        "-S",
+        "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/run_v5_queue.py",
+        "--kind",
+        "cost",
+        "--mode",
+        "main",
+        "--start",
+        "0",
+        "--stop",
+        "84",
+        "--runtime-lock-sha256",
+        "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+        "--suite-sha256",
+        "9db84350b498c3e5f37b06adf5868fa0e0429a81a2ebff65f930f78bd8b36485"
+      ]
+    },
+    {
+      "mode": "main",
+      "kind": "cost",
+      "start": 90,
+      "stop": 132,
+      "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "NOT_RUN"
+    },
+    {
+      "mode": "main",
+      "kind": "differential",
+      "start": 0,
+      "stop": 168,
+      "lock_sha256": "4221081d3c63096841a902f1c8f70ac16f5d967c08476f26f8377d6bb4924443",
+      "status": "NOT_RUN"
+    },
+    {
+      "mode": "spotit",
+      "kind": "cost",
+      "start": 0,
+      "stop": 168,
+      "lock_sha256": "1c5bc696d43fc64ee5b76a2b4f2e0d0b6d46206179900906bd99f4620c1d8b87",
+      "status": "NOT_RUN"
+    }
+  ]
+}

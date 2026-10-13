@@ -1,0 +1,410 @@
+{
+  "reviewer": "independent execution/semantic review agent",
+  "sqlite_version": "3.43.2",
+  "frozen_hash_count": 336,
+  "hash_mismatches": [],
+  "inventory_audits": [
+    {
+      "case": "superhero__750",
+      "source_ddl_sha256_verified": true,
+      "complete_column_and_constraint_inventory": true,
+      "tables": [
+        {
+          "table": "alignment",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "attribute",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "colour",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "gender",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "publisher",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "race",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "superhero",
+          "columns": 12,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 7
+        },
+        {
+          "table": "hero_attribute",
+          "columns": 3,
+          "primary_key": [],
+          "foreign_keys": 2
+        },
+        {
+          "table": "superpower",
+          "columns": 2,
+          "primary_key": [
+            "id"
+          ],
+          "foreign_keys": 0
+        },
+        {
+          "table": "hero_power",
+          "columns": 2,
+          "primary_key": [],
+          "foreign_keys": 2
+        }
+      ],
+      "column_count": 31,
+      "constraint_entries": 27
+    },
+    {
+      "case": "toxicology__319",
+      "source_ddl_sha256_verified": true,
+      "complete_column_and_constraint_inventory": true,
+      "tables": [
+        {
+          "table": "atom",
+          "columns": 3,
+          "primary_key": [
+            "atom_id"
+          ],
+          "foreign_keys": 1
+        },
+        {
+          "table": "bond",
+          "columns": 3,
+          "primary_key": [
+            "bond_id"
+          ],
+          "foreign_keys": 1
+        },
+        {
+          "table": "connected",
+          "columns": 3,
+          "primary_key": [
+            "atom_id",
+            "atom_id2"
+          ],
+          "foreign_keys": 3
+        },
+        {
+          "table": "molecule",
+          "columns": 2,
+          "primary_key": [
+            "molecule_id"
+          ],
+          "foreign_keys": 0
+        }
+      ],
+      "column_count": 11,
+      "constraint_entries": 14
+    }
+  ],
+  "slots": [
+    {
+      "case": "superhero__750",
+      "mode": "UA",
+      "reported_status": "VALIDATED_NEQ",
+      "solver_calls": [
+        {
+          "index": 0,
+          "state": "SAT",
+          "elapsed_s": 0.017226291820406914
+        },
+        {
+          "index": 1,
+          "state": "SAT",
+          "elapsed_s": 0.02014991594478488
+        }
+      ],
+      "protocol_events": [],
+      "witness_present": true,
+      "witness_sha256": "3a704deb6e4144ba3d32a793d6e2ebb949bfe1e0ad5371f407630ebe48b7971a",
+      "full_C_valid": true,
+      "bound_N1_verified": true,
+      "foreign_key_check": [],
+      "row_counts": {
+        "alignment": 1,
+        "attribute": 1,
+        "colour": 1,
+        "gender": 1,
+        "publisher": 1,
+        "race": 1,
+        "superhero": 1,
+        "hero_attribute": 1,
+        "superpower": 1,
+        "hero_power": 1
+      },
+      "storage_types": {
+        "alignment": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "attribute": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "colour": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "gender": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "publisher": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "race": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "superhero": [
+          [
+            "integer",
+            "text",
+            "text",
+            "integer",
+            "integer",
+            "integer",
+            "integer",
+            "integer",
+            "integer",
+            "integer",
+            "integer",
+            "integer"
+          ]
+        ],
+        "hero_attribute": [
+          [
+            "integer",
+            "integer",
+            "integer"
+          ]
+        ],
+        "superpower": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "hero_power": [
+          [
+            "integer",
+            "integer"
+          ]
+        ]
+      },
+      "gold": [
+        [
+          null
+        ]
+      ],
+      "predicted": [
+        [
+          -54.0
+        ]
+      ],
+      "different": true,
+      "original_ddl_and_sql_unchanged": true
+    },
+    {
+      "case": "superhero__750",
+      "mode": "precise",
+      "reported_status": "VALIDATED_NEQ",
+      "solver_calls": [
+        {
+          "index": 0,
+          "state": "SAT",
+          "elapsed_s": 0.0087679591961205
+        }
+      ],
+      "protocol_events": [],
+      "witness_present": true,
+      "witness_sha256": "c5f0e88854890aad85fe483c739f3bac31315a5d4bd50a94230982219f6c0a9b",
+      "full_C_valid": true,
+      "bound_N1_verified": true,
+      "foreign_key_check": [],
+      "row_counts": {
+        "alignment": 1,
+        "attribute": 1,
+        "colour": 1,
+        "gender": 1,
+        "publisher": 1,
+        "race": 1,
+        "superhero": 1,
+        "hero_attribute": 1,
+        "superpower": 1,
+        "hero_power": 1
+      },
+      "storage_types": {
+        "alignment": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "attribute": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "colour": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "gender": [
+          [
+            "integer",
+            "text"
+          ]
+        ],
+        "publisher": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "race": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "superhero": [
+          [
+            "integer",
+            "null",
+            "null",
+            "integer",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "null",
+            "integer"
+          ]
+        ],
+        "hero_attribute": [
+          [
+            "integer",
+            "integer",
+            "null"
+          ]
+        ],
+        "superpower": [
+          [
+            "integer",
+            "null"
+          ]
+        ],
+        "hero_power": [
+          [
+            "integer",
+            "integer"
+          ]
+        ]
+      },
+      "gold": [
+        [
+          -55.0
+        ]
+      ],
+      "predicted": [
+        [
+          null
+        ]
+      ],
+      "different": true,
+      "original_ddl_and_sql_unchanged": true
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "UA",
+      "reported_status": "BOUNDED_SYMBOLIC_UNSAT",
+      "solver_calls": [
+        {
+          "index": 0,
+          "state": "SAT",
+          "elapsed_s": 0.0066835833713412285
+        },
+        {
+          "index": 1,
+          "state": "UNSAT",
+          "elapsed_s": 0.013217166066169739
+        },
+        {
+          "index": 2,
+          "state": "UNSAT",
+          "elapsed_s": 0.006552250124514103
+        }
+      ],
+      "protocol_events": [],
+      "witness_present": false
+    },
+    {
+      "case": "toxicology__319",
+      "mode": "precise",
+      "reported_status": "BOUNDED_SYMBOLIC_UNSAT",
+      "solver_calls": [
+        {
+          "index": 0,
+          "state": "UNSAT",
+          "elapsed_s": 0.00809291610494256
+        }
+      ],
+      "protocol_events": [],
+      "witness_present": false
+    }
+  ]
+}

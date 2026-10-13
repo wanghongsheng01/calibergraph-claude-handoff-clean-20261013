@@ -1,0 +1,67 @@
+{
+  "case_index": 0,
+  "case_id": "dev04_N1_concrete",
+  "registered_slot": {
+    "id": "dev04_N1_concrete",
+    "source_case_id": "dev03_18",
+    "exact_rows": 1,
+    "kind": "concrete",
+    "fixture": "all_null_class_and_nonnull_control"
+  },
+  "status": "MONITOR_OR_LAUNCH_EXCEPTION",
+  "started_utc": "2026-10-11T13:28:33.191432+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 0,
+  "sampled_peak_group_cpu_seconds": 0.0,
+  "sample_count": 0,
+  "stop_remainder": "MONITOR_OR_LAUNCH_EXCEPTION",
+  "worker_wait4_usage": null,
+  "observed_stage_sequence": [],
+  "cpu_accounting_before_launch": {
+    "pre_registered_prior_cpu_seconds": 1.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.11115399999999999,
+    "parent_system_cpu_seconds": 0.09331199999999999,
+    "all_reaped_children_user_cpu_seconds": 0.000556,
+    "all_reaped_children_system_cpu_seconds": 0.001161,
+    "supervisor_plus_reaped_cpu_seconds": 0.20618299999999998,
+    "observed_total_cpu_seconds": 1.206183,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 1.406183,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "command": [
+    "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-I",
+    "-S",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/code/concrete_boundary_worker.py",
+    "--protocol",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/protocols/boundary_pilot.registered.json",
+    "--case-index",
+    "0",
+    "--out",
+    "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_04/runs/boundary_pilot_01/case_00"
+  ],
+  "monitor_error": {
+    "type": "SubprocessError",
+    "message": "Exception occurred in preexec_fn."
+  },
+  "wall_seconds": 0.0010833339765667915,
+  "worker_exit_code": null,
+  "final_progress_error": "RuntimeError('PROGRESS_MISSING')",
+  "worker_results_missing_supervisor_placeholder": true,
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 1.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.111311,
+    "parent_system_cpu_seconds": 0.09410099999999999,
+    "all_reaped_children_user_cpu_seconds": 0.000645,
+    "all_reaped_children_system_cpu_seconds": 0.001553,
+    "supervisor_plus_reaped_cpu_seconds": 0.20761,
+    "observed_total_cpu_seconds": 1.20761,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 1.40761,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  }
+}

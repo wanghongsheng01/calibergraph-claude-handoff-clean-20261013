@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED_ENGINEERING_LIMIT_SETUP_ABORT_BEFORE_TARGET_IMPORTS",
+  "run": "admission_01",
+  "worker_error": "ValueError at module line20 setting RLIMIT_DATA; uncaught before target sys.path change and main target imports.",
+  "evidence": [
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/runs/admission_01/worker.log",
+      "sha256": "607931bb5baa78d4c3aa9da40e7c00652cf7096f15cc24442aeedf72d1faf324"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/runs/admission_01/LAUNCH_RECEIPT.json",
+      "sha256": "43e788d8cdb1d064d921fe1efb898fe5454adb2595e29c8c2d9dc211b25278a7"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/runs/admission_01/stop_1.log",
+      "sha256": "ca19178a35ab4153b75b494963b66ce8243e1b94c173107c87b44d09db23652d"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/implementation/probe_worker.py",
+      "sha256": "3d52722b9338934a2a0afb9f6c78928b0bbe7ce5033ba60660e67cb7b78635a2"
+    }
+  ],
+  "target_imports_parser_SMT_generation_original_replays": 0,
+  "postgres_cluster_starts": 1,
+  "postgres_stop_confirmed": true,
+  "elapsed_wall_s": 0.961402417,
+  "scientific_conclusion": "No baseline execution or failure observed; scientific NO_GO retained.",
+  "extra_probe_approved": false,
+  "next_gate": "Separate frozen v2 code/protocol and independent pre-execution review required. Preserve executed v1 unchanged.",
+  "reviewer_new_executions": 0
+}

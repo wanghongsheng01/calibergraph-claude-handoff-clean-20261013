@@ -1,0 +1,308 @@
+{
+  "kind": "concrete",
+  "case_index": 6,
+  "status": "COMPLETED",
+  "outcome": "CONCRETE_MECHANISM_FIXTURES_OBSERVED",
+  "active_stage": "COMPLETED",
+  "mechanism_fixture_only": true,
+  "is_natural_label": false,
+  "is_new_hidden_test": false,
+  "fixtures": {
+    "all_null_class": {
+      "input_rows": [
+        [
+          null,
+          "student_01"
+        ],
+        [
+          null,
+          "student_02"
+        ],
+        [
+          null,
+          "student_03"
+        ],
+        [
+          null,
+          "student_04"
+        ]
+      ],
+      "queries": [
+        {
+          "query_index_0based": 0,
+          "original_sql": "SELECT CLASS FROM COURSES GROUP BY CLASS HAVING COUNT(*)>=5",
+          "original_sql_utf8_sha256": "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+          "execution_api": "sqlite3.Connection.execute(original_registry_string)",
+          "columns": [
+            "CLASS"
+          ],
+          "rows": [],
+          "row_count": 0,
+          "bag": []
+        },
+        {
+          "query_index_0based": 1,
+          "original_sql": "SELECT CLASS FROM COURSES AS CS GROUP BY CLASS HAVING (SELECT COUNT(DISTINCT STUDENT) FROM COURSES CP WHERE CP.CLASS= CS.CLASS) >=5",
+          "original_sql_utf8_sha256": "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a",
+          "execution_api": "sqlite3.Connection.execute(original_registry_string)",
+          "columns": [
+            "CLASS"
+          ],
+          "rows": [],
+          "row_count": 0,
+          "bag": []
+        }
+      ],
+      "observed_bag_equal": true
+    },
+    "nonnull_class_control": {
+      "input_rows": [
+        [
+          "same_nonnull_class",
+          "student_01"
+        ],
+        [
+          "same_nonnull_class",
+          "student_02"
+        ],
+        [
+          "same_nonnull_class",
+          "student_03"
+        ],
+        [
+          "same_nonnull_class",
+          "student_04"
+        ]
+      ],
+      "queries": [
+        {
+          "query_index_0based": 0,
+          "original_sql": "SELECT CLASS FROM COURSES GROUP BY CLASS HAVING COUNT(*)>=5",
+          "original_sql_utf8_sha256": "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+          "execution_api": "sqlite3.Connection.execute(original_registry_string)",
+          "columns": [
+            "CLASS"
+          ],
+          "rows": [],
+          "row_count": 0,
+          "bag": []
+        },
+        {
+          "query_index_0based": 1,
+          "original_sql": "SELECT CLASS FROM COURSES AS CS GROUP BY CLASS HAVING (SELECT COUNT(DISTINCT STUDENT) FROM COURSES CP WHERE CP.CLASS= CS.CLASS) >=5",
+          "original_sql_utf8_sha256": "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a",
+          "execution_api": "sqlite3.Connection.execute(original_registry_string)",
+          "columns": [
+            "CLASS"
+          ],
+          "rows": [],
+          "row_count": 0,
+          "bag": []
+        }
+      ],
+      "observed_bag_equal": true
+    }
+  },
+  "resource_limits": {
+    "worker_cpu_seconds": 3,
+    "worker_wall_seconds": 4,
+    "required_nice_minimum": 15,
+    "external_rss_limit_bytes": 268435456,
+    "external_rss_enforcement": "REQUIRED_PARENT_SUPERVISOR"
+  },
+  "scope": "Constructed mechanism fixtures on already exposed dev03_18; SQLite observations only, not natural pair labels or a new test set.",
+  "worker_cpu_seconds": 0.038783,
+  "worker_wall_seconds": 0.015673374757170677,
+  "id": "dev04_N4_concrete",
+  "source_case_id": "dev03_18",
+  "exact_rows": 4,
+  "registered_slot": {
+    "id": "dev04_N4_concrete",
+    "source_case_id": "dev03_18",
+    "exact_rows": 4,
+    "kind": "concrete",
+    "fixture": "all_null_class_and_nonnull_control"
+  },
+  "protocol_id": "calibergraph-04-exact-boundary-pilot-v1",
+  "protocol_sha256": "384fc9ea85f10da0b305d092c770d440661eb4bec26b03822909db851b024ac2",
+  "worker_sha256": "ccbc7f2b94d807f55e3976bac79ce56c7361af9c50bd012c426797d3cd8093a9",
+  "common_sha256": "197532f6b824a6f883db5e201a86f09050b420e092c1a102f2b3711e2d4e5822",
+  "registered_task_count": 10,
+  "denominator_unchanged": true,
+  "source": {
+    "dataset": "leetcode",
+    "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+    "line_1based": 2924,
+    "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+    "raw_line_sha256": "fe3f09e4498474f0b399abe5efd9fc74844d4e08d93395384d21e554e941a0a4",
+    "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+  },
+  "source_group_id": "leetcode:benchmark/leetcode/raw_data/596.csv",
+  "provenance_eligibility": {
+    "SQL_semantic_fidelity": "UNPROVEN",
+    "business_contract_truth": "UNVERIFIED",
+    "contract_source": "PRESENT_JSON",
+    "natural_business_origin": "UNKNOWN",
+    "pair_label_truth": "UNVERIFIED",
+    "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+  },
+  "original_source_record": {
+    "constraint": [
+      {
+        "primary": [
+          {
+            "value": "COURSES__STUDENT"
+          }
+        ]
+      }
+    ],
+    "file": "benchmark/leetcode/raw_data/596.csv",
+    "index": 73,
+    "pair": [
+      "SELECT CLASS FROM COURSES GROUP BY CLASS HAVING COUNT(*)>=5",
+      "SELECT CLASS FROM COURSES AS CS GROUP BY CLASS HAVING (SELECT COUNT(DISTINCT STUDENT) FROM COURSES CP WHERE CP.CLASS= CS.CLASS) >=5"
+    ],
+    "schema": {
+      "COURSES": {
+        "CLASS": "VARCHAR",
+        "STUDENT": "VARCHAR"
+      }
+    }
+  },
+  "original_source_record_sha256": "c3eccc9472ff8cbc9daeb521e869e376174fa33b4de6643d2863c7a669c83bea",
+  "original_sql_sha256": [
+    "e21b8087c803decd4bad4d7866dff98387caf1f693ed6dfc1a66be94fbdc87d0",
+    "1b196a128452b139a661429d22c69c8afbf5b086c3c842f20cf34e347c3e3f8a"
+  ],
+  "schema_sha256": "518a97e07803e763e1459b8c63e18366bedf07587e06d21c4389e4482c41645d",
+  "constraint_sha256": "28f01a6c2b01d26cdee786e26ee3b5a07212f73747a67bd0d36d5900a15fe15f",
+  "full_original_contract_admission": {
+    "status": "COMPLETE_ORIGINAL_C_SUPPORTED",
+    "clause_count": 1,
+    "constraint": [
+      {
+        "primary": [
+          {
+            "value": "COURSES__STUDENT"
+          }
+        ]
+      }
+    ],
+    "primary_key": [
+      "COURSES.STUDENT"
+    ],
+    "class_nullable": true,
+    "unknown_or_omitted_clauses": 0,
+    "scope": "Full explicit original operational C; natural/business completeness remains unverified."
+  },
+  "runtime": {
+    "executable": "/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "platform": "darwin",
+    "nice": 15,
+    "sqlite_version": "3.53.3"
+  },
+  "full_C_before_insert": {
+    "status": "ALL_ORIGINAL_C_CLAUSES_SATISFIED",
+    "independent_python_check": true,
+    "exact_rows": 4,
+    "row_shape_and_types_valid": true,
+    "student_nonnull": true,
+    "student_unique": true,
+    "all_class_values": null,
+    "original_constraint": [
+      {
+        "primary": [
+          {
+            "value": "COURSES__STUDENT"
+          }
+        ]
+      }
+    ],
+    "original_clause_count": 1,
+    "checked_clause_count": 1,
+    "unknown_or_dropped_clauses": 0,
+    "scope": "Complete explicit original C; business completeness unverified."
+  },
+  "full_C_control_before_update": {
+    "status": "ALL_ORIGINAL_C_CLAUSES_SATISFIED",
+    "independent_python_check": true,
+    "exact_rows": 4,
+    "row_shape_and_types_valid": true,
+    "student_nonnull": true,
+    "student_unique": true,
+    "all_class_values": "same_nonnull_class",
+    "original_constraint": [
+      {
+        "primary": [
+          {
+            "value": "COURSES__STUDENT"
+          }
+        ]
+      }
+    ],
+    "original_clause_count": 1,
+    "checked_clause_count": 1,
+    "unknown_or_dropped_clauses": 0,
+    "scope": "Complete explicit original C; business completeness unverified."
+  },
+  "full_C_after_insert": {
+    "status": "ALL_ORIGINAL_C_CLAUSES_SATISFIED",
+    "independent_python_check": true,
+    "exact_rows": 4,
+    "row_shape_and_types_valid": true,
+    "student_nonnull": true,
+    "student_unique": true,
+    "all_class_values": null,
+    "original_constraint": [
+      {
+        "primary": [
+          {
+            "value": "COURSES__STUDENT"
+          }
+        ]
+      }
+    ],
+    "original_clause_count": 1,
+    "checked_clause_count": 1,
+    "unknown_or_dropped_clauses": 0,
+    "scope": "Complete explicit original C; business completeness unverified."
+  },
+  "current_fixture": "nonnull_class_control",
+  "full_C_after_update": {
+    "status": "ALL_ORIGINAL_C_CLAUSES_SATISFIED",
+    "independent_python_check": true,
+    "exact_rows": 4,
+    "row_shape_and_types_valid": true,
+    "student_nonnull": true,
+    "student_unique": true,
+    "all_class_values": "same_nonnull_class",
+    "original_constraint": [
+      {
+        "primary": [
+          {
+            "value": "COURSES__STUDENT"
+          }
+        ]
+      }
+    ],
+    "original_clause_count": 1,
+    "checked_clause_count": 1,
+    "unknown_or_dropped_clauses": 0,
+    "scope": "Complete explicit original C; business completeness unverified."
+  },
+  "control_same_N_and_same_STUDENT": true,
+  "worker_usage": {
+    "cpu_user_seconds": 0.025619,
+    "cpu_system_seconds": 0.013162,
+    "peak_rss_bytes_macos": 19775488,
+    "wall_from_main_seconds": 0.015671709086745977
+  },
+  "observation": {
+    "all_null_class_bag_equal": true,
+    "nonnull_class_control_bag_equal": true,
+    "exhaustive_for_all_databases_at_N": false,
+    "supports_unbounded_equivalence_claim": false,
+    "supports_natural_benchmark_label": false
+  }
+}

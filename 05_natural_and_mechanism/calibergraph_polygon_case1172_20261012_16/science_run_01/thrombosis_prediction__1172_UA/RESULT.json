@@ -1,0 +1,671 @@
+{
+  "case": "thrombosis_prediction__1172",
+  "mode": "UA",
+  "status": "VALIDATED_NEQ",
+  "stages_seconds": {
+    "imports": 0.13259620778262615,
+    "schema_C": 0.003769457805901766,
+    "parse": 0.18914433242753148,
+    "encode": 0.010519834235310555,
+    "search_including_solver": 0.45583924977108836,
+    "solver_calls": 0.45305349910631776,
+    "decode": 0.002951208967715502,
+    "replay": 0.0012452080845832825
+  },
+  "schema_C": {
+    "tables": 3,
+    "columns": 64,
+    "constraints": 7,
+    "all_source_columns_kept": true,
+    "constraint_kinds": [
+      "eq",
+      "not_null",
+      "primary"
+    ],
+    "auxiliary_integrity_list_not_appended": true
+  },
+  "raw_return": [
+    false,
+    {
+      "examination": [
+        [
+          "id",
+          "examination date",
+          "acl igg",
+          "acl igm",
+          "ana",
+          "ana pattern",
+          "acl iga",
+          "diagnosis",
+          "kct",
+          "rvvt",
+          "lac",
+          "symptoms",
+          "thrombosis"
+        ],
+        [
+          58,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "patient": [
+        [
+          "id",
+          "sex",
+          "birthday",
+          "description",
+          "first date",
+          "admission",
+          "diagnosis"
+        ],
+        [
+          58,
+          "M",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "laboratory": [
+        [
+          "id",
+          "date",
+          "got",
+          "gpt",
+          "ldh",
+          "alp",
+          "tp",
+          "alb",
+          "ua",
+          "un",
+          "cre",
+          "t-bil",
+          "t-cho",
+          "tg",
+          "cpk",
+          "glu",
+          "wbc",
+          "rbc",
+          "hgb",
+          "hct",
+          "plt",
+          "pt",
+          "aptt",
+          "fg",
+          "pic",
+          "tat",
+          "tat2",
+          "u-pro",
+          "igg",
+          "iga",
+          "igm",
+          "crp",
+          "ra",
+          "rf",
+          "c3",
+          "c4",
+          "rnp",
+          "sm",
+          "sc170",
+          "ssa",
+          "ssb",
+          "centromea",
+          "dna",
+          "dna-ii"
+        ],
+        [
+          58,
+          59,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    null,
+    0.466848,
+    {
+      "iters": 2,
+      "backtracks": 0,
+      "type_2_backtracks": 0,
+      "unsat_core_sizes": [],
+      "M_sizes": [],
+      "solving_time_per_iter": [
+        0.433536,
+        0.014824
+      ],
+      "num_nodes_changed": [],
+      "ast_size": 6,
+      "complete_time": "2026-10-12 10:47:09.290048",
+      "total_time": 0.466454,
+      "status": "NEQ",
+      "cex": {
+        "examination": [
+          [
+            "id",
+            "examination date",
+            "acl igg",
+            "acl igm",
+            "ana",
+            "ana pattern",
+            "acl iga",
+            "diagnosis",
+            "kct",
+            "rvvt",
+            "lac",
+            "symptoms",
+            "thrombosis"
+          ],
+          [
+            58,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "patient": [
+          [
+            "id",
+            "sex",
+            "birthday",
+            "description",
+            "first date",
+            "admission",
+            "diagnosis"
+          ],
+          [
+            58,
+            "M",
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ],
+        "laboratory": [
+          [
+            "id",
+            "date",
+            "got",
+            "gpt",
+            "ldh",
+            "alp",
+            "tp",
+            "alb",
+            "ua",
+            "un",
+            "cre",
+            "t-bil",
+            "t-cho",
+            "tg",
+            "cpk",
+            "glu",
+            "wbc",
+            "rbc",
+            "hgb",
+            "hct",
+            "plt",
+            "pt",
+            "aptt",
+            "fg",
+            "pic",
+            "tat",
+            "tat2",
+            "u-pro",
+            "igg",
+            "iga",
+            "igm",
+            "crp",
+            "ra",
+            "rf",
+            "c3",
+            "c4",
+            "rnp",
+            "sm",
+            "sc170",
+            "ssa",
+            "ssb",
+            "centromea",
+            "dna",
+            "dna-ii"
+          ],
+          [
+            58,
+            59,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            2,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+          ]
+        ]
+      }
+    }
+  ],
+  "replay": {
+    "concrete": {
+      "Examination": [
+        [
+          "ID",
+          "Examination Date",
+          "aCL IgG",
+          "aCL IgM",
+          "ANA",
+          "ANA Pattern",
+          "aCL IgA",
+          "Diagnosis",
+          "KCT",
+          "RVVT",
+          "LAC",
+          "Symptoms",
+          "Thrombosis"
+        ],
+        [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "Patient": [
+        [
+          "ID",
+          "SEX",
+          "Birthday",
+          "Description",
+          "First Date",
+          "Admission",
+          "Diagnosis"
+        ],
+        [
+          1,
+          "M",
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "Laboratory": [
+        [
+          "ID",
+          "Date",
+          "GOT",
+          "GPT",
+          "LDH",
+          "ALP",
+          "TP",
+          "ALB",
+          "UA",
+          "UN",
+          "CRE",
+          "T-BIL",
+          "T-CHO",
+          "TG",
+          "CPK",
+          "GLU",
+          "WBC",
+          "RBC",
+          "HGB",
+          "HCT",
+          "PLT",
+          "PT",
+          "APTT",
+          "FG",
+          "PIC",
+          "TAT",
+          "TAT2",
+          "U-PRO",
+          "IGG",
+          "IGA",
+          "IGM",
+          "CRP",
+          "RA",
+          "RF",
+          "C3",
+          "C4",
+          "RNP",
+          "SM",
+          "SC170",
+          "SSA",
+          "SSB",
+          "CENTROMEA",
+          "DNA",
+          "DNA-II"
+        ],
+        [
+          1,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          2.0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    "outputs": [
+      [
+        [
+          1
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "different": true,
+    "full_C_valid": true
+  },
+  "interpretation": "Frozen #1172 N=1 observation quotient; original SQL/DDL retained; adapter is not generic REAL/DATE support or unmodified baseline",
+  "countermodel_lifting": "Validate abstract C first, apply frozen quotient lift, then original full-C replay; no repairs or retries",
+  "solver_calls": [
+    {
+      "index": 0,
+      "state": "SAT",
+      "elapsed_s": 0.4358062921091914
+    },
+    {
+      "index": 1,
+      "state": "SAT",
+      "elapsed_s": 0.01674374984577298
+    }
+  ],
+  "protocol_events": [],
+  "self_guard": {
+    "reason": null,
+    "elapsed_s": 0.799902250058949,
+    "wall_seconds": 12,
+    "handle_count": 0,
+    "all_reaped": true,
+    "returncodes": [],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.629728208,
+        "bytes": 20348928
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.660855958,
+        "bytes": 28540928
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.687691208,
+        "bytes": 30949376
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.723976833,
+        "bytes": 33210368
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.751626833,
+        "bytes": 34914304
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.78743975,
+        "bytes": 36257792
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.823721,
+        "bytes": 37322752
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.859993916,
+        "bytes": 37896192
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.895771875,
+        "bytes": 38961152
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.92764425,
+        "bytes": 39534592
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.963236916,
+        "bytes": 41271296
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338799.993270458,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.019385666,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.0494425,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.079526,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.105484708,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.131498583,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.157937916,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.184376333,
+        "bytes": 41598976
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.21073725,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.236342333,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.262031,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.290203,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.316885541,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.346960125,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.377038458,
+        "bytes": 41615360
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2338800.407086,
+        "bytes": 41615360
+      }
+    ]
+  }
+}

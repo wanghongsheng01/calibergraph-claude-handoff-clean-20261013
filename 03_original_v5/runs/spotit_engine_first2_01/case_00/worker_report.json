@@ -1,0 +1,98 @@
+{
+  "status": "BLOCKED_OR_ERROR",
+  "id": "S01_reordered_conjunction",
+  "expected": "unsat",
+  "pid": 87970,
+  "case_index": 0,
+  "data_role": "EXISTING_EXPOSED_ANALYTICAL_DEV_NOT_NEW_TEST",
+  "performance_claim": false,
+  "runtime_lock_sha256": "b7f2630a72cb1018165623f693ecc0cb5020a85d19c614d43df6e2e7113cc7d2",
+  "fixture_sha256": "b3be16fd0f2c5a03513363c907d773e3087bbab16c2633ca4a4656ec256f4918",
+  "input": {
+    "schema": {
+      "F": {
+        "K": "INT",
+        "L": "INT",
+        "V": "INT"
+      },
+      "D": {
+        "ID": "INT",
+        "P": "INT"
+      },
+      "E": {
+        "ID": "INT",
+        "Q": "INT"
+      }
+    },
+    "exact_rows": {
+      "F": 2,
+      "D": 2,
+      "E": 2
+    },
+    "constraint": null,
+    "pair": [
+      "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE D.P>0 AND E.Q>0",
+      "SELECT SUM(F.V) FROM F JOIN D ON F.K=D.ID JOIN E ON F.L=E.ID WHERE E.Q>0 AND D.P>0"
+    ]
+  },
+  "gates": {
+    "input_hash_lock": "PASS"
+  },
+  "arms": {
+    "official": {
+      "status": "NOT_RUN"
+    },
+    "flat": {
+      "status": "NOT_RUN"
+    },
+    "product": {
+      "status": "NOT_RUN"
+    },
+    "selector": {
+      "status": "NOT_RUN"
+    }
+  },
+  "point_checks": {
+    "flat": {
+      "status": "NOT_RUN"
+    },
+    "product": {
+      "status": "NOT_RUN"
+    },
+    "selector": {
+      "status": "NOT_RUN"
+    }
+  },
+  "solver_threads": 1,
+  "native_load": "LOADED",
+  "environment_import": "ATTEMPTED_EFFECT_UNKNOWN",
+  "phase": "ERROR",
+  "resource_last_checkpoint": {
+    "elapsed_wall_seconds": 0.6889188340865076,
+    "cpu_seconds": 0.604521,
+    "peak_rss_bytes_darwin": 85065728,
+    "python_threads": [
+      {
+        "name": "MainThread",
+        "daemon": false
+      }
+    ]
+  },
+  "native_identity": {
+    "pinned_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/prepared/native/libz3.dylib",
+    "sha256": "7dd2a17e5138323e90da56a3786e8a253f83130bd518cef86ef771e4ea982d0c",
+    "version": [
+      4,
+      12,
+      0,
+      0
+    ],
+    "symbol": "Z3_get_version",
+    "binding_pointer": 4966485428,
+    "pinned_pointer": 4966485428,
+    "method": "same_process_function_identity_plus_pinned_source"
+  },
+  "error_type": "ModuleNotFoundError",
+  "reason": "No module named 'formulas.expressions.date'",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/runtime_v2/case_worker.py\", line 148, in main\n    from environment import Environment\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/environment.py\", line 38, in <module>\n    from formulas.columns import (\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/__init__.py\", line 41, in <module>\n    module = importlib.import_module('formulas.' + model_name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.13_2/Frameworks/Python.framework/Versions/3.12/lib/python3.12/importlib/__init__.py\", line 90, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/tables/__init__.py\", line 4, in <module>\n    from .alias_table import FAliasTable\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/tables/alias_table.py\", line 8, in <module>\n    from formulas.tuples.alias_tuple import FAliasTuple\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/tuples/__init__.py\", line 4, in <module>\n    from ._field import FField\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/tuples/_field.py\", line 5, in <module>\n    from formulas.columns.attribute import FAttribute\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/columns/__init__.py\", line 4, in <module>\n    from .aggregations import (\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/columns/aggregations/__init__.py\", line 3, in <module>\n    from .aggregation import FAggregation\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/columns/aggregations/aggregation.py\", line 18, in <module>\n    from formulas.columns.attribute import FAttribute\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/columns/attribute.py\", line 15, in <module>\n    from formulas.columns.base_column import FBaseColumn\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/columns/base_column.py\", line 12, in <module>\n    from formulas.expressions.base_expression import FBaseExpression\n  File \"/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/spotit_adapter/source/formulas/expressions/__init__.py\", line 6, in <module>\n    from .date import FDate\nModuleNotFoundError: No module named 'formulas.expressions.date'\n"
+}

@@ -1,0 +1,159 @@
+{
+  "checked_utc": "2026-10-11T20:50:49.823615+00:00",
+  "new_freeze_entries": [
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/implementation/probe_worker_v3.py",
+      "sha256": "1df6b74879539da7dd19df4b3d5615aec1ceaec57352cc023cab0726204705c7"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/implementation/run_probe.py",
+      "sha256": "4a0d5b387c9795fbbc28fcbe05ad15cfd28b7f2259ee2e16b066b710307175b9"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/protocols/FIXED_PROTOCOL.json",
+      "sha256": "988041bf8429a24348444f30e17ce36b7191e45dd2cda3ee42329aa67aba8f47"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/analysis/STATIC_API_NOTES.json",
+      "sha256": "ea5a2d0aaf3f64511dda35acbb499bde9366f79a8a9e24d49c124c8c4e2e8e9f"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/AUTHOR_MANIFEST.json",
+      "sha256": "277ac97864c18b9264905914381acff60624e790aef99da979d2114916d5cb1f"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/governance/OFFICIAL_SOURCE_LOCK.json",
+      "sha256": "72c22151c377f0c1fc812324882742c3726c53032bd4d265ad69cb27837d7676"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_03/governance/DEPENDENCY_ACQUISITION_RECEIPT.json",
+      "sha256": "cfcbb5af286d95e0a7bb6448793f7871a7ffbdc4a7b52abad535ad2341f6b3e5"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/implementation/probe_worker_replay_supplement.py",
+      "sha256": "59d77c6ad0013fb8b4d5db6473081ab315820b37d7365761cd7293b7da26ac8f"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/implementation/run_replay_supplement.py",
+      "sha256": "448ae45de8070ad70fa4a871adf3ae5d7a8174b27bed61d76a880105e41e4efa"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/protocols/REPLAY_SUPPLEMENT.AUTHORIZED.json",
+      "sha256": "cd5726ae673fafcd89297267745a327c3496ed4c23a6fb82ab97e1f580f94c9d"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/governance/FREEZE_01.json",
+      "sha256": "efff1b9b4c22c85b0b0861e6d44d4aacb75feb5313cdab0b1fb9a38364b06096"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/runs/admission_01/RESULT.json",
+      "sha256": "be28f9df99224520a687abb70b1a5643893db11b84c77ce9cecd3edceb576b43"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/runs/admission_01/LAUNCH_RECEIPT.json",
+      "sha256": "17bb0cdefce73f0cd3176487fc72c317f8a31237a05738038f00618da79dead3"
+    },
+    {
+      "path": "calibergraph_parseval_admission_20261011_04/analysis/OBSERVED_ROW_CAP.json",
+      "sha256": "0bd7ce444bb9b59a076b2710455b6f7c72e5b9da1d6c414ec2dbfc37da5d9fc0"
+    }
+  ],
+  "old03_author_files_unchanged": 26,
+  "official_source_files_verified": 126,
+  "dependency_files_verified": 455,
+  "original_SQL_sha256": {
+    "before": "36b253319cf60145d752be6cb4ed42daeffd7398881cde2c02d09353cdea75d7",
+    "after": "1ca3717156b1dd7bc3f4eb30a9ec998034da18492b6b0bc05d66d3f600c40de2"
+  },
+  "runs": [
+    {
+      "run": "admission_01",
+      "result_sha256": "be28f9df99224520a687abb70b1a5643893db11b84c77ce9cecd3edceb576b43",
+      "receipt_sha256": "17bb0cdefce73f0cd3176487fc72c317f8a31237a05738038f00618da79dead3",
+      "counters": {
+        "generation_calls": 1,
+        "solver_checks": 0,
+        "solver_results": {},
+        "candidate_callbacks": 1,
+        "original_query_replays": 0,
+        "confirmation_query_replays": 0,
+        "driver_execute_calls": 66,
+        "explicit_lowering_calls": 2
+      },
+      "catalog_active_count": 43,
+      "backend_column_census": 117,
+      "pg_constraint_count": 11,
+      "pg_key_policy_count": 9,
+      "default_records_checked": 42,
+      "bool_aliases_checked": 8,
+      "full_nullable_BOOL_truth_rows_checked": 3,
+      "calibration_records_checked": 16,
+      "pid_absent": true,
+      "socket_absent": true,
+      "shutdown_log_and_receipt_match": true,
+      "prelaunch_resource_gate_pass": true
+    },
+    {
+      "run": "replay_supplement_01",
+      "result_sha256": "aa2ef28ff8966029c88f39c483af148c0764cec9b1f0b49249f9172abdf0a5c3",
+      "receipt_sha256": "5762cc72f0f37535763774ea27b3c71c56432d2c8c21abee6cbef272aca5fad8",
+      "counters": {
+        "generation_calls": 1,
+        "solver_checks": 0,
+        "solver_results": {},
+        "candidate_callbacks": 1,
+        "original_query_replays": 2,
+        "confirmation_query_replays": 2,
+        "driver_execute_calls": 165,
+        "explicit_lowering_calls": 2
+      },
+      "catalog_active_count": 43,
+      "backend_column_census": 117,
+      "pg_constraint_count": 11,
+      "pg_key_policy_count": 9,
+      "default_records_checked": 42,
+      "bool_aliases_checked": 8,
+      "full_nullable_BOOL_truth_rows_checked": 3,
+      "calibration_records_checked": 16,
+      "pid_absent": true,
+      "socket_absent": true,
+      "shutdown_log_and_receipt_match": true,
+      "prelaunch_resource_gate_pass": true
+    }
+  ],
+  "prior_cleanup": [
+    {
+      "run": "03/admission_01",
+      "pid_absent": true,
+      "socket_absent": true
+    },
+    {
+      "run": "03/admission_02",
+      "pid_absent": true,
+      "socket_absent": true
+    }
+  ],
+  "reviewer_execution": "stdlib-only JSON/hash/static-data checks, no target imports/SQL/parser/SMT/server/authorlauncher",
+  "original_source_bindings_verified": [
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/data/SOURCE_INPUTS.json",
+      "sha256": "9f35e5b1b293455f21e4d4427d6df72f08d397dc2ba97da6cde31c8942ad9d92"
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/data/REPLAY_SCHEMA.json",
+      "sha256": "fdd8b509e0321dfe98d598ccc02caa50c9c686e2443482ff201f7e7203e55132"
+    },
+    {
+      "path": "calibergraph_trigger_generation_20261011_01/sources_local/selection/gitlab/47_parent_db__schema.rb",
+      "sha256": "988b32f89adb6c93c74bf9a3c077807faa05b6fadeb402d85d8fa0b5d18c750e"
+    }
+  ],
+  "saved_candidate_explanation_independently_verified": {
+    "project_rows": 13,
+    "route_counts": {
+      "both": 9,
+      "authorization_only": 2
+    },
+    "same_D_no_new_test": true
+  }
+}

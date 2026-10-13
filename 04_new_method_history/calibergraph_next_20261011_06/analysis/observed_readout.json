@@ -1,0 +1,1054 @@
+{
+  "id": "calibergraph-06-observed-readout-v1",
+  "created_utc": "2026-10-11T14:32:17.613980+00:00",
+  "decision": "NO_NEW_METHOD_NO_FAIR_SUPERIORITY",
+  "new_validated_mechanism": null,
+  "scope": "Exposed development feasibility and cost evidence; not independent test or natural business-bug evidence.",
+  "registered_denominator": 12,
+  "registered_groups": 4,
+  "returned": 12,
+  "all_C_checks_sat": 12,
+  "query_checks": 9,
+  "query_counts": {
+    "unsat": 5,
+    "unknown": 4,
+    "NO_QUERY_CHECK": 3
+  },
+  "unknown_reasons": {
+    "timeout": 2,
+    "out of memory": 2
+  },
+  "zero_query_check_failure": {
+    "count": 3,
+    "source_case_id": "dev03_04",
+    "stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+    "type": "NotEquivalenceError",
+    "interpretation": "No query SAT check/model/replay: not accepted as a separating witness or unbounded inequivalence proof."
+  },
+  "query_SAT_models": 0,
+  "query_SAT_replayed_distinguishing_witnesses": 0,
+  "contract_models_replayed": 6,
+  "contract_model_original_query_executions": 12,
+  "contract_model_physical_rows_total": 56,
+  "contract_model_replays_confirming_full_C": 6,
+  "contract_model_distinguishing_outputs": 0,
+  "formal_timing_scope": "One attempt per slot. UNKNOWN timeout/memory limits are observations, not hardness evidence or baseline victory.",
+  "query_check_cpu_seconds": 2.500993,
+  "contract_check_cpu_seconds": 0.06303999999999998,
+  "query_check_wall_seconds": 2.505282375495881,
+  "worker_wait4_cpu_total_seconds": 14.442653,
+  "worker_peak_rss_bytes_max": 258162688,
+  "worker_wait4_cpu_seconds_max": 2.166776,
+  "worker_wall_from_main_seconds_max": 2.147482041269541,
+  "runtime_import_cpu_seconds_total": 7.6201110000000005,
+  "cpu_accounting": {
+    "pre_registered_prior_cpu_seconds": 10.0,
+    "prior_charge_kind": "Conservative preflight reserve, not a measured CPU result",
+    "parent_user_cpu_seconds": 0.23277699999999998,
+    "parent_system_cpu_seconds": 0.24523599999999998,
+    "all_reaped_children_user_cpu_seconds": 14.20963,
+    "all_reaped_children_system_cpu_seconds": 3.586993,
+    "supervisor_plus_reaped_cpu_seconds": 18.274636,
+    "observed_total_cpu_seconds": 28.274636,
+    "reserved_final_report_exit_tail_seconds": 0.2,
+    "conservative_charged_total_seconds": 28.474636,
+    "scope": "Absolute parent SELF and all reaped CHILDREN, including memory_pressure, ps, failed preexec children and workers; live worker CPU separately sampled. Child CPU is not added twice."
+  },
+  "resource_violations": [],
+  "load_1min_min_max": [
+    2.576171875,
+    2.7138671875
+  ],
+  "memory_available_percent_min_max": [
+    34,
+    36
+  ],
+  "checksums": {
+    "registered_protocol": "7a5c6fd9a38f59529031d8c6f475e9b2dacebb274474e8993f1d8dd188421f36",
+    "freeze": "124434da8e12c466c7e7138f8cbfcd4eb06f5443419274b6cf99f1f31a5bfde7",
+    "batch_receipt": "16ca6e4d6e056e97afe764754eb3091f5d374fea2edc1ca53271ecad35538029"
+  },
+  "postrun_integrity": {
+    "frozen_files_rehashed": 880,
+    "mismatches": [],
+    "old_manifest_identity_checks": [
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_01/FIRST_ROUND_MANIFEST.json",
+        "expected": "e9f06b3491ba3fdd1f11eb86c29594bd34e75f41b59d9df75b174bd1075925be",
+        "actual": "e9f06b3491ba3fdd1f11eb86c29594bd34e75f41b59d9df75b174bd1075925be"
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_02/SECOND_ROUND_MANIFEST.json",
+        "expected": "bee973b3ee811c185e0aa56820c394c02442376104480fc2a265c674a242badc",
+        "actual": "bee973b3ee811c185e0aa56820c394c02442376104480fc2a265c674a242badc"
+      },
+      {
+        "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/THIRD_ROUND_MANIFEST.json",
+        "expected": "042ac37c195010557ba584e57de4e074a3bece282b33710abe305cb4def2e1a6",
+        "actual": "042ac37c195010557ba584e57de4e074a3bece282b33710abe305cb4def2e1a6"
+      }
+    ]
+  },
+  "independent_final_test_accessed": false,
+  "automatic_retries": 0,
+  "report_generation_scope": "Read-only receipt aggregation and checksum verification; no scientific workload rerun; this postrun analysis is not included in measured supervisor CPU.",
+  "rows": [
+    {
+      "case_id": "dev03_07_exact2",
+      "source_case_id": "dev03_07",
+      "exact_rows_per_table": 2,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unsat",
+      "query_unknown_reason": null,
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.005437917076051235,
+          "actual_check_cpu_seconds": 0.005445000000000033,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.008953791577368975,
+          "actual_check_cpu_seconds": 0.00895899999999994,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.782739,
+      "worker_wait4_peak_rss_bytes": 111837184,
+      "worker_wall_from_main_seconds": 0.796480500139296,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.037383999999999994,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.5818530000000001
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06321199999999993,
+        "scope_encode": 0.00678600000000007,
+        "compare_encode": 0.0047800000000000065,
+        "query_check": 0.00895899999999994
+      },
+      "attempt_cpu_seconds": 0.12071600000000016,
+      "cleanup_cpu_seconds": 0.008338999999999985,
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "replay_status": null,
+        "independent_full_C_status": null,
+        "original_query_executions": 0,
+        "output_row_counts": [],
+        "physical_rows_total": 0,
+        "sqlite_version": null,
+        "query_sat_witness": false,
+        "costs": [],
+        "outer_control_costs": [],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "94d2f084484c84fef93d147fc0ad01e32f738656f3fe674c11b8921bc6ee25c3"
+    },
+    {
+      "case_id": "dev03_07_exact4",
+      "source_case_id": "dev03_07",
+      "exact_rows_per_table": 4,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unsat",
+      "query_unknown_reason": null,
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004522582981735468,
+          "actual_check_cpu_seconds": 0.004533999999999927,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.015477167442440987,
+          "actual_check_cpu_seconds": 0.015482000000000107,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.834229,
+      "worker_wait4_peak_rss_bytes": 109805568,
+      "worker_wall_from_main_seconds": 0.8137120832689106,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.03850300000000001,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.6227159999999999
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06354099999999996,
+        "scope_encode": 0.007575000000000109,
+        "compare_encode": 0.004781000000000035,
+        "query_check": 0.015482000000000107
+      },
+      "attempt_cpu_seconds": 0.12732599999999994,
+      "cleanup_cpu_seconds": 0.008442999999999978,
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "replay_status": null,
+        "independent_full_C_status": null,
+        "original_query_executions": 0,
+        "output_row_counts": [],
+        "physical_rows_total": 0,
+        "sqlite_version": null,
+        "query_sat_witness": false,
+        "costs": [],
+        "outer_control_costs": [],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "40260738efc996023bcf3f8387cce43857e8d0e7a442f0fc6495ecb7644713e5"
+    },
+    {
+      "case_id": "dev03_07_exact8",
+      "source_case_id": "dev03_07",
+      "exact_rows_per_table": 8,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unsat",
+      "query_unknown_reason": null,
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.005667749792337418,
+          "actual_check_cpu_seconds": 0.005673999999999957,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.08585695782676339,
+          "actual_check_cpu_seconds": 0.08585299999999996,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.982203,
+      "worker_wait4_peak_rss_bytes": 99631104,
+      "worker_wall_from_main_seconds": 0.9625676251016557,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.038065,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.6931179999999999
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06325999999999998,
+        "scope_encode": 0.009029000000000065,
+        "compare_encode": 0.005137000000000058,
+        "query_check": 0.08585299999999996
+      },
+      "attempt_cpu_seconds": 0.20811900000000005,
+      "cleanup_cpu_seconds": 0.009359000000000006,
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "replay_status": null,
+        "independent_full_C_status": null,
+        "original_query_executions": 0,
+        "output_row_counts": [],
+        "physical_rows_total": 0,
+        "sqlite_version": null,
+        "query_sat_witness": false,
+        "costs": [],
+        "outer_control_costs": [],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "e4495ad268cd328d0612532f3f7191ba9e85fa4a5f30b178ce33697d816fd73d"
+    },
+    {
+      "case_id": "dev03_10_exact2",
+      "source_case_id": "dev03_10",
+      "exact_rows_per_table": 2,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unsat",
+      "query_unknown_reason": null,
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004247541073709726,
+          "actual_check_cpu_seconds": 0.004255000000000009,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.024894041940569878,
+          "actual_check_cpu_seconds": 0.02490199999999998,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.9296989999999999,
+      "worker_wait4_peak_rss_bytes": 113344512,
+      "worker_wall_from_main_seconds": 0.914671499747783,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.03885899999999999,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.6893949999999999
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06500700000000015,
+        "scope_encode": 0.012902999999999776,
+        "compare_encode": 0.005292000000000074,
+        "query_check": 0.02490199999999998
+      },
+      "attempt_cpu_seconds": 0.15171599999999996,
+      "cleanup_cpu_seconds": 0.009221999999999952,
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "replay_status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+        "independent_full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+        "original_query_executions": 2,
+        "output_row_counts": [
+          0,
+          0
+        ],
+        "physical_rows_total": 4,
+        "sqlite_version": "3.53.3",
+        "query_sat_witness": false,
+        "costs": [
+          {
+            "name": "INDEPENDENT_FULL_C_CHECK",
+            "status": "RETURNED",
+            "wall_seconds": 2.88328155875206e-05,
+            "cpu_seconds": 2.800000000003494e-05
+          },
+          {
+            "name": "SQLITE_LOAD_GENERATED_DATABASE",
+            "status": "RETURNED",
+            "wall_seconds": 0.0007848748937249184,
+            "cpu_seconds": 0.0005309999999999898
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_0",
+            "status": "RETURNED",
+            "wall_seconds": 3.27499583363533e-05,
+            "cpu_seconds": 3.100000000000325e-05
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_1",
+            "status": "RETURNED",
+            "wall_seconds": 2.2666994482278824e-05,
+            "cpu_seconds": 2.1999999999994246e-05
+          }
+        ],
+        "outer_control_costs": [
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.00019579054787755013,
+            "cpu_seconds": 0.000196000000000085
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.00843787519261241,
+            "cpu_seconds": 0.004775000000000085
+          }
+        ],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "c0cf4e16f68368e8c2fbe9135a02243899b97c6aff4eb8a4b4ab248cb72098f7"
+    },
+    {
+      "case_id": "dev03_10_exact4",
+      "source_case_id": "dev03_10",
+      "exact_rows_per_table": 4,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unknown",
+      "query_unknown_reason": "timeout",
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.004966333042830229,
+          "actual_check_cpu_seconds": 0.00497000000000003,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.7068302081897855,
+          "actual_check_cpu_seconds": 0.7058139999999998,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 1.633961,
+      "worker_wait4_peak_rss_bytes": 114737152,
+      "worker_wall_from_main_seconds": 1.6219947501085699,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.03854799999999999,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.664082
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06648799999999988,
+        "scope_encode": 0.04329500000000008,
+        "compare_encode": 0.021747000000000072,
+        "query_check": 0.7058139999999998
+      },
+      "attempt_cpu_seconds": 0.887587,
+      "cleanup_cpu_seconds": 0.011295000000000055,
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "replay_status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+        "independent_full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+        "original_query_executions": 2,
+        "output_row_counts": [
+          0,
+          0
+        ],
+        "physical_rows_total": 8,
+        "sqlite_version": "3.53.3",
+        "query_sat_witness": false,
+        "costs": [
+          {
+            "name": "INDEPENDENT_FULL_C_CHECK",
+            "status": "RETURNED",
+            "wall_seconds": 3.474997356534004e-05,
+            "cpu_seconds": 3.3000000000012186e-05
+          },
+          {
+            "name": "SQLITE_LOAD_GENERATED_DATABASE",
+            "status": "RETURNED",
+            "wall_seconds": 0.0002109580673277378,
+            "cpu_seconds": 0.0002100000000000296
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_0",
+            "status": "RETURNED",
+            "wall_seconds": 3.8875266909599304e-05,
+            "cpu_seconds": 3.799999999995474e-05
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_1",
+            "status": "RETURNED",
+            "wall_seconds": 2.391589805483818e-05,
+            "cpu_seconds": 2.2999999999995246e-05
+          }
+        ],
+        "outer_control_costs": [
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.00037125032395124435,
+            "cpu_seconds": 0.0003710000000000102
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.0036623748019337654,
+            "cpu_seconds": 0.003661999999999943
+          }
+        ],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "dcb84590d571f1baf0501dfd96b0e4a40206146643a0d6dd035e7bbe21c4a57f"
+    },
+    {
+      "case_id": "dev03_10_exact8",
+      "source_case_id": "dev03_10",
+      "exact_rows_per_table": 8,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unknown",
+      "query_unknown_reason": "out of memory",
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.00707087479531765,
+          "actual_check_cpu_seconds": 0.007078000000000029,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.4684281670488417,
+          "actual_check_cpu_seconds": 0.46805399999999975,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 1.880183,
+      "worker_wait4_peak_rss_bytes": 258162688,
+      "worker_wall_from_main_seconds": 1.8573051667772233,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.038611000000000006,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.620298
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06586499999999995,
+        "scope_encode": 0.287841,
+        "compare_encode": 0.2900529999999999,
+        "query_check": 0.46805399999999975
+      },
+      "attempt_cpu_seconds": 1.170127,
+      "cleanup_cpu_seconds": 0.006433000000000133,
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "replay_status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+        "independent_full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+        "original_query_executions": 2,
+        "output_row_counts": [
+          1,
+          1
+        ],
+        "physical_rows_total": 16,
+        "sqlite_version": "3.53.3",
+        "query_sat_witness": false,
+        "costs": [
+          {
+            "name": "INDEPENDENT_FULL_C_CHECK",
+            "status": "RETURNED",
+            "wall_seconds": 4.333304241299629e-05,
+            "cpu_seconds": 4.19999999999518e-05
+          },
+          {
+            "name": "SQLITE_LOAD_GENERATED_DATABASE",
+            "status": "RETURNED",
+            "wall_seconds": 0.00021562492474913597,
+            "cpu_seconds": 0.00021400000000002667
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_0",
+            "status": "RETURNED",
+            "wall_seconds": 4.3584033846855164e-05,
+            "cpu_seconds": 4.29999999999528e-05
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_1",
+            "status": "RETURNED",
+            "wall_seconds": 2.729194238781929e-05,
+            "cpu_seconds": 2.599999999997049e-05
+          }
+        ],
+        "outer_control_costs": [
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.0006355410441756248,
+            "cpu_seconds": 0.0006360000000000809
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.0034742075949907303,
+            "cpu_seconds": 0.003473999999999977
+          }
+        ],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "907a82c8e860ee56200727f6f1e448f1ee93cd44c0dbb866cef60aea9f4d5b5b"
+    },
+    {
+      "case_id": "dev03_15_exact2",
+      "source_case_id": "dev03_15",
+      "exact_rows_per_table": 2,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "OFFICIAL_EXACT_N_UNSAT_ONLY",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unsat",
+      "query_unknown_reason": null,
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.0042997500859200954,
+          "actual_check_cpu_seconds": 0.004305999999999921,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.031799832824617624,
+          "actual_check_cpu_seconds": 0.031806,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.830941,
+      "worker_wait4_peak_rss_bytes": 107282432,
+      "worker_wall_from_main_seconds": 0.8093085419386625,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.03860699999999999,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.585164
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06052599999999986,
+        "scope_encode": 0.01679300000000017,
+        "compare_encode": 0.008504999999999874,
+        "query_check": 0.031806
+      },
+      "attempt_cpu_seconds": 0.1592960000000001,
+      "cleanup_cpu_seconds": 0.007960999999999996,
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "replay_status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+        "independent_full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+        "original_query_executions": 2,
+        "output_row_counts": [
+          2,
+          2
+        ],
+        "physical_rows_total": 4,
+        "sqlite_version": "3.53.3",
+        "query_sat_witness": false,
+        "costs": [
+          {
+            "name": "INDEPENDENT_FULL_C_CHECK",
+            "status": "RETURNED",
+            "wall_seconds": 3.570783883333206e-05,
+            "cpu_seconds": 3.4999999999896225e-05
+          },
+          {
+            "name": "SQLITE_LOAD_GENERATED_DATABASE",
+            "status": "RETURNED",
+            "wall_seconds": 0.00019841594621539116,
+            "cpu_seconds": 0.00019700000000004436
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_0",
+            "status": "RETURNED",
+            "wall_seconds": 2.9875431209802628e-05,
+            "cpu_seconds": 2.9000000000084514e-05
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_1",
+            "status": "RETURNED",
+            "wall_seconds": 1.966673880815506e-05,
+            "cpu_seconds": 1.8999999999935735e-05
+          }
+        ],
+        "outer_control_costs": [
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.00022241706028580666,
+            "cpu_seconds": 0.00022200000000005549
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.0034832917153835297,
+            "cpu_seconds": 0.003483000000000014
+          }
+        ],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "0cbab96f3154d6444decf041d3f05a056f632447fcf0b4c6997b9fd8579c2e19"
+    },
+    {
+      "case_id": "dev03_15_exact4",
+      "source_case_id": "dev03_15",
+      "exact_rows_per_table": 4,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unknown",
+      "query_unknown_reason": "timeout",
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.005248874891549349,
+          "actual_check_cpu_seconds": 0.005260000000000042,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.7102856668643653,
+          "actual_check_cpu_seconds": 0.7075680000000001,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 1.58046,
+      "worker_wait4_peak_rss_bytes": 120766464,
+      "worker_wall_from_main_seconds": 1.5628471672534943,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.038606999999999995,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.5795239999999999
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06149900000000019,
+        "scope_encode": 0.0455279999999999,
+        "compare_encode": 0.05124099999999998,
+        "query_check": 0.7075680000000001
+      },
+      "attempt_cpu_seconds": 0.9164819999999999,
+      "cleanup_cpu_seconds": 0.009229000000000154,
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "replay_status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+        "independent_full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+        "original_query_executions": 2,
+        "output_row_counts": [
+          4,
+          4
+        ],
+        "physical_rows_total": 8,
+        "sqlite_version": "3.53.3",
+        "query_sat_witness": false,
+        "costs": [
+          {
+            "name": "INDEPENDENT_FULL_C_CHECK",
+            "status": "RETURNED",
+            "wall_seconds": 4.075001925230026e-05,
+            "cpu_seconds": 4.0999999999909165e-05
+          },
+          {
+            "name": "SQLITE_LOAD_GENERATED_DATABASE",
+            "status": "RETURNED",
+            "wall_seconds": 0.00021845940500497818,
+            "cpu_seconds": 0.00021600000000007724
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_0",
+            "status": "RETURNED",
+            "wall_seconds": 3.495905548334122e-05,
+            "cpu_seconds": 3.499999999993786e-05
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_1",
+            "status": "RETURNED",
+            "wall_seconds": 2.2999942302703857e-05,
+            "cpu_seconds": 2.2999999999953613e-05
+          }
+        ],
+        "outer_control_costs": [
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.000424874946475029,
+            "cpu_seconds": 0.0004250000000000087
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.0036642919294536114,
+            "cpu_seconds": 0.0036650000000000293
+          }
+        ],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "d6c90180b71bde570918275370250b1fb38fd2f526d25d54aa7a8430d364459c"
+    },
+    {
+      "case_id": "dev03_15_exact8",
+      "source_case_id": "dev03_15",
+      "exact_rows_per_table": 8,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "RETURNED",
+      "engineering_class": "QUERY_RETURNED",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": "unknown",
+      "query_unknown_reason": "out of memory",
+      "failure_stage": null,
+      "error_type": null,
+      "error": null,
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.007302542217075825,
+          "actual_check_cpu_seconds": 0.00730900000000001,
+          "timeout_ms": 100
+        },
+        {
+          "attempt": 1,
+          "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+          "actual_check_wall_seconds": 0.45275654178112745,
+          "actual_check_cpu_seconds": 0.45255500000000026,
+          "timeout_ms": 700
+        }
+      ],
+      "worker_wait4_cpu_seconds": 2.166776,
+      "worker_wait4_peak_rss_bytes": 189644800,
+      "worker_wall_from_main_seconds": 2.147482041269541,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.037725999999999996,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.675643
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.062456999999999985,
+        "scope_encode": 0.1580569999999999,
+        "compare_encode": 0.6698739999999999,
+        "query_check": 0.45255500000000026
+      },
+      "attempt_cpu_seconds": 1.4059009999999998,
+      "cleanup_cpu_seconds": 0.0066949999999996734,
+      "contract_model_sanity": {
+        "status": "RETURNED",
+        "replay_status": "REPLAY_DID_NOT_CONFIRM_DIFFERENCE",
+        "independent_full_C_status": "COMPLETE_ORIGINAL_OPERATIONAL_C_TRUE",
+        "original_query_executions": 2,
+        "output_row_counts": [
+          8,
+          8
+        ],
+        "physical_rows_total": 16,
+        "sqlite_version": "3.53.3",
+        "query_sat_witness": false,
+        "costs": [
+          {
+            "name": "INDEPENDENT_FULL_C_CHECK",
+            "status": "RETURNED",
+            "wall_seconds": 5.2667222917079926e-05,
+            "cpu_seconds": 5.0999999999988554e-05
+          },
+          {
+            "name": "SQLITE_LOAD_GENERATED_DATABASE",
+            "status": "RETURNED",
+            "wall_seconds": 0.00021908385679125786,
+            "cpu_seconds": 0.0002180000000000376
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_0",
+            "status": "RETURNED",
+            "wall_seconds": 3.8415659219026566e-05,
+            "cpu_seconds": 3.80000000000727e-05
+          },
+          {
+            "name": "SQLITE_ORIGINAL_QUERY_1",
+            "status": "RETURNED",
+            "wall_seconds": 3.0375085771083832e-05,
+            "cpu_seconds": 3.0000000000009186e-05
+          }
+        ],
+        "outer_control_costs": [
+          {
+            "name": "C_MODEL_SANITY_RAW_EXPORT",
+            "status": "RETURNED",
+            "wall_seconds": 0.0007759998552501202,
+            "cpu_seconds": 0.0007750000000000812
+          },
+          {
+            "name": "C_MODEL_SANITY_FULL_C_AND_ORIGINAL_SQL_REPLAY",
+            "status": "RETURNED",
+            "wall_seconds": 0.003689667209982872,
+            "cpu_seconds": 0.003689999999999971
+          }
+        ],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "1f932d1c0da1de966fc64d1aed8edd1e89e35410ff4d202f033151f1461a310f"
+    },
+    {
+      "case_id": "dev03_04_exact2",
+      "source_case_id": "dev03_04",
+      "exact_rows_per_table": 2,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "STAGE_ERROR",
+      "engineering_class": "INCONCLUSIVE",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": null,
+      "query_unknown_reason": null,
+      "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+      "error_type": "NotEquivalenceError",
+      "error": "Symbolic reasoning: NOT EQUIVALENT.",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.003991208039224148,
+          "actual_check_cpu_seconds": 0.003999000000000086,
+          "timeout_ms": 100
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.844827,
+      "worker_wait4_peak_rss_bytes": 108527616,
+      "worker_wall_from_main_seconds": 0.8243895838968456,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.03811500000000001,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.6318170000000001
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06996799999999992,
+        "scope_encode": 0.023142000000000107,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "attempt_cpu_seconds": 0.12831599999999999,
+      "cleanup_cpu_seconds": 0.013306999999999958,
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "replay_status": null,
+        "independent_full_C_status": null,
+        "original_query_executions": 0,
+        "output_row_counts": [],
+        "physical_rows_total": 0,
+        "sqlite_version": null,
+        "query_sat_witness": false,
+        "costs": [],
+        "outer_control_costs": [],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "06e22fe62cc239a46046a81dec9f7fd3e586c14d983568771c77ac01c33118e6"
+    },
+    {
+      "case_id": "dev03_04_exact4",
+      "source_case_id": "dev03_04",
+      "exact_rows_per_table": 4,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "STAGE_ERROR",
+      "engineering_class": "INCONCLUSIVE",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": null,
+      "query_unknown_reason": null,
+      "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+      "error_type": "NotEquivalenceError",
+      "error": "Symbolic reasoning: NOT EQUIVALENT.",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.00440945802256465,
+          "actual_check_cpu_seconds": 0.004417000000000004,
+          "timeout_ms": 100
+        }
+      ],
+      "worker_wait4_cpu_seconds": 0.8696769999999999,
+      "worker_wait4_peak_rss_bytes": 108888064,
+      "worker_wall_from_main_seconds": 0.8499587499536574,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.03971500000000001,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.614441
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.07087600000000016,
+        "scope_encode": 0.0643539999999998,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "attempt_cpu_seconds": 0.172018,
+      "cleanup_cpu_seconds": 0.01256299999999999,
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "replay_status": null,
+        "independent_full_C_status": null,
+        "original_query_executions": 0,
+        "output_row_counts": [],
+        "physical_rows_total": 0,
+        "sqlite_version": null,
+        "query_sat_witness": false,
+        "costs": [],
+        "outer_control_costs": [],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "02369b88b867d136cbacf425935dab80e92fe8816ac67d633e252dea4ec7406a"
+    },
+    {
+      "case_id": "dev03_04_exact8",
+      "source_case_id": "dev03_04",
+      "exact_rows_per_table": 8,
+      "supervisor_status": "RETURNED",
+      "worker_exit_code": 0,
+      "record_status": "STAGE_ERROR",
+      "engineering_class": "INCONCLUSIVE",
+      "strict_class": "INCONCLUSIVE",
+      "full_C_nonempty": "sat",
+      "query_verdict": null,
+      "query_unknown_reason": null,
+      "failure_stage": "OFFICIAL_COMPARISON_FORMULA_ENCODING",
+      "error_type": "NotEquivalenceError",
+      "error": "Symbolic reasoning: NOT EQUIVALENT.",
+      "solver_calls": [
+        {
+          "attempt": 1,
+          "stage": "FULL_C_NONEMPTY_CHECK",
+          "actual_check_wall_seconds": 0.005788916256278753,
+          "actual_check_cpu_seconds": 0.005792999999999937,
+          "timeout_ms": 100
+        }
+      ],
+      "worker_wait4_cpu_seconds": 1.1069579999999999,
+      "worker_wait4_peak_rss_bytes": 110804992,
+      "worker_wall_from_main_seconds": 1.0926294173114002,
+      "runtime_phase_cpu_seconds": {
+        "LOCK_AND_DEPENDENCY_HASH": 0.037684999999999996,
+        "NATIVE_AND_OFFICIAL_IMPORT": 0.66206
+      },
+      "exclusive_query_phase_cpu_seconds": {
+        "parse": 0.06879399999999991,
+        "scope_encode": 0.24956700000000032,
+        "compare_encode": null,
+        "query_check": 0
+      },
+      "attempt_cpu_seconds": 0.36462899999999987,
+      "cleanup_cpu_seconds": 0.013593000000000188,
+      "contract_model_sanity": {
+        "status": "NOT_ADMITTED",
+        "replay_status": null,
+        "independent_full_C_status": null,
+        "original_query_executions": 0,
+        "output_row_counts": [],
+        "physical_rows_total": 0,
+        "sqlite_version": null,
+        "query_sat_witness": false,
+        "costs": [],
+        "outer_control_costs": [],
+        "cost_note": "Inner phase costs are contained in outer control stages; do not sum both."
+      },
+      "input_evidence_sha256": "49bb3b8ae9ad34b4f832904e9adb6fd7b923a0cd3f4b252e4c3c39394bfc84b2"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "case": "thrombosis_prediction__1261",
+  "mode": "precise",
+  "status": "BOUNDED_SYMBOLIC_UNSAT",
+  "stages_seconds": {
+    "imports": 0.09909074986353517,
+    "schema_C": 0.0011935420334339142,
+    "parse": 0.17449645791202784,
+    "encode": 0.011343833524733782,
+    "search_including_solver": 0.012942957691848278,
+    "solver_calls": 0.011893666815012693,
+    "decode": null,
+    "replay": null
+  },
+  "schema_C": {
+    "tables": 3,
+    "columns": 64,
+    "constraints": 7,
+    "all_source_columns_kept": true,
+    "constraint_kinds": [
+      "eq",
+      "not_null",
+      "primary"
+    ],
+    "auxiliary_integrity_list_not_appended": true
+  },
+  "raw_return": [
+    true,
+    null,
+    null,
+    0.024545,
+    {
+      "backtracks": 0,
+      "type_2_backtracks": 0,
+      "unsat_core_sizes": [],
+      "M_sizes": [],
+      "solving_time_per_iter": [],
+      "complete_time": "2026-10-12 11:03:31.572489",
+      "total_time": 0.024364,
+      "status": "EQU"
+    }
+  ],
+  "interpretation": "Frozen #1261 N=1 observation quotient; original SQL/DDL retained; adapter is not generic REAL/DATE support or unmodified baseline",
+  "countermodel_lifting": "Validate abstract C first, apply frozen quotient lift, then original full-C replay; no repairs or retries",
+  "solver_calls": [
+    {
+      "index": 0,
+      "state": "UNSAT",
+      "elapsed_s": 0.011669916100800037
+    }
+  ],
+  "protocol_events": [],
+  "self_guard": {
+    "reason": null,
+    "elapsed_s": 0.3000488327816129,
+    "wall_seconds": 12,
+    "handle_count": 0,
+    "all_reaped": true,
+    "returncodes": [],
+    "cleanup_errors": [],
+    "self_rss_stop_bytes": 1073741824,
+    "rss_scope": "own Python high-water RSS only; excludes all children",
+    "events": [
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.492931666,
+        "bytes": 18661376
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.525804541,
+        "bytes": 28819456
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.568347916,
+        "bytes": 33292288
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.602581333,
+        "bytes": 35209216
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.636339875,
+        "bytes": 35930112
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.678867458,
+        "bytes": 36847616
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.721401208,
+        "bytes": 37945344
+      },
+      {
+        "kind": "self_rss_peak",
+        "monotonic": 2339782.763938041,
+        "bytes": 39157760
+      }
+    ]
+  }
+}

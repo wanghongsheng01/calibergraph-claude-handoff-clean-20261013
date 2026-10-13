@@ -1,0 +1,26 @@
+{
+  "native_tag": "z3-4.16.0",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/Z3Prover/z3/z3-4.16.0/src/shell/main.cpp",
+      "anchors": "289-292",
+      "meaning": "memory CLI sets memory_max_size"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Z3Prover/z3/z3-4.16.0/src/util/env_params.cpp",
+      "anchors": "23-32",
+      "meaning": "parameter applied to internal memory manager"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Z3Prover/z3/z3-4.16.0/src/util/memory_manager.cpp",
+      "anchors": "223-250,270-285",
+      "meaning": "tracked allocator counts, thread synchronization, not process RSS telemetry"
+    }
+  ],
+  "binary_built_from_tag_verified": false,
+  "local_binary_identity_verified": true,
+  "foreign_process_info_queries": 0,
+  "no_runtime_RSS_inference_from_help": true,
+  "datahub_catalog_checked": true,
+  "registration": "DATAHUB_REGISTRATION_BLOCKED inherited public research source scope"
+}

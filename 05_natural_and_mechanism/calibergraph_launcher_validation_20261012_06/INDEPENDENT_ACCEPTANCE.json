@@ -1,0 +1,73 @@
+{
+  "reviewer": "/root/v2_resource_engineering_review",
+  "review_type": "ONE_PASS_INDEPENDENT_ENGINEERING_ACCEPTANCE",
+  "verdict": "PASS_TESTED_ENGINEERING_ITEMS_SCIENCE_BLOCKED",
+  "science_execution_approved": false,
+  "reviewed_sha256": {
+    "ENGINEERING_ONCE.json": "de19523753cbc992c4cf964c2217402e7fc1bff14d40698e2582777caa7ddf5b",
+    "INPUT_PRESERVATION.json": "f13330fdb75c4dd84d0d1c7b90183cdde2cc1d2698139ddf94ffe773c6ca9098",
+    "RECOVERY.zh.md": "0bc8d6af03da33632db4f0ef0e5309b806fcc97d5bf16152077d5ff56d0988ad",
+    "RESULT.zh.md": "98bfbf3ea47b7b8845d1064d187d728f10976e71736a5b2a9236e0aa80ca9c9a",
+    "VALIDATION.json": "cf578c35669142915b6acdd5b1cd63978b5460e8e44601e74217b752f2182707",
+    "deadline_fixture.receipt.json": "f3b261c78b8dbc3068e2106c57a76afb14bd1974f4094ea4f464dc78c86fcbca",
+    "deadline_fixture.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "deadline_fixture.stdout.jsonl": "b011ccb8d54dd2ef695724093825e1741fc1c02bbcca9297721f322e8b305a3d",
+    "fixture.py": "841d8c184e35ac72bc26f830a1109cd597ec410bc2de23aba9ddde1458d7d8ef",
+    "memory_cap_probe.receipt.json": "d7003c9fd3aa0e0934af38749f09625b9fe478794436075ec8f5d840dc742c92",
+    "memory_cap_probe.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "memory_cap_probe.stdout.jsonl": "f000b40279a3460f9ae9d47c617f11ac3f6f7cd1dd807b547ca530379cc9bdbd",
+    "validate_launcher.py": "7e3f79036fb69aed2be5e2f349089dcd4d330aba0dcafb6e230e313bbd99f652"
+  },
+  "independent_consistency_checks": {
+    "memory_cap_probe": {
+      "receipt_matches_validation": true,
+      "reaped": true,
+      "stderr_bytes": 0
+    },
+    "deadline_fixture": {
+      "receipt_matches_validation": true,
+      "reaped": true,
+      "stderr_bytes": 0
+    },
+    "calibergraph_distinct_diagnostic_20261012_04": {
+      "manifest_digest_verified": true,
+      "all_manifest_files_unchanged": true,
+      "files_verified": 13
+    },
+    "calibergraph_launch_protocol_v2_20261012_05": {
+      "manifest_digest_verified": true,
+      "all_manifest_files_unchanged": true,
+      "files_verified": 6
+    }
+  },
+  "accepted_evidence": [
+    "Two sequential owned fixture children were reaped; no scientific import or execution path in these fixture scripts",
+    "Inherited stable lock descriptor and separate-open lock contention validated under a surviving parent",
+    "Durable exclusive engineering attempt marker rejects second creation",
+    "RLIMIT_CPU (60,60) set and read back; CPU exhaustion not tested",
+    "0.25 s deadline reached; child exited -15 and reaped at elapsed 0.25834245793521404 s",
+    "RLIMIT_AS 1 GiB rejected with ValueError; before/after remain infinite; hard worker RSS cap not established"
+  ],
+  "current_blocker": "MEMORY_CAP_SETTER_REJECTED_AND_HARD_RSS_ENFORCEMENT_UNVERIFIED",
+  "unknowns": [
+    "Precise native cause of Python ValueError (errno absent)",
+    "Other permitted APIs or environments might support effective hard limits; not investigated or ruled out",
+    "Parent crash/orphan termination and lock survival under parent death",
+    "Scientific no-descendant execution path and actual 60-second science task",
+    "SIGTERM-resistant escalation and failed reap/error-report paths"
+  ],
+  "nonblocking_current_record_finding": {
+    "id": "F1",
+    "scope": "Future reuse of launcher as science supervisor only",
+    "finding": "In run_owned_fixture finally, kill() or wait(timeout=2) can raise before receipt serialization, losing cleanup-state evidence. Current two successful reaps are unaffected.",
+    "required_before_science_reuse": "Preserve cleanup exceptions and unresolved state in a nested finally that still writes the receipt, retaining permanent marker and forbidding retry. Do not rerun these fixtures solely to polish this completed evidence batch."
+  },
+  "review_actions": {
+    "fixtures_rerun": false,
+    "resource_or_process_probes": false,
+    "network": false,
+    "science": false,
+    "author_files_modified": false
+  },
+  "backup": "Parent performs unified backup; reviewer did not access network"
+}

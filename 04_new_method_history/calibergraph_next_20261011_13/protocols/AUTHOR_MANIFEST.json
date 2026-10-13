@@ -1,0 +1,53 @@
+{
+  "schema": "calibergraph.round13.author_static_manifest.v1",
+  "author_id": "/root/round13_sqlite_counterexample_replay",
+  "status": "STATIC_PREPARATION_ONLY_PENDING_INDEPENDENT_REVIEW",
+  "execution_enabled": false,
+  "hypothesis_count_max": 1,
+  "purpose": "Real SQLite consistency replay of the explicit synthetic H12 negative theoretical control; no new mechanism, natural case, independent test or performance claim",
+  "source_snapshot_disabled_sha256": "467f8df522a9dbb845ec35542f9dd412452ede05debffb9d9056b144c30a5004",
+  "static_validation_sha256": "4f818d12499dbe4e8272e88a11e3ad14984585f1eeaa111b758ff39dfd5e7be5",
+  "round12_author_manifest_sha256": "dfa81be07edf21839bf83bdaeb9cb1ac065d03d909fc086fbbbaa890155aa33e",
+  "constraints_read": [
+    "/Users/loctek/AGENTS.md",
+    "root delegated task and follow-up source-pin instruction"
+  ],
+  "allowed_validation_used": [
+    "AST parse of source without importing or executing it",
+    "JSON parse",
+    "SHA-256"
+  ],
+  "actual_scientific_execution": {
+    "runner_import": 0,
+    "runner_execution": 0,
+    "compile_or_pycompile": 0,
+    "family_or_assignment_enumeration": 0,
+    "sql": 0,
+    "gpu": 0,
+    "queue": 0
+  },
+  "planned_denominator_not_yet_generated": {
+    "literal_family": 97,
+    "cartesian_strong_control": 1,
+    "database_instances": 98,
+    "fixed_synthetic_count_sql": 196,
+    "cheap_family_markings_no_extra_execution": 4
+  },
+  "input_provenance": "HAND_CONSTRUCTED_SYNTHETIC_FROM_PINNED_H12_AUTHOR_PROOF",
+  "external_dataset_count": 0,
+  "natural_or_enterprise_data_accessed": false,
+  "credentials_read": false,
+  "old_freezes_modified": false,
+  "datahub_status": "INHERITED_ROUND12_DATAHUB_REGISTRATION_BLOCKED_NO_NEW_EXTERNAL_SOURCE",
+  "round12_proof_review": "ROOT_CONFIRMED_REJECT_H12_NO_BLOCKERS",
+  "remaining_gates": [
+    "Independent review of exact disabled source",
+    "Root execution approval and enabled-source pin",
+    "Fresh resource preflight",
+    "Root private backup verification"
+  ],
+  "backup_owner": "root",
+  "backup_status": "PENDING_ROOT_VERIFICATION",
+  "recovery_instructions": "docs/STATIC_DELIVERY.zh.md",
+  "checksums": "protocols/SHA256SUMS.outputs"
+}

@@ -1,0 +1,361 @@
+{
+  "case_index": 10,
+  "case_id": "dev03_11",
+  "status": "RETURNED",
+  "started_utc": "2026-10-11T12:41:23.918091+00:00",
+  "violations": [],
+  "sampled_peak_rss_bytes": 101761024,
+  "sampled_peak_group_cpu_seconds": 0.76,
+  "sample_count": 15,
+  "stop_remainder": null,
+  "pid": 43639,
+  "owned_pgid": 43639,
+  "worker_wait4_usage": {
+    "pid": 43639,
+    "exit_code": 0,
+    "user_cpu_seconds": 0.726219,
+    "system_cpu_seconds": 0.067898,
+    "cpu_seconds": 0.794117,
+    "maxrss_bytes_darwin": 105136128
+  },
+  "cleanup_killpg_skipped_already_reaped": true,
+  "cleanup_wait_complete": true,
+  "wall_seconds": 0.8240540409460664,
+  "worker_exit_code": 0,
+  "final_progress": {
+    "active_stage": "BETWEEN_STAGES",
+    "latest_stage": "CLEANUP",
+    "solver_check_active": false,
+    "solver_check_start_monotonic": null,
+    "solver_spent_wall_seconds": 0.012026126030832529,
+    "check_count": 2,
+    "case_index": 10,
+    "id": "dev03_11",
+    "updated_monotonic": 2259256.064722833,
+    "observed_monotonic": 2259256.084968083,
+    "solver_watchdog_estimated_seconds": 0.012026126030832529,
+    "active_elapsed_estimate_seconds": 0.0
+  },
+  "worker_results_sha256": "e298f43393ebd55861663873a1f38dc77e2372a0c4031fa03d8cc012f2ec5d79",
+  "worker_report_status": "REGISTERED_GROUP_ATTEMPT_RETURNED",
+  "worker_record_unmodified": {
+    "id": "dev03_11",
+    "case_index": 10,
+    "status": "RETURNED",
+    "engineering_class": "SUPPORTED_FAST",
+    "strict_class": "SUPPORTED_FAST_OFFICIAL_EXACT2_ONLY",
+    "attempts": [
+      {
+        "id": "dev03_11",
+        "attempt": 1,
+        "status": "RETURNED",
+        "stages": [
+          {
+            "name": "ENVIRONMENT_AND_FULL_SCHEMA",
+            "status": "RETURNED",
+            "wall_seconds": 0.001130958553403616,
+            "cpu_seconds": 0.0011310000000001041
+          },
+          {
+            "name": "FULL_ORIGINAL_IC_ADMISSION",
+            "status": "RETURNED",
+            "original_clause_count": 2,
+            "base_fact_count": 26,
+            "admitted_delta_facts": 2,
+            "full_fact_count": 28,
+            "wall_seconds": 0.0013506249524652958,
+            "cpu_seconds": 0.001350999999999991
+          },
+          {
+            "name": "FULL_C_SOLVER_SETUP",
+            "status": "RETURNED",
+            "wall_seconds": 0.003338207956403494,
+            "cpu_seconds": 0.003337999999999952
+          },
+          {
+            "name": "FULL_C_NONEMPTY_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 100,
+            "attempt": 1,
+            "stage": "FULL_C_NONEMPTY_CHECK",
+            "actual_check_wall_seconds": 0.004124958999454975,
+            "actual_check_cpu_seconds": 0.004131000000000107,
+            "answer": "sat",
+            "wall_seconds": 0.00620262511074543,
+            "cpu_seconds": 0.00618199999999991
+          },
+          {
+            "name": "FULL_C_SAT_MODEL_VALIDATION",
+            "status": "RETURNED",
+            "wall_seconds": 0.0003071669489145279,
+            "cpu_seconds": 0.00030600000000002847
+          },
+          {
+            "name": "OFFICIAL_ANALYZE_PARSE_AND_SCOPE_ENCODE",
+            "status": "RETURNED",
+            "formula_counts": [
+              5,
+              8
+            ],
+            "output_tuple_counts": [
+              2,
+              2
+            ],
+            "wall_seconds": 0.07026937510818243,
+            "cpu_seconds": 0.07015500000000008
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_0",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "97922eeb0dd7b52bdbbc315457c2c70401ce6792462fd322fe1290e7bc2bba46",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0597638338804245,
+            "cpu_seconds": 0.05972400000000011
+          },
+          {
+            "name": "OFFICIAL_PARSE_QUERY_1",
+            "status": "RETURNED",
+            "ast_json_lossless": true,
+            "ast_sha256": "22b8cfb61e85da226b1c0c3cdb4538bf8a293968c05ccc7230cae2c848d77012",
+            "ast_hash_scope": "lossless canonical JSON",
+            "wall_seconds": 0.0027381661348044872,
+            "cpu_seconds": 0.0027319999999999567
+          },
+          {
+            "name": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "status": "RETURNED",
+            "timeout_ms": 800,
+            "attempt": 1,
+            "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+            "actual_check_wall_seconds": 0.007901167031377554,
+            "actual_check_cpu_seconds": 0.007907999999999915,
+            "answer": "unsat",
+            "wall_seconds": 0.010642792098224163,
+            "cpu_seconds": 0.010603000000000029
+          }
+        ],
+        "environment_identity": "new independent Environment and Solver; full schema/C/query re-encoded",
+        "exact_rows": {
+          "ACTIVITY": 2
+        },
+        "raw_query_verdict": "unsat",
+        "full_C_nonempty": "sat",
+        "active_stage": null,
+        "latest_stage": "CLEANUP",
+        "full_contract_fact_sha256": "1b0e6292c938b048b6b7af3a4f85a52359e586dd30cfc726394d377508ead056",
+        "solver_cumulative_wall_seconds": 0.012026126030832529,
+        "solver_cumulative_cpu_seconds": 0.012039000000000022,
+        "parsed_asts": [
+          {
+            "select": [
+              {
+                "value": "PLAYER_ID"
+              },
+              {
+                "value": {
+                  "min": "EVENT_DATE"
+                },
+                "name": "FIRST_LOGIN"
+              }
+            ],
+            "from": "ACTIVITY",
+            "groupby": {
+              "value": "PLAYER_ID"
+            }
+          },
+          {
+            "select": [
+              {
+                "value": "PLAYER_ID"
+              },
+              {
+                "value": "EVENT_DATE",
+                "name": "FIRST_LOGIN"
+              }
+            ],
+            "from": "ACTIVITY",
+            "where": {
+              "in": [
+                [
+                  "PLAYER_ID",
+                  "EVENT_DATE"
+                ],
+                {
+                  "select": [
+                    {
+                      "value": "PLAYER_ID"
+                    },
+                    {
+                      "value": {
+                        "min": "EVENT_DATE"
+                      },
+                      "name": "EVENT_DATE"
+                    }
+                  ],
+                  "from": "ACTIVITY",
+                  "groupby": {
+                    "value": "PLAYER_ID"
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "comparison_formula_encode": {
+          "wall_seconds": 0.0048715840093791485,
+          "cpu_seconds": 0.004857000000000111
+        },
+        "submitted_query_assertion_count": 1,
+        "official_compare_return": true,
+        "engineering_class": "QUERY_RETURNED",
+        "result_scope": "official encoding at exactly 2 live rows per table only; no up-to bound, DBMS equivalence or natural bug",
+        "cleanup": "OFFICIAL_EXIT_RETURNED_NOT_OBJECT_RELEASE_PROOF",
+        "cleanup_cost": {
+          "wall_seconds": 0.008494125213474035,
+          "cpu_seconds": 0.008495000000000141
+        },
+        "exclusive_phase_cpu": {
+          "parse": 0.06245600000000007,
+          "scope_encode": 0.007699000000000011,
+          "compare_encode": 0.004857000000000111,
+          "query_check": 0.007907999999999915
+        },
+        "attempt_cost": {
+          "cpu_seconds": 0.11649300000000007,
+          "wall_seconds": 0.11758991703391075,
+          "worker_peak_rss_bytes_macos": 105086976
+        }
+      }
+    ],
+    "active_stage": null,
+    "source_group_id": "leetcode:benchmark/leetcode/raw_data/511.csv",
+    "source": {
+      "dataset": "leetcode",
+      "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+      "line_1based": 673,
+      "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+      "raw_line_sha256": "a0c5d2e61deeed9a2dbf0660134714fdab0362d45e080efb3dc9975d929d8fca",
+      "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+    },
+    "provenance_class": "PRESENT_JSON",
+    "original_source_record": {
+      "constraint": [
+        {
+          "primary": [
+            {
+              "value": "ACTIVITY__PLAYER_ID"
+            },
+            {
+              "value": "ACTIVITY__EVENT_DATE"
+            }
+          ]
+        },
+        {
+          "gte": [
+            {
+              "value": "ACTIVITY__GAMES_PLAYED"
+            },
+            0
+          ]
+        }
+      ],
+      "file": "benchmark/leetcode/raw_data/511.csv",
+      "index": 67,
+      "pair": [
+        "SELECT PLAYER_ID,MIN(EVENT_DATE) AS FIRST_LOGIN FROM ACTIVITY GROUP BY PLAYER_ID",
+        "SELECT PLAYER_ID, EVENT_DATE AS FIRST_LOGIN FROM ACTIVITY WHERE (PLAYER_ID, EVENT_DATE) IN (SELECT PLAYER_ID, MIN(EVENT_DATE) AS EVENT_DATE FROM ACTIVITY GROUP BY PLAYER_ID)"
+      ],
+      "schema": {
+        "ACTIVITY": {
+          "DEVICE_ID": "INT",
+          "EVENT_DATE": "DATE",
+          "GAMES_PLAYED": "INT",
+          "PLAYER_ID": "INT"
+        }
+      }
+    },
+    "provenance_eligibility": {
+      "SQL_semantic_fidelity": "UNPROVEN",
+      "business_contract_truth": "UNVERIFIED",
+      "contract_source": "PRESENT_JSON",
+      "natural_business_origin": "UNKNOWN",
+      "pair_label_truth": "UNVERIFIED",
+      "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+    },
+    "semantic_admission": {},
+    "natural_contract_provenance": "BUSINESS_TRUTH_AND_COMPLETENESS_UNVERIFIED",
+    "original_sql_sha256": [
+      "3512eea31beeaa1be5d7ad138291728024e4ba15de29a1fc9f0b64925149666a",
+      "31fa22189249592a63d2519c5715c3029cd59bd00ac9390e7e2cdf3ed6af83f7"
+    ],
+    "schema_sha256": "b6696b2f50432ac9fb785874aac32b0f5321c0cd879cbca9b72f08b153b03c11",
+    "constraint_sha256": "530894fb8012ab930d1a4d135993da11fe618f9543e1045a6a94d8a08af8c3c9",
+    "structural_admission": {
+      "status": "ADMITTED_STRUCTURALLY",
+      "schema_sha256": "b6696b2f50432ac9fb785874aac32b0f5321c0cd879cbca9b72f08b153b03c11",
+      "constraint_sha256": "530894fb8012ab930d1a4d135993da11fe618f9543e1045a6a94d8a08af8c3c9",
+      "table_count": 1,
+      "column_count": 4,
+      "schema_type_counts": {
+        "DATE": 1,
+        "INT": 3
+      },
+      "constraint_source_state": "EXPLICIT_CLAUSE_LIST",
+      "original_clause_count": 2,
+      "operator_counts": {
+        "gte": 1,
+        "primary": 1,
+        "value": 3
+      },
+      "reference_counts": {
+        "ACTIVITY__EVENT_DATE": 1,
+        "ACTIVITY__GAMES_PLAYED": 1,
+        "ACTIVITY__PLAYER_ID": 1
+      },
+      "full_preservation": true,
+      "dropped_tables": 0,
+      "dropped_fields": 0,
+      "dropped_clauses": 0,
+      "rewrites": 0,
+      "operational_notes": [],
+      "scope": "Structural admission only; complete unchanged source objects; official operational IC, not SQL-DDL or natural-language truth; satisfiability not checked."
+    },
+    "latest_stage": "CLEANUP",
+    "repeat_triggered": false,
+    "repeat_query_cpu_max_min_ratio": null,
+    "independent_environment_cost_repeat_confirmed": false,
+    "semantic_evidence_complete_for_stable_promotion": false,
+    "fast_scope": "query check CPU below 250ms only; import/parse/encode/whole process costs remain separately reported",
+    "solver_calls": [
+      {
+        "attempt": 1,
+        "stage": "FULL_C_NONEMPTY_CHECK",
+        "actual_check_wall_seconds": 0.004124958999454975,
+        "actual_check_cpu_seconds": 0.004131000000000107,
+        "timeout_ms": 100
+      },
+      {
+        "attempt": 1,
+        "stage": "OFFICIAL_QUERY_SOLVER_CHECK",
+        "actual_check_wall_seconds": 0.007901167031377554,
+        "actual_check_cpu_seconds": 0.007907999999999915,
+        "timeout_ms": 800
+      }
+    ],
+    "solver_cumulative_wall_seconds": 0.012026126030832529,
+    "solver_cumulative_cpu_seconds": 0.012039000000000022,
+    "natural_bug_or_business_equivalence": "NOT_ESTABLISHED"
+  },
+  "cpu_accounting_after_reap": {
+    "pre_registered_prior_cpu_seconds": 7.876721999999999,
+    "parent_user_cpu_seconds": 0.157363,
+    "parent_system_cpu_seconds": 0.16844599999999998,
+    "all_reaped_children_user_cpu_seconds": 6.716104,
+    "all_reaped_children_system_cpu_seconds": 3.212873,
+    "supervisor_plus_reaped_cpu_seconds": 10.254786,
+    "observed_total_cpu_seconds": 18.131507999999997,
+    "prior_charge_verified": true,
+    "scope": "Original scan plus charged bootstrap failure/diagnostic reserve, supervisor absolute SELF and all reaped CHILDREN including probes/ps; live worker separately sampled"
+  }
+}

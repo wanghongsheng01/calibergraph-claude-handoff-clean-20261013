@@ -1,0 +1,1384 @@
+{
+  "status": "COMPLETED_SAVED_DATA_AUDIT",
+  "baseline_calls": 0,
+  "generator_calls": 0,
+  "solver_calls": 0,
+  "saved_candidate_replays": [
+    {
+      "candidate": 0,
+      "saved_database_sha256": "3da240e0cd9ae4a3b286347a7e8b371bf195d8109621544299ec34cfdb43a82e",
+      "row_counts": {
+        "Patient": 0,
+        "Examination": 0,
+        "Laboratory": 0
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            0
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [],
+      "male_gt2_ids": [],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 1,
+      "saved_database_sha256": "6c3f67be7ccd57bde469585910f227f4a20a5c3d3a80bc4fbc2c070d6a15c6d4",
+      "row_counts": {
+        "Patient": 4,
+        "Examination": 0,
+        "Laboratory": 5
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [
+        1
+      ],
+      "male_gt2_ids": [
+        1,
+        29
+      ],
+      "boundary_ids_also_gt2": [
+        1
+      ],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-07",
+          2.0,
+          "M",
+          "real"
+        ],
+        [
+          1,
+          "2000-02-08",
+          3.0,
+          "M",
+          "real"
+        ],
+        [
+          29,
+          "2000-01-07",
+          3.0,
+          "M",
+          "real"
+        ],
+        [
+          48,
+          "2000-02-17",
+          -1.0,
+          "M",
+          "real"
+        ],
+        [
+          66,
+          "2000-01-07",
+          3.0,
+          "a",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 2,
+      "saved_database_sha256": "5dd1425cc7c47d860c494b706b1ff77849cb7d52ad3a7a840df41d93be87e29c",
+      "row_counts": {
+        "Patient": 5,
+        "Examination": 0,
+        "Laboratory": 6
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [
+        1
+      ],
+      "male_gt2_ids": [
+        1,
+        29,
+        48
+      ],
+      "boundary_ids_also_gt2": [
+        1
+      ],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-07",
+          2.0,
+          "M",
+          "real"
+        ],
+        [
+          1,
+          "2000-02-08",
+          3.0,
+          "M",
+          "real"
+        ],
+        [
+          29,
+          "2000-01-07",
+          3.0,
+          "M",
+          "real"
+        ],
+        [
+          48,
+          "2000-02-17",
+          -1.0,
+          "M",
+          "real"
+        ],
+        [
+          48,
+          "2000-02-19",
+          23.0,
+          "M",
+          "real"
+        ],
+        [
+          66,
+          "2000-01-07",
+          3.0,
+          "a",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 3,
+      "saved_database_sha256": "db05177c81ecc7d34ba3f45ac261b92470dbb663ef37fff46917e82d3e2f9e6e",
+      "row_counts": {
+        "Patient": 5,
+        "Examination": 0,
+        "Laboratory": 7
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [
+        1
+      ],
+      "male_gt2_ids": [
+        1,
+        29,
+        48
+      ],
+      "boundary_ids_also_gt2": [
+        1
+      ],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-07",
+          2.0,
+          "M",
+          "real"
+        ],
+        [
+          1,
+          "2000-02-08",
+          3.0,
+          "M",
+          "real"
+        ],
+        [
+          1,
+          "2000-03-07",
+          null,
+          "M",
+          "null"
+        ],
+        [
+          29,
+          "2000-01-07",
+          3.0,
+          "M",
+          "real"
+        ],
+        [
+          48,
+          "2000-02-17",
+          -1.0,
+          "M",
+          "real"
+        ],
+        [
+          48,
+          "2000-02-19",
+          23.0,
+          "M",
+          "real"
+        ],
+        [
+          66,
+          "2000-01-07",
+          3.0,
+          "a",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 4,
+      "saved_database_sha256": "6124dc966da956bf212ade6913a234b2c378f88a9c72a457dd70a8fdc0baf504",
+      "row_counts": {
+        "Patient": 3,
+        "Examination": 0,
+        "Laboratory": 3
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            2
+          ]
+        ],
+        [
+          [
+            2
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [],
+      "male_gt2_ids": [
+        1,
+        38
+      ],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-08",
+          10.0,
+          "M",
+          "real"
+        ],
+        [
+          38,
+          "2000-01-08",
+          22.0,
+          "M",
+          "real"
+        ],
+        [
+          58,
+          "2000-01-08",
+          null,
+          "M",
+          "null"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 5,
+      "saved_database_sha256": "38b072f362459f664666a7968bdd777016d89f2217ab3d6063257c3f0bfd1149",
+      "row_counts": {
+        "Patient": 4,
+        "Examination": 0,
+        "Laboratory": 4
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [],
+      "male_gt2_ids": [
+        1,
+        38,
+        58
+      ],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-08",
+          10.0,
+          "M",
+          "real"
+        ],
+        [
+          38,
+          "2000-01-08",
+          22.0,
+          "M",
+          "real"
+        ],
+        [
+          58,
+          "2000-01-08",
+          null,
+          "M",
+          "null"
+        ],
+        [
+          58,
+          "2000-02-08",
+          25.0,
+          "M",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 6,
+      "saved_database_sha256": "6d892a3e09015f30230ba45de4a755a6a0be94382bdbc664ebb741abf448dd74",
+      "row_counts": {
+        "Patient": 5,
+        "Examination": 0,
+        "Laboratory": 4
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [],
+      "male_gt2_ids": [
+        1,
+        38,
+        58
+      ],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-08",
+          10.0,
+          "M",
+          "real"
+        ],
+        [
+          38,
+          "2000-01-08",
+          22.0,
+          "M",
+          "real"
+        ],
+        [
+          58,
+          "2000-01-08",
+          null,
+          "M",
+          "null"
+        ],
+        [
+          58,
+          "2000-02-08",
+          25.0,
+          "M",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 7,
+      "saved_database_sha256": "519c503ca256d6341852d345e75ae6dd4240d27c28ed8d382466240919780cb2",
+      "row_counts": {
+        "Patient": 5,
+        "Examination": 0,
+        "Laboratory": 5
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [],
+      "male_gt2_ids": [
+        1,
+        38,
+        58
+      ],
+      "boundary_ids_also_gt2": [],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-08",
+          10.0,
+          "M",
+          "real"
+        ],
+        [
+          1,
+          "2000-02-26",
+          38.0,
+          "M",
+          "real"
+        ],
+        [
+          38,
+          "2000-01-08",
+          22.0,
+          "M",
+          "real"
+        ],
+        [
+          58,
+          "2000-01-08",
+          null,
+          "M",
+          "null"
+        ],
+        [
+          58,
+          "2000-02-08",
+          25.0,
+          "M",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    },
+    {
+      "candidate": 8,
+      "saved_database_sha256": "3f3603f60327b35559e18643f7794de1943a1c6278da82f9925301258bc8db51",
+      "row_counts": {
+        "Patient": 5,
+        "Examination": 0,
+        "Laboratory": 6
+      },
+      "foreign_key_check": [],
+      "integrity_check": [
+        [
+          "ok"
+        ]
+      ],
+      "original_query_outputs": [
+        [
+          [
+            3
+          ]
+        ],
+        [
+          [
+            3
+          ]
+        ]
+      ],
+      "different": false,
+      "male_boundary_ids": [
+        38
+      ],
+      "male_gt2_ids": [
+        1,
+        38,
+        58
+      ],
+      "boundary_ids_also_gt2": [
+        38
+      ],
+      "boundary_only_ids": [],
+      "joined_diagnostic_rows": [
+        [
+          1,
+          "2000-01-08",
+          10.0,
+          "M",
+          "real"
+        ],
+        [
+          1,
+          "2000-02-26",
+          38.0,
+          "M",
+          "real"
+        ],
+        [
+          38,
+          "2000-01-08",
+          22.0,
+          "M",
+          "real"
+        ],
+        [
+          38,
+          "2000-03-14",
+          2.0,
+          "M",
+          "real"
+        ],
+        [
+          58,
+          "2000-01-08",
+          null,
+          "M",
+          "null"
+        ],
+        [
+          58,
+          "2000-02-08",
+          25.0,
+          "M",
+          "real"
+        ]
+      ],
+      "all_fullDDL_inserts_accepted": true,
+      "recorded_official_outputs_match": true
+    }
+  ],
+  "sqlite_version": "3.53.3",
+  "contender_blocked": true,
+  "freeze_file_verification": {
+    "files": 588,
+    "all_match": true,
+    "freeze_sha256": "aff584bff4c18e0741575ce20ee92feb8db7abe82e0ace2a0b387cbca5b4f6e6"
+  },
+  "input_sha256": {
+    "case1172.gold.sql": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb",
+    "case1172.predicted.sql": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545",
+    "case1172.full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+  },
+  "source_result_sha256": "93e361d5955fe1b659e97d913c653b7b7f7b562df8dccffc458fb406f25a6e29",
+  "source_error_sha256": "9dccced6431192359e745bdf646b263c91a89dbcfb04ea5c02b413717c3ad547",
+  "source_status_preserved": "ERROR_NOT_ALGORITHM_FAILURE",
+  "candidate_denominator": {
+    "loaded_snapshots": 9,
+    "empty_snapshots": 1,
+    "nonempty_snapshots": 8
+  },
+  "full_schema_metadata": {
+    "Patient": {
+      "columns": [
+        [
+          0,
+          "ID",
+          "INTEGER",
+          1,
+          "0",
+          1
+        ],
+        [
+          1,
+          "SEX",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "Birthday",
+          "DATE",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "Description",
+          "DATE",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "First Date",
+          "DATE",
+          0,
+          null,
+          0
+        ],
+        [
+          5,
+          "Admission",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          6,
+          "Diagnosis",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ],
+      "foreign_keys": [],
+      "indexes": []
+    },
+    "Examination": {
+      "columns": [
+        [
+          0,
+          "ID",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          1,
+          "Examination Date",
+          "DATE",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "aCL IgG",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "aCL IgM",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "ANA",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          5,
+          "ANA Pattern",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          6,
+          "aCL IgA",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          7,
+          "Diagnosis",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          8,
+          "KCT",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          9,
+          "RVVT",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          10,
+          "LAC",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          11,
+          "Symptoms",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          12,
+          "Thrombosis",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ],
+      "foreign_keys": [
+        [
+          0,
+          0,
+          "Patient",
+          "ID",
+          "ID",
+          "CASCADE",
+          "CASCADE",
+          "NONE"
+        ]
+      ],
+      "indexes": []
+    },
+    "Laboratory": {
+      "columns": [
+        [
+          0,
+          "ID",
+          "INTEGER",
+          1,
+          "0",
+          1
+        ],
+        [
+          1,
+          "Date",
+          "DATE",
+          1,
+          "'0000-00-00'",
+          2
+        ],
+        [
+          2,
+          "GOT",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "GPT",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "LDH",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          5,
+          "ALP",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          6,
+          "TP",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          7,
+          "ALB",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          8,
+          "UA",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          9,
+          "UN",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          10,
+          "CRE",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          11,
+          "T-BIL",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          12,
+          "T-CHO",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          13,
+          "TG",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          14,
+          "CPK",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          15,
+          "GLU",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          16,
+          "WBC",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          17,
+          "RBC",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          18,
+          "HGB",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          19,
+          "HCT",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          20,
+          "PLT",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          21,
+          "PT",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          22,
+          "APTT",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          23,
+          "FG",
+          "REAL",
+          0,
+          null,
+          0
+        ],
+        [
+          24,
+          "PIC",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          25,
+          "TAT",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          26,
+          "TAT2",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          27,
+          "U-PRO",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          28,
+          "IGG",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          29,
+          "IGA",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          30,
+          "IGM",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          31,
+          "CRP",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          32,
+          "RA",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          33,
+          "RF",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          34,
+          "C3",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          35,
+          "C4",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          36,
+          "RNP",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          37,
+          "SM",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          38,
+          "SC170",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          39,
+          "SSA",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          40,
+          "SSB",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          41,
+          "CENTROMEA",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          42,
+          "DNA",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          43,
+          "DNA-II",
+          "INTEGER",
+          0,
+          null,
+          0
+        ]
+      ],
+      "foreign_keys": [
+        [
+          0,
+          0,
+          "Patient",
+          "ID",
+          "ID",
+          "CASCADE",
+          "CASCADE",
+          "NONE"
+        ]
+      ],
+      "indexes": [
+        [
+          0,
+          "sqlite_autoindex_Laboratory_1",
+          1,
+          "pk",
+          0
+        ]
+      ]
+    }
+  },
+  "constraint_scope": "All original full-DDL tables/columns/defaults/PK/NOT NULL/FK actions instantiated unchanged; SQLite affinity semantics, no invented date/type CHECK constraints.",
+  "control": {
+    "kind": "OUR_SAVED_CONSTRUCTED_CONTROL_NOT_AUTHOR_WITNESS",
+    "supplied_to_generator": false,
+    "candidate": null,
+    "saved_database_sha256": "dd41d2dd6e9f7d93e8847b1a441c115e4bbbb0c6055caccef33946a307c8284a",
+    "row_counts": {
+      "Patient": 1,
+      "Examination": 0,
+      "Laboratory": 1
+    },
+    "foreign_key_check": [],
+    "integrity_check": [
+      [
+        "ok"
+      ]
+    ],
+    "original_query_outputs": [
+      [
+        [
+          1
+        ]
+      ],
+      [
+        [
+          0
+        ]
+      ]
+    ],
+    "different": true,
+    "male_boundary_ids": [
+      1
+    ],
+    "male_gt2_ids": [],
+    "boundary_ids_also_gt2": [],
+    "boundary_only_ids": [
+      1
+    ],
+    "joined_diagnostic_rows": [
+      [
+        1,
+        "2000-01-01",
+        2.0,
+        "M",
+        "real"
+      ]
+    ],
+    "all_fullDDL_inserts_accepted": true
+  },
+  "stage_audit": {
+    "disprove": 1,
+    "generation_directions": 2,
+    "z3_check_calls": 4,
+    "candidate_loads": 9,
+    "comparisons": 9,
+    "parse_passes": 2,
+    "lowering_passes": 4,
+    "generation_timed_out": false,
+    "unsupported_reported": false,
+    "baseline_verdict": "EQ",
+    "postbaseline_replay_error": {
+      "type": "KeyError",
+      "message": "'Patient'",
+      "phase": "INDEPENDENT_CANDIDATE_REPLAY"
+    }
+  },
+  "telemetry_audit": {
+    "synthetic_memory": {
+      "receipt_matches_telemetry": true,
+      "mode": "synthetic_memory",
+      "wall_budget_s": 5,
+      "threshold_bytes": 67108864,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27518,
+      "reaped": true,
+      "returncode": 86,
+      "elapsed_s": 0.08843870786949992,
+      "stop_reason": "MEMORY_SAMPLED_STOP",
+      "observed_peak_RSS_bytes": 98435072,
+      "max_observed_sample_gap_s": 0.053808582946658134,
+      "samples": 2
+    },
+    "synthetic_deadline": {
+      "receipt_matches_telemetry": true,
+      "mode": "synthetic_deadline",
+      "wall_budget_s": 0.3,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27519,
+      "reaped": true,
+      "returncode": -9,
+      "elapsed_s": 0.30571591621264815,
+      "stop_reason": "WALL_STOP",
+      "observed_peak_RSS_bytes": 14237696,
+      "max_observed_sample_gap_s": 0.05516975000500679,
+      "samples": 6
+    },
+    "synthetic_silence": {
+      "receipt_matches_telemetry": true,
+      "mode": "synthetic_silence",
+      "wall_budget_s": 4,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27520,
+      "reaped": true,
+      "returncode": -9,
+      "elapsed_s": 2.13030495820567,
+      "stop_reason": "TELEMETRY_LOST_STOP",
+      "observed_peak_RSS_bytes": 14352384,
+      "max_observed_sample_gap_s": 0.051840666215866804,
+      "samples": 2
+    },
+    "science": {
+      "receipt_matches_telemetry": true,
+      "mode": "science",
+      "wall_budget_s": 60,
+      "threshold_bytes": 1073741824,
+      "sampling_interval_s": 0.05,
+      "telemetry_silence_stop_s": 2,
+      "hard_RSS_limit": false,
+      "possible_overshoot": true,
+      "pid_for_logging_only": 27587,
+      "reaped": true,
+      "returncode": 0,
+      "elapsed_s": 1.170365042053163,
+      "stop_reason": null,
+      "observed_peak_RSS_bytes": 107397120,
+      "max_observed_sample_gap_s": 0.06315545784309506,
+      "samples": 21
+    }
+  },
+  "notes": [
+    "This audit replayed saved data only; no modified data, no added baseline attempt, no new independent test set.",
+    "ru_maxrss observations are historical peaks at sample instants; no claim of hard cap or complete whole-host accounting.",
+    "Current hashes prove current file consistency, not cryptographic attestation of all historical execution."
+  ]
+}

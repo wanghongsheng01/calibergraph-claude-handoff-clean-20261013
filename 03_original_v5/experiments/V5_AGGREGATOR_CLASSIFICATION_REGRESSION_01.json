@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "scope": "Pure stdlib aggregator classification regression only; no target, native, parser or solver run",
+  "aggregator_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/experiments/BUILD_FINAL_V5_EXECUTION_CUT.py",
+  "aggregator_sha256": "ad8348500cf99853ac31327716563cae5832245aef3b12f3d4b2283463d7111c",
+  "checks": [
+    {
+      "name": "actual_completed_unsat",
+      "pass": true,
+      "strict": true,
+      "category": "STRICT_VALID_PAIR_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "empty_stop_field_is_not_clean",
+      "pass": true,
+      "strict": false,
+      "category": "RESOURCE_STOP_OR_BUDGET_FAILURE",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "stale_unsat_final_missing_attempt",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "pair_started_false_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "unclean_exit_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "OTHER_FAILURE_OR_UNVALIDATED_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "resource_reaped_raw_sat_stays_not_strict",
+      "pass": true,
+      "strict": false,
+      "category": "RESOURCE_STOP_OR_BUDGET_FAILURE",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "canonical_shortcut_returned_not_solver_claim",
+      "pass": true,
+      "strict": true,
+      "category": "STRICT_VALID_PAIR_RESULT",
+      "derived_pair": "RETURNED"
+    },
+    {
+      "name": "typed_reject_not_query_success",
+      "pass": true,
+      "strict": false,
+      "category": "EXPECTED_TYPED_NO_QUERY_REJECTION",
+      "derived_pair": "NOT_RUN_CONTRACT_STOP"
+    },
+    {
+      "name": "old52_official_attempt_remains_unknown",
+      "pass": true
+    }
+  ]
+}

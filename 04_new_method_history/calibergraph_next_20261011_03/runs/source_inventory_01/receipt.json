@@ -1,0 +1,52 @@
+{
+  "status": "RETURNED",
+  "supervisor_sha256": "50b6720d69d6d7f75113c93d03d6a88c125e537721d3b90de957c3ebaf9b4688",
+  "freeze_sha256": "65f585db34c6811058df764e394827a2b982c48ab49aac5f91aecfce771acc6a",
+  "protocol_sha256": "7ec169d8764209be57a533cde6fd0a2dd425814b5772678d692820361534e121",
+  "worker": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_next_20261011_03/code/register_stratified_sources.py",
+  "resource_policy": {
+    "scope": "Round03 frozen public JSON/token inventory only; no parser/SQL/solver",
+    "maximum_active_workers": 1,
+    "nice": 15,
+    "max_1min_load": 4.0,
+    "min_memory_available_percentage": 25,
+    "max_cpu_seconds": 10,
+    "max_wall_seconds": 25,
+    "max_rss_bytes": 268435456,
+    "missing_observation": "STOP_UNOBSERVABLE",
+    "forbidden": "No old-source/reserve file edits, no reserve pair decoding, no credentials/install/GPU/API/other-task process control",
+    "budget_charge": "All observed parent/child inventory CPU is charged before any batch begins; no performance method claim."
+  },
+  "sampled_peak_rss_bytes": 32505856,
+  "observations": 108,
+  "preflight": {
+    "utc": "2026-10-11T12:29:14.609334+00:00",
+    "load": [
+      2.9541015625,
+      2.7431640625,
+      2.83056640625
+    ],
+    "memory_available_percentage": 32,
+    "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 32%\n",
+    "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                3601.\nPages active:                            164302.\nPages inactive:                          151778.\nPages speculative:                        11541.\nPages throttled:                              0.\nPages wired down:                        207538.\nPages purgeable:                              2.\n\"Translation faults\":               30537258215.\nPages copy-on-write:                  700543586.\nPages zero filled:                  13066467708.\nPages reactivated:                   5577109490.\nPages purged:                         298563118.\nFile-backed pages:                       115502.\nAnonymous pages:                         212119.\nPages stored in compressor:             3530056.\nPages occupied by compressor:            470094.\nDecompressions:                      7519087507.\nCompressions:                        7823576128.\nPageins:                             8238185259.\nPageouts:                              12430686.\nSwapins:                               67434408.\nSwapouts:                              75904234.\n"
+  },
+  "pid": 42590,
+  "observed_total_cpu_at_report": 6.608655,
+  "cpu_scope": "Parent plus reaped children including all resource probes/ps and worker through this report point; final serialization/exit tail excluded.",
+  "worker_exit_code": 0,
+  "wall_seconds": 6.41118483338505,
+  "child_cpu_user_seconds_including_ps": 6.337135,
+  "child_cpu_system_seconds_including_ps": 0.12822699999999998,
+  "monitor_note": "RSS sampled every 50ms, not a hard allocation cap. CPU accounting includes ps. No other process modified.",
+  "postflight": {
+    "utc": "2026-10-11T12:29:21.024790+00:00",
+    "load": [
+      2.87744140625,
+      2.73046875,
+      2.82568359375
+    ],
+    "memory_available_percentage": 33,
+    "memory_pressure_output": "The system has 17179869184 (1048576 pages with a page size of 16384).\nSystem-wide memory free percentage: 33%\n",
+    "vm_stat_output": "Mach Virtual Memory Statistics: (page size of 16384 bytes)\nPages free:                                3878.\nPages active:                            165345.\nPages inactive:                          149740.\nPages speculative:                        15161.\nPages throttled:                              0.\nPages wired down:                        207673.\nPages purgeable:                              2.\n\"Translation faults\":               30537379322.\nPages copy-on-write:                  700559240.\nPages zero filled:                  13066480239.\nPages reactivated:                   5577137825.\nPages purged:                         298563664.\nFile-backed pages:                       119158.\nAnonymous pages:                         211088.\nPages stored in compressor:             3521576.\nPages occupied by compressor:            467102.\nDecompressions:                      7519131819.\nCompressions:                        7823612107.\nPageins:                             8238211470.\nPageouts:                              12430721.\nSwapins:                               67434528.\nSwapouts:                              75904234.\n"
+  }
+}

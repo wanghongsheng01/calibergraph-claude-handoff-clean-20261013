@@ -1,0 +1,27 @@
+{
+  "kind": "LAUNCHER_SELF_ONLY_STD_LIB_DIAGNOSTIC",
+  "no_target_import_or_SQL_or_solver": true,
+  "inherited_nice": 0,
+  "steps": [
+    {
+      "call": "setpriority_15",
+      "status": "RETURNED"
+    },
+    {
+      "call": "CPU_4",
+      "status": "RETURNED"
+    },
+    {
+      "call": "CORE_0",
+      "status": "RETURNED"
+    },
+    {
+      "call": "RSS_256MiB",
+      "status": "FAILED",
+      "type": "ValueError",
+      "message": "current limit exceeds maximum limit"
+    }
+  ],
+  "final_nice": 15,
+  "cpu_at_report": 0.049990999999999994
+}

@@ -1,0 +1,21 @@
+{
+  "status": "NOT_RUN",
+  "manifest_sha256": "f0f102f46ff8e2c4e5f3e567ffbf3e0612e9f26ed1624ef3dff8dcf8fe792feb",
+  "cell_denominator": 24,
+  "result_valid": false,
+  "sampled_peak_rss_bytes": 0,
+  "sampled_max_kernel_threads": 0,
+  "limits": {
+    "cpu_soft_hard_seconds": [
+      14,
+      15
+    ],
+    "total_supervisor_wall_alarm_seconds": 24,
+    "worker_wall_alarm_seconds": 24,
+    "supervisor_stop_work_at_seconds": 23,
+    "rss_sampled_soft_bytes": 1073741824,
+    "rss_sampling_seconds": 0.05,
+    "solver_threads": 1
+  },
+  "scope": "One no-network computation child. Child itself does not create subprocesses; temporary upstream monitor threads are observed. RSS is sampled, not a continuous hard cap."
+}

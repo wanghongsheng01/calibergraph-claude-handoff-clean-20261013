@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "case": "gitlab#47",
+  "status": "STATIC_DIAGNOSIS_ONLY_FIX_NOT_EXECUTED",
+  "intended_path": "calibergraph_parseval_admission_20261011_03/analysis/BACKEND_METADATA_DIAGNOSIS.json",
+  "file_saved": true,
+  "save_blocker": null,
+  "save_history": "Local exec-server transport previously disconnected. Parent confirmed recovery and authorized only saving the already prepared diagnosis; no additional investigation or probe was performed.",
+  "scope": {
+    "worker": "implementation/probe_worker_v2.py",
+    "failed_run": "runs/admission_02",
+    "postgresql_version": "16.14",
+    "worker_modified": false,
+    "frozen_files_modified": false,
+    "new_postgresql_execution": false,
+    "new_parseval_execution": false,
+    "third_probe_started": false,
+    "repair_verified": false
+  },
+  "observed_failed_run": {
+    "source": "Previously read admission_02/RESULT.json and worker source; exact error text also supplied by parent.",
+    "status": "PROBE_ERROR",
+    "exception_type": "UndefinedObject",
+    "failure": "current_setting('lc_collate'): unrecognized configuration parameter",
+    "driver_execute_calls": 1,
+    "generation_calls": 0,
+    "solver_checks": 0,
+    "candidate_callbacks": 0,
+    "original_query_replays": 0,
+    "confirmation_query_replays": 0,
+    "explicit_lowering_calls": 1,
+    "stock_after_lowering": "ERROR already recorded separately",
+    "catalog_audit": {
+      "columns": 117,
+      "NotNullDecl": 32,
+      "PrimaryKeyDecl": 3,
+      "UniqueDecl": 6,
+      "ForeignKeyDecl": 2,
+      "proof_active_count": 43,
+      "inactive_count": 0
+    },
+    "backend_ddl_executed": false,
+    "ddl_execution_reason": "The failing metadata execute call is worker line 154; the DDL execute call follows at line 155."
+  },
+  "root_cause": {
+    "classification": "Author worker backend metadata API mismatch",
+    "location": "probe_worker_v2.py:154",
+    "explanation": "The worker treats database locale metadata as runtime configuration settings. PostgreSQL 16 documents LC_COLLATE and LC_CTYPE in pg_database.datcollate and pg_database.datctype. current_setting raises an error for an unknown setting.",
+    "not_evidence_of": [
+      "Schema DDL rejection",
+      "ParSEval generation failure",
+      "Generated constraint violation",
+      "Original-query result difference"
+    ],
+    "evidence": [
+      "https://www.postgresql.org/docs/16/catalog-pg-database.html",
+      "https://www.postgresql.org/docs/16/functions-admin.html"
+    ]
+  },
+  "minimal_repair_candidate": {
+    "change": "Replace both locale current_setting calls with fields from the current database's pg_database row.",
+    "sql": "SELECT version(), current_setting('server_version_num'), d.datcollate, d.datctype, current_setting('server_encoding'), current_setting('TimeZone') FROM pg_catalog.pg_database AS d WHERE d.datname = current_database()",
+    "expected_shape": "One row, six fields, preserving the original field order.",
+    "do_not_substitute": "current_setting('lc_collate', true) or current_setting('lc_ctype', true): these merely return NULL for absent settings and do not recover the required locale evidence.",
+    "execution_status": "NOT_EXECUTED",
+    "approval_and_budget": "Candidate only; frozen budget prohibits a third execution in this round."
+  },
+  "recommended_profile_assertions_for_future_review": {
+    "reason": "The current worker records backend metadata but does not assert the environment required by independent_C's deterministic C-collation claim.",
+    "candidate_sql": "SELECT current_database() AS database_name, version() AS server_version, current_setting('server_version_num') AS server_version_num, d.datlocprovider, d.datcollate, d.datctype, pg_catalog.pg_encoding_to_char(d.encoding) AS database_encoding, current_setting('TimeZone') AS session_timezone FROM pg_catalog.pg_database AS d WHERE d.datname = current_database()",
+    "expected_profile": {
+      "server_version_num": "160014",
+      "datlocprovider": "c",
+      "datcollate": "C",
+      "datctype": "C",
+      "database_encoding": "UTF8",
+      "session_timezone": "UTC"
+    },
+    "note": "These are the intended new-engine profile values, not newly observed backend results or historical GitLab metadata.",
+    "evidence": "https://www.postgresql.org/docs/16/catalog-pg-database.html"
+  },
+  "downstream_census_static_review": {
+    "overall": "No further definite PostgreSQL 16 representation mismatch identified in the existing column/key census. All statements after the failed metadata call remain unexecuted.",
+    "not_null": {
+      "worker_lines": [157, 177],
+      "finding": "The existing division is appropriate for PostgreSQL 16: information_schema.columns.is_nullable checks NOT NULL, while pg_constraint is used for PK, UNIQUE and FK.",
+      "expected_pg_constraint_counts": {
+        "p": 3,
+        "u": 6,
+        "f": 2,
+        "total": 11
+      },
+      "expected_not_null_columns": 32,
+      "warning": "Do not expect 43 pg_constraint rows or add contype='n' to the PostgreSQL 16 expectation. PostgreSQL 16 represents table-column NOT NULL in pg_attribute.attnotnull.",
+      "evidence": [
+        "https://www.postgresql.org/docs/16/catalog-pg-constraint.html",
+        "https://www.postgresql.org/docs/16/catalog-pg-attribute.html"
+      ]
+    },
+    "column_types": {
+      "worker_lines": [157, 161],
+      "finding": "The current names match the intended PostgreSQL built-in types.",
+      "expected_data_types": {
+        "integer": 26,
+        "character varying": 40,
+        "text": 4,
+        "timestamp without time zone": 19,
+        "boolean": 27,
+        "date": 1
+      },
+      "serial": "SERIAL is syntax that creates an integer column with a sequence default; information_schema should report integer, which the worker already expects.",
+      "character_maximum_length": "NULL is appropriate for all selected columns: the 40 VARCHAR columns have no declared maximum length, and TEXT/non-character columns likewise have no declared character maximum.",
+      "order": "ORDER BY table_name, ordinal_position is consistent with the Python expectation's per-table column order.",
+      "evidence": [
+        "https://www.postgresql.org/docs/16/infoschema-columns.html",
+        "https://www.postgresql.org/docs/16/datatype-numeric.html#DATATYPE-SERIAL"
+      ]
+    },
+    "foreign_keys": {
+      "worker_lines": [163, 176],
+      "finding": "The query uses documented PostgreSQL 16 fields: conkey/confkey reference positive attribute numbers; confdeltype='c' means CASCADE and confmatchtype='s' means SIMPLE.",
+      "reference_name_assumption": "confrelid::regclass::text is compared with unqualified source table names. The connection explicitly sets search_path=public and the derived FK targets are public tables, so no definite mismatch is identified for this private fresh schema.",
+      "evidence": "https://www.postgresql.org/docs/16/catalog-pg-constraint.html"
+    }
+  },
+  "optional_census_strengthening_candidates": [
+    {
+      "gap": "UNIQUE NULL policy",
+      "candidate": "Join pg_index using pg_constraint.conindid for p/u constraints and require indnullsnotdistinct=false, indisunique=true, indisvalid=true and indimmediate=true.",
+      "reason": "The existing key signature omits the NULL policy. Its later duplicate-NULL calibration covers the authorization triple only. PostgreSQL 16 stores NULLS NOT DISTINCT in pg_index.indnullsnotdistinct.",
+      "evidence": "https://www.postgresql.org/docs/16/catalog-pg-index.html",
+      "status": "STATIC_OPTIONAL_CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "gap": "FK validity and update action",
+      "candidate": "Include convalidated and confupdtype; require validated=true and source-default ON UPDATE NO ACTION ('a') for both FKs.",
+      "reason": "Current signature checks delete action, match mode and timing but does not inspect these fields.",
+      "evidence": "https://www.postgresql.org/docs/16/catalog-pg-constraint.html",
+      "status": "STATIC_OPTIONAL_CANDIDATE_NOT_APPLIED"
+    },
+    {
+      "gap": "Defaults and sequence metadata",
+      "candidate": "If the future report claims verified default preservation, inspect column_default or pg_attrdef/pg_get_expr and sequence ownership. Compare semantic defaults rather than raw strings that may contain PostgreSQL-added casts.",
+      "reason": "The current columns query does not select defaults, so passing it would not itself verify SERIAL or explicit source defaults.",
+      "evidence": [
+        "https://www.postgresql.org/docs/16/infoschema-columns.html",
+        "https://www.postgresql.org/docs/16/datatype-numeric.html#DATATYPE-SERIAL"
+      ],
+      "status": "STATIC_OPTIONAL_CANDIDATE_NOT_APPLIED"
+    }
+  ],
+  "local_install_catalog_inspection": {
+    "status": "NOT_COMPLETED_TRANSPORT_DISCONNECTED",
+    "explanation": "A read-only attempt to locate installed PostgreSQL catalog/header files failed when the local execution service disconnected. The connection later recovered, but parent authorized only saving this diagnosis, so no additional inspection occurred. No installed catalog content or new database result is claimed."
+  },
+  "conclusion": "The minimal repair is localized to backend locale metadata retrieval. Existing PostgreSQL 16 NOT NULL and native-type census expectations are statically compatible. The repaired query, DDL, calibration and generation remain unverified; no further execution is authorized within this round."
+}

@@ -1,0 +1,58 @@
+--- adapter15/case1172_adapter.py
++++ case1261_17/case1261_adapter.py
+@@ -1,10 +1,10 @@
+-"""Frozen #1172, N<=1 observation quotient. No solver, generic SQL repair or dropped C."""
++"""Frozen #1261, N<=1 observation quotient. No solver, generic SQL repair or dropped C."""
+ from pathlib import Path
+ import hashlib
+ import sqlite3
+ 
+-SOURCE_SHA = {'gold.sql':'40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb',
+- 'predicted.sql':'6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545',
++SOURCE_SHA = {'gold.sql':'8ca50bee79653ca58e24c34a734ac718d0b09446486caadef8c513f64c638e82',
++ 'predicted.sql':'c977e9d8fac35d63504c9cf9f2d84145a195974c58fde06640c4254b3c677028',
+  'full-schema.sql':'c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4'}
+ def q(name):return '"'+name.replace('"','""')+'"'
+ 
+@@ -19,7 +19,7 @@
+         cols=db.execute('PRAGMA table_info('+q(name)+')').fetchall()
+         table={'table':name,'columns':[{'name':c[1],'source_type':c[2],'explicit_not_null':bool(c[3]),'default':c[4],'pk_order':c[5]} for c in cols]}
+         tables.append(table)
+-        schema.append({'TableName':name,'PKeys':[],'FKeys':[],'Others':[{'Name':c[1],'Type':'varchar' if name=='Patient' and c[1]=='SEX' else 'int'} for c in cols]})
++        schema.append({'TableName':name,'PKeys':[],'FKeys':[],'Others':[{'Name':c[1],'Type':'int'} for c in cols]})
+         pk=sorted([c for c in cols if c[5]],key=lambda c:c[5])
+         if pk:constraints.append({'primary':[name+'.'+c[1] for c in pk]})
+         constraints.extend({'not_null':name+'.'+c[1]} for c in cols if c[3])
+@@ -54,8 +54,8 @@
+         for col in t['columns']:
+             name=col['name'];x=q(name)
+             if name=='ID':v='1'
+-            elif t['table']=='Patient' and name=='SEX':v="CASE WHEN "+x+" = 'M' THEN 'M' ELSE 'X' END"
+-            elif t['table']=='Laboratory' and name=='T-BIL':v='CASE WHEN '+x+' < 2.0 THEN 0 WHEN '+x+' = 2.0 THEN 2 ELSE 3 END'
++            elif t['table']=='Laboratory' and name=='RF':v='CASE WHEN '+x+' < 20 THEN 0 ELSE 20 END'
++            elif t['table']=='Examination' and name=='Thrombosis':v='CASE WHEN '+x+' = 0 THEN 0 ELSE 1 END'
+             else:v='0'
+             expr.append('CASE WHEN '+x+' IS NULL THEN NULL ELSE '+v+' END')
+         rows=db.execute('SELECT '+','.join(expr)+' FROM '+q(t['table'])).fetchall()
+@@ -78,9 +78,7 @@
+             key=col['name'].lower();v=row[key]
+             if v is None:
+                 if col['explicit_not_null'] or col['pk_order']:raise ValueError('Invalid abstract NN/PK')
+-            elif name=='patient' and key=='sex':
+-                if type(v) is not str:raise ValueError('Decoded SEX must be text')
+-            elif type(v) is not int:raise ValueError('Abstract non-SEX cell must be Int/NULL')
++            elif type(v) is not int:raise ValueError('Abstract cell must be Int/NULL')
+     parent=rows['patient']
+     for name in ['examination','laboratory']:
+         row=rows[name]
+@@ -96,8 +94,8 @@
+             key=col['name'].lower();v=None if row is None else row[key]
+             if v is None:values.append(None)
+             elif key=='id':values.append(1)
+-            elif name=='patient' and key=='sex':values.append('M' if v=='M' else 'X')
+-            elif name=='laboratory' and key=='t-bil':values.append(0.0 if v<2 else 2.0 if v==2 else 3.0)
++            elif name=='laboratory' and key=='rf':values.append('0' if v<20 else 'z')
++            elif name=='examination' and key=='thrombosis':values.append(0 if v==0 else 1)
+             else:values.append(0)
+         answer[t['table']]=[[col['name'] for col in t['columns']],*([values] if row is not None else [])]
+     return answer

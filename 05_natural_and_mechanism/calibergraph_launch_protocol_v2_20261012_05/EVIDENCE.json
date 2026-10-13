@@ -1,0 +1,65 @@
+{
+  "scope": "Read-only engineering evidence; no local runtime or scientific experiment",
+  "local_sources": [
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_diagnostic_20261012_04/INPUT_FREEZE.json",
+      "sha256": "f489ab4e6128a872e231750714f906d1775f99e278283a364c0dad3ab4de8ce3"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_diagnostic_20261012_04/RUN_CONFIG.json",
+      "sha256": "49b96b729af214a0e0fd73931a98ecfc47185907e46e6a2d2bfeb4aa6ae31a23"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_diagnostic_20261012_04/RESULT.json",
+      "sha256": "8a62e2d57dd23ea70322eab7436d2e1e984b0be46003cca01cdc4d265823f56c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_distinct_evidence_20261012_03/NEXT_DIAGNOSTIC.json",
+      "sha256": "ca0365d1ba71359c263f96b1c57096e0da74a094d634f6228e12011ad0d6d58c"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/governance/RESOURCE_PRECHECK.json",
+      "sha256": "8930082a890537c2b55d07433978e0600146f8e14faff1c36ff83de5e064740d"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/implementation/probe_worker_v2.py",
+      "sha256": "10e86a926164ed789e55f26706fb42d1e6ee9db9c2a849f826723dc3c8505933"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_parseval_admission_20261011_03/implementation/run_probe_v2.py",
+      "sha256": "3290329f50a11755445c55e3c7aa875e06ecc3aca0cb41c04ae9431b3b6c3bb5"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_real_task_screen_20261011_05/implementation/baseline_worker.py",
+      "sha256": "c4f1beca156eea8c9d224d6bd8a546c864d72b29730d62e403c523a9b3c69d41"
+    },
+    {
+      "path": "/Users/loctek/Documents/Codex/2026-10-11/task-3/calibergraph_real_task_screen_20261011_05/implementation/run_frozen_baseline.py",
+      "sha256": "a1e45225c9e911337df1fb3014474820db42ad4e0e58f731f45899fba423a78e"
+    },
+    {
+      "path": "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h",
+      "sha256": "5c625fb578aa6cdc1419b2a0d0f690a4b1b93b9adc46f42d38201a464c02f380"
+    },
+    {
+      "path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/share/man/man2/getrlimit.2",
+      "sha256": "8f796b5a816d946dfa8a3e737eeb221033bd10e9411cfb70878cc598b2b7cf6a"
+    },
+    {
+      "path": "/Library/Developer/CommandLineTools/SDKs/MacOSX15.2.sdk/usr/share/man/man2/getrusage.2",
+      "sha256": "b4f4ed265c063282cb851254a5c903f9c1bc484f4e6bb720703c758583eff8b9"
+    }
+  ],
+  "web_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/main/bsd/kern/kern_resource.c",
+      "locator": "case RLIMIT_AS",
+      "version_limit": "Unpinned public main read 2026-10-12; not proof of installed kernel or runtime behavior",
+      "finding": "Address-space setting can reject lowering below current usage; not direct RSS measurement"
+    }
+  ],
+  "new_load_probes": 0,
+  "new_process_probes": 0,
+  "worker_launches": 0,
+  "science_calls": 0
+}

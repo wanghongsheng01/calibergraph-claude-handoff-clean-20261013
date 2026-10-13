@@ -1,0 +1,76 @@
+{
+  "status": "ENGINEERING_VALIDATION_COMPLETE_SCIENCE_BLOCKED",
+  "scientific_launches": 0,
+  "fixture_children": 2,
+  "max_concurrent_fixture_children": 1,
+  "exclusive_marker_collision_rejected": true,
+  "inherited_lock_and_contender_validated": true,
+  "cpu_limit_set_and_readback": [
+    60,
+    60
+  ],
+  "cpu_exhaustion_not_tested": true,
+  "deadline_and_reap_validated": true,
+  "memory_probe": {
+    "mode": "memory_cap_probe",
+    "pid": 25638,
+    "science_calls": 0,
+    "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.4.2)]",
+    "kernel": "24.0.0",
+    "inherited_lock_inode_matches": true,
+    "independent_lock_contender_blocked": true,
+    "cpu_limit_readback_s": [
+      60,
+      60
+    ],
+    "own_peak_rss_bytes_before": 10928128,
+    "requested_AS_bytes": 1073741824,
+    "AS_before": [
+      9223372036854775807,
+      9223372036854775807
+    ],
+    "RSS_aliases_AS": true,
+    "memory_cap_setter": "REJECTED",
+    "exception": {
+      "type": "ValueError",
+      "message": "current limit exceeds maximum limit",
+      "errno": null
+    },
+    "AS_after": [
+      9223372036854775807,
+      9223372036854775807
+    ],
+    "hard_RSS_cap_verified": false
+  },
+  "receipts": [
+    {
+      "mode": "memory_cap_probe",
+      "deadline_s": 3,
+      "science_calls": 0,
+      "pid_for_logging_only": 25638,
+      "deadline_triggered": false,
+      "reaped": true,
+      "returncode": 0,
+      "elapsed_s": 0.07165641710162163
+    },
+    {
+      "mode": "deadline_fixture",
+      "deadline_s": 0.25,
+      "science_calls": 0,
+      "pid_for_logging_only": 25640,
+      "deadline_triggered": true,
+      "reaped": true,
+      "returncode": -15,
+      "elapsed_s": 0.25834245793521404
+    }
+  ],
+  "memory_blocker": "1 GiB worker-wide hard memory enforcement not established",
+  "not_validated": [
+    "parent crash/orphan termination",
+    "scientific imports and no-descendant path",
+    "hard memory enforcement",
+    "actual 60-second scientific execution"
+  ],
+  "no_permission_escalation": true,
+  "no_system_process_listing": true
+}

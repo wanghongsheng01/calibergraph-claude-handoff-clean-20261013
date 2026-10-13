@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "round": "11",
+  "date": "2026-10-11",
+  "author_role": "theory author; not independent reviewer",
+  "hypothesis_count": 1,
+  "hypothesis_id": "H11_DEHAAN_CONSTRAINED_CEQ_BASELINE",
+  "hypothesis": "The mature constrained CEQ normalization already states the equivalence decision mechanism sought for the current chased, common-body, selfjoin, partially counted fragment, without thereby supplying a small legal witness bound.",
+  "mechanism_status": "NULL",
+  "mechanism_action": "STOP_NEW_MECHANISM_LINE",
+  "prior_art_status": "DIRECT_CONSTRAINED_DECISION_CLAIM_CONFIRMED",
+  "condition_mapping_status": "PROVED_FOR_CURRENT_FINITE_CHASED_COMMON_BODY_SINGLE_BAG_FRAGMENT",
+  "general_constrained_necessity_proof_audit": "NOT_FULLY_CLOSED",
+  "hypothesis_verdict": "PRIOR_ART_AND_CONDITION_OVERLAP_CONFIRMED; NOT_CLAIMED_AS_A_FULLY_REPROVED_CONSTRAINED_COMPLETENESS_THEOREM",
+  "proved_in_this_report": [
+    "The finite per-head partial-counted semantics is exactly the depth-one bag decoding of CEQ E(H union M; H), including repeated logical head variables across distinct result attribute occurrences.",
+    "Successful finite chase and FD index expansion preserve this semantics on legal instances.",
+    "On a common finite pure-variable body whose canonical database satisfies all relevant PKs, bidirectional FD-cover by head-fixing endomorphisms is equivalent to bidirectional literal coverage of the FD-closed index sets.",
+    "The same pair of endomorphisms witnesses both conditions; the proof covers composite PKs and selfjoins, with no unary-key or anchorability restriction.",
+    "The resulting bidirectional condition is sufficient for finite legal-database equivalence.",
+    "A single direction cannot replace closure-of-image by image-of-closure, even for a chased unary-PK body."
+  ],
+  "not_claimed": [
+    "A complete new proof of constrained necessity from DeHaan Appendix A.",
+    "That DeHaan's constrained decision claim is false.",
+    "That the missing proof-audit bridge is an open problem in the literature.",
+    "That a later FewRows residual statement excludes the 2009 prior claim.",
+    "A small legal witness bound for the general non-anchorable fragment.",
+    "Termination of the ordinary fresh-witness chase under arbitrary cyclic PK/FK constraints.",
+    "A novel mechanism, empirical result, coverage gain, or runtime advantage."
+  ],
+  "missing_bridge": "Constrained equivalence of the chased FD-expanded depth-one CEQs must imply their unrestricted equivalence, or an equivalent constraint-preserving separating construction must be proved. The independent coordinate diversification used in Appendix A may violate PKs.",
+  "normalization_comparison": {
+    "versus_raw_cover": "PK EGD quotient is necessary; round09 raw counterexample remains valid.",
+    "versus_chase_only_literal_cover": "FD expansion recognizes determinant-redundant index coordinates.",
+    "versus_chased_bidirectional_FD_cover": "Identical existential condition under P11 assumptions; no strict-strength claim.",
+    "nested_branch_caveat": "An sb example exposes ambiguity in naively replacing the unrestricted core-index MVD test by a constrained one. This does not refute the current depth-one bag branch."
+  },
+  "round09_correction": {
+    "status": "WITHDRAWN_SPECIFIC_LITERATURE_EXCLUSION",
+    "frozen_theory_sha256": "e6cab30e1d9f06f619edcde7997f9a9e304ea8cc271ac69c94eb316a4bbee03a",
+    "withdrawn": "The claim that all four inspected lineages supplied no general PK/FK non-anchorable transfer, and any reading of the DeHaan boundary entry as excluding its schema-dependency extension.",
+    "retained": "Raw key-chase counterexample, sufficient injection, unconstrained renaming specialization, full-tuple-PK triangle row threshold, and NULL/no-experiment outcome.",
+    "frozen_round09_modified": false
+  },
+  "future_bounded_search_evidence": {
+    "certificate_and_legal_countermodel": "Contradicts sufficient proof or identifies implementation/semantics mismatch.",
+    "no_certificate_bounded_agreement": "Bounded candidate only; proves neither full equivalence nor failure of general necessity.",
+    "WEAK_STRONG_disagree_after_legal_canonical_chase": "Contradicts P11 or identifies an implementation/premise mismatch.",
+    "run_performed": false,
+    "results_seen": false
+  },
+  "execution": {
+    "scientific_programs": false,
+    "SQL": false,
+    "SMT": false,
+    "finite_model_enumeration": false,
+    "benchmark": false,
+    "model_API": false,
+    "GPU_or_queue": false,
+    "unrelated_project_interaction": false,
+    "credentials_manuscript_finaltest_holdout_access": false,
+    "allowed_actions": ["primary-paper web reading", "temporary primary-source text reading", "symbolic hand proofs", "designated artifact writes", "JSON syntax and SHA metadata checks"]
+  },
+  "independent_review": "PENDING_PARENT_TASK",
+  "backup": "PARENT_UNIFIED_BACKUP_PENDING"
+}

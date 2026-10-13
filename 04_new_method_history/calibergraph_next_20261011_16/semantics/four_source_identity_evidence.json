@@ -1,0 +1,1068 @@
+{
+  "audit_date": "2026-10-11",
+  "status": "CHECKED_STATIC_IDENTITIES_AND_FOUR_TARGETED_BYTE_SLICES",
+  "scope": "Only original registry indices 6,9,14,3; no scientific execution, target imports, SQL, SMT, database enumeration or corpus rescan",
+  "source_registry": {
+    "path": "calibergraph_next_20261011_03/data/development_stratified.jsonl",
+    "sha256": "ab80ebcf869015d324af3e35b9dd8352013e0037dec6922e7788f4cf366e4ffb",
+    "whole_registry_hash_freshly_verified": true
+  },
+  "selected_projection": {
+    "path": "calibergraph_next_20261011_06/data/selected_source_groups.jsonl",
+    "sha256": "7f69acd83f3e18cd4a1daae6c00eb909209948f7dfd7e219fd3456b1c3b1b668",
+    "whole_projection_hash_freshly_verified": true
+  },
+  "raw_source_verification": {
+    "method": "Read only four saved byte_offset/byte_length slices using dd; SHA-256 via openssl; compare canonical complete JSON to original source_record using jq/cmp. No raw SQL written to output.",
+    "distinct_byte_slices": 4,
+    "distinct_bytes": 3598,
+    "source_whole_file_hash": "INHERITED_NOT_REHASHED",
+    "line_1based": "INHERITED_NOT_RECOUNTED",
+    "fresh_verification_applies_to": "Exact stored byte slice identity and all parsed source_record fields, not independent line numbering or entire corpus identity"
+  },
+  "records": [
+    {
+      "id": "dev03_07",
+      "registry_index": 6,
+      "registry_line_1based": 7,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ],
+      "source_record_field_inventory": [
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "lte",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "lte",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "file"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "index"
+          ],
+          "type": "number"
+        },
+        {
+          "path": [
+            "pair",
+            0
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "pair",
+            1
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "DELIVERY",
+            "CUSTOMER_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "DELIVERY",
+            "CUSTOMER_PREF_DELIVERY_DATE"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "DELIVERY",
+            "DELIVERY_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "DELIVERY",
+            "ORDER_DATE"
+          ],
+          "type": "string"
+        }
+      ],
+      "schema_field_inventory": [
+        {
+          "table": "DELIVERY",
+          "columns": [
+            {
+              "name": "CUSTOMER_ID",
+              "type": "INT"
+            },
+            {
+              "name": "CUSTOMER_PREF_DELIVERY_DATE",
+              "type": "DATE"
+            },
+            {
+              "name": "DELIVERY_ID",
+              "type": "INT"
+            },
+            {
+              "name": "ORDER_DATE",
+              "type": "DATE"
+            }
+          ]
+        }
+      ],
+      "constraint_clause_inventory": [
+        {
+          "clause_index": 0,
+          "operator": "primary",
+          "operand_paths": [
+            [
+              "primary",
+              0,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 1,
+          "operator": "lte",
+          "operand_paths": [
+            [
+              "lte",
+              0,
+              "value"
+            ],
+            [
+              "lte",
+              1,
+              "value"
+            ]
+          ]
+        }
+      ],
+      "constraint_field_present": true,
+      "original_sql_sha256": [
+        "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+        "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+      ],
+      "schema_sha256": "9112401bdb30d4564eb81df85365795dea69e94cfdaba16fb721a7033d36941e",
+      "constraint_sha256": "fbaf9336bea5027af7c092f4e3f405580053a032d053fe5d3b4e0e074a1de128",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 11415,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "selection_provenance": {
+        "byte_length": 696,
+        "byte_offset": 10281770,
+        "group_order_hash": "1c6c78deb8fa9aad6fd1f14b9de45e099451a83029d8d6c92e366f54bb343773",
+        "group_stratum_pair_count": 39,
+        "line_1based": 11415,
+        "median_rank_1based": 20,
+        "original_sql_sha256": [
+          "8949df42e35f33cd670bea314b69e66cb2fa6158b066ee82d977711046ace530",
+          "038dadf28b52241d91bd86ee4f8f8617a5f7c87d5252ce3f538160c0a104e9d5"
+        ],
+        "raw_line_sha256": "629b723aed8dd3dae66f17ba12334d12e8f2eed6fa3ae6a2adfba12d838eb3e1",
+        "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1173.csv",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "stratum": "S2_DERIVED_TABLE_AGGREGATE",
+        "tie_hash": "f7f7bdc9ec28ca5ac41b77beee11255724d0d285d3f34e96ae1793bddffb5dac",
+        "token_complexity": 104
+      },
+      "exposure": "PRIOR_FULL_48910_QUERY_APPLICABILITY_SCAN_PLUS_CURRENT_LEXICAL_DEVELOPMENT_SELECTION",
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "status": "DEVELOPMENT_HOLD_NOT_HIDDEN_TEST",
+      "fresh_checks": {
+        "raw_byte_slice_sha256_matches": true,
+        "complete_upstream_object_equals_source_record": true,
+        "sql_utf8_sha256_matches": [
+          true,
+          true
+        ],
+        "canonical_schema_sha256_matches": true,
+        "canonical_constraint_sha256_matches": true,
+        "selected_complete_source_record_equals_registry": true,
+        "selected_source_provenance_equals_registry": true
+      },
+      "selected_projection_missing_original_top_level_fields": [
+        "exposure",
+        "provenance_eligibility",
+        "selection",
+        "status"
+      ],
+      "payload_policy": "No original SQL strings or complete raw source_record/schema/constraint objects copied; field inventory and provenance only"
+    },
+    {
+      "id": "dev03_10",
+      "registry_index": 9,
+      "registry_line_1based": 10,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ],
+      "source_record_field_inventory": [
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "primary",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "primary",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            2,
+            "neq",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            2,
+            "neq",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "file"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "index"
+          ],
+          "type": "number"
+        },
+        {
+          "path": [
+            "pair",
+            0
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "pair",
+            1
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "FRIENDSHIP",
+            "USER1_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "FRIENDSHIP",
+            "USER2_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "LIKES",
+            "PAGE_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "LIKES",
+            "USER_ID"
+          ],
+          "type": "string"
+        }
+      ],
+      "schema_field_inventory": [
+        {
+          "table": "FRIENDSHIP",
+          "columns": [
+            {
+              "name": "USER1_ID",
+              "type": "INT"
+            },
+            {
+              "name": "USER2_ID",
+              "type": "INT"
+            }
+          ]
+        },
+        {
+          "table": "LIKES",
+          "columns": [
+            {
+              "name": "PAGE_ID",
+              "type": "INT"
+            },
+            {
+              "name": "USER_ID",
+              "type": "INT"
+            }
+          ]
+        }
+      ],
+      "constraint_clause_inventory": [
+        {
+          "clause_index": 0,
+          "operator": "primary",
+          "operand_paths": [
+            [
+              "primary",
+              0,
+              "value"
+            ],
+            [
+              "primary",
+              1,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 1,
+          "operator": "primary",
+          "operand_paths": [
+            [
+              "primary",
+              0,
+              "value"
+            ],
+            [
+              "primary",
+              1,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 2,
+          "operator": "neq",
+          "operand_paths": [
+            [
+              "neq",
+              0,
+              "value"
+            ],
+            [
+              "neq",
+              1,
+              "value"
+            ]
+          ]
+        }
+      ],
+      "constraint_field_present": true,
+      "original_sql_sha256": [
+        "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+        "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+      ],
+      "schema_sha256": "7edcbc89506aa5aeb305dd083d43bc6d75cd645e18372595f28d18c87b2e6732",
+      "constraint_sha256": "f1f94c490360d247884b782779dcbb626b50d779d3cf016228ff37206d724099",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 13041,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "selection_provenance": {
+        "byte_length": 992,
+        "byte_offset": 11740517,
+        "group_order_hash": "175312a4adcf0d3c90f799424ce2e403e4fd361cbb0869550cfe71718c9f18e5",
+        "group_stratum_pair_count": 222,
+        "line_1based": 13041,
+        "median_rank_1based": 111,
+        "original_sql_sha256": [
+          "d6f4e1268f13f698ca86b9079280ef9d56c18a1b8b815aacf0940f90a6303e26",
+          "c450dc8464a1717929aa7810c6be75b98c150efb82d16bde5a6eaa5f0da88fb5"
+        ],
+        "raw_line_sha256": "b1810e19170aa9bea30181e6d480a046385999c2b88c552a58dce3d94d0f203f",
+        "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1264.csv",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "stratum": "S3_IN_EXISTS_OR_CORRELATED_HINT",
+        "tie_hash": "cf86f14f24827fa0e08eb1a1e0be9a47a10dde0fb343f86f9b40aed058f03fec",
+        "token_complexity": 151
+      },
+      "exposure": "PRIOR_FULL_48910_QUERY_APPLICABILITY_SCAN_PLUS_CURRENT_LEXICAL_DEVELOPMENT_SELECTION",
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "status": "DEVELOPMENT_HOLD_NOT_HIDDEN_TEST",
+      "fresh_checks": {
+        "raw_byte_slice_sha256_matches": true,
+        "complete_upstream_object_equals_source_record": true,
+        "sql_utf8_sha256_matches": [
+          true,
+          true
+        ],
+        "canonical_schema_sha256_matches": true,
+        "canonical_constraint_sha256_matches": true,
+        "selected_complete_source_record_equals_registry": true,
+        "selected_source_provenance_equals_registry": true
+      },
+      "selected_projection_missing_original_top_level_fields": [
+        "exposure",
+        "provenance_eligibility",
+        "selection",
+        "status"
+      ],
+      "payload_policy": "No original SQL strings or complete raw source_record/schema/constraint objects copied; field inventory and provenance only"
+    },
+    {
+      "id": "dev03_15",
+      "registry_index": 14,
+      "registry_line_1based": 15,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ],
+      "source_record_field_inventory": [
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "primary",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "primary",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            2,
+            "foreign",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            2,
+            "foreign",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            3,
+            "gte",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            3,
+            "gte",
+            1
+          ],
+          "type": "number"
+        },
+        {
+          "path": [
+            "file"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "index"
+          ],
+          "type": "number"
+        },
+        {
+          "path": [
+            "pair",
+            0
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "pair",
+            1
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "NPV",
+            "ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "NPV",
+            "NPV"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "NPV",
+            "YEAR"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "QUERIES",
+            "ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "QUERIES",
+            "YEAR"
+          ],
+          "type": "string"
+        }
+      ],
+      "schema_field_inventory": [
+        {
+          "table": "NPV",
+          "columns": [
+            {
+              "name": "ID",
+              "type": "INT"
+            },
+            {
+              "name": "NPV",
+              "type": "INT"
+            },
+            {
+              "name": "YEAR",
+              "type": "INT"
+            }
+          ]
+        },
+        {
+          "table": "QUERIES",
+          "columns": [
+            {
+              "name": "ID",
+              "type": "INT"
+            },
+            {
+              "name": "YEAR",
+              "type": "INT"
+            }
+          ]
+        }
+      ],
+      "constraint_clause_inventory": [
+        {
+          "clause_index": 0,
+          "operator": "primary",
+          "operand_paths": [
+            [
+              "primary",
+              0,
+              "value"
+            ],
+            [
+              "primary",
+              1,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 1,
+          "operator": "primary",
+          "operand_paths": [
+            [
+              "primary",
+              0,
+              "value"
+            ],
+            [
+              "primary",
+              1,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 2,
+          "operator": "foreign",
+          "operand_paths": [
+            [
+              "foreign",
+              0,
+              "value"
+            ],
+            [
+              "foreign",
+              1,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 3,
+          "operator": "gte",
+          "operand_paths": [
+            [
+              "gte",
+              0,
+              "value"
+            ],
+            [
+              "gte",
+              1
+            ]
+          ]
+        }
+      ],
+      "constraint_field_present": true,
+      "original_sql_sha256": [
+        "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+        "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+      ],
+      "schema_sha256": "226b6d3373dab280504982f2356d48b5492c49a5a1ce6bbaafeb160472292d59",
+      "constraint_sha256": "5e0086dc628cbf2af39cb9be7d370d301fc4c18e7833c8a874a2c8011e7ec5ef",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 15534,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "31255142400af226ca6a2fc91b35d2a3585d81ee318af4348e70012e15d1eb48",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "selection_provenance": {
+        "byte_length": 678,
+        "byte_offset": 14576795,
+        "group_order_hash": "7241656c8e6b0112207044b879687e68932f69cb3876bf3ce7dcb48d2a9cda7d",
+        "group_stratum_pair_count": 396,
+        "line_1based": 15534,
+        "median_rank_1based": 198,
+        "original_sql_sha256": [
+          "f63915350c6d64ab99bfd7af8702a072da34476f8839a98f9c209753821f8c39",
+          "e8657124a5d7aea2a9e4648f69af0c916faefbb7eb429cefb979ebc36af306f7"
+        ],
+        "raw_line_sha256": "31255142400af226ca6a2fc91b35d2a3585d81ee318af4348e70012e15d1eb48",
+        "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1421.csv",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "stratum": "S4_OUTER_JOIN",
+        "tie_hash": "1ff38811f075c63ea7f018a9a4130b756b2708a654f700217ae31754b5a2f2ac",
+        "token_complexity": 94
+      },
+      "exposure": "PRIOR_FULL_48910_QUERY_APPLICABILITY_SCAN_PLUS_CURRENT_LEXICAL_DEVELOPMENT_SELECTION",
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "status": "DEVELOPMENT_HOLD_NOT_HIDDEN_TEST",
+      "fresh_checks": {
+        "raw_byte_slice_sha256_matches": true,
+        "complete_upstream_object_equals_source_record": true,
+        "sql_utf8_sha256_matches": [
+          true,
+          true
+        ],
+        "canonical_schema_sha256_matches": true,
+        "canonical_constraint_sha256_matches": true,
+        "selected_complete_source_record_equals_registry": true,
+        "selected_source_provenance_equals_registry": true
+      },
+      "selected_projection_missing_original_top_level_fields": [
+        "exposure",
+        "provenance_eligibility",
+        "selection",
+        "status"
+      ],
+      "payload_policy": "No original SQL strings or complete raw source_record/schema/constraint objects copied; field inventory and provenance only"
+    },
+    {
+      "id": "dev03_04",
+      "registry_index": 3,
+      "registry_line_1based": 4,
+      "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+      "source_record_keys": [
+        "constraint",
+        "file",
+        "index",
+        "pair",
+        "schema"
+      ],
+      "source_record_field_inventory": [
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            0,
+            "primary",
+            1,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "gt",
+            0,
+            "value"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "constraint",
+            1,
+            "gt",
+            1
+          ],
+          "type": "number"
+        },
+        {
+          "path": [
+            "file"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "index"
+          ],
+          "type": "number"
+        },
+        {
+          "path": [
+            "pair",
+            0
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "pair",
+            1
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "SALARIES",
+            "COMPANY_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "SALARIES",
+            "EMPLOYEE_ID"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "SALARIES",
+            "EMPLOYEE_NAME"
+          ],
+          "type": "string"
+        },
+        {
+          "path": [
+            "schema",
+            "SALARIES",
+            "SALARY"
+          ],
+          "type": "string"
+        }
+      ],
+      "schema_field_inventory": [
+        {
+          "table": "SALARIES",
+          "columns": [
+            {
+              "name": "COMPANY_ID",
+              "type": "INT"
+            },
+            {
+              "name": "EMPLOYEE_ID",
+              "type": "INT"
+            },
+            {
+              "name": "EMPLOYEE_NAME",
+              "type": "VARCHAR"
+            },
+            {
+              "name": "SALARY",
+              "type": "INT"
+            }
+          ]
+        }
+      ],
+      "constraint_clause_inventory": [
+        {
+          "clause_index": 0,
+          "operator": "primary",
+          "operand_paths": [
+            [
+              "primary",
+              0,
+              "value"
+            ],
+            [
+              "primary",
+              1,
+              "value"
+            ]
+          ]
+        },
+        {
+          "clause_index": 1,
+          "operator": "gt",
+          "operand_paths": [
+            [
+              "gt",
+              0,
+              "value"
+            ],
+            [
+              "gt",
+              1
+            ]
+          ]
+        }
+      ],
+      "constraint_field_present": true,
+      "original_sql_sha256": [
+        "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+        "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+      ],
+      "schema_sha256": "ffc10e15b114fe0550dc29ee4a3c314f84c1fdc91a5cbaa2710122d720729d48",
+      "constraint_sha256": "7649cf2fdfb924e153454d6b2af32580a7dc9852473ae7c0a81cca115c108850",
+      "source": {
+        "dataset": "leetcode",
+        "file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "line_1based": 17255,
+        "path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+        "upstream_commit": "3b99928bf976c11cb59c9db6a177adba21f75798"
+      },
+      "selection_provenance": {
+        "byte_length": 1232,
+        "byte_offset": 16536488,
+        "group_order_hash": "21dd4325b4557e87d46bfb7ebca07a5fe5c7962e0716fe3bca63264c41624efd",
+        "group_stratum_pair_count": 2,
+        "line_1based": 17255,
+        "median_rank_1based": 1,
+        "original_sql_sha256": [
+          "80109799585d84d83605b5dfe819723b31b12d574b0540eb6bc46ad3470f4d1e",
+          "60c9782d1749bb93f325ed5c7701cb55ea5743f86a2854e85b7f97023b67ee5e"
+        ],
+        "raw_line_sha256": "998e229dfc9d545b81a07320b440aefeba6c49c39fd4e2b8b987d45a2e7857ec",
+        "source_file_sha256": "b97fc1293701682a25a2f6345f3630b3482ce49912463a7f4b76ab52665a13c9",
+        "source_group_id": "leetcode:benchmark/leetcode/raw_data/1468.csv",
+        "source_path": "/Users/loctek/Documents/Codex/2026-10-09/task-7/calibergraph_revision_20261009/today_20261011/public_leetcode/leetcode.jsonlines",
+        "stratum": "S1_SET_OPERATION",
+        "tie_hash": "600c31522d7d0793af85d3a9f4401d1fb2fd1f7172b53b2a2f29a5502b64fd24",
+        "token_complexity": 262
+      },
+      "exposure": "PRIOR_FULL_48910_QUERY_APPLICABILITY_SCAN_PLUS_CURRENT_LEXICAL_DEVELOPMENT_SELECTION",
+      "provenance_eligibility": {
+        "SQL_semantic_fidelity": "UNPROVEN",
+        "business_contract_truth": "UNVERIFIED",
+        "contract_source": "PRESENT_JSON",
+        "natural_business_origin": "UNKNOWN",
+        "pair_label_truth": "UNVERIFIED",
+        "source_group_independence": "ORIGINAL_SOURCE_FILE_LABEL_DEDUP_ONLY_NO_STATISTICAL_GUARANTEE"
+      },
+      "status": "DEVELOPMENT_HOLD_NOT_HIDDEN_TEST",
+      "fresh_checks": {
+        "raw_byte_slice_sha256_matches": true,
+        "complete_upstream_object_equals_source_record": true,
+        "sql_utf8_sha256_matches": [
+          true,
+          true
+        ],
+        "canonical_schema_sha256_matches": true,
+        "canonical_constraint_sha256_matches": true,
+        "selected_complete_source_record_equals_registry": true,
+        "selected_source_provenance_equals_registry": true
+      },
+      "selected_projection_missing_original_top_level_fields": [
+        "exposure",
+        "provenance_eligibility",
+        "selection",
+        "status"
+      ],
+      "payload_policy": "No original SQL strings or complete raw source_record/schema/constraint objects copied; field inventory and provenance only"
+    }
+  ]
+}

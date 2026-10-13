@@ -1,0 +1,48 @@
+{
+  "work_package": "STATIC_COVERAGE_BOUNDARY_DEVELOPMENT_INVENTORY",
+  "created_utc": "2026-10-12T08:18:33.192897+00:00",
+  "parent": "calibergraph_masking_prior_analysis_20261012_08",
+  "scope": "Parse existing official artifacts and source only; no SQL/parser package imports, solver, installation, training or queue",
+  "source_jsonl": "calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl",
+  "source_schema": "calibergraph_distinct_evidence_20261012_03/sources_local/schema.json",
+  "source_commit": "88cfe245bcf249a5b0df561a6b09c116ff2a2896",
+  "official_run": 37547685455,
+  "official_artifact": 11452059162,
+  "anchor": [
+    "thrombosis_prediction",
+    "1172"
+  ],
+  "anchor_not_new": true,
+  "max_cases_including_anchor": 10,
+  "selection_rule": {
+    "eligibility": "Either original SQL string has lexical JOIN token AND either SQL has COUNT/SUM/AVG/MIN/MAX followed by open parenthesis. Lexical screen only, not parser/support proof. Original record and all database DDL must be present; malformed/missing entries remain in denominator.",
+    "strata": {
+      "EQ": 3,
+      "NEQ": 3,
+      "UNRESOLVED": 3
+    },
+    "unresolved_verdicts": [
+      "UNKNOWN",
+      "TIMEOUT",
+      "SYNTAX_ERROR"
+    ],
+    "stratum_order": [
+      "EQ",
+      "NEQ",
+      "UNRESOLVED"
+    ],
+    "rank": "ascending SHA256 of UTF8 cg-boundary09-v1|dbid|index",
+    "diversity": "max 2 per dbid including anchor, applied greedily in stratum order",
+    "no_refill": "No outcome-driven replacement. Short strata remain short. No changing rule after viewing extraction.",
+    "dedup": "Skip exact unordered query-pair hash duplicates and anchor; report skips. Semantic duplicates unverified.",
+    "not_population_estimator": true
+  },
+  "exposure": "All source records inspected by extractor count as exposed development material; all selected cases development. No independent test claims even if source IDs differ from 1172.",
+  "future_pick_rule": "For next experiment, first selected official NEQ case in frozen rank with exact source C and manually established static no-known-SQL-operator blocker for Polygon; if none, first selected EQ in same eligibility, excluding anchor. Choice cannot use candidate method performance.",
+  "stop": "At most this existing 1534-record package and fixed local tests/source files; no retrieval of additional result archives or experiments.",
+  "prior_outcome_exposure": "1172 and prior 138 aggregate-DISTINCT official summary already seen; this is a declared diagnostic sample, not pre-label natural evaluation.",
+  "source_hashes": {
+    "calibergraph_distinct_evidence_20261012_03/sources_local/disprove-bird.jsonl": "0eda3e2f9c3ce04b373fe61e5943681fac3a5234a6a1e05e1d8b800e1ad4fc3e",
+    "calibergraph_distinct_evidence_20261012_03/sources_local/schema.json": "5379f02bc4100f9521f442c132a37da40d4ebb532c32ec319f68ecb95c80ba2b"
+  }
+}

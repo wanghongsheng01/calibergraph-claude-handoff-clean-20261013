@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "cutoff": "2026-10-11",
+  "scope": "Targeted primary-source reading only; not a literature nonexistence proof. URLs were explicitly cited by the reviewed author.",
+  "third_party_documents_copied": false,
+  "sources": [
+    {
+      "id": "CM2016",
+      "title": "Counting Answers to Existential Positive Queries: A Complexity Classification",
+      "authors": [
+        "Hubie Chen",
+        "Stefan Mengel"
+      ],
+      "version": "arXiv:1601.03240v2 (20 Apr 2016)",
+      "url": "https://arxiv.org/pdf/1601.03240v2",
+      "anchors": [
+        "§2.1 printed pp4–5",
+        "Def5.1 printed p14",
+        "Def5.3, Thm5.4, Observation5.5 printed p15",
+        "Cartesian blow-up proof printed p16"
+      ],
+      "read_by": [
+        "independent reviewer"
+      ],
+      "review_anchor": "REVIEW.zh.md §§3,5.3",
+      "document_sha256": null,
+      "sha256_note": "Web read; no local third-party PDF retained."
+    },
+    {
+      "id": "CHIRKOVA2014",
+      "title": "Combined-Semantics Equivalence Is Decidable For a Practical Class of Conjunctive Queries",
+      "authors": [
+        "Rada Chirkova"
+      ],
+      "version": "arXiv:1308.4027v2 (13 Aug 2014)",
+      "url": "https://arxiv.org/html/1308.4027v2",
+      "anchors": [
+        "Def3.5",
+        "Thm3.11 and Proof3.12",
+        "Def4.1(1)",
+        "Thm4.5"
+      ],
+      "read_by": [
+        "primary_precedent_check",
+        "independent reviewer"
+      ],
+      "review_anchor": "REVIEW.zh.md §3",
+      "document_sha256": null,
+      "sha256_note": "Web read; no third-party document retained."
+    },
+    {
+      "id": "DEHAAN2009",
+      "title": "Equivalence of Queries with Nested Aggregation",
+      "authors": [
+        "David E. DeHaan"
+      ],
+      "version": "University of Waterloo PhD thesis (2009), 223 PDF pages",
+      "url": "https://uwspace.uwaterloo.ca/bitstreams/75481061-96ae-4f14-89b7-44c6aab72683/download",
+      "anchors": [
+        "Def3.1.11 printed pp79–80",
+        "Def3.2.1 printed p84 / PDF104",
+        "Thm3.2.4 printed p85 / PDF105",
+        "§3.3.2 printed p88 / PDF108",
+        "§6.2 printed p153 / PDF173",
+        "§6.3 printed p159 / PDF179",
+        "Appendix A.2 (helper source check)"
+      ],
+      "read_by": [
+        "primary_precedent_check",
+        "independent reviewer, including direct confirmation of §6.2–6.3"
+      ],
+      "review_anchor": "REVIEW.zh.md §3, finding F01",
+      "document_sha256": null,
+      "sha256_note": "Web read; no local third-party PDF retained.",
+      "constraint_extension_status": "Explicitly stated in §6; exact H09_chased correspondence not proved by this review."
+    },
+    {
+      "id": "FEWROWS2026",
+      "title": "Few Rows Tell Them Apart: Equivalence of Queries Mixing Set and Bag Semantics",
+      "authors": [
+        "Sara Cohen"
+      ],
+      "version": "arXiv:2609.09978v1, preprint",
+      "url": "https://arxiv.org/html/2609.09978v1",
+      "anchors": [
+        "§2 standing scope",
+        "Thm4",
+        "Thm7",
+        "Example8",
+        "Lemma11",
+        "Thm13",
+        "Thm15",
+        "§4 residual open case",
+        "Appendix B.1–B.4"
+      ],
+      "read_by": [
+        "independent reviewer"
+      ],
+      "review_anchor": "REVIEW.zh.md §§3,5.4,6",
+      "document_sha256": null,
+      "sha256_note": "Web read; no third-party document retained.",
+      "qualification": "Source-scope and stated-bound check, not independent verification of every upstream theorem."
+    }
+  ],
+  "source_helper": {
+    "task": "/root/round09_independent_review/primary_precedent_check",
+    "model_requested": "gpt-6-astra",
+    "reasoning_requested": "ultra",
+    "scope": "Read-only check of DeHaan and Chirkova; no workspace reads, programs or file writes.",
+    "decisive_discovery": "DeHaan §6.2–6.3 omitted by reviewed author; lead reviewer re-read the primary pages before recording F01."
+  },
+  "skill": {
+    "name": "paper-review",
+    "package": "e0/paper-review",
+    "main_resource": "skill://codex-home-skills/Users/loctek/.codex/skills/paper-review/SKILL.md",
+    "additional_resources": [
+      "references/protocol.md",
+      "references/red-flags.md",
+      "references/worked-example.md",
+      "assets/review-template.md"
+    ]
+  }
+}

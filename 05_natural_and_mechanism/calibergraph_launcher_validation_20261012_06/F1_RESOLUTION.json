@@ -1,0 +1,26 @@
+{
+  "review_finding": "F1",
+  "resolution": "Patched separate hardened copy; executed and reviewed original remains byte-identical",
+  "original_sha256": "7e3f79036fb69aed2be5e2f349089dcd4d330aba0dcafb6e230e313bbd99f652",
+  "hardened_sha256": "f7999642501f02b25c890ee6c4206006d6f31c5a5a6da55e00edd5fbdf6a1f8b",
+  "test": "Injected wait and kill failures using fake process object; receipt persisted and original failure propagated",
+  "fault_receipt": {
+    "mode": "fault_injection",
+    "deadline_s": 0.25,
+    "science_calls": 0,
+    "pid_for_logging_only": -1,
+    "cleanup_error": {
+      "type": "OSError",
+      "message": "injected cleanup kill failure"
+    },
+    "reaped": false,
+    "cleanup_status": "REAP_UNCONFIRMED_NO_RETRY",
+    "returncode": null,
+    "elapsed_s": 0.00016158299999999987
+  },
+  "real_children_in_fault_test": 0,
+  "fixture_reruns": 0,
+  "science_calls": 0,
+  "full_hardened_runtime_validation": false,
+  "science_still_blocked": true
+}

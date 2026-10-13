@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "sqlite_version": "3.43.2",
+  "review_solver_calls": 0,
+  "frozen_files_checked": 353,
+  "preserved_files_checked": 351,
+  "source_sha256": {
+    "gold.sql": "40340161f8fdb34f6c1a5c0b06a6856f2acf70e81e26e3592f949ff9a2e1c1bb",
+    "predicted.sql": "6a9c0f524cf75c75a3d79af59984b9b8b82992a490dd9f8cbf67af8173f82545",
+    "full-schema.sql": "c4073e59ae5daffad317c7c8938f9839afb68e4fe99ca826480027dea88e58e4"
+  },
+  "tables": 3,
+  "columns": 64,
+  "PK_declarations": {
+    "Laboratory": [
+      "ID",
+      "Date"
+    ],
+    "Patient": [
+      "ID"
+    ]
+  },
+  "explicit_NN": [
+    [
+      "Laboratory",
+      "Date"
+    ],
+    [
+      "Laboratory",
+      "ID"
+    ],
+    [
+      "Patient",
+      "ID"
+    ]
+  ],
+  "FK_declarations": {
+    "Examination": [
+      [
+        0,
+        0,
+        "Patient",
+        "ID",
+        "ID",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "Laboratory": [
+      [
+        0,
+        0,
+        "Patient",
+        "ID",
+        "ID",
+        "CASCADE",
+        "CASCADE",
+        "NONE"
+      ]
+    ],
+    "Patient": []
+  },
+  "constraint_declaration_total": 7,
+  "old_gate": false,
+  "new_gate": true,
+  "denominator_slots": 2,
+  "validated_NEQ": 2,
+  "unknown_or_failed_slots": 0,
+  "native_solver_checks": 3,
+  "batch_elapsed_s": 1.292468209285289,
+  "owned_handles_reaped": 5,
+  "returncodes": [
+    0,
+    -15,
+    -15,
+    0,
+    -15
+  ],
+  "slot_seriality_verified": true,
+  "aggregate_RSS_verified": false,
+  "records": [
+    {
+      "mode": "UA",
+      "status": "VALIDATED_NEQ",
+      "outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "row_counts": {
+        "Examination": 1,
+        "Laboratory": 1,
+        "Patient": 1
+      },
+      "fixed_lift_exact": true,
+      "abstract_C_valid_before_lift": true,
+      "original_C_valid": true,
+      "solver_calls": [
+        {
+          "index": 0,
+          "state": "SAT",
+          "elapsed_s": 0.4358062921091914
+        },
+        {
+          "index": 1,
+          "state": "SAT",
+          "elapsed_s": 0.01674374984577298
+        }
+      ],
+      "stages_seconds": {
+        "imports": 0.13259620778262615,
+        "schema_C": 0.003769457805901766,
+        "parse": 0.18914433242753148,
+        "encode": 0.010519834235310555,
+        "search_including_solver": 0.45583924977108836,
+        "solver_calls": 0.45305349910631776,
+        "decode": 0.002951208967715502,
+        "replay": 0.0012452080845832825
+      },
+      "wall_elapsed_s": 0.8917383328080177
+    },
+    {
+      "mode": "precise",
+      "status": "VALIDATED_NEQ",
+      "outputs": [
+        [
+          [
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ]
+        ]
+      ],
+      "row_counts": {
+        "Examination": 1,
+        "Laboratory": 1,
+        "Patient": 1
+      },
+      "fixed_lift_exact": true,
+      "abstract_C_valid_before_lift": true,
+      "original_C_valid": true,
+      "solver_calls": [
+        {
+          "index": 0,
+          "state": "SAT",
+          "elapsed_s": 0.008797625079751015
+        }
+      ],
+      "stages_seconds": {
+        "imports": 0.10255549987778068,
+        "schema_C": 0.001345749944448471,
+        "parse": 0.1864709579385817,
+        "encode": 0.010681250598281622,
+        "search_including_solver": 0.010517042130231857,
+        "solver_calls": 0.009031749796122313,
+        "decode": 0.0009991670958697796,
+        "replay": 0.0005559171549975872
+      },
+      "wall_elapsed_s": 0.39941275026649237
+    }
+  ],
+  "reviewed_input_sha256": {
+    "calibergraph_polygon_case1172_20261012_16/FREEZE.json": "ff483319f78b13e327aff7d88e1081422c6ed4c8897cfb39e2177c7de74a4139",
+    "calibergraph_polygon_case1172_20261012_16/ATTEMPT_STARTED.json": "65ebece0f8a1f0321a7ff7deaee02d3da5b52250400fc6031c454b504877ad59",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/BATCH_RESULT.json": "a132136d0813779be1fde54a87d89541489c4c549e75438fa5d15982744a35fa",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/CONTROLLER.json": "9a7a48968d1d5b714e97e13a8c27fa5375c95d6893cb3c0f7b4ca100d59e28b5",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/RESULT.json": "055d16e3cb33e19bcd7c6a18230613ad26d2513dbce4314f700c75bb22d4223e",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/abstract_witness.json": "f8e6bc1f98c0f73d432316590e654a2e69821efe41a4ce068d7d468272c07201",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/formula_0.smt2": "2c23430d09ee48ed69ad6b03e19f210bcbf17bc519f4d68e309b4b394699f179",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/formula_1.smt2": "d29169a76ff6d1d940a632b722a04b9e63d5682ba2a15a7aea9a039db0032aff",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/witness.json": "9bb3e2ccc0ea6afd2447020234e7ab26e9f52a7f7a7b430a2882bbdd9c47ceb6",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/z3_0_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_UA/z3_1_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/CONTROLLER.json": "3e110d61ea8c5de42946b6e95b9b954c699a486d0c9393f1a51a2f2dd8c297ce",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/RESULT.json": "155b8407c7e3d7781a9497bace6517ed544a0762df68561214435fa24eb897c5",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/abstract_witness.json": "f8e6bc1f98c0f73d432316590e654a2e69821efe41a4ce068d7d468272c07201",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/formula_0.smt2": "6e081488c5f782833ca89856700465f58ca17aa566cf27a6514c6c4f4d548375",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/stdout.txt": "436dbb5422ea60a734cc64ac2ead5a84a1eed6658e96fa709b5c86b124b1459c",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/witness.json": "9bb3e2ccc0ea6afd2447020234e7ab26e9f52a7f7a7b430a2882bbdd9c47ceb6",
+    "calibergraph_polygon_case1172_20261012_16/science_run_01/thrombosis_prediction__1172_precise/z3_0_stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "reason": null,
+  "elapsed_s": 0.0035176249220967293,
+  "wall_seconds": 2,
+  "handle_count": 1,
+  "all_reaped": true,
+  "returncodes": [
+    0
+  ],
+  "cleanup_errors": [],
+  "self_rss_stop_bytes": 1073741824,
+  "rss_scope": "own Python high-water RSS only; excludes all children",
+  "events": [
+    {
+      "kind": "self_rss_peak",
+      "monotonic": 2333187.691704291,
+      "bytes": 43270144
+    },
+    {
+      "kind": "spawn",
+      "monotonic": 2333187.69321225,
+      "index": 0,
+      "pid_for_logging_only": 40647
+    },
+    {
+      "kind": "wait",
+      "monotonic": 2333187.695166958,
+      "pid_for_logging_only": 40647,
+      "returncode": 0
+    }
+  ],
+  "name": "startup_internal_limit",
+  "args": [
+    "-memory:1",
+    "-T:1",
+    "-in"
+  ],
+  "stdin": "(exit)\n",
+  "stdout": "",
+  "stderr": "",
+  "returncode": 0
+}
